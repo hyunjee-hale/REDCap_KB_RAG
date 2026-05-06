@@ -3,38 +3,33 @@ id: RC-FD-01
 title: Form Design Overview
 domain: Form Design
 applies_to:
-  - All REDCap project types
-required_rights:
-  - Project Design and Setup
+- All REDCap project types
+- requires Project Design and Setup rights
 prerequisites:
-  - User is logged in and has Project Design and Setup rights
-version: "1.0"
-last_updated: "2025"
+- User is logged in and has Project Design and Setup rights
+version: '1.0'
+last_updated: '2025'
 related:
-  - id: RC-FD-02
-    title: Online Designer
-  - id: RC-FD-03
-    title: Data Dictionary
-  - id: RC-FD-04
-    title: Instrument Library & Zip Files
-  - id: RC-FD-05
-    title: Codebook
-  - id: RC-NAV-UI-01
-    title: Project Navigation UI
-  - id: RC-NAV-UI-02
-    title: Project Menu Reference
+- id: RC-FD-02
+  title: Online Designer
+- id: RC-FD-03
+  title: Data Dictionary
+- id: RC-FD-04
+  title: Instrument Library & Zip Files
+- id: RC-FD-05
+  title: Codebook
+- id: RC-NAV-UI-01
+  title: Project Navigation UI
+- id: RC-NAV-UI-02
+  title: Project Menu Reference
 tags:
-  - form design
-  - instruments
-  - online designer
-  - data dictionary
-  - instrument library
-  - codebook
+- form design
+- instruments
 ---
 
 # 1. Overview
 
-This article orients users to REDCap's instrument design area. It
+This article orients users to REDCap\'s instrument design area. It
 explains what an instrument is, describes the three primary design
 tools, and covers the supporting features in the Design Your Data
 Collection Instruments section. It is the entry point for the Form
@@ -47,7 +42,7 @@ Design knowledge base series.
 **Instrument**
 
 The primary term in REDCap for any data collection form, survey, or
-grouping of variables. REDCap uses 'instrument' consistently across
+grouping of variables. REDCap uses \'instrument\' consistently across
 its interface. The terms form, survey, and instrument are often used
 interchangeably in practice, but instrument is the canonical REDCap term
 and is used throughout this knowledge base series to prevent confusion.
@@ -57,7 +52,7 @@ and is used throughout this knowledge base series to prevent confusion.
 A single data-collection field within an instrument. Each variable has a
 unique name (variable name), a field type, and optional attributes such
 as validation rules, branching logic, and field labels. Variable names
-are REDCap's internal identifiers and appear in data exports.
+are REDCap\'s internal identifiers and appear in data exports.
 
 **Project Setup Page**
 
@@ -124,11 +119,11 @@ cover each tool in detail.
 
 Generates a PDF document containing the definitions of every variable
 across all instruments in the project. Useful for documentation, IRB
-submissions, and offline review of your project's structure.
+submissions, and offline review of your project\'s structure.
 
 ## 5.2 Download the Current Data Dictionary
 
-Downloads the project's current instrument and variable definitions as
+Downloads the project\'s current instrument and variable definitions as
 a CSV file. This is the same format used by the Data Dictionary upload
 tool (RC-FD-03). Downloading the current Data Dictionary before making
 bulk changes is a critical safety practice — it serves as a snapshot
@@ -157,17 +152,17 @@ details.
 
 ## 5.6 Project Setup Progress Indicators
 
-The Design Your Data Collection Instruments section includes a 'Not
-Started' status indicator and an 'I'm done!' button. These are
+The Design Your Data Collection Instruments section includes a \'Not
+Started\' status indicator and an \'I\'m done!\' button. These are
 visual progress trackers for the project setup workflow only — they
 have no functional effect on the project and do not lock or unlock any
 features.
 
 ## 5.7 Advanced Feature Reference Buttons
 
-Five buttons at the bottom of the design section link to REDCap's
+Five buttons at the bottom of the design section link to REDCap\'s
 built-in reference guides for advanced features: Smart Variables,
-Piping, @Action Tags, Field Embedding, and Special Functions. These
+Piping, \@Action Tags, Field Embedding, and Special Functions. These
 features extend what instruments can do but require a solid grasp of
 basic instrument design before use. This knowledge base series does not
 cover them in depth.
@@ -203,17 +198,17 @@ details on each tool, see the linked articles.
 **Q: What is the difference between an instrument, a form, and a survey
 in REDCap?**
 
-**A:** They refer to the same structural object. REDCap uses 'instrument'
+**A:** They refer to the same structural object. REDCap uses \'instrument\'
 as the canonical term. A form is an instrument used for staff data
 entry. A survey is the same instrument configured to be filled out by a
 participant. The underlying data structure is identical.
 
-**Q: I made a change in the Online Designer but it hasn't appeared in
+**Q: I made a change in the Online Designer but it hasn\'t appeared in
 my project yet. Why?**
 
 **A:** Your project is likely in Production mode. In Production, Online
 Designer changes are queued for review before being applied. Depending
-on your institution's REDCap policy, the review may be automatic or may
+on your institution\'s REDCap policy, the review may be automatic or may
 require administrator approval. Check with your local REDCap support
 team.
 
@@ -232,14 +227,14 @@ Production?**
 Designer in the left-hand menu under Data Collection to reach the
 instrument design area, which includes access to the Online Designer.
 
-**Q: Do the 'Not Started' and 'I'm done!' status indicators affect
+**Q: Do the \'Not Started\' and \'I\'m done!\' status indicators affect
 my project?**
 
 **A:** No. They are visual progress indicators for the project setup
 workflow only. Marking a step as done or not done has no functional
 effect on any REDCap feature.
 
-**Q: Are the advanced feature buttons (Smart Variables, Piping, @Action
+**Q: Are the advanced feature buttons (Smart Variables, Piping, \@Action
 Tags, etc.) tools or links?**
 
 **A:** They are links to built-in REDCap reference guides, not tools
@@ -254,12 +249,12 @@ through those buttons directly.
 
 - **Making changes in Production without expecting a review step.** Design
     changes in Production mode are not applied immediately. If your
-    changes aren't showing up, check whether they are pending review in
-    the Online Designer's change queue.
+    changes aren\'t showing up, check whether they are pending review in
+    the Online Designer\'s change queue.
 
 - **Using inconsistent terminology (form, survey, instrument).** REDCap treats these as one object type.
     Using inconsistent terminology in documentation or training creates
-    confusion. Standardize on 'instrument' throughout.
+    confusion. Standardize on \'instrument\' throughout.
 
 - **Skipping the Data Dictionary download before making bulk changes.** Downloading the current Data Dictionary before a major edit is the
     only reliable way to recover from a bad import. Build this habit
@@ -267,7 +262,7 @@ through those buttons directly.
 
 - **Confusing advanced feature buttons with tools.** They open
     reference documentation, not editors. The actual features (Piping,
-    @Action Tags, etc.) are configured within the Online Designer or
+    \@Action Tags, etc.) are configured within the Online Designer or
     Data Dictionary.
 
 ## API Access
@@ -279,6 +274,7 @@ through those buttons directly.
 - **RC-API-09 — Export Instruments API** — retrieve the list of instruments (forms) in a project programmatically
 
 ---
+
 
 # 9. Related Articles
 

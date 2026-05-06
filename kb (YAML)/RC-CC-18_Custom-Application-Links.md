@@ -1,0 +1,173 @@
+---
+id: RC-CC-18
+title: 'Control Center: Custom Application Links'
+domain: Control Center (Admin)
+applies_to:
+- REDCap administrators
+prerequisites:
+- REDCap administrator access
+version: '1.0'
+last_updated: '2026'
+related:
+- id: RC-CC-21
+  title: Control Center Overview
+- id: RC-CC-06
+  title: Modules & Services Configuration
+- id: RC-API-01
+  title: REDCap API
+tags:
+- control center (admin)
+---
+
+**Custom Application Links** (found at **Control Center → Miscellaneous Modules → Custom Application Links**) allows administrators to add institution-defined links to the left-hand Applications menu of every project on the instance. These links can point to external websites, other REDCap projects, or internal resources such as a help desk form or training portal.
+
+---
+
+# 1. Overview
+
+Custom Application Links appear at the bottom of the left-hand project menu for every user in every project, by default. Administrators configure them centrally; no project-level action is required from project users.
+
+Typical use cases:
+- Linking to a support/help desk form
+- Linking to institution training resources
+- Linking to a related REDCap project (e.g., a central intake form)
+- Linking to an external application that integrates with REDCap via the advanced identity verification mechanism
+
+---
+
+# 2. Per-Link Configuration Options
+
+Each custom link has the following settings:
+
+| Setting | Options | Notes |
+| --- | --- |---|
+| **Link Label** | Free text | Text displayed on the left-hand menu |
+| **Link URL / Destination** | URL or project selection | The target address or REDCap project |
+| **Link Type** | Simple Link / Advanced Link / REDCap Project | Controls how navigation and identity work (see below) |
+| **User Access** | All users / Selected users / Excluded projects | Controls who sees the link and in which projects |
+| **Opens new window** | Yes / No | Whether the link opens in a new browser tab |
+| **Append record info to URL** | Yes / No | Appends the current record ID to the URL as a query parameter |
+| **Append project ID to URL** | Yes / No | Appends the current project ID to the URL as a query parameter |
+
+---
+
+# 3. Link Types
+
+## Simple Link
+
+A Simple Link navigates the user to the target URL in a standard, anonymous fashion. No user or project information is transmitted to the target site. The external site has no way to identify who is visiting.
+
+Use a Simple Link when the destination website does not need to know who the REDCap user is — for example, a public training website or a generic help page.
+
+## REDCap Project
+
+Selecting the **REDCap Project** type presents a list of all projects in production or development status. After selecting a project, REDCap creates a link directly to that project. This allows administrators to surface commonly referenced projects (e.g., a shared resource request form) in every user's menu.
+
+> **Note:** Administrators can link to any project regardless of whether they are a member of that project. Standard users can only link to their own projects when creating bookmarks.
+
+## Advanced Link
+
+The Advanced Link goes beyond simple navigation by transmitting encrypted user identity information to the target website. This allows an external site to verify that the person arriving from REDCap is a valid, active REDCap user.
+
+> **Technical prerequisite:** Using the Advanced Link requires web development knowledge and control over the target external website. The external site must be configured to receive and process the identity verification flow described below.
+
+### How Advanced Link identity verification works
+
+When a user clicks an Advanced Link, REDCap does not navigate directly to the URL. Instead, it submits an HTML form using the HTTP POST method. A single field — `authkey` — is posted to the external website. The authkey is an encrypted, undecipherable string that encodes the user's session.
+
+The external site then uses the authkey to request identity information from the REDCap API:
+
+**Step 1 — Receive the authkey**
+The external site receives `authkey` via the HTTP POST request triggered when the user clicked the link.
+
+**Step 2 — Post the authkey back to the REDCap API**
+The external site sends a POST request to the REDCap API endpoint at your institution's REDCap URL:
+
+```
+POST https://[your-redcap-url]/api/
+```
+
+Only two parameters are required:
+- `authkey` — the value received in Step 1
+- `format` — the desired response format: `csv` (default), `json`, or `xml`
+
+> **Note:** This API request does **not** require an API token. It is one of the few REDCap API calls that is token-free.
+
+**Step 3 — Receive user and project information**
+If the authkey is valid and the user's REDCap session is still active, the API returns the following fields (in the specified format):
+
+| Field | Description |
+| --- | --- |
+| `username` | The REDCap username of the user who clicked the link |
+| `project_id` | The ID of the REDCap project the user was in when they clicked the link |
+| `data_access_group_name` | The name of the user's Data Access Group (blank if not in a DAG) |
+| `data_access_group_id` | The numeric ID of the user's DAG (blank if not in a DAG) |
+| `callback_url` | The URL of the REDCap project the user came from |
+
+If the request is malformed or the user's session has expired, the API returns `0`.
+
+**Step 4 — Use the returned information**
+The external site can use the returned values to implement user-specific behavior — for example, granting or restricting access based on the REDCap username, pre-populating a form with the user's project context, or logging the visit with the associated project ID.
+
+### Language compatibility
+
+The REDCap API is language-agnostic. The external site can be written in any server-side language (PHP, Python, Node.js, etc.) as long as it can make a properly formatted HTTP POST request.
+
+---
+
+# 4. User Access and Project Scope
+
+By default, a custom link appears for **all users** in **all projects**. Administrators can narrow this:
+
+- **Selected users** — specify a list of usernames that should see the link; all others see nothing
+- **Excluded projects** — the link appears everywhere except in the listed projects
+
+These settings are configured per link and can be updated at any time.
+
+---
+
+# 5. Adding a New Link
+
+At the bottom of the Custom Application Links page, provide:
+1. A **Label** — what will appear on the left-hand menu
+2. A **URL** — the target web address
+3. Select the **Link Type**
+
+Save the link, then configure User Access and other per-link settings as needed.
+
+---
+
+# 6. Common Questions
+
+**Q: Can I create a link to another REDCap project on the same instance?**
+Yes. Use the REDCap Project link type, which presents a dropdown list of all projects in production or development status. Select the target project, and REDCap will create a link directly to that project. This is useful for surfacing shared resource projects or central intake forms in every user's menu.
+
+**Q: If I append the record ID to the URL, what happens when a user is on a page with no record (like the project home page)?**
+The record ID parameter will be appended as blank or omitted, depending on the context. If the user is on a page without an active record, the external site will receive an empty record parameter. Design your external application to handle cases where the record ID is missing or empty.
+
+**Q: Can users see a custom link in some projects but not others?**
+Yes. When configuring user access, you can specify "Excluded projects." The link will appear in all projects except the ones listed. Alternatively, you can restrict a link to "Selected users" only, so only certain usernames see the link across all projects.
+
+**Q: What is the difference between "Selected users" and "Excluded projects" access control?**
+"Selected users" restricts the link to a specific list of usernames — those users see the link in all projects. "Excluded projects" displays the link to all users but hides it in a specific list of projects. Use "Selected users" for role-based access; use "Excluded projects" for broad distribution with specific project exceptions.
+
+**Q: If I use Advanced Link, does the external site need to be on the same institution network?**
+No. The external site can be anywhere, as long as it is accessible over the internet. The Advanced Link requires that the external site be able to receive POST requests and communicate with the REDCap API endpoint to verify the authkey. The external site can be on any server, including cloud-hosted platforms.
+
+---
+
+# 7. Common Mistakes & Gotchas
+
+**Using Simple Link instead of Advanced Link when user identity is needed.** If your external application needs to know who the user is, you must use Advanced Link type. Simple Link does not send any user information, so the external site will have no way to identify the person visiting. This is a common mistake when trying to integrate with external systems that require authentication.
+
+**Forgetting to URL-encode special characters in the link destination.** If your URL contains special characters (spaces, ampersands, question marks), they must be properly URL-encoded. For example, spaces become `%20` and ampersands in query parameters should be part of the query string, not standalone characters. Test the link after creation to ensure it works correctly.
+
+**Appending record ID to a link without testing what happens when no record is active.** If you enable "Append record info to URL" but users access the link from a page without a record context (like the project home), the external site may malfunction or display an error if it does not handle missing record IDs. Always test your link from multiple pages within a project to ensure it works in all contexts.
+
+---
+
+# 8. Related Articles
+
+- RC-CC-21 — Control Center Overview
+- RC-CC-06 — Modules & Services Configuration
+- RC-API-01 — REDCap API
