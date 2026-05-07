@@ -6,13 +6,17 @@ For disambiguation between domains that share a topic, see the **Disambiguation 
 
 ---
 
+## API — RC-API
+
+API, REDCap API, API token, REST API, API endpoint, export via API, import via API, API playground, export records API, import records API, delete records API, export metadata API, import metadata API, export instruments API, export arms API, export events API, export users API, export reports API, export logging API, export survey participants API, export project info API, export project XML, generate next record name, programmatic access, API call, API request, HTTP request, Postman, curl, Python API, R API, API authentication, API access
+
 ## Alerts & Notifications — RC-ALERT
 
 automated email, trigger email, send email when, notification on save, conditional notification, alert condition, notification log, alert schedule, reminder email
 
 ## Action Tags — RC-AT
 
-@HIDDEN, @READONLY, @REQUIRED, @DEFAULT, @CALCTEXT, @CALCDATE, @IF, @HIDEBUTTON, @NONEOFTHEABOVE, @CHARLIMIT, @WORDLIMIT, @MAXCHOICE, @NOMISSING, @NUMBERSDONTMATCH, action tag, field modifier, instrument modifier
+@HIDDEN, @READONLY, @REQUIRED, @DEFAULT, @CALCTEXT, @CALCDATE, @IF, @HIDEBUTTON, @NONEOFTHEABOVE, @CHARLIMIT, @WORDLIMIT, @MAXCHOICE, @NOMISSING, @NUMBERSDONTMATCH, action tag, field modifier, instrument modifier, @HIDDEN-SURVEY, @HIDDEN-APP, @HIDDEN-PDF, @SETVALUE, @AUTOQUERY, @CLEARVALUE, action tags for external modules, EM action tag, module-specific action tag
 
 ## Branching Logic — RC-BL
 
@@ -66,6 +70,14 @@ external module, plugin, module configuration, enable module, module settings, E
 
 field type, text box, dropdown, radio button, checkbox, slider, descriptive text, file upload, signature, matrix, section header, required field, field validation, field label, field note, variable name, online designer, data dictionary, codebook, instrument design, add field, field format
 
+## Form Design Advanced (Quick-Modify, Field Navigator, CSS) — RC-FD-11
+
+quick modify, quick-modify, bulk edit fields, modify multiple fields, multi-field select, bulk field actions, copy multiple fields, move multiple fields, delete multiple fields, convert to matrix, bulk alignment, bulk required, bulk action tags, bulk branching logic, field navigator, go to field, CTRL-G, CMD-G, jump to field, find field in designer, custom CSS, instrument CSS, form styling, CSS editor, add custom styling, style form, inline CSS, instrument styling
+
+## File Repository — RC-FILE
+
+file repository, upload file, download file, file storage, store documents, manage files, file folder, shared files, project files, file repository folder, file limit, file attachment storage
+
 ## Form Display Logic — RC-FDL
 
 hide form, show form, form visibility, display entire form conditionally, form-level logic
@@ -73,6 +85,10 @@ hide form, show form, form visibility, display entire form conditionally, form-l
 ## Integrations — RC-INTG
 
 data entry trigger, DET, webhook, external system trigger, POST on save, server-side trigger
+
+## Logging / Audit Trail — RC-LOG
+
+logging, audit trail, audit log, project log, who changed, change history, record history, field history, user activity log, view changes, data change log, log entry, track edits, who saved, when was this changed
 
 ## Longitudinal Projects — RC-LONG
 
@@ -86,6 +102,22 @@ clinical trial design, screening event, enrollment event, baseline event, discon
 
 multilingual, language, translate instrument, translation, non-English, language selector, language pack, multi-language
 
+## MCP Server — RC-MCP
+
+MCP, MCP server, Claude REDCap connector, AI connector, model context protocol, Claude plugin, REDCap MCP, connect Claude to REDCap, AI API access, LLM connector
+
+## Messenger — RC-MSG
+
+messenger, REDCap messenger, internal message, message user, inbox, send message, project messaging, direct message, REDCap chat
+
+## Navigation (Record) — RC-NAV-REC
+
+record navigation, record home page, navigate records, record status dashboard, record list, browse records, next record, previous record, record selector, repeated instruments navigation, repeating events navigation, instance navigation, record search
+
+## Navigation (UI) — RC-NAV-UI
+
+project navigation, left menu, project menu, project home, My Projects, project bookmarks, bookmark project page, pinned page, project landing page, navigate REDCap, project list, project folders, hide projects, completed projects, project search, filter projects, project dashboard link
+
 ## REDCap Mobile App — RC-MOB
 
 mobile app, offline data entry, sync records, mobile device, tablet, REDCap app, offline sync, field worker
@@ -93,6 +125,22 @@ mobile app, offline data entry, sync records, mobile device, tablet, REDCap app,
 ## MyCap — RC-MYCAP
 
 MyCap, participant app, ePRO, patient-reported, mobile participant, schedule tasks, active tasks, participant portal, participant-facing mobile
+
+## Operational Use Cases — RC-OPS
+
+REDCap as operational tool, request management, non-research use, workflow automation, operational workflow, intake form, request tracking, ticket system, operational processing, service request, REDCap for operations
+
+## REDCap Plus — RC-PLUS
+
+REDCap+, REDCap Plus, paid features, premium features, subscription, advanced features, REDCap Plus subscription, Plus features
+
+## Profile / My Profile — RC-PROF
+
+my profile, user profile, change password, email preferences, notification preferences, profile settings, user settings, account settings, display name, two-factor authentication, TFA setup
+
+## Calendar — RC-CAL
+
+calendar, REDCap calendar, schedule event, appointment, event date, calendar view, add to calendar, project calendar, event scheduling
 
 ## Piping & Smart Variables — RC-PIPE
 
@@ -132,4 +180,4 @@ Send-It, send it, secure file transfer, secure file sharing, large file transfer
 
 ---
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-05-07 — Added RC-API, RC-AT-EM (folded into RC-AT), RC-CAL, RC-FILE, RC-LOG, RC-MCP, RC-MSG, RC-NAV-REC, RC-NAV-UI, RC-OPS, RC-PLUS, RC-PROF domains; RC-FD-11 keywords added in prior session.*

@@ -4,6 +4,25 @@ Per-article prerequisites, outbound links, and inbound links for all KB articles
 
 ---
 
+### RC-FD-11 — Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS
+
+**Prerequisites:** RC-FD-02 — Online Designer; RC-FD-06 — Online Designer – Instrument and Field Management
+
+**Outbound links:**
+- RC-FD-02 — Online Designer
+- RC-FD-03 — Data Dictionary
+- RC-FD-06 — Online Designer – Instrument and Field Management
+- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
+- RC-BL-01 — Branching Logic Overview and Scope
+- RC-AT-01 — Action Tags Overview
+- RC-SURV-02 — Survey Settings: Basic Options & Design
+
+**Inbound links (referenced by):**
+- RC-FD-02 — Online Designer (bulk/advanced actions noted as out of scope)
+- RC-FD-06 — Online Designer – Instrument and Field Management (alignment codes cross-reference)
+
+---
+
 ### RC-FD-12 — Dynamic SQL Field Type
 
 **Prerequisites:** RC-FD-01 — Form Design Overview; RC-FD-03 — Data Dictionary
@@ -3976,6 +3995,21 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 
 **Inbound links (referenced by):**
 - RC-NAV-UI-02 — Project Menu Reference
+
+---
+
+### RC-NAV-UI-04 — My Projects Page
+
+**Prerequisites:** None
+
+**Outbound links:**
+- RC-PROJ-01 — Project Lifecycle: Status and Settings
+- RC-NAV-UI-01 — Project Navigation UI
+- RC-NAV-UI-02 — Project Menu Reference
+- RC-NAV-UI-03 — Project Bookmarks
+
+**Inbound links (referenced by):**
+- RC-NAV-UI-01 — Project Navigation UI
 
 ---
 
