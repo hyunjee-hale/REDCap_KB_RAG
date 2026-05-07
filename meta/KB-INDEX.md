@@ -167,7 +167,7 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-FD-08 | Data Dictionary: Column Reference & Advanced Techniques | RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md |
 | RC-FD-09 | Field Embedding: Advanced Layout Patterns & Workflow Design | RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md |
 | RC-FD-10 | Advanced Workflow Patterns: Multi-Stage Review and Operational Processing | RC-FD-10_Advanced-Workflow-Patterns-Multi-Stage-Review-and-Operational-Processing.md |
-| RC-FD-11 | Advanced Online Designer Options | *(not yet written — see KB-GAPS-TODO.md)* |
+| RC-FD-11 | Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS | RC-FD-11_Advanced-Online-Designer-Options.md |
 | RC-FD-12 | Dynamic SQL Field Type | RC-FD-12_Dynamic-SQL-Field-Type.md |
 | RC-IMP-01 | Data Import Overview | RC-IMP-01_Data-Import-Overview.md |
 | RC-IMP-03 | CSV Upload Reference: All Bulk Upload Options in REDCap | RC-IMP-03_CSV-Upload-Reference.md |
@@ -195,6 +195,8 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-NAV-REC-04 | Record Status Dashboard & Other Record Links | RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md |
 | RC-NAV-UI-01 | Project Navigation UI | RC-NAV-UI-01_Project-Navigation-UI.md |
 | RC-NAV-UI-02 | Project Menu Reference | RC-NAV-UI-02_Project-Menu-Reference.md |
+| RC-NAV-UI-03 | Project Bookmarks | RC-NAV-UI-03_Project-Bookmarks.md |
+| RC-NAV-UI-04 | My Projects Page | RC-NAV-UI-04_My-Projects-Page.md |
 | RC-PIPE-01 | Piping: Basics, Syntax & Field Types | RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md |
 | RC-PIPE-02 | Piping: Longitudinal, Repeated Instruments & Modifiers | RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md |
 | RC-PIPE-03 | Smart Variables Overview | RC-PIPE-03_Smart-Variables-Overview.md |

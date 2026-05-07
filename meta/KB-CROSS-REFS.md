@@ -3940,6 +3940,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-MLM-01 — Multi-Language Management
 - RC-MOB-01 — REDCap Mobile App
 - RC-MYCAP-01 — MyCap: Overview & Enabling
+- RC-NAV-UI-03 — Project Bookmarks
 - RC-NAV-REC-01 — Record Navigation Overview
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
 - RC-PROJ-01 — Project Lifecycle: Status and Settings
@@ -3954,8 +3955,27 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-INST-01 — Institution-Specific Settings & Policies
 - RC-NAV-UI-01 — Project Navigation UI
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
+- RC-NAV-UI-03 — Project Bookmarks
 
 **Note:** RC-DDE-01 (Double Data Entry) was previously referenced but does not yet exist in the KB. Reference removed pending article creation.
+
+---
+
+### RC-NAV-UI-03 — Project Bookmarks
+
+**Prerequisites:** RC-NAV-UI-01 — Project Navigation UI
+
+**Outbound links:**
+- RC-API-01 — REDCap API
+- RC-DAG-01 — Data Access Groups
+- RC-NAV-UI-01 — Project Navigation UI
+- RC-NAV-UI-02 — Project Menu Reference
+- RC-PIPE-03 — Smart Variables Overview
+- RC-PROJ-01 — Project Lifecycle: Status and Settings
+- RC-PROJ-04 — Project Setup: Additional Customizations
+
+**Inbound links (referenced by):**
+- RC-NAV-UI-02 — Project Menu Reference
 
 ---
 

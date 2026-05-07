@@ -6,7 +6,7 @@ applies_to:
 - All project types
 prerequisites:
 - RC-NAV-UI-01 — Project Navigation UI
-version: '1.0'
+version: '1.1'
 last_updated: '2026'
 related:
 - id: RC-NAV-UI-01
@@ -26,54 +26,25 @@ tags:
 
 # 1. Overview
 
-## What is this?
-
-This document is a structured reference for every section and item that
-can appear in the REDCap left-hand project menu. The menu is divided
-into five named sections, each grouping related functionality. Not all
-items are visible to all users — visibility depends on user rights and
-project configuration.
-
-## Why does it matter?
-
-The left menu is the primary navigation system for any REDCap project.
-Knowing what each item does — and why it might or might not appear ---
-prevents confusion, reduces support requests, and helps users work more
-independently.
-
-**How to use this document**
-
-Each menu section below lists its items in a reference table with three
-columns: the item name, whether it is always visible or conditional, and
-a plain-language description. Conditional items require either
-sufficient user rights, an enabled project feature, or both.
+This article is a structured reference for every section and item that can appear in the REDCap left-hand project menu. The menu is divided into labeled sections, each grouping related functionality. Not all items are visible to all users — visibility depends on user rights and project configuration. Each section below lists its items in a reference table with the item name, its visibility rule, and a plain-language description of what it does.
 
 ---
 
-# 2. Learning Objectives
+# 2. Key Concepts & Definitions
 
-After reviewing this reference, the user will be able to:
+**Always** — A menu item with this designation appears for any user in any project, regardless of user rights or feature configuration.
 
-- Identify which menu section contains a given REDCap feature
+**Conditional** — A menu item with this designation appears only when the required user rights are granted and/or the relevant feature is enabled in Project Setup. Both conditions must be satisfied.
 
-- Explain why a menu item might not be visible for a given user or
-    project
+**User Rights** — Per-project permission settings that control which menu items and features a given user can see and interact with. Managed under the User Rights section of the project menu.
 
-- Distinguish between items that are always present and those that are
-    conditional
+**External Module** — A community-developed add-on that extends REDCap functionality. Must be enabled by a REDCap administrator. Enabled modules may add their own entries to the left menu.
 
-- Describe the purpose of each menu item at a functional level
-
-- Identify the correct menu item when trying to accomplish a specific
-    task
+**Project Bookmarks** — Custom links added by a project manager that appear in the left menu. Can point to internal REDCap pages, other REDCap projects, or external websites. Configurable per user or Data Access Group. See RC-NAV-UI-03 — Project Bookmarks.
 
 ---
 
 # 3. Menu Section Reference
-
-> **Note:** *\'Always\' means the item appears for any user in any
-> project. \'Conditional\' means it requires specific user rights and/or
-> an enabled feature.*
 
 ## 3.1 Top-Left Navigation
 
@@ -230,7 +201,19 @@ Support and documentation resources. Always visible to all users.
 
 ---
 
-# 4. Questions & Answers
+# 4. Common Questions
+
+**Q: Why is a menu item not visible for a specific user?**
+Two conditions must both be true for a menu item to appear: the user's rights for this project must include the relevant permission, and the feature must be enabled in Project Setup. Check both before concluding something is missing or broken.
+
+**Q: Why does the same user see a different menu in different projects?**
+User rights are set per project, not globally. A user may have full rights in one project and read-only access in another, resulting in different visible menus.
+
+**Q: What is the difference between "Custom Links" and "Project Bookmarks"?**
+Custom Links are added by the local REDCap administrator and point to institution-wide resources (support portals, training calendars, etc.). Project Bookmarks are added by a project manager within a specific project and point to project-relevant resources. Both appear in the left menu but are configured in different places. See RC-NAV-UI-03 — Project Bookmarks.
+
+**Q: Can I add items to the left menu?**
+Project managers can add Project Bookmarks (custom links visible to project users) via the Project Bookmarks section. REDCap administrators can add Custom Links visible across all projects. End users cannot add items to the menu.
 
 ---
 
@@ -289,32 +272,15 @@ Support and documentation resources. Always visible to all users.
 
 # 6. Related Articles
 
-- **RC-NAV-UI-01:** Project Navigation UI — the two-panel layout,
-    hamburger mode, and project status overview
-
-- **RC-NAV-REC-01:** Record Navigation Overview — navigating to
-    records and instruments from the Data Collection section
-
-- **RC-NAV-REC-04:** Record Status Dashboard & Other Record Links —
-    detailed guide to the dashboard, custom dashboards, and all
-    locations that link to records
-
-- **RC-USER-01:** User Rights: Overview & Three-Tier Access — how
-    to configure permissions that control which menu items a user
-    can see and interact with
-
-- **RC-PROJ-01:** Project Lifecycle: Status and Settings — detailed
-    guide to the four project status stages shown in the Project
-    Home and Design section
-
-- **RC-FD-01:** Form Design Overview — background for the Designer,
-    Dictionary, and Code Book menu items
-
-- **RC-FD-05:** Codebook — the read-only instrument/field reference
-    listed under Project Home and Design
-
-- **RC-DE-02:** Basic Data Entry — covers Record Status Dashboard
-    and Add/Edit Records in depth
+- RC-NAV-UI-01 — Project Navigation UI — the two-panel layout, hamburger mode, and project status overview
+- RC-NAV-UI-03 — Project Bookmarks — creating custom links on the left-hand project menu
+- RC-NAV-REC-01 — Record Navigation Overview — navigating to records and instruments from the Data Collection section
+- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links — detailed guide to the dashboard, custom dashboards, and all locations that link to records
+- RC-USER-01 — User Rights: Overview & Three-Tier Access — how to configure permissions that control which menu items a user can see
+- RC-PROJ-01 — Project Lifecycle: Status and Settings — detailed guide to the four project status stages shown in the Project Home and Design section
+- RC-FD-01 — Form Design Overview — background for the Designer, Dictionary, and Code Book menu items
+- RC-FD-05 — Codebook — the read-only instrument/field reference listed under Project Home and Design
+- RC-DE-02 — Basic Data Entry — covers Record Status Dashboard and Add/Edit Records in depth
 
 - **RC-SURV-01:** Surveys – Basics — covers survey enabling and the
     Survey Distribution Tools menu item

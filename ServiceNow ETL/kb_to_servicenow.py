@@ -2,124 +2,106 @@
 kb_to_servicenow.py
 Converts REDCap KB markdown articles to a ServiceNow-ready Excel import file.
 
-Sheet 1 – Articles   : one row per article, fields mapped to kb_knowledge columns
+Reads from the "kb (YAML)" folder — articles use YAML frontmatter for metadata
+and standard markdown for body content.
+
+Sheet 1 – Articles      : one row per article, fields mapped to kb_knowledge columns
 Sheet 2 – Relationships : one row per cross-reference (Prerequisites + Related Topics)
 """
 
 import re
-import glob
+import yaml
 import markdown
 from pathlib import Path
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-KB_DIR = Path("/Users/bas/REDCap_KB_RAG/kb")
+KB_DIR = Path("/Users/bas/REDCap_KB_RAG/kb (YAML)")
 OUT_FILE = Path("/Users/bas/REDCap_KB_RAG/ServiceNow ETL/REDCap_KB_ServiceNow_Import.xlsx")
 
-# Regex to pull metadata rows out of the markdown table
-META_RE = re.compile(r"\|\s*\*{0,2}(.*?)\*{0,2}\s*\|\s*(.*?)\s*\|")
-
-# Regex to extract individual RC-xxx IDs from a cell like "RC-FD-02 — Online Designer; RC-BL-01 — Branching Logic"
+# Regex to extract RC-xxx IDs from strings like "RC-FD-02 — Online Designer"
 REF_RE = re.compile(r"(RC-[A-Z0-9-]+)")
 
 
 def parse_article(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
-    lines = text.splitlines()
 
-    # --- Extract title (first bold line that isn't the article ID) ---
-    title = ""
-    for line in lines[:10]:
-        stripped = line.strip().strip("*").strip()
-        if stripped and not re.match(r"^RC-[A-Z0-9-]+$", stripped):
-            title = stripped
-            break
+    # --- Split YAML frontmatter from markdown body ---
+    front = {}
+    body_text = text.strip()
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            front = yaml.safe_load(parts[1]) or {}
+            body_text = parts[2].strip()
 
-    # --- Extract metadata from the header table ONLY ---
-    # Stop as soon as we hit the first # heading or a --- divider after leaving
-    # the table — this prevents body tables from bleeding into metadata.
-    meta = {}
-    in_header_section = True
-    past_first_table = False
-    for line in lines:
-        # Once we reach the first heading, stop metadata parsing entirely
-        if in_header_section and re.match(r"^#{1,3}\s", line):
-            break
-        if line.strip().startswith("|"):
-            past_first_table = True
-            m = META_RE.match(line)
-            if m:
-                key = m.group(1).strip()
-                val = m.group(2).strip()
-                # Skip separator rows like | --- | --- |
-                if re.match(r"^[-\s]+$", key):
-                    continue
-                if key.lower() == "article id":
-                    meta["Article ID"] = val
-                elif key and val:
-                    meta[key] = val
+    # --- Core fields from frontmatter ---
+    source_id  = str(front.get("id", path.stem.split("_")[0]))
+    title      = str(front.get("title", ""))
+    domain     = str(front.get("domain", ""))
+    version    = str(front.get("version", ""))
+    last_updated = str(front.get("last_updated", ""))
+
+    # applies_to: list → semicolon-separated string
+    applies_to_raw = front.get("applies_to", [])
+    if isinstance(applies_to_raw, list):
+        applies_to = "; ".join(str(x) for x in applies_to_raw)
+    else:
+        applies_to = str(applies_to_raw)
+
+    # --- Prerequisites ---
+    prereqs_raw = front.get("prerequisites", [])
+    if not isinstance(prereqs_raw, list):
+        prereqs_raw = [prereqs_raw] if prereqs_raw else []
+    # Filter out bare "None" entries
+    prereqs_filtered = [p for p in prereqs_raw if str(p).strip().lower() != "none"]
+    prerequisite_raw = "; ".join(str(p) for p in prereqs_raw)
+    prereq_ids = []
+    for p in prereqs_filtered:
+        prereq_ids.extend(REF_RE.findall(str(p)))
+
+    # --- Related topics ---
+    related_raw = front.get("related", [])
+    if not isinstance(related_raw, list):
+        related_raw = [related_raw] if related_raw else []
+    related_parts = []
+    related_ids  = []
+    for r in related_raw:
+        if isinstance(r, dict):
+            rid    = r.get("id", "")
+            rtitle = r.get("title", "")
+            related_parts.append(f"{rid} — {rtitle}" if rid and rtitle else rid or rtitle)
+            if rid:
+                related_ids.append(rid)
         else:
-            # If we've already seen the metadata table and hit a non-table line
-            # followed by a heading, the next heading will break us out above.
-            pass
+            s = str(r)
+            related_parts.append(s)
+            related_ids.extend(REF_RE.findall(s))
+    related_topics_raw = "; ".join(related_parts)
 
-    # --- Find where the table ends, use everything after as body ---
-    in_table = False
-    body_lines = []
-    for line in lines:
-        if line.strip().startswith("|"):
-            in_table = True
-            continue
-        if in_table and not line.strip().startswith("|"):
-            in_table = False
-        if not in_table:
-            body_lines.append(line)
-
-    # Strip leading/trailing blank lines and the repeated article-id/title block
-    body_text = "\n".join(body_lines).strip()
-    # Remove the first occurrence of the article ID and bold title at the top
-    body_text = re.sub(r"^RC-[A-Z0-9-]+\s*\n", "", body_text).strip()
-    body_text = re.sub(r"^\*\*.*?\*\*\s*\n", "", body_text).strip()
-
-    # Convert markdown body to HTML
+    # --- Convert markdown body to HTML ---
     html_body = markdown.markdown(
         body_text,
         extensions=["tables", "fenced_code", "nl2br"]
     )
 
-    # --- Normalise field names: handle alternate key names across article templates ---
-    # Each tuple is (canonical_key, [accepted_aliases])
-    def get_meta(*keys):
-        for k in keys:
-            v = meta.get(k, "")
-            if v:
-                return v
-        return ""
-
-    # --- Parse cross-references ---
-    prerequisites = get_meta("Prerequisite", "Prerequisites")
-    related = get_meta("Related Topics")
-
-    prereq_ids = REF_RE.findall(prerequisites)
-    related_ids = REF_RE.findall(related)
-
     return {
-        "source_id": meta.get("Article ID", path.stem.split("_")[0]),
-        "short_description": title,
-        "category": get_meta("Domain", "Topic", "REDCap Module"),
-        "applies_to": get_meta("Applies To", "Primary Audience"),
-        "version": get_meta("Version", "REDCap Version"),
-        "last_updated": get_meta("Last Updated", "Last Reviewed"),
-        "author": get_meta("Author"),
-        "prerequisite_raw": prerequisites,
-        "related_topics_raw": related,
-        "workflow_state": "draft",
-        "kb_knowledge_base": "",          # to be filled by ServiceNow admin
-        "text": html_body,
-        "_prereq_ids": prereq_ids,
-        "_related_ids": related_ids,
-        "_path": str(path.name),
+        "source_id":          source_id,
+        "short_description":  title,
+        "category":           domain,
+        "applies_to":         applies_to,
+        "version":            version,
+        "last_updated":       last_updated,
+        "author":             "",          # not present in YAML frontmatter
+        "prerequisite_raw":   prerequisite_raw,
+        "related_topics_raw": related_topics_raw,
+        "workflow_state":     "draft",
+        "kb_knowledge_base":  "",          # to be filled by ServiceNow admin
+        "text":               html_body,
+        "_prereq_ids":        prereq_ids,
+        "_related_ids":       related_ids,
+        "_path":              str(path.name),
     }
 
 

@@ -6,14 +6,6 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ## Open Gaps
 
-### ⚠️ RC-FD-11 — Advanced Online Designer Options
-
-**Why needed:** RC-FD-02 and RC-FD-06 cover the core Online Designer and instrument/field management. Advanced or lesser-known designer capabilities have no dedicated coverage.
-
-**Domain slug:** FD (established)
-**What to cover:** Matrix field groups (matrix of radio buttons / checkboxes); field annotation (notes visible only in designer); stop actions on required fields; section header customization; field alignment options; copy/move fields between instruments from within the designer; drag-and-drop reordering; using the designer in production (move to production implications); differences between the designer and the Data Dictionary for complex edits
-
----
 
 ### ⚠️ RC-LOCK-01 — Record Locking & E-Signatures
 
@@ -35,13 +27,6 @@ These articles are referenced by existing KB articles or skills but do not yet e
 **What to cover:** Accessing 'Choose action for record' from the Record Home Page, available actions (move record to different DAG, rename/renumber record, delete record, lock/unlock record), who can perform each action (user rights required), consequences and irreversibility of deletion, audit trail behavior after admin actions
 
 ---
-
-### ⚠️ RC-NAV-UI-03 — Project Bookmarks
-
-**Why needed:** No existing article covers the project bookmarking feature, which allows users to mark frequently-used projects as bookmarks for quick access from the My Projects page. This is a commonly used navigation convenience feature with no KB coverage.
-
-**Domain slug:** NAV-UI (established)
-**What to cover:** What project bookmarks are and how they differ from the full My Projects list; how to add and remove a bookmark (star/bookmark icon on the My Projects page); where bookmarks appear in the UI (top of My Projects list or dedicated section); behavior when a project is moved to a different status or deleted; whether bookmarks are user-specific or shared; interaction with project search and filtering on the My Projects page; any admin-level considerations
 
 ---
 
@@ -149,6 +134,7 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques ✅ *(was Priority 3)*
 - RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design ✅
 - RC-FD-10 — Advanced Workflow Patterns: Multi-Stage Review and Operational Processing ✅
+- RC-FD-11 — Online Designer – Advanced Options (Quick-Modify, Field Navigator, Custom CSS) ✅ *(was ⚠️)*
 - RC-FD-12 — Dynamic SQL Field Type ✅ *(was ⚠️ RC-FD-12 SQL Field Type gap)*
 
 ### Institution-Specific (RC-INST) — new domain
@@ -193,6 +179,7 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links ✅
 - RC-NAV-UI-01 — Project Navigation UI ✅
 - RC-NAV-UI-02 — Project Menu Reference ✅
+- RC-NAV-UI-03 — Project Bookmarks ✅
 
 ### Piping & Smart Variables (RC-PIPE) — major expansion
 
@@ -272,4 +259,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-01 — Full repo audit. RC-PLUS-01 resolved (article exists on disk). New articles logged: RC-CC-22/23/24, RC-EM-03/04, RC-INST-02/03, RC-LONG-03, RC-MCP-01, RC-OPS-01, RC-SENDIT-01. Open gaps (3): RC-DE-13, RC-FD-11, RC-LOCK-01.*
+*Last updated: 2026-05-06 — RC-FD-11 (Advanced Online Designer Options) written and resolved. Open gaps (2): RC-DE-13, RC-LOCK-01.*

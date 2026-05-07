@@ -380,3 +380,4 @@ Several aspects of the project lifecycle are controlled by system-wide settings 
 - RC-PROJ-02 — Project Setup Checklist (dependency-ordered checklist covering all phases of project configuration from creation through go-live)
 - RC-NAV-UI-01 — Project Navigation UI (how project status is displayed in the interface and what changes at each stage)
 - RC-NAV-UI-02 — Project Menu Reference (the Project Home and Design menu section where status is shown and managed)
+- RC-NAV-UI-04 — My Projects Page (project list, folders, search, and how Completed projects appear)
