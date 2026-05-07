@@ -14,9 +14,27 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 
 ## Tooling & Skills
 
-- [ ] **Teach Claude how to build the alerts upload CSV** — Document the CSV format REDCap uses for importing Alerts & Notifications. Add to a skill (or to the relevant KB article) with enough spec detail that Claude can generate a valid import file from scratch.
+- [x] **Teach Claude how to build the alerts upload CSV** — Document the CSV format REDCap uses for importing Alerts & Notifications. Add to a skill (or to the relevant KB article) with enough spec detail that Claude can generate a valid import file from scratch.
 
 - [ ] **Feed Claude examples of all uploadable file formats** — For each upload type in RC-IMP-03, provide a real or representative example file. Use these to expand the relevant KB articles with annotated column-by-column breakdowns, accepted values, escaping rules, and common mistakes. Goal: Claude can generate any valid upload file from scratch given a plain-language description.
+  - [x] Data Dictionary
+  - [x] Arms
+  - [x] Events
+  - [x] Instrument–Event Mappings
+  - [x] Record Data
+  - [x] Users
+  - [x] User Roles
+  - [x] User–Role Assignments
+  - [x] Data Access Groups (DAGs)
+  - [x] User–DAG Assignments
+  - [x] Alerts & Notifications
+  - [ ] Automated Survey Invitations (ASI)
+  - [ ] Survey Queue
+  - [ ] Survey Settings
+  - [x] Form Display Logic
+  - [ ] Data Quality Rules
+  - [ ] Language Setups (MLM)
+  - [ ] Randomization Allocation Table
 
 ---
 
@@ -47,4 +65,4 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 
 ---
 
-*Last updated: 2026-04-30 (All format warnings and errors resolved — 224 articles, 0 errors, 0 warnings)*
+*Last updated: 2026-05-07 (Form Display Logic upload format analyzed; full column reference, annotated example, and common mistakes added to RC-IMP-03 §7.5; flags confirmed lowercase y/n; double-quote escaping for empty-string conditions documented)*
