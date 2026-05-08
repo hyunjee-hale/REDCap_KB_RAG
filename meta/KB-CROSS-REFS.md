@@ -211,6 +211,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-AI-03 — AI Translations
 - RC-AI-04 — AI Summarization
 - RC-CC-06 — Control Center: Modules & Services Configuration
+- RC-MCP-01 — REDCap MCP Server: Setup and Management
 
 **Inbound links (referenced by):**
 - RC-AI-02 — AI Writing Tools
@@ -402,6 +403,8 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-INTG-01 — Data Entry Trigger
 - RC-LONG-02 — Repeated Instruments & Events Setup
 - RC-USER-03 — User Rights: Configuring User Privileges
+- RC-API-54 — Export Survey Access Code API
+- RC-MCP-01 — REDCap MCP Server: Setup and Management
 
 **Inbound links (referenced by):**
 - RC-API-02 — Export Records API
@@ -1071,6 +1074,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-26 — Import User Roles API
 - RC-API-56 — Import User-Role Assignments API
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-API-27 — Delete User Roles API
 
 **Inbound links (referenced by):**
 - RC-API-25 — Export User Roles API
@@ -1357,6 +1361,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 **Outbound links:**
 - RC-API-01 — REDCap API
 - RC-DE-04 — Editing Data & Audit Trail
+- RC-LOG-01 — Logging — Project Audit Trail
 
 **Inbound links (referenced by):**
 - RC-API-01 — REDCap API
@@ -1590,6 +1595,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-10 — Export Instrument-Event Mappings
 - RC-API-19 — Export Events
 - RC-LONG-02 — Repeated Instruments & Events Setup
+- RC-API-53 — Import Repeating Instruments and Events API
 
 **Inbound links (referenced by):**
 - RC-API-01 — REDCap API
@@ -2040,6 +2046,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-BL-02 — Branching Logic: Syntax & Atomic Statements
 - RC-BL-03 — Branching Logic: Combining Statements
 - RC-PIPE-03 — Smart Variables Overview
+- RC-DQ-01 — Data Quality Module
 
 **Inbound links (referenced by):**
 - RC-BL-01 — Branching Logic: Overview & Scope
@@ -2209,6 +2216,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-01 — Record Creation & the Record Home Page
 - RC-DE-02 — Basic Data Entry
 - RC-DE-03 — Longitudinal Projects & DAGs
+- RC-LOG-01 — Logging — Project Audit Trail
 
 **Inbound links (referenced by):**
 - RC-API-39 — Export Logging API
@@ -2331,6 +2339,8 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-11 — Instrument Save Options
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-LONG-02 — Repeated Instruments & Events Setup
+- RC-NAV-REC-02 — Longitudinal Mode & Arms
+- RC-NAV-REC-03 — Repeated Instruments & Repeated Events
 
 **Inbound links (referenced by):**
 - RC-DE-11 — Instrument Save Options
@@ -2382,6 +2392,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-12 — Data Resolution Workflow
 - RC-EXPRT-01 — Data Export: Overview & Workflow
 - RC-USER-03 — User Rights: Configuring User Privileges
+- RC-NAV-UI-02 — Project Menu Reference
 
 **Inbound links (referenced by):**
 - RC-CC-06 — Control Center: Modules & Services Configuration
@@ -2442,6 +2453,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-EXPRT-03 — Data Export: User Rights & Export Access
 - RC-EXPRT-04 — Data Export: De-identification & Formatting Options
 - RC-EXPRT-05 — Data Export: Report Types & Other Export Options
+- RC-FILE-01 — File Repository
 
 **Inbound links (referenced by):**
 - RC-AI-04 — AI Summarization
@@ -2661,6 +2673,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-07 — Survey Queue
 - RC-SURV-08 — e-Consent Framework: Setup & Management
 - RC-SURV-10 — Survey Login
+- RC-FD-11 — Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS
 
 **Inbound links (referenced by):**
 - RC-AI-02 — AI Writing Tools
@@ -2801,6 +2814,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-FD-04 — Instrument Library & Zip Files
 - RC-FD-05 — Codebook
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
+- RC-FD-11 — Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS
 
 **Inbound links (referenced by):**
 - RC-AT-01 — Action Tags: Overview
@@ -2847,6 +2861,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-FD-05 — Codebook
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-SURV-02 — Survey Settings: Basic Options & Design
+- RC-FD-12 — Dynamic SQL Field Type
 
 **Inbound links (referenced by):**
 - RC-API-06 — Export Field Names API
@@ -3437,7 +3452,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-08 — e-Consent Framework: Setup & Management
 - RC-TXT-01 — Texting in REDCap: Setup and Usage
 - RC-TXT-02 — Texting: Administrator Setup
-
+- RC-SENDIT-01 — Send-It: Secure File Transfer
 **Inbound links (referenced by):**
 - RC-AI-01 — REDCap AI Tools: Overview & Security
 - RC-ALERT-01 — Alerts & Notifications: Setup
@@ -3778,7 +3793,6 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-PROJ-01 — Project Lifecycle: Status and Settings
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
 - RC-USER-02 — User Rights: Adding Users & Managing Roles
-
 **Inbound links (referenced by):**
 - RC-AT-11 — Action Tags: Mobile App Action Tags
 - RC-CC-06 — Control Center: Modules & Services Configuration
@@ -4069,6 +4083,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-PROJ-01 — Project Lifecycle: Status and Settings
 - RC-SURV-01 — Surveys – Basics
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-NAV-UI-04 — My Projects Page
 
 **Inbound links (referenced by):**
 - RC-MOB-01 — REDCap Mobile App
@@ -4109,6 +4124,8 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-01 — Surveys – Basics
 - RC-SURV-05 — Participant List & Manual Survey Invitations
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-CAL-01 — Calendar
+- RC-DDE-01 — Double Data Entry
 
 **Inbound links (referenced by):**
 - RC-CAL-01 — Calendar
@@ -4750,6 +4767,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-04 — Survey Link Types & Access Methods
 - RC-SURV-09 — PDF Snapshots of Records
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-FILE-01 — File Repository
 
 **Inbound links (referenced by):**
 - RC-CC-06 — Control Center: Modules & Services Configuration

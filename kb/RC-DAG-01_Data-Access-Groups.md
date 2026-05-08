@@ -173,6 +173,10 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 **Not accounting for DAGs when setting up export rights.** Because DAGs further restrict which records can be exported, a user's effective export scope is the intersection of their export rights and their DAG. Test export behavior with representative DAG-assigned user accounts to confirm the results match expectations.
 
+**Using DAG names in branching logic without treating them as frozen.** In multi-site projects it is common to reference `[record-dag-name]` or `[user-dag-name]` in branching logic to show or hide site-specific fields (e.g., a consent section required at one site but not others). This is a legitimate pattern, but the DAG's unique name — the lowercase hyphenated identifier set when the DAG is created — must then be treated as immutable for the life of the project. Renaming or deleting a DAG that is referenced in branching logic silently breaks every condition that references it: the field becomes permanently hidden or permanently visible with no error message. Before renaming a DAG, search the data dictionary for every occurrence of its name in branching logic, calculated fields, and action tags, and update all references at the same time. If a project uses DAG-based branching across many fields, maintain a site configuration document that lists each DAG name, the fields it controls, and the intended behaviour — this makes change impact assessment practical.
+
+**Hardcoding site-specific branching across too many fields.** Centralising multi-site variation in branching logic rather than separate instruments is efficient up to roughly five or six sites. Beyond that, the number of fields with DAG-conditional logic becomes difficult to audit, and adding a new site requires modifying many fields rather than a simple configuration change. If site expansion is anticipated, consider whether site-specific requirements can be harmonised at the protocol level, or document all DAG-conditional fields explicitly so the scope of any future change is clear before it is made.
+
 ---
 
 ## API Access

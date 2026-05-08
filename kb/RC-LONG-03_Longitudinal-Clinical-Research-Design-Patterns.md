@@ -1,19 +1,3 @@
-RC-LONG-03
-
-**Longitudinal Clinical Research Design Patterns**
-
-| **Article ID** | RC-LONG-03 |
-|---|---|
-| **Domain** | Longitudinal & Repeated Setup |
-| **Applies To** | Longitudinal REDCap projects in clinical research contexts |
-| **Prerequisite** | RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments & Events Setup |
-| **Version** | 1.2 |
-| **Last Updated** | 2026-05-01 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments & Events Setup; RC-BL-05 — Branching Logic in Longitudinal Projects; RC-CALC-02 — Calculated Fields; RC-PROJ-04 — Project Setup: Additional Customizations; RC-FD-10 — Advanced Workflow Patterns |
-
----
-
 # 1. Overview
 
 This article documents design patterns observed in complex longitudinal clinical research projects — multi-event studies with validated instruments, medical record abstraction, care coordination tracking, and regulatory data management requirements. The patterns here extend the foundational setup covered in RC-LONG-01 and RC-LONG-02 and focus on recurring architectural decisions that arise when REDCap supports a full research protocol lifecycle.
@@ -79,7 +63,15 @@ Events are displayed in the order they appear on the Define My Events page, and 
 
 The unique event name is generated from the event label and cannot be manually changed through the UI after creation. Choose event labels carefully before adding records — renaming an event label changes its unique event name, which breaks any branching logic or piping that references it. See RC-LONG-01 Section 2 for the naming algorithm.
 
-## 3.3 Screening and Eligibility Exception Instruments
+## 3.3 Interview Bookend Instruments
+
+For studies that conduct structured interviews at multiple visits, a pair of lightweight instruments — an **Interview Start** and an **Interview End** — can be placed at the beginning and end of the interview instrument sequence for each event. Staff complete the Start instrument when the session begins and the End instrument when it concludes.
+
+These bookends capture: interview date and start/end times; the interviewing staff member; and any session-level notes or interruptions. This creates a natural workflow wrapper around the substantive instruments in the event, provides an independent completion signal that QC checks can verify, and captures session timing data without embedding it inside any individual validated instrument.
+
+The pattern adds two instruments per event but keeps session metadata cleanly separated from research data. It is most useful when interview duration is tracked for protocol adherence, when multiple staff members may conduct interviews at different events, or when a QC workflow needs a clear "session completed" trigger.
+
+## 3.4 Screening and Eligibility Exception Instruments
 
 Projects with multi-step screening workflows often benefit from separating the primary eligibility check from protocol exceptions:
 
@@ -88,7 +80,7 @@ Projects with multi-step screening workflows often benefit from separating the p
 
 Branching logic on the eligibility exception instrument should be set to show only when a flag on the screening form indicates an exception was granted.
 
-## 3.4 Discontinuation Event
+## 3.5 Discontinuation Event
 
 A dedicated Discontinuation event (placed last in the event sequence) provides a structured place to record why a participant left the study early. Common fields include:
 
@@ -320,7 +312,26 @@ Both arms in a two-arm study should have the AE log assigned to the same corresp
 
 ---
 
-# 10. Multi-Arm Parallel-Group Study Design
+# 10. Proxy Assessment Instruments
+
+## 10.1 The Problem
+
+Some validated instruments have a proxy version — designed to be completed by a caregiver, surrogate, or staff observer when the participant cannot self-report (e.g., due to cognitive impairment, illness severity, or inability to communicate). Managing both versions in the same project requires a deliberate design choice about when each version is applicable and how the switch is triggered.
+
+## 10.2 The Pattern
+
+Create the proxy version as a **separate instrument** alongside the self-report version. Assign both to the same event(s) where the assessment occurs. Use a screener field — typically a capacity or eligibility assessment completed earlier in the event — to gate which version is displayed, via branching logic on the first field of each instrument, or via instrument-level user rights restrictions.
+
+**Key design decisions:**
+
+- **Baseline vs. follow-up applicability.** Proxy assessment is often not applicable at baseline (where eligibility criteria may require self-report capacity) but becomes applicable at follow-up visits if cognitive or functional status declines. Assign the proxy instrument only to the events where it is protocol-permitted, rather than to all events.
+- **Switching criterion.** Identify the field that determines which version is used — a cognitive screener score, a staff judgment field, or a participant capacity flag — and reference it in branching logic on both instruments so only one is active per record per event.
+- **Naming convention.** Distinguish the proxy instrument clearly in both its instrument name and field prefixes (e.g., `eq5d5l` for self-report vs. `eq5d5l_proxy` for caregiver-reported). This prevents confusion in exports and makes the data structure self-documenting.
+- **Data model clarity.** Keep self-report and proxy fields entirely separate — do not merge them into one instrument with a "who completed this?" flag. Separate instruments produce separate completion statuses, which is important for protocol adherence tracking, and they produce separate export rows that are easier to analyse.
+
+---
+
+# 11. Multi-Arm Parallel-Group Study Design
 
 ## 10.1 The Pattern
 
@@ -375,13 +386,13 @@ In a two-arm project, the record status dashboard displays all events for both a
 
 ---
 
-# 11. Cross-Event Carry-Forward for a Repeating Instrument
+# 12. Cross-Event Carry-Forward for a Repeating Instrument
 
-## 11.1 The Problem
+## 12.1 The Problem
 
 A repeating medication list collected at every visit requires staff to re-enter the same medications visit after visit unless the prior visit's data is brought forward automatically. REDCap does not have a built-in "copy repeating instances from last event" feature, but the combination of `@IF`, `@DEFAULT`, `[current-instance]`, `[previous-event-name]`, and instance qualifiers can replicate this behaviour.
 
-## 11.2 The Pattern
+## 12.2 The Pattern
 
 Place a `@IF` + `@DEFAULT` expression in the **Field Annotation** column of every field on the repeating instrument. The expression checks the current instance number, looks up the matching instance from the previous event, and pre-fills the field if that prior instance had data. If it did not, the field opens blank.
 
@@ -407,7 +418,7 @@ Extend the nesting as far as the maximum number of instances the project needs t
 | `[previous-event-name]` | The unique event name of the immediately preceding event in the defined event sequence |
 | `[field][N]` | The value of `field` from the Nth instance of a repeating instrument (at the referenced event) |
 
-## 11.3 Design Details
+## 12.3 Design Details
 
 **The `<> ''` guard** — The condition `[previous-event-name][med_name][N] <> ''` ensures the carry-forward only fires if that instance actually had data at the previous event. Without this guard, REDCap would create empty instances for every instance number up to N, even if the prior visit only had two medications. The guard means REDCap creates only as many pre-filled instances as the previous visit had.
 
@@ -417,11 +428,11 @@ Extend the nesting as far as the maximum number of instances the project needs t
 
 **`[previous-event-name]` resolves structurally, not by completion** — The smart variable points to the immediately prior event in the defined event sequence, regardless of whether data was collected at that event. If a participant skipped the 3-month visit, the 6-month carry-forward still looks to the 3-month event — and finds nothing there. Consider whether skipped visits are expected and whether the carry-forward behavior is still acceptable when they occur.
 
-## 11.4 The Workflow This Creates
+## 12.4 The Workflow This Creates
 
 When a coordinator opens the medication list at a follow-up visit, the instrument automatically creates one pre-filled instance per medication recorded at the previous visit. The coordinator reviews each instance, updates the dose or frequency if anything changed, marks discontinued medications as ended (which triggers the end-date field via branching logic), and adds new medications as fresh instances. Data entry becomes a review-and-update task rather than a full re-entry task.
 
-## 11.5 Caveats
+## 12.5 Caveats
 
 - This pattern applies only when the instrument is a **repeating instrument within a non-repeating event**. It does not work across repeating events.
 - The maximum instance count supported is equal to the nesting depth you build into the `@IF` chain. A medication list designed for up to 10 concurrent medications requires 10 nested `@IF` conditions per field.
@@ -429,7 +440,7 @@ When a coordinator opens the medication list at a follow-up visit, the instrumen
 
 ---
 
-# 12. HTML Summary Panels in Descriptive Fields
+# 13. HTML Summary Panels in Descriptive Fields
 
 ## 12.1 The Pattern
 
@@ -504,7 +515,42 @@ If a visit has not yet been completed, the cell displays as empty. This is expec
 
 ---
 
-# 13. Common Questions
+# 14. Quality Control Checklist Instruments
+
+## 13.1 The Pattern
+
+In coordinated or monitored studies, a dedicated **Quality Control Checklist** instrument — completed by coordinating centre staff for each record at each event — is an effective way to enforce data quality standards systematically rather than relying on ad-hoc review.
+
+## 13.2 Structure: Paired Pass/Fail Fields
+
+The most useful QC checklist design uses a consistent paired-field pattern throughout:
+
+1. A Yes/No or radio question for the QC item (e.g., "Consent form uploaded to file repository?")
+2. A notes field immediately following, visible **only on failure** via branching logic (e.g., the notes field shows only when the Yes/No answer is "No")
+
+This pattern can be applied across all QC domains: consent documentation completeness, data entry timeliness, questionnaire completion, source document receipt, protocol visit windows, and safety event reporting.
+
+**Benefits:**
+- The form is uncluttered for passing items — notes fields are hidden until needed
+- Deficiency documentation is captured precisely where it applies
+- Any QC field can be used in a report filter to identify records with open issues
+- The instrument's overall completion status provides a clean monitoring signal on the record status dashboard
+
+## 13.3 Event-Specific Items in a Shared Form
+
+A single QC checklist instrument can serve multiple events by using `[event-name]` branching to show or hide items that apply only to specific time points — for example, a baseline consent verification section that appears only at the baseline event, or a final status field that appears only at the last follow-up. This reduces the number of instruments to maintain while keeping each event's checklist focused.
+
+## 13.4 When to Split Into Multiple Instruments
+
+For large studies a single QC checklist can exceed 100 fields. Consider splitting by domain (e.g., Consent QC, Interview QC, Medical Records QC) as separate instruments all assigned to the same event. This also allows different team members to own and complete their respective sections independently.
+
+## 13.5 Design Timing
+
+Design the QC checklist before data collection begins. The instrument effectively codifies the study operations manual in REDCap. Retrofitting QC structure onto an ongoing project is considerably harder and leaves early records without systematic checks.
+
+---
+
+# 15. Common Questions
 
 **Q: Can I assign an instrument to every event in a project?**
 
@@ -560,7 +606,7 @@ When using arms this way, ensure the repeating instrument configuration is ident
 
 ---
 
-# 14. Common Mistakes & Gotchas
+# 16. Common Mistakes & Gotchas
 
 **Duplicating instruments instead of reusing them.** A common mistake is creating `phq_baseline` and `phq_followup` as two separate instruments when the same `physician_health_questionnaire` instrument could simply be assigned to both events. Duplicate instruments double the maintenance burden: any field label change or branching logic fix must be applied to both copies. If the data structure at each time point is identical, use one instrument and assign it to multiple events.
 
@@ -586,9 +632,15 @@ When using arms this way, ensure the repeating instrument configuration is ident
 
 **Forgetting to set a custom form label on the call log.** Without a custom form label, all call log instances show as "Instance 1," "Instance 2," etc. with no indication of content. A label that pipes in the date and outcome (e.g., `[contact_date] — [contact_outcome]`) makes the record status dashboard immediately scannable. See RC-LONG-02 Section 6 for setup details.
 
+**Omitting custom form labels from safety or adverse event reporting instruments.** The same principle applies to any repeating instrument with regulatory significance. Safety report instances labelled only "Instance 1", "Instance 2" force monitors to open each one individually to identify its content. Set a label that surfaces the report status and date at minimum (e.g., `[ae_status], [ae_date]`) so instances are distinguishable on the record status dashboard without opening them.
+
+**Using a simple Yes/No for consent outcome on the screening form.** A binary "consent obtained / not obtained" field loses the reason for non-enrollment, which is required for CONSORT flow diagrams, IRB reporting, and retention analysis. Use a structured radio or dropdown with a named reason set — for example: Obtained / Refused / Language barrier / Temporary inability / Did not approach / Unwilling / Other / Unknown. Build this taxonomy into the screening form at project design time; retrofitting it after data collection begins loses historical non-enrollment data.
+
+**Collecting adverse event onset time without applying time validation.** AE and SAE forms frequently include an onset time field alongside the onset date. Without explicit `time` (HH:MM) field validation, any string can be entered — producing inconsistent data that is difficult to use for causality timelines. Apply time validation to every field that collects a clock time on a regulatory safety form, and note the expected format (24-hour vs. 12-hour) in the field label.
+
 ---
 
-# 15. Related Articles
+# 17. Related Articles
 
 - RC-LONG-01 — Longitudinal Project Setup (arms, events, and instrument designation — foundational prerequisite)
 - RC-LONG-02 — Repeated Instruments & Events Setup (configuring repeating instruments; custom form labels)

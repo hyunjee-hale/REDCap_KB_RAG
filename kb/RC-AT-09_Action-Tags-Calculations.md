@@ -218,6 +218,10 @@ This pattern is useful in operational or administrative projects where a value m
 
 **Not escaping apostrophes in text output.** If `@CALCTEXT` output contains an apostrophe and you used apostrophes as delimiters, escape it: `'it\'s'` or switch to double quotes: `"it's"`.
 
+**Cross-event source fields in @CALCDATE breaking silently after schema changes.** When `@CALCDATE` references a field from a different event using the `[event_name][field_name]` syntax — for example, `@CALCDATE([baseline_arm_1][enrol_date], 45, 'd')` — the expression depends on two identifiers that are easy to change accidentally: the event's unique name and the field's variable name. If the baseline event is renamed (which regenerates its unique event name) or the source field is renamed, every `@CALCDATE` field referencing it returns blank with no error or warning. This failure mode is especially consequential when multiple downstream fields all chain from the same source (e.g., a randomisation date used to calculate several visit windows). Before moving a project to production, document all cross-event field references in `@CALCDATE` and `@CALCTEXT` expressions. Treat the referenced event names and field names as frozen — equivalent to a primary key — and apply a branching logic audit whenever either is changed.
+
+**`[previous-instance]` chains may go stale without a recalculate module.** When `@CALCTEXT` fields in a repeating instrument use `[previous-instance]` to build accumulated values (see RC-PIPE-10 §7), REDCap does not automatically recalculate earlier instances when a later one changes, or vice versa. If a user edits instance 2 after instances 3–5 already exist, the accumulated values in those later instances will not update. The `recalculate` external module (if installed on your instance) can force a full recalculation across all instances. When designing accumulator-chain patterns, confirm that `recalculate` is available or plan for the possibility of stale values.
+
 ---
 
 # 8. Related Articles

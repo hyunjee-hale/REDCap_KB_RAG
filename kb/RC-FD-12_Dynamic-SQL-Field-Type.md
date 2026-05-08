@@ -332,6 +332,10 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 **Editing DSQL rows in the Data Dictionary as a non-administrator.** Attempting to upload a Data Dictionary with `sql`-type rows without administrator privileges will fail. Note also: non-administrators should not modify the SQL content of existing DSQL rows even if they could upload the file — an incorrect query can break the field silently.
 
+**Not documenting SQL queries externally when they reference specific field names or table structures.** A DSQL query that joins on specific REDCap field names (e.g., filtering a user list by role or site using fields stored in the data table) silently breaks if those field names are ever renamed or the fields are moved. Unlike branching logic errors, a broken DSQL query produces no warning — the dropdown simply appears empty. For any DSQL field whose query references specific field variable names, role names, or project IDs, maintain an external record (a project documentation instrument, a README, or a comment in a nearby descriptive field) that identifies what the query depends on. Treat those field names and identifiers as frozen, and perform a DSQL audit whenever referenced fields are renamed or the data model changes.
+
+**Hardcoding a numeric project ID in the WHERE clause when querying another project.** Even when `[data-table:NNNN]` is used correctly for the table name, it is easy to forget that the `project_id = NNNN` filter in the `WHERE` clause is still a hardcoded number. If the project is cloned, migrated to a different REDCap instance, or re-imported, the project ID will change but the WHERE clause will silently continue filtering on the old ID — returning either no results or the wrong records. Always document which external project ID a DSQL query targets, ideally in the field note or a nearby descriptive field (e.g., "SQL references project #1234 — update if migrated"). For cross-project queries, consider whether the target project is stable and long-lived before embedding its ID.
+
 ---
 
 # 10. Related Articles
