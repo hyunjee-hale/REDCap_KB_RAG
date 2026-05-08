@@ -116,6 +116,8 @@ These two tag families can be mixed to achieve fine-grained control. For example
 
 **Adding `@READONLY` to a field expecting users to enter data and assuming the field will still appear on surveys.** `@READONLY` displays the field but prevents editing. If you meant to hide it from one context but keep it editable elsewhere, use context-specific variants like `@READONLY-FORM` and `@HIDDEN-SURVEY` instead of applying a bare `@READONLY` to all contexts.
 
+**Marking a field as required and `@HIDDEN-SURVEY` and expecting it to be enforced during survey completion.** REDCap only enforces the required flag in the context where the field is visible. A field with both `required = 'y'` and `@HIDDEN-SURVEY` will not prompt the survey respondent to fill it in — the required constraint is effectively inactive during survey completion. This matters in hybrid forms that serve as both a survey (for initial collection) and a data entry form (for ongoing staff management). Fields that must be completed by staff in data entry mode, but should be invisible to survey respondents, should be marked required — but be aware that records created through the survey will have those fields blank until staff fill them in.
+
 ---
 
 # 7. Related Articles

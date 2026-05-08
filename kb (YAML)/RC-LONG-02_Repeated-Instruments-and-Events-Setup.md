@@ -272,6 +272,8 @@ This is useful in intervention/control designs: the intervention arm may need vi
 
 **Expecting the "Repeat the survey" button to work with repeating events.** The "Repeat the survey" button is available for repeating instruments only. If your survey instrument lives on a repeating event rather than being designated as a repeating instrument, this option is not available. Use ASIs or Alerts & Notifications to send recurring survey links in that scenario.
 
+**Omitting custom form labels from safety or adverse event reporting instruments.** Any repeating instrument with regulatory significance needs a meaningful custom form label. Safety or AE report instances labelled only "Instance 1", "Instance 2" force monitors to open each one individually to identify its content. Set a label that surfaces at minimum the report status and date (e.g., `[ae_status], [ae_date]`) so instances are distinguishable on the record status dashboard without opening them. The same applies to call logs and any other repeating instrument that staff or monitors will scan frequently.
+
 **Overlooking inactive events in the repeating setup popup.** The popup lists every event in the project, including events whose names indicate they are no longer in active use (e.g., "WF Int (inactive)", "FISMA (inactive)"). REDCap has no concept of a disabled event — all events appear and can be configured. If you intend inactive events to remain non-repeating, verify that they are set to `-- not repeating --` when saving. Accidentally enabling repeat on a logically inactive event will not cause data loss, but it will expose the repeat UI to data entry users on those events.
 
 ---

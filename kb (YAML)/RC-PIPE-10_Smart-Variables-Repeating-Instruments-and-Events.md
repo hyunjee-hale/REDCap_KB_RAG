@@ -165,7 +165,41 @@ In longitudinal projects with repeating instruments, instance qualifiers and eve
 
 ---
 
-# 7. Related Articles
+# 7. Pattern: Accumulator Chain for Cross-Instance Aggregation
+
+A common challenge with repeating instruments is aggregating a value across all instances for use in alerts or piping — for example, building a list of all staff names who completed a training, or collecting all email addresses across a repeating staff roster.
+
+REDCap cannot directly iterate over all instances in a formula, but you can build an **accumulator chain** using `[previous-instance]` and then surface the final result with `[last-instance]` from a non-repeating instrument.
+
+**Step 1 — Compute the unit value per instance.** In the repeating instrument, create a hidden `@CALCTEXT` field that outputs the value you want to collect for this instance, or blank if not applicable:
+
+```
+@CALCTEXT(if([training_complete]='1', concat_ws(' ', [staff_fname], [staff_lname]), ''))
+```
+
+Store this in a hidden field, e.g., `staff_trained_this`.
+
+**Step 2 — Accumulate across instances.** In the same repeating instrument, create a second hidden `@CALCTEXT` field that appends the current instance's value to whatever was accumulated in the previous instance:
+
+```
+@CALCTEXT(concat_ws(', ', [staff_trained_all][previous-instance], [staff_trained_this]))
+```
+
+In instance 1, `[previous-instance]` is blank, so the result is just this instance's value. In instance 2, it combines instance 1's accumulated value with instance 2's value, and so on.
+
+**Step 3 — Surface the final value.** In a **non-repeating instrument** (often a dedicated "fields for alert piping" form), create a `@CALCTEXT` field that reads from the last instance:
+
+```
+@CALCTEXT([staff_trained_all][last-instance])
+```
+
+This field always reflects the full accumulated list and can be piped into alert email bodies.
+
+**Important:** This pattern depends on instances being recalculated in order. If earlier instances are edited after later ones are added, accumulated values may become stale. The `recalculate` external module (if installed) can force recalculation across all instances. Also note that `concat_ws` with a blank value produces no extra delimiter — `concat_ws(', ', 'Alice', '')` returns `'Alice'`, not `'Alice, '` — which keeps the list clean even when some instances contribute nothing.
+
+---
+
+# 8. Related Articles
 
 - RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
 - RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (detailed instance qualifier syntax)

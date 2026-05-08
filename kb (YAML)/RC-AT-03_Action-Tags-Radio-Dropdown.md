@@ -55,12 +55,17 @@ Hides one or more specific options from a field while preserving those options i
 @HIDECHOICE='1'
 ```
 
-**Syntax — multiple options:**
+**Syntax — multiple options (separate annotations, preferred):**
+```
+@HIDECHOICE='1' @HIDECHOICE='2'
+```
+
+**Syntax — multiple options (comma-separated, use with caution):**
 ```
 @HIDECHOICE='1, 2'
 ```
 
-Use the raw value of the option(s), not the label. Separate multiple values with commas.
+Use the raw value of the option(s), not the label. Where multiple options need to be hidden, separate annotations per value are the safest approach — the comma-separated form may not behave consistently across all REDCap versions. Always test before deploying to production.
 
 **Use case:** Marking class spots as filled in a registration form, or hiding expired options while preserving historical selections.
 

@@ -267,6 +267,8 @@ All project users appear in this file, including those without a role assignment
 
 **Not reviewing rights after adding a new instrument.** When a new instrument is added to the project, existing user rights do not automatically update to include it. Review all user rights (or role configurations) after adding instruments to ensure access is set correctly for the new instrument.
 
+**Renaming a role that is referenced in branching logic.** REDCap allows branching logic to reference the current user's role by name using the `[user-role-label]` smart variable — for example, to restrict a sensitive field to a specific reviewer role. This is useful for enforcing role-based access within a form, but it creates a hidden dependency: the role's display name as shown in User Rights becomes a hard-coded string in the data dictionary. If that role is later renamed (even a capitalisation change, e.g., `"data manager"` → `"Data Manager"`), every branching condition referencing the old name silently breaks — the field becomes invisible or permanently visible to everyone in that role, with no error message. Before renaming any role, search the data dictionary for its name in branching logic, calculated fields, and action tags. Treat role names referenced in logic as frozen identifiers for the life of the project, and document them separately from the User Rights configuration so the dependency is visible.
+
 ---
 
 ## API Access
