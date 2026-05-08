@@ -185,7 +185,32 @@ Example response: `2`
 
 ---
 
-# 6. Common Questions
+# 6. CSV Format
+
+When submitting the `data` payload as CSV (`format='csv'`), the file uses the following structure.
+
+**Columns:** `username`, `redcap_data_access_group`
+
+| **Column** | **Type** | **Required** | **Notes** |
+|---|---|---|---|
+| `username` | String | Required | The user's REDCap login username. Must match an existing user in the project. Usernames containing spaces or special characters must be enclosed in double quotes. |
+| `redcap_data_access_group` | String | Required | The `unique_group_name` of the DAG to assign the user to (e.g., `new_haven`). The display name is **not** accepted. Leave blank to remove the user from all DAGs, which grants all-DAG access. |
+
+Example CSV:
+```
+username,redcap_data_access_group
+jsmith,new_haven
+"test person",new_haven
+admin_user,
+```
+
+In this example, `jsmith` and `test person` are assigned to the `new_haven` DAG, and `admin_user` is unassigned (all-DAG access).
+
+> **Note:** Unlike the DAGs export, the user-DAG assignments CSV contains only two columns — there is no `data_access_group_id` or display name column in this file. Use Export DAGs (RC-API-28) to look up the correct `unique_group_name` values before building this file.
+
+---
+
+# 7. Common Questions
 
 **Q: Can I assign a user to multiple DAGs?**
 
@@ -217,7 +242,7 @@ Example response: `2`
 
 ---
 
-# 7. Common Mistakes & Gotchas
+# 8. Common Mistakes & Gotchas
 
 **Using the DAG display name instead of the unique group name.** The `redcap_data_access_group` field requires the unique group name (e.g., `'group_1'`, `'boston_site'`), not the human-readable label (e.g., `'Boston Site'`). Use the Export DAGs method (RC-API-28) to find the correct unique names.
 
@@ -237,7 +262,7 @@ Example response: `2`
 
 ---
 
-# 8. Related Articles
+# 9. Related Articles
 
 - RC-API-01 — REDCap API (foundational; required reading before using any API method)
 - RC-DAG-01 — Data Access Groups (explains DAG concepts, structure, and configuration)

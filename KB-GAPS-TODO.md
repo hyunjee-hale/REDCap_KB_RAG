@@ -6,17 +6,6 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ## Open Gaps
 
-
-### ⚠️ RC-LOCK-01 — Record Locking & E-Signatures
-
-**Why needed:** Record locking is a significant REDCap feature for clinical data integrity and regulatory workflows. It is mentioned in passing in RC-DE-13 (Record Administration) but has no dedicated article. E-signature support makes this a distinct topic from simple record-level admin actions.
-
-**Domain slug:** LOCK (new domain)
-**What to cover:** What record locking does (prevents further edits to a form/record), difference between locking a single instrument vs. entire record; how to enable record locking (project-level setting, user rights required); locking and unlocking workflow; e-signature configuration and user flow; locked form indicators in the UI; interaction with Data Resolution Workflow; locking in longitudinal projects (per-event behavior); audit trail entries for lock/unlock/e-sign events; admin override capabilities
-
----
-
-
 ---
 
 ### ⚠️ RC-DE-13 — Record Administration (Choose Action for Record)
@@ -229,6 +218,12 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 
 ---
 
+### Record Locking (RC-LOCK) — new domain
+
+- RC-LOCK-01 — Record Locking & E-Signatures ✅
+
+---
+
 ### Previously tracked (earlier resolved)
 
 - RC-BL-05 — Branching Logic in Longitudinal Projects ✅
@@ -259,4 +254,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-06 — RC-FD-11 (Advanced Online Designer Options) written and resolved. Open gaps (2): RC-DE-13, RC-LOCK-01.*
+*Last updated: 2026-05-07 — RC-LOCK-01 (Record Locking & E-Signatures) written and resolved. New domain LOCK. Open gaps (1): RC-DE-13.*

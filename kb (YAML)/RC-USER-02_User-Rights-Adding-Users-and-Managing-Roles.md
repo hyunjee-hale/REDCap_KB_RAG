@@ -147,10 +147,85 @@ Ghost users have no real account attached and are harmless in terms of data acce
 
 The **Upload or download users, roles, and assignments** button (top right of the User Rights page) allows you to:
 
-- **Download** the current configuration of all users, roles, and role assignments as structured files.
+- **Download** the current configuration of all users, roles, and role assignments as separate structured CSV files.
 - **Upload** modified versions of those files to apply changes in bulk.
 
-This is useful for large projects or when migrating user configurations from another project.
+This is useful for large projects, for migrating a user configuration from one project to another, or for onboarding many users at once without editing each individually.
+
+**Upload behavior:** Additive/update — new entries are added and existing entries are updated to match the uploaded file. Users present in the project but absent from the uploaded file are **not** removed.
+
+> **Golden rule:** Always download first, then edit the downloaded file. The CSV formats contain encoded values (especially for form-level permissions) that are impractical to construct from scratch. Starting from a downloaded template avoids column order mistakes and encoding errors.
+
+## 7.1 Users CSV
+
+**Filename produced by download:** `[ProjectName]_Users_[Date].csv`
+
+Each row represents one project user. The full column set:
+
+| Column | Type | Description |
+|---|---|---|
+| `username` | string | REDCap username. Must match an existing account in this installation. Required. |
+| `expiration` | date (`YYYY-MM-DD`) | Account expiration date. Leave blank for no expiration. |
+| `data_access_group` | string | Unique DAG name (not the label) to assign the user to a DAG. Leave blank if not in a DAG. |
+| `data_access_group_id` | integer | Numeric ID of the DAG. Informational — REDCap uses `data_access_group` as the key. |
+| `data_access_group_label` | string | Human-readable DAG label. Informational only. |
+| `design` | 0/1 | Project Design & Setup rights. |
+| `alerts` | 0/1 | Alerts & Notifications access. |
+| `user_rights` | 0/1 | Ability to manage other users' rights. |
+| `data_access_groups` | 0/1 | Ability to create and manage DAGs. |
+| `reports` | 0/1 | Create and edit reports. |
+| `stats_and_charts` | 0/1 | View Stats & Charts. |
+| `manage_survey_participants` | 0/1 | Manage survey participants and distribution. |
+| `calendar` | 0/1 | Access the Calendar. |
+| `data_import_tool` | 0/1 | Access the Data Import Tool. |
+| `data_comparison_tool` | 0/1 | Access the Data Comparison Tool. |
+| `logging` | 0/1 | View project logging. |
+| `email_logging` | 0/1 | View email logging. |
+| `file_repository` | 0/1 | Access the File Repository. |
+| `data_quality_create` | 0/1 | Create Data Quality rules. |
+| `data_quality_execute` | 0/1 | Execute Data Quality rules. |
+| `api_export` | 0/1 | API token with export rights. |
+| `api_import` | 0/1 | API token with import/write rights. |
+| `api_modules` | 0/1 | Access to API playground and modules. |
+| `mobile_app` | 0/1 | Access the REDCap Mobile App. |
+| `mobile_app_download_data` | 0/1 | Allow data download via Mobile App. |
+| `record_create` | 0/1 | Create new records. |
+| `record_rename` | 0/1 | Rename existing records. |
+| `record_delete` | 0/1 | Delete records. |
+| `lock_records_all_forms` | 0/1 | Lock/unlock records across all forms. |
+| `lock_records` | 0/1 | Lock/unlock individual records. |
+| `lock_records_customization` | 0/1 | Customize locking behavior per form. |
+| `forms` | encoded string | Per-form data-entry access. Quoted, comma-separated list of `form_name:access_level` pairs (e.g., `"screening:130,demographics:130"`). See note on form encoding below. |
+| `forms_export` | encoded string | Per-form export access. Same format as `forms`, using `1` to grant export access (e.g., `"screening:1,demographics:1"`). Leave blank to deny export access on all forms. |
+
+**Form access encoding.** The integer values in the `forms` column are REDCap's internal encoded permission levels — they are not simple 0/1 flags. Values observed in downloaded files include `130` (read/write) and `138` (a different access variant, likely read-only or a survey-specific permission). Do not attempt to construct these values from memory; always use a downloaded file as your template and modify only the specific forms you need to change.
+
+## 7.2 User Roles CSV
+
+**Filename produced by download:** `[ProjectName]_UserRoles_[Date].csv`
+
+Each row represents one custom user role. Columns are nearly identical to the Users CSV with these differences:
+
+1. **First column is `unique_role_name`** — the system-generated role identifier (format: `U-XXXXXXXXX`). Do not modify this value when editing an existing role; REDCap uses it to match the import row to the correct role. To create a new role via import, you can leave this blank — REDCap will assign an ID.
+2. **Second column is `role_label`** — the human-readable role name shown in the UI (e.g., `"demo role"`).
+3. **No user-level columns** — `expiration`, `data_access_group`, `data_access_group_id`, and `data_access_group_label` are absent. Those are per-user settings, not role-level settings.
+
+> **Column order difference:** The three locking columns appear in a different order than in the Users CSV. In the Users file: `lock_records_all_forms`, `lock_records`, `lock_records_customization`. In the User Roles file: `lock_records_customization`, `lock_records`, `lock_records_all_forms`. This is one more reason to always start from a downloaded template rather than building manually.
+
+## 7.3 User–Role Assignments CSV
+
+**Filename produced by download:** `[ProjectName]_UserRoleAssignments_[Date].csv`
+
+The simplest of the three files — just two columns:
+
+| Column | Description |
+|---|---|
+| `username` | REDCap username. Must match a user already in the project. |
+| `unique_role_name` | System-generated role ID (e.g., `U-594WK7W9KY`). Leave blank if the user is not assigned to any role (individual rights). |
+
+All project users appear in this file, including those without a role assignment (their `unique_role_name` is blank). Uploading this file assigns or clears role assignments — it does not add or remove users from the project.
+
+> **Cross-file consistency:** The `unique_role_name` values here must match the IDs in the User Roles CSV. If you are migrating a role configuration from another project, do not hardcode old role IDs in the assignments file. Instead: upload the User Roles CSV to the new project first, then re-download the User Roles CSV to get the newly assigned IDs, then build or update the assignments file using those new IDs.
 
 ---
 

@@ -357,7 +357,25 @@ If you find that certain recipient options are unavailable in your alert configu
 
 ---
 
-# 9. Related Articles
+# 9. Bulk Management via CSV
+
+REDCap allows you to export and import all alert definitions for a project as a CSV file. This is the fastest way to copy a full alert configuration from one project to another, or to make batch edits (e.g., updating subject lines, swapping a from address, or adjusting time lags across many alerts at once) outside of the REDCap interface.
+
+**Location:** Applications → Alerts & Notifications → "Upload or download alerts" button.
+
+**Export:** Downloads a CSV file containing every alert in the project. Each row is one alert. Use this file as a starting template for new alerts, or import it into a different project to replicate the configuration.
+
+**Import:** Upload a CSV in the same format. Import behavior is additive — imported alerts are added to the existing list; they do not overwrite or delete existing alerts.
+
+**Rights required:** Project Design and Setup.
+
+**Starting a file from scratch:** Always start from an exported file rather than building the column headers by hand — the column order and required JSON fields (`sendgrid-template-data`, `sendgrid-mail-send-configuration`) are easy to get wrong. Export even a single placeholder alert to get the correct structure.
+
+For the full column-by-column reference, accepted values, an annotated example, and common mistakes, see **RC-IMP-05 — Alerts & Notifications CSV**.
+
+---
+
+# 10. Related Articles
 
 - RC-ALERT-02 — Alert Management & Notification Log (managing multiple alerts, using the notification log)
 - RC-PIPE-01 — Piping: Basics, Syntax & Field Types (piping syntax used in alert subjects and message bodies)

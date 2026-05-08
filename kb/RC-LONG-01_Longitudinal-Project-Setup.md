@@ -155,18 +155,63 @@ Access bulk options from the **Upload or download arms/events** dropdown.
 
 > **Note:** Arms and event uploads are additive — you can safely upload a file containing only new rows without affecting existing configuration. This is the opposite of instrument-event mapping uploads, which replace the entire mapping (see §6.2). Keep this distinction in mind when planning bulk updates.
 
-**Arms CSV columns:** `arm_num`, `name`
+### Arms CSV format
 
-**Events CSV columns (core):** `event_name`, `arm_num`, `unique_event_name`, `custom_event_label`
+**Columns:** `arm_num`, `name`
 
-- `unique_event_name` may be left blank — REDCap auto-generates it from the event name and arm number (e.g., an event named "Baseline" in arm 1 becomes `baseline_arm_1`).
-- `custom_event_label` may be left blank if piped labels are not in use.
+| **Column** | **Type** | **Notes** |
+|---|---|---|
+| `arm_num` | Positive integer | Sequential, starting at 1. No leading zeros. |
+| `name` | Free text | Descriptive label shown in the UI (e.g., "Control", "Intervention"). |
 
-**Events CSV columns (with scheduling module):** `event_name`, `arm_num`, `day_offset`, `offset_min`, `offset_max`, `unique_event_name`, `custom_event_label`
+Example:
 
-- `day_offset` is the number of days from a reference date (e.g., enrollment date). REDCap displays events in ascending `day_offset` order. When multiple events share the same `day_offset`, REDCap breaks the tie by sorting alphabetically by unique event name — which is rarely the intended clinical order. To enforce a specific display order among same-day events, assign sequential `day_offset` values (e.g., 0, 1, 2, 3…) even if the events all occur on the same calendar day.
-- `offset_min` and `offset_max` define the allowable scheduling window in days before and after the target date. Note that `offset_min` represents the early window and `offset_max` the late window — both are expressed as positive numbers of days.
-- These columns appear in the downloaded events CSV only when the scheduling module is active for the project. Include them in an upload only when scheduling is in use.
+```
+arm_num,name
+1,Control
+2,Intervention
+```
+
+### Events CSV format
+
+**Core columns (always present):** `event_name`, `arm_num`, `unique_event_name`, `custom_event_label`
+
+**Additional columns when the Scheduling module is active:** `day_offset`, `offset_min`, `offset_max` appear between `arm_num` and `unique_event_name`.
+
+Full column order (scheduling active): `event_name`, `arm_num`, `day_offset`, `offset_min`, `offset_max`, `unique_event_name`, `custom_event_label`
+
+| **Column** | **Type** | **Notes** |
+|---|---|---|
+| `event_name` | Free text | Display label for the event. **Values containing spaces or special characters are wrapped in double quotes** in the CSV (e.g., `"3 Month"`, `"End of Study"`). |
+| `arm_num` | Positive integer | Must match an existing arm. In multi-arm projects, every event must appear as a separate row for each arm — there is no single row that spans multiple arms. A 2-arm, 6-event project produces 12 rows in the events CSV. |
+| `day_offset` | Integer ≥ 0 | Days from the reference date (e.g., enrollment). REDCap sorts events by `day_offset` ascending. |
+| `offset_min` | Integer ≥ 0 | Early scheduling window (days before the target date). Expressed as a positive number. |
+| `offset_max` | Integer ≥ 0 | Late scheduling window (days after the target date). Expressed as a positive number. Symmetric windows (e.g., ±14 days) appear as the same value in both columns. |
+| `unique_event_name` | Snake_case string | May be left blank on upload — REDCap auto-generates from the event name and arm number. **Recommended: leave blank and let REDCap generate.** See derivation rule below. |
+| `custom_event_label` | Free text or blank | Piped event label. Leave blank if not used. The column is always present in exports — even when all values are empty. |
+
+**`unique_event_name` derivation rule:** REDCap lowercases the event name, replaces spaces with underscores, removes hyphens (not converts — removes entirely), then appends `_arm_{N}`. Examples: "Screening" → `screening_arm_1`; "3 Month" → `3_month_arm_1`; "End of Study" → `end_of_study_arm_1`; "Follow-up" → `followup_arm_1` (hyphen removed). Hand-typing unique event names that don't match this rule exactly will cause the mapping upload to silently fail.
+
+- `day_offset`, `offset_min`, and `offset_max` appear in the downloaded events CSV only when the scheduling module is active for the project. Include them in an upload only when scheduling is in use.
+- When multiple events share the same `day_offset`, REDCap breaks the display-order tie by sorting alphabetically by unique event name — which is rarely the intended clinical order. To enforce a specific display order among same-day events, assign sequential `day_offset` values (e.g., 0, 1, 2, 3…) even if the events all occur on the same calendar day.
+
+Example (scheduling module active, 2-arm project — rows for both arms shown):
+
+```
+event_name,arm_num,day_offset,offset_min,offset_max,unique_event_name,custom_event_label
+Screening,1,0,0,0,screening_arm_1,
+Baseline,1,7,7,7,baseline_arm_1,
+"3 Month",1,90,14,14,3_month_arm_1,
+"6 Month",1,180,14,14,6_month_arm_1,
+"9 Month",1,270,14,14,9_month_arm_1,
+"End of Study",1,365,14,14,end_of_study_arm_1,
+Screening,2,0,0,0,screening_arm_2,
+Baseline,2,7,7,7,baseline_arm_2,
+"3 Month",2,90,14,14,3_month_arm_2,
+"6 Month",2,180,14,14,6_month_arm_2,
+"9 Month",2,270,14,14,9_month_arm_2,
+"End of Study",2,365,14,14,end_of_study_arm_2,
+```
 
 ## 6.2 Instrument-Event Mappings (Designate Instruments page)
 
@@ -177,11 +222,43 @@ Access bulk options from the **Upload or download instrument mappings** dropdown
 | Upload instrument-event mappings (CSV) | Replaces the full mapping configuration. Any instrument-event combination omitted from the file will be unchecked. |
 | Download instrument-event mappings (CSV) | Exports current mappings. Useful for backup or bulk editing. |
 
-**Instrument-event mappings CSV columns:** `arm_num`, `unique_event_name`, `form`
+### Instrument-Event Mappings CSV format
 
-> **Important:** Unlike arm and event uploads, the instrument-event mapping upload is not additive — it replaces the complete mapping configuration. Omitting a mapping will uncheck it, potentially deleting data if the combination contained records.
+**Columns:** `arm_num`, `unique_event_name`, `form`
+
+| **Column** | **Type** | **Notes** |
+|---|---|---|
+| `arm_num` | Positive integer | Arm the event belongs to. |
+| `unique_event_name` | Snake_case string | Must match a `unique_event_name` that already exists in the project. Copy directly from a downloaded events CSV or the Define My Events page — do not type by hand. |
+| `form` | Snake_case string | The instrument's **internal variable name**, not its display label. Found in the Data Dictionary (`form_name` column) or the Online Designer. Example: `phq9`, `medication_list`, `adverse_event_log`. |
+
+Each row represents one instrument designated to one event. An event with five instruments assigned to it produces five rows in this file. In multi-arm projects the entire mapping is replicated per arm — arm 1 rows first, then arm 2, etc. File size scales as total (events × instruments per event) across all arms.
+
+> **Important:** Unlike arm and event uploads, the instrument-event mapping upload is not additive — it replaces the complete mapping configuration. Omitting a mapping will uncheck it, potentially deleting data if the combination contained records. Always start from a downloaded export and edit it rather than building from scratch.
+
+Example (2-arm project, abbreviated):
+
+```
+arm_num,unique_event_name,form
+1,screening_arm_1,screening
+1,baseline_arm_1,demographics
+1,baseline_arm_1,social_history
+1,baseline_arm_1,phq9
+1,3_month_arm_1,phq9
+1,3_month_arm_1,medication_list
+...
+2,screening_arm_2,screening
+2,baseline_arm_2,demographics
+2,baseline_arm_2,social_history
+2,baseline_arm_2,phq9
+2,3_month_arm_2,phq9
+2,3_month_arm_2,medication_list
+...
+```
 
 > **Repeatable mapping not covered here:** The bulk CSV workflow described in this section covers arms, events, and instrument-event designations only. The configuration of which instruments or events are repeatable (set up via the repeating instruments and events popup in Project Setup) cannot be exported or imported through the UI. Use the REDCap API for programmatic management of repeatable mappings. See RC-LONG-02 — Repeated Instruments & Events Setup for details.
+
+For the full column-by-column reference, upload order rules, and common mistakes for all three CSV formats, see **RC-IMP-09 — Longitudinal Structure CSV**.
 
 ---
 

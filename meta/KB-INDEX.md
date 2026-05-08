@@ -171,8 +171,16 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-FD-12 | Dynamic SQL Field Type | RC-FD-12_Dynamic-SQL-Field-Type.md |
 | RC-IMP-01 | Data Import Overview | RC-IMP-01_Data-Import-Overview.md |
 | RC-IMP-03 | CSV Upload Reference: All Bulk Upload Options in REDCap | RC-IMP-03_CSV-Upload-Reference.md |
+| RC-IMP-04 | Record Data CSV Import — Column Reference and Format Guide | RC-IMP-04_Record-Data-CSV-Import.md |
+| RC-IMP-05 | Alerts & Notifications CSV — Column Reference and Format Guide | RC-IMP-05_Alerts-Notifications-CSV.md |
+| RC-IMP-06 | Automated Survey Invitations CSV — Column Reference and Format Guide | RC-IMP-06_Automated-Survey-Invitations-CSV.md |
+| RC-IMP-07 | Survey Settings CSV — Column Reference and Format Guide | RC-IMP-07_Survey-Settings-CSV.md |
+| RC-IMP-08 | Form Display Logic CSV — Column Reference and Format Guide | RC-IMP-08_Form-Display-Logic-CSV.md |
+| RC-IMP-09 | Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings | RC-IMP-09_Longitudinal-Structure-CSV.md |
+| RC-IMP-10 | Survey Queue CSV — Column Reference and Format Guide | RC-IMP-10_Survey-Queue-CSV.md |
 | RC-INTG-01 | Data Entry Trigger | RC-INTG-01_Data-Entry-Trigger.md |
 | RC-LOG-01 | Logging — Project Audit Trail | RC-LOG-01_Logging-Project-Audit-Trail.md |
+| RC-LOCK-01 | Record Locking & E-Signatures | RC-LOCK-01_Record-Locking-and-E-Signatures.md |
 | RC-DDP-01 | Dynamic Data Pull — Overview & User Guide | RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md |
 | RC-DDP-02 | Dynamic Data Pull — Admin Setup & Technical Specs | RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md |
 | RC-LONG-01 | Longitudinal Project Setup | RC-LONG-01_Longitudinal-Project-Setup.md |

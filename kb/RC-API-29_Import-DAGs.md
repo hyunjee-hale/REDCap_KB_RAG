@@ -158,7 +158,36 @@ Example response: `2`
 
 ---
 
-# 5. Common Questions
+# 5. CSV Format
+
+When submitting the `data` payload as CSV (`format='csv'`), the file uses the following structure.
+
+**Columns:** `data_access_group_name`, `unique_group_name`
+
+| **Column** | **Type** | **Required** | **Notes** |
+|---|---|---|---|
+| `data_access_group_name` | Free text | Required | Human-readable display name for the DAG (e.g., `Boston Site`). Shown in the REDCap UI. Values containing spaces or commas must be enclosed in double quotes. |
+| `unique_group_name` | Alphanumeric/underscore | Optional | System identifier used in all API calls and data entry. Leave blank to let REDCap auto-generate it from the display name (lowercase, spaces converted to underscores — e.g., `"New Haven"` → `new_haven`). If provided, must be unique within the project. |
+
+Example CSV (two new DAGs, auto-generated unique names):
+```
+data_access_group_name,unique_group_name
+"New Haven",
+Seattle,
+```
+
+Example CSV (two DAGs with explicit unique names):
+```
+data_access_group_name,unique_group_name
+"New Haven",new_haven
+Seattle,seattle
+```
+
+> **Note:** The `data_access_group_id` column appears as a third column in DAG **exports** (e.g., `data_access_group_name,unique_group_name,data_access_group_id`). This is a read-only internal ID assigned by REDCap and is ignored on import — you do not need to include it when building an import file, but it is harmless to leave it in if you are re-uploading an exported file.
+
+---
+
+# 6. Common Questions
 
 **Q: Do I have to provide a `unique_group_name` when importing?**
 
@@ -182,7 +211,7 @@ Example response: `2`
 
 ---
 
-# 6. Common Mistakes & Gotchas
+# 7. Common Mistakes & Gotchas
 
 **Using spaces or special characters in `unique_group_name`.** While REDCap may accept them, stick to alphanumeric characters and underscores for consistency and to avoid downstream issues. If you provide a complex name, it may not work properly in data entry or other operations.
 
@@ -198,7 +227,7 @@ Example response: `2`
 
 ---
 
-# 7. Related Articles
+# 8. Related Articles
 
 - RC-API-01 — REDCap API (foundational; required reading before using any API method)
 - RC-DAG-01 — Data Access Groups (explains DAG concepts, structure, and configuration)

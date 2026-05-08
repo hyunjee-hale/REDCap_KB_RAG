@@ -16,7 +16,7 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 
 - [x] **Teach Claude how to build the alerts upload CSV** — Document the CSV format REDCap uses for importing Alerts & Notifications. Add to a skill (or to the relevant KB article) with enough spec detail that Claude can generate a valid import file from scratch.
 
-- [ ] **Feed Claude examples of all uploadable file formats** — For each upload type in RC-IMP-03, provide a real or representative example file. Use these to expand the relevant KB articles with annotated column-by-column breakdowns, accepted values, escaping rules, and common mistakes. Goal: Claude can generate any valid upload file from scratch given a plain-language description.
+- [x] **Feed Claude examples of all uploadable file formats** — For each upload type in RC-IMP-03, provide a real or representative example file. Use these to expand the relevant KB articles with annotated column-by-column breakdowns, accepted values, escaping rules, and common mistakes. Goal: Claude can generate any valid upload file from scratch given a plain-language description.
   - [x] Data Dictionary
   - [x] Arms
   - [x] Events
@@ -28,13 +28,13 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
   - [x] Data Access Groups (DAGs)
   - [x] User–DAG Assignments
   - [x] Alerts & Notifications
-  - [ ] Automated Survey Invitations (ASI)
-  - [ ] Survey Queue
-  - [ ] Survey Settings
+  - [x] Automated Survey Invitations (ASI)
+  - [x] Survey Queue
+  - [x] Survey Settings
   - [x] Form Display Logic
-  - [ ] Data Quality Rules
-  - [ ] Language Setups (MLM)
-  - [ ] Randomization Allocation Table
+  - [x] Data Quality Rules
+  - [x] Language Setups (MLM)
+  - [x] Randomization Allocation Table
 
 ---
 
@@ -65,4 +65,4 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 
 ---
 
-*Last updated: 2026-05-07 (Form Display Logic upload format analyzed; full column reference, annotated example, and common mistakes added to RC-IMP-03 §7.5; flags confirmed lowercase y/n; double-quote escaping for empty-string conditions documented)*
+*Last updated: 2026-05-07 (Randomization Allocation Table upload format analyzed; RC-IMP-03 §7.8 expanded with column-by-column reference, DAG numeric ID gotcha, notes-column behavior, and allocation structure explanation. All "Feed Claude examples" sub-items now complete.)*

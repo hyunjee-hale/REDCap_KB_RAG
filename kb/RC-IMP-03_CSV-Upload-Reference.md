@@ -8,7 +8,7 @@ RC-IMP-03
 | **Applies To** | All REDCap project types; required rights vary per feature |
 | **Prerequisite** | RC-IMP-01 — Data Import Overview |
 | **Skill Level** | Intermediate |
-| **Version** | 1.0 |
+| **Version** | 2.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Related Topics** | RC-IMP-01 — Data Import Overview; RC-FD-03 — Data Dictionary; RC-LONG-01 — Longitudinal Project Setup; RC-USER-02 — User Rights: Adding Users & Managing Roles; RC-DAG-01 — Data Access Groups |
@@ -19,7 +19,7 @@ RC-IMP-03
 
 REDCap offers CSV-based upload and download for many areas of a project — not just participant data. Knowing which settings can be managed via file upload lets you work more efficiently on large projects and move configurations between projects without rebuilding them by hand.
 
-This article is a comprehensive reference of every REDCap setting that supports CSV upload. For each, it describes: where to find the upload option in the UI, what the upload does (additive vs. replace), and which article covers the full details.
+This article is a comprehensive index of every REDCap setting that supports CSV upload. For each, it describes: where to find the upload option in the UI, what the upload does (additive vs. replace), which rights are required, and which article covers the full details including the column-by-column format reference.
 
 > **CSV vs. other file types:** This article focuses on CSV uploads. REDCap also supports XML (for full project backups and record imports via CDISC ODM format) and ZIP files (for importing individual instruments). See RC-IMP-01 — Data Import Overview for coverage of those formats.
 
@@ -27,23 +27,23 @@ This article is a comprehensive reference of every REDCap setting that supports 
 
 # 2. Quick Reference Table
 
-| **What you're uploading** | **Location in REDCap** | **Upload behavior** | **Rights required** | **Detailed article** |
+| **What you're uploading** | **Location in REDCap** | **Upload behavior** | **Rights required** | **Format reference** |
 |---|---|---|---|---|
 | Data Dictionary | Project Setup or Online Designer | **Replaces** all instruments and fields | Project Design and Setup | RC-FD-03 |
-| Arms | Define My Events | **Additive** — adds new arms, existing unchanged | Project Design and Setup | RC-LONG-01 |
-| Events | Define My Events | **Additive** — adds new events, existing unchanged | Project Design and Setup | RC-LONG-01 |
-| Instrument–Event Mappings | Designate Instruments for My Events | **Replaces** entire mapping | Project Design and Setup | RC-LONG-01 |
-| Record Data | Applications → Data Import Tool | Additive by default; can overwrite with setting | Data Entry rights | RC-IMP-01 |
+| Arms | Define My Events | **Additive** — adds new arms, existing unchanged | Project Design and Setup | RC-IMP-09 |
+| Events | Define My Events | **Additive** — adds new events, existing unchanged | Project Design and Setup | RC-IMP-09 |
+| Instrument–Event Mappings | Designate Instruments for My Events | **Replaces** entire mapping | Project Design and Setup | RC-IMP-09 |
+| Record Data | Applications → Data Import Tool | Additive by default; can overwrite with setting | Data Entry rights | RC-IMP-04 |
 | Users | User Rights | Additive/update | User Rights | RC-USER-02 |
 | User Roles | User Rights | Additive/update | User Rights | RC-USER-02 |
 | User–Role Assignments | User Rights | Additive/update | User Rights | RC-USER-02 |
 | Data Access Groups (DAGs) | DAGs / User Rights | Additive/update | Data Access Groups | RC-DAG-01 |
 | User–DAG Assignments | DAGs / User Rights | Additive/update | Data Access Groups | RC-DAG-01 |
-| Alerts & Notifications | Alerts & Notifications | Additive — imports alert definitions | Project Design and Setup | RC-ALERT-01 |
-| Automated Survey Invitations (ASI) | Online Designer → Automated Survey Invitations button | Additive/update | Project Design and Setup | RC-SURV-06 |
-| Survey Queue | Online Designer → Survey Queue button | Additive/update | Project Design and Setup | RC-SURV-07 |
-| Survey Settings | Online Designer → Survey Settings button | Additive/update | Project Design and Setup | RC-SURV-02 |
-| Form Display Logic | Online Designer → Form Display Logic | Additive/update | Project Design and Setup | RC-FDL-01 |
+| Alerts & Notifications | Alerts & Notifications | Additive — imports alert definitions | Project Design and Setup | RC-IMP-05 |
+| Automated Survey Invitations (ASI) | Online Designer → Automated Survey Invitations button | Additive/update | Project Design and Setup | RC-IMP-06 |
+| Survey Queue | Online Designer → Survey Queue button | Additive/update | Project Design and Setup | RC-IMP-10 |
+| Survey Settings | Online Designer → Survey Settings button | Additive/update | Project Design and Setup | RC-IMP-07 |
+| Form Display Logic | Online Designer → Form Display Logic | Additive/update | Project Design and Setup | RC-IMP-08 |
 | Data Quality Rules | Data Quality module | Additive/update | Project Design and Setup | RC-DQ-01 |
 | Language Setups (MLM) | Multi-Language Management | Additive/update | Project Design and Setup | RC-MLM-01 |
 | Randomization Allocation Table | Randomization module | Replaces active allocation table | Randomization Setup rights | RC-RAND-02 |
@@ -68,56 +68,11 @@ This article is a comprehensive reference of every REDCap setting that supports 
 
 ---
 
-## 3.2 Instrument–Event Mappings
+# 4. Longitudinal Setup (Arms, Events, Instrument-Event Mappings)
 
-**Location:** Define My Events → Designate Instruments for My Events → "Upload or download instrument mappings" dropdown.
+Arms, events, and instrument-event mappings are always used together and must be uploaded in sequence. The column reference, upload order, and common mistakes for all three are covered in a single dedicated article.
 
-**What it does:** Defines which instruments are assigned (designated) to which events in a longitudinal project. Each row in the CSV represents one instrument–event combination.
-
-**Upload behavior — Replace:** Unlike the arms and events uploads, the instrument–event mapping upload **replaces the entire mapping**. Any instrument–event combination omitted from the file will be unchecked — potentially deleting data if that combination had records saved in it. Always download the current mapping first and edit it rather than building a new file from scratch.
-
-**CSV columns:** `arm_num`, `unique_event_name`, `form`
-
-**Full details:** RC-LONG-01 — Longitudinal Project Setup, Section 6.2
-
----
-
-# 4. Longitudinal Setup
-
-## 4.1 Arms
-
-**Location:** Define My Events → "Upload or download arms/events" dropdown.
-
-**What it does:** Creates arms (participant cohorts) in a longitudinal project. Each row defines one arm.
-
-**Upload behavior — Additive:** REDCap adds any arms in the file that do not already exist. Existing arms not in the file are left unchanged.
-
-**CSV columns:** `arm_num`, `name`
-
-> **Single-arm projects:** Arm 1 is created automatically when longitudinal mode is enabled. Skip the arms upload entirely for single-arm projects — start directly with the events upload.
-
-**Upload order:** When setting up a longitudinal project from scratch via CSV, always upload in sequence: **arms → events → instrument-event mappings**. Events reference arm numbers, and mappings reference unique event names — uploading out of order will cause references to fail.
-
-**Full details:** RC-LONG-01 — Longitudinal Project Setup, Section 6.1
-
----
-
-## 4.2 Events
-
-**Location:** Define My Events → "Upload or download arms/events" dropdown.
-
-**What it does:** Creates events (time points) within arms of a longitudinal project.
-
-**Upload behavior — Additive:** REDCap adds any events in the file that do not already exist. Existing events not in the file are left unchanged.
-
-**CSV columns (core):** `event_name`, `arm_num`, `unique_event_name`, `custom_event_label`
-
-- `unique_event_name` may be left blank — REDCap auto-generates it from the event name and arm number. **Recommended:** leave this column blank and let REDCap generate the value. Hand-typed unique event names frequently diverge from what REDCap generates (particularly for event names containing hyphens, which REDCap removes rather than converting to underscores).
-- `custom_event_label` may be left blank if piped event labels are not in use.
-
-**CSV columns (with Scheduling module active):** adds `day_offset`, `offset_min`, `offset_max`
-
-**Full details:** RC-LONG-01 — Longitudinal Project Setup, Section 6.1
+**Full format reference:** RC-IMP-09 — Longitudinal Structure CSV
 
 ---
 
@@ -166,64 +121,11 @@ This article is a comprehensive reference of every REDCap setting that supports 
 
 # 6. Records (Participant Data)
 
-## 6.1 Record Data Import
-
 **Location:** Applications → Data Import Tool.
 
-**What it does:** Imports participant record data in bulk from a CSV file. Any REDCap data export in CSV format can be re-imported into the same project as-is. Partial imports (specific fields or records only) are also supported.
+The record data CSV has a detailed column-by-column format reference, including handling of longitudinal projects, repeating instruments, checkbox fields, and system columns. See the dedicated article:
 
-**Upload behavior:** Additive by default — blank cells in the import file are ignored and existing values are preserved. An optional setting ("Overwrite data with blank values") can be enabled to erase existing values with blank cells.
-
-**Important:** Clicking "Upload File" only stages a preview. The data is not saved until you scroll down and click "Import Data" on the results screen.
-
-**Full details:** RC-IMP-01 — Data Import Overview, Sections 8 and 9
-
-### Column Reference
-
-Every record data CSV — whether built from scratch or downloaded from REDCap — uses the same set of column types. The columns below appear in the order REDCap places them in a standard export.
-
-| **Column** | **Required?** | **Notes** |
-|---|---|---|
-| `record_id` *(or project-specific name)* | Always | First column. The variable name must match the project's Record ID field exactly (e.g., `participant_id`, `patient_id`). |
-| `redcap_event_name` | Longitudinal projects | Unique event name in the format `uniqueeventname_arm_N` (e.g., `baseline_arm_1`). Find all values under Project Setup → Define My Events. |
-| `redcap_repeat_instrument` | Repeating instruments | The instrument's variable name (lowercase, underscored) for the repeating instrument this row belongs to. Empty for regular event rows and for repeating-event rows. |
-| `redcap_repeat_instance` | Repeating instruments or events | Integer instance number starting at 1. When `redcap_repeat_instrument` is empty but this column has a value, REDCap treats the row as a repeating-event instance. Use the value `new` to let REDCap assign the next available instance number automatically. |
-| `redcap_survey_identifier` | Never import | Present in exports — holds the survey participant identifier (e.g., name or email used for survey invitations). **Read-only system value. Omit this column or leave it blank on import; the Data Import Tool ignores it.** |
-| `redcap_data_access_group` | Conditional | Required only when the uploading user is assigned to one or more DAGs. Omit entirely if the project does not use DAGs. |
-| *Instrument fields* (e.g., `screen_age_over_18`) | As needed | Include only the variables you want to set. Omitting a column leaves existing data unchanged (additive behavior). Values must be raw-coded (numbers, dates, text) — not choice labels. |
-| `fieldname___N` *(checkbox choices)* | As needed | Checkbox fields produce one column per answer choice. `N` is the raw coded value for that choice (e.g., `demo_race___1`, `demo_race___2`). Values are `1` (checked) or `0` (unchecked). Omitting a checkbox column leaves existing checked state unchanged. |
-| `*_timestamp` *(e.g., `demographics_timestamp`)* | Never import | Present in exports — auto-generated timestamp recording when a survey instrument was submitted. **Read-only system value. Omit or leave blank; values in these columns are ignored by the Data Import Tool.** |
-| `*_complete` *(e.g., `demographics_complete`)* | Optional | Form completion status. Integer: `0` = Incomplete, `1` = Unverified, `2` = Complete. Import to set or update form status. When omitted, existing status is unchanged. |
-
-### Example: Longitudinal Project with a Repeating Instrument
-
-The table below illustrates how a single record spans multiple rows in a longitudinal project that also has a repeating instrument (`medication_list`). Only selected columns are shown — a real export includes all project fields across all instruments, so most cells in any given row will be empty.
-
-| `record_id` | `redcap_event_name` | `redcap_repeat_instrument` | `redcap_repeat_instance` | `screen_date` | `phq9_total` | `med_name` | `med_start_date` | `screening_complete` | `phq9_complete` | `medication_list_complete` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `screening_arm_1` | *(empty)* | *(empty)* | 2026-04-30 | *(empty)* | *(empty)* | *(empty)* | 1 | *(empty)* | *(empty)* |
-| 1 | `baseline_arm_1` | *(empty)* | *(empty)* | *(empty)* | 12 | *(empty)* | *(empty)* | *(empty)* | 0 | *(empty)* |
-| 1 | `3_month_arm_1` | *(empty)* | *(empty)* | *(empty)* | 10 | *(empty)* | *(empty)* | *(empty)* | 1 | *(empty)* |
-| 1 | `baseline_arm_1` | `medication_list` | 1 | *(empty)* | *(empty)* | Metformin | 2026-05-01 | *(empty)* | *(empty)* | 2 |
-| 1 | `baseline_arm_1` | `medication_list` | 2 | *(empty)* | *(empty)* | Lisinopril | 2026-05-01 | *(empty)* | *(empty)* | 1 |
-| 1 | `3_month_arm_1` | `medication_list` | 1 | *(empty)* | *(empty)* | Metformin | 2026-05-01 | *(empty)* | *(empty)* | 0 |
-
-Key points illustrated by this example:
-
-- **One row per event** — regular (non-repeating) event data goes in a row where both repeat columns are empty. REDCap includes a row for every event in an export, even events with no data entered.
-- **One row per repeating instrument instance** — each instance of a repeating instrument gets its own row with `redcap_repeat_instrument` and `redcap_repeat_instance` filled in.
-- **Same repeating instrument at multiple events** — `medication_list` has instances at both `baseline_arm_1` and `3_month_arm_1`. Instance numbers are independent per event — instance 1 at baseline and instance 1 at 3 months are separate records.
-- **Most cells are empty in any given row** — a row carries data only for the fields belonging to that event or instrument instance. In a wide project with many instruments, the vast majority of cells will be empty. This is correct and expected — not a sign of file corruption.
-- **Complete status columns (`*_complete`) appear at the end of each instrument's field group** — they can be imported alongside data fields or omitted.
-
-### Getting the Right Header Row
-
-Two methods reliably produce the correct column layout for your project:
-
-- **Download the Data Import Template** from within the Data Import Tool. The template is header-only (no data rows) and includes the exact column set and coordinate variables your project requires.
-- **Export existing data** from Applications → Data Exports, Reports & Stats. The export uses the same header structure and, if records already exist, provides real examples of correctly formatted values.
-
-Building the header row manually is error-prone. Always start from one of these two sources.
+**Full format reference:** RC-IMP-04 — Record Data CSV Import
 
 ---
 
@@ -239,83 +141,7 @@ Building the header row manually is error-prone. Always start from one of these 
 
 **Rights required:** Project Design and Setup.
 
-**Full details:** RC-ALERT-01 — Alerts & Notifications: Setup
-
-### Column Reference
-
-Each row in the file represents one alert. The table below documents every column.
-
-| Column | Required | Accepted Values / Notes |
-|---|---|---|
-| `alert-unique-id` | No (new) / Yes (update) | REDCap-assigned identifier in the format `A-XXXX` (e.g., `A-2482`). Leave blank when creating new alerts — REDCap assigns the ID on import. Required when updating or copying specific existing alerts. |
-| `alert-title` | No | Free-text display name. Optional but strongly recommended; this is the primary identifier in the Alerts management view and the notification log. |
-| `alert-trigger` | Yes | `SUBMIT` — completion or combination trigger (fires on instrument save). `LOGIC` — logic trigger (fires when logic becomes true, regardless of save source, including imports and API writes). |
-| `unique-form-name` | Yes (SUBMIT) | The instrument's unique name (variable name, not display label). Required for `SUBMIT` triggers; specifies which instrument save activates the alert. |
-| `unique-event-name` | No | The event's unique name (e.g., `baseline_arm_1`). Leave blank for classic (non-longitudinal) projects. When blank in a longitudinal project, the alert applies to any event where the instrument appears. Event context for recipients and message content is specified via piping syntax inside `email-to` and `alert-message` instead. |
-| `saved-with-form-status` | No | `COMPLETE` — fires only when the instrument is saved with Complete status (value 2). Leave blank to fire on any save status. |
-| `alert-condition` | No | Logic expression string (same syntax as branching logic). Required for combination triggers and logic triggers. Leave blank for pure completion triggers. |
-| `ensure-logic-still-true` | Yes | `Y` or `N`. When `Y`, REDCap re-evaluates the trigger logic immediately before sending. If the logic is no longer true at send time, the queued alert is cancelled. Most useful when the alert has a scheduled delay. |
-| `do-not-clear-recurrences` | Yes | `Y` or `N`. Controls whether a new trigger event clears previously queued recurrences for the same record. |
-| `alert-stop-type` | Yes | Trigger limit — how many times the alert can fire per record. `RECORD` — once per record. Additional values for longitudinal/repeated projects include `EVENT` (once per event), `INSTANCE` (once per repeat instance), and `EVENT_INSTANCE` (once per event-instance combination). |
-| `send-on` | Yes | When to send after the trigger fires. `NOW` — immediately. `TIME_LAG` — after a specified delay (configure with `send-on-time-lag-days`, `send-on-time-lag-hours`, `send-on-time-lag-minutes`). `NEXT_DAY` — next occurrence of a specified day type (configure with `send-on-next-day-type` and `send-on-next-time`). `EXACT_DATE` — at a specific date/time (configure with `send-on-date`). `FIELD` — relative to a date stored in a project field (configure with `send-on-field`). |
-| `send-on-next-day-type` | Conditional | Day-type value for `NEXT_DAY` sends (e.g., weekday, Monday). Leave blank otherwise. |
-| `send-on-next-time` | Conditional | Time component (HH:MM) for `NEXT_DAY` sends. Leave blank otherwise. |
-| `send-on-time-lag-days` | Conditional | Number of days for `TIME_LAG` delay. All three lag columns (`days`, `hours`, `minutes`) must be specified together — use `0` for units not needed. |
-| `send-on-time-lag-hours` | Conditional | Hours component of `TIME_LAG` delay. Use `0` if not needed. |
-| `send-on-time-lag-minutes` | Conditional | Minutes component of `TIME_LAG` delay. Use `0` if not needed. |
-| `send-on-field-after` | Conditional | Direction for `TIME_LAG` sends: `after` (send N days/hours/minutes after the trigger). Leave blank for `NOW` sends. |
-| `send-on-field` | Conditional | The project field name used as a reference date for `FIELD` sends. Leave blank otherwise. |
-| `send-on-date` | Conditional | Specific date/time for `EXACT_DATE` sends (server time zone applies). Leave blank otherwise. |
-| `alert-send-how-many` | Yes | `ONCE` — send a single time per trigger event. `MULTIPLE` — send on a recurring basis (configure with `every-time-type`, `repeat-for`, `repeat-for-units`, `repeat-for-max`). |
-| `every-time-type` | Conditional | Required when `alert-send-how-many` = `MULTIPLE`. The unit for the recurrence interval. |
-| `repeat-for` | Conditional | Numeric interval between recurring sends. |
-| `repeat-for-units` | Conditional | Unit for `repeat-for` (days, hours, or minutes). |
-| `repeat-for-max` | Conditional | Maximum number of sends including the first. **Always set this** — leaving it blank causes REDCap to send indefinitely. |
-| `alert-expiration` | No | Date/time after which REDCap will not send any further instances of this alert, and will cancel any already-queued ones. |
-| `alert-type` | Yes | `EMAIL` — standard email (always available). `SMS` — text message (if enabled). `VOICE` — voice call (if enabled). `SENDGRID` — SendGrid delivery (if configured). |
-| `email-from-display` | No | Optional display name for the from address (e.g., `Heart Study Team`). Leave blank to use the raw email address as the display name. |
-| `email-from` | Yes (email) | The from email address. Must be an address associated with a current project user's REDCap profile. |
-| `email-to` | Yes (email) | Recipient(s). Accepts: a static email address; a project field variable (`[field_name]`); or an event-prefixed field variable for longitudinal projects (`[event_name][field_name]`, e.g., `[baseline_arm_1][contact_email]`). Multiple recipients separated by semicolons. |
-| `email-cc` | No | CC recipient(s). Same syntax as `email-to`. |
-| `email-bcc` | No | BCC recipient(s). Same syntax as `email-to`. |
-| `email-failed` | No | Email address to notify if REDCap fails to deliver the alert. Only one address is accepted. |
-| `email-subject` | Yes (email) | Subject line. Supports piping syntax. Avoid piping identifiers here unless the `prevent-piping-identifiers` column is set to `N`. |
-| `alert-message` | Yes | The message body. Supports HTML, piped variables, and smart variables (e.g., `[survey-link:instrument_name:Link text]`). In longitudinal projects, prefix survey link smart variables with the target event: `[event_name][survey-link:instrument_name:Link text]`. The field can span multiple lines in the CSV — the entire value is quoted. |
-| `sendgrid-template-id` | No | SendGrid template ID. Leave blank for standard email alerts. |
-| `sendgrid-template-data` | Yes | JSON object. Use `{}` when not supplying SendGrid template variables. Do not leave blank — an empty JSON object is required. |
-| `sendgrid-mail-send-configuration` | Yes | JSON object. Use `{}` when not using custom SendGrid mail send configuration. Do not leave blank. |
-| `prevent-piping-identifiers` | Yes | `Y` or `N`. When `Y` (the default in the UI), REDCap strips identifier field values from piped content before sending. Set to `N` only when intentional identifier piping has been confirmed as appropriate with your IRB. |
-| `file-upload-fields` | No | Comma-separated list of file upload field names. Files stored in these fields for the triggering record are attached to the alert email. Leave blank if no attachments are needed. |
-| `phone-number-to` | Conditional | Phone number for SMS or voice call alerts. Leave blank for email. |
-| `alert-deactivated` | Yes | `Y` — alert is inactive and will not fire. `N` — alert is active. |
-
-### Annotated Example
-
-The file below contains two alerts from a longitudinal project with two arms (`baseline_arm_1` and `3_month_arm_1`):
-
-**Alert A-2482 — "Invite baseline"**
-Fires immediately when the `screening` form is saved with Complete status. Sends once per record. Emails the participant at the address stored in `[baseline_arm_1][contact_email]`. The message body contains a survey link to the `demographics` instrument at the baseline event.
-
-**Alert A-2483 — "Invite 3 months"**
-Same trigger as A-2482 (screening form Complete), but scheduled to send 90 days later (`TIME_LAG`, 90 days, 0 hours, 0 minutes). The message links to the `phq9` instrument at the `3_month_arm_1` event. The event prefix on the survey link (`[3_month_arm_1][survey-link:phq9:Start here]`) ensures REDCap generates a link to the correct event, not the baseline event.
-
-```csv
-alert-unique-id,alert-title,alert-trigger,unique-form-name,unique-event-name,saved-with-form-status,alert-condition,ensure-logic-still-true,do-not-clear-recurrences,alert-stop-type,send-on,send-on-next-day-type,send-on-next-time,send-on-time-lag-days,send-on-time-lag-hours,send-on-time-lag-minutes,send-on-field-after,send-on-field,send-on-date,alert-send-how-many,every-time-type,repeat-for,repeat-for-units,repeat-for-max,alert-expiration,alert-type,email-from-display,email-from,email-to,email-cc,email-bcc,email-failed,email-subject,alert-message,sendgrid-template-id,sendgrid-template-data,sendgrid-mail-send-configuration,prevent-piping-identifiers,file-upload-fields,phone-number-to,alert-deactivated
-A-2482,"Invite baseline",SUBMIT,screening,,COMPLETE,,N,N,RECORD,NOW,,,,,,,,,ONCE,,,,,,EMAIL,,study@institution.edu,[baseline_arm_1][contact_email],,,,"Invite for baseline","<p>Hi,</p><p>Please complete the baseline forms:</p><p>[baseline_arm_1][survey-link:demographics:Start here]</p><p>thanks,</p><p>Study team</p>",,{},{},N,,,N
-A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,0,after,,,ONCE,,,,,,EMAIL,,study@institution.edu,[baseline_arm_1][contact_email],,,,"Invite for 3 months","<p>Hi,</p><p>Please complete the 3-month forms:</p><p>[3_month_arm_1][survey-link:phq9:Start here]</p><p>thanks,</p><p>Study team</p>",,{},{},N,,,N
-```
-
-### Common Mistakes
-
-**Leaving `sendgrid-template-data` and `sendgrid-mail-send-configuration` blank.** These columns must contain a JSON object. Use `{}` when not using SendGrid features. A blank cell here can cause import errors.
-
-**Omitting the event prefix on `email-to` in a longitudinal project.** Writing `[contact_email]` without an event prefix may resolve to the wrong event or fail entirely if the field appears at multiple events. Always use `[event_name][field_name]` form for longitudinal recipients.
-
-**Omitting the event prefix in `alert-message` survey links.** `[survey-link:phq9]` without an event prefix is ambiguous in a longitudinal project where the instrument appears at multiple events. Always write `[event_name][survey-link:instrument_name:Link text]`.
-
-**Specifying only `send-on-time-lag-days` for a TIME_LAG send.** All three lag columns — days, hours, and minutes — must be present. Use `0` for the units you don't need; don't leave them blank.
-
-**Leaving `alert-send-how-many` blank or omitting the repeat cap.** For recurring alerts, always set `repeat-for-max`. Without it, REDCap sends indefinitely.
+**Full format reference:** RC-IMP-05 — Alerts & Notifications CSV
 
 ---
 
@@ -325,11 +151,11 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 **What it does:** Exports all ASI configurations for the project as a CSV and allows re-importing them — useful for copying a complex invitation schedule from one project to another or for batch-editing invitation logic outside of REDCap.
 
-**Upload behavior:** Additive/update.
+**Upload behavior:** Additive/update — ASIs matching the `form_name`/`event_name` key are updated; others are left unchanged.
 
 **Rights required:** Project Design and Setup (at least one survey must be enabled in the project).
 
-**Full details:** RC-SURV-06 — Automated Survey Invitations (ASI)
+**Full format reference:** RC-IMP-06 — Automated Survey Invitations CSV
 
 ---
 
@@ -343,34 +169,21 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 **Rights required:** Project Design and Setup.
 
-**Columns (8):**
-
-| Column | Notes |
-|---|---|
-| `form_name` | Instrument unique name |
-| `event_name` | Event unique name (longitudinal only; blank for classic projects) |
-| `active` | `1` = activated in queue; `0` = deactivated |
-| `condition_surveycomplete_form_name` | Completion trigger — which survey must be completed first. Blank for logic-only triggers. |
-| `condition_surveycomplete_event_name` | Event of the completing survey. May reference an event from a different arm. Blank for logic-only triggers. |
-| `condition_andor` | `AND` or `OR`. **Always populate**, even when only one trigger type is used. |
-| `condition_logic` | Branching logic expression. Cross-event format: `[event_name][field_name]`. Blank for completion-only triggers. |
-| `auto_start` | `1` = auto-start to next survey; `0` = return to queue overview |
-
-**Full details:** RC-SURV-07 — Survey Queue
+**Full format reference:** RC-IMP-10 — Survey Queue CSV
 
 ---
 
 ## 7.4 Survey Settings
 
-**Location:** Online Designer → "Survey Settings" button (project-level, not per-instrument).
+**Location:** Online Designer → download icon next to "Survey Settings" (project-level download of all survey-enabled instruments).
 
-**What it does:** Exports the survey settings for all survey-enabled instruments in the project as a CSV and allows re-importing them. This is useful for replicating settings (e.g., auto-continue, response limits, custom completion text) across projects without reconfiguring each instrument manually.
+**What it does:** Exports the survey settings for all survey-enabled instruments in the project as a CSV and allows re-importing them. Useful for replicating settings across projects without reconfiguring each instrument manually.
 
-**Upload behavior:** Additive/update — imported settings overwrite the current settings for the instruments specified in the file.
+**Upload behavior:** Additive/update — imported rows overwrite the current settings for the instruments named in the file.
 
-**Rights required:** Project Design and Setup (at least one survey must be enabled in the project).
+**Rights required:** Project Design and Setup (at least one instrument must be survey-enabled in the project).
 
-**Full details:** RC-SURV-02 — Survey Settings: Basic Options & Design
+**Full format reference:** RC-IMP-07 — Survey Settings CSV
 
 ---
 
@@ -384,99 +197,165 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 **Rights required:** Project Design and Setup.
 
-**Full details:** RC-FDL-01 — Form Display Logic
-
-### Column Reference
-
-The FDL CSV always has exactly six columns in this order:
-
-| Column | Required | Accepted Values | Notes |
-|---|---|---|---|
-| `form_name` | Yes | Any valid instrument name (internal name, no spaces) | Must match the instrument's `form_name` exactly as it appears in the Data Dictionary. |
-| `event_name` | No | A valid unique event name, or blank | Leave blank to apply the condition to **all events** where the form appears. In classic (non-longitudinal) projects this column is always blank. |
-| `control_condition` | Yes | Any valid REDCap logic expression | Same syntax as branching logic. When the expression evaluates to true the form is enabled; when false the form is disabled. |
-| `apply_to_data_entry` | Yes | `y` or `n` (lowercase) | `y` — the condition controls whether the form is accessible in the standard data entry UI. |
-| `apply_to_survey_autocontinue` | Yes | `y` or `n` (lowercase) | `y` — the condition also controls Survey Auto-Continue behavior for this instrument. |
-| `apply_to_mycap_tasks` | Yes | `y` or `n` (lowercase) | `y` — the condition controls whether this instrument appears as a task in MyCap. |
-
-> **Flag values are lowercase.** REDCap exports and expects `y`/`n`, not `Y`/`N`. Using uppercase will cause the import to fail.
-
-> **Multiple rows for the same form use OR logic.** If the same instrument appears in two rows, the form is enabled when *either* condition is true. To require multiple simultaneous conditions, combine them with `and` in a single `control_condition` cell.
-
-### Annotated Example
-
-The file below comes from a classic project where two baseline forms are enrolled in FDL solely to suppress them as MyCap tasks, without restricting data entry access.
-
-```csv
-form_name,event_name,control_condition,apply_to_data_entry,apply_to_survey_autocontinue,apply_to_mycap_tasks
-demographics,,"[record_id]<>""""",y,y,n
-contact_info,,"[record_id]<>""""",y,y,n
-```
-
-**`demographics` row:**
-- `event_name` is blank → the condition applies at every event where the form appears.
-- `control_condition` is `[record_id]<>""` — always true for any saved record, so data entry is never blocked.
-- `apply_to_data_entry=y`, `apply_to_survey_autocontinue=y` — the always-true condition keeps both enabled.
-- `apply_to_mycap_tasks=n` — MyCap task visibility is excluded from FDL control; the form's MyCap task state is governed separately.
-
-**`contact_info` row:** identical pattern applied to a second instrument.
-
-**Why enroll a form in FDL with an always-true condition?** This pattern is used when you only want to set one or two flags (such as `apply_to_mycap_tasks=n`) without actually restricting data entry. It is also useful as a placeholder row you plan to tighten later.
-
-**Note on the raw CSV escaping.** The condition `[record_id]<>""` (comparing against an empty string) exports as `"[record_id]<>""""`  in the raw file. The outer double-quotes delimit the CSV cell; the inner `""` is the CSV escape for a literal `"` character. Spreadsheet applications display this correctly as `[record_id]<>""`. If you edit the file in a plain text editor or parse it programmatically, account for standard CSV double-quote escaping — writing the wrong number of quotes will cause the import to fail or the logic to behave unexpectedly.
-
-### Common Mistakes
-
-**Using uppercase `Y`/`N` for flags.** REDCap exports lowercase `y`/`n` and expects the same on import. Uppercase values will cause the row to be rejected.
-
-**Editing empty-string conditions in a plain text editor.** Conditions like `[record_id]<>""` are double-escaped in the raw CSV (`""""`). Editors that don't respect CSV quoting rules will corrupt the escaping and break the logic on re-import.
-
-**Leaving `event_name` blank unintentionally.** A blank event_name applies the condition to *every* event where the form appears. If you only intended to restrict one event, specify the event name explicitly.
-
-**Expecting AND behavior from multiple rows.** Two rows for the same form combine with OR — the form is enabled if either condition is true. To enforce multiple simultaneous requirements, write them as a single `control_condition` joined by `and`.
-
-**Using `[user-role-id]` in conditions for projects that may be copied.** Role IDs are installation-wide and change when a project is duplicated. Use `[user-role-name]` instead; role names are preserved on copy.
+**Full format reference:** RC-IMP-08 — Form Display Logic CSV
 
 ---
 
-## 7.7 Data Quality Rules
+## 7.6 Data Quality Rules
 
 **Location:** Applications → Data Quality → "Upload or download rules" option.
 
-**What it does:** Allows bulk management of custom Data Quality rule definitions. Rules can be exported from one project and imported into another, or edited outside REDCap and re-uploaded.
+**What it does:** Exports all custom Data Quality rule definitions from a project as a CSV and allows re-importing them. Useful for copying a rule set from one project to another or for bulk-authoring rules outside REDCap. Default rules (A–H) are not exported.
 
-**Upload behavior:** Additive/update.
-
-**Rights required:** Project Design and Setup.
-
-**Full details:** RC-DQ-01 — Data Quality Module
-
----
-
-## 7.8 Multi-Language Management (Language Setups)
-
-**Location:** Applications → Multi-Language Management → upload/download controls per language.
-
-**What it does:** Exports translated field labels, choices, and other text strings for a given language as a CSV file. The translated file can be edited externally and re-imported, making it practical to send translations to an external translator without giving them REDCap access.
-
-**Upload behavior:** Updates the translation strings for the specified language.
+**Upload behavior:** Additive — imported rules are appended to the existing custom rule list; existing rules are not replaced.
 
 **Rights required:** Project Design and Setup.
 
-**Full details:** RC-MLM-01 — Multi-Language Management
+**Column reference:**
+
+| Column | Description | Accepted Values |
+|---|---|---|
+| `rule_name` | Display name shown in the Data Quality module | Any text string |
+| `rule_logic` | Boolean logic expression; records where this evaluates to true are flagged | Valid REDCap branching logic syntax; use `[event][field]` notation in longitudinal projects |
+| `real_time_execution` | Whether the rule runs in real time as data is entered | `y` to enable; `n` or empty to disable |
+
+> **CSV escaping:** Any `rule_logic` cell containing `""` (empty-string comparison) must double every `"`. The pattern `[field] <> ""` in REDCap logic becomes `"[field] <> """""` in the CSV (four escaped-quote characters plus one closing delimiter = five trailing `"`). Most spreadsheet apps apply this automatically; apply it manually if building the file in a text editor or code.
+
+**Full format reference:** RC-DQ-01 §6 — Importing and Exporting Custom Rules
 
 ---
 
+## 7.7 Multi-Language Management (Language Setups)
 
-## 7.10 Randomization Allocation Table
+**Location:** Applications → Multi-Language Management → Export/Import buttons per language row (Languages tab), or per-instrument export icons (Forms/Surveys tab).
+
+**File format:** JSON (not CSV). REDCap calls these "Language Setups" in the UI but all MLM files are JSON. Two distinct file types exist: **translation files** (one per language) and a **settings file** (project-wide). Both are included in a **snapshot ZIP**.
+
+**Rights required:** Project Design and Setup (Draft Mode required for Production projects).
+
+---
+
+### Translation File
+
+**Filename pattern:** `REDCapTranslation_{langID}_{pid}_{timestamp}.json`
+
+**What it does:** Carries all translated strings for one language. Export to send to an external translator or back up a language's current state; import to load translated strings back into the project. Imports are **additive by default** — existing translations are preserved unless "Overwrite existing translations" is selected. This means partial imports (e.g., a single instrument's export) are safe.
+
+**Top-level envelope fields:**
+
+| Field | Type | Description |
+|---|---|---|
+| `creator` | string | Always `"REDCap MLM"` — identifies the file origin |
+| `version` | string | MLM module version that generated the file (e.g., `"v16.0.25"`) |
+| `timestamp` | string | Export datetime in `"YYYY-MM-DD HH:MM:SS"` format |
+| `instructions` | string | Human-readable import instructions (empty when exported without prompts) |
+| `key` | string | Language ID (e.g., `"de"`, `"en-US"`) — must match an existing language in the target project |
+| `display` | string | Language display name (e.g., `"German"`) |
+| `notes` | string | Optional freetext notes about the language |
+| `rtl` | boolean | Whether right-to-left rendering is enabled for this language |
+| `sort` | string | Sort override value; empty string = default sort order |
+
+**Translation array fields** (each is an array of objects; empty arrays are valid and common for base-language exports or untranslated sections):
+
+| Field | Object shape | Content |
+|---|---|---|
+| `uiTranslations` | `{id, translation, hash}` | UI strings shown on data entry and survey pages (~570–580 strings for a fully translated language). `hash` is a server-side change-detection token — do not modify manually. |
+| `uiOptions` | `{id, value}` | UI rendering flags. Currently two: `paging_symbols` (bool) and `submit_symbol` (bool). |
+| `formTranslations` | `{id, translation}` | Instrument/form name translations. `id` is the instrument name. |
+| `eventTranslations` | `{id, translation}` | Event name translations (longitudinal projects only). |
+| `fieldTranslations` | *(nested)* | Field label, choice label, section header, and descriptive text translations. The largest section for content-heavy projects. |
+| `matrixTranslations` | *(nested)* | Matrix group header translations. |
+| `surveyTranslations` | `{id, active}` | Survey-level activation per instrument. `id` = instrument name; `active` = bool indicating whether this language is enabled for the survey. |
+| `sqTranslations` | *(nested)* | Survey Queue custom message translations. |
+| `asiTranslations` | *(nested)* | Automated Survey Invitation subject/body translations. |
+| `alertTranslations` | *(nested)* | Alert subject/body/sender translations. |
+| `mdcTranslations` | *(nested)* | Missing Data Code label translations. |
+| `pdfTranslations` | *(nested)* | PDF customization text translations. |
+| `protemailTranslations` | *(nested)* | Protected Email Mode customization translations. |
+| `myCapTranslations` | *(nested)* | MyCap app settings translations. |
+
+> **Base language export:** A base-language export contains metadata (`key`, `display`, etc.) and `surveyTranslations` activation flags, but `uiTranslations` and all content arrays are empty. The base language is the source text — it has no translations of its own.
+
+> **Manual editing:** The file's instructions field explicitly states it can be edited manually. Keep the JSON structure intact. Do not alter `hash` values; REDCap uses them to detect whether source text changed after a translation was saved (triggering the "Review Changed Items" notification).
+
+---
+
+### Settings File
+
+**Filename pattern:** `REDCapTranslation_Settings_{pid}_{timestamp}.json`
+
+**What it does:** Captures the full project-level MLM configuration — which languages are active, which instruments are enabled per language, field/alert exclusions, language sources, and admin-controlled flags. Useful for replicating a project's MLM setup to a new project or for backup/restore of configuration (not translation content). Import via the **Import General Settings** button on the Languages tab.
+
+> **Prerequisite:** At least one language must already exist in the target project before importing settings.
+
+**Key fields:**
+
+| Field | Type | Description |
+|---|---|---|
+| `refLang` | string | Language ID of the base (reference) language |
+| `fallbackLang` | string | Language ID of the fallback language |
+| `langActive` | `{langID: bool}` | Active/inactive state per language |
+| `myCapActive` | `{langID: bool}` | MyCap-active state per language |
+| `designatedField` | string | Field name of the Language Preference Field; empty string if not set |
+| `status` | string | Project status at export time (`"dev"` = development) |
+| `disabled` | boolean | Whether MLM is disabled for the project |
+| `highlightMissingDataentry` | boolean | Highlight untranslated text on data entry forms |
+| `highlightMissingSurvey` | boolean | Highlight untranslated text on survey pages |
+| `autoDetectBrowserLang` | boolean | Enable browser language auto-detection for first-time survey respondents |
+| `dataEntryEnabled` | `{instrument: {langID: bool}}` | Per-instrument, per-language data entry toggle |
+| `surveyEnabled` | `{instrument: {langID: bool}}` | Per-instrument, per-language survey toggle |
+| `excludedSettings` | `{instrument: {settingName: bool}}` | Survey settings excluded from translation per instrument |
+| `excludedFields` | `{fieldName: bool}` | Fields excluded from translation (`false` = included, `true` = excluded) |
+| `excludedAlerts` | `{alertID: bool}` | Alerts excluded from translation |
+| `alertSources` | `{alertID: "field"\|"user"}` | Language source per alert: `"field"` = Language Preference Field; `"user"` = active session language |
+| `asiSources` | `{instrument: "field"\|"user"}` | Language source per ASI |
+| `admin-enabled` / `admin-disabled` | boolean | Admin-level enable/disable flags (read-only in the project context) |
+| `allow-from-file` / `allow-from-scratch` | boolean | Admin settings controlling which initialization methods are available |
+| `optional-subscription` | boolean | Admin setting for optional system language subscription |
+| `allow-ui-overrides` | boolean | Admin setting allowing project-level UI string overrides |
+
+> **Best-effort import:** The instructions field notes that import is "best-effort" — any setting not applicable at import time (e.g., a language ID that doesn't exist in the target project) is silently ignored rather than causing an error.
+
+---
+
+### Snapshot ZIP
+
+**Filename pattern:** `REDCap_MLM_Snapshot_{pid}_{timestamp}.zip`
+
+**Contents:** One translation JSON per language in the project plus one settings JSON. Snapshots are created automatically when a project first moves to Production and each time drafted MLM changes are approved. They can also be created manually via the **Create Snapshot** button on the Languages tab. Individual files can be extracted and re-imported to restore a previous state.
+
+**Full details:** RC-MLM-01 — Multi-Language Management (§7 covers export/import workflow; §3.5 covers snapshots)
+
+---
+
+## 7.8 Randomization Allocation Table
 
 **Location:** Applications → Randomization → (select model) → Upload Allocation Table.
 
 **What it does:** Uploads the randomization allocation table — the pre-generated schedule that defines which treatment arm each randomized subject receives. The allocation table is produced externally by a statistician and uploaded to REDCap before randomization begins.
 
-**Upload behavior — Replace:** The uploaded file replaces the current allocation table for that model. Once randomization has begun, the table is locked and cannot be replaced without resetting randomization (which requires administrator involvement).
+**Upload behavior — Replace:** The uploaded file replaces the current allocation table for that model. Once randomization has begun in Production, the table is locked and cannot be replaced without resetting randomization (which requires administrator involvement).
 
 **Rights required:** Randomization Setup rights.
+
+> **Always use the downloaded template as the starting point.** REDCap dynamically generates the template based on the model's configuration — the column headers, stratification variables, and DAG column are specific to each project and model. Do not build this file from scratch.
+
+**Column reference:**
+
+| Column | Required | Description | Accepted Values |
+|---|---|---|---|
+| `redcap_randomization_number` | Optional | Sequential slot identifier | Leave blank (REDCap auto-assigns) or sequential integers starting at 1 |
+| `redcap_randomization_group` | **Required** | Coded value of the randomization variable for this slot | Raw coded integer (e.g., `1` for Intervention, `2` for Control). Do **not** use labels. |
+| `redcap_data_access_group` | Conditional | Numeric DAG ID for multi-site stratification. Only present when the model uses DAG-based site stratification. | Numeric DAG ID — **not** the `unique_group_name` text string used in DAG CSV uploads. Obtain from the template legend or via the API (`export_dags` → `data_access_group_id` field). |
+| *(stratification variable columns)* | Conditional | One column per stratification variable, named after the REDCap field name. Only present when the model uses stratification. | Raw coded integer values from the field's choices. Do **not** use labels. |
+
+> **DAG IDs vs. DAG names:** The `redcap_data_access_group` column uses numeric IDs (e.g., `4151`), not the text `unique_group_name` values used elsewhere in REDCap's DAG CSVs. These IDs appear in the legend section embedded in the downloaded template file.
+
+> **Notes columns:** The downloaded template includes embedded notes and a coded-value legend in extra columns to the right of the data. REDCap ignores all extra columns on upload — you do not need to remove them before uploading. This makes the template safe to share with a statistician as-is.
+
+**Allocation structure:**
+
+Each row represents one allocation slot, consumed in order as subjects are randomized. When using stratification, the table must contain rows for every combination of stratification variable levels. The statistician generates a balanced allocation within each stratum cell; rows should be grouped by stratum combination (e.g., all slots for gender=Male/industry=Private, then gender=Male/industry=Academia, and so on across all stratum cells). Two upload slots exist — **Development** (for testing) and **Production** (for live data collection). Upload to the Development slot first and test thoroughly. The Production slot must be populated before the project can move to Production status.
 
 **Full details:** RC-RAND-02 — Randomization Setup Guide
 
@@ -511,29 +390,13 @@ The following are download-only or not file-based:
 
 **A:** It depends on the feature. Data Dictionary uploads in Production mode go through the same change queue review process as Online Designer changes — they are not live until a project administrator approves them. Most other CSV uploads (Users, DAGs, Alerts, Data Quality Rules, etc.) take effect immediately regardless of project mode, because they do not modify instrument or field definitions.
 
-**Q: What columns do I need in my CSV file for a record data import?**
-
-**A:** The minimum required column is the Record ID. If your project is longitudinal, you must also include `redcap_event_name`. If you have repeating instruments or events, add `redcap_repeat_instrument` and `redcap_repeat_instance`. If you are assigned to a Data Access Group, add `redcap_data_access_group`. The Data Import Tool provides a download template with the correct column structure for your specific project — use that template as a starting point rather than building a CSV from scratch.
-
-**Q: Can I import a file exported from REDCap directly back into the same project without any changes?**
-
-**A:** Yes. Any CSV file exported from REDCap's data export feature can be re-imported directly into the same project without modification. The column structure will be correct, including all required fields and event names. This is useful for recovering from accidental deletions, sharing participant data with external analysts (who can make edits and return the file), or migrating records between projects with the same structure.
-
 ---
 
 # 10. Common Mistakes & Gotchas
 
-**Uploading instrument–event mappings without downloading first.** This upload replaces the entire mapping. Building a file from scratch and uploading it will uncheck every mapping not in the file — potentially deleting data for instrument–event combinations that had records. Always start from a downloaded export of the current mapping.
-
-**Manually typing unique event names in instrument–event mapping files.** REDCap's unique event name generation algorithm removes hyphens rather than converting them to underscores. An event labeled "Follow-up" becomes `followup_arm_1`, not `follow_up_arm_1`. Hand-typed names that don't match exactly will cause the mapping to silently fail (the event simply won't be found). Always copy unique event names from a downloaded Events CSV or from the Define My Events page.
-
-**Uploading events before arms in a multi-arm project.** Events reference arm numbers — if the arm doesn't exist yet, REDCap cannot assign the event correctly. For multi-arm projects, always upload in order: arms → events → instrument–event mappings.
-
 **Uploading a Data Dictionary without a backup.** The Data Dictionary upload replaces your entire instrument configuration. If you accidentally omit rows (e.g., by filtering your spreadsheet), those variables and their data are deleted on upload. Always save a dated snapshot before editing.
 
-**Assuming "Upload File" in the Data Import Tool saves the data.** The upload step only stages a preview. The data is committed only after you scroll down and click "Import Data" at the bottom of the results screen. If you navigate away after clicking "Upload File," nothing is saved.
-
-**Including read-only system columns when re-importing an export.** REDCap data exports include several columns that cannot be written back via the Data Import Tool: `redcap_survey_identifier` (survey participant identifier) and any `*_timestamp` column (e.g., `screening_timestamp`, `demographics_timestamp`). These are auto-generated by REDCap and are silently ignored on import — they will not cause an error, but they also cannot be set or overwritten this way. When building an import file from a full export, it is safe to leave these columns in; just be aware their values have no effect.
+**Longitudinal structure upload mistakes (arms, events, instrument-event mappings).** The most common mistakes — wrong upload order, hand-typed unique event names, building the mapping file from scratch — are covered in RC-IMP-09 — Longitudinal Structure CSV.
 
 ---
 
@@ -565,6 +428,13 @@ Most CSV upload features in REDCap have a corresponding API method that achieves
 # 11. Related Articles
 
 - RC-IMP-01 — Data Import Overview (overview of all import mechanisms including XML and zip files)
+- RC-IMP-04 — Record Data CSV Import (column reference for participant data imports)
+- RC-IMP-05 — Alerts & Notifications CSV (column reference for alert bulk upload)
+- RC-IMP-06 — Automated Survey Invitations CSV (column reference for ASI bulk upload)
+- RC-IMP-07 — Survey Settings CSV (column reference for survey settings bulk upload)
+- RC-IMP-08 — Form Display Logic CSV (column reference for FDL bulk upload)
+- RC-IMP-09 — Longitudinal Structure CSV (arms, events, and instrument-event mapping format reference)
+- RC-IMP-10 — Survey Queue CSV (column reference for survey queue bulk upload)
 - RC-FD-03 — Data Dictionary (complete Data Dictionary reference)
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques (column-by-column DD format reference)
 - RC-LONG-01 — Longitudinal Project Setup (arms, events, and instrument–event mapping uploads)

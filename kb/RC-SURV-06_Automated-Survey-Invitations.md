@@ -165,6 +165,8 @@ ASI configurations can be modified at any time. However, **edits are not retroac
 
 The Online Designer's **Auto Invitation Options** menu provides options to download and upload ASI configurations as a CSV file. This is useful when setting up or modifying a large number of ASIs simultaneously, since editing the CSV in a spreadsheet application is faster than navigating individual setup screens. This is considered an advanced feature.
 
+Always download the existing configuration first before uploading. The full 32-column format reference — including all accepted values, timing mode details, and CSV gotchas — is documented in RC-IMP-06 — Automated Survey Invitations CSV.
+
 ## 6.3 Re-evaluate Automated Survey Invitations
 
 The **Re-evaluate Automated Survey Invitations** option (also in Auto Invitation Options) forces REDCap to re-check the trigger conditions for all active ASIs against every record in the project. For large projects, this process may take several minutes.

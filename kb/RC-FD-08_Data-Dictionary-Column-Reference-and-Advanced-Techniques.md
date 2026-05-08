@@ -7,8 +7,8 @@ RC-FD-08
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
 | **Prerequisite** | RC-FD-03 — Data Dictionary |
-| **Version** | 1.1 |
-| **Last Updated** | 2026 |
+| **Version** | 1.2 |
+| **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Related Topics** | RC-FD-01 — Form Design Overview; RC-FD-02 — Online Designer; RC-BL-01 — Branching Logic: Overview & Scope; RC-AT-01 — Action Tags: Overview |
 
@@ -608,6 +608,93 @@ In longitudinal projects, the Data Dictionary defines the variables and instrume
 
 **Setting validation min/max for the wrong field type.** Populating Columns I or J for a field type that does not support validation (e.g., `radio`, `checkbox`, `calc`) will cause the upload to fail. These columns apply only to `text` fields that also have a validation type set in Column H.
 
+**Marking a checkbox field as required.** REDCap silently ignores the `y` value in Column M (Required Field?) on `checkbox` fields. The required flag has no effect — REDCap cannot enforce "at least one option selected" using this column. This is a common mistake. To enforce completeness on a checkbox, use `@NOMISSING` on individual option fields or implement a validation calc field that alerts staff when nothing is checked.
+
+---
+
+# 11. Annotated Example: Key Real-World Patterns
+
+This section documents notable patterns observed in real Data Dictionary files. Use these as reference when building or reviewing a Data Dictionary from scratch.
+
+## 11.1 Non-Numeric Raw Values in Choice Lists
+
+The `|`-separated choices format (Column F) does not require numeric raw values. Raw values can be strings. A US state dropdown commonly uses two-letter postal codes as raw values:
+
+```
+AL, Alabama | AK, Alaska | AZ, Arizona | ...
+```
+
+The raw value (`AL`) is what gets stored in the database and referenced in branching logic: `[contact_state] = 'AL'`. The label (`Alabama`) is what the user sees. Either convention (numeric codes or string codes) is valid — pick one and be consistent within a project.
+
+## 11.2 `@CALCTEXT` on a Text Field (Not a Descriptive Field)
+
+`@CALCTEXT` is commonly described as a descriptive-field tag, but it also works on `text` fields. When applied to a text field, the calculated value is displayed in the field but is not saved to the database. This is intentional — use it when you need a computed label visible to the data entry user (e.g., a severity category derived from a score), but do not need the value stored separately.
+
+```
+Field type:  text
+Column R:    @CALCTEXT(if([phq9_total]>=20,"Severe",if([phq9_total]>=15,"Moderately Severe",if([phq9_total]>=10,"Moderate",if([phq9_total]>=5,"Mild","Minimal or None")))))
+```
+
+> **Note:** Double quotes inside `@CALCTEXT(...)` are valid within REDCap's expression engine. However, in the CSV file itself, the entire Column R cell must be wrapped in double quotes, and any literal double quotes inside the cell must be escaped as `""` (two double quotes). When REDCap reads the CSV, it resolves the `""` back to a single `"`.
+
+## 11.3 Calc Fields with Branching Logic
+
+`calc` fields support branching logic in Column L just like any other field type. When the branching logic condition is false, the calc field is hidden and its value is blank. This is useful for computations that only apply to a subset of participants:
+
+```
+Variable:           soc_pack_years
+Field type:         calc
+Column F (formula): [soc_smoking_packs_per_day] * [soc_smoking_years]
+Column L (logic):   [soc_smoking_status] = '2' or [soc_smoking_status] = '3' or [soc_smoking_status] = '4'
+```
+
+The calc runs only when the participant is a former or current smoker; for never-smokers the field is hidden and the value is blank rather than zero.
+
+## 11.4 Leading Whitespace in Column R Is Valid
+
+A leading space before an action tag in Column R (`" @TODAY"` instead of `"@TODAY"`) is valid — REDCap strips leading and trailing whitespace from the annotation before parsing it. This frequently appears in real exported files because the Online Designer's annotation editor sometimes inserts a leading space. It does not cause an upload error.
+
+## 11.5 PHQ-9 Matrix Pattern
+
+Standardized instruments that use a uniform response scale map naturally to a matrix layout. All nine PHQ-9 items share identical choices and a single Matrix Group Name:
+
+```
+Variable:          phq9_1 … phq9_9
+Field type:        radio
+Column F (shared): 0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day
+Column P:          phq9_matrix
+Column M:          y (required)
+Question numbers:  1–9 (Column O)
+```
+
+Every row in the matrix block must carry the same Column F choices and the same Column P group name. The first row's Column C (Section Header) becomes the matrix header row label in REDCap.
+
+## 11.6 Descriptive Fields as Summary Panels
+
+A `descriptive` field can contain arbitrarily complex HTML, including inline CSS tables that pull piped values from multiple events. This pattern is used to surface a participant's longitudinal data all on one screen at the end of study. Key syntax elements:
+
+- `[event_name][field_name]` — pipes the value of `field_name` from a specific event into the HTML
+- `[field_name:hideunderscore]` — pipe modifier that replaces underscores with spaces in the displayed label
+- Combined: `[baseline_arm_1][demo_age:hideunderscore]` — age from the baseline arm 1 event, displayed without underscores
+
+Descriptive fields with heavy HTML and many piped values are the most complex rows in a Data Dictionary. Their Column E (Field Label) cell typically contains thousands of characters of HTML. When editing these in Excel, be aware that Excel's cell size limits and CSV quoting rules can corrupt the HTML if you do not work carefully with a plain-text editor.
+
+## 11.7 Repeating Instrument Pre-Population with Nested `@IF`/`@DEFAULT`
+
+When a repeating instrument appears at multiple longitudinal events, you may want each new instance to pre-fill its fields from the matching instance at the previous event (e.g., carrying a medication list forward). The pattern uses nested `@IF` blocks checking `[current-instance]` and reading from a prior event's named instances:
+
+```
+@IF([current-instance]=1 AND [prior_event_arm_1][med_name][1]<>'',
+    @DEFAULT='[prior_event_arm_1][med_name][1]',
+@IF([current-instance]=2 AND [prior_event_arm_1][med_name][2]<>'',
+    @DEFAULT='[prior_event_arm_1][med_name][2]',
+    @DEFAULT=''))
+```
+
+This nesting must be repeated for each instance you wish to pre-populate (typically up to the maximum expected number of instances). The placeholder `[prior_event_arm_1]` must be replaced with the actual unique event name for the preceding event in your project. REDCap reads `[current-instance]` at runtime, so the correct branch evaluates automatically.
+
+> **Column R cell size warning:** This pattern produces very long annotation strings (often thousands of characters). These are valid but can exceed Excel's visible cell display limit. Use a text editor or verify the full string programmatically before uploading.
+
 ---
 
 ## API Access
@@ -621,7 +708,7 @@ In longitudinal projects, the Data Dictionary defines the variables and instrume
 ---
 
 
-# 11. Related Articles
+# 12. Related Articles
 
 - RC-FD-01 — Form Design Overview (concept overview and tool selection)
 - RC-FD-02 — Online Designer (guardrailed alternative; use alongside the Data Dictionary)

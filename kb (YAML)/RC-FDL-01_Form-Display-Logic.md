@@ -258,6 +258,8 @@ Form Display Logic can be exported as a CSV and re-imported to another project o
 
 **Double-quote escaping in exported CSVs.** REDCap uses `""` (two double-quotes) to represent an empty string in logic conditions, for example `[record_id]<>""`. When REDCap exports this as a CSV, the condition cell is wrapped in outer quotes and the internal `""` is escaped to `""""`, producing: `"[record_id]<>""""`. Spreadsheet applications (Excel, Google Sheets, LibreOffice) handle this transparently and show the correct expression. However, if you open the CSV in a plain text editor or process it with a script, you must account for this escaping — otherwise conditions containing empty string comparisons will appear to have extra quotes or will fail to parse correctly.
 
+For the full column-by-column reference, accepted values, an annotated example, and common mistakes, see **RC-IMP-08 — Form Display Logic CSV**.
+
 ---
 
 # 10. Common Questions

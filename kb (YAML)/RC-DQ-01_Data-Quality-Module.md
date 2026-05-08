@@ -146,21 +146,31 @@ The export and import file uses a three-column CSV with a header row:
 rule_name,rule_logic,real_time_execution
 "Age out of range","[age] < 0 or [age] > 120",n
 "Consent missing for enrolled","[enrolled] = '1' and [consent_date] = ''",y
-"Field not empty","[abs_rater_disc] <> """,y
+"Field not empty","[abs_rater_disc] <> """""",y
 ```
 
 ### CSV Escaping for Empty-String Comparisons
 
 REDCap rule logic frequently uses `""` to represent an empty string (e.g., `[field] <> ""` to check whether a field has a value). Because the entire `rule_logic` cell is enclosed in double quotes in the CSV, every literal `"` inside the cell must be escaped by doubling it.
 
-The pattern is: one pair of double quotes in REDCap logic (`""`) becomes two pairs in the CSV cell (`""""`).
+The pattern is: one pair of double quotes in REDCap logic (`""`) becomes two pairs in the CSV cell (`""""`). Add the required opening and closing field delimiters and the full cell has five trailing quotes for an empty-string comparison.
 
 | REDCap logic | CSV cell value |
 |---|---|
-| `[field] <> ""` | `"[field] <> """"`  |
-| `[field] = ""` | `"[field] = """"` |
+| `[field] <> ""` | `"[field] <> """""`  |
+| `[field] = ""` | `"[field] = """""`  |
 
 Most spreadsheet applications handle this automatically when you save as CSV. If constructing the file programmatically or in a plain text editor, apply this escaping manually.
+
+### Longitudinal Projects
+
+In longitudinal projects, `rule_logic` uses the same event-prefixed field reference syntax as branching logic: `[event_name][field_name]`. For example, to flag records where the Screening form is not complete:
+
+```
+[screening_arm_1][screening_complete] <> 2
+```
+
+Rules using event-prefixed references are portable only to projects that have matching event names. When migrating rules between projects, verify that all referenced event names exist in the destination project before importing.
 
 ### Importing Rules
 

@@ -143,18 +143,49 @@ For projects with many surveys or survey-event combinations, the survey queue ca
 
 Best practice before using this feature for the first time: manually configure a few surveys in the queue interface, then download the CSV to understand the expected format.
 
-The CSV has nine columns:
+The CSV has eight columns:
 
-| Column | Description |
-|---|---|
-| `form_name` | The unique name of the instrument (survey) being configured. Find unique names in the Codebook (RC-FD-05). |
-| `event_name` | Required for longitudinal projects; specifies the event. Find event names in Define My Events (Project Setup). Optional for non-longitudinal projects. |
-| `active` | `1` = activated in queue; `0` or blank = deactivated. |
-| `condition_surveycomplete_form_name` | The unique name of the survey whose completion triggers this survey. Leave blank if not using a completion trigger. |
-| `condition_surveycomplete_event_name` | The event of the completing survey (longitudinal projects). Leave blank if not using a completion trigger. |
-| `condition_andor` | `AND` or `OR` — defines the relationship when both completion and logic conditions are used. |
-| `condition_logic` | Branching logic statement for the logic trigger. Same syntax as standard branching logic. Leave blank if not using a logic trigger. |
-| `auto_start` | `1` = auto-start enabled; `0` = disabled. |
+| Column | Accepted values | Notes |
+|---|---|---|
+| `form_name` | Instrument unique name | Find unique names in the Codebook (RC-FD-05). |
+| `event_name` | Event unique name | Required for longitudinal projects. Leave blank for classic (non-longitudinal) projects. |
+| `active` | `1` or `0` | `1` = activated in queue; `0` = deactivated. |
+| `condition_surveycomplete_form_name` | Instrument unique name, or blank | The survey whose completion triggers this survey. Leave blank for a logic-only trigger. |
+| `condition_surveycomplete_event_name` | Event unique name, or blank | The event of the completing survey. Can reference an event from a different arm than the survey being configured. Leave blank for a logic-only trigger. |
+| `condition_andor` | `AND` or `OR` | Defines how the completion and logic conditions combine. **Always populate this field**, even when only one condition type is used — REDCap requires a value. `AND` is the standard choice. |
+| `condition_logic` | REDCap branching logic expression, or blank | Logic trigger condition. Same syntax as standard branching logic. Cross-event references use the format `[event_name][field_name]`. Leave blank for a completion-only trigger. |
+| `auto_start` | `1` or `0` | `1` = auto-start enabled (participant moves directly to the next survey without seeing the queue overview); `0` = disabled. |
+
+### Annotated example — multi-arm longitudinal project
+
+The following excerpt shows how a real export looks for a two-arm project with a screening arm and a baseline arm. Each instrument appears once per arm it belongs to; the same instrument can have different trigger logic per arm.
+
+```
+form_name,event_name,active,condition_surveycomplete_form_name,condition_surveycomplete_event_name,condition_andor,condition_logic,auto_start
+
+# Arm 1: standard participants — completion-only chained triggers, auto-start throughout
+demographics,baseline_arm_1,1,screening,screening_arm_1,AND,,1
+social_history,baseline_arm_1,1,demographics,baseline_arm_1,AND,,1
+contact_info,baseline_arm_1,1,social_history,baseline_arm_1,AND,,1
+phq9,baseline_arm_1,1,contact_info,baseline_arm_1,AND,,1
+
+# Arm 2: conditional participants — entry survey uses logic-only trigger (no completion trigger),
+# subsequent surveys use a cross-arm completion trigger combined with the same logic condition
+demographics,baseline_arm_2,1,,,AND,[screening_arm_2][screen_currently_pregnant]=1,0
+social_history,baseline_arm_2,1,demographics,baseline_arm_1,AND,[screening_arm_2][screen_currently_pregnant]=1,1
+contact_info,baseline_arm_2,1,demographics,baseline_arm_1,AND,[screening_arm_2][screen_currently_pregnant]=1,1
+phq9,baseline_arm_2,1,demographics,baseline_arm_1,AND,[screening_arm_2][screen_currently_pregnant]=1,1
+```
+
+Key patterns to note from this example:
+
+- **Logic-only trigger (entry survey in a conditional arm):** `demographics` in `baseline_arm_2` has no completion trigger (`condition_surveycomplete_form_name` and `condition_surveycomplete_event_name` are both blank). It appears in the queue based solely on the logic condition. `condition_andor` is still set to `AND`. `auto_start` is `0` because there is no prior survey to auto-start from.
+- **Cross-arm completion trigger:** `social_history` and later surveys in `baseline_arm_2` reference `demographics` in `baseline_arm_1` as their completion trigger — an event from a different arm. This is valid and is the standard pattern for arm-specific routing in multi-arm projects.
+- **Combination trigger:** Those same surveys also include a `condition_logic` expression. With `condition_andor=AND`, both conditions must be met before the survey appears in the queue.
+- **Cross-event logic syntax:** The logic condition `[screening_arm_2][screen_currently_pregnant]=1` uses the `[event_name][field_name]` format to reference a field in a specific event. This is the same cross-event reference syntax used in branching logic elsewhere in REDCap.
+- **Filename pattern:** REDCap names downloaded files `{ProjectTitle}_SurveyQueue_{YYYY-MM-DD}_{HHMM}.csv`.
+
+For the full column-by-column reference, accepted values, an annotated example, and common mistakes, see **RC-IMP-10 — Survey Queue CSV**.
 
 ---
 

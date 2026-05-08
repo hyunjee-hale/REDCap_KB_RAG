@@ -288,6 +288,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-BL-01 — Branching Logic: Overview & Scope
 - RC-BL-02 — Branching Logic: Syntax & Atomic Statements
 - RC-CC-06 — Control Center: Modules & Services Configuration
+- RC-IMP-05 — Alerts & Notifications CSV
 - RC-LONG-02 — Repeated Instruments & Events Setup
 - RC-PIPE-01 — Piping: Basics, Syntax & Field Types
 - RC-PIPE-03 — Smart Variables Overview
@@ -2173,6 +2174,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-12 — Data Resolution Workflow
 - RC-FD-12 — Dynamic SQL Field Type
 - RC-INTG-01 — Data Entry Trigger
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-NAV-UI-01 — Project Navigation UI
 - RC-NAV-UI-02 — Project Menu Reference
 
@@ -2214,6 +2216,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-03 — Longitudinal Projects & DAGs
 - RC-DE-08 — Field Comment Log
 - RC-DE-12 — Data Resolution Workflow
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-LOG-01 — Logging — Project Audit Trail
 
 ---
@@ -2364,6 +2367,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-05 — Control Center: File Storage & Upload Settings
 - RC-DE-08 — Field Comment Log
 - RC-INST-01 — Institution-Specific Settings & Policies
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
 - RC-NAV-UI-02 — Project Menu Reference
 ---
@@ -2414,11 +2418,13 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-BL-01 — Branching Logic: Overview & Scope
 - RC-BL-02 — Branching Logic: Syntax & Atomic Statements
 - RC-BL-05 — Branching Logic — Longitudinal Projects
+- RC-IMP-08 — Form Display Logic CSV
 - RC-PIPE-05 — Smart Variables: User
 - RC-SURV-07 — Survey Queue
 - RC-USER-03 — User Rights: Configuring User Privileges
 
 **Inbound links (referenced by):**
+- RC-IMP-08 — Form Display Logic CSV
 - RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links
 - RC-SURV-07 — Survey Queue
 
@@ -2921,7 +2927,6 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 **Prerequisites:** RC-IMP-01 — Data Import Overview
 
 **Outbound links:**
-- RC-ALERT-01 — Alerts & Notifications: Setup
 - RC-API-01 — REDCap API
 - RC-API-02 — Export Records API
 - RC-API-03 — Import Records API
@@ -2956,18 +2961,152 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DQ-01 — Data Quality Module
 - RC-FD-03 — Data Dictionary
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
-- RC-FDL-01 — Form Display Logic
 - RC-IMP-01 — Data Import Overview
+- RC-IMP-04 — Record Data CSV Import
+- RC-IMP-05 — Alerts & Notifications CSV
+- RC-IMP-06 — Automated Survey Invitations CSV
+- RC-IMP-07 — Survey Settings CSV
+- RC-IMP-08 — Form Display Logic CSV
+- RC-IMP-09 — Longitudinal Structure CSV
+- RC-IMP-10 — Survey Queue CSV
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-MLM-01 — Multi-Language Management
 - RC-RAND-02 — Randomization Setup Guide
-- RC-SURV-02 — Survey Settings: Basic Options & Design
-- RC-SURV-06 — Automated Survey Invitations (ASI)
 - RC-SURV-07 — Survey Queue
 - RC-USER-02 — User Rights: Adding Users & Managing Roles
 
 **Inbound links (referenced by):**
 - RC-IMP-01 — Data Import Overview
+- RC-IMP-04 — Record Data CSV Import
+- RC-IMP-05 — Alerts & Notifications CSV
+- RC-IMP-06 — Automated Survey Invitations CSV
+- RC-IMP-07 — Survey Settings CSV
+- RC-IMP-08 — Form Display Logic CSV
+- RC-IMP-09 — Longitudinal Structure CSV
+- RC-IMP-10 — Survey Queue CSV
+
+---
+
+### RC-IMP-04 — Record Data CSV Import
+
+**Prerequisites:** RC-IMP-01 — Data Import Overview; RC-IMP-03 — CSV Upload Reference
+
+**Outbound links:**
+- RC-API-02 — Export Records API
+- RC-API-03 — Import Records API
+- RC-API-04 — Delete Records API
+- RC-DAG-01 — Data Access Groups
+- RC-IMP-01 — Data Import Overview
+- RC-IMP-03 — CSV Upload Reference
+- RC-LONG-01 — Longitudinal Project Setup
+- RC-LONG-02 — Repeated Instruments & Events Setup
+
+**Inbound links (referenced by):**
+- RC-IMP-03 — CSV Upload Reference
+
+---
+
+### RC-IMP-05 — Alerts & Notifications CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-ALERT-01 — Alerts & Notifications: Setup
+
+**Outbound links:**
+- RC-ALERT-01 — Alerts & Notifications: Setup
+- RC-ALERT-02 — Alert Management and Notification Log
+- RC-IMP-03 — CSV Upload Reference
+- RC-PIPE-01 — Piping Basics
+- RC-SURV-04 — Survey Link Types and Access Methods
+
+**Inbound links (referenced by):**
+- RC-ALERT-01 — Alerts & Notifications: Setup
+- RC-IMP-03 — CSV Upload Reference
+
+---
+
+### RC-IMP-06 — Automated Survey Invitations CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-SURV-06 — Automated Survey Invitations
+
+**Outbound links:**
+- RC-IMP-03 — CSV Upload Reference
+- RC-PIPE-01 — Piping Basics
+- RC-SURV-06 — Automated Survey Invitations (ASI)
+- RC-SURV-07 — Survey Queue
+
+**Inbound links (referenced by):**
+- RC-IMP-03 — CSV Upload Reference
+- RC-SURV-06 — Automated Survey Invitations (ASI)
+
+---
+
+### RC-IMP-07 — Survey Settings CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-SURV-02 — Survey Settings: Basic Options & Design
+
+**Outbound links:**
+- RC-IMP-03 — CSV Upload Reference
+- RC-SURV-02 — Survey Settings: Basic Options & Design
+- RC-SURV-03 — Survey Settings: Behavior, Access & Termination
+- RC-SURV-06 — Automated Survey Invitations (ASI)
+- RC-SURV-08 — e-Consent Framework Setup and Management
+
+**Inbound links (referenced by):**
+- RC-IMP-03 — CSV Upload Reference
+
+---
+
+### RC-IMP-08 — Form Display Logic CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-FDL-01 — Form Display Logic
+
+**Outbound links:**
+- RC-BL-01 — Branching Logic Overview
+- RC-FDL-01 — Form Display Logic
+- RC-IMP-03 — CSV Upload Reference
+- RC-MYCAP-02 — Designing Instruments for MyCap
+- RC-USER-01 — User Rights Overview
+
+**Inbound links (referenced by):**
+- RC-FDL-01 — Form Display Logic
+- RC-IMP-03 — CSV Upload Reference
+
+---
+
+### RC-IMP-09 — Longitudinal Structure CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-LONG-01 — Longitudinal Project Setup
+
+**Outbound links:**
+- RC-API-10 — Export Instrument-Event Mappings API
+- RC-API-11 — Import Instrument-Event Mappings API
+- RC-API-16 — Export Arms API
+- RC-API-17 — Import Arms API
+- RC-API-19 — Export Events API
+- RC-API-20 — Import Events API
+- RC-IMP-03 — CSV Upload Reference
+- RC-LONG-01 — Longitudinal Project Setup
+- RC-LONG-02 — Repeated Instruments & Events Setup
+
+**Inbound links (referenced by):**
+- RC-IMP-03 — CSV Upload Reference
+- RC-LONG-01 — Longitudinal Project Setup
+
+---
+
+### RC-IMP-10 — Survey Queue CSV
+
+**Prerequisites:** RC-IMP-03 — CSV Upload Reference; RC-SURV-07 — Survey Queue
+
+**Outbound links:**
+- RC-BL-01 — Branching Logic Overview
+- RC-IMP-03 — CSV Upload Reference
+- RC-IMP-06 — Automated Survey Invitations CSV
+- RC-SURV-01 — Surveys: Basics
+- RC-SURV-07 — Survey Queue
+
+**Inbound links (referenced by):**
+- RC-IMP-03 — CSV Upload Reference
+- RC-SURV-07 — Survey Queue
 
 ---
 
@@ -3031,13 +3170,14 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-12 — Data Resolution Workflow
 - RC-DE-13 — Record Administration ⚠️
 - RC-EXPRT-01 — Data Export: Overview & Workflow
-- RC-LOCK-01 — Record Locking & E-Signatures ⚠️
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-PROJ-04 — Project Setup: Additional Customizations
 - RC-USER-03 — User Rights: Configuring User Privileges
 
 **Inbound links (referenced by):**
 - RC-API-39 — Export Logging API
 - RC-DE-04 — Editing Data & Audit Trail
+- RC-LOCK-01 — Record Locking & E-Signatures
 
 ---
 
@@ -3060,6 +3200,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-03 — Longitudinal Projects & DAGs
 - RC-FD-01 — Form Design Overview
 - RC-FD-02 — Online Designer
+- RC-IMP-09 — Longitudinal Structure CSV
 - RC-LONG-02 — Repeated Instruments & Events Setup
 
 **Inbound links (referenced by):**
@@ -4547,6 +4688,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-ALERT-01 — Alerts & Notifications: Setup
 - RC-BL-01 — Branching Logic: Overview & Scope
 - RC-BL-02 — Branching Logic: Syntax & Atomic Statements
+- RC-IMP-06 — Automated Survey Invitations CSV
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-PIPE-01 — Piping: Basics, Syntax & Field Types
 - RC-PIPE-03 — Smart Variables Overview
@@ -4574,6 +4716,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-BL-02 — Branching Logic: Syntax & Atomic Statements
 - RC-FD-05 — Codebook
 - RC-FDL-01 — Form Display Logic
+- RC-IMP-10 — Survey Queue CSV
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-LONG-02 — Repeated Instruments & Events Setup
 - RC-PIPE-03 — Smart Variables Overview
@@ -4585,6 +4728,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-41 — Export Survey Queue Link API
 - RC-FD-02 — Online Designer
 - RC-FDL-01 — Form Display Logic
+- RC-IMP-10 — Survey Queue CSV
 - RC-SURV-05 — Participant List & Manual Survey Invitations
 - RC-SURV-06 — Automated Survey Invitations (ASI)
 
@@ -4714,6 +4858,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-07 — Control Center: Users & Access Management
 - RC-DAG-01 — Data Access Groups
 - RC-EXPRT-03 — Data Export: User Rights & Export Access
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
 - RC-NAV-UI-01 — Project Navigation UI
 - RC-NAV-UI-02 — Project Menu Reference
@@ -4788,6 +4933,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-FDL-01 — Form Display Logic
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
+- RC-LOCK-01 — Record Locking & E-Signatures
 - RC-USER-02 — User Rights: Adding Users & Managing Roles
 - RC-USER-04 — User Rights: User Management
 - RC-LOG-01 — Logging — Project Audit Trail
@@ -5139,3 +5285,22 @@ All previously identified naming inconsistencies have been resolved as of 2026-0
 *Previously: Added RC-PROJ-01 — Project Lifecycle: Status and Settings. Added RC-API-02 through RC-API-44 — 43 method-specific API articles based on official REDCap API v16.1.3 documentation examples. Added RC-API-01 — REDCap API.*
 
 *Updated 2026-04-23. Added RC-SENDIT-01 — Send-It: Secure File Transfer. New domain SENDIT. Article covers the Send-It secure file transfer feature: how to access it, the upload form fields, the two-email security model (separate link and password emails per recipient), expiration window (1–14 days), file type restrictions, download confirmation option, and administrator enable/disable. Sourced from live REDCap v16.0.24 Send-It page. No prerequisites; links outbound to RC-MSG-01, RC-CC-05, RC-CC-06.*
+
+### RC-LOCK-01 — Record Locking & E-Signatures
+
+**Prerequisites:** RC-DE-02 — Basic Data Entry; RC-USER-03 — User Rights: Configuring User Privileges
+
+**Outbound links:**
+- RC-DE-02 — Basic Data Entry
+- RC-DE-04 — Editing Data & Audit Trail
+- RC-DE-12 — Data Resolution Workflow
+- RC-LOG-01 — Logging — Project Audit Trail
+- RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-USER-03 — User Rights: Configuring User Privileges
+
+**Inbound links (referenced by):**
+- RC-LOG-01 — Logging — Project Audit Trail
+
+---
+
+*Updated 2026-05-07. Added RC-LOCK-01 — Record Locking & E-Signatures. New domain LOCK. Article covers the full locking feature set: instrument-level and record-level locking, the e-signature layer, per-instrument customization (Locking Customization page), the Locking Management status table with filtering and CSV export, longitudinal behavior, and audit trail entries for lock/unlock/e-sign events. Sourced from live REDCap v16.0.25 pages. Resolves the ⚠️ RC-LOCK-01 gap in RC-LOG-01 outbound links.*
