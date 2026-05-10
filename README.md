@@ -20,8 +20,11 @@ This repo supports an LLM-powered REDCap assistant. Rather than feeding raw docu
 
 ```
 REDCap_KB_RAG/
-├── kb/                               # Markdown KB articles (RAG-ready) — 224 articles
-│   └── RC-[DOMAIN]-[NN]_...               # Individual KB articles (224 articles)
+├── kb/                               # Markdown KB articles (RAG-ready) — 236 articles
+│   ├── KB-REFERENCE-MAP.md                # Redirect stub pointing to meta/ files (legacy)
+│   └── RC-[DOMAIN]-[NN]_...               # Individual KB articles
+├── kb (YAML)/                        # Same articles converted to YAML frontmatter format — 237 files
+│   └── RC-[DOMAIN]-[NN]_...               # One file per source article
 ├── meta/                             # Navigation & cross-reference metadata (not for RAG indexing)
 │   ├── KB-INDEX.md                        # Article index: ID → Title → Filename (load for topic lookup)
 │   ├── KB-KEYWORD-MAP.md                  # Keyword/synonym map: user phrasings → domain or article ID
@@ -47,11 +50,13 @@ REDCap_KB_RAG/
 │   ├── redcap_mcp_server.py               # Server implementation (all major API endpoints)
 │   └── install.sh                         # Setup script (installs mcp[cli] + registers named instances)
 ├── ServiceNow ETL/                   # Tooling to export KB articles into ServiceNow knowledge base
-│   ├── kb_to_servicenow.py                # Converts kb/ markdown to a 3-sheet Excel workbook
+│   ├── kb_to_servicenow.py                # Converts kb (YAML)/ articles to a 3-sheet Excel workbook
 │   ├── REDCap_KB_ServiceNow_Import.xlsx   # Most-recent export (Articles, Relationships, Import Instructions)
 │   └── ServiceNow_Admin_Handoff.md        # Field-by-field import guide for ServiceNow admins
 ├── visualization/
 │   └── kb_dependency_graph.html           # Interactive graph of inter-article dependencies
+├── convert_to_yaml_kb.py             # Script: converts kb/ articles to YAML frontmatter format → kb (YAML)/
+├── config.example.yaml               # Configuration template (copy to config.local.yaml and fill in)
 ├── KB-GAPS-TODO.md                   # Tracked knowledge gaps and planned articles
 ├── KB-SOURCE-ATTESTATION.md          # Source document provenance for KB articles
 ├── PROJECT-TODO.md                   # Running dev task list for the KB/RAG project (non-article work)
@@ -92,6 +97,8 @@ RC-[DOMAIN]-[NN]_Title-With-Hyphens.md
 | `RC-IMP` | Data Import |
 | `RC-INST` | Institution-Specific Settings & Policies |
 | `RC-INTG` | Integrations (Data Entry Trigger, etc.) |
+| `RC-LOCK` | Record Locking & E-Signatures |
+| `RC-LOG` | Logging & Project Audit Trail |
 | `RC-LONG` | Longitudinal Project Setup |
 | `RC-MCP` | REDCap MCP Server (setup & management) |
 | `RC-MLM` | Multi-Language Management |
@@ -100,6 +107,7 @@ RC-[DOMAIN]-[NN]_Title-With-Hyphens.md
 | `RC-MYCAP` | MyCap (mobile data collection) |
 | `RC-NAV-REC` | Record Navigation |
 | `RC-NAV-UI` | Project Navigation UI |
+| `RC-OPS` | REDCap as an Operational/Request Management System |
 | `RC-PIPE` | Piping & Smart Variables |
 | `RC-PLUS` | REDCap+ (premium subscription features) |
 | `RC-PROF` | My Profile (user profile settings) |
@@ -128,6 +136,8 @@ Some topics could map to more than one domain. Use these rules to pick the right
 | Mobile data collection | RC-MOB (REDCap Mobile App — staff-facing offline data entry) vs RC-MYCAP (MyCap — participant-facing mobile app) |
 | Prepopulating fields | RC-PIPE (piping and smart variables) vs RC-AT-06 (autofill action tags) |
 | Survey access / links | RC-SURV (survey setup and settings) vs RC-PIPE (smart variable survey links) |
+| Locking records | RC-LOCK (record locking and e-signatures) vs RC-USER (user rights that govern lock/unlock permissions) |
+| Audit trail / who changed what | RC-LOG (logging and audit trail) vs RC-DQ (Data Quality — rule-based checks on data values) |
 
 ## Article Format
 
@@ -143,6 +153,26 @@ Each article is written for RAG retrieval using an 8-section template:
 8. **Summary** — brief recap for retrieval context
 
 Articles are institution-agnostic in their core content so they can be reused across REDCap environments.
+
+## YAML Conversion
+
+The `kb (YAML)/` folder contains the same articles as `kb/`, converted from a markdown metadata table at the top to standard YAML frontmatter. This format is used by the ServiceNow ETL pipeline.
+
+To regenerate the YAML versions after adding or updating articles in `kb/`:
+
+```bash
+python convert_to_yaml_kb.py
+```
+
+## Configuration
+
+Copy `config.example.yaml` to `config.local.yaml` and fill in the values for your environment. `config.local.yaml` is gitignored and is never committed.
+
+```bash
+cp config.example.yaml config.local.yaml
+```
+
+The config file covers paths for the ServiceNow ETL script, ServiceNow connection credentials (if importing via API), and REDCap instance URLs.
 
 ## Claude Skills
 
@@ -174,18 +204,11 @@ New articles are built from source training outline documents or written from sc
 1. Open a Cowork session and upload the source `.docx` (or describe the topic)
 2. Claude uses the `kb-creation` skill to produce a properly formatted KB article
 3. The article is saved to `kb/` and `meta/KB-INDEX.md` and `meta/KB-CROSS-REFS.md` are updated
+4. Run `convert_to_yaml_kb.py` to regenerate `kb (YAML)/` if the ServiceNow ETL is being used
 
 ## Updating Existing Articles
 
 To revise or correct an article, open a Cowork session and either upload updated source material or describe the change. Claude uses the `kb-update` or `kb-update-workspace` skill to locate the relevant article, apply the edits, and keep `meta/KB-INDEX.md` and `meta/KB-CROSS-REFS.md` in sync.
-
-## Disclaimer
-
-This repository contains original documentation and guidance written by the maintainer based on experience working with REDCap. It is **not affiliated with, endorsed by, or approved by Vanderbilt University** or the REDCap Consortium. REDCap® is a trademark of Vanderbilt University.
-
-No REDCap software is distributed in this repository. All content reflects the maintainer's own explanations, workflows, and best practices — not reproductions of official REDCap documentation or training materials.
-
-For official REDCap resources, visit [project-redcap.org](https://projectredcap.org) or the REDCap Community forum.
 
 ## Syncing Changes
 
@@ -196,3 +219,11 @@ git add -A
 git commit -m "your message"
 git push
 ```
+
+## Disclaimer
+
+This repository contains original documentation and guidance written by the maintainer based on experience working with REDCap. It is **not affiliated with, endorsed by, or approved by Vanderbilt University** or the REDCap Consortium. REDCap® is a trademark of Vanderbilt University.
+
+No REDCap software is distributed in this repository. All content reflects the maintainer's own explanations, workflows, and best practices — not reproductions of official REDCap documentation or training materials.
+
+For official REDCap resources, visit [project-redcap.org](https://projectredcap.org) or the REDCap Community forum.
