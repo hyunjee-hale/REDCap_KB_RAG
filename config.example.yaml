@@ -1,0 +1,43 @@
+# config.example.yaml
+#
+# This is the template for instance-specific settings.
+# Copy this file to config.local.yaml and fill in the values for your environment.
+#
+#   cp config.example.yaml config.local.yaml
+#
+# config.local.yaml is gitignored and will never be committed to the repository.
+# Do not put real paths, tokens, or credentials in this file.
+
+# ── ServiceNow ETL ────────────────────────────────────────────────────────────
+# Used by ServiceNow ETL/kb_to_servicenow.py
+
+etl:
+  # Absolute path to the kb (YAML) folder containing RC-*.md articles
+  kb_dir: "/path/to/REDCap_KB_RAG/kb (YAML)"
+
+  # Absolute path for the generated Excel import file (output)
+  out_file: "/path/to/REDCap_KB_RAG/ServiceNow ETL/REDCap_KB_ServiceNow_Import.xlsx"
+
+# ── ServiceNow connection ─────────────────────────────────────────────────────
+# Only needed if you are importing via the ServiceNow API rather than file upload.
+# See ServiceNow ETL/ServiceNow_Admin_Handoff.md for setup instructions.
+
+servicenow:
+  instance_url: "https://yourinstance.service-now.com"
+  username: "YOUR_SN_USERNAME"
+  password: "YOUR_SN_PASSWORD"
+  # sys_id of the target Knowledge Base (fill in after admin configures SN)
+  knowledge_base_sys_id: ""
+
+# ── REDCap instances ──────────────────────────────────────────────────────────
+# The MCP server reads REDCAP_URL and REDCAP_TOKEN from environment variables
+# (see MCP server/redcap_mcp_server.py). These entries are for any other scripts
+# that need to reference instance URLs directly.
+
+redcap:
+  prod:
+    url: "https://redcap.yourinstitution.edu/api/"
+  dev:
+    url: "https://redcap-dev.yourinstitution.edu/api/"
+  training:
+    url: "https://redcap-training.yourinstitution.edu/api/"

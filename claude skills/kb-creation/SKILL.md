@@ -271,5 +271,6 @@ For every article the new article references, find its Per-Article Reference Det
 | MSG | Messenger | Covers REDCap Messenger: conversations, user roles, notifications, file sharing |
 | CAL | Calendar | Covers the Calendar and Scheduling modules: manual entries, schedule generation, Ad Hoc events, iCal export, visit statuses, logging |
 | LOG | Logging | Project-level audit trail; logging module access, filters, entry anatomy, retention, regulatory compliance context |
+| DSGN | Project Design Best Practices | Cross-cutting design conventions: field alignment, project structure, branching logic patterns, repeating instruments, form hygiene |
 
 Slug `RIGHTS` appears in existing cross-references but exceeds the 5-character limit — flag for review before creating articles in that domain.

@@ -38,7 +38,7 @@ The Control Center is organized into several top-level sections, each accessible
 ## Control Center Home
 The landing page of the Control Center. Displays system notifications, recent errors, and a to-do list for items that may need administrator attention. No configurable settings live here — it is an informational dashboard. See **RC-CC-01** for full details on the Notifications & Reporting dashboard, and **RC-CC-09** for the To-Do List.
 
-> **REDCap Plus** — A new feature area visible in the Control Center Home menu (labeled "coming soon" as of REDCap 16.x). Details to be added as the feature becomes available.
+> **REDCap Plus** — A subscription add-on visible in the Control Center Home menu that unlocks premium features. See **RC-PLUS-01 — REDCap+: Overview and Subscription** for details.
 
 ## Administrator Resources
 Links to REDCap community resources, training materials, API documentation, and plugin/hook documentation. Also includes:

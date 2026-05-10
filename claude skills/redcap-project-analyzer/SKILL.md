@@ -262,6 +262,39 @@ instrument in the instrument list = 🟡 Warning.
 If the project has 20+ text fields and none have `text_validation_type_or_show_slider_number` set
 = 🔵 Suggestion to add validation for data quality.
 
+### 4e. Style convention checks
+
+Read `kb (YAML)/RC-DSGN-01_REDCap-Project-Design-Best-Practices.md` before running these checks — it is the authoritative
+source for each rule. These are detectable from the data dictionary export.
+
+**Notes fields with wrong alignment (RC-DSGN-01 §2.1)**
+For every `notes` field, check `custom_alignment`. If it is blank (defaults to `RV`) or set to
+`RH` or `RV`, the text area will render at half-width — cramped and hard to type in. The correct
+values are `LH` or `LV`. Flag each offending field as 🔵 Suggestion with the field variable name,
+its instrument, and a note that the fix is a one-field change in the Online Designer.
+
+**"Other (specify)" fields without branching logic (RC-DSGN-01 §5.4)**
+Scan for free-text (`text` or `notes`) fields whose variable name contains `_other`, `_specify`,
+`_oth`, or `_other_specify`. For each match, check whether `branching_logic` is populated. If
+the field has no branching logic, it is unconditionally visible — a blank value there is
+ambiguous (not applicable vs. overlooked). Flag as 🟡 Warning. Report the field name and suggest
+adding branching logic that shows it only when the parent radio/dropdown's "Other" choice is
+selected.
+
+**Required fields that are conditionally relevant (RC-DSGN-01 §5.5)**
+For every field where `required_field = 'y'` AND `branching_logic` is populated: check whether
+the branching condition is simple (one field, one value) or complex (multiple conditions). Simple
+cases may be intentional; flag complex cases where the required field only applies under a narrow
+condition — these are the ones most likely to block form submission unexpectedly. Report as 🟡
+Warning with the field name and its branching expression.
+
+**Repeating instruments without a custom form label (RC-DSGN-01 §6.1)**
+If the project uses repeating instruments (check `export_repeating_instruments_events`), verify
+whether a custom form label is configured. A blank label means each instance shows only as
+"Instance 1", "Instance 2", etc. in the record status dashboard — making it hard to navigate
+when a record has many instances. Flag missing labels as 🔵 Suggestion, and note that the label
+is configured in Project Setup → Repeating Instruments (not in the Online Designer).
+
 ---
 
 ## Step 5: Generate the report

@@ -17,8 +17,26 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-KB_DIR = Path("/Users/bas/REDCap_KB_RAG/kb (YAML)")
-OUT_FILE = Path("/Users/bas/REDCap_KB_RAG/ServiceNow ETL/REDCap_KB_ServiceNow_Import.xlsx")
+# ── Instance configuration ────────────────────────────────────────────────────
+# Paths are loaded from config.local.yaml in the repo root.
+# Copy config.example.yaml → config.local.yaml and fill in your values.
+# Falls back to sensible defaults relative to this script's location if the
+# config file is not present (useful for running from within the repo directly).
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_CONFIG_PATH = _REPO_ROOT / "config.local.yaml"
+
+def _load_config() -> dict:
+    if _CONFIG_PATH.exists():
+        with _CONFIG_PATH.open(encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
+    return {}
+
+_cfg = _load_config()
+_etl = _cfg.get("etl", {})
+
+KB_DIR  = Path(_etl.get("kb_dir",  _REPO_ROOT / "kb (YAML)"))
+OUT_FILE = Path(_etl.get("out_file", _REPO_ROOT / "ServiceNow ETL" / "REDCap_KB_ServiceNow_Import.xlsx"))
 
 # Regex to extract RC-xxx IDs from strings like "RC-FD-02 — Online Designer"
 REF_RE = re.compile(r"(RC-[A-Z0-9-]+)")

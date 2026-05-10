@@ -94,7 +94,7 @@ If the user gives you partial information, ask only the missing pieces.
 Before generating, resolve these common ambiguities:
 
 **Classic mode vs. longitudinal mode — confirm longitudinal is the right choice**
-Per the team style guide (`STYLE-GUIDE.md` at the repo root, Section 2.1), longitudinal mode
+Per the REDCap Project Design Best Practices (`kb (YAML)/RC-DSGN-01_REDCap-Project-Design-Best-Practices.md`, Section 3.1), longitudinal mode
 should only be used when at least one of the following is true:
 - The same instrument is completed by the same participant at more than one time point, OR
 - The project needs multiple arms, event-based branching logic, or scheduling windows

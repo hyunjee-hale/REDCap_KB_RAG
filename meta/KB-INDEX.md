@@ -45,6 +45,7 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-PROJ-04 | Project Setup: Additional Customizations | RC-PROJ-04_Project-Setup-Additional-Customizations.md |
 | RC-PROJ-05 | Project Migration: Moving a Project Between REDCap Installations | RC-PROJ-05_Project-Migration.md |
 | RC-OPS-01 | Using REDCap as an Operational Request Management System | RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md |
+| RC-DSGN-01 | REDCap Project Design Best Practices | RC-DSGN-01_REDCap-Project-Design-Best-Practices.md |
 | RC-PROF-01 | My Profile: User Profile Settings | RC-PROF-01_My-Profile-User-Profile-Settings.md |
 | RC-AT-01 | Action Tags: Overview | RC-AT-01_Action-Tags-Overview.md |
 | RC-AT-02 | @HIDDEN & @READONLY — Visibility Control | RC-AT-02_Action-Tags-Hidden-and-Readonly.md |

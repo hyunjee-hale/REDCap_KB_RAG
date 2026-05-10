@@ -2872,6 +2872,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-FD-06 — Online Designer – Instrument and Field Management
 - RC-FD-12 — Dynamic SQL Field Type
 - RC-SURV-02 — Survey Settings: Basic Options & Design
+- RC-DSGN-01 — REDCap Project Design Best Practices
 
 ---
 
@@ -3246,6 +3247,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-06 — Automated Survey Invitations (ASI)
 - RC-SURV-07 — Survey Queue
 - RC-CAL-01 — Calendar
+- RC-DSGN-01 — REDCap Project Design Best Practices
 
 ---
 
@@ -3284,6 +3286,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-NAV-REC-03 — Repeated Instruments & Repeated Events
 - RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers
 - RC-SURV-07 — Survey Queue
+- RC-DSGN-01 — REDCap Project Design Best Practices
 
 ---
 
@@ -4133,8 +4136,6 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-NAV-UI-01 — Project Navigation UI
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
 - RC-NAV-UI-03 — Project Bookmarks
-
-**Note:** RC-DDE-01 (Double Data Entry) was previously referenced but does not yet exist in the KB. Reference removed pending article creation.
 
 ---
 
@@ -5200,6 +5201,21 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-SURV-04 — Survey Link Types & Access Methods
 - RC-USER-02 — User Rights: Adding Users & Managing Roles
 - RC-PROJ-04 — Project Setup: Additional Customizations
+
+**Inbound links (referenced by):**
+- RC-DSGN-01 — REDCap Project Design Best Practices
+
+---
+
+### RC-DSGN-01 — REDCap Project Design Best Practices
+
+**Prerequisites:** *(none — entry point article)*
+
+**Outbound links:**
+- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
+- RC-LONG-01 — Longitudinal Project Setup
+- RC-LONG-02 — Repeated Instruments & Events Setup
+- RC-OPS-01 — Using REDCap as an Operational Request Management System
 
 **Inbound links (referenced by):**
 *(none)*

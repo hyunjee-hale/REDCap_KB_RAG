@@ -219,8 +219,8 @@ For simple cases:
 
 ### Style conventions
 
-Before finalizing field designs, apply the team's agreed conventions from `STYLE-GUIDE.md` at
-the repo root. Read it if you need the full rationale. The conventions most relevant to DD
+Before finalizing field designs, apply the best practices from `kb (YAML)/RC-DSGN-01_REDCap-Project-Design-Best-Practices.md`
+in the repo. Read it if you need the full rationale. The conventions most relevant to DD
 building:
 
 **Field alignment (Column N — Custom Alignment)**
