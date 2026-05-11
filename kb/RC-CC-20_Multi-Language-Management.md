@@ -16,24 +16,13 @@ RC-CC-20
 
 # 1. Overview
 
-**Multi-Language Management (MLM)** (**Control Center → Miscellaneous Modules → Multi-Language Management**) is where administrators define system-level languages that projects can use to translate their user interfaces. When a project adopts a system language, the translations are copied into the project and can be freely customized there.
+**Multi-Language Management (MLM)** (**Control Center → Miscellaneous Modules → Multi-Language Management**) is where administrators define system-level languages that projects can adopt for UI translation. This article covers the administrator view — system language management, page tabs, and instance-wide settings.
+
+For a full explanation of what MLM is, how translations work, and the project-level workflow, see **RC-MLM-01 — Multi-Language Management**.
 
 MLM can be turned on or off system-wide. When off, surveys and data entry forms are not translated in any project, and the MLM menu is not visible to project users.
 
-> **Note:** This page does not auto-translate text. It provides tools so that translations can be entered and managed manually (or optionally using the AI translation feature).
-
-A PDF manual for MLM is available from the REDCap Language Library (linked from the Control Center sidebar under Administrator Resources).
-
----
-
-## What MLM Does (and Doesn't Do)
-
-| Behavior | Detail |
-| --- | --- |
-| **Scope** | Languages defined here are available for **UI translations only** — field labels, survey button text, validation error messages, etc. Data values are not translated. |
-| **Applies to projects** | Translations are copied into a project when the project adopts the language. Changes to system languages do **not** retroactively affect existing projects. |
-| **Per-project customization** | After importing a system language, project managers can freely customize translations within their project. |
-| **Base language** | The language shown to a user when no language preference has been set. Only one language can be designated as the base language. |
+> **Note:** A PDF manual for MLM is available from the REDCap Language Library (linked from the Control Center sidebar under Administrator Resources).
 
 ---
 
