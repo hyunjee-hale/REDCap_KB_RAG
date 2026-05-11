@@ -26,6 +26,15 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ---
 
+### ⚠️ RC-PLUS-02 — REDCap+ Project Migration Tool
+
+**Why needed:** RC-PLUS-01 references this article three times (frontmatter, Section 4, and Related Articles) with the label *(planned)*. RC-PROJ-05 covers the standard cross-installation migration workflow but explicitly notes that REDCap+ has a separate migration tool. Without this article, users with REDCap+ subscriptions have no KB guidance on the dedicated migration pathway.
+
+**Domain slug:** PLUS (established)
+**What to cover:** What the REDCap+ Project Migration Tool is and how it differs from the standard XML-based migration in RC-PROJ-05; prerequisites (REDCap+ subscription, source and destination instance requirements); step-by-step migration workflow; what is and is not migrated (data, instruments, users, rights, external modules); error handling and rollback; relationship to RC-PLUS-01 (subscription context) and RC-PROJ-05 (standard migration fallback)
+
+---
+
 ---
 
 ## Already Exists — No Action Needed
@@ -263,4 +272,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-09 — RC-IMP-02 slot repurposed for XML/CDISC ODM Import article (was previously considered resolved via CDIS-03; CDM content stays in CDIS domain). Open gaps (2): RC-IMP-02, RC-DE-13.*
+*Last updated: 2026-05-11 — Added RC-PLUS-02 (referenced in RC-PLUS-01 three times as "planned" but not tracked). RC-DSGN-01 confirmed as existing in kb (YAML)/ — not a gap, KB-INDEX.md path corrected. Open gaps (3): RC-IMP-02, RC-DE-13, RC-PLUS-02.*

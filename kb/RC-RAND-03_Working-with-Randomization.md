@@ -10,7 +10,7 @@ RC-RAND-03
 | **Version** | 1.0 |
 | **Last Updated** | 2025-01 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide; RC-RIGHTS-01 — User Rights Overview; RC-EXPRT-01 — Data Exports, Reports, and Stats; RC-ALERT-01 — Alerts & Notifications |
+| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-EXPRT-01 — Data Exports, Reports, and Stats; RC-ALERT-01 — Alerts & Notifications |
 
 ---
 
@@ -302,7 +302,7 @@ reason properly**
 - **RC-RAND-02:** Randomization Setup Guide — pre-flight checklist
     and setup procedure
 
-- **RC-RIGHTS-01:** User Rights & DAGs — managing Randomize, Setup,
+- **RC-USER-01:** User Rights: Overview & Three-Tier Access — managing Randomize, Setup,
     and Dashboard rights
 
 - **RC-EXPRT-01:** Data Exports, Reports, and Stats — building

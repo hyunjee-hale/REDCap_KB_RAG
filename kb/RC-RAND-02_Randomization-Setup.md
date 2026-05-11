@@ -6,11 +6,11 @@ RC-RAND-02
 | --- | --- |
 | **Domain** | Randomization |
 | **Applies To** | All REDCap project types with Randomization module enabled; requires Project Design and Setup rights and User Rights management access |
-| **Prerequisite** | RC-RAND-01 — Randomization Concepts & Terminology; RC-LONG-01 — Longitudinal Projects; RC-RIGHTS-01 — User Rights Overview |
+| **Prerequisite** | RC-RAND-01 — Randomization Concepts & Terminology; RC-LONG-01 — Longitudinal Projects; RC-USER-01 — User Rights: Overview & Three-Tier Access |
 | **Version** | 1.0 |
 | **Last Updated** | 2025-01 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-03 — Working with & Managing Randomization; RC-RIGHTS-01 — User Rights Overview; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-03 — Working with & Managing Randomization; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-CC-06 — Control Center: Modules & Services Configuration |
 
 ---
 
@@ -364,7 +364,7 @@ The Randomization module must be enabled at the system level before it can be en
 - **RC-RAND-03:** Working with & Managing Randomization — running,
     monitoring, dashboard, and admin options
 
-- **RC-RIGHTS-01:** User Rights & DAGs — DAG setup and user rights
+- **RC-USER-01:** User Rights: Overview & Three-Tier Access — DAG setup and user rights
     management
 
 - **RC-LONG-01:** Longitudinal Projects — arm and event setup

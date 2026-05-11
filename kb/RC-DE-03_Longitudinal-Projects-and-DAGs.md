@@ -140,9 +140,7 @@ fully created, or contact your project administrator.
 
 **Q: Can I be assigned to more than one DAG?**
 
-**A:** No. A user can be assigned to only one DAG at a time. If you need
-access to records across multiple DAGs, you must be unassigned from any
-DAG — which gives you access to all records in the project.
+**A:** It depends on how your REDCap instance is configured. In the standard setup, a user is assigned to only one DAG. However, if the DAG Switcher feature is enabled, a user can be assigned to multiple DAGs simultaneously. When assigned to multiple DAGs, you log in under one active DAG and use the blue **Switch** button (visible outside of any open record) to change your active DAG. Only records belonging to the currently active DAG are visible at any given time. If you are unsure whether the DAG Switcher is available in your project, contact your project administrator. See also: RC-DE-09 — Data Entry with DAGs, RC-DAG-01 — Data Access Groups.
 
 **Q: A record exists but I cannot access it. What should I check?**
 
