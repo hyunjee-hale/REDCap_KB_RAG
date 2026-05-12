@@ -7,8 +7,8 @@ RC-DSGN-01
 | **Domain** | Project Design Best Practices |
 | **Applies To** | All REDCap projects; all REDCap project designers and reviewers |
 | **Prerequisite** | None |
-| **Version** | 1.2 |
-| **Last Updated** | 2026 |
+| **Version** | 1.3 |
+| **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Related Topics** | RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques; RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments & Events Setup; RC-OPS-01 — Using REDCap as an Operational Request Management System |
 
@@ -286,9 +286,102 @@ The result is that one arm has a different data collection capacity than the oth
 
 ---
 
+## 3.2 Multi-entity registration using separate instruments per entity
+
+**Best practice: when collecting the same set of fields for a small, bounded number of entities (e.g., up to 4 children in a family registration), separate instruments per entity can be a cleaner alternative to repeating instruments**
+
+When the maximum count of entities is known upfront and small (typically 2–5), creating one instrument per entity slot (e.g., Child 1, Child 2, Child 3, Child 4) avoids the complexity of repeating instruments while still giving each entity its own dedicated survey page and navigation step.
+
+**How it works:**
+
+1. Add a count selector field early in the registration (e.g., "How many children are you registering?" — radio with options 1, 2, 3, 4).
+2. Apply branching logic or survey queue rules so that only the relevant entity instruments are shown (e.g., Child 3 and Child 4 instruments are skipped when the respondent selected "2").
+3. Field naming follows a numeric suffix convention: `vnaam1`, `vnaam2`, `vnaam3`, `vnaam4` for first name across child instruments.
+
+**When to prefer this over repeating instruments:**
+
+- The max count is small and fixed (≤ 4–5) and unlikely to change
+- Each entity form benefits from being a distinct survey page (cleaner navigation, progress indicators, per-page save points)
+- Survey queue integration is in use and needs to route participants to per-entity forms
+- The downstream export or reporting tool works better with a flat, predictable column structure than with instance-numbered rows
+
+**When to prefer repeating instruments instead:**
+
+- The count is large, unknown, or unbounded at design time
+- The same set of data is collected by staff rather than via survey (data entry grids work well with repeating instruments)
+- You need the record status dashboard to reflect individual instance completion states
+
+**Tradeoffs to document:**
+
+The flat-column approach produces a wider dataset with many NULL columns for families registering fewer children than the maximum. If there is any chance the maximum will increase (e.g., a fifth child is needed), new instruments and corresponding fields must be added manually. Note this explicitly in the project design documentation.
+
+---
+
+## 5.6 Use descriptive fields as piped context summaries at the top of each form
+
+**Best practice: at the top of each follow-on instrument in a multi-form survey, place a descriptive field that pipes in key values from earlier forms as a reminder for the respondent**
+
+When a survey spans multiple instruments and collects linked but separate information (e.g., parent details first, then per-child details), respondents may lose track of which family member or entity the current page refers to. A descriptive field at the top of each subsequent form can pipe in identifying information (e.g., the child's name and date of birth) to anchor the respondent without requiring them to navigate back.
+
+Example field label for a child instrument:
+```
+Child: {vnaam1} {anaam1} — Date of birth: {dob1}
+```
+
+This field has no variable and stores no data — it exists purely to display piped context.
+
+**When this pattern adds the most value:**
+
+- Multi-entity forms (see Section 3.2) where each instrument covers a different person or item
+- Long surveys split across multiple pages where earlier answers are no longer visible
+- Review or confirmation pages that summarize what the respondent entered before they submit
+
+**Implementation note:** These fields are `descriptive` type. Give them a meaningful variable name (e.g., `kinddesc1`) so they are easy to identify in the data dictionary. Add a Field Annotation noting that the field is a display-only context header. Because they are descriptive, they export as blank columns — which is expected and acceptable. If you want to suppress them from exports entirely, the `@HIDDEN` action tag can be applied.
+
+---
+
+## 7.3 Use a dedicated metrics instrument for built-in enrollment dashboards
+
+**Best practice: if a project needs to track aggregate counts (e.g., enrollment per class, applications per category), consider adding a separate instrument containing only calculated fields that tally those counts**
+
+Placing summary calculated fields in a dedicated instrument — separate from the data entry forms — keeps the data collection instruments clean and makes it easy to view or export aggregate metrics independently. This pattern works well for enrollment and registration projects where a program coordinator needs to quickly see headcounts without building a separate report.
+
+Example calculated fields for a class registration project:
+- `speelsum` — count of children registered for the youngest group
+- `groep1sum` through `groep8sum` — per-grade enrollment counts
+- `vosum` — count of secondary-school-age registrations
+
+These fields use the REDCap `sum()` function (or equivalent logic) across the per-child group selection fields.
+
+**Considerations:**
+
+- Calculated fields in this instrument will only reflect values from the same record. For project-wide totals across all records, use Reports or a REDCap dashboard instead — calculated fields cannot aggregate across records.
+- This pattern is appropriate for per-record summaries (e.g., total number of children in a family registration) but not for multi-record totals (e.g., total enrollment across all families). For multi-record totals, use the REDCap aggregate smart variables or a custom report.
+- Keep the metrics instrument at the end of the instrument list to avoid cluttering the survey queue or data entry workflow.
+
+---
+
+## 7.4 Deferred file upload: give respondents the option to upload documents later
+
+**Best practice: when a survey requires document uploads (e.g., vaccination records, supporting documents) that respondents may not have immediately available, offer an explicit "upload now or later" choice and provide a dedicated follow-up instrument for deferred uploads**
+
+Requiring a file upload at the time of initial registration blocks form completion for respondents who need to locate documents. Offering "Upload now / Upload later" as a radio choice, followed by a separate instrument dedicated to deferred uploads, improves completion rates while still collecting the required documents.
+
+**Implementation pattern:**
+
+1. In the main per-entity form, add a radio field asking whether the respondent wants to upload the document now or later (e.g., `vacup1`, choices: `1=Now | 2=Later`).
+2. If "Now": show an inline file upload field on the same instrument, gated behind branching logic (`[vacup1] = '1'`).
+3. Create a separate "Document Upload" instrument that contains file upload fields for all entities, each gated behind branching logic checking for the "Later" response (`[vacup1] = '2'`).
+4. Use the Survey Queue to present the deferred upload instrument to the respondent on a return visit, or send a targeted alert/notification with the survey link after initial registration is complete.
+
+**Rationale:** Splitting the upload from the core registration reduces friction at the most critical point in the workflow (initial form completion) without permanently losing the requirement. The deferred instrument also serves as a convenient standalone link for respondents who need to update documents later (e.g., when vaccination records change).
+
+---
+
 # 8. Related Articles
 
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-LONG-02 — Repeated Instruments & Events Setup
 - RC-OPS-01 — Using REDCap as an Operational Request Management System
+- RC-SURV-01 — Survey Basics

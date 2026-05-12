@@ -7,8 +7,8 @@ RC-RAND-03
 | **Domain** | Randomization |
 | **Applies To** | Study Coordinators and data entry staff (Sections 4–6); REDCap Administrators (Section 7); requires project in Production with a configured randomization model |
 | **Prerequisite** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide |
-| **Version** | 1.0 |
-| **Last Updated** | 2025-01 |
+| **Version** | 1.1 |
+| **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-EXPRT-01 — Data Exports, Reports, and Stats; RC-ALERT-01 — Alerts & Notifications |
 
@@ -320,7 +320,7 @@ reason properly**
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
-| **15.4.4+** | Randomization 2.0: automatic trigger options available. Smart variable behavior and dashboard columns consistent with this document. |
+| **15.4.4+** | Randomization 2.0: automatic trigger options available. Smart variable behavior and dashboard columns consistent with this document. Verified compatible through REDCap 17. |
 | **Pre-15.x** | Automatic triggers not available. Section 4.2 (automatic trigger behavior) does not apply. Manual-only randomization. Smart variables \[rand-time\], \[rand-utc-time\], \[rand-number\] — verify availability in your version. |
 
 REDCap LLM Knowledge Base \| RC-RAND-03 \| Working with & Managing

@@ -7,8 +7,8 @@ RC-RAND-01
 | **Domain** | Randomization |
 | **Applies To** | All REDCap project types with Randomization module enabled; intended for PIs, Study Coordinators, and Project Builders planning a randomized study |
 | **Prerequisite** | Foundational REDCap knowledge required: project setup, instruments, user rights, and longitudinal mode basics |
-| **Version** | 1.0 |
-| **Last Updated** | 2025-01 |
+| **Version** | 1.1 |
+| **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Related Topics** | RC-RAND-02 — Randomization Setup Guide; RC-RAND-03 — Working with & Managing Randomization; RC-USER-01 — User Rights Overview; RC-DAG-01 — Data Access Groups; RC-CC-06 — Control Center: Modules & Services Configuration; RC-NAV-UI-02 — Project Menu Reference |
 
@@ -303,7 +303,7 @@ Once the module is enabled system-wide, randomization is enabled per project by 
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
-| **15.4.4+** | Randomization 2.0 — adds automatic trigger options (trigger logic for users with Randomize rights; trigger logic for all users including survey respondents). This document is written for this version. |
+| **15.4.4+** | Randomization 2.0 — adds automatic trigger options (trigger logic for users with Randomize rights; trigger logic for all users including survey respondents). This document is written for this version and has been verified compatible through REDCap 17. |
 | **Pre-15.x** | Only manual randomization (Randomize button) available. Automatic triggers did not exist. Verify your installation version before configuring. |
 
 REDCap LLM Knowledge Base \| RC-RAND-01 \| Randomization Concepts &
