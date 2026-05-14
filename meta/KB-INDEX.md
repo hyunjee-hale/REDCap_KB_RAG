@@ -171,6 +171,7 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-FD-11 | Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS | RC-FD-11_Advanced-Online-Designer-Options.md |
 | RC-FD-12 | Dynamic SQL Field Type | RC-FD-12_Dynamic-SQL-Field-Type.md |
 | RC-IMP-01 | Data Import Overview | RC-IMP-01_Data-Import-Overview.md |
+| RC-IMP-02 | XML / CDISC ODM Import: Format Reference and Workflow | RC-IMP-02_XML-CDISC-ODM-Import.md |
 | RC-IMP-03 | CSV Upload Reference: All Bulk Upload Options in REDCap | RC-IMP-03_CSV-Upload-Reference.md |
 | RC-IMP-04 | Record Data CSV Import — Column Reference and Format Guide | RC-IMP-04_Record-Data-CSV-Import.md |
 | RC-IMP-05 | Alerts & Notifications CSV — Column Reference and Format Guide | RC-IMP-05_Alerts-Notifications-CSV.md |

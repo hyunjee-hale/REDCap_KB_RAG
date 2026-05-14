@@ -8,15 +8,6 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ---
 
-### ⚠️ RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
-
-**Why needed:** RC-IMP-01 covers the ODM import in section 8.4 but only as a brief subsection. There is no dedicated reference article for the XML/ODM import path. The slot was previously earmarked for "Clinical Data Mart Integration," but that content belongs to the CDIS domain (RC-CDIS-03). Assigning a new article here fills the numbering gap and gives the ODM import topic a proper home.
-
-**Domain slug:** IMP (established)
-**What to cover:** What CDISC ODM XML is and when to use it vs. CSV import; navigating to the ODM import tab in the Data Import Tool; file requirements (ODM version 1.3.X, REDCap-exported ODM vs. third-party ODM); the import process step by step; how ODM import handles existing records (overwrite vs. additive behavior); common errors and how to resolve them; relationship to ODM export (RC-EXPRT domain) and API XML export (RC-API-36)
-
----
-
 ### ⚠️ RC-DE-13 — Record Administration (Choose Action for Record)
 
 **Why needed:** RC-DE-01 calls out the 'Choose action for record' button as out of scope for routine data entry but provides no pointer to a covering article. No existing article covers record-level admin operations.
@@ -172,6 +163,7 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 
 ### Data Import (RC-IMP) — expansion
 
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow ✅ *(was ⚠️)*
 - RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap ✅
 
 ### Integration (RC-INTG) — new domain
@@ -272,4 +264,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-11 — Added RC-PLUS-02 (referenced in RC-PLUS-01 three times as "planned" but not tracked). RC-DSGN-01 confirmed as existing in kb (YAML)/ — not a gap, KB-INDEX.md path corrected. Open gaps (3): RC-IMP-02, RC-DE-13, RC-PLUS-02.*
+*Last updated: 2026-05-13 — RC-IMP-02 written and added to KB. Open gaps (2): RC-DE-13, RC-PLUS-02.*

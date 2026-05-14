@@ -541,6 +541,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-04 — Delete Records API
 - RC-API-05 — Rename Record API
 - RC-API-43 — Export Survey Participants API
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 - RC-DE-01 — Record Creation & the Record Home Page
 - RC-DE-02 — Basic Data Entry
 - RC-IMP-01 — Data Import Overview
@@ -1311,6 +1312,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-34 — Export Project Info API
 - RC-API-37 — Import Project (Create Project) API
 - RC-CC-23 — Backup Options
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 
 ---
 
@@ -2490,6 +2492,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-EXPRT-01 — Data Export: Overview & Workflow
 - RC-EXPRT-04 — Data Export: De-identification & Formatting Options
 - RC-EXPRT-05 — Data Export: Report Types & Other Export Options
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 
 ---
 
@@ -2931,10 +2934,31 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 **Inbound links (referenced by):**
 - RC-API-01 — REDCap API
 - RC-API-03 — Import Records API
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 - RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap
 - RC-MYCAP-04 — MyCap: Participant Onboarding
 - RC-NAV-REC-01 — Record Navigation Overview
 - RC-NAV-UI-02 — Project Menu Reference
+
+---
+
+### RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
+
+**Prerequisites:** RC-IMP-01 — Data Import Overview
+
+**Outbound links:**
+- RC-API-01 — REDCap API
+- RC-API-02 — Export Records API
+- RC-API-03 — Import Records API
+- RC-API-36 — Export Project XML API
+- RC-EXPRT-02 — Data Export: Export Formats
+- RC-IMP-01 — Data Import Overview
+- RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap
+- RC-IMP-04 — Record Data CSV Import
+- RC-PROJ-05 — Project Migration
+
+**Inbound links (referenced by):**
+- RC-IMP-01 — Data Import Overview
 
 ---
 
@@ -3018,6 +3042,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-LONG-02 — Repeated Instruments & Events Setup
 
 **Inbound links (referenced by):**
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 - RC-IMP-03 — CSV Upload Reference
 
 ---
@@ -5285,7 +5310,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
 
 **Inbound links (referenced by):**
-*(none)*
+- RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow
 
 ---
 
