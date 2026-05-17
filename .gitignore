@@ -10,3 +10,6 @@ config.local.yaml
 # Python cache
 __pycache__/
 *.py[cod]
+
+# Local tooling — not for distribution
+tools/

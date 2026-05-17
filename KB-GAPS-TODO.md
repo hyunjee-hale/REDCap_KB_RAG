@@ -12,6 +12,8 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ### ⚠️ RC-PLUS-02 — REDCap+ Project Migration Tool
 
+> **On hold — Summer 2026.** Requires access to a REDCap+ instance and REDCap v17. Neither is available yet.
+
 **Why needed:** RC-PLUS-01 references this article three times (frontmatter, Section 4, and Related Articles) with the label *(planned)*. RC-PROJ-05 covers the standard cross-installation migration workflow but explicitly notes that REDCap+ has a separate migration tool. Without this article, users with REDCap+ subscriptions have no KB guidance on the dedicated migration pathway.
 
 **Domain slug:** PLUS (established)
@@ -258,4 +260,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-16 — RC-DE-13 written and added to KB. Open gaps (1): RC-PLUS-02.*
+*Last updated: 2026-05-16 — RC-DE-13 written and added to KB. Open gaps (1): RC-PLUS-02 — on hold until Summer 2026 (requires REDCap+ instance and v17).*
