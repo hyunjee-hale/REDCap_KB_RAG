@@ -260,7 +260,7 @@ Some REDCap features must be enabled at the instance level by an administrator. 
 | **Randomization** | `[Enabled / Disabled]` | See RC-RAND-01 |
 | **REDCap API** | `[Enabled / Disabled]` | See Section 9 and RC-API-01 |
 | **REDCap Mobile App** (offline data entry) | `[Enabled / Disabled]` | See RC-MOB-01; users need explicit mobile app rights |
-| **MyCap Mobile App** (participant app) | `[Enabled / Disabled / Admin activation required per project]` | See RC-MYCAP-01; mutually exclusive with longitudinal mode |
+| **MyCap Mobile App** (participant app) | `[Enabled / Disabled / Admin activation required per project]` | See RC-MYCAP-01; longitudinal projects supported as of MyCap 2.0 (Sept 2023) |
 | **REDCap Messenger** | `[Enabled / Disabled]` | In-platform user-to-user messaging |
 | **Text-to-Speech for Surveys** | `[Enabled / Disabled]` | Audio processed by IBM Watson via Vanderbilt; consult IRB before using on sensitive surveys |
 | **Data Resolution Workflow** (Queries) | `[Enabled / Disabled]` | Must also be activated per project; see RC-DE-12 |

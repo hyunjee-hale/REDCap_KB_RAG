@@ -150,7 +150,7 @@ Use this table to quickly find which article covers a specific action tag.
 | `@CONSENT-VERSION` | Autofill | RC-AT-06 | Fill with e-consent version |
 | `@DEFAULT` | Autofill | RC-AT-06 | Pre-fill on first load |
 | `@SETVALUE` | Autofill | RC-AT-06 | Pre-fill on every load |
-| `@PREFILL` | Autofill | RC-AT-06 | Legacy alias for @SETVALUE |
+| `@PREFILL` | Autofill | RC-AT-06 | Deprecated alias for @SETVALUE — use @SETVALUE instead |
 | `@HIDEBUTTON` | Cosmetic | RC-AT-07 | Hide Today/Now button |
 | `@INLINE` | Cosmetic | RC-AT-07 | Display uploaded file inline |
 | `@INLINE-PREVIEW` | Cosmetic | RC-AT-07 | Display with toggle button |

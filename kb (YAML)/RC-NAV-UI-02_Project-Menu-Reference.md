@@ -113,7 +113,7 @@ core items.
 | **Record Status Dashboard** | Always           Overview of form completion status across all records. Shows which forms are complete, incomplete, or unverified at a glance. |
 | **Add / Edit Records** | Always           Create new records or look up and edit existing ones. Primary data entry entry point. |
 | **Survey Distribution Tools** | Conditional      Appears when surveys are enabled in the project. Manage survey links, send email/SMS invitations, and view the invitation log. |
-| **MyCap Participant Management** | Conditional      Manage participants using the MyCap mobile app. Requires MyCap to be enabled; mutually exclusive with longitudinal mode. Consult your support team before using. |
+| **MyCap Participant Management** | Conditional      Manage participants using the MyCap mobile app. Requires MyCap to be enabled. As of MyCap 2.0 (September 2023, REDCap v13.10.0+), longitudinal projects are supported. Consult your support team before using. |
 | **Record shortcuts** | Conditional      When a user is actively viewing a record, shortcuts to that record\'s instruments and record home page appear dynamically in this section. |
 
 ## 3.4 Applications

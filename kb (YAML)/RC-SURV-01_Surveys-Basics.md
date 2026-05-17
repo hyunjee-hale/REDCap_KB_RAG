@@ -13,10 +13,10 @@ last_updated: '2026-04-02'
 related:
 - id: RC-FD-02
   title: Online Designer
-- id: RC-RIGHTS-01
-  title: User Rights
+- id: RC-USER-01
+  title: 'User Rights: Overview & Three-Tier Access'
 - id: RC-ALERT-01
-  title: Automated Survey Invitations
+  title: 'Alerts & Notifications: Setup'
 - id: RC-CC-06
   title: 'Control Center: Modules & Services Configuration'
 tags:
@@ -357,10 +357,10 @@ Additional survey-related settings that administrators control in the Control Ce
 
 - RC-FD-02 — Online Designer (navigating to the Online Designer, the instrument list, and the instrument editor — required context for Section 4.2)
 - RC-FD-01 — Form Design Overview (understanding instruments and fields before adding survey functionality)
-- RC-RIGHTS-01 — User Rights (full reference for all REDCap user rights, including the three survey-related rights described in Section 7)
-- RC-ALERT-01 — Automated Survey Invitations (advanced feature for triggering survey invitations based on data conditions — referenced in Section 4.2)
-- RC-SURV-02 — Survey Customizations (covers the advanced settings in Survey Customizations, Survey Access, and Survey Termination Options introduced but not detailed in this article)
-- RC-SURV-03 — Survey Queue (managing sequential multi-survey workflows)
+- RC-USER-01 — User Rights: Overview & Three-Tier Access (full reference for all REDCap user rights, including the three survey-related rights described in Section 7)
+- RC-ALERT-01 — Alerts & Notifications: Setup (advanced feature for triggering survey invitations based on data conditions — referenced in Section 4.2; Automated Survey Invitations are covered in RC-SURV-06)
+- RC-SURV-02 — Survey Settings: Basic Options & Design (covers the advanced settings in Survey Customizations, Survey Access, and Survey Termination Options introduced but not detailed in this article)
+- RC-SURV-03 — Survey Settings: Behavior, Access & Termination (see RC-SURV-07 for the Survey Queue feature)
 - RC-CC-06 — Control Center: Modules & Services Configuration (system-level survey enablement and related settings)
 
 ---

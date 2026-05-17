@@ -168,10 +168,12 @@ The backup feature offers two distinct options:
 
 | 1 | Navigate to **Create a New Project**. |
 |---|---|
-| 2 | Select the **"Upload a REDCap project XML file (CDISC ODM format)"** option. |
-| 3 | Select your backup XML file. (Pro tip: you can drag and drop the file directly onto the "Choose File" button.) |
-| 4 | Fill out the remaining required fields. |
+| 2 | Under **Project creation option**, select **"Upload a REDCap project XML file (CDISC ODM format)"**. |
+| 3 | Click **Select XML file** and choose your backup file. (Pro tip: you can drag and drop the file directly onto the Choose File button.) After a valid file is selected, REDCap displays the **Source REDCap version** and **File creation date** from the XML — verify these match the export you intended to restore. |
+| 4 | Fill out the remaining required fields (project title, purpose, PI name). |
 | 5 | Click **Create Project** — or **Submit a Project Request**, depending on your REDCap installation's configuration. |
+
+> **Note:** If REDCap displays "This file does not appear to be a valid REDCap project XML file," the upload was rejected. Common causes: the file is not in CDISC ODM format, it is corrupted or truncated, or it was exported from an incompatible REDCap version. Re-export from the source project and try again.
 
 ---
 

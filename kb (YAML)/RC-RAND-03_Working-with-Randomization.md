@@ -9,15 +9,15 @@ applies_to:
 prerequisites:
 - RC-RAND-01 — Randomization Concepts & Terminology
 - RC-RAND-02 — Randomization Setup Guide
-version: '1.0'
-last_updated: 2025-01
+version: '1.1'
+last_updated: '2026-05-11'
 related:
 - id: RC-RAND-01
   title: Randomization Concepts & Terminology
 - id: RC-RAND-02
   title: Randomization Setup Guide
-- id: RC-RIGHTS-01
-  title: User Rights Overview
+- id: RC-USER-01
+  title: 'User Rights: Overview & Three-Tier Access'
 - id: RC-EXPRT-01
   title: Data Exports, Reports, and Stats
 - id: RC-ALERT-01
@@ -314,7 +314,7 @@ reason properly**
 - **RC-RAND-02:** Randomization Setup Guide — pre-flight checklist
     and setup procedure
 
-- **RC-RIGHTS-01:** User Rights & DAGs — managing Randomize, Setup,
+- **RC-USER-01:** User Rights: Overview & Three-Tier Access — managing Randomize, Setup,
     and Dashboard rights
 
 - **RC-EXPRT-01:** Data Exports, Reports, and Stats — building
@@ -332,7 +332,7 @@ reason properly**
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
-| **15.4.4+** | Randomization 2.0: automatic trigger options available. Smart variable behavior and dashboard columns consistent with this document. |
+| **15.4.4+** | Randomization 2.0: automatic trigger options available. Smart variable behavior and dashboard columns consistent with this document. Verified compatible through REDCap 17. |
 | **Pre-15.x** | Automatic triggers not available. Section 4.2 (automatic trigger behavior) does not apply. Manual-only randomization. Smart variables \[rand-time\], \[rand-utc-time\], \[rand-number\] — verify availability in your version. |
 
 REDCap LLM Knowledge Base \| RC-RAND-03 \| Working with & Managing

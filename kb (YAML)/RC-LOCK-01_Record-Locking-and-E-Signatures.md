@@ -171,6 +171,14 @@ An instrument can be locked without being e-signed, or e-signed without being lo
 
 Once a form has been e-signed, the signing user's name and timestamp are displayed on the form for all users.
 
+### 6.4 E-Signature and Authentication Compatibility
+
+REDCap's e-signature feature requires users to re-enter their REDCap credentials (username and password, or a 2FA PIN depending on your instance configuration) to confirm their identity at the moment of signing. This mechanism relies on locally managed REDCap credentials.
+
+**Incompatibility with federated authentication:** E-signature is not compatible with institutions using Shibboleth (SAML) or OAuth2 as their REDCap authentication method. Because those methods delegate credential verification to an external identity provider, REDCap cannot perform the local credential re-entry that the e-signature step requires. If your institution uses Shibboleth or OAuth2 authentication, the e-signature option will not be available to your users.
+
+If your study requires electronic attestation and your institution uses federated authentication, contact your REDCap administrator to discuss alternative approaches or consult the applicable regulatory guidance for your study type.
+
 ---
 
 # 7. E-Signature and Locking Management Page
@@ -275,6 +283,8 @@ Yes. Locking is available in classic (single-event) and longitudinal projects al
 **Forgetting record-level locking requires a separate privilege.** Standard Lock/Unlock rights only enable instrument-level locking. If your workflow requires locking all forms in a record at once, confirm the additional record-level privilege is granted in User Rights.
 
 **Custom lock text not saving.** Custom text must be entered and saved per instrument. After typing text, click Save for that row — navigating away without saving discards the text.
+
+**Assuming e-signature is available on all instances.** E-signature requires locally managed REDCap credentials for the re-entry step. Institutions using Shibboleth or OAuth2 authentication cannot use e-signature. If the e-signature option is not visible despite being enabled on the Customization page, confirm your instance's authentication method with your administrator. See Section 6.4 for details.
 
 ---
 

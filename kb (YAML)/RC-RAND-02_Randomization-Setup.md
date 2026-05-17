@@ -8,16 +8,16 @@ applies_to:
 prerequisites:
 - RC-RAND-01 — Randomization Concepts & Terminology
 - RC-LONG-01 — Longitudinal Projects
-- RC-RIGHTS-01 — User Rights Overview
-version: '1.0'
-last_updated: 2025-01
+- 'RC-USER-01 — User Rights: Overview & Three-Tier Access'
+version: '1.1'
+last_updated: '2026-05-11'
 related:
 - id: RC-RAND-01
   title: Randomization Concepts & Terminology
 - id: RC-RAND-03
   title: Working with & Managing Randomization
-- id: RC-RIGHTS-01
-  title: User Rights Overview
+- id: RC-USER-01
+  title: 'User Rights: Overview & Three-Tier Access'
 - id: RC-CC-06
   title: 'Control Center: Modules & Services Configuration'
 tags:
@@ -374,7 +374,7 @@ The Randomization module must be enabled at the system level before it can be en
 - **RC-RAND-03:** Working with & Managing Randomization — running,
     monitoring, dashboard, and admin options
 
-- **RC-RIGHTS-01:** User Rights & DAGs — DAG setup and user rights
+- **RC-USER-01:** User Rights: Overview & Three-Tier Access — DAG setup and user rights
     management
 
 - **RC-LONG-01:** Longitudinal Projects — arm and event setup
@@ -388,7 +388,7 @@ The Randomization module must be enabled at the system level before it can be en
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
-| **15.4.4+** | Randomization 2.0: automatic trigger options (steps 11) are available. This document is written for this version. |
+| **15.4.4+** | Randomization 2.0: automatic trigger options (step 11) are available. This document is written for this version and has been verified compatible through REDCap 17. |
 | **Pre-15.x** | Automatic trigger options do not exist. Step 11 is not applicable. Manual-only randomization is the only option. |
 
 REDCap LLM Knowledge Base \| RC-RAND-02 \| Randomization Setup Guide

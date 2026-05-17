@@ -1,17 +1,24 @@
-RC-DE-13
-
-**Data Entry — Record Administration: Choose Action for Record**
-
-| **Article ID** | RC-DE-13 |
-|---|---|
-| **Domain** | Data Entry |
-| **Applies To** | All project types |
-| **Prerequisite** | RC-DE-01 — Record Creation & the Record Home Page |
-| **Version** | 1.0 |
-| **Last Updated** | 2026 |
-| **Author** | REDCap Support |
-| **Related Topics** | RC-LOCK-01 — Record Locking & E-Signatures; RC-DAG-01 — Data Access Groups; RC-USER-03 — User Rights: Configuring User Privileges; RC-LOG-01 — Logging — Project Audit Trail |
-
+---
+id: RC-DE-13
+title: 'Data Entry — Record Administration: Choose Action for Record'
+domain: Data Entry
+applies_to:
+- All project types
+prerequisites:
+- RC-DE-01 — Record Creation & the Record Home Page
+version: '1.0'
+last_updated: '2026'
+related:
+- id: RC-LOCK-01
+  title: Record Locking & E-Signatures
+- id: RC-DAG-01
+  title: Data Access Groups
+- id: RC-USER-03
+  title: 'User Rights: Configuring User Privileges'
+- id: RC-LOG-01
+  title: Logging — Project Audit Trail
+tags:
+- data entry
 ---
 
 # RC-DE-13 — Record Administration: Choose Action for Record

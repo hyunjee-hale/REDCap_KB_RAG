@@ -9,8 +9,8 @@ applies_to:
 prerequisites:
 - 'Foundational REDCap knowledge required: project setup, instruments, user rights,
   and longitudinal mode basics'
-version: '1.0'
-last_updated: 2025-01
+version: '1.1'
+last_updated: '2026-05-11'
 related:
 - id: RC-RAND-02
   title: Randomization Setup Guide
@@ -317,7 +317,7 @@ Once the module is enabled system-wide, randomization is enabled per project by 
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
-| **15.4.4+** | Randomization 2.0 — adds automatic trigger options (trigger logic for users with Randomize rights; trigger logic for all users including survey respondents). This document is written for this version. |
+| **15.4.4+** | Randomization 2.0 — adds automatic trigger options (trigger logic for users with Randomize rights; trigger logic for all users including survey respondents). This document is written for this version and has been verified compatible through REDCap 17. |
 | **Pre-15.x** | Only manual randomization (Randomize button) available. Automatic triggers did not exist. Verify your installation version before configuring. |
 
 REDCap LLM Knowledge Base \| RC-RAND-01 \| Randomization Concepts &

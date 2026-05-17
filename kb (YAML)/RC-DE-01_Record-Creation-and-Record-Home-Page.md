@@ -142,7 +142,7 @@ single variable for speed in large projects.
     instruments in the project for quick switching.
 
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** The \'Choose action for record\' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in RC-DE-13 — Record Administration *(coming soon)*.
+  **Note:** The \'Choose action for record\' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in RC-DE-13 — Record Administration: Choose Action for Record.
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---
