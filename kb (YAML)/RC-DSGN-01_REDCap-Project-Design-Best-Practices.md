@@ -7,17 +7,25 @@ applies_to:
 - all REDCap project designers and reviewers
 prerequisites:
 - None
-version: '1.3'
-last_updated: '2026-05-11'
+version: '1.4'
+last_updated: '2026-05-16'
 related:
 - id: RC-FD-08
   title: 'Data Dictionary: Column Reference & Advanced Techniques'
+- id: RC-FD-06
+  title: 'Online Designer: Instrument and Field Management'
 - id: RC-LONG-01
   title: Longitudinal Project Setup
 - id: RC-LONG-02
   title: Repeated Instruments & Events Setup
 - id: RC-OPS-01
   title: Using REDCap as an Operational Request Management System
+- id: RC-SURV-06
+  title: Automated Survey Invitations
+- id: RC-PIPE-05
+  title: 'Smart Variables: User'
+- id: RC-BL-01
+  title: 'Branching Logic: Basics and Syntax'
 tags:
 - project design best practices
 ---
@@ -348,6 +356,36 @@ This field has no variable and stores no data — it exists purely to display pi
 
 ---
 
+## 5.7 Prefer `[user-role-name]` over `[user-role-label]` in role-based branching logic
+
+**Best practice: when gating field visibility on a user's role, use `[user-role-name]` as the branching logic condition — not `[user-role-label]`**
+
+REDCap exposes three user-role smart variables: `[user-role-id]`, `[user-role-name]`, and `[user-role-label]`. They are easy to conflate, but they have meaningfully different stability properties:
+
+| Smart variable | What it returns | Stability |
+|---|---|---|
+| `[user-role-id]` | Numeric database ID for the role | Unstable — changes when a project is copied |
+| `[user-role-name]` | Internal name (e.g., `U-699N7ET9KR`) | Stable — preserved across project copies |
+| `[user-role-label]` | Human-readable label set by the admin | Fragile — changes any time an admin renames the role |
+
+Using `[user-role-label]` in branching logic creates a hidden dependency on the role's display name. If an administrator renames the role in User Rights (e.g., from "Data Entry Person" to "Data Entry Staff"), every branching condition that referenced the old label silently evaluates to false, hiding fields for all users in that role. There is no warning, no error, and no visible clue in the branching logic editor that the condition is now broken.
+
+**Preferred pattern:**
+
+```
+[user-role-name] = 'U-699N7ET9KR'
+```
+
+The role's internal name is opaque but stable — it does not change when the label is edited, and it is preserved when the project is copied.
+
+**How to find the role name:** Navigate to User Rights in the project, open a user's rights, and inspect the URL or use the API (export user roles) to retrieve the `unique_role_name` value for each role.
+
+**Note:** The same stability concern applies to `[user-dag-label]` vs `[user-dag-name]` for DAG-based conditions. Use `[user-dag-name]` (the system-assigned lowercase identifier) rather than the human-readable DAG label when writing branching logic that checks which group the current user belongs to.
+
+→ See [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) for the full list of user smart variables and their behavior in surveys vs. data entry.
+
+---
+
 ## 7.3 Use a dedicated metrics instrument for built-in enrollment dashboards
 
 **Best practice: if a project needs to track aggregate counts (e.g., enrollment per class, applications per category), consider adding a separate instrument containing only calculated fields that tally those counts**
@@ -386,10 +424,92 @@ Requiring a file upload at the time of initial registration blocks form completi
 
 ---
 
+---
+
+# 9. Variable and Instrument Naming
+
+## 9.1 Variable names are permanent identifiers — choose them carefully before you build
+
+**Best practice: treat variable names as permanent, meaningful, project-wide identifiers, not throwaway labels**
+
+REDCap enforces the following rules on variable names (Column A of the Data Dictionary):
+
+- Lowercase letters, numbers, and underscores only
+- At least 2 characters long
+- Unique across the entire project (not just within an instrument)
+- Cannot be changed after real data has been collected without risking data integrity
+
+The last rule is the one designers most often learn the hard way. Once a variable has data attached to it in a Production project, renaming it requires either a structural change request (which REDCap logs as an unverified change) or a database-level operation. Neither is routine. In practice, a poorly chosen variable name is permanent.
+
+**Naming guidance:**
+
+- **Be concise and readable.** REDCap recommends short names — use `dob` rather than `date_of_birth`, `systolic` rather than `systolic_blood_pressure_mmhg`. Abbreviations are appropriate as long as they are unambiguous within the context of the project.
+- **Use a consistent prefix for related fields.** Fields that belong to the same logical group benefit from a shared prefix (e.g., `med_name`, `med_dose`, `med_route` for a medications block).
+- **Use numeric suffixes for entity-duplicated fields.** In multi-entity instruments (see Section 3.2), suffix each field with the entity number (e.g., `vnaam1`, `vnaam2`, `vnaam3`) to make the pattern explicit.
+- **Avoid generic names like `text1`, `q1`, `field_a`.** These make the data dictionary unreadable to anyone who didn't build the project, and they make field references in branching logic or piping difficult to interpret at a glance.
+- **Do not embed the instrument name in the variable name.** Since the instrument (form name) is already tracked in Column B, prefixing every variable with the instrument name (`demographics_dob`, `demographics_sex`) is redundant and makes names unnecessarily long.
+- **Never rename the Record ID field** after records have been created. Doing so can produce orphaned records — records that remain in the backend database but disappear from the project UI.
+
+→ See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) §3.1 for the full character-level rules. See [RC-FD-06 — Online Designer: Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) §5.4 for the consequences of deleting or restructuring fields with data.
+
+## 9.2 Keep instrument display names unique within the project
+
+**Best practice: give every instrument a distinct display name, even if two instruments serve similar purposes**
+
+REDCap allows two instruments to share the same display name. When that happens, REDCap internally assigns a unique system name (the `form_name` in the Data Dictionary) by appending a numeric suffix — but that system name does not match what the designer typed, and the mismatch persists invisibly. This causes confusion in the code book, in exports, and in the Data Dictionary, where the display name and the form name appear to disagree.
+
+**Example:** If two instruments are both named "Follow-up Visit," REDCap might assign `form_name` values of `follow_up_visit` and `follow_up_visit_2`. Any branching logic, API call, or external script that references the instrument by name must use the opaque `form_name` — but that name was never shown to the designer.
+
+**Solution:** Before finalizing an instrument name, scan the existing instrument list and choose a name that is clearly distinct. Adding a date, a phase label, or a numeric suffix to the display name is preferable to letting REDCap generate one silently (e.g., "Follow-up Visit — Month 3" and "Follow-up Visit — Month 6").
+
+→ See [RC-FD-06 — Online Designer: Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) §5.2 for details.
+
+---
+
+# 10. Automated Survey Invitation (ASI) Safety Patterns
+
+## 10.1 Add a kill switch field to every ASI's logic condition
+
+**Best practice: include a dedicated radio or checkbox field (e.g., `stop_emails`) in every ASI's trigger logic so that invitations for any record can be cancelled immediately without editing the ASI setup**
+
+Automated Survey Invitations fire based on a logic condition that is re-evaluated at send time (when the "Ensure logic is still true" option is enabled — see Section 10.2). A common operational need is to stop all pending invitations for a specific record — because the participant has withdrawn, become ineligible, or was enrolled in error. Without a kill switch, the only way to cancel pending invitations is to manually delete them one by one from the ASI notification queue.
+
+**Implementation:**
+
+1. Add a field to the project — typically a radio or checkbox — with a variable name like `stop_emails`. Choices: `1=Stop all emails | 0=Active` (or similar).
+2. In every ASI's **Optional logic condition** field, include: `[stop_emails] <> '1'`
+3. Enable **"Ensure logic is still true before sending invitation"** on every ASI (see Section 10.2).
+
+When a participant needs to be removed from the invitation queue, set `stop_emails = 1` for their record. All pending invitations for that record will be cancelled automatically at their scheduled send time.
+
+**Where to place the field:** A dedicated "Study Status" or "Administrative" instrument, not embedded in a clinical form. Keep it easy to find and update quickly.
+
+→ See [RC-SURV-06 — Automated Survey Invitations](RC-SURV-06_Automated-Survey-Invitations.md) for full ASI setup documentation and the complete list of gotchas.
+
+## 10.2 Always enable "Ensure logic is still true before sending invitation"
+
+**Best practice: enable the "Ensure logic is still true before sending invitation" checkbox on every ASI that has a logic condition**
+
+By default, REDCap evaluates the ASI trigger logic when the invitation is queued — not when it is sent. If the participant's status changes after the invitation was queued (e.g., they withdraw from the study), the invitation sends anyway.
+
+Enabling this option causes REDCap to re-evaluate the trigger logic immediately before sending. If the condition is no longer true at send time, the invitation is automatically cancelled. This is what makes the kill switch pattern in Section 10.1 effective.
+
+**There is no meaningful downside** to enabling this setting when a logic condition is present. Enable it on every ASI that uses a conditional trigger.
+
+**Exception:** If an ASI has no logic condition (it fires for every record unconditionally), this setting has no effect and can be left unchecked.
+
+→ See [RC-SURV-06 — Automated Survey Invitations](RC-SURV-06_Automated-Survey-Invitations.md) §5 for the full send-time logic re-evaluation behavior.
+
+---
+
 # 8. Related Articles
 
 - RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
+- RC-FD-06 — Online Designer: Instrument and Field Management
 - RC-LONG-01 — Longitudinal Project Setup
 - RC-LONG-02 — Repeated Instruments & Events Setup
 - RC-OPS-01 — Using REDCap as an Operational Request Management System
 - RC-SURV-01 — Survey Basics
+- RC-SURV-06 — Automated Survey Invitations
+- RC-PIPE-05 — Smart Variables: User
+- RC-BL-01 — Branching Logic: Basics and Syntax

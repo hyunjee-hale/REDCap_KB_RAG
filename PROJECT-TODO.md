@@ -41,6 +41,8 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 ## Documentation
 
 - [ ] **Flesh out the style guide** — Expand `STYLE-GUIDE.md` to cover REDCap project design conventions beyond field alignment: naming standards for fields/instruments/events, branching logic patterns, calculated field practices, survey design guidelines, etc. Also add a **"How to contribute to this guide"** section explaining the process for proposing and documenting new conventions (what triggers an addition, how to phrase a principle, where to add it).
+  - **v1.4 (2026-05-16):** Added §5.7 (prefer `[user-role-name]` over `[user-role-label]` in branching logic; DAG name stability); §9 Variable and Instrument Naming (9.1 variable name rules and permanence, 9.2 unique instrument display names); §10 ASI Safety Patterns (10.1 kill switch field, 10.2 "Ensure logic is still true"). Cross-references added to RC-PIPE-05, RC-SURV-06, RC-FD-06, RC-BL-01.
+  - Still to add: calculated field conventions (RC-CALC-02), record ID / identifier patterns, choice coding conventions (raw value standards), locking/signing workflow guidance (RC-LOCK-01), "How to contribute" meta-section.
 
 - [ ] **Redo README** — The current README needs a full rewrite. Scope TBD — review what's there first and decide what it should cover (project purpose, repo structure, how to use the KB, how to contribute, etc.).
 
@@ -65,4 +67,4 @@ Running list of development tasks for the REDCap KB / RAG project — separate f
 
 ---
 
-*Last updated: 2026-05-07 (Randomization Allocation Table upload format analyzed; RC-IMP-03 §7.8 expanded with column-by-column reference, DAG numeric ID gotcha, notes-column behavior, and allocation structure explanation. All "Feed Claude examples" sub-items now complete.)*
+*Last updated: 2026-05-16 (RC-DSGN-01 v1.4 — style guide expanded with §5.7 role/DAG smart variable naming, §9 variable and instrument naming conventions, §10 ASI safety patterns. Cross-refs updated.)*
