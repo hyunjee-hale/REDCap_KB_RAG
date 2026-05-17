@@ -8,13 +8,6 @@ These articles are referenced by existing KB articles or skills but do not yet e
 
 ---
 
-### ⚠️ RC-DE-13 — Record Administration (Choose Action for Record)
-
-**Why needed:** RC-DE-01 calls out the 'Choose action for record' button as out of scope for routine data entry but provides no pointer to a covering article. No existing article covers record-level admin operations.
-
-**Domain slug:** DE (established)
-**What to cover:** Accessing 'Choose action for record' from the Record Home Page, available actions (move record to different DAG, rename/renumber record, delete record, lock/unlock record), who can perform each action (user rights required), consequences and irreversibility of deletion, audit trail behavior after admin actions
-
 ---
 
 ### ⚠️ RC-PLUS-02 — REDCap+ Project Migration Tool
@@ -96,6 +89,7 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-DE-10 — Longitudinal & Repeated Data Entry ✅
 - RC-DE-11 — Instrument Save Options ✅
 - RC-DE-12 — Data Resolution Workflow ✅
+- RC-DE-13 — Record Administration: Choose Action for Record ✅ *(was ⚠️)*
 
 ### Dynamic Data Pull (RC-DDP) — new domain
 
@@ -264,4 +258,4 @@ RC-DE-01 was previously the only DE article. The domain now covers:
 - RC-PROJ-02 (ID) is used for "Project Setup Checklist."
 - RC-ALERT-03 was resolved as an alternative alert delivery topic — covered by RC-TXT-01 and RC-TXT-02.
 
-*Last updated: 2026-05-13 — RC-IMP-02 written and added to KB. Open gaps (2): RC-DE-13, RC-PLUS-02.*
+*Last updated: 2026-05-16 — RC-DE-13 written and added to KB. Open gaps (1): RC-PLUS-02.*

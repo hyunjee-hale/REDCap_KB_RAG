@@ -564,6 +564,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-02 — Export Records API
 - RC-API-03 — Import Records API
 - RC-API-05 — Rename Record API
+- RC-DE-13 — Record Administration: Choose Action for Record
 
 ---
 
@@ -581,6 +582,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 **Inbound links (referenced by):**
 - RC-API-01 — REDCap API
 - RC-DE-01 — Record Creation & the Record Home Page
+- RC-DE-13 — Record Administration: Choose Action for Record
 
 ---
 
@@ -2125,6 +2127,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-MOB-01 — REDCap Mobile App
 - RC-USER-03 — User Rights: Configuring User Privileges
 - RC-USER-04 — User Rights: User Management
+- RC-DE-13 — Record Administration: Choose Action for Record
 
 ---
 
@@ -2138,6 +2141,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-05 — Rename Record API
 - RC-DE-02 — Basic Data Entry
 - RC-DE-03 — Longitudinal Projects & DAGs
+- RC-DE-13 — Record Administration: Choose Action for Record
 
 **Inbound links (referenced by):**
 - RC-API-05 — Rename Record API
@@ -2382,6 +2386,26 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-LOCK-01 — Record Locking & E-Signatures
 - RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
 - RC-NAV-UI-02 — Project Menu Reference
+---
+
+### RC-DE-13 — Record Administration: Choose Action for Record
+
+**Prerequisites:** RC-DE-01 — Record Creation & the Record Home Page
+
+**Outbound links:**
+- RC-API-04 — Delete Records API
+- RC-API-05 — Rename Record API
+- RC-DAG-01 — Data Access Groups
+- RC-DE-01 — Record Creation & the Record Home Page
+- RC-DE-02 — Basic Data Entry
+- RC-DE-04 — Editing Data & Audit Trail
+- RC-LOCK-01 — Record Locking & E-Signatures
+- RC-LOG-01 — Logging — Project Audit Trail
+- RC-USER-03 — User Rights: Configuring User Privileges
+
+**Inbound links (referenced by):**
+- RC-DE-01 — Record Creation & the Record Home Page
+
 ---
 
 ### RC-DDE-01 — Double Data Entry
@@ -3209,7 +3233,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DE-04 — Editing Data & Audit Trail
 - RC-DE-08 — Field Comment Log
 - RC-DE-12 — Data Resolution Workflow
-- RC-DE-13 — Record Administration ⚠️
+- RC-DE-13 — Record Administration: Choose Action for Record
 - RC-EXPRT-01 — Data Export: Overview & Workflow
 - RC-LOCK-01 — Record Locking & E-Signatures
 - RC-PROJ-04 — Project Setup: Additional Customizations
@@ -3218,6 +3242,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 **Inbound links (referenced by):**
 - RC-API-39 — Export Logging API
 - RC-DE-04 — Editing Data & Audit Trail
+- RC-DE-13 — Record Administration: Choose Action for Record
 - RC-LOCK-01 — Record Locking & E-Signatures
 
 ---
@@ -5358,6 +5383,7 @@ All previously identified naming inconsistencies have been resolved as of 2026-0
 - RC-USER-03 — User Rights: Configuring User Privileges
 
 **Inbound links (referenced by):**
+- RC-DE-13 — Record Administration: Choose Action for Record
 - RC-LOG-01 — Logging — Project Audit Trail
 
 ---

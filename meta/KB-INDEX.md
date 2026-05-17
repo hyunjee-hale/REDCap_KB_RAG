@@ -143,6 +143,7 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-DE-10 | Longitudinal & Repeated Data Entry | RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md |
 | RC-DE-11 | Instrument Save Options | RC-DE-11_Instrument-Save-Options.md |
 | RC-DE-12 | Data Resolution Workflow | RC-DE-12_Data-Resolution-Workflow.md |
+| RC-DE-13 | Record Administration: Choose Action for Record | RC-DE-13_Record-Administration-Choose-Action-for-Record.md |
 | RC-DDE-01 | Double Data Entry | RC-DDE-01_Double-Data-Entry.md |
 | RC-DQ-01 | Data Quality Module | RC-DQ-01_Data-Quality-Module.md |
 | RC-FDL-01 | Form Display Logic | RC-FDL-01_Form-Display-Logic.md |
