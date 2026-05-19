@@ -69,7 +69,7 @@ replaced in the UI by a Randomize button.
 | --- | --- |
 | **Record not yet randomized** | A Randomize button appears where the randomization variable field would be. |
 | **User clicks Randomize button** | A confirmation popup appears showing the record and group assignment that will be made. Click the Randomize button in the popup to confirm. |
-| **Record successfully randomized (open)** | The randomization variable shows the assigned group label (e.g., \'Intervention\'). |
+| **Record successfully randomized (open)** | The randomization variable shows the assigned group label (e.g., 'Intervention'). |
 | **Record successfully randomized (blinded)** | The randomization variable shows an opaque code. The study team cannot determine the group from this value. |
 | **Stratification or DAG values missing** | REDCap displays a prompt listing the missing values before allowing randomization. Complete those fields and retry. |
 
@@ -151,12 +151,12 @@ See Section 7 for administrator actions.
 
 ## 5.3 Monitoring best practices
 
-- **Check \'Not Used\' counts regularly:** If a group is approaching
+- **Check 'Not Used' counts regularly:** If a group is approaching
     zero remaining slots, contact your REDCap administrator to append
     more allocations before they run out.
 
 - **Use the green checkmark as an alert:** A checkmark means that
-    group\'s allocations are exhausted. New records matching that
+    group's allocations are exhausted. New records matching that
     combination will not be randomizable until more slots are added.
 
 - **Record IDs are clickable:** Use the dashboard to navigate directly
@@ -191,7 +191,7 @@ the randomization setup should be re-evaluated.
 
 > **⚠ Warning:** *All administrator allocation actions require
 > specifying a reason, which is logged. They also require typing
-> \'confirm\' to execute. This is intentional — these actions can
+> 'confirm' to execute. This is intentional — these actions can
 > affect study data integrity.*
 
 ## 7.1 Appending allocations to a production table
@@ -200,8 +200,8 @@ The most common administrator action. Required when a project runs out
 of allocation slots in production.
 
 - **Location:** Applications → Randomization → Setup icon for the
-    model → Step 3 (Production allocation table) → \'Upload more
-    allocations (Administrators only)\' link
+    model → Step 3 (Production allocation table) → 'Upload more
+    allocations (Administrators only)' link
 
 - **How it works:** Upload a new allocation table file. It appends to
     the existing table rather than replacing it. For example: 100
@@ -220,11 +220,11 @@ up to four action icons; assigned slots have one.
 | **Action** | **What it does**                                                                                                                                                                                                                                         **Available for** |
 | --- | --- |
 | **Remove randomization** | Removes the randomization assignment from a record, freeing that allocation slot for reassignment to another record. The record returns to an un-randomized state.                                                                                       *Assigned slots only* |
-| **Edit target field** | Remaps the allocation to a different cohort group. Requires: reason (logged), new value, and typing \'confirm\'.                                                                                                                                         *Unassigned slots only* |
-| **Edit target alternate** | Remaps the randomization group (alternate number). Mostly relevant for blinded randomizations — affects the \[rand-number\] smart variable but not direct randomization functionality. Requires: reason (logged), new value, and typing \'confirm\'.   *Unassigned slots only* |
-| **Manual randomization** | Manually assigns a specific record to this allocation slot. The record must not already be randomized. Requires: reason (logged), valid record ID, and typing \'confirm\'.                                                                               *Unassigned slots only* |
-| **Make sequence unavailable** | Removes the allocation slot entirely from the pool — it will not be used for any future randomizations. Displayed with a stop symbol. Requires: reason (logged) and typing \'confirm\'.                                                                *Unassigned slots only* |
-| **Restore availability** | Reverses a \'Make sequence unavailable\' action. Only available on slots previously made unavailable. Requires: reason (logged) and typing \'confirm\'.                                                                                                  *Unavailable slots only* |
+| **Edit target field** | Remaps the allocation to a different cohort group. Requires: reason (logged), new value, and typing 'confirm'.                                                                                                                                         *Unassigned slots only* |
+| **Edit target alternate** | Remaps the randomization group (alternate number). Mostly relevant for blinded randomizations — affects the \[rand-number\] smart variable but not direct randomization functionality. Requires: reason (logged), new value, and typing 'confirm'.   *Unassigned slots only* |
+| **Manual randomization** | Manually assigns a specific record to this allocation slot. The record must not already be randomized. Requires: reason (logged), valid record ID, and typing 'confirm'.                                                                               *Unassigned slots only* |
+| **Make sequence unavailable** | Removes the allocation slot entirely from the pool — it will not be used for any future randomizations. Displayed with a stop symbol. Requires: reason (logged) and typing 'confirm'.                                                                *Unassigned slots only* |
+| **Restore availability** | Reverses a 'Make sequence unavailable' action. Only available on slots previously made unavailable. Requires: reason (logged) and typing 'confirm'.                                                                                                  *Unavailable slots only* |
 
 ## 7.3 Redoing a randomization model in production
 
@@ -234,7 +234,7 @@ are limited and all have significant consequences.
 
 > **⚠ Warning:** *Moving a production project back to Development status
 > to erase a randomization model is disabled — even for administrators
-> — through the standard \'Other Functionality\' interface. The only
+> — through the standard 'Other Functionality' interface. The only
 > paths forward involve backend database manipulation or cloning the
 > project and starting over. Neither is straightforward. This reinforces
 > why thorough testing before production is essential.*
@@ -263,8 +263,8 @@ are limited and all have significant consequences.
     cannot be randomized. Study operations are disrupted while an
     administrator locates and appends more allocations.
 
-- **Prevention:** Establish a regular cadence for checking the \'Not
-    Used\' counts in the dashboard. Build an alert or report that flags
+- **Prevention:** Establish a regular cadence for checking the 'Not
+    Used' counts in the dashboard. Build an alert or report that flags
     when a group drops below a defined threshold (e.g., 20 remaining
     slots).
 

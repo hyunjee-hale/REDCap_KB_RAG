@@ -29,7 +29,7 @@ configuring access for project team members.
 
 **Data Viewing Rights**
 
-Controls what a user can see within REDCap\'s data entry and reporting
+Controls what a user can see within REDCap's data entry and reporting
 interface. A user may have the right to view data on screen without
 being permitted to export it. Data Viewing Rights and Data Export Rights
 are configured independently.
@@ -83,7 +83,7 @@ determines what the export dialog shows and what options are available.
 
 # 4. How Rights Affect the Export Dialog
 
-The export dialog adapts based on the user\'s rights. Users with
+The export dialog adapts based on the user's rights. Users with
 restricted rights see fewer options, and some options become mandatory
 rather than optional.
 

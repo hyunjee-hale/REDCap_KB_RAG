@@ -16,7 +16,7 @@
 
 # 1. Overview
 
-This article describes the types of reports available in REDCap\'s Data
+This article describes the types of reports available in REDCap's Data
 Exports, Reports, and Stats application — what each one exports and
 when to use it — as well as the additional bulk export options
 available under the Other Export Options tab. Report type determines
@@ -76,7 +76,7 @@ export format.
 
 - Use when you need a complete snapshot of all project data.
 
-- User\'s Data Export Rights still apply — instruments where the
+- User's Data Export Rights still apply — instruments where the
     user has No Access are excluded.
 
 - DAG membership still limits which records are included.
@@ -163,7 +163,7 @@ used but serve specific purposes.
 # 7. Common Mistakes & Gotchas
 
 **Using All Data when only a subset is needed.** Exporting the full
-dataset when only one instrument\'s data is required shares more data
+dataset when only one instrument's data is required shares more data
 than necessary and produces larger files. Use Selected Instruments or a
 custom report to limit the export scope.
 

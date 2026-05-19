@@ -17,7 +17,7 @@
 
 # 1. Overview
 
-The Data Dictionary is REDCap\'s spreadsheet-based instrument design
+The Data Dictionary is REDCap's spreadsheet-based instrument design
 tool. It allows you to define or modify every variable and instrument in
 a project by editing a CSV file and uploading it back into REDCap. The
 upload overwrites the existing instrument configuration. This article
@@ -62,7 +62,7 @@ project.
 **Instrument Name (Form Name)**
 
 The internal identifier for an instrument. In the Data Dictionary, each
-row\'s instrument assignment is defined by the form\_name column. Rows
+row's instrument assignment is defined by the form\_name column. Rows
 with the same form\_name belong to the same instrument. Changing the
 form\_name for a group of variables in the Data Dictionary moves them to
 a different instrument — this is how instrument splitting and merging
@@ -137,7 +137,7 @@ works.
 
 - Make your edits on a copy, not on the only copy.
 
-- Review REDCap\'s validation output before confirming the upload. The
+- Review REDCap's validation output before confirming the upload. The
     summary tells you exactly what will be added, changed, or deleted.
 
 ## 5.2 Recovering from a Bad Upload
@@ -188,9 +188,9 @@ without first exporting that data.
 
 **Q: Can I use the Data Dictionary to split one instrument into two?**
 
-**A:** Yes. This is one of the Data Dictionary\'s key capabilities. Change
+**A:** Yes. This is one of the Data Dictionary's key capabilities. Change
 the form\_name value for the variables you want to move to a new
-instrument. If the new form\_name doesn\'t yet exist, REDCap creates it.
+instrument. If the new form\_name doesn't yet exist, REDCap creates it.
 If it matches an existing instrument, the variables are merged into it.
 
 **Q: I uploaded a Data Dictionary and now some variables are missing.

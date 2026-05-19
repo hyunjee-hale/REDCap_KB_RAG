@@ -16,7 +16,7 @@
 
 # 1. Overview
 
-This article describes the seven export formats available in REDCap\'s
+This article describes the seven export formats available in REDCap's
 Data Exports, Reports, and Stats application. It explains what each
 format produces, how many files are generated, and when to use each one.
 Selecting the wrong format — or failing to download all generated
@@ -30,14 +30,14 @@ files — is one of the most common export mistakes.
 
 The coded internal values REDCap stores for structured field types such
 as radio buttons, dropdowns, and checkboxes. For example, a Yes/No field
-stores \'1\' for Yes and \'0\' for No. Raw data exports use these coded
+stores '1' for Yes and '0' for No. Raw data exports use these coded
 values. Raw data exports can be re-imported into REDCap.
 
 **Labels**
 
 The human-readable display text associated with each option in a
-structured field. For example, a checkbox field exports \'Checked\' or
-\'Unchecked\' instead of \'1\' or \'0\'. Label exports are easier to
+structured field. For example, a checkbox field exports 'Checked' or
+'Unchecked' instead of '1' or '0'. Label exports are easier to
 read but are not suitable for re-import into REDCap.
 
 **Syntax File**
@@ -128,7 +128,7 @@ data file produces an unlabeled dataset. Always download every file
 listed in the export dialog and read the accompanying instructions.
 
 **Using CSV labels for re-import.** The CSV labels format is not
-compatible with REDCap\'s Data Import Tool. If you plan to modify data
+compatible with REDCap's Data Import Tool. If you plan to modify data
 and re-import it, always use CSV / Excel (raw data).
 
 **Choosing a format without asking the analyst.** Exporting in a format

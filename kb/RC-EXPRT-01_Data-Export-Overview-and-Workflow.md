@@ -67,7 +67,7 @@ the File Repository user right.
 
 Optional settings applied during export that remove or transform
 potentially identifying information. Available options vary based on the
-user\'s Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details.
+user's Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details.
 
 ---
 

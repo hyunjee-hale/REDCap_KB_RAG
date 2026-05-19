@@ -38,10 +38,10 @@ A complete, timestamped record of every data change made in a REDCap
 project. The audit trail records who changed what, when, and from what
 value to what value. It cannot be edited or deleted.
 
-**Field History (\'H\' button)**
+**Field History ('H' button)**
 
 An inline audit view available on individual fields during data entry.
-Clicking the small \'H\' icon next to a field shows a popup with the
+Clicking the small 'H' icon next to a field shows a popup with the
 complete change history for that specific field in that record.
 
 **Logging Application**
@@ -84,30 +84,30 @@ first time:
 - Every field value change is recorded, including the previous value
     and the new value.
 
-- The timestamp uses the REDCap server\'s local time (not the user\'s
+- The timestamp uses the REDCap server's local time (not the user's
     browser time).
 
 - The username of the user who made the change is always recorded.
 
-- Form status changes (e.g., setting a form to \'Complete\') are also
+- Form status changes (e.g., setting a form to 'Complete') are also
     logged.
 
 ---
 
 # 4. Accessing the Audit Trail
 
-## 4.1 Field-Level History: the \'H\' Button
+## 4.1 Field-Level History: the 'H' Button
 
-- When viewing or editing an instrument, look for a small grey \'H\'
+- When viewing or editing an instrument, look for a small grey 'H'
     icon next to each field label.
 
-- Click the \'H\' button to open a popup showing every saved value for
+- Click the 'H' button to open a popup showing every saved value for
     that field in that record, in chronological order.
 
 - Each entry in the history shows: the value, the user who saved it,
     and the timestamp.
 
-- The \'H\' button is always visible during data entry, regardless of
+- The 'H' button is always visible during data entry, regardless of
     whether any edits have been made.
 
 ## 4.2 Project-Level Logging Application
@@ -141,7 +141,7 @@ deliberate action that requires an explicit user right.
 - Navigate to the survey-completed instrument. It will display as
     read-only if survey edit rights are not enabled for your account.
 
-- If you have survey edit rights, an \'Edit survey response\' button
+- If you have survey edit rights, an 'Edit survey response' button
     appears at the top of the form.
 
 - If you do not see the button and need to edit the data, contact your
@@ -152,7 +152,7 @@ deliberate action that requires an explicit user right.
 
 - Navigate to the survey-completed instrument.
 
-- Click the \'Edit survey response\' button at the top of the form.
+- Click the 'Edit survey response' button at the top of the form.
 
 - Make your changes to the field values.
 
@@ -172,7 +172,7 @@ it?**
 
 **A:** Yes. REDCap logs every change automatically. The old value, new
 value, user, and timestamp are all preserved in the audit trail. Use the
-\'H\' button next to any field or the Logging application to view the
+'H' button next to any field or the Logging application to view the
 full history.
 
 **Q: Can I undo a change after saving?**
@@ -184,11 +184,11 @@ trail will record the revert as a separate edit.
 **Q: A form was completed as a survey and now shows as read-only. How do
 I edit it?**
 
-**A:** You need the \'Survey Edit Responses\' user right. If you have it, an
-\'Edit survey response\' button appears at the top of the form. If you
+**A:** You need the 'Survey Edit Responses' user right. If you have it, an
+'Edit survey response' button appears at the top of the form. If you
 do not have this right, contact your project administrator.
 
-**Q: I can see the \'H\' button but the history only shows one entry. Is
+**Q: I can see the 'H' button but the history only shows one entry. Is
 that normal?**
 
 **A:** Yes. If the field has only been saved once, the history will show
@@ -205,7 +205,7 @@ record requires administrative rights.
 **Q: Who can see the audit trail?**
 
 **A:** Users with the Logging user right can access the full project-level
-audit trail via the Logging application. The field-level \'H\' button is
+audit trail via the Logging application. The field-level 'H' button is
 visible to all users who can open the instrument, regardless of Logging
 rights.
 
@@ -223,14 +223,14 @@ rights.
 
 - Not documenting survey response edits: editing a survey-submitted
     response is an unusual action that may require documentation in your
-    study\'s data management records. Check your protocol SOPs before
+    study's data management records. Check your protocol SOPs before
     editing.
 
-- Looking for the \'H\' button and not finding it: the \'H\' button is
+- Looking for the 'H' button and not finding it: the 'H' button is
     only visible when the instrument is open in edit or view mode. It
     does not appear on the Record Home Page or Record Status Dashboard.
 
-- Confusing field history with the Logging application: the \'H\'
+- Confusing field history with the Logging application: the 'H'
     button shows history for one specific field in one specific record.
     The Logging application shows all changes across all fields and
     records in the project.

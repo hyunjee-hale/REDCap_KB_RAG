@@ -16,7 +16,7 @@
 
 # 1. Overview
 
-The Online Designer is REDCap\'s guided, point-and-click instrument
+The Online Designer is REDCap's guided, point-and-click instrument
 building tool. It allows users to create instruments and variables one
 at a time through an interactive interface, with built-in validation
 that prevents common configuration errors. This article explains what
@@ -52,9 +52,9 @@ cannot be rolled back through the interface.
 
 **Guardrails**
 
-The Online Designer\'s built-in validation checks. They catch
+The Online Designer's built-in validation checks. They catch
 configuration errors — for example, branching logic that references a
-variable that doesn\'t exist — before the change is saved. The Online
+variable that doesn't exist — before the change is saved. The Online
 Designer does not validate whether your instrument design is
 scientifically appropriate for your study goals; that judgment belongs
 to the research team.
@@ -97,7 +97,7 @@ to the research team.
 
 - Add a new variable (field) to an instrument.
 
-- Edit an existing variable\'s field type, label, choices, validation,
+- Edit an existing variable's field type, label, choices, validation,
     branching logic, and other attributes.
 
 - Reorder variables within an instrument by dragging.
@@ -174,19 +174,19 @@ Consider switching to the Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-
 
 - You need to split, merge, or restructure instruments.
 
-- You are comfortable with REDCap\'s variable definition schema and
+- You are comfortable with REDCap's variable definition schema and
     want faster bulk editing.
 
 ---
 
 # 7. Common Questions
 
-**Q: I saved a change in the Online Designer but it isn\'t showing up in
+**Q: I saved a change in the Online Designer but it isn't showing up in
 my data entry forms. Why?**
 
 **A:** Your project is in Production mode. Changes do not take effect until
 they pass through the change queue review process. Depending on your
-institution\'s policy, approval may be automatic or may require a REDCap
+institution's policy, approval may be automatic or may require a REDCap
 administrator. Check the pending change queue to confirm your change was
 submitted.
 
@@ -205,9 +205,9 @@ existing variables — these are the guardrails. It does not verify
 whether the logic achieves your intended study behavior. Test branching
 logic thoroughly in Development mode before collecting real data.
 
-**Q: Can I reorder instruments after they\'ve been created?**
+**Q: Can I reorder instruments after they've been created?**
 
-**A:** Yes. The Online Designer\'s instrument list supports drag-and-drop
+**A:** Yes. The Online Designer's instrument list supports drag-and-drop
 reordering. In longitudinal projects, instrument order also affects how
 they appear in the Record Home Page and Record Status Dashboard.
 
@@ -234,7 +234,7 @@ significant change is critical.
 # 8. Common Mistakes & Gotchas
 
 - Expecting changes in Production to appear immediately: changes in
-    Production mode go through a review queue. If a change isn\'t
+    Production mode go through a review queue. If a change isn't
     visible after saving, check the pending change queue rather than
     saving it again.
 

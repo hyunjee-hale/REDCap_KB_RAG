@@ -42,8 +42,8 @@ names) are how REDCap identifies data internally and in exports.
 **Form Status**
 
 A mandatory dropdown field at the bottom of every REDCap instrument,
-labeled \'Complete?\'. Its value determines the color of the
-instrument\'s status dot. Setting form status is optional for the study
+labeled 'Complete?'. Its value determines the color of the
+instrument's status dot. Setting form status is optional for the study
 team but strongly recommended for tracking instrument completion.
 
 **Required Field**
@@ -139,8 +139,8 @@ instrument (or in some configurations, other instruments).
 - Fields revealed by branching logic appear dynamically as you enter
     data — no page reload required.
 
-- **Example:** a \'Are you pregnant?\' question may be hidden when
-    \'Male\' is selected in a Sex field. The field reappears if the
+- **Example:** a 'Are you pregnant?' question may be hidden when
+    'Male' is selected in a Sex field. The field reappears if the
     answer changes.
 
 - You cannot manually override branching logic during data entry. If a
@@ -156,7 +156,7 @@ instrument (or in some configurations, other instruments).
 # 6. Form Status
 
 Every instrument has a Form Status dropdown at the bottom, labeled
-\'Complete?\'. This field controls the color of the instrument\'s status
+'Complete?'. This field controls the color of the instrument's status
 dot in the Record Home Page and Record Status Dashboard.
 
 | **Form Status Value** | **Dot Color** | **Meaning & Who Sets It** |
@@ -209,7 +209,7 @@ without filling it in. Can I?**
 
 **A:** Yes. The required field warning is a soft prompt. You can dismiss the
 warning and save the form anyway. REDCap will not block the save.
-However, your study\'s data quality rules may flag this for follow-up.
+However, your study's data quality rules may flag this for follow-up.
 
 **Q: A field I expected to see on the form is not there. What
 happened?**
@@ -222,21 +222,21 @@ hidden field will appear once the branching condition is met.
 
 **A:** Grey means no data has been saved to that instrument at all. Red
 means data has been saved but the Form Status dropdown is still set to
-\'Incomplete\' (the default). A single saved value is enough to turn a
+'Incomplete' (the default). A single saved value is enough to turn a
 grey dot red.
 
-**Q: Do I have to set the form status to \'Complete\' after every
+**Q: Do I have to set the form status to 'Complete' after every
 entry?**
 
 **A:** No. It is optional. However, using yellow and green statuses makes it
 much easier to track which records have been reviewed versus just
 entered, especially in large projects with many instruments.
 
-**Q: What does \'Save and Go to Next Record\' do if I am on the last
+**Q: What does 'Save and Go to Next Record' do if I am on the last
 record?**
 
 **A:** If there is no next record, REDCap will not navigate further. It
-behaves like \'Save and Stay\' and you remain on the current form.
+behaves like 'Save and Stay' and you remain on the current form.
 
 **Q: Can I enter data in checkboxes by selecting multiple options?**
 
@@ -273,14 +273,14 @@ back), it starts empty.
     saved but status not updated. Both are coded as 0 in the dataset but
     have different visual meanings.
 
-- Selecting \'Save and Exit Record\' when you meant \'Save and Exit
-    Form\': these take you to different places. \'Save and Exit Form\'
-    returns to the Record Home Page; \'Save and Exit Record\' returns to
+- Selecting 'Save and Exit Record' when you meant 'Save and Exit
+    Form': these take you to different places. 'Save and Exit Form'
+    returns to the Record Home Page; 'Save and Exit Record' returns to
     the Add/Edit Records page.
 
 - Assuming a hidden field is a bug: if a field is not visible, check
     branching logic before reporting a problem. It may be intentionally
-    hidden based on another field\'s value.
+    hidden based on another field's value.
 
 ## API Access
 

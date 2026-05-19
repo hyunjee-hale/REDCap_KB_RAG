@@ -160,10 +160,10 @@ saved for the first time. However, once a record ID is assigned and data
 has been entered, changing it requires administrative intervention. For
 most projects, the auto-assigned ID is the recommended approach.
 
-**Q: What happens if I click \'Add new record\' by accident?**
+**Q: What happens if I click 'Add new record' by accident?**
 
 **A:** REDCap creates a record and assigns it a Record ID as soon as you
-save any data. If you clicked \'Add new record\' but have not saved
+save any data. If you clicked 'Add new record' but have not saved
 anything yet, you can navigate away without creating a record. If data
 was already saved, contact your project administrator to delete the test
 record.
@@ -208,7 +208,7 @@ Page entirely.
     field value. Use Data Search when you know a value but not the
     Record ID.
 
-- Creating duplicate records by accident: if \'Add new record\' is
+- Creating duplicate records by accident: if 'Add new record' is
     clicked more than once, multiple records are created. Check whether
     a record already exists via Data Search before creating a new one.
 

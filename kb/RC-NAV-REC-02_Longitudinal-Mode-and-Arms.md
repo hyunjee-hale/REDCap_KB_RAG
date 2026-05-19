@@ -16,7 +16,7 @@
 
 # 1. Overview
 
-This article explains REDCap\'s Longitudinal mode and the concept of
+This article explains REDCap's Longitudinal mode and the concept of
 Arms — two features that allow data collection across multiple
 timepoints and participant cohorts. It describes how these features
 affect record navigation.
@@ -35,7 +35,7 @@ assigns instruments to each event.
 **Event**
 
 A named timepoint within a longitudinal project. Each event can have any
-subset of the project\'s instruments assigned to it. When viewing a
+subset of the project's instruments assigned to it. When viewing a
 record, each event appears as a separate column on the Record Home Page.
 
 **Arm**
@@ -108,7 +108,7 @@ intervention group vs. placebo group).
 
 **Q: What is the difference between an event and an arm?**
 
-**A:** An event is a single timepoint (e.g., \'Baseline visit\'). An arm is
+**A:** An event is a single timepoint (e.g., 'Baseline visit'). An arm is
 a collection of events that defines the overall study timeline for a
 particular cohort. Multiple arms let you define different timelines for
 different groups of participants.
@@ -140,7 +140,7 @@ Records only appear in the arm they belong to.
 
 - Expecting all instruments in every event: instruments are assigned
     to events individually. An instrument that is not assigned to a
-    given event will not appear in that event\'s column.
+    given event will not appear in that event's column.
 
 - Confusing events with arms: events are timepoints within a study
     timeline; arms are parallel timelines for different cohorts. These

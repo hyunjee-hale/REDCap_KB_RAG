@@ -133,8 +133,8 @@ if they do not apply to your project design.
 ```
 | **5** | **Confirm user rights — Part 1**                          |
 |       |                                                             |
-|       | *Verify you have both \'Project Design and Setup\' AND      |
-|       | \'User Rights\' management rights. Both are required.       |
+|       | *Verify you have both 'Project Design and Setup' AND      |
+|       | 'User Rights' management rights. Both are required.       |
 |       | Obtain them before proceeding.*                             |
 ```
 **6** | **Enable the randomization module**                        
@@ -162,8 +162,8 @@ uncertainty about the concepts below.
 ```
 | **8a** | **Open the randomization setup**                           |
 |        |                                                            |
-|        | *Go to Applications → Randomization. Click \'+ Add new     |
-|        | randomization model\'.*                                    |
+|        | *Go to Applications → Randomization. Click '+ Add new     |
+|        | randomization model'.*                                    |
 ```
 **8b** | **Configure stratification**                              
        |                                                           
@@ -175,8 +175,8 @@ uncertainty about the concepts below.
 ```
 | **8c** | **Configure multi-site / DAGs**                            |
 |        |                                                            |
-|        | *If randomizing by site using DAGs, check \'Use Data       |
-|        | Access Groups to designate each group/site\'. If using a   |
+|        | *If randomizing by site using DAGs, check 'Use Data       |
+|        | Access Groups to designate each group/site'. If using a   |
 |        | dedicated variable for site, select it from the dropdown   |
 |        | (and event if longitudinal). If not using multi-site,      |
 |        | skip.*                                                     |
@@ -192,9 +192,9 @@ uncertainty about the concepts below.
 ```
 | **8e** | **Save the model**                                         |
 |        |                                                            |
-|        | *Click \'Save randomization model\'. The model is now      |
-|        | locked. To make structural changes, you must use \'Erase   |
-|        | randomization model\' and rebuild from scratch --- which   |
+|        | *Click 'Save randomization model'. The model is now      |
+|        | locked. To make structural changes, you must use 'Erase   |
+|        | randomization model' and rebuild from scratch --- which   |
 |        | also erases all randomization data in that variable.*      |
 ```
 > **⚠ Warning:** *'Erase randomization model' is available in
@@ -207,7 +207,7 @@ uncertainty about the concepts below.
 | **9**  | **Download the allocation table template**                 |
 |        |                                                            |
 |        | *In the randomization setup page, download the template    |
-|        | file. It is dynamically generated based on your model\'s   |
+|        | file. It is dynamically generated based on your model's   |
 |        | settings (open vs. blinded, stratification, etc.) and      |
 |        | includes instructions. Share this template with your       |
 |        | statistician if they are generating the table.*            |
@@ -279,7 +279,7 @@ feature — verify your REDCap version supports it.
 **Skipping pre-flight and going straight to setup**
 
 - **What happens:** The setup wizard asks for stratification
-    variables, event assignments, or DAG configuration that hasn\'t been
+    variables, event assignments, or DAG configuration that hasn't been
     created yet. Setup stalls or is completed incorrectly, requiring a
     model rebuild.
 
@@ -307,7 +307,7 @@ feature — verify your REDCap version supports it.
 - **Prevention:** Never collect real data in Development mode. Move to
     Production before any real participant randomization occurs.
 
-**Not testing the \'insufficient rights\' experience**
+**Not testing the 'insufficient rights' experience**
 
 - **What happens:** Users without Randomize rights can still see or
     interact with the randomization variable, or the field behavior is
@@ -336,7 +336,7 @@ feature — verify your REDCap version supports it.
     maintain.
 
 - **Prevention:** Use short, descriptive variable names (e.g.,
-    \'rand\_group\'). Establish a naming convention before creating any
+    'rand\_group'). Establish a naming convention before creating any
     randomization-related variables.
 
 ---

@@ -43,12 +43,12 @@ must always compare against raw values, not display labels.
 
 A structured field type that stores exactly one selected value. Radio
 buttons, dropdowns, Yes/No, True/False, and sliders are all
-single-choice fields. The selected option\'s raw value is stored as a
+single-choice fields. The selected option's raw value is stored as a
 single variable.
 
 **Multiple-Choice Field (Checkbox)**
 
-REDCap\'s checkbox field type, which allows multiple options to be
+REDCap's checkbox field type, which allows multiple options to be
 selected simultaneously. Unlike single-choice fields, checkboxes store
 each option as a separate binary sub-variable rather than as a single
 value.
@@ -65,7 +65,7 @@ Each sub-variable has a value of 1 (checked) or 0 (unchecked).
 # 3. Raw Values --- What They Are and How to Find Them
 
 Every option in a radio button, dropdown, or checkbox field is defined
-using a \'raw value, label\' format. The raw value is what REDCap stores
+using a 'raw value, label' format. The raw value is what REDCap stores
 in the database and what you must use in logic statements.
 
 ## 3.1 How REDCap Defines Options
@@ -94,7 +94,7 @@ field can share a raw value.
     field in human-readable format, including raw values. This is the
     fastest reference when writing logic.
 
-- **Online Designer:** Open the field\'s edit dialog. The choices
+- **Online Designer:** Open the field's edit dialog. The choices
     section shows raw values paired with labels.
 
 - **Data Dictionary:** The Choices, Calculations, OR Slider Labels
@@ -233,49 +233,49 @@ never shown)
 
 # 6. Common Questions
 
-**Q: How do I find the raw values for a field\'s options?**
+**Q: How do I find the raw values for a field's options?**
 
 **A:** Open the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) and navigate to the field. The
 Codebook displays all options in raw value, label format. Alternatively,
-open the field in the Online Designer\'s edit dialog and check the
+open the field in the Online Designer's edit dialog and check the
 Choices section.
 
 **Q: Does it matter whether I quote raw values in logic? For example,
-\[gender\]=\'1\' vs \[gender\]=1?**
+\[gender\]='1' vs \[gender\]=1?**
 
 **A:** For numeric raw values, REDCap accepts both quoted and unquoted
-forms. \[gender\]=\'1\' and \[gender\]=1 are functionally equivalent.
+forms. \[gender\]='1' and \[gender\]=1 are functionally equivalent.
 Using single quotes is recommended for consistency, especially when the
 Data Dictionary may be edited in spreadsheet software.
 
 **Q: Can I check whether none of the checkbox options are checked?**
 
 **A:** Not directly with a single expression. You must check each option
-individually: \[field(1)\]=\'0\' and \[field(2)\]=\'0\' and
-\[field(3)\]=\'0\'. This evaluates to true only when all listed options
+individually: \[field(1)\]='0' and \[field(2)\]='0' and
+\[field(3)\]='0'. This evaluates to true only when all listed options
 are unchecked.
 
-**Q: A radio button option has the label \'Yes\' and raw value \'1\'.
-Should I write \[field\]=\'Yes\' or \[field\]=\'1\'?**
+**Q: A radio button option has the label 'Yes' and raw value '1'.
+Should I write \[field\]='Yes' or \[field\]='1'?**
 
-**A:** Always use the raw value: \[field\]=\'1\'. Logic compares against
+**A:** Always use the raw value: \[field\]='1'. Logic compares against
 stored values, not display labels. Display labels can be changed at any
 time; raw values are permanent.
 
-**Q: Why can\'t I check whether a checkbox field has any checked options
-by writing \[field\]\<\>\'\'?**
+**Q: Why can't I check whether a checkbox field has any checked options
+by writing \[field\]\<\>''?**
 
 **A:** Unlike text fields and single-choice fields, checkbox fields do
-not have a single stored value that represents \'something is
-selected\'. Each option is a separate binary sub-variable. To check
+not have a single stored value that represents 'something is
+selected'. Each option is a separate binary sub-variable. To check
 whether any option is selected, you must OR together checks on each
-sub-variable: \[field(1)\]=\'1\' or \[field(2)\]=\'1\' etc.
+sub-variable: \[field(1)\]='1' or \[field(2)\]='1' etc.
 
 **Q: I changed a radio button field to a checkbox. Now my branching
 logic is broken. How do I fix it?**
 
 **A:** Any logic that used radio syntax (e.g., \[field\]=2) must be
-rewritten in checkbox syntax (e.g., \[field(2)\]=\'1\'). Open each
+rewritten in checkbox syntax (e.g., \[field(2)\]='1'). Open each
 affected field in the Online Designer, review the branching logic, and
 update the syntax. The Data Dictionary can speed this up if many fields
 are affected.
@@ -285,12 +285,12 @@ are affected.
 # 7. Common Mistakes & Gotchas
 
 - Using the display label instead of the raw value:
-    \[gender\]=\'Male\' will not work if \'Male\' is a label and \'1\'
+    \[gender\]='Male' will not work if 'Male' is a label and '1'
     is the raw value. Always verify raw values in the Codebook before
     writing logic.
 
 - Forgetting parentheses in checkbox syntax: \[conditions\]=1 is radio
-    button syntax. For checkboxes, it must be \[conditions(1)\]=\'1\'.
+    button syntax. For checkboxes, it must be \[conditions(1)\]='1'.
     Without the parentheses and raw value, the logic will not reference
     any checkbox sub-variable.
 
@@ -299,9 +299,9 @@ are affected.
     referencing that field. The syntax is incompatible. Plan field types
     carefully before data collection begins.
 
-- Treating checkbox \'unchecked\' as empty: an unchecked checkbox
-    option stores 0, not \'\' (empty). Testing \[field(1)\]=\'\' will
-    not behave as expected. Use \[field(1)\]=\'0\' to test for
+- Treating checkbox 'unchecked' as empty: an unchecked checkbox
+    option stores 0, not '' (empty). Testing \[field(1)\]='' will
+    not behave as expected. Use \[field(1)\]='0' to test for
     unchecked.
 
 - Assuming checkbox logic mirrors radio logic: the most common mistake

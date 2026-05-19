@@ -36,7 +36,7 @@ A logical function used inside `@CALCTEXT` and `@CALCDATE` expressions. Syntax: 
 
 **Escaping**
 
-When text inside `@CALCTEXT` contains a quote character that matches the surrounding delimiter, a backslash must precede it to prevent a parsing error — e.g., `'The user\'s guide'`.
+When text inside `@CALCTEXT` contains a quote character that matches the surrounding delimiter, a backslash must precede it to prevent a parsing error — e.g., `'The user's guide'`.
 
 ---
 
@@ -216,7 +216,7 @@ This pattern is useful in operational or administrative projects where a value m
 
 **Forgetting that 'now' and 'today' use server time.** If your REDCap server is in a different timezone from your users, `@CALCDATE(today, ...)` may produce a date that is one day off. Use `'d'` offsets cautiously when timezone alignment matters.
 
-**Not escaping apostrophes in text output.** If `@CALCTEXT` output contains an apostrophe and you used apostrophes as delimiters, escape it: `'it\'s'` or switch to double quotes: `"it's"`.
+**Not escaping apostrophes in text output.** If `@CALCTEXT` output contains an apostrophe and you used apostrophes as delimiters, escape it: `'it's'` or switch to double quotes: `"it's"`.
 
 **Cross-event source fields in @CALCDATE breaking silently after schema changes.** When `@CALCDATE` references a field from a different event using the `[event_name][field_name]` syntax — for example, `@CALCDATE([baseline_arm_1][enrol_date], 45, 'd')` — the expression depends on two identifiers that are easy to change accidentally: the event's unique name and the field's variable name. If the baseline event is renamed (which regenerates its unique event name) or the source field is renamed, every `@CALCDATE` field referencing it returns blank with no error or warning. This failure mode is especially consequential when multiple downstream fields all chain from the same source (e.g., a randomisation date used to calculate several visit windows). Before moving a project to production, document all cross-event field references in `@CALCDATE` and `@CALCTEXT` expressions. Treat the referenced event names and field names as frozen — equivalent to a primary key — and apply a branching logic audit whenever either is changed.
 

@@ -38,7 +38,7 @@ instruments.
 **Zip File (Instrument Export/Import)**
 
 A file format used to export and import individual REDCap instruments. A
-zip file captures the instrument\'s metadata — its variable
+zip file captures the instrument's metadata — its variable
 definitions, field types, labels, choices, and branching logic — but
 not any data collected using that instrument. Zip files are
 project-agnostic and can be imported into any REDCap project.
@@ -128,7 +128,7 @@ is made publicly available.
 - Zip file export and import are accessed from within the Online
     Designer — not from the Project Setup page directly.
 
-- In the Online Designer\'s instrument list, each instrument has an
+- In the Online Designer's instrument list, each instrument has an
     Export as zip option.
 
 - The import option (Upload a zip file) is also in the Online Designer
@@ -159,7 +159,7 @@ is made publicly available.
     names do not themselves cause new collisions.
 
 - Confirm the import. The new instrument appears in the Online
-    Designer\'s instrument list.
+    Designer's instrument list.
 
 - Review the imported instrument in the Online Designer to verify the
     import is correct.
@@ -195,14 +195,14 @@ The library copy is unaffected.
 
 **Q: Can I export an instrument that already has data collected in it?**
 
-**A:** Yes. The zip file export captures the instrument\'s metadata only ---
+**A:** Yes. The zip file export captures the instrument's metadata only ---
 it does not include any collected data. The export is safe to perform at
 any time regardless of data collection status.
 
 **Q: What should I do if REDCap flags a variable name collision during
 import?**
 
-**A:** Accept REDCap\'s suggested alternative name, or type your own
+**A:** Accept REDCap's suggested alternative name, or type your own
 alternative — as long as it is unique across the project. After
 import, update any branching logic or other references that used the
 original variable name, since they will now reference the renamed
@@ -229,7 +229,7 @@ license.
 
 **A:** Yes, through your local REDCap support team. The submission goes
 through a committee review process before being published. Contact your
-institution\'s REDCap administrator to start the process.
+institution's REDCap administrator to start the process.
 
 ---
 
@@ -237,7 +237,7 @@ institution\'s REDCap administrator to start the process.
 
 - Not reviewing imported instruments after import: variable name
     conflicts may have been silently renamed, or branching logic may
-    reference variables that don\'t exist in your project. Always open
+    reference variables that don't exist in your project. Always open
     the imported instrument in the Online Designer to verify it.
 
 - Expecting zip file import to replace an existing instrument: zip
@@ -248,7 +248,7 @@ institution\'s REDCap administrator to start the process.
 - Importing a fee-based library instrument without a license: some
     instruments require your institution to hold a license. Using them
     without the appropriate license may have legal implications. Check
-    the instrument\'s licensing status before importing.
+    the instrument's licensing status before importing.
 
 - Losing the zip file and assuming the project is a backup: a zip file
     contains only the instrument metadata. Collected data is not
@@ -258,7 +258,7 @@ institution\'s REDCap administrator to start the process.
 - Overlooking that zip file features are in the Online Designer, not
     the Project Setup page: users often look for import/export on the
     setup page and miss it. The feature is accessed from within the
-    Online Designer\'s instrument list.
+    Online Designer's instrument list.
 
 ---
 

@@ -175,7 +175,7 @@ not indicate an error.
 **Q: Can I change instrument statuses for many records at once?**
 
 **A:** Yes. Instrument statuses are stored in the dataset and can be set in
-bulk using REDCap\'s data import tools. Use coded values: 0 =
+bulk using REDCap's data import tools. Use coded values: 0 =
 incomplete, 1 = unverified, 2 = complete.
 
 **Q: What happens to the dot color if I enter a single data point but

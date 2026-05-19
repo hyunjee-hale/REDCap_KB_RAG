@@ -48,7 +48,7 @@ project.
 | **My Projects** | Always           Returns to the My Projects page. Same destination as clicking the logo. |
 | **Logged in as \[username\] / Log out** | Always           Displays the current username. The Log Out link ends the session completely. |
 | **REDCap Messenger** | Always\*         A HIPAA-compliant in-project messaging tool for user-to-user communication. Cannot send external email, texts, or messages to other REDCap installations. (\*Availability depends on whether your institution has enabled this feature.) |
-| **Contact REDCap Administrator** | Always           Links to your institution\'s REDCap support channel (email, website, or survey). Configured by your local admin team. See [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) for what this link opens at this installation. |
+| **Contact REDCap Administrator** | Always           Links to your institution's REDCap support channel (email, website, or survey). Configured by your local admin team. See [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) for what this link opens at this installation. |
 
 ## 3.2 Project Home and Design
 
@@ -104,7 +104,7 @@ core items.
 | **Add / Edit Records** | Always           Create new records or look up and edit existing ones. Primary data entry entry point. |
 | **Survey Distribution Tools** | Conditional      Appears when surveys are enabled in the project. Manage survey links, send email/SMS invitations, and view the invitation log. |
 | **MyCap Participant Management** | Conditional      Manage participants using the MyCap mobile app. Requires MyCap to be enabled. As of MyCap 2.0 (September 2023, REDCap v13.10.0+), longitudinal projects are supported. Consult your support team before using. |
-| **Record shortcuts** | Conditional      When a user is actively viewing a record, shortcuts to that record\'s instruments and record home page appear dynamically in this section. |
+| **Record shortcuts** | Conditional      When a user is actively viewing a record, shortcuts to that record's instruments and record home page appear dynamically in this section. |
 
 ## 3.4 Applications
 
@@ -158,7 +158,7 @@ or dashboard has been created and the user has access to it.
 
 ## 3.6 External Modules
 
-External modules are community-developed add-ons that extend REDCap\'s
+External modules are community-developed add-ons that extend REDCap's
 functionality. They must be downloaded and enabled by your local REDCap
 admin team. This menu section only appears if at least one module is
 active in the project and has a dedicated page. For the list of modules
@@ -185,9 +185,9 @@ Support and documentation resources. Always visible to all users.
 | **Menu Item** | **Visibility**   **What it does** |
 | --- | --- |
 | **Help & FAQ** | Always           Links to the Help & FAQ section on the REDCap home page. Good first stop for common questions. |
-| **Video Tutorials** | Always           Links to Vanderbilt\'s official REDCap training videos. These are generic and do not reflect institution-specific configurations. |
+| **Video Tutorials** | Always           Links to Vanderbilt's official REDCap training videos. These are generic and do not reflect institution-specific configurations. |
 | **Suggest a New Feature** | Always           Submits a feature idea to the Vanderbilt REDCap development team. Not a support channel — no direct response is given. Suggestions may influence the development roadmap over time. |
-| **Contact REDCap Administrator** | Always           Connects to your institution\'s support team. Includes project metadata automatically so the support team knows which project you are asking about. This is the correct channel for immediate assistance. |
+| **Contact REDCap Administrator** | Always           Connects to your institution's support team. Includes project metadata automatically so the support team knows which project you are asking about. This is the correct channel for immediate assistance. |
 
 ---
 
@@ -209,7 +209,7 @@ Project managers can add Project Bookmarks (custom links visible to project user
 
 # 5. Common Mistakes & Gotchas
 
-**Using \'Suggest a New Feature\' for support requests**
+**Using 'Suggest a New Feature' for support requests**
 
 - **What happens:** User submits a support request through the feature
     suggestion tool and never receives a response. The Vanderbilt team

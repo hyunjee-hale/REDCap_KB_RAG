@@ -34,7 +34,7 @@ three parts: a variable, an operator, and a comparison value. Example:
 
 **Variable Reference**
 
-A reference to a REDCap field, written as the field\'s variable name
+A reference to a REDCap field, written as the field's variable name
 enclosed in square brackets. Example: \[dob\], \[consent\_status\].
 Variables can only reference values within the same record.
 
@@ -190,7 +190,7 @@ pregnancies**
 
 
 The field is shown when \[nr\_pregnancies\] is any value other than 0
-(e.g., 1, 2, 3). Important: 0 (numeric zero) and \'\' (empty/blank) are
+(e.g., 1, 2, 3). Important: 0 (numeric zero) and '' (empty/blank) are
 not the same thing. Zero is a data value; empty means no data has been
 entered at all.
 
@@ -242,7 +242,7 @@ as equivalent to a field containing zero. They are not the same.
 **Q: Do I need to use quotes around numbers in logic statements?**
 
 **A:** Not strictly. REDCap accepts numbers with or without quotes
-(e.g., \[age\]=18 and \[age\]=\'18\' both work). However, wrapping
+(e.g., \[age\]=18 and \[age\]='18' both work). However, wrapping
 numbers in single quotes is considered best practice because it is
 consistent and avoids ambiguity.
 
@@ -251,14 +251,14 @@ consistent and avoids ambiguity.
 **A:** No. Variable names in REDCap are always lowercase (REDCap
 enforces this), and logic syntax treats them case-insensitively.
 However, text string comparison values are case-sensitive.
-\[status\]=\'Enrolled\' will not match a stored value of \'enrolled\'
+\[status\]='Enrolled' will not match a stored value of 'enrolled'
 (lowercase e).
 
 **Q: Can I reference a field from a different record in my logic?**
 
 **A:** No. Logic statements can only reference fields within the same
-record. You cannot write logic that says \'show this field if the value
-in record 2 is X\'. All variable references are scoped to the current
+record. You cannot write logic that says 'show this field if the value
+in record 2 is X'. All variable references are scoped to the current
 record.
 
 **Q: Can I use a function like datediff() as the comparison value?**
@@ -267,9 +267,9 @@ record.
 However, functions are an advanced topic outside the scope of this basic
 series. See the dedicated functions training for details.
 
-**Q: What happens if I reference a variable name that doesn\'t exist?**
+**Q: What happens if I reference a variable name that doesn't exist?**
 
-**A:** The Online Designer\'s logic validator will flag the statement as
+**A:** The Online Designer's logic validator will flag the statement as
 invalid and will not save it. In the Data Dictionary, an invalid
 variable reference will cause an upload error. Always verify variable
 names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) before writing logic.
@@ -279,12 +279,12 @@ names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) befor
 # 8. Common Mistakes & Gotchas
 
 - Comparing text without quotes: \[status\]=enrolled is invalid ---
-    enrolled must be quoted as \'enrolled\'. Unquoted non-numeric values
+    enrolled must be quoted as 'enrolled'. Unquoted non-numeric values
     cause syntax errors.
 
 - Using double quotes in Excel-edited Data Dictionary files: Excel
     corrupts double-quoted strings in CSV files. Use single quotes
-    (\'value\') instead of double quotes (\"value\") whenever the Data
+    ('value') instead of double quotes ("value") whenever the Data
     Dictionary will be edited in a spreadsheet program.
 
 - Treating empty as zero: an empty field and a field containing 0 are

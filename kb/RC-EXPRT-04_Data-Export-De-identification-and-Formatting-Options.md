@@ -17,11 +17,11 @@
 # 1. Overview
 
 This article covers the optional de-identification settings and data
-formatting options available in REDCap\'s export dialog.
+formatting options available in REDCap's export dialog.
 De-identification options allow you to remove or transform potentially
 identifying information before downloading your data. Formatting options
 control how values are represented in the exported file. The
-availability of these options depends on the user\'s Data Export Rights
+availability of these options depends on the user's Data Export Rights
 level — see [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) for details on rights levels.
 
 ---
@@ -31,7 +31,7 @@ level — see [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPR
 **De-identification**
 
 The process of removing or transforming data elements that could be used
-to identify an individual participant. REDCap\'s export
+to identify an individual participant. REDCap's export
 de-identification options target four categories: identifier-flagged
 fields, free-form text fields, the Record ID field, and date/datetime
 fields.
@@ -122,7 +122,7 @@ The defaults are appropriate for most exports.
 When certain project features are enabled, additional options appear in
 the export dialog automatically. For example, if one or more Data Access
 Groups are configured in the project, an option appears to export an
-additional variable containing each record\'s DAG assignment. These
+additional variable containing each record's DAG assignment. These
 options are contextual and only appear when relevant.
 
 ---
@@ -150,7 +150,7 @@ privacy benefit and may complicate downstream data linkage.
 incomplete.** De-identification options act on fields flagged as
 identifiers. If the project designer did not flag all sensitive
 variables during project design, those variables will still appear in
-de-identified exports. Verify the project\'s identifier flags before
+de-identified exports. Verify the project's identifier flags before
 relying on export de-identification as a privacy safeguard.
 
 **Selecting both date de-identification options.** REDCap only allows
