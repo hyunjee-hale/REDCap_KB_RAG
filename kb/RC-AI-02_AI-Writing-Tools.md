@@ -1,16 +1,16 @@
-RC-AI-02
+[RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
 
 **AI Writing Tools**
 
-| **Article ID** | RC-AI-02 |
+| **Article ID** | [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md) |
 | --- | --- |
 | **Domain** | AI Tools |
 | **Applies To** | All project types; requires AI Writing Tools to be enabled by administrator |
-| **Prerequisite** | RC-AI-01 — REDCap AI Tools: Overview & Security |
+| **Prerequisite** | [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AI-01 — REDCap AI Tools: Overview & Security; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -28,7 +28,7 @@ A text formatting toolbar embedded in various parts of REDCap that allows styled
 
 ## Wizard's Wand Icon
 
-The purple icon that opens the AI Writing Tools menu. It appears in the rich text editor toolbar when the AI Writing Tools feature is enabled. The same purple wizard's wand icon is used for AI Summarization in reports (a different feature — see RC-AI-04 — AI Summarization).
+The purple icon that opens the AI Writing Tools menu. It appears in the rich text editor toolbar when the AI Writing Tools feature is enabled. The same purple wizard's wand icon is used for AI Summarization in reports (a different feature — see [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md)).
 
 ## Finalized Text Box
 
@@ -175,7 +175,7 @@ Custom prompts support general AI requests, not just text editing. However, prom
 
 # 7. Related Articles
 
-- RC-AI-01 — REDCap AI Tools: Overview & Security
-- RC-AI-03 — AI Translations
-- RC-AI-04 — AI Summarization
-- RC-FD-02 — Online Designer
+- [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md)
+- [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
+- [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

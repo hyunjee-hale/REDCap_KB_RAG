@@ -1,16 +1,16 @@
-RC-PIPE-08
+[RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md)
 
 **Smart Variables: Survey**
 
-| **Article ID** | RC-PIPE-08 |
+| **Article ID** | [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | All project types with surveys enabled |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview; RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers; RC-PIPE-07 — Smart Variables: Form; RC-PIPE-04 — Piping in Emails and Notifications |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers; [RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails and Notifications |
 
 ---
 
@@ -86,7 +86,7 @@ In longitudinal projects, you can prepend an event name to a survey smart variab
 - `[next-event-name][survey-url:visit_survey]`
 - `[previous-event-name][survey-access-code:followup_survey]`
 
-See RC-PIPE-02 for details on event prefixes.
+See [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) for details on event prefixes.
 
 **Survey Timestamp Formats**
 
@@ -116,7 +116,7 @@ In projects with repeating instruments, you can append instance qualifiers to su
 - `[survey-time-started:followup_survey][last-instance]` — start time of the last instance
 - `[survey-duration-completed:prescreener][current-instance]` — duration of the current instance
 
-See RC-PIPE-10 for more on instance qualifiers.
+See [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) for more on instance qualifiers.
 
 **Dynamically Changing Duration in Calculated Fields**
 
@@ -161,7 +161,7 @@ If the survey has not been completed, the variable will be blank.
 
 **Q: I have a repeating survey. How do I reference a specific instance?**
 
-**A:** Append an instance qualifier: `[survey-time-started:followup_survey][last-instance]` references the start time of the last instance. See RC-PIPE-10 for all instance qualifier options.
+**A:** Append an instance qualifier: `[survey-time-started:followup_survey][last-instance]` references the start time of the last instance. See [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) for all instance qualifier options.
 
 **Q: What is the survey queue, and how do I link to it?**
 
@@ -177,7 +177,7 @@ If the survey has not been completed, the variable will be blank.
 
 **Omitting the instrument name when it is not assumed.** Inside a survey invitation, you can use `[survey-link]` or `[survey-access-code]` without specifying an instrument. However, in field labels, emails, and other contexts outside the invitation, you must include the instrument: `[survey-link:enrollment_survey]` not just `[survey-link]`. Omitting it will cause the smart variable to return blank.
 
-**Confusing survey smart variables with form smart variables.** Survey variables like `[survey-link]` are for public survey access. Form variables like `[form-link]` are for data entry forms. Using the wrong type in an email or form may not produce the intended result. See RC-PIPE-07 for form smart variables.
+**Confusing survey smart variables with form smart variables.** Survey variables like `[survey-link]` are for public survey access. Form variables like `[form-link]` are for data entry forms. Using the wrong type in an email or form may not produce the intended result. See [RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md) for form smart variables.
 
 **Not testing survey links in survey invitations.** Survey links can be long and complex. Always test survey invitations in a development environment before sending them to real participants to ensure links are valid and access codes work correctly.
 
@@ -193,8 +193,8 @@ If the survey has not been completed, the variable will be blank.
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (event prefixes and instance qualifiers)
-- RC-PIPE-07 — Smart Variables: Form (form-specific smart variables for comparison)
-- RC-PIPE-10 — Smart Variables: Repeating Instruments and Events (instance qualifiers for repeating surveys)
-- RC-PIPE-04 — Piping in Emails and Notifications (using survey smart variables in survey invitations)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (event prefixes and instance qualifiers)
+- [RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md) (form-specific smart variables for comparison)
+- [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) (instance qualifiers for repeating surveys)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails and Notifications (using survey smart variables in survey invitations)

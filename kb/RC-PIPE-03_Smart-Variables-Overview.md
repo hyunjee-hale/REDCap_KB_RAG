@@ -1,16 +1,16 @@
-RC-PIPE-03
+[RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md)
 
 **Smart Variables — Overview**
 
-| **Article ID** | RC-PIPE-03 |
+| **Article ID** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-PIPE-01 — Piping Basics, Syntax & Field Types |
+| **Prerequisite** | [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-01 — Piping Basics, Syntax & Field Types; RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers; RC-PIPE-04 — Piping in Emails & Notifications; RC-BL-01 — Branching Logic Overview & Scope |
+| **Related Topics** | [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types; [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers; [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications; [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
 
 ---
 
@@ -34,7 +34,7 @@ Smart variables return different values depending on who is viewing the form, wh
 
 **Instance Qualifier**
 
-A smart variable used as a prefix to a variable name bracket, directing REDCap to retrieve that variable's value from a specific instance within a repeated instrument or event series. Covered in detail in RC-PIPE-02.
+A smart variable used as a prefix to a variable name bracket, directing REDCap to retrieve that variable's value from a specific instance within a repeated instrument or event series. Covered in detail in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md).
 
 **:hideunderscore Modifier**
 
@@ -74,11 +74,11 @@ These smart variables enable dynamic event and arm references. While it is possi
 
 Examples: the name of the current event, the current arm number, the arm label, and relative event references such as the previous event or next event.
 
-> **Note:** Hard-coded event references (e.g., `[event_1_arm_1][variable_name]`) are covered in RC-PIPE-02. Event smart variables extend that capability by allowing references that do not require knowing the specific event name in advance.
+> **Note:** Hard-coded event references (e.g., `[event_1_arm_1][variable_name]`) are covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md). Event smart variables extend that capability by allowing references that do not require knowing the specific event name in advance.
 
 ## 3.6 Repeating Instruments and Events
 
-These smart variables serve two functions: (1) the instance qualifier smart variables covered in RC-PIPE-02 (`[first-instance]`, `[last-instance]`, `[previous-instance]`, `[next-instance]`), and (2) an additional smart variable that references a new, not-yet-created instance. The latter is useful for generating links or pre-populating default values that will apply to a new instance when it is created.
+These smart variables serve two functions: (1) the instance qualifier smart variables covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) (`[first-instance]`, `[last-instance]`, `[previous-instance]`, `[next-instance]`), and (2) an additional smart variable that references a new, not-yet-created instance. The latter is useful for generating links or pre-populating default values that will apply to a new instance when it is created.
 
 ## 3.7 Aggregate Functions, Charts, and Tables
 
@@ -188,11 +188,11 @@ The embedded help text lists every available smart variable, its syntax, its cat
 
 # 8. Related Articles
 
-- RC-PIPE-01 — Piping Basics, Syntax & Field Types (core piping syntax and field type behavior)
-- RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (instance qualifier smart variables; cross-event piping)
-- RC-PIPE-04 — Piping in Emails & Notifications (using smart variables in confirmation emails, invitations, and alerts)
-- RC-PIPE-06 — Smart Variables: Record (record-level metadata smart variables)
-- RC-PIPE-13 — Smart Variables: Randomization (smart variables for capturing randomization metadata)
-- RC-PIPE-15 — Smart Variables: Public Reports (smart variables for linking to public reports)
-- RC-PIPE-17 — Smart Variables: Miscellaneous (miscellaneous smart variables not covered in other sub-articles)
-- RC-BL-01 — Branching Logic Overview & Scope (using smart variables in logic conditions)
+- [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types (core piping syntax and field type behavior)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (instance qualifier smart variables; cross-event piping)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications (using smart variables in confirmation emails, invitations, and alerts)
+- [RC-PIPE-06 — Smart Variables: Record](RC-PIPE-06_Smart-Variables-Record.md) (record-level metadata smart variables)
+- [RC-PIPE-13 — Smart Variables: Randomization](RC-PIPE-13_Smart-Variables-Randomization.md) (smart variables for capturing randomization metadata)
+- [RC-PIPE-15 — Smart Variables: Public Reports](RC-PIPE-15_Smart-Variables-Public-Reports.md) (smart variables for linking to public reports)
+- [RC-PIPE-17 — Smart Variables: Miscellaneous](RC-PIPE-17_Smart-Variables-Miscellaneous.md) (miscellaneous smart variables not covered in other sub-articles)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (using smart variables in logic conditions)

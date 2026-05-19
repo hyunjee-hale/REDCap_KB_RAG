@@ -1,17 +1,17 @@
-RC-API-04
+[RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)
 
 **Delete Records API**
 
-| **Article ID** | RC-API-04 |
+| **Article ID** | [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-02 — Export Records; RC-API-03 — Import Records |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records |
 
 ---
 
@@ -133,7 +133,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -198,7 +198,7 @@ On error, the API returns an error message describing the problem (e.g., invalid
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-02 — Export Records (reading records)
-- RC-API-03 — Import Records (creating and updating records)
-- RC-DAG-01 — Data Access Groups (DAG membership controls which records a token can delete)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading records)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records (creating and updating records)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG membership controls which records a token can delete)

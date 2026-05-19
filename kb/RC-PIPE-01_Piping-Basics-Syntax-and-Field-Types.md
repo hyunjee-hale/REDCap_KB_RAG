@@ -1,22 +1,22 @@
-RC-PIPE-01
+[RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md)
 
 **Piping — Basics, Syntax & Field Types**
 
-| **Article ID** | RC-PIPE-01 |
+| **Article ID** | [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-02 — Online Designer |
+| **Prerequisite** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers; RC-PIPE-03 — Smart Variables Overview; RC-PIPE-04 — Piping in Emails & Notifications; RC-BL-01 — Branching Logic Overview & Scope |
+| **Related Topics** | [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers; [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications; [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
 
 ---
 
 # 1. Overview
 
-This article introduces REDCap's piping feature — what it is, how its basic syntax works, where piped values can appear in a project, and what each field type produces when piped. It is the entry point for the Piping knowledge base series and focuses on single-instrument, non-longitudinal projects. Advanced scenarios involving longitudinal projects, repeated instruments, and piping modifiers are covered in RC-PIPE-02.
+This article introduces REDCap's piping feature — what it is, how its basic syntax works, where piped values can appear in a project, and what each field type produces when piped. It is the entry point for the Piping knowledge base series and focuses on single-instrument, non-longitudinal projects. Advanced scenarios involving longitudinal projects, repeated instruments, and piping modifiers are covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md).
 
 ---
 
@@ -36,11 +36,11 @@ A variable name wrapped in square brackets — for example, `[first_name]` — p
 
 **Blank Substitution**
 
-When a pipe reference resolves to a variable that has not yet been filled in, REDCap displays six underscore characters (`______`) as a placeholder to visually indicate that no value exists. This is expected behavior, not an error. The `:hideunderscore` modifier (see RC-PIPE-02) can suppress this placeholder if needed.
+When a pipe reference resolves to a variable that has not yet been filled in, REDCap displays six underscore characters (`______`) as a placeholder to visually indicate that no value exists. This is expected behavior, not an error. The `:hideunderscore` modifier (see [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)) can suppress this placeholder if needed.
 
 **Smart Variables**
 
-A set of bracket expressions that reference system-level information rather than participant data — for example, the current user's name, the current event, or the current instance number. Smart variables use the same bracket syntax as regular piping. They are covered in RC-PIPE-03.
+A set of bracket expressions that reference system-level information rather than participant data — for example, the current user's name, the current event, or the current instance number. Smart variables use the same bracket syntax as regular piping. They are covered in [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md).
 
 ---
 
@@ -73,7 +73,7 @@ If you plan to use piping or branching logic heavily, apply these conventions wh
 - **Add situational context when relevant.** If you collect blood pressure at multiple visits, use `bp_v1`, `bp_v2` rather than generic names.
 - **Be consistent.** Once you adopt a pattern like `bp_v1`, continue it — do not switch to `bp_visit2` for subsequent variables.
 
-Consistent, readable variable names make piping references easier to write, review, and maintain. If you need a quick reference for variable names already in your project, open the Codebook under Project Home and Design (see RC-FD-05 — Codebook).
+Consistent, readable variable names make piping references easier to write, review, and maintain. If you need a quick reference for variable names already in your project, open the Codebook under Project Home and Design (see [RC-FD-05 — Codebook](RC-FD-05_Codebook.md)).
 
 ---
 
@@ -109,7 +109,7 @@ Piping works anywhere REDCap displays text. The complete list of supported locat
 
 **The @DEFAULT action tag.** A piped value can serve as the pre-filled default for a field. Note: when piping the value (not label) of a multiple choice field into @DEFAULT, the `:value` modifier must be used.
 
-**Emails and notifications.** Alert & Notification messages can contain piped values. See RC-PIPE-04 — Piping in Emails & Notifications.
+**Emails and notifications.** Alert & Notification messages can contain piped values. See [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications.
 
 > **Security note:** User data viewing privileges are **not** enforced during piping. If a field on instrument A is piped into a label on instrument B, any user who can view instrument B will see that piped value — even if they have "No Access" rights to instrument A. Keep this in mind when designing projects that use piping across instruments with different access controls.
 
@@ -140,7 +140,7 @@ Different field types produce different output when piped. The table below shows
 
 > **Note:** Matrix fields can only be piped by row. To display values from an entire matrix, pipe each row individually — there is no single bracket expression that captures a whole matrix at once.
 
-> **Note:** To pipe the raw coded value instead of the display label (for dropdowns, radio buttons, checkboxes, yes/no, true/false, and SQL fields), use the `:value` modifier. Modifiers are covered in RC-PIPE-02.
+> **Note:** To pipe the raw coded value instead of the display label (for dropdowns, radio buttons, checkboxes, yes/no, true/false, and SQL fields), use the `:value` modifier. Modifiers are covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md).
 
 ---
 
@@ -150,7 +150,7 @@ Different field types produce different output when piped. The table below shows
 
 When REDCap evaluates a pipe reference and the referenced variable has no stored value, it substitutes six underscore characters (`______`) as a visual placeholder. For example: "What is `______`'s date of birth?"
 
-This is not an error. It is expected behavior whenever the source variable is empty. If you do not want the underscore placeholder to appear, use the `:hideunderscore` modifier — covered in RC-PIPE-02 — which causes the blank value to be piped as truly empty/invisible instead.
+This is not an error. It is expected behavior whenever the source variable is empty. If you do not want the underscore placeholder to appear, use the `:hideunderscore` modifier — covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — which causes the blank value to be piped as truly empty/invisible instead.
 
 ## 6.2 Same-Instrument Timing
 
@@ -199,11 +199,11 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 **Q: Can I use piping in calculated fields?**
 
-**A:** No — calculated fields use REDCap's calculation syntax, not piping. You reference other variables in a calculation expression without brackets, using a different syntax. Branching logic and action tags use a related but distinct syntax. See RC-BL-01 — Branching Logic Overview & Scope for the shared logic syntax.
+**A:** No — calculated fields use REDCap's calculation syntax, not piping. You reference other variables in a calculation expression without brackets, using a different syntax. Branching logic and action tags use a related but distinct syntax. See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope for the shared logic syntax.
 
 **Q: What does REDCap display when I pipe a checkbox field?**
 
-**A:** By default, REDCap displays a comma-separated list of all checked option labels — for example, "Vanilla, Chocolate". If no options are checked, the display is blank. To display unchecked options or specific choices, use checkbox modifiers covered in RC-PIPE-02.
+**A:** By default, REDCap displays a comma-separated list of all checked option labels — for example, "Vanilla, Chocolate". If no options are checked, the display is blank. To display unchecked options or specific choices, use checkbox modifiers covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md).
 
 ---
 
@@ -213,7 +213,7 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 **Forgetting to save before reloading a cross-instrument reference.** If the source variable is on a different instrument, the piped value only refreshes after the source record is saved and the destination instrument is reopened. Opening the destination instrument first produces a blank.
 
-**Piping into a field that uses coded values when you need the label.** The default piped value for dropdowns, radio buttons, and similar fields is the display label, not the raw code. If your downstream logic or display needs the raw code, use the `:value` modifier (see RC-PIPE-02). Mixing up labels and codes produces confusing output.
+**Piping into a field that uses coded values when you need the label.** The default piped value for dropdowns, radio buttons, and similar fields is the display label, not the raw code. If your downstream logic or display needs the raw code, use the `:value` modifier (see [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)). Mixing up labels and codes produces confusing output.
 
 **Using piping references in field types that do not display text.** Piping syntax placed inside validation settings, field widths, or other non-text configuration fields has no effect and is ignored by REDCap.
 
@@ -223,9 +223,9 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 # 9. Related Articles
 
-- RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (cross-event piping, repeated instrument scenarios, :value and other modifiers)
-- RC-PIPE-03 — Smart Variables Overview (system-level bracket expressions)
-- RC-PIPE-04 — Piping in Emails & Notifications (confirmation emails, survey invitations, alerts)
-- RC-FD-02 — Online Designer (where piping references are configured)
-- RC-FD-05 — Codebook (quick reference for variable names when building pipe references)
-- RC-BL-01 — Branching Logic Overview & Scope (using the same bracket syntax in logic conditions)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (cross-event piping, repeated instrument scenarios, :value and other modifiers)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (system-level bracket expressions)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications (confirmation emails, survey invitations, alerts)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where piping references are configured)
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (quick reference for variable names when building pipe references)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (using the same bracket syntax in logic conditions)

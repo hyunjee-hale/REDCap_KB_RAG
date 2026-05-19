@@ -1,16 +1,16 @@
-RC-AT-06
+[RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)
 
 **Autofill Action Tags**
 
-| **Article ID** | RC-AT-06 |
+| **Article ID** | [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Overview; RC-AT-05 — Free Text Tags; RC-LONG-01 — Longitudinal Project Setup; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md) — Free Text Tags; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -106,7 +106,7 @@ Carry forward a value from the previous event:
 @DEFAULT='[previous-event-name][rx1]'
 ```
 
-Pre-fills the field with the value of `rx1` from the most recent prior event. Requires understanding of longitudinal projects (see RC-LONG-01).
+Pre-fills the field with the value of `rx1` from the most recent prior event. Requires understanding of longitudinal projects (see [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)).
 
 ---
 
@@ -166,7 +166,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 **Using `@NOW` on a date-only field.** If the field has a date-only validation, use `@TODAY` instead. `@NOW` on a date-only field will still populate the date, but the time component is discarded.
 
-**Applying `@TODAY` or `@NOW` to a field with no date validation.** Both tags will autofill any text field regardless of whether date or datetime validation is set. If the field has no validation, REDCap fills it with a date or datetime string on first load — but does not enforce the format on save. Users can overwrite the autofilled value with free text, and REDCap will accept it. Over time this produces inconsistently formatted data in what was intended to be a timestamp field. For reliable timestamp capture, always set the matching validation type: `date_mdy` (or `date_ymd`, `date_dmy`) for `@TODAY` fields, and `datetime_ymd` (or another datetime variant) for `@NOW` fields. The validation enforces format consistency on every entry, not only the autofilled ones. If you need a reliable date anchor for calculations but want to keep a visible field without format restrictions, see the hidden anchor field pattern in RC-FD-10.
+**Applying `@TODAY` or `@NOW` to a field with no date validation.** Both tags will autofill any text field regardless of whether date or datetime validation is set. If the field has no validation, REDCap fills it with a date or datetime string on first load — but does not enforce the format on save. Users can overwrite the autofilled value with free text, and REDCap will accept it. Over time this produces inconsistently formatted data in what was intended to be a timestamp field. For reliable timestamp capture, always set the matching validation type: `date_mdy` (or `date_ymd`, `date_dmy`) for `@TODAY` fields, and `datetime_ymd` (or another datetime variant) for `@NOW` fields. The validation enforces format consistency on every entry, not only the autofilled ones. If you need a reliable date anchor for calculations but want to keep a visible field without format restrictions, see the hidden anchor field pattern in [RC-FD-10 — Advanced Workflow Patterns: Multi-Stage Review and Operational Processing](RC-FD-10_Advanced-Workflow-Patterns-Multi-Stage-Review-and-Operational-Processing.md).
 
 **Expecting autofill tags to populate during data import.** These tags run only when a form is loaded in the browser.
 
@@ -174,7 +174,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 # 9. Related Articles
 
-- RC-AT-01 — Action Tags Overview
-- RC-AT-05 — Free Text Action Tags
-- RC-LONG-01 — Longitudinal Project Setup (for the [previous-event-name] example)
-- RC-FD-02 — Online Designer
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (for the [previous-event-name] example)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

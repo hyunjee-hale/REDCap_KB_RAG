@@ -1,16 +1,16 @@
-RC-PIPE-11
+[RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md)
 
 **Smart Variables: Aggregate Functions, Charts, and Tables**
 
-| **Article ID** | RC-PIPE-11 |
+| **Article ID** | [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | Projects with Project Dashboards enabled |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview; RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) |
 
 ---
 
@@ -65,7 +65,7 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 
 **Syntax Notes:**
 - Replace `fields` with one or more field names (comma-separated for multiple fields).
-- `parameters` is optional and allows filtering by report, DAG, event, or other criteria (see RC-PIPE-12).
+- `parameters` is optional and allows filtering by report, DAG, event, or other criteria (see [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md)).
 - Examples: `[aggregate-min:age]`, `[aggregate-min:age,participant_age,other_age]`, `[aggregate-max:weight:R-5898NNMYL4]`
 
 ### 3.2 Charts
@@ -95,7 +95,7 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 
 **Scope of Aggregation**
 
-All aggregate functions, charts, and tables naturally aggregate across all records, all events, and all repeating instances unless filtering parameters are applied. This means data is combined globally unless you specify a filter (see RC-PIPE-12 for filtering options).
+All aggregate functions, charts, and tables naturally aggregate across all records, all events, and all repeating instances unless filtering parameters are applied. This means data is combined globally unless you specify a filter (see [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) for filtering options).
 
 **Natural Grouping**
 
@@ -118,7 +118,7 @@ Charts and tables are rendered as interactive widgets on Project Dashboards. The
 
 **Optional Parameters**
 
-For parameters like report filtering, DAG filtering, event filtering, and visualization options (bar-vertical, bar-stacked, no-export-link), see RC-PIPE-12. Parameters are appended as a third colon-separated argument.
+For parameters like report filtering, DAG filtering, event filtering, and visualization options (bar-vertical, bar-stacked, no-export-link), see [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md). Parameters are appended as a third colon-separated argument.
 
 **Video Resource**
 
@@ -150,7 +150,7 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 **Q: How do I filter an aggregate function to show only records in a specific Data Access Group (DAG)?**
 
-**A:** Use the optional parameters (see RC-PIPE-12). For example: `[aggregate-mean:age:site_a]` shows the mean age for records in the Site A DAG only. Multiple DAGs can be comma-separated.
+**A:** Use the optional parameters (see [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md)). For example: `[aggregate-mean:age:site_a]` shows the mean age for records in the Site A DAG only. Multiple DAGs can be comma-separated.
 
 **Q: Can I use aggregate functions in regular form fields or only on dashboards?**
 
@@ -170,7 +170,7 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 **Using grouping fields with incompatible field types.** Grouping fields must be categorical (multiple choice, radio, dropdown, checkbox). If you specify a numeric or text field as a grouping field, the chart will either display without grouping or show an error.
 
-**Attempting to filter aggregate functions without understanding parameter syntax.** Optional parameters must follow RC-PIPE-12 syntax exactly. Incorrect syntax (e.g., missing colons, typos in DAG names) will cause the function to fail or return blank. Test filters in a development environment first.
+**Attempting to filter aggregate functions without understanding parameter syntax.** Optional parameters must follow [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) syntax exactly. Incorrect syntax (e.g., missing colons, typos in DAG names) will cause the function to fail or return blank. Test filters in a development environment first.
 
 **Assuming charts update in real-time.** Charts on Project Dashboards are generated when the dashboard is loaded or refreshed. They do not auto-update as records are modified. Refresh the dashboard to see the latest data.
 
@@ -178,5 +178,5 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions (filtering and visualization options)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) (filtering and visualization options)

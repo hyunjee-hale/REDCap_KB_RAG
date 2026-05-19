@@ -1,16 +1,16 @@
-RC-NAV-REC-03
+[RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md)
 
 **Repeated Instruments and Events**
 
-| **Article ID** | RC-NAV-REC-03 |
+| **Article ID** | [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) |
 | --- | --- |
 | **Domain** | Record Navigation |
 | **Applies To** | Projects with repeated instruments or events |
-| **Prerequisite** | RC-NAV-REC-01 — Record Navigation Overview |
+| **Prerequisite** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-NAV-REC-01 — Record Navigation Overview, RC-NAV-REC-02 — Longitudinal Mode & Arms, RC-NAV-REC-04 — Record Status Dashboard & Other Record Links, RC-NAV-UI-01 — Project Navigation UI, RC-LONG-02 — Repeated Instruments and Events Setup, RC-DE-10 — Longitudinal and Repeated Data Entry, RC-SURV-01 — Surveys Basics |
+| **Related Topics** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md), [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md), [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — Repeated Instruments and Events Setup, [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) — Longitudinal and Repeated Data Entry, [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys Basics |
 
 ---
 
@@ -208,27 +208,27 @@ Dashboard that filters or groups the view.
 
 # 8. Related Articles
 
-- RC-NAV-REC-01 — Record Navigation Overview — foundational article
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering navigation paths and instrument status dot colors
 
-- RC-NAV-REC-02 — Longitudinal Mode & Arms — how the Record Home
+- [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md) — how the Record Home
     Page grid works in longitudinal projects; context for where
     repeated instrument stacked dots appear
 
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links —
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) —
     how repeated instrument and event indicators appear on the
     dashboard
 
-- RC-NAV-UI-01 — Project Navigation UI — the two-panel layout and
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) — the two-panel layout and
     the menu that leads to records and instruments
 
-- RC-LONG-02 — Repeated Instruments & Events Setup — how to
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — how to
     configure instruments and events as repeatable; the setup side
     of what this article covers from a navigation perspective
 
-- RC-DE-10 — Longitudinal & Repeated Data Entry — detailed data
+- [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) — detailed data
     entry procedures for repeated instruments and repeated events
 
-- RC-SURV-01 — Surveys – Basics — repeated instruments can be
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — repeated instruments can be
     enabled as surveys; survey-completed entries count as complete
     for stacked dot color purposes

@@ -1,17 +1,17 @@
-RC-API-07
+[RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)
 
 **Export Metadata (Data Dictionary) API**
 
-| **Article ID** | RC-API-07 |
+| **Article ID** | [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-06 — Export Field Names; RC-API-08 — Import Metadata |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names; [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md) — Import Metadata |
 
 ---
 
@@ -121,7 +121,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -191,7 +191,7 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 **Q: What format is best for metadata export?**
 
-**A:** JSON is easiest to parse programmatically and preserves structure. CSV is the native REDCap format and can be imported back (see RC-API-08). XML works but is more verbose.
+**A:** JSON is easiest to parse programmatically and preserves structure. CSV is the native REDCap format and can be imported back (see [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)). XML works but is more verbose.
 
 **Q: Does the metadata include calculated fields and matrices?**
 
@@ -203,7 +203,7 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 **Q: Does the metadata include project-level settings?**
 
-**A:** No. This method returns only field and instrument definitions. To get project settings (title, purpose, etc.), use other metadata endpoints. See RC-API-01 for additional project-level API methods.
+**A:** No. This method returns only field and instrument definitions. To get project settings (title, purpose, etc.), use other metadata endpoints. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for additional project-level API methods.
 
 ---
 
@@ -225,9 +225,9 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-06 — Export Field Names (get a lightweight list of field names only)
-- RC-API-08 — Import Metadata (create or update the data dictionary)
-- RC-FD-02 — Online Designer (the GUI for building the data dictionary)
-- RC-FD-03 — Data Dictionary (the full data dictionary format exported by this method)
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques (detailed column reference)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names (get a lightweight list of field names only)
+- [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md) — Import Metadata (create or update the data dictionary)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the GUI for building the data dictionary)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the full data dictionary format exported by this method)
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (detailed column reference)

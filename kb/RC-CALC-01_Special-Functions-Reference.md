@@ -1,16 +1,16 @@
-RC-CALC-01
+[RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md)
 
 **Special Functions Reference**
 
-| **Article ID** | RC-CALC-01 |
+| **Article ID** | [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md) |
 |---|---|
 | **Domain** | Calculations & Special Functions |
 | **Applies To** | All REDCap project types; functions are available wherever REDCap logic or calculations are used |
-| **Prerequisite** | RC-BL-01 — Branching Logic: Overview & Scope |
+| **Prerequisite** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-02 — Branching Logic: Syntax & Atomic Statements; RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE; RC-PIPE-03 — Smart Variables Overview |
+| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md); [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE; [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 
 ---
 
@@ -308,9 +308,9 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 # 12. Related Articles
 
-- RC-BL-01 — Branching Logic: Overview & Scope
-- RC-BL-02 — Branching Logic: Syntax & Atomic Statements
-- RC-BL-03 — Branching Logic: Combining Statements
-- RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE
-- RC-PIPE-03 — Smart Variables Overview
-- RC-ALERT-01 — Alerts & Notifications Setup
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts & Notifications Setup

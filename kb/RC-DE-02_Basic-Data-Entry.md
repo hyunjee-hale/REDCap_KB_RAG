@@ -1,16 +1,16 @@
-RC-DE-02
+[RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md)
 
 **Basic Data Entry**
 
-| **Article ID** | RC-DE-02 |
+| **Article ID** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 | --- | --- |
 | **Domain** | Data Entry |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-DE-01 — Record Creation & the Record Home Page |
+| **Prerequisite** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-01 — Record Creation; RC-DE-04 — Editing Data & Audit Trail; RC-NAV-REC-01 — Record Navigation Overview |
+| **Related Topics** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) — Record Creation; [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md); [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) |
 
 ---
 
@@ -289,24 +289,24 @@ back), it starts empty.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-03 — Import Records API** — import or update field values programmatically without using the data entry UI
-- **RC-API-12 — Export File API** — download a file stored in a File Upload field programmatically
-- **RC-API-13 — Import File API** — upload a file to a File Upload field programmatically
-- **RC-API-14 — Delete File API** — delete a file stored in a File Upload field programmatically
+- **[RC-API-03 — Import Records API](RC-API-03_Import-Records.md)** — import or update field values programmatically without using the data entry UI
+- **[RC-API-12 — Export File API](RC-API-12_Export-File.md)** — download a file stored in a File Upload field programmatically
+- **[RC-API-13 — Import File API](RC-API-13_Import-File.md)** — upload a file to a File Upload field programmatically
+- **[RC-API-14 — Delete File API](RC-API-14_Delete-File.md)** — delete a file stored in a File Upload field programmatically
 
 ---
 
 
 # 10. Related Articles
 
-- RC-DE-01 — Record Creation & the Record Home Page (prerequisite)
+- [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (prerequisite)
 
-- RC-DE-03 — Longitudinal Projects & Data Access Groups (how project
+- [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) — Longitudinal Projects & Data Access Groups (how project
     structure affects data entry)
 
-- RC-DE-04 — Editing Data & Audit Trail (editing saved data, history
+- [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (editing saved data, history
     log)
 
-- RC-NAV-REC-01 — Record Navigation Overview (dot color reference)
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) (dot color reference)

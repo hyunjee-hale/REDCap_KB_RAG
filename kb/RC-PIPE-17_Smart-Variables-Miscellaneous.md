@@ -1,16 +1,16 @@
-RC-PIPE-17
+[RC-PIPE-17 — Smart Variables: Miscellaneous](RC-PIPE-17_Smart-Variables-Miscellaneous.md)
 
 **Smart Variables: Miscellaneous**
 
-| **Article ID** | RC-PIPE-17 |
+| **Article ID** | [RC-PIPE-17 — Smart Variables: Miscellaneous](RC-PIPE-17_Smart-Variables-Miscellaneous.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | All project types |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 
 ---
 
@@ -166,4 +166,4 @@ The `[redcap-version]` variable is useful for:
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)

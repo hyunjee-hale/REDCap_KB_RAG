@@ -1,22 +1,22 @@
-RC-TXT-02
+[RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md)
 
 **Texting: Administrator Setup**
 
-| **Article ID** | RC-TXT-02 |
+| **Article ID** | [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md) |
 | --- | --- |
 | **Domain** | Texting (SMS) |
 | **Applies To** | REDCap administrators with "Modify system configuration pages" permission |
-| **Prerequisite** | RC-TXT-01 — Texting in REDCap: Setup and Usage |
+| **Prerequisite** | [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-TXT-01 — Texting in REDCap: Setup and Usage |
+| **Related Topics** | [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) |
 
 ---
 
 # 1. Overview
 
-This article covers the system-level configuration that a REDCap administrator must complete before any project can use texting. It explains how to connect Twilio or Mosio to the REDCap installation, how to control which users can enable texting in their projects, and how to verify that the required phone validation types are present. Project-level setup (enabling and configuring texting within an individual project) is covered in RC-TXT-01 — Texting in REDCap: Setup and Usage.
+This article covers the system-level configuration that a REDCap administrator must complete before any project can use texting. It explains how to connect Twilio or Mosio to the REDCap installation, how to control which users can enable texting in their projects, and how to verify that the required phone validation types are present. Project-level setup (enabling and configuring texting within an individual project) is covered in [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md).
 
 > **Required permissions:** You must have REDCap administrator access and the ability to "Modify system configuration pages" in the Control Center to perform any steps in this article.
 
@@ -154,4 +154,4 @@ The Test button checks network connectivity to the provider's API only. It does 
 
 # 8. Related Articles
 
-- RC-TXT-01 — Texting in REDCap: Setup and Usage
+- [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md)

@@ -1,16 +1,16 @@
-RC-NAV-REC-04
+[RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)
 
 **Record Status Dashboard and Links**
 
-| **Article ID** | RC-NAV-REC-04 |
+| **Article ID** | [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) |
 | --- | --- |
 | **Domain** | Record Navigation |
 | **Applies To** | All project types |
-| **Prerequisite** | RC-NAV-REC-01 — Record Navigation Overview |
+| **Prerequisite** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-NAV-REC-01 — Record Navigation Overview, RC-NAV-REC-02 — Longitudinal Mode & Arms, RC-NAV-REC-03 — Repeated Instruments & Events, RC-NAV-UI-01 — Project Navigation UI, RC-NAV-UI-02 — Project Menu Reference, RC-USER-01 — User Rights Overview, RC-USER-03 — Configuring User Privileges, RC-DAG-01 — Data Access Groups, RC-PROJ-03 — Project Dashboards, RC-EXPRT-06 — Custom Reports Setup, RC-SURV-05 — Participant List and Survey Invitations, RC-DE-08 — Field Comment Log, RC-DE-12 — Data Resolution Workflow, RC-DQ-01 — Data Quality Module |
+| **Related Topics** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md), [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) — Repeated Instruments & Events, [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md), [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview, [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges, [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), [RC-PROJ-03 — Project Dashboards](RC-PROJ-03_Project-Dashboards.md), [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) — Custom Reports Setup, [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) — Participant List and Survey Invitations, [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md), [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md), [RC-DQ-01 — Data Quality Module](RC-DQ-01_Data-Quality-Module.md) |
 
 ---
 
@@ -210,47 +210,47 @@ project.
 
 # 8. Related Articles
 
-- RC-NAV-REC-01 — Record Navigation Overview — foundational article
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering Add/Edit Records, the Record Home Page, and dot color
     meanings
 
-- RC-NAV-REC-02 — Longitudinal Mode & Arms — how arm tabs and
+- [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md) — how arm tabs and
     event columns appear on the dashboard in longitudinal projects
 
-- RC-NAV-REC-03 — Repeated Instruments & Repeated Events — stacked
+- [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) — stacked
     dot indicators shown on the dashboard for repeated instruments
 
-- RC-NAV-UI-01 — Project Navigation UI — the two-panel layout
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) — the two-panel layout
     and how to reach the Record Status Dashboard from the menu
 
-- RC-NAV-UI-02 — Project Menu Reference — full reference for the
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) — full reference for the
     Data Collection menu section where the dashboard lives
 
-- RC-USER-01 — User Rights: Overview & Three-Tier Access — how
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — how
     user permissions control which instruments appear on the dashboard
 
-- RC-USER-03 — User Rights: Configuring User Privileges — instrument-
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — instrument-
     level access settings that filter dashboard visibility
 
-- RC-DAG-01 — Data Access Groups — DAG membership restricts which
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) — DAG membership restricts which
     records appear on the dashboard; key troubleshooting context
 
-- RC-PROJ-03 — Project Dashboards — creating custom dashboards that
+- [RC-PROJ-03 — Project Dashboards](RC-PROJ-03_Project-Dashboards.md) — creating custom dashboards that
     filter, sort, or group the default dashboard view
 
-- RC-EXPRT-06 — Custom Reports: Setup & Field Selection — Report
+- [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) — Report
     Record IDs are clickable links to the Record Home Page; custom
     dashboards and reports are complementary tools
 
-- RC-SURV-05 — Participant List & Manual Survey Invitations — survey
+- [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) — survey
     invitation logs contain Record ID links, but only in identified
     (non-anonymous) survey mode
 
-- RC-DE-08 — Field Comment Log — Record IDs in the comment log link
+- [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md) — Record IDs in the comment log link
     to the Record Home Page; variable-level links also available
 
-- RC-DE-12 — Data Resolution Workflow — deep variable links to
+- [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) — deep variable links to
     specific instruments are available from this tool
 
-- RC-DQ-01 — Data Quality Module — variable-level links to specific
+- [RC-DQ-01 — Data Quality Module](RC-DQ-01_Data-Quality-Module.md) — variable-level links to specific
     instruments and fields are available from data quality results

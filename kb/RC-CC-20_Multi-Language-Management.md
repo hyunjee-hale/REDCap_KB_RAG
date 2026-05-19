@@ -1,8 +1,8 @@
-RC-CC-20
+[RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md)
 
 **Control Center: Multi-Language Management**
 
-| **Article ID** | RC-CC-20 |
+| **Article ID** | [RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-20
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-MLM-01 — Multi-Language Management; RC-CC-06 — Modules & Services Configuration; RC-AI-03 — AI Translations; RC-AT-10 — Action Tags: Language |
+| **Related Topics** | [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md) — Action Tags: Language |
 
 ---
 
@@ -18,7 +18,7 @@ RC-CC-20
 
 **Multi-Language Management (MLM)** (**Control Center → Miscellaneous Modules → Multi-Language Management**) is where administrators define system-level languages that projects can adopt for UI translation. This article covers the administrator view — system language management, page tabs, and instance-wide settings.
 
-For a full explanation of what MLM is, how translations work, and the project-level workflow, see **RC-MLM-01 — Multi-Language Management**.
+For a full explanation of what MLM is, how translations work, and the project-level workflow, see **[RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)**.
 
 MLM can be turned on or off system-wide. When off, surveys and data entry forms are not translated in any project, and the MLM menu is not visible to project users.
 
@@ -77,7 +77,7 @@ This tab is where the actual translation strings are entered and managed for eac
 **Filtering and tools:**
 - **Hide translated items** — filter to show only untranslated items, making it easier to find gaps.
 - **Highlight untranslated text** — enabled from the Settings tab; highlights untranslated items across the page as a visual audit tool.
-- **Translate using AI** — available per category; uses the AI translation feature to auto-fill untranslated strings (requires the AI features to be enabled; see RC-AI-03).
+- **Translate using AI** — available per category; uses the AI translation feature to auto-fill untranslated strings (requires the AI features to be enabled; see [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)).
 
 **Subscribed system languages:** If a language is designated as a "subscribed" system language, its UI items cannot be edited directly. However, administrators can still provide **selective overrides** for individual items while leaving the rest managed by the subscription.
 
@@ -182,7 +182,7 @@ Yes. The base language is the fallback language shown to users who have not sele
 
 # 7. Related Articles
 
-- RC-MLM-01 — Multi-Language Management
-- RC-CC-06 — Modules & Services Configuration
-- RC-AI-03 — AI Translations
-- RC-AT-10 — Action Tags: Language
+- [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration
+- [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
+- [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md) — Action Tags: Language

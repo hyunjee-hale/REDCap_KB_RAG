@@ -1,16 +1,16 @@
-RC-LOCK-01
+[RC-LOCK-01 — Record Locking & E-Signatures](RC-LOCK-01_Record-Locking-and-E-Signatures.md)
 
 **Record Locking & E-Signatures**
 
-| **Article ID** | RC-LOCK-01 |
+| **Article ID** | [RC-LOCK-01 — Record Locking & E-Signatures](RC-LOCK-01_Record-Locking-and-E-Signatures.md) |
 |---|---|
 | **Domain** | Record Locking |
 | **Applies To** | All REDCap project types; requires Lock/Unlock Records user privilege |
-| **Prerequisite** | RC-DE-02 — Basic Data Entry; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Prerequisite** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-04 — Editing Data & Audit Trail; RC-LOG-01 — Logging — Project Audit Trail; RC-DE-12 — Data Resolution Workflow; RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Related Topics** | [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md); [RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Audit-Trail.md); [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 
 ---
 
@@ -69,7 +69,7 @@ There are two tiers of Lock/Unlock access:
 | Lock/Unlock Records | Lock and unlock individual instruments for a record; access the Customization and Management pages |
 | Lock/Unlock Records *with record-level locking* | All of the above, plus lock or unlock all instruments in a record simultaneously |
 
-Assign lock/unlock rights through **User Rights** or via a **User Role**. See RC-USER-03 — User Rights: Configuring User Privileges for how to set these.
+Assign lock/unlock rights through **User Rights** or via a **User Role**. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for how to set these.
 
 ### 3.2 Who Can See Locked Forms
 
@@ -237,7 +237,7 @@ Every lock, unlock, and e-signature action is recorded automatically in the proj
 - The user who performed the action
 - The timestamp
 
-See RC-LOG-01 — Logging — Project Audit Trail for details on filtering and exporting audit log entries. See RC-DE-04 — Editing Data & Audit Trail for information on the field-level audit trail.
+See [RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Audit-Trail.md) for details on filtering and exporting audit log entries. See [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) for information on the field-level audit trail.
 
 ---
 
@@ -281,9 +281,9 @@ Yes. Locking is available in classic (single-event) and longitudinal projects al
 
 # 12. Related Articles
 
-- RC-DE-02 — Basic Data Entry
-- RC-DE-04 — Editing Data & Audit Trail
-- RC-DE-12 — Data Resolution Workflow
-- RC-LOG-01 — Logging — Project Audit Trail
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-USER-03 — User Rights: Configuring User Privileges
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md)
+- [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md)
+- [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md)
+- [RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Audit-Trail.md)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)

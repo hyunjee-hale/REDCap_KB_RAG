@@ -1,8 +1,8 @@
-RC-INTG-01
+[RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md)
 
 **Data Entry Trigger**
 
-| **Article ID** | RC-INTG-01 |
+| **Article ID** | [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) |
 |---|---|
 | **Domain** | Integration |
 | **Applies To** | All REDCap project types |
@@ -10,7 +10,7 @@ RC-INTG-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-02 — Basic Data Entry; RC-SURV-01 — Surveys: Basics; RC-LONG-02 — Repeated Instruments & Events Setup; RC-DAG-01 — Data Access Groups; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics; [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -54,7 +54,7 @@ When the DET is triggered by a survey submission (rather than by a staff user en
 
 ## 3.0 System-Level Requirement
 
-The Data Entry Trigger feature must be enabled at the system level by a REDCap administrator before any project can configure it. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **RC-CC-06**). If the Data Entry Trigger field is not visible in Project Setup → Additional Customizations, the feature may be disabled for your installation.
+The Data Entry Trigger feature must be enabled at the system level by a REDCap administrator before any project can configure it. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). If the Data Entry Trigger field is not visible in Project Setup → Additional Customizations, the feature may be disabled for your installation.
 
 ## 3.1 Project-Level Setup
 
@@ -145,8 +145,8 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 
 # 8. Related Articles
 
-- RC-DE-02 — Basic Data Entry (foundational — covers the data entry workflow that triggers the DET)
-- RC-SURV-01 — Surveys: Basics (surveys are a common DET trigger source; explains survey completion status)
-- RC-LONG-02 — Repeated Instruments & Events Setup (required reading if your project uses repeating elements; explains `redcap_repeat_instance` and `redcap_repeat_instrument` context)
-- RC-DAG-01 — Data Access Groups (explains `redcap_data_access_group` and how DAGs are assigned to records)
-- RC-CC-06 — Control Center: Modules & Services Configuration (system-level Data Entry Trigger enable/disable)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational — covers the data entry workflow that triggers the DET)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics (surveys are a common DET trigger source; explains survey completion status)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (required reading if your project uses repeating elements; explains `redcap_repeat_instance` and `redcap_repeat_instrument` context)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains `redcap_data_access_group` and how DAGs are assigned to records)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level Data Entry Trigger enable/disable)

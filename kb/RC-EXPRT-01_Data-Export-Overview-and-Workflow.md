@@ -1,16 +1,16 @@
-RC-EXPRT-01
+[RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)
 
 **Data Export — Overview & Workflow**
 
-| **Article ID** | RC-EXPRT-01 |
+| **Article ID** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 | --- | --- |
 | **Domain** | Exports, Reports & Stats |
 | **Applies To** | All REDCap project types; requires Data Export user rights |
-| **Prerequisite** | RC-NAV-UI-01 — Project Navigation UI |
+| **Prerequisite** | [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EXPRT-02 — Export Formats; RC-EXPRT-03 — User Rights & Export Access; RC-EXPRT-04 — De-identification & Formatting Options; RC-EXPRT-05 — Report Types |
+| **Related Topics** | [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) — Export Formats; [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) — User Rights & Export Access; [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) — De-identification & Formatting Options; [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) — Report Types |
 
 ---
 
@@ -53,7 +53,7 @@ determines which records and variables are included in an export.
 The file format REDCap uses to deliver the exported data. REDCap
 supports seven formats: CSV/Excel (raw data), CSV/Excel (labels), SPSS,
 SAS, R, Stata, and CDISC ODM (XML). Format selection affects how data
-values are represented and how many files are generated. See RC-EXPRT-02
+values are represented and how many files are generated. See [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md)
 for full details.
 
 **File Repository**
@@ -67,7 +67,7 @@ the File Repository user right.
 
 Optional settings applied during export that remove or transform
 potentially identifying information. Available options vary based on the
-user\'s Data Export Rights level. See RC-EXPRT-04 for full details.
+user\'s Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details.
 
 ---
 
@@ -99,9 +99,9 @@ the report type or export format selected.
   ------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **1**   Navigate to the Data Exports, Reports, and Stats application (see Section 3).
   **2**   Locate the report you want to export — All Data, Selected Instruments/Events, or a custom report. Click Export Data for that report.
-  **3**   Choose an export format from the seven available options. See RC-EXPRT-02 for guidance on which format to choose.
-  **4**   Set de-identification options if required or desired. Options available depend on your Data Export Rights level. See RC-EXPRT-04 for full details.
-  **5**   Review additional export options and data formatting options. The defaults are appropriate for most exports. See RC-EXPRT-04 for details on each option.
+  **3**   Choose an export format from the seven available options. See [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) for guidance on which format to choose.
+  **4**   Set de-identification options if required or desired. Options available depend on your Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details.
+  **5**   Review additional export options and data formatting options. The defaults are appropriate for most exports. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details on each option.
   **6**   Click the Export Data button to generate the export files.
   **7**   Download all generated files. The number of files depends on the export format — some formats generate multiple files that must all be downloaded. Read the included format-specific instructions carefully.
   **8**   Click the Close button to finish. REDCap saves a copy of this export in the File Repository automatically.
@@ -119,9 +119,9 @@ the report type or export format selected.
   *Where do I find the Data Exports, Reports, and Stats application?*                            In the left-hand project menu under Applications. If it does not appear, you do not have Data Export rights or the Add/Edit/Organize Reports right. Contact your project administrator.
   *I ran an export this morning and accidentally deleted the file. Do I have to run it again?*   No. Navigate to the File Repository application in the left-hand menu. REDCap automatically saves a copy of every export there. Download it directly without repeating the export process.
   *How many files does REDCap generate when I export?*                                           It depends on the export format. CSV/Excel generates one file. SPSS generates three files. SAS, R, and Stata each generate two files. CDISC ODM generates one XML file. All files for a given format must be downloaded together for the data to load correctly in the target application.
-  *Do I have to set de-identification options every time?*                                       No. De-identification options are optional if your export rights allow a Full Data Set export. They are required only if your rights are set to De-identified or Remove All Identifier Fields. See RC-EXPRT-03 and RC-EXPRT-04 for details.
+  *Do I have to set de-identification options every time?*                                       No. De-identification options are optional if your export rights allow a Full Data Set export. They are required only if your rights are set to De-identified or Remove All Identifier Fields. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details.
   *Why can\'t I see the Data Exports, Reports, and Stats application in my menu?*                The application only appears if you have at least one of the following: any Data Export right above No Access, or the Add/Edit/Organize Reports right. If neither is granted, the application is hidden entirely.
-  *Can I export data from multiple instruments at once?*                                         Yes. Use the Selected Instruments/Events report to choose which instruments to include. For longitudinal projects, you must also select one or more events. See RC-EXPRT-05 for details on report types.
+  *Can I export data from multiple instruments at once?*                                         Yes. Use the Selected Instruments/Events report to choose which instruments to include. For longitudinal projects, you must also select one or more events. See [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) for details on report types.
   *What happens if I close the export dialog before downloading my files?*                       The files are still saved in the File Repository. Navigate there to download them at any time.
   ---------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -152,29 +152,29 @@ navigate there to complete the download.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-02 — Export Records API** — programmatically retrieve project records in CSV, JSON, or XML
-- **RC-API-38 — Export Reports API** — programmatically export data from a saved custom report by report ID
+- **[RC-API-02 — Export Records API](RC-API-02_Export-Records.md)** — programmatically retrieve project records in CSV, JSON, or XML
+- **[RC-API-38 — Export Reports API](RC-API-38_Export-Reports.md)** — programmatically export data from a saved custom report by report ID
 
 ---
 
 
 # 7. Related Articles
 
-- RC-EXPRT-02 — Data Export: Export Formats (the seven available
+- [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (the seven available
     formats and when to use each)
 
-- RC-EXPRT-03 — Data Export: User Rights & Export Access (how rights
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (how rights
     affect what you can export)
 
-- RC-EXPRT-04 — Data Export: De-identification & Formatting Options
+- [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)
 
-- RC-EXPRT-05 — Data Export: Report Types (All Data, Selected
+- [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) — Data Export: Report Types (All Data, Selected
     Instruments, custom reports, other export options)
 
-- RC-NAV-UI-01 — Project Navigation UI (prerequisite — left-hand
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) (prerequisite — left-hand
     menu and application access)
 
-- RC-NAV-UI-02 — Project Menu Reference (Data Exports, Reports, and
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (Data Exports, Reports, and
     Stats menu item reference)

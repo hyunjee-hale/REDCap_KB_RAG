@@ -1,17 +1,17 @@
-RC-IMP-05
+[RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md)
 
 **Alerts & Notifications CSV — Column Reference and Format Guide**
 
-| **Article ID** | RC-IMP-05 |
+| **Article ID** | [RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-IMP-03 — CSV Upload Reference; RC-ALERT-01 — Alerts & Notifications: Setup |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-03 — CSV Upload Reference; RC-ALERT-01 — Alerts & Notifications: Setup; RC-ALERT-02 — Alert Management and Notification Log |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-ALERT-02 — Alert Management & Notification Log](RC-ALERT-02_Alert-Management-and-Notification-Log.md) — Alert Management and Notification Log |
 
 ---
 
@@ -27,7 +27,7 @@ The Alerts & Notifications module supports CSV export and import of alert defini
 
 **Always download first.** Start from a file exported from the source project rather than building from scratch. This guarantees the correct column order and gives you a recovery snapshot.
 
-For general coverage of the Alerts & Notifications module, see RC-ALERT-01 — Alerts & Notifications: Setup.
+For general coverage of the Alerts & Notifications module, see [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md).
 
 ---
 
@@ -115,8 +115,8 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 # 5. Related Articles
 
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-ALERT-01 — Alerts & Notifications: Setup (full module reference)
-- RC-ALERT-02 — Alert Management and Notification Log
-- RC-PIPE-01 — Piping Basics (piping syntax used in `email-to` and `alert-message`)
-- RC-SURV-04 — Survey Link Types and Access Methods (survey link smart variable syntax)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (full module reference)
+- [RC-ALERT-02 — Alert Management & Notification Log](RC-ALERT-02_Alert-Management-and-Notification-Log.md) — Alert Management and Notification Log
+- [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics (piping syntax used in `email-to` and `alert-message`)
+- [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md) — Survey Link Types and Access Methods (survey link smart variable syntax)

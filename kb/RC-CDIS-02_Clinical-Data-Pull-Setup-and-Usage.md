@@ -1,20 +1,20 @@
-RC-CDIS-02
+[RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage](RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md)
 
 **Clinical Data Pull (CDP): Setup and Usage**
 
-| **Article ID** | RC-CDIS-02 |
+| **Article ID** | [RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage](RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md) |
 | --- | --- |
 | **Domain** | Clinical Data Interoperability Services |
 | **Applies To** | Institutions using real-time, prospective clinical data collection from an EHR |
-| **Prerequisite** | RC-CDIS-01 — CDIS Overview and Control Center Setup |
+| **Prerequisite** | [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview and Control Center Setup |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CDIS-01 — CDIS Overview; RC-CDIS-03 — Clinical Data Mart; RC-CDIS-04 — CDP vs CDM Comparison |
+| **Related Topics** | [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview; [RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage](RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md) — Clinical Data Mart; [RC-CDIS-04 — CDP vs CDM: Feature Comparison](RC-CDIS-04_CDP-vs-CDM-Feature-Comparison.md) — CDP vs CDM Comparison |
 
 ---
 
-> **Prerequisite:** CDIS must be configured at the system level before CDP can be used. See RC-CDIS-01.
+> **Prerequisite:** CDIS must be configured at the system level before CDP can be used. See [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md).
 
 ---
 
@@ -171,10 +171,10 @@ No. CDP only imports clinical notes if they are in HTML format. If your EHR stor
 
 # 11. Related Articles
 
-- RC-CDIS-01 — CDIS Overview and Control Center Setup
-- RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage
-- RC-CDIS-04 — CDP vs CDM: Feature Comparison
-- RC-AT-09 — @CALCTEXT & @CALCDATE (for the @RICHTEXT action tag context, see RC-AT-07)
-- RC-AT-07 — Cosmetic Action Tags (includes @RICHTEXT)
-- RC-LONG-01 — Longitudinal Project Setup
-- RC-LONG-02 — Repeated Instruments and Events Setup
+- [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview and Control Center Setup
+- [RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage](RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md)
+- [RC-CDIS-04 — CDP vs CDM: Feature Comparison](RC-CDIS-04_CDP-vs-CDM-Feature-Comparison.md)
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — @CALCTEXT & @CALCDATE (for the @RICHTEXT action tag context, see [RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md))
+- [RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md) (includes @RICHTEXT)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — Repeated Instruments and Events Setup

@@ -1,8 +1,8 @@
-RC-CC-05
+[RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md)
 
 **Control Center: File Storage & Upload Settings**
 
-| **Article ID** | RC-CC-05 |
+| **Article ID** | [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-05
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-01 — Notifications & Reporting; RC-CC-06 — Modules & Services Configuration; RC-DE-12 — Data Resolution Workflow; RC-INST-01 — Institution-Specific Settings & Policies |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md); [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies |
 
 ---
 
@@ -155,7 +155,7 @@ When enabled, users can attach files to open data queries in the Data Resolution
 
 Options: *Disabled* / *Enabled*
 
-> See RC-DE-12 for more on the Data Resolution Workflow.
+> See [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) for more on the Data Resolution Workflow.
 
 ---
 
@@ -190,8 +190,8 @@ Vary them based on context. The File Repository typically allows larger files (e
 
 # 4. Related Articles
 
-- RC-CC-02 — Control Center: General Configuration (system configuration and performance settings)
-- RC-CC-06 — Control Center: Modules & Services (Send-It and other file-related module configuration)
-- RC-FILE-01 — File Repository (file storage user guide and workflows)
+- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — Control Center: General Configuration (system configuration and performance settings)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Control Center: Modules & Services (Send-It and other file-related module configuration)
+- [RC-FILE-01 — File Repository](RC-FILE-01_File-Repository.md) (file storage user guide and workflows)
 - RC-FILE-02 — File Upload Fields (file upload field configuration and constraints)
-- RC-INST-01 — Institution-Specific Settings & Policies (file storage policy considerations)
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies (file storage policy considerations)

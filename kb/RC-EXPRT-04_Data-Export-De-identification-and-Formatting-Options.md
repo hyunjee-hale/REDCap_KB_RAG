@@ -1,16 +1,16 @@
-RC-EXPRT-04
+[RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)
 
 **Data Export — De-identification & Formatting Options**
 
-| **Article ID** | RC-EXPRT-04 |
+| **Article ID** | [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) |
 | --- | --- |
 | **Domain** | Exports, Reports & Stats |
 | **Applies To** | All REDCap project types; availability varies by Data Export Rights level |
-| **Prerequisite** | RC-EXPRT-01 — Data Export: Overview & Workflow; RC-EXPRT-03 — User Rights & Export Access |
+| **Prerequisite** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md); [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) — User Rights & Export Access |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EXPRT-03 — User Rights & Export Access; RC-EXPRT-02 — Export Formats |
+| **Related Topics** | [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) — User Rights & Export Access; [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) — Export Formats |
 
 ---
 
@@ -22,7 +22,7 @@ De-identification options allow you to remove or transform potentially
 identifying information before downloading your data. Formatting options
 control how values are represented in the exported file. The
 availability of these options depends on the user\'s Data Export Rights
-level — see RC-EXPRT-03 for details on rights levels.
+level — see [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) for details on rights levels.
 
 ---
 
@@ -171,14 +171,14 @@ confirm the expected delimiter with the recipient before exporting.
 
 # 7. Related Articles
 
-- RC-EXPRT-01 — Data Export: Overview & Workflow (the full export
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (the full export
     process)
 
-- RC-EXPRT-03 — Data Export: User Rights & Export Access (how rights
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (how rights
     levels affect which de-identification options are mandatory)
 
-- RC-EXPRT-02 — Data Export: Export Formats (format selection
+- [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (format selection
     affects how values are represented)
 
-- RC-FD-01 — Form Design Overview (Check for Identifiers — where
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (Check for Identifiers — where
     identifier flags are set)

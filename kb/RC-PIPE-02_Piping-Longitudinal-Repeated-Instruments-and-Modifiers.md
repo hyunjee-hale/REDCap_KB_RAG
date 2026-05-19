@@ -1,22 +1,22 @@
-RC-PIPE-02
+[RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)
 
 **Piping — Longitudinal, Repeated Instruments & Modifiers**
 
-| **Article ID** | RC-PIPE-02 |
+| **Article ID** | [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | Longitudinal projects; projects with repeated instruments or repeated events; all projects using piping modifiers |
-| **Prerequisite** | RC-PIPE-01 — Piping Basics, Syntax & Field Types |
+| **Prerequisite** | [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types |
 | **Version** | 1.2 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-01 — Piping Basics, Syntax & Field Types; RC-PIPE-03 — Smart Variables Overview; RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments & Events Setup |
+| **Related Topics** | [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types; [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) |
 
 ---
 
 # 1. Overview
 
-This article extends the piping basics covered in RC-PIPE-01 into two areas: (1) piping across events and repeated instruments in longitudinal and repeating projects, and (2) using piping modifiers to control exactly what value is returned when a variable is piped. Readers should be comfortable with basic piping syntax before reading this article.
+This article extends the piping basics covered in [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) into two areas: (1) piping across events and repeated instruments in longitudinal and repeating projects, and (2) using piping modifiers to control exactly what value is returned when a variable is piped. Readers should be comfortable with basic piping syntax before reading this article.
 
 ---
 
@@ -52,7 +52,7 @@ A suffix appended to a variable name inside a bracket expression to change what 
 
 ## 3.1 Same-Event Piping
 
-If the source variable and the destination field are in the same event, standard piping syntax works without modification — just use `[variable_name]` as described in RC-PIPE-01.
+If the source variable and the destination field are in the same event, standard piping syntax works without modification — just use `[variable_name]` as described in [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md).
 
 ## 3.2 Cross-Event Piping
 
@@ -205,7 +205,7 @@ To pipe a visit date from the previous instance:
 [event_name][variable_name][instance_number_or_smart_variable]
 ```
 
-For a broader overview of all smart variables, see RC-PIPE-03 — Smart Variables Overview.
+For a broader overview of all smart variables, see [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md).
 
 ---
 
@@ -341,10 +341,10 @@ These modifiers apply to text box fields with date or time validation:
 
 # 8. Related Articles
 
-- RC-PIPE-01 — Piping Basics, Syntax & Field Types (core piping syntax, locations, field type defaults)
-- RC-PIPE-03 — Smart Variables Overview (full list of smart variable categories including instance qualifiers)
-- RC-PIPE-04 — Piping in Emails & Notifications (applying piping in confirmation emails, invitations, and alerts)
-- RC-LONG-01 — Longitudinal Project Setup (event and arm configuration)
-- RC-LONG-02 — Repeated Instruments & Events Setup (configuring repeated instruments and events)
-- RC-NAV-REC-02 — Longitudinal Mode & Arms (navigating events and arms during data entry)
-- RC-NAV-REC-03 — Repeated Instruments & Repeated Events (navigating instances during data entry)
+- [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) — Piping Basics, Syntax & Field Types (core piping syntax, locations, field type defaults)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (full list of smart variable categories including instance qualifiers)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications (applying piping in confirmation emails, invitations, and alerts)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (event and arm configuration)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeated instruments and events)
+- [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md) (navigating events and arms during data entry)
+- [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) (navigating instances during data entry)

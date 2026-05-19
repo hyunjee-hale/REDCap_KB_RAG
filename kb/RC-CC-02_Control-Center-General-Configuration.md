@@ -1,8 +1,8 @@
-RC-CC-02
+[RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
 
 **Control Center: General System Configuration**
 
-| **Article ID** | RC-CC-02 |
+| **Article ID** | [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-02
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-01 — Notifications & Reporting; RC-CC-03 — Security & Authentication; RC-CC-04 — User Settings & Defaults; RC-CC-07 — Users & Access Management; RC-INST-01 — Institution-Specific Settings & Policies; RC-PROJ-01 — Project Lifecycle |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) — Security & Authentication; [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) — User Settings & Defaults; [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) — Users & Access Management; [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies; [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle |
 
 ---
 
@@ -381,9 +381,9 @@ Verify that the web server's PHP mail subsystem is functional (the Configuration
 
 # 4. Related Articles
 
-- RC-CC-01 — Control Center: Notifications & Reporting (system health checks, Consortium reporting configuration)
-- RC-CC-03 — Control Center: Security & Authentication (authentication and login security settings)
-- RC-CC-04 — Control Center: User Settings & Defaults (user creation and defaults)
-- RC-CC-05 — Control Center: File Storage & Upload Settings (file storage configuration related to disk space)
-- RC-CC-07 — Control Center: Users & Access Management (user account management)
-- RC-INST-01 — Institution-Specific Settings & Policies (institutional configuration best practices)
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Control Center: Notifications & Reporting (system health checks, Consortium reporting configuration)
+- [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (authentication and login security settings)
+- [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (user creation and defaults)
+- [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) (file storage configuration related to disk space)
+- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) (user account management)
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies (institutional configuration best practices)

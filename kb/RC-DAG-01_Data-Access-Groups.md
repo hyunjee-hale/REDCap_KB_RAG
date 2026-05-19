@@ -1,16 +1,16 @@
-RC-DAG-01
+[RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
 
 **Data Access Groups**
 
-| **Article ID** | RC-DAG-01 |
+| **Article ID** | [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
 |---|---|
 | **Domain** | Data Access Groups |
 | **Applies To** | All REDCap project types; requires Data Access Groups privilege to manage |
-| **Prerequisite** | RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Prerequisite** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-USER-01 — Overview & Three-Tier Access; RC-USER-02 — Adding Users & Managing Roles; RC-USER-03 — Configuring User Privileges; RC-USER-04 — User Management; RC-EXPRT-03 — Data Export: User Rights & Export Access; RC-RAND-01 — Randomization Concepts & Terminology; RC-NAV-UI-02 — Project Menu Reference; RC-NAV-REC-04 — Record Status Dashboard |
+| **Related Topics** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — Overview & Three-Tier Access; [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles; [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges; [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management; [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md); [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
 
 ---
 
@@ -149,7 +149,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 **Q: Does a user's DAG assignment affect what data they can export?**
 
-**A:** Yes. Data export rights and DAG assignment both constrain what a user can export. A user in a DAG can only export records belonging to that DAG, and within those records, only the instruments their export rights allow. See RC-EXPRT-03 — Data Export: User Rights & Export Access.
+**A:** Yes. Data export rights and DAG assignment both constrain what a user can export. A user in a DAG can only export records belonging to that DAG, and within those records, only the instruments their export rights allow. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md).
 
 **Q: Can a user create records in a DAG other than their own?**
 
@@ -157,7 +157,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 **Q: Do DAGs interact with randomization?**
 
-**A:** Yes. DAG membership can affect randomization access — specifically which DAG a randomized record is associated with and who can view or perform randomization. See RC-RAND-01 — Randomization Concepts & Terminology for details.
+**A:** Yes. DAG membership can affect randomization access — specifically which DAG a randomized record is associated with and who can view or perform randomization. See [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) for details.
 
 ---
 
@@ -181,25 +181,25 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-28 — Export DAGs API** — retrieve all DAG definitions (unique names and labels)
-- **RC-API-29 — Import DAGs API** — create or update DAG definitions programmatically
-- **RC-API-30 — Delete DAGs API** — remove DAG definitions programmatically
-- **RC-API-31 — Export User-DAG Assignments API** — retrieve which users are assigned to which DAGs
-- **RC-API-32 — Import User-DAG Assignments API** — assign users to DAGs programmatically
-- **RC-API-33 — Switch DAG API** — change the active DAG context for the API token user
+- **[RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md)** — retrieve all DAG definitions (unique names and labels)
+- **[RC-API-29 — Import DAGs API](RC-API-29_Import-DAGs.md)** — create or update DAG definitions programmatically
+- **[RC-API-30 — Delete DAGs API](RC-API-30_Delete-DAGs.md)** — remove DAG definitions programmatically
+- **[RC-API-31 — Export User-DAG Assignments API](RC-API-31_Export-User-DAG-Assignments.md)** — retrieve which users are assigned to which DAGs
+- **[RC-API-32 — Import User-DAG Assignments API](RC-API-32_Import-User-DAG-Assignments.md)** — assign users to DAGs programmatically
+- **[RC-API-33 — Switch DAG API](RC-API-33_Switch-DAG.md)** — change the active DAG context for the API token user
 
 ---
 
 
 # 10. Related Articles
 
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-USER-02 — User Rights: Adding Users & Managing Roles (DAG assignment when adding users)
-- RC-USER-03 — User Rights: Configuring User Privileges (DAG management privilege and other rights)
-- RC-USER-04 — User Rights: User Management
-- RC-EXPRT-03 — Data Export: User Rights & Export Access (how DAGs affect exports)
-- RC-RAND-01 — Randomization Concepts & Terminology (DAGs and randomization)
-- RC-NAV-UI-02 — Project Menu Reference (the DAGs item appears in the Applications section; requires appropriate user rights to see)
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links (DAG membership filters which records are visible on the dashboard — only records in the user's assigned DAG appear)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) (DAG assignment when adding users)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (DAG management privilege and other rights)
+- [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (how DAGs affect exports)
+- [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) (DAGs and randomization)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the DAGs item appears in the Applications section; requires appropriate user rights to see)
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (DAG membership filters which records are visible on the dashboard — only records in the user's assigned DAG appear)

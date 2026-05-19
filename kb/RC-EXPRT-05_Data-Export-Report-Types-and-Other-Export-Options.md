@@ -1,16 +1,16 @@
-RC-EXPRT-05
+[RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md)
 
 **Data Export — Report Types & Other Export Options**
 
-| **Article ID** | RC-EXPRT-05 |
+| **Article ID** | [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) |
 | --- | --- |
 | **Domain** | Exports, Reports & Stats |
 | **Applies To** | All REDCap project types; requires Data Export user rights |
-| **Prerequisite** | RC-EXPRT-01 — Data Export: Overview & Workflow |
+| **Prerequisite** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EXPRT-01 — Overview & Workflow; RC-EXPRT-03 — User Rights & Export Access; RC-EXPRT-04 — De-identification & Formatting Options |
+| **Related Topics** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Overview & Workflow; [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) — User Rights & Export Access; [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) — De-identification & Formatting Options |
 
 ---
 
@@ -120,7 +120,7 @@ fine-grained control over what is included in an export.
 Creating and editing custom reports requires the Add/Edit/Organize
 Reports user right. This right is independent of Data Export Rights. A
 user can have the ability to create reports without being able to export
-the resulting data, and vice versa. See RC-EXPRT-03 for details on
+the resulting data, and vice versa. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) for details on
 rights levels.
 
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -188,25 +188,25 @@ structure management.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-38 — Export Reports API** — export a saved report programmatically by its numeric report ID
+- **[RC-API-38 — Export Reports API](RC-API-38_Export-Reports.md)** — export a saved report programmatically by its numeric report ID
 
 ---
 
 
 # 8. Related Articles
 
-- RC-EXPRT-01 — Data Export: Overview & Workflow (prerequisite ---
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite ---
     the full export process)
 
-- RC-EXPRT-02 — Data Export: Export Formats (format selection after
+- [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (format selection after
     report type is chosen)
 
-- RC-EXPRT-03 — Data Export: User Rights & Export Access (rights
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (rights
     required for custom reports and export access)
 
-- RC-EXPRT-04 — Data Export: De-identification & Formatting Options
+- [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)
 
-- RC-FD-03 — Data Dictionary (the Data Dictionary download vs.
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the Data Dictionary download vs.
     REDCap XML backup)

@@ -1,16 +1,16 @@
-RC-MYCAP-06
+[RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md)
 
 **MyCap: Active Tasks & Mobile Toolbox**
 
-| **Article ID** | RC-MYCAP-06 |
+| **Article ID** | [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md) |
 |---|---|
 | **Domain** | MyCap Mobile App |
 | **Applies To** | Projects with MyCap enabled; Active Tasks availability varies by device OS and app version |
-| **Prerequisite** | RC-MYCAP-03 — Task Scheduling |
+| **Prerequisite** | [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-MYCAP-02 — Designing Instruments for MyCap; RC-MYCAP-03 — Task Scheduling |
+| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap; [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling |
 
 ---
 
@@ -168,7 +168,7 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 - **REDCap version required:** v14.3.8 or later.
 - MTB tasks measure cognitive domains including processing speed, attention, memory, and executive function — the same domains assessed by standard NIH Toolbox instruments.
 - MTB tasks are added in the MyCap **Active Tasks** tab, separate from standard Active Tasks.
-- MTB tasks use the same four schedule types as other MyCap tasks (One-time, Infinite, Repeating, Fixed). See RC-MYCAP-03 — Task Scheduling.
+- MTB tasks use the same four schedule types as other MyCap tasks (One-time, Infinite, Repeating, Fixed). See [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling.
 - Results are stored in REDCap using the same metadata fields as other Active Tasks (`@MC-TASK-SUPPLEMENTALDATA`, `@MC-TASK-SERIALIZEDRESULT`).
 
 ---
@@ -181,7 +181,7 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 2. Click **Add Active Task**.
 3. Select the task type from the list of available tasks.
 4. Configure the task-specific parameters.
-5. Set the schedule (see RC-MYCAP-03 — Task Scheduling for schedule types).
+5. Set the schedule (see [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling for schedule types).
 6. Save the task.
 7. Publish the project.
 
@@ -221,7 +221,7 @@ Add fields with these annotations to the instrument associated with the Active T
 
 **Q: How is Active Task data stored in REDCap?**
 
-**A:** Active Task results are stored in fields annotated with `@MC-TASK-SUPPLEMENTALDATA` (structured JSON) and/or `@MC-TASK-SERIALIZEDRESULT` (full result object). Standard task metadata (start time, end time, schedule date) uses the standard `@MC-TASK-*` annotations described in RC-MYCAP-02.
+**A:** Active Task results are stored in fields annotated with `@MC-TASK-SUPPLEMENTALDATA` (structured JSON) and/or `@MC-TASK-SERIALIZEDRESULT` (full result object). Standard task metadata (start time, end time, schedule date) uses the standard `@MC-TASK-*` annotations described in [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md).
 
 **Q: What is the Mobile Toolbox and how is it different from standard Active Tasks?**
 
@@ -253,6 +253,6 @@ Add fields with these annotations to the instrument associated with the Active T
 
 # 10. Related Articles
 
-- RC-MYCAP-02 — Designing Instruments for MyCap (task metadata annotations)
-- RC-MYCAP-03 — Task Scheduling (scheduling Active Tasks)
-- RC-MYCAP-08 — Testing MyCap (testing Active Task appearance and functionality)
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap (task metadata annotations)
+- [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling (scheduling Active Tasks)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (testing Active Task appearance and functionality)

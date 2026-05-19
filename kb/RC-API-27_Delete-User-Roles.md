@@ -1,17 +1,17 @@
-RC-API-27
+[RC-API-27 — Delete User Roles API](RC-API-27_Delete-User-Roles.md)
 
 **Delete User Roles API**
 
-| **Article ID** | RC-API-27 |
+| **Article ID** | [RC-API-27 — Delete User Roles API](RC-API-27_Delete-User-Roles.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -117,7 +117,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5.
 
 ---
 
@@ -135,7 +135,7 @@ On success, the API returns a count of roles deleted. For example: `1` means one
 
 **Q: What is the `unique_role_name`?**
 
-**A:** It's the system-generated alphanumeric ID assigned to the role (e.g., `U-522RX7WM49`). To find this ID, export existing roles using the Export User Roles method (RC-API-25).
+**A:** It's the system-generated alphanumeric ID assigned to the role (e.g., `U-522RX7WM49`). To find this ID, export existing roles using the Export User Roles method ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)).
 
 **Q: What if I try to delete a role that doesn't exist?**
 
@@ -147,7 +147,7 @@ On success, the API returns a count of roles deleted. For example: `1` means one
 
 **Q: Can I undo a role deletion?**
 
-**A:** No. Role deletion is permanent. To restore a role, you must import it again using the Import User Roles method (RC-API-26) with the same or similar definition.
+**A:** No. Role deletion is permanent. To restore a role, you must import it again using the Import User Roles method ([RC-API-26 — Import User Roles API](RC-API-26_Import-User-Roles.md)) with the same or similar definition.
 
 ---
 
@@ -167,10 +167,10 @@ On success, the API returns a count of roles deleted. For example: `1` means one
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (foundational; required reading before using any API method)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (explains role-based access)
-- RC-USER-03 — User Rights: Configuring User Privileges (reference for permission types)
-- RC-API-25 — Export User Roles (retrieve role definitions and their IDs)
-- RC-API-26 — Import User Roles (create or update roles)
-- RC-API-55 — Export User-Role Assignments (see which users are assigned to which roles)
-- RC-API-22 — Export Users (identify users and their permissions)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains role-based access)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (reference for permission types)
+- [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) — Export User Roles (retrieve role definitions and their IDs)
+- [RC-API-26 — Import User Roles API](RC-API-26_Import-User-Roles.md) — Import User Roles (create or update roles)
+- [RC-API-55 — Export User-Role Assignments API](RC-API-55_Export-User-Role-Assignments.md) — Export User-Role Assignments (see which users are assigned to which roles)
+- [RC-API-22 — Export Users API](RC-API-22_Export-Users.md) — Export Users (identify users and their permissions)

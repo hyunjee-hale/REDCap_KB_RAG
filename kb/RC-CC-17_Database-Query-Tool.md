@@ -1,8 +1,8 @@
-RC-CC-17
+[RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)
 
 **Database Query Tool**
 
-| **Article ID** | RC-CC-17 |
+| **Article ID** | [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-17
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-16 — Database Activity Monitor; RC-CC-15 — Top Usage Report |
+| **Related Topics** | [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor; [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report |
 
 ---
 
@@ -154,8 +154,8 @@ This tool requires super-user administrator access. Because it provides direct d
 
 # 10. Related Tools
 
-- **Database Activity Monitor (RC-CC-16)** — to see real-time database processes and identify long-running queries
-- **Top Usage Report (RC-CC-15)** — for pre-built usage statistics and analytics
+- **Database Activity Monitor ([RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md))** — to see real-time database processes and identify long-running queries
+- **Top Usage Report ([RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md))** — for pre-built usage statistics and analytics
 
 ---
 
@@ -193,6 +193,6 @@ The Database Query Tool displays results in a table on the page. You can select 
 
 # 13. Related Articles
 
-- RC-CC-16 — Database Activity Monitor
-- RC-CC-15 — Top Usage Report
-- RC-CC-21 — Control Center Overview
+- [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor
+- [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview

@@ -1,16 +1,16 @@
-RC-DE-04
+[RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md)
 
 **Editing Data & Audit Trail**
 
-| **Article ID** | RC-DE-04 |
+| **Article ID** | [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) |
 | --- | --- |
 | **Domain** | Data Entry |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-DE-02 — Basic Data Entry |
+| **Prerequisite** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-01 — Record Creation; RC-DE-02 — Basic Data Entry; RC-DE-03 — Longitudinal Projects & DAGs |
+| **Related Topics** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) — Record Creation; [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) |
 
 ---
 
@@ -237,18 +237,18 @@ rights.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-39 — Export Logging API** — programmatically retrieve the project audit log, including data change events, user actions, and timestamps
+- **[RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md)** — programmatically retrieve the project audit log, including data change events, user actions, and timestamps
 
 ---
 
 
 # 8. Related Articles
 
-- RC-DE-01 — Record Creation & the Record Home Page
+- [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md)
 
-- RC-DE-02 — Basic Data Entry (prerequisite — covers save options
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (prerequisite — covers save options
     and form navigation)
 
-- RC-DE-03 — Longitudinal Projects & Data Access Groups
+- [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) — Longitudinal Projects & Data Access Groups

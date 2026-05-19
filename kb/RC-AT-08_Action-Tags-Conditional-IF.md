@@ -1,16 +1,16 @@
-RC-AT-08
+[RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md)
 
 **Action Tags — @IF: Conditional Action Tag Logic**
 
-| **Article ID** | RC-AT-08 |
+| **Article ID** | [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview; familiarity with branching logic syntax |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; familiarity with branching logic syntax |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Action Tags Overview; RC-AT-02 — @HIDDEN & @READONLY; RC-AT-03 — Radio/Dropdown Action Tags; RC-AT-06 — Autofill Action Tags; RC-BL-01 — Branching Logic Overview |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) — @HIDDEN & @READONLY; [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Action Tags; [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview |
 
 ---
 
@@ -115,7 +115,7 @@ Multiple independent `@IF` tags can be placed on the same field, separated by sp
 
 **Not evaluated in real time.** The condition is checked once when the page loads. If a user changes a field value that the condition depends on, `@IF` will not re-evaluate until the page is reloaded.
 
-**Do not use @CALCTEXT or @CALCDATE inside @IF.** The calculation action tags operate in contexts (real-time recalculation, data import, Data Quality rules) that `@IF` does not. Placing them inside an `@IF` branch produces unexpected results. See RC-AT-09 for guidance on calculation tags.
+**Do not use @CALCTEXT or @CALCDATE inside @IF.** The calculation action tags operate in contexts (real-time recalculation, data import, Data Quality rules) that `@IF` does not. Placing them inside an `@IF` branch produces unexpected results. See [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) for guidance on calculation tags.
 
 **Avoid complex nesting.** Deeply nested `@IF` statements are difficult to read and maintain. If logic becomes complex, consider restructuring the project design or using branching logic to control field visibility separately.
 
@@ -155,9 +155,9 @@ Multiple independent `@IF` tags can be placed on the same field, separated by sp
 
 # 9. Related Articles
 
-- RC-AT-01 — Action Tags Overview: what action tags are and how to add them
-- RC-AT-02 — @HIDDEN & @READONLY: commonly used inside @IF branches
-- RC-AT-03 — Radio/Dropdown Action Tags: `@HIDECHOICE` and `@SHOWCHOICE` support piping and @IF
-- RC-AT-06 — Autofill Action Tags: autofill tags can be applied conditionally via @IF
-- RC-AT-09 — Calculation Action Tags: @CALCTEXT and @CALCDATE; do not nest inside @IF
-- RC-BL-01 — Branching Logic Overview: condition syntax is the same as branching logic
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview: what action tags are and how to add them
+- [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) — @HIDDEN & @READONLY: commonly used inside @IF branches
+- [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Action Tags: `@HIDECHOICE` and `@SHOWCHOICE` support piping and @IF
+- [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md): autofill tags can be applied conditionally via @IF
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Calculation Action Tags: @CALCTEXT and @CALCDATE; do not nest inside @IF
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview: condition syntax is the same as branching logic

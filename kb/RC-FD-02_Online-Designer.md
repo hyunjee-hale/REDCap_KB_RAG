@@ -1,16 +1,16 @@
-RC-FD-02
+[RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
 
 **Online Designer**
 
-| **Article ID** | RC-FD-02 |
+| **Article ID** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-01 — Form Design Overview |
+| **Prerequisite** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-01 — Form Design Overview; RC-FD-03 — Data Dictionary; RC-FD-05 — Codebook; RC-SURV-01 — Surveys – Basics; RC-SURV-02 — Survey Settings: Basic Options & Design |
+| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-FD-05 — Codebook](RC-FD-05_Codebook.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) |
 
 ---
 
@@ -89,9 +89,9 @@ to the research team.
 - Delete an instrument (only if it contains no data).
 
 - Export an instrument as a zip file for backup or reuse (see
-    RC-FD-04).
+    [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)).
 
-- Import an instrument from a zip file (see RC-FD-04).
+- Import an instrument from a zip file (see [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)).
 
 ## 4.2 Variable-Level Actions
 
@@ -113,11 +113,11 @@ to the research team.
 
 When surveys are enabled for the project, a **Survey options** section appears at the top of the Online Designer instrument list. These are project-wide controls — they apply across all surveys, not to a single instrument. The section contains the following buttons:
 
-- **e-Consent** — Enable and configure the e-Consent Framework (see RC-SURV-08).
-- **Survey Queue** — Configure the Survey Queue, which controls the order and conditions under which surveys are presented to participants after completing a prior survey. Includes a dropdown for bulk import/export of Survey Queue settings via CSV (see RC-SURV-07).
+- **e-Consent** — Enable and configure the e-Consent Framework (see [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md)).
+- **Survey Queue** — Configure the Survey Queue, which controls the order and conditions under which surveys are presented to participants after completing a prior survey. Includes a dropdown for bulk import/export of Survey Queue settings via CSV (see [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md)).
 - **Auto Invitation options** — Bulk upload or download Automated Invitation settings across all surveys as a CSV file.
-- **Survey Login** — Configure survey login (password protection) for the project (see RC-SURV-10).
-- **Survey Notifications** — Select a project user to receive a notification email each time each survey is completed. Settings apply per survey. See RC-SURV-02 for details.
+- **Survey Login** — Configure survey login (password protection) for the project (see [RC-SURV-10 — Survey Login](RC-SURV-10_Survey-Login.md)).
+- **Survey Notifications** — Select a project user to receive a notification email each time each survey is completed. Settings apply per survey. See [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) for details.
 - **Survey Settings** — Bulk import or export Survey Settings for all instruments at once via CSV.
 
 These project-level buttons are distinct from the per-instrument buttons that appear in the instrument row when an instrument has been enabled as a survey. Each instrument row has its own **Survey settings** button (which opens the Survey Settings page for that instrument) and an **Automated Invitations** button (which configures the ASI for that specific instrument).
@@ -125,10 +125,10 @@ These project-level buttons are distinct from the per-instrument buttons that ap
 ## 4.4 What the Online Designer Cannot Do
 
 - Split one instrument into two or more instruments — use the Data
-    Dictionary for this (RC-FD-03).
+    Dictionary for this ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)).
 
 - Edit many variables at once — use the Data Dictionary for bulk
-    edits (RC-FD-03).
+    edits ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)).
 
 - Bypass the Production mode change queue — all changes in
     Production require review.
@@ -146,7 +146,7 @@ These project-level buttons are distinct from the per-instrument buttons that ap
 | Rollback | Re-edit or re-upload a saved Data Dictionary | Cancel before approval; no rollback after approval |
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** The level of automatic approvals in Production mode is set centrally by your institution\'s REDCap support team. Some institutions allow minor changes (adding a new field) to be auto-approved, while others require administrator review for any change. For this installation\'s specific policy, see **RC-INST-01 — Institution-Specific Settings & Policies, Section 4: Draft Mode Approval Policy**.
+  **Important:** The level of automatic approvals in Production mode is set centrally by your institution\'s REDCap support team. Some institutions allow minor changes (adding a new field) to be auto-approved, while others require administrator review for any change. For this installation\'s specific policy, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 4: Draft Mode Approval Policy**.
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---
@@ -168,7 +168,7 @@ The Online Designer is the right tool in these situations:
     build it — the Online Designer shows a live rendering of the
     form.*
 
-Consider switching to the Data Dictionary (RC-FD-03) when:
+Consider switching to the Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)) when:
 
 - You need to define a large number of variables at once.
 
@@ -260,29 +260,29 @@ significant change is critical.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-07 — Export Metadata (Data Dictionary) API** — retrieve the full data dictionary that the Online Designer manages
-- **RC-API-08 — Import Metadata (Data Dictionary) API** — push a new or updated data dictionary programmatically, bypassing the Online Designer
-- **RC-API-09 — Export Instruments API** — retrieve the list of instrument names and labels programmatically
+- **[RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)** — retrieve the full data dictionary that the Online Designer manages
+- **[RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)** — push a new or updated data dictionary programmatically, bypassing the Online Designer
+- **[RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)** — retrieve the list of instrument names and labels programmatically
 
 ---
 
 
 # 9. Related Articles
 
-- RC-FD-01 — Form Design Overview (prerequisite — covers
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite — covers
     navigation and tool selection)
 
-- RC-FD-03 — Data Dictionary (the alternative tool for bulk and
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the alternative tool for bulk and
     advanced changes)
 
-- RC-FD-04 — Instrument Library & Zip Files (importing and exporting
+- [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) (importing and exporting
     instruments from within the Online Designer)
 
-- RC-FD-05 — Codebook (read-only reference companion to the Online
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (read-only reference companion to the Online
     Designer)
 
-- RC-SURV-01 — Surveys – Basics (enabling surveys and the survey setup workflow)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (enabling surveys and the survey setup workflow)
 
-- RC-SURV-02 — Survey Settings: Basic Options & Design (Survey Settings page and Survey Notifications)
+- [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) (Survey Settings page and Survey Notifications)

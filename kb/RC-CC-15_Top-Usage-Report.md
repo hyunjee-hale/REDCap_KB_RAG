@@ -1,8 +1,8 @@
-RC-CC-15
+[RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)
 
 **Top Usage Report**
 
-| **Article ID** | RC-CC-15 |
+| **Article ID** | [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-15
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-12 — User Activity Log; RC-CC-13 — User Activity Graphs; RC-CC-14 — Map of Users; RC-CC-16 — Database Activity Monitor |
+| **Related Topics** | [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs; [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users; [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor |
 
 ---
 
@@ -72,10 +72,10 @@ The report surfaces the "top" entries across multiple categories:
 
 The Top Usage Report is one of several tools available for performance monitoring:
 
-- **Database Activity Monitor (RC-CC-16)** — For real-time database-level performance and query analysis
-- **User Activity Log (RC-CC-12)** — For detailed system-wide user action logs and audit trails
-- **User Activity Graphs (RC-CC-13)** — For visual trends in user activity over time
-- **Map of Users (RC-CC-14)** — For geographic visualization of user access patterns
+- **Database Activity Monitor ([RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md))** — For real-time database-level performance and query analysis
+- **User Activity Log ([RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md))** — For detailed system-wide user action logs and audit trails
+- **User Activity Graphs ([RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md))** — For visual trends in user activity over time
+- **Map of Users ([RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md))** — For geographic visualization of user access patterns
 
 Together, these tools provide multiple perspectives on REDCap system performance and usage.
 
@@ -112,8 +112,8 @@ No. The report tracks many HTTP requests but not all. For a complete record of a
 
 # 9. Related Articles
 
-- RC-CC-12 — User Activity Log
-- RC-CC-13 — User Activity Graphs
-- RC-CC-14 — Map of Users
-- RC-CC-16 — Database Activity Monitor
-- RC-CC-21 — Control Center Overview
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs
+- [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users
+- [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview

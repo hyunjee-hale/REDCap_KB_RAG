@@ -1,8 +1,8 @@
-RC-CC-18
+[RC-CC-18 — Control Center: Custom Application Links](RC-CC-18_Custom-Application-Links.md)
 
 **Control Center: Custom Application Links**
 
-| **Article ID** | RC-CC-18 |
+| **Article ID** | [RC-CC-18 — Control Center: Custom Application Links](RC-CC-18_Custom-Application-Links.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-18
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-21 — Control Center Overview; RC-CC-06 — Modules & Services Configuration; RC-API-01 — REDCap API |
+| **Related Topics** | [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview; [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -163,6 +163,6 @@ No. The external site can be anywhere, as long as it is accessible over the inte
 
 # 8. Related Articles
 
-- RC-CC-21 — Control Center Overview
-- RC-CC-06 — Modules & Services Configuration
-- RC-API-01 — REDCap API
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)

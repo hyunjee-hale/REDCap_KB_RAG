@@ -1,8 +1,8 @@
-RC-FD-01
+[RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md)
 
 **Form Design Overview**
 
-| **Article ID** | RC-FD-01 |
+| **Article ID** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
@@ -10,7 +10,7 @@ RC-FD-01
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-02 — Online Designer; RC-FD-03 — Data Dictionary; RC-FD-04 — Instrument Library & Zip Files; RC-FD-05 — Codebook; RC-NAV-UI-01 — Project Navigation UI; RC-NAV-UI-02 — Project Menu Reference |
+| **Related Topics** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md); [RC-FD-05 — Codebook](RC-FD-05_Codebook.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -93,9 +93,9 @@ cover each tool in detail.
 
   --------------------------- ----------------------------------------------------------------------------------------- -------------
   **Tool**                    **Best For**                                                                              **Article**
-  Online Designer             Beginners; making a small number of changes; wanting immediate visual feedback            RC-FD-02
-  Data Dictionary             Advanced users; defining many variables at once; splitting or restructuring instruments   RC-FD-03
-  REDCap Instrument Library   Importing validated or community-contributed instruments (e.g., PHQ-9)                    RC-FD-04
+  Online Designer             Beginners; making a small number of changes; wanting immediate visual feedback            [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
+  Data Dictionary             Advanced users; defining many variables at once; splitting or restructuring instruments   [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
+  REDCap Instrument Library   Importing validated or community-contributed instruments (e.g., PHQ-9)                    [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)
   --------------------------- ----------------------------------------------------------------------------------------- -------------
 
 ---
@@ -112,7 +112,7 @@ submissions, and offline review of your project\'s structure.
 
 Downloads the project\'s current instrument and variable definitions as
 a CSV file. This is the same format used by the Data Dictionary upload
-tool (RC-FD-03). Downloading the current Data Dictionary before making
+tool ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)). Downloading the current Data Dictionary before making
 bulk changes is a critical safety practice — it serves as a snapshot
 that can be re-uploaded to undo a bad import.
 
@@ -128,13 +128,13 @@ within the Online Designer.
 
 Instruments can be exported as zip files and re-imported into the same
 or a different REDCap project. This feature is accessed from within the
-Online Designer. See RC-FD-04 for full details.
+Online Designer. See [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) for full details.
 
 ## 5.5 Codebook
 
 A read-only, human-readable summary of all instruments and variables in
 the project. Useful as a reference while designing instruments or
-writing logic. Accessible from the left-hand menu. See RC-FD-05 for full
+writing logic. Accessible from the left-hand menu. See [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) for full
 details.
 
 ## 5.6 Project Setup Progress Indicators
@@ -167,13 +167,13 @@ details on each tool, see the linked articles.
 
   ----------------------------------------------------------------------- -------------------------------------------------------------
   **Task**                                                                **Recommended Tool**
-  Create your first instrument or add a few fields                        Online Designer (RC-FD-02)
-  Build or restructure many variables or instruments at once              Data Dictionary (RC-FD-03)
-  Split one instrument into two                                           Data Dictionary (RC-FD-03)
-  Import a validated clinical scale (e.g., PHQ-9, GAD-7)                  Instrument Library (RC-FD-04)
-  Reuse an instrument from another project                                Zip File import (RC-FD-04)
-  Back up your instrument definitions before a major change               Download Data Dictionary or Zip File export (RC-FD-04)
-  Review all variables and their attributes in a readable format          Codebook (RC-FD-05)
+  Create your first instrument or add a few fields                        Online Designer ([RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md))
+  Build or restructure many variables or instruments at once              Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md))
+  Split one instrument into two                                           Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md))
+  Import a validated clinical scale (e.g., PHQ-9, GAD-7)                  Instrument Library ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
+  Reuse an instrument from another project                                Zip File import ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
+  Back up your instrument definitions before a major change               Download Data Dictionary or Zip File export ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
+  Review all variables and their attributes in a readable format          Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md))
   Check or update which variables are flagged as identifiers              Check for Identifiers (this article, Section 5.3)
   Generate a PDF of all instruments for documentation or IRB submission   Download PDF of All Instruments (this article, Section 5.1)
   ----------------------------------------------------------------------- -------------------------------------------------------------
@@ -254,25 +254,25 @@ through those buttons directly.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-07 — Export Metadata (Data Dictionary) API** — retrieve the full project data dictionary programmatically
-- **RC-API-08 — Import Metadata (Data Dictionary) API** — push a new or updated data dictionary to a project programmatically
-- **RC-API-09 — Export Instruments API** — retrieve the list of instruments (forms) in a project programmatically
+- **[RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)** — retrieve the full project data dictionary programmatically
+- **[RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)** — push a new or updated data dictionary to a project programmatically
+- **[RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)** — retrieve the list of instruments (forms) in a project programmatically
 
 ---
 
 
 # 9. Related Articles
 
-- RC-FD-02 — Online Designer
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
 
-- RC-FD-03 — Data Dictionary
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
 
-- RC-FD-04 — Instrument Library & Zip Files
+- [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)
 
-- RC-FD-05 — Codebook
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md)
 
-- RC-NAV-UI-01 — Project Navigation UI (the Designer, Dictionary, and Code Book links are in the Project Home and Design menu section)
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) (the Designer, Dictionary, and Code Book links are in the Project Home and Design menu section)
 
-- RC-NAV-UI-02 — Project Menu Reference (full reference for the Project Home and Design menu items that lead to these form design tools)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (full reference for the Project Home and Design menu items that lead to these form design tools)

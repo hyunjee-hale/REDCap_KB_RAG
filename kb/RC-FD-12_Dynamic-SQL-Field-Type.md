@@ -1,16 +1,16 @@
-RC-FD-12
+[RC-FD-12 — Dynamic SQL Field Type](RC-FD-12_Dynamic-SQL-Field-Type.md)
 
 **Dynamic SQL Field Type**
 
-| **Article ID** | RC-FD-12 |
+| **Article ID** | [RC-FD-12 — Dynamic SQL Field Type](RC-FD-12_Dynamic-SQL-Field-Type.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires REDCap administrator access to create or modify |
-| **Prerequisite** | RC-FD-01 — Form Design Overview; RC-FD-03 — Data Dictionary |
+| **Prerequisite** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques; RC-CC-17 — Control Center: Database Query Tool |
+| **Related Topics** | [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md); [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md) |
 
 ---
 
@@ -71,7 +71,7 @@ Creating or modifying a DSQL field requires REDCap administrator access. This re
 
 Writing a DSQL query requires knowledge of the REDCap backend database schema and SQL skills. The administrator must know which tables to query, what the relevant field names are, and how to join tables correctly. REDCap's database structure is stable across minor versions, but administrators should validate queries after major REDCap version upgrades.
 
-The Control Center Database Query Tool (RC-CC-17) can be used to test and validate queries before embedding them in a DSQL field.
+The Control Center Database Query Tool ([RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)) can be used to test and validate queries before embedding them in a DSQL field.
 
 ---
 
@@ -182,7 +182,7 @@ AND field_name = 'your_field_name'
 ORDER BY value;
 ```
 
-> **Cross-reference:** See RC-PIPE-03 — Smart Variables Overview for a full reference on available smart variables and their syntax.
+> **Cross-reference:** See [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) for a full reference on available smart variables and their syntax.
 
 ---
 
@@ -276,7 +276,7 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 **Use indexes where possible.** If a DSQL is querying a custom lookup table, ensure the table is indexed on the columns used in the `WHERE` and `JOIN` clauses. REDCap's own tables (`redcap_data`) are indexed on `project_id` and `field_name`, which is why filtering on both is important.
 
-**Test query performance before deploying.** Use the Database Query Tool (RC-CC-17) to run the query and review execution time before embedding it in a production project.
+**Test query performance before deploying.** Use the Database Query Tool ([RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)) to run the query and review execution time before embedding it in a production project.
 
 ---
 
@@ -340,9 +340,9 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 # 10. Related Articles
 
-- RC-FD-01 — Form Design Overview (field type selection and form design tools)
-- RC-FD-03 — Data Dictionary (Data Dictionary upload workflow and safety practices)
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques (full column reference; notes on the `sql` field type code)
-- RC-CC-17 — Control Center: Database Query Tool (tool for testing SQL queries before embedding them in a DSQL field)
-- RC-DE-02 — Basic Data Entry (how dropdown fields behave during data entry, including auto-complete)
-- RC-PIPE-03 — Smart Variables Overview (full reference for smart variables usable in DSQL queries)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (field type selection and form design tools)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (Data Dictionary upload workflow and safety practices)
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (full column reference; notes on the `sql` field type code)
+- [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md) (tool for testing SQL queries before embedding them in a DSQL field)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (how dropdown fields behave during data entry, including auto-complete)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (full reference for smart variables usable in DSQL queries)

@@ -1,17 +1,17 @@
-RC-API-10
+[RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)
 
 **Export Instrument-Event Mappings API**
 
-| **Article ID** | RC-API-10 |
+| **Article ID** | [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | Longitudinal REDCap projects only |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-09 — Export Instruments; RC-API-11 — Import Instrument-Event Mappings; RC-API-20 — Import Events |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) — Import Instrument-Event Mappings; [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events |
 | **Important** | **Longitudinal projects only** — This method is only available for longitudinal projects (projects with multiple arms and/or repeating events). Classic projects do not have instrument-event mappings. |
 
 ---
@@ -28,7 +28,7 @@ When to use this method: When you need to understand the instrument-event struct
 
 - **Longitudinal Only:** This method only works with longitudinal projects. If you use it on a classic (non-longitudinal) project, it returns an error or empty result.
 - **Requires API Export Right:** You must have API Export permission on the project.
-- **Read-Only:** This method only exports mappings. To modify mappings, use RC-API-11 (Import Instrument-Event Mappings).
+- **Read-Only:** This method only exports mappings. To modify mappings, use [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) (Import Instrument-Event Mappings).
 
 ---
 
@@ -129,7 +129,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -175,7 +175,7 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 **Q: Can I modify mappings using this API?**
 
-**A:** No, this method is read-only. To modify instrument-event mappings, use RC-API-11 (Import Instrument-Event Mappings).
+**A:** No, this method is read-only. To modify instrument-event mappings, use [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) (Import Instrument-Event Mappings).
 
 **Q: How do repeating instruments appear in this output?**
 
@@ -183,11 +183,11 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 **Q: What is unique_event_name?**
 
-**A:** The unique_event_name is the REDCap-generated unique identifier for an event. It's typically in the format "event_name_arm_X" and is used in API calls when specifying events (e.g., in the `events` parameter of RC-API-02).
+**A:** The unique_event_name is the REDCap-generated unique identifier for an event. It's typically in the format "event_name_arm_X" and is used in API calls when specifying events (e.g., in the `events` parameter of [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)).
 
 **Q: Can I use this to clone a longitudinal project's structure?**
 
-**A:** Yes. Export the mappings from the source project, export events (RC-API-20), export instruments (RC-API-09), and export metadata (RC-API-07). Use these to recreate the structure in a new project.
+**A:** Yes. Export the mappings from the source project, export events ([RC-API-20 — Import Events API](RC-API-20_Import-Events.md)), export instruments ([RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)), and export metadata ([RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)). Use these to recreate the structure in a new project.
 
 **Q: Can I retrieve mappings for just one arm instead of all arms?**
 
@@ -213,9 +213,9 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-09 — Export Instruments (list available instruments)
-- RC-API-11 — Import Instrument-Event Mappings (modify the mappings)
-- RC-API-20 — Import Events (create or update events)
-- RC-LONG-01 — Longitudinal Project Setup (how arms and events are configured; instrument-event mapping context)
-- RC-LONG-02 — Repeated Instruments & Events Setup (how repeating instruments affect event mappings)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (list available instruments)
+- [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) — Import Instrument-Event Mappings (modify the mappings)
+- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events (create or update events)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (how arms and events are configured; instrument-event mapping context)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (how repeating instruments affect event mappings)

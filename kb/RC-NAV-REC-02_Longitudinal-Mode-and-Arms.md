@@ -1,16 +1,16 @@
-RC-NAV-REC-02
+[RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md)
 
 **Longitudinal Mode and Arms**
 
-| **Article ID** | RC-NAV-REC-02 |
+| **Article ID** | [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md) |
 | --- | --- |
 | **Domain** | Record Navigation |
 | **Applies To** | Longitudinal projects |
-| **Prerequisite** | RC-NAV-REC-01 — Record Navigation Overview |
+| **Prerequisite** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-NAV-REC-01 — Record Navigation Overview, RC-NAV-REC-03 — Repeated Instruments & Events, RC-NAV-REC-04 — Record Status Dashboard & Other Record Links, RC-NAV-UI-01 — Project Navigation UI, RC-LONG-01 — Longitudinal Project Setup, RC-DE-03 — Longitudinal Projects and DAGs, RC-DE-10 — Longitudinal and Repeated Data Entry |
+| **Related Topics** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) — Repeated Instruments & Events, [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md), [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md), [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) — Longitudinal Projects and DAGs, [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) — Longitudinal and Repeated Data Entry |
 
 ---
 
@@ -150,24 +150,24 @@ Records only appear in the arm they belong to.
 
 # 7. Related Articles
 
-- RC-NAV-REC-01 — Record Navigation Overview — foundational article
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering navigation paths and instrument status dots
 
-- RC-NAV-REC-03 — Repeated Instruments & Repeated Events — how
+- [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) — how
     stacked dots and repeated columns work alongside longitudinal mode
 
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links —
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) —
     the arm tabs and event grid on the dashboard
 
-- RC-NAV-UI-01 — Project Navigation UI — the two-panel layout
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) — the two-panel layout
     and menu that contains the longitudinal navigation entry points
 
-- RC-LONG-01 — Longitudinal Project Setup — how to configure events,
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) — how to configure events,
     arms, and instrument-event mappings; the setup side of what this
     article covers from a navigation perspective
 
-- RC-DE-03 — Longitudinal Projects and DAGs — data entry workflow
+- [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) — Longitudinal Projects and DAGs — data entry workflow
     specific to longitudinal projects with events and arms
 
-- RC-DE-10 — Longitudinal & Repeated Data Entry — detailed data
+- [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) — detailed data
     entry procedures for events and repeated instruments

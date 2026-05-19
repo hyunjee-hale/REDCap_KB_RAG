@@ -1,16 +1,16 @@
-RC-DDP-02
+[RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md)
 
 **Dynamic Data Pull (DDP) — Admin Setup & Technical Specs**
 
-| **Article ID** | RC-DDP-02 |
+| **Article ID** | [RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md) |
 |---|---|
 | **Domain** | Integration — Dynamic Data Pull |
 | **Applies To** | REDCap Administrators |
-| **Prerequisite** | RC-DDP-01 — Dynamic Data Pull: Overview & User Guide |
+| **Prerequisite** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — Dynamic Data Pull: Overview & User Guide |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DDP-01 — DDP Overview & User Guide; RC-INTG-01 — Data Entry Trigger |
+| **Related Topics** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — DDP Overview & User Guide; [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) |
 
 ---
 
@@ -18,7 +18,7 @@ RC-DDP-02
 
 This article covers everything a REDCap Administrator needs to configure and enable the Dynamic Data Pull (DDP). It includes the Control Center settings, descriptions of all configurable options, and the full technical specifications for the web services that must be built and hosted by the institution to support the DDP.
 
-For an explanation of the DDP from a user perspective (field mapping, adjudication, etc.), see **RC-DDP-01**.
+For an explanation of the DDP from a user perspective (field mapping, adjudication, etc.), see **[RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)**.
 
 ---
 
@@ -315,6 +315,6 @@ After system-level DDP configuration is complete:
 
 # 8. Related Articles
 
-- RC-DDP-01 — Dynamic Data Pull: Overview & User Guide (user-facing concepts, mapping, adjudication)
-- RC-INTG-01 — Data Entry Trigger (related integration pattern using HTTP POST)
-- RC-USER-02 — User Rights: Adding Users and Managing Roles (DDP privilege assignment)
+- [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — Dynamic Data Pull: Overview & User Guide (user-facing concepts, mapping, adjudication)
+- [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (related integration pattern using HTTP POST)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights: Adding Users and Managing Roles (DDP privilege assignment)

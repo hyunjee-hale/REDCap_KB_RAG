@@ -1,8 +1,8 @@
-RC-PLUS-01
+[RC-PLUS-01 — REDCap+: Overview and Subscription](RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md)
 
 **REDCap+: Overview and Subscription**
 
-| **Article ID** | RC-PLUS-01 |
+| **Article ID** | [RC-PLUS-01 — REDCap+: Overview and Subscription](RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md) |
 | --- | --- |
 | **Domain** | REDCap+ |
 | **Applies To** | REDCap Administrators; REDCap Licensed Institutions; REDCap v17.0.0+ |
@@ -10,7 +10,7 @@ RC-PLUS-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026-04 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PLUS-02 — Project Migration Tool *(planned)*; RC-CC-01 — Control Center Overview |
+| **Related Topics** | RC-PLUS-02 — Project Migration Tool *(planned)*; [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Control Center Overview |
 
 ---
 
@@ -174,7 +174,7 @@ Because REDCap+ is an additive, subscription-based tier, **any KB article descri
 
 This tagging approach ensures that users who encounter a feature article know upfront whether it requires a paid subscription. Articles covering REDCap Core features that have no REDCap+ dependency do not need this tag.
 
-As new REDCap+ features are documented (e.g., the Project Migration Tool, REDCap Rewards, REDCap SHARE), each article should open with this tag block and reference RC-PLUS-01 as the parent article for subscription context.
+As new REDCap+ features are documented (e.g., the Project Migration Tool, REDCap Rewards, REDCap SHARE), each article should open with this tag block and reference [RC-PLUS-01 — REDCap+: Overview and Subscription](RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md) as the parent article for subscription context.
 
 ---
 
@@ -203,5 +203,5 @@ No. REDCap+ subscribers have full discretion over the types of research and oper
 # 10. Related Articles
 
 - RC-PLUS-02 — Project Migration Tool *(planned)* (moving projects between REDCap installations)
-- RC-CC-03 — Control Center: Security & Authentication Configuration (system-level admin configuration)
-- RC-EM-01 — External Modules: Overview & Control Center Manager (analogous subscription-based add-on model for context)
+- [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) Configuration (system-level admin configuration)
+- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules: Overview & Control Center Manager (analogous subscription-based add-on model for context)

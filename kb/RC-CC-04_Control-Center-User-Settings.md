@@ -1,8 +1,8 @@
-RC-CC-04
+[RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)
 
 **Control Center: User Settings & Defaults**
 
-| **Article ID** | RC-CC-04 |
+| **Article ID** | [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-04
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-02 — General Configuration; RC-CC-07 — Users & Access Management; RC-INST-01 — Institution-Specific Settings & Policies; RC-PROJ-01 — Project Lifecycle; RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Related Topics** | [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration; [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) — Users & Access Management; [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies; [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle; [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 
 ---
 
@@ -53,7 +53,7 @@ Presents a public REDCap survey to users when they perform certain project lifec
 
 Surveys must be one-page public surveys and cannot use Survey Queue, Auto-Continue, or Redirect features. Administrators are exempt from completing these surveys. If a field named `project_id` exists in the survey project, REDCap will automatically populate it with the PID of the project being transitioned, allowing cross-referencing of survey responses to projects.
 
-> See RC-PROJ-01 for context on project lifecycle statuses.
+> See [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) for context on project lifecycle statuses.
 
 ---
 
@@ -236,8 +236,8 @@ Restricting to institutional domains (e.g., `university.edu`) limits account cre
 
 # 4. Related Articles
 
-- RC-CC-02 — Control Center: General Configuration (system-wide settings and email configuration)
-- RC-CC-03 — Control Center: Security & Authentication (authentication and login settings affecting user accounts)
-- RC-CC-07 — Control Center: Users & Access Management (user account browsing, suspension, and management)
-- RC-PROJ-01 — Project Lifecycle (project status transitions and requirements)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (user privilege concepts and project-level access)
+- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — Control Center: General Configuration (system-wide settings and email configuration)
+- [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (authentication and login settings affecting user accounts)
+- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) (user account browsing, suspension, and management)
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle (project status transitions and requirements)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (user privilege concepts and project-level access)

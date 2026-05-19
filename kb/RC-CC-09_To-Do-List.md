@@ -1,8 +1,8 @@
-RC-CC-09
+[RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)
 
 **To-Do List**
 
-| **Article ID** | RC-CC-09 |
+| **Article ID** | [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-09
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-01 — Notifications & Reporting; RC-PROJ-01 — Project Lifecycle: Status and Settings |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) |
 
 ---
 
@@ -88,7 +88,7 @@ The To-Do List is tightly integrated with REDCap's Production mode workflow.
 5. The administrator reviews and approves or rejects the changes
 6. The changes take effect (if approved) or are returned for revision (if rejected)
 
-This workflow ensures that production projects remain stable and that all design modifications are intentionally reviewed and approved before implementation. See RC-PROJ-01 for detailed information on Production mode and the draft change process.
+This workflow ensures that production projects remain stable and that all design modifications are intentionally reviewed and approved before implementation. See [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) for detailed information on Production mode and the draft change process.
 
 ---
 
@@ -128,5 +128,5 @@ Tasks are generated automatically by REDCap when specific actions occur (such as
 
 # 9. Related Articles
 
-- RC-CC-01 — Notifications & Reporting
-- RC-PROJ-01 — Project Lifecycle: Status and Settings
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)

@@ -1,17 +1,17 @@
-RC-API-39
+[RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md)
 
 **Export Logging API**
 
-| **Article ID** | RC-API-39 |
+| **Article ID** | [RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -156,7 +156,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -222,5 +222,5 @@ The API returns an array of log entries with action details:
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-DE-04 — Editing Data & Audit Trail (the audit trail that this method exports programmatically)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (the audit trail that this method exports programmatically)

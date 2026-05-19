@@ -1,16 +1,16 @@
-RC-FD-07
+[RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md)
 
 **Field Embedding**
 
-| **Article ID** | RC-FD-07 |
+| **Article ID** | [RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md) |
 |---|---|
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; works on both instruments and surveys; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-02 — Online Designer |
+| **Prerequisite** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 | **Version** | 1.3 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-02 — Online Designer; RC-FD-06 — Online Designer Instrument and Field Management; RC-BL-01 — Branching Logic Overview & Scope |
+| **Related Topics** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer Instrument and Field Management; [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
 
 ---
 
@@ -46,7 +46,7 @@ The editor available within a descriptive field's label that allows HTML content
 
 An action tag that displays hint text inside an empty text-box field — similar to the grayed-out placeholder text in a web form. When a field is embedded inline (for example, next to a choice label), @PLACEHOLDER helps users understand what to enter without a separate visible label cluttering the layout.
 
-> **Note:** Action tags are special keywords beginning with `@` that modify field behavior. They are entered in the **Action Tags / Field Annotation** section of the field edit dialog. See RC-AT-01 — Action Tags: Overview for a full reference.
+> **Note:** Action tags are special keywords beginning with `@` that modify field behavior. They are entered in the **Action Tags / Field Annotation** section of the field edit dialog. See [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) for a full reference.
 
 ---
 
@@ -236,9 +236,9 @@ Large demographics sections are often split across two or more descriptive field
 
 # 8. Related Articles
 
-- RC-FD-02 — Online Designer (the tool used to create fields and configure embedding)
-- RC-FD-06 — Online Designer Instrument and Field Management (managing field order and instrument structure)
-- RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design (real-world patterns including approval workflows and email preview instruments)
-- RC-BL-01 — Branching Logic Overview & Scope (frequently used alongside field embedding to control field visibility)
-- RC-BL-02 — Branching Logic Syntax & Atomic Statements (writing the logic conditions used with embedded fields)
-- RC-AT-01 — Action Tags: Overview (covers @PLACEHOLDER and other action tags used to refine embedded field behavior)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the tool used to create fields and configure embedding)
+- [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer Instrument and Field Management (managing field order and instrument structure)
+- [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md) (real-world patterns including approval workflows and email preview instruments)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (frequently used alongside field embedding to control field visibility)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Branching Logic Syntax & Atomic Statements (writing the logic conditions used with embedded fields)
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) (covers @PLACEHOLDER and other action tags used to refine embedded field behavior)

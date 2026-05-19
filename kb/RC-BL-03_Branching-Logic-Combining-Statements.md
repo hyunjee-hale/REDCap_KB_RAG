@@ -1,16 +1,16 @@
-RC-BL-03
+[RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)
 
 **Branching Logic — Combining Statements**
 
-| **Article ID** | RC-BL-03 |
+| **Article ID** | [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) |
 | --- | --- |
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-BL-02 — Syntax & Atomic Statements |
+| **Prerequisite** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-02 — Syntax & Atomic Statements; RC-BL-04 — Structured Fields; RC-BL-01 — Overview |
+| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements; [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Structured Fields; [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Overview |
 
 ---
 
@@ -163,7 +163,7 @@ checked:
 |                                                                      |
 | // True when at least one of the three conditions is checked         |
 |                                                                      |
-| // (Checkbox syntax is covered fully in RC-BL-04)                    |
+| // (Checkbox syntax is covered fully in [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md))                    |
 +----------------------------------------------------------------------+
 
 ## 4.4 Always-True OR Statements
@@ -363,8 +363,8 @@ to\'.
 
 # 9. Related Articles
 
-- RC-BL-02 — Syntax & Atomic Statements (prerequisite)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements (prerequisite)
 
-- RC-BL-04 — Branching Logic for Structured Fields & Checkboxes
+- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Branching Logic for Structured Fields & Checkboxes
 
-- RC-BL-01 — Branching Logic Overview & Scope
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope

@@ -1,17 +1,17 @@
-RC-API-46
+[RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)
 
 **List Files and Folders (File Repository) API**
 
-| **Article ID** | RC-API-46 |
+| **Article ID** | [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects (all types) |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-45 — Create Folder (File Repository) API; RC-API-12 — Export File; RC-API-13 — Import File; RC-API-14 — Delete File; RC-DAG-01 — Data Access Groups; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File; [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File; [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -171,7 +171,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -216,7 +216,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **Q: What's the difference between `folder_id` and `doc_id` in the response?**
 
-**A:** `folder_id` identifies a sub-folder — you can pass it back into this method to list **its** contents, or use it as the parent in Create Folder (RC-API-45). `doc_id` identifies an individual file in the File Repository — you can use it with other File Repository API methods (export, delete) to act on that file.
+**A:** `folder_id` identifies a sub-folder — you can pass it back into this method to list **its** contents, or use it as the parent in Create Folder ([RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md)). `doc_id` identifies an individual file in the File Repository — you can use it with other File Repository API methods (export, delete) to act on that file.
 
 **Q: I see `role` and `dag` on some folder entries but not others. Why?**
 
@@ -230,7 +230,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **A:** Folder visibility in the API respects the same access rules as the web interface. If your API token's owner does not have access to a restricted folder, that folder will not appear in the listing. Make sure the token belongs to a user with appropriate DAG and User Role assignments before relying on this method for an audit.
 
-**Q: How can I find the `folder_id` of a folder I just created with RC-API-45?**
+**Q: How can I find the `folder_id` of a folder I just created with [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md)?**
 
 **A:** The Create Folder method returns the `folder_id` directly in its response. You can also call List (this method) on the parent folder after creation to confirm the new folder appears and to capture its `folder_id`.
 
@@ -242,7 +242,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **Confusing `folder_id` and `doc_id`.** These are distinct identifier spaces. Passing a `doc_id` as `folder_id` (or vice versa) will either error or return the wrong thing. Check which field your target entry came from in the response.
 
-**Using the wrong permission type.** This is an **Export** method and requires API Export privileges — unlike Create Folder (RC-API-45), which needs API Import/Update. Tokens with Import/Update rights but not Export rights will be denied, even if the user owning the token can view the File Repository in the web UI.
+**Using the wrong permission type.** This is an **Export** method and requires API Export privileges — unlike Create Folder ([RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md)), which needs API Import/Update. Tokens with Import/Update rights but not Export rights will be denied, even if the user owning the token can view the File Repository in the web UI.
 
 **Assuming `role` and `dag` fields always appear.** Your code should treat these fields as **optional** in each folder entry. Only restricted folders include them. Looking them up unconditionally (e.g., `folder['role']`) will raise a KeyError on unrestricted folders.
 
@@ -252,12 +252,12 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 # 10. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-45 — Create Folder (File Repository) API (creates folders whose contents this method can list)
-- RC-API-12 — Export File (download files from record-level file-upload fields — distinct from File Repository files)
-- RC-API-13 — Import File (upload files to record-level file-upload fields)
-- RC-API-14 — Delete File (remove files from record-level file-upload fields)
-- RC-API-25 — Export User Roles API (look up `role_id` values referenced by File Repository restrictions)
-- RC-API-28 — Export DAGs API (look up `dag_id` values referenced by File Repository restrictions)
-- RC-DAG-01 — Data Access Groups (concept reference for DAG-based folder restriction)
-- RC-USER-03 — User Rights: Configuring User Privileges (granting API Export and File Repository privileges)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md) (creates folders whose contents this method can list)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from record-level file-upload fields — distinct from File Repository files)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to record-level file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from record-level file-upload fields)
+- [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) (look up `role_id` values referenced by File Repository restrictions)
+- [RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md) (look up `dag_id` values referenced by File Repository restrictions)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (concept reference for DAG-based folder restriction)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (granting API Export and File Repository privileges)

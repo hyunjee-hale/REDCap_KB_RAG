@@ -1,16 +1,16 @@
-RC-DDP-01
+[RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)
 
 **Dynamic Data Pull (DDP) — Overview & User Guide**
 
-| **Article ID** | RC-DDP-01 |
+| **Article ID** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) |
 |---|---|
 | **Domain** | Integration — Dynamic Data Pull |
 | **Applies To** | All REDCap project types (requires administrator enablement) |
-| **Prerequisite** | RC-DE-01 — Record Creation and Record Home Page; RC-NAV-REC-04 — Record Status Dashboard |
+| **Prerequisite** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) — Record Creation and Record Home Page; [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DDP-02 — DDP Admin Setup & Technical Specs; RC-NAV-REC-04 — Record Status Dashboard; RC-USER-02 — User Rights |
+| **Related Topics** | [RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md) — DDP Admin Setup & Technical Specs; [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard; [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights |
 
 ---
 
@@ -165,7 +165,7 @@ The user must select a radio button next to each value they wish to import, then
 
 # 9. Related Articles
 
-- RC-DDP-02 — Dynamic Data Pull: Admin Setup & Technical Specs (administrator configuration, web service setup)
-- RC-NAV-REC-04 — Record Status Dashboard (where the adjudication count column appears)
-- RC-DE-01 — Record Creation and Record Home Page (record identifier context)
-- RC-USER-02 — User Rights: Adding Users and Managing Roles (DDP privilege assignment)
+- [RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md) — Dynamic Data Pull: Admin Setup & Technical Specs (administrator configuration, web service setup)
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard (where the adjudication count column appears)
+- [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) — Record Creation and Record Home Page (record identifier context)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights: Adding Users and Managing Roles (DDP privilege assignment)

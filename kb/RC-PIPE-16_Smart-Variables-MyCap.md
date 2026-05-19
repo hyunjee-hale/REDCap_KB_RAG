@@ -1,16 +1,16 @@
-RC-PIPE-16
+[RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md)
 
 **Smart Variables: MyCap**
 
-| **Article ID** | RC-PIPE-16 |
+| **Article ID** | [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | Projects with REDCap MyCap module enabled |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 
 ---
 
@@ -60,7 +60,7 @@ An HTML link (usually embedded in an email or field note) that directs participa
 
 **MyCap Module Required**
 
-All MyCap smart variables only function if your project has the REDCap MyCap module enabled. Projects without MyCap enabled will return blank values when attempting to use these variables. For the availability of MyCap at this installation and how to request enablement, see **RC-INST-01 — Institution-Specific Settings & Policies, Section 7.1: MyCap Mobile App**.
+All MyCap smart variables only function if your project has the REDCap MyCap module enabled. Projects without MyCap enabled will return blank values when attempting to use these variables. For the availability of MyCap at this installation and how to request enablement, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 7.1: MyCap Mobile App**.
 
 **Participant-Facing vs. Administrator Context**
 
@@ -142,7 +142,7 @@ This generates a clickable link that will direct the participant to the MyCap en
 
 **Q: What if my project doesn't have MyCap enabled?**
 
-**A:** MyCap smart variables return blank if the MyCap module is not enabled. See **RC-INST-01 — Institution-Specific Settings & Policies, Section 7.1** for whether MyCap is available at this installation and how to request it.
+**A:** MyCap smart variables return blank if the MyCap module is not enabled. See **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 7.1** for whether MyCap is available at this installation and how to request it.
 
 **Q: How do participants use the MyCap link?**
 
@@ -170,6 +170,6 @@ This generates a clickable link that will direct the participant to the MyCap en
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-08 — Smart Variables: Survey (survey-based smart variables for web enrollment)
-- RC-ALERT-01 — Alerts and Notifications Setup (using MyCap links in automated emails)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md) (survey-based smart variables for web enrollment)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup (using MyCap links in automated emails)

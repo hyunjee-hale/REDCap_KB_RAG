@@ -1,16 +1,16 @@
-RC-CALC-02
+[RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md)
 
 **Calculated Fields**
 
-| **Article ID** | RC-CALC-02 |
+| **Article ID** | [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md) |
 |---|---|
 | **Domain** | Calculations & Special Functions |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-02 — Online Designer; RC-BL-02 — Branching Logic: Syntax & Atomic Statements |
+| **Prerequisite** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CALC-01 — Special Functions Reference; RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE; RC-FD-03 — Data Dictionary; RC-FD-08 — Data Dictionary: Column Reference |
+| **Related Topics** | [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md); [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE; [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) — Data Dictionary: Column Reference |
 
 ---
 
@@ -18,7 +18,7 @@ RC-CALC-02
 
 This article covers REDCap's **Calculated Field** — a dedicated field type whose value is computed automatically from a formula rather than entered manually. Calculated fields always return a number. If you need a calculation that produces a text result, use `@CALCTEXT`. If you need to compute a date, use `@CALCDATE` or the `datediff()` family of functions. This article explains how to create and configure calculated fields, how formulas work, when the value updates, and how calculated fields compare to the `@CALCTEXT` and `@CALCDATE` action tags.
 
-For the full reference on Special Functions that can be used inside formulas (such as `datediff()`, `round()`, `sum()`, and `if()`), see RC-CALC-01 — Special Functions Reference.
+For the full reference on Special Functions that can be used inside formulas (such as `datediff()`, `round()`, `sum()`, and `if()`), see [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md).
 
 ---
 
@@ -84,7 +84,7 @@ Calculated field formulas use the same syntax as REDCap branching logic:
 - **Variable references:** `[variable_name]` — references the value of another field in the same record
 - **Arithmetic operators:** `+`, `-`, `*`, `/`, `^` (exponent — wrap both base and exponent in parentheses: `([base])^([exponent])`)
 - **Parentheses:** control order of operations, same as standard math
-- **Special Functions:** `datediff()`, `round()`, `sum()`, `if()`, and others — see RC-CALC-01
+- **Special Functions:** `datediff()`, `round()`, `sum()`, `if()`, and others — see [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md)
 
 **Examples:**
 
@@ -107,9 +107,9 @@ Calculated field formulas use the same syntax as REDCap branching logic:
 
 This constraint has two practical consequences:
 
-**If you need text output** — use `@CALCTEXT` on a Text Box field instead. `@CALCTEXT` can return conditional text strings, display labels, or a mix of text and numbers. See RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE.
+**If you need text output** — use `@CALCTEXT` on a Text Box field instead. `@CALCTEXT` can return conditional text strings, display labels, or a mix of text and numbers. See [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE.
 
-**If you need a date output** — use `@CALCDATE` on a Text Box field with date validation. `@CALCDATE` returns a formatted date string by adding or subtracting time from a source date. If you only need the *number of days* between two dates (a numeric result), you can use `datediff()` in a regular calculated field. See RC-AT-09 and RC-CALC-01.
+**If you need a date output** — use `@CALCDATE` on a Text Box field with date validation. `@CALCDATE` returns a formatted date string by adding or subtracting time from a source date. If you only need the *number of days* between two dates (a numeric result), you can use `datediff()` in a regular calculated field. See [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) and [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md).
 
 | **Need** | **Solution** |
 |---|---|
@@ -198,10 +198,10 @@ A calculated field's value is recomputed in three contexts:
 
 # 10. Related Articles
 
-- RC-CALC-01 — Special Functions Reference (full reference for `datediff()`, `round()`, `sum()`, `if()`, and all other functions usable in formulas)
-- RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE (for text output or date output calculations)
-- RC-BL-02 — Branching Logic: Syntax & Atomic Statements (the shared variable reference and operator syntax)
-- RC-FD-02 — Online Designer (where calculated fields are created and formulas entered)
-- RC-FD-03 — Data Dictionary (bulk field creation including calculated fields)
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques (column layout for the `calc` field type)
-- RC-DE-02 — Basic Data Entry (how calculated field values appear during data entry)
+- [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md) (full reference for `datediff()`, `round()`, `sum()`, `if()`, and all other functions usable in formulas)
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE (for text output or date output calculations)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (the shared variable reference and operator syntax)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where calculated fields are created and formulas entered)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (bulk field creation including calculated fields)
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (column layout for the `calc` field type)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (how calculated field values appear during data entry)

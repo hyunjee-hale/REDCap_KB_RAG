@@ -1,17 +1,17 @@
-RC-IMP-07
+[RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md)
 
 **Survey Settings CSV — Column Reference and Format Guide**
 
-| **Article ID** | RC-IMP-07 |
+| **Article ID** | [RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | REDCap projects with at least one survey-enabled instrument |
-| **Prerequisite** | RC-IMP-03 — CSV Upload Reference; RC-SURV-02 — Survey Settings: Basic Options & Design |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-03 — CSV Upload Reference; RC-SURV-02 — Survey Settings: Basic Options & Design; RC-SURV-03 — Survey Settings: Behavior, Access & Termination |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md); [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md) |
 
 ---
 
@@ -27,7 +27,7 @@ The Survey Settings CSV allows bulk export and re-import of survey configuration
 
 **Always download first.** The full 62-column header must be exact. Always start from a file downloaded from REDCap rather than building the header from memory.
 
-For full coverage of survey settings through the REDCap UI, see RC-SURV-02 and RC-SURV-03.
+For full coverage of survey settings through the REDCap UI, see [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) and [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md).
 
 ---
 
@@ -209,8 +209,8 @@ Key observations from this example:
 
 # 6. Related Articles
 
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-SURV-02 — Survey Settings: Basic Options & Design (full UI reference)
-- RC-SURV-03 — Survey Settings: Behavior, Access & Termination
-- RC-SURV-08 — e-Consent Framework Setup and Management (stop action columns)
-- RC-SURV-06 — Automated Survey Invitations (ASI CSV format — RC-IMP-06)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) (full UI reference)
+- [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md)
+- [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md) — e-Consent Framework Setup and Management (stop action columns)
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations (ASI CSV format — [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md))

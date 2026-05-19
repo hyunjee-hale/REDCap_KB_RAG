@@ -1,16 +1,16 @@
-RC-CDIS-04
+[RC-CDIS-04 — CDP vs CDM: Feature Comparison](RC-CDIS-04_CDP-vs-CDM-Feature-Comparison.md)
 
 **CDP vs CDM: Feature Comparison**
 
-| **Article ID** | RC-CDIS-04 |
+| **Article ID** | [RC-CDIS-04 — CDP vs CDM: Feature Comparison](RC-CDIS-04_CDP-vs-CDM-Feature-Comparison.md) |
 | --- | --- |
 | **Domain** | Clinical Data Interoperability Services |
 | **Applies To** | Administrators deciding between CDP and CDM for their institution |
-| **Prerequisite** | RC-CDIS-01 — CDIS Overview and Control Center Setup |
+| **Prerequisite** | [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview and Control Center Setup |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CDIS-02 — Clinical Data Pull; RC-CDIS-03 — Clinical Data Mart; RC-CDIS-01 — CDIS Overview |
+| **Related Topics** | [RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage](RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md) — Clinical Data Pull; [RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage](RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md) — Clinical Data Mart; [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview |
 
 ---
 
@@ -130,6 +130,6 @@ CDP pulls only the fields you explicitly map. CDM pulls data for all available f
 
 # 7. Related Articles
 
-- RC-CDIS-01 — CDIS Overview and Control Center Setup
-- RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage
-- RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage
+- [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — CDIS Overview and Control Center Setup
+- [RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage](RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md)
+- [RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage](RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md)

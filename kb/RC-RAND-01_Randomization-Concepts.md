@@ -1,8 +1,8 @@
-RC-RAND-01
+[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
 
 **REDCap Randomization – Concepts & Terminology**
 
-| **Article ID** | RC-RAND-01 |
+| **Article ID** | [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) |
 | --- | --- |
 | **Domain** | Randomization |
 | **Applies To** | All REDCap project types with Randomization module enabled; intended for PIs, Study Coordinators, and Project Builders planning a randomized study |
@@ -10,7 +10,7 @@ RC-RAND-01
 | **Version** | 1.1 |
 | **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-RAND-02 — Randomization Setup Guide; RC-RAND-03 — Working with & Managing Randomization; RC-USER-01 — User Rights Overview; RC-DAG-01 — Data Access Groups; RC-CC-06 — Control Center: Modules & Services Configuration; RC-NAV-UI-02 — Project Menu Reference |
+| **Related Topics** | [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md); [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -20,7 +20,7 @@ RC-RAND-01
 
 This document covers the concepts and terminology required to understand
 and plan REDCap randomization. It is intentionally separated from the
-setup procedure (RC-RAND-02) because these concepts must be understood
+setup procedure ([RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)) because these concepts must be understood
 before any configuration decisions are made. Attempting to set up
 randomization without this foundation is one of the most common causes
 of failed or misconfigured randomization models.
@@ -270,32 +270,32 @@ Only a REDCap administrator can append additional allocations to a production al
 
 # 6. Administrator Configuration
 
-The Randomization module must be enabled at the system level by a REDCap administrator before it is available in any project. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **RC-CC-06**). When disabled, the Randomization option does not appear in Project Setup and the Randomize user right is not available.
+The Randomization module must be enabled at the system level by a REDCap administrator before it is available in any project. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). When disabled, the Randomization option does not appear in Project Setup and the Randomize user right is not available.
 
 Once the module is enabled system-wide, randomization is enabled per project by turning on the **Randomization** option in Project Setup → Optional modules. User rights (Randomize and Set Up Randomization) are then assigned on the User Rights page.
 
-> **See also:** RC-CC-06 — Control Center: Modules & Services Configuration
+> **See also:** [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 
 ---
 
 # 7. Related Articles
 
-- **RC-RAND-02:** Randomization Setup Guide — step-by-step
+- **[RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md):** Randomization Setup Guide — step-by-step
     configuration procedure
 
-- **RC-RAND-03:** Working with & Managing Randomization — running,
+- **[RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md):** Working with & Managing Randomization — running,
     monitoring, and admin options
 
-- **RC-USER-01:** User Rights: Overview & Three-Tier Access — prerequisite for understanding the Randomize right and DAG-based site stratification
+- **[RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md):** User Rights: Overview & Three-Tier Access — prerequisite for understanding the Randomize right and DAG-based site stratification
 
-- **RC-DAG-01:** Data Access Groups — prerequisite for understanding DAG-based stratification and restricted randomization access
+- **[RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md):** Data Access Groups — prerequisite for understanding DAG-based stratification and restricted randomization access
 
-- **RC-LONG-01:** Longitudinal Projects — prerequisite for
+- **[RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md):** Longitudinal Projects — prerequisite for
     multi-event randomization setup
 
-- **RC-CC-06:** Control Center: Modules & Services Configuration — system-level Randomization enable/disable
+- **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md):** Control Center: Modules & Services Configuration — system-level Randomization enable/disable
 
-- **RC-NAV-UI-02:** Project Menu Reference — the Randomization application appears in the Applications section of the left menu when randomization is enabled for the project
+- **[RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md):** Project Menu Reference — the Randomization application appears in the Applications section of the left menu when randomization is enabled for the project
 
 ---
 
@@ -306,17 +306,17 @@ Once the module is enabled system-wide, randomization is enabled per project by 
 | **15.4.4+** | Randomization 2.0 — adds automatic trigger options (trigger logic for users with Randomize rights; trigger logic for all users including survey respondents). This document is written for this version and has been verified compatible through REDCap 17. |
 | **Pre-15.x** | Only manual randomization (Randomize button) available. Automatic triggers did not exist. Verify your installation version before configuring. |
 
-REDCap LLM Knowledge Base \| RC-RAND-01 \| Randomization Concepts &
+REDCap LLM Knowledge Base \| [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) \| Randomization Concepts &
 Terminology
 
 ---
 
 # 9. Related Articles
 
-- RC-RAND-02 — Randomization Setup Guide
-- RC-RAND-03 — Working with & Managing Randomization
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-DAG-01 — Data Access Groups
-- RC-LONG-01 — Longitudinal Project Setup
-- RC-CC-06 — Control Center: Modules & Services Configuration
-- RC-NAV-UI-02 — Project Menu Reference
+- [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)
+- [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md)

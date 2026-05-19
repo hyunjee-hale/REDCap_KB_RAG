@@ -1,17 +1,17 @@
-RC-API-18
+[RC-API-18 — Delete Arms API](RC-API-18_Delete-Arms.md)
 
 **Delete Arms API**
 
-| **Article ID** | RC-API-18 |
+| **Article ID** | [RC-API-18 — Delete Arms API](RC-API-18_Delete-Arms.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | Longitudinal REDCap projects only |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-16 — Export Arms; RC-API-17 — Import Arms |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) — Export Arms; [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md) — Import Arms |
 
 ---
 
@@ -120,7 +120,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -177,7 +177,7 @@ Example response:
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-16 — Export Arms (retrieve arm metadata from a project)
-- RC-API-17 — Import Arms (add or modify arms in a project)
-- RC-LONG-01 — Longitudinal Project Setup (arms overview; context for when deletion is appropriate)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) — Export Arms (retrieve arm metadata from a project)
+- [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md) — Import Arms (add or modify arms in a project)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms overview; context for when deletion is appropriate)

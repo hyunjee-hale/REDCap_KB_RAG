@@ -1,8 +1,8 @@
-RC-MLM-01
+[RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)
 
 **Multi-Language Management**
 
-| **Article ID** | RC-MLM-01 |
+| **Article ID** | [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md) |
 |---|---|
 | **Domain** | Multi-Language Management |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
@@ -10,7 +10,7 @@ RC-MLM-01
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-SURV-01 — Survey Setup; RC-ALERT-01 — Alerts and Notifications Setup; RC-AT-11 — Action Tags: Mobile App; RC-CC-20 — Control Center: Multi-Language Management; RC-NAV-UI-02 — Project Menu Reference |
+| **Related Topics** | [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Survey Setup; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup; [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md) — Action Tags: Mobile App; [RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -18,7 +18,7 @@ RC-MLM-01
 
 Multi-Language Management (MLM) is a built-in REDCap feature that allows data entry forms and surveys to be displayed in multiple languages simultaneously. When MLM is enabled, respondents and data entry users see a language selector and can switch languages in real-time without losing or corrupting stored data. MLM covers field labels, choice labels, survey settings, alert messages, missing data code labels, PDF customizations, MyCap settings, and user interface text — but it does **not** translate content automatically. All translations must be provided by the project team. This article covers the full MLM workflow for project-level users: setting up languages, translating content, managing language selection behavior, and using MLM-specific action tags.
 
-> **Note:** MLM must be enabled at the system level by a REDCap administrator before it is available to projects. This is configured in the Control Center under Miscellaneous Modules → Multi-Language Management (see **RC-CC-20**). Contact your REDCap administrator if Multi-Language Management does not appear in your Applications menu.
+> **Note:** MLM must be enabled at the system level by a REDCap administrator before it is available to projects. This is configured in the Control Center under Miscellaneous Modules → Multi-Language Management (see **[RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md)**). Contact your REDCap administrator if Multi-Language Management does not appear in your Applications menu.
 
 ---
 
@@ -387,10 +387,10 @@ No. Switching languages in real-time only changes the display. Data already ente
 
 # 11. Related Articles
 
-- RC-SURV-01 — Survey Setup *(see for enabling instruments as surveys)*
-- RC-ALERT-01 — Alerts and Notifications Setup *(see for alert configuration; MLM language source is set in the base language Alerts tab)*
-- RC-AT-09 — Action Tags: Calculations *(see RC-AT series for general action tag guidance)*
-- RC-AT-11 — Action Tags: Mobile App *(MyCap-specific action tags)*
-- RC-AI-03 — AI Translations *(AI-assisted translation integrates with MLM language IDs and display names)*
-- RC-CC-20 — Control Center: Multi-Language Management *(system-level MLM configuration: enabling MLM, managing system languages, setting access restrictions)*
-- RC-NAV-UI-02 — Project Menu Reference *(the Multi-Language Management item appears in the Applications section of the left menu when MLM is enabled)*
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Survey Setup *(see for enabling instruments as surveys)*
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup *(see for alert configuration; MLM language source is set in the base language Alerts tab)*
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: Calculations *(see RC-AT series for general action tag guidance)*
+- [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md) — Action Tags: Mobile App *(MyCap-specific action tags)*
+- [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md) *(AI-assisted translation integrates with MLM language IDs and display names)*
+- [RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md) *(system-level MLM configuration: enabling MLM, managing system languages, setting access restrictions)*
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) *(the Multi-Language Management item appears in the Applications section of the left menu when MLM is enabled)*

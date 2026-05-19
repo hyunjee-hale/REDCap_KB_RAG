@@ -1,16 +1,16 @@
-RC-FD-05
+[RC-FD-05 — Codebook](RC-FD-05_Codebook.md)
 
 **Codebook**
 
-| **Article ID** | RC-FD-05 |
+| **Article ID** | [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-01 — Form Design Overview |
+| **Prerequisite** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026-04 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-01 — Form Design Overview; RC-FD-02 — Online Designer; RC-FD-03 — Data Dictionary; RC-FD-08 — Data Dictionary Column Reference & Advanced Techniques; RC-NAV-UI-02 — Project Menu Reference |
+| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) — Data Dictionary Column Reference & Advanced Techniques; [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -407,43 +407,43 @@ be different.
 
 # 10. Related Articles
 
-- RC-FD-01 — Form Design Overview (prerequisite)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite)
 
-- RC-FD-02 — Online Designer (the editing tool linked from the
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the editing tool linked from the
     Codebook's inline edit links)
 
-- RC-FD-03 — Data Dictionary (the CSV-format alternative reference
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the CSV-format alternative reference
     and design tool)
 
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
     (deeper reference for what each field attribute means)
 
-- RC-BL-02 — Branching Logic: Syntax & Atomic Statements (using
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (using
     variable names and choice codes found in the Codebook)
 
-- RC-BL-04 — Branching Logic: Structured Fields & Checkboxes (using
+- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) (using
     checkbox option codes found in the Codebook to construct
     `[field(code)]` expressions)
 
-- RC-LONG-01 — Longitudinal Project Setup (background on arms,
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (background on arms,
     events, and instrument-event assignments shown in the Codebook
     summary tables)
 
-- RC-LONG-02 — Repeated Instruments & Events Setup (the repeating
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (the repeating
     instrument and repeating event indicators shown in the Codebook
     summary tables are the only direct UI view of this configuration)
 
-- RC-AT-01 — Action Tags: Overview (action tags are displayed
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) (action tags are displayed
     verbatim in the Codebook's Field Attributes column; this article
     explains what they do)
 
-- RC-SURV-01 — Surveys – Basics (the Codebook flags each instrument
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (the Codebook flags each instrument
     that is enabled as a survey)
 
-- RC-PIPE-01 — Piping: Basics, Syntax & Field Types (piping
+- [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) (piping
     expressions in field labels appear as raw syntax in the Codebook
     rather than resolved values)
 
-- RC-NAV-UI-02 — Project Menu Reference (the Code Book link appears
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the Code Book link appears
     in the Project Home and Design menu section; always visible to
     all users regardless of rights)

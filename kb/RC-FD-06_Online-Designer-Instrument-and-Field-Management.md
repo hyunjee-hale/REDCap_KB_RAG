@@ -1,16 +1,16 @@
-RC-FD-06
+[RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md)
 
 **Online Designer – Instrument and Field Management**
 
-| **Article ID** | RC-FD-06 |
+| **Article ID** | [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup user rights |
-| **Prerequisite** | RC-NAV-UI-01 — Project Navigation UI; RC-FD-01 — Form Design Overview; RC-FD-02 — Online Designer |
+| **Prerequisite** | [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 | **Version** | 1.2 |
 | **Last Updated** | 2026-04-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-02 — Online Designer; RC-FD-03 — Data Dictionary; RC-BL-01 — Branching Logic Overview and Scope |
+| **Related Topics** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview and Scope |
 
 ---
 
@@ -68,11 +68,11 @@ When you open the Online Designer, you see a list of all instruments currently d
 
 | Button | Description |
 | --- | --- |
-| **Create Snapshot of Instruments** | Backs up a data dictionary of your current instrument setup. Useful before making significant structural changes. See RC-FD-03 for more on the Data Dictionary. |
+| **Create Snapshot of Instruments** | Backs up a data dictionary of your current instrument setup. Useful before making significant structural changes. See [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) for more on the Data Dictionary. |
 | **+ Create** | Opens the instrument creation flow, allowing you to add a new blank instrument to your project. |
-| **Import** | Imports a validated instrument from the REDCap Shared Library. See RC-FD-04 for details. |
-| **Upload** | Imports a local zip file to create a new instrument. See RC-FD-04 for details. |
-| **Form Display Logic** | An advanced feature that controls when certain instruments appear for a record. Requires knowledge of branching logic syntax (see RC-BL-01). |
+| **Import** | Imports a validated instrument from the REDCap Shared Library. See [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) for details. |
+| **Upload** | Imports a local zip file to create a new instrument. See [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) for details. |
+| **Form Display Logic** | An advanced feature that controls when certain instruments appear for a record. Requires knowledge of branching logic syntax (see [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)). |
 
 ## 4.2 Instrument List Columns
 
@@ -119,7 +119,7 @@ Open the **Instrument Actions** dropdown and select **Delete**.
 
 ## 5.5 Downloading an Instrument as a Zip File
 
-Open the **Instrument Actions** dropdown and select **Download instrument zip**. This exports the instrument definition as a zip file that can be imported into another REDCap project. See RC-FD-04 for details on instrument zip files.
+Open the **Instrument Actions** dropdown and select **Download instrument zip**. This exports the instrument definition as a zip file that can be imported into another REDCap project. See [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) for details on instrument zip files.
 
 ## 5.6 Reordering Instruments
 
@@ -253,7 +253,7 @@ Controls how the field is displayed on screen — specifically whether it occupi
 
 This setting has meaningful display consequences for some field types. For `notes` fields in particular, the default `RV` produces a cramped half-width text area — `LH` or `LV` is almost always preferable. For `radio` and `checkbox` fields, the Horizontal/Vertical component controls whether choices are displayed side by side or stacked.
 
-**Best practice:** Apply alignment consistently across all fields in an instrument to avoid a visually fragmented layout. See the project STYLE-GUIDE.md for team conventions. See RC-FD-08 Section 5.12 for a full explanation of how each code behaves.
+**Best practice:** Apply alignment consistently across all fields in an instrument to avoid a visually fragmented layout. See the project STYLE-GUIDE.md for team conventions. See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) Section 5.12 for a full explanation of how each code behaves.
 
 ## 7.8 Field Note
 
@@ -372,7 +372,7 @@ A formatting field that renders as a horizontal divider line across the instrume
 
 ## 8.13 Calculated Field
 
-Performs a calculation using values from other fields in the record and displays the result. The equation is defined using variable names (e.g., `[weight] / ([height] * [height])`). REDCap executes the calculation once the referenced fields have data and displays the result on the form. The result is saved when the form is saved. Use the **Special Functions** button in the field editor for help building calculations. Test calculated fields thoroughly in Development mode before beginning real data collection. See **RC-CALC-02 — Calculated Fields** for full coverage.
+Performs a calculation using values from other fields in the record and displays the result. The equation is defined using variable names (e.g., `[weight] / ([height] * [height])`). REDCap executes the calculation once the referenced fields have data and displays the result on the form. The result is saved when the form is saved. Use the **Special Functions** button in the field editor for help building calculations. Test calculated fields thoroughly in Development mode before beginning real data collection. See **[RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md)** for full coverage.
 
 ## 8.14 Dynamic Query (SQL)
 
@@ -424,7 +424,7 @@ Select one of two logic modes:
 | 6 | Click **Save** when the logic is complete. |
 | --- | --- |
 
-REDCap will display the equivalent branching logic syntax below the builder. This is useful for learning the syntax or for copying it elsewhere. For more on advanced branching logic syntax, see RC-BL-01 through RC-BL-04.
+REDCap will display the equivalent branching logic syntax below the builder. This is useful for learning the syntax or for copying it elsewhere. For more on advanced branching logic syntax, see [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) through [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md).
 
 ---
 
@@ -432,7 +432,7 @@ REDCap will display the equivalent branching logic syntax below the builder. Thi
 
 A matrix groups a set of fields together in a grid layout, where each row is an individual field and all rows share a common set of column options (answer choices).
 
-> **Important:** You cannot group or ungroup existing individual fields into a matrix directly in the Online Designer. If you need to restructure existing fields as a matrix, use the Data Dictionary (RC-FD-03).
+> **Important:** You cannot group or ungroup existing individual fields into a matrix directly in the Online Designer. If you need to restructure existing fields as a matrix, use the Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)).
 
 ## 10.1 Opening the Matrix Editor
 
@@ -569,15 +569,15 @@ Each matrix row is an independent field and supports its own branching logic. Cl
 
 # 13. Related Articles
 
-- RC-FD-02 — Online Designer (conceptual overview: what it is, when to use it, Development vs. Production mode behavior)
-- RC-FD-01 — Form Design Overview (prerequisite: covers the overall form design workflow and tool selection)
-- RC-FD-03 — Data Dictionary (bulk editing alternative to the Online Designer; required for restructuring matrices or moving many fields at once)
-- RC-FD-04 — Instrument Library and Zip Files (importing and exporting instruments)
-- RC-FD-05 — Codebook (read-only reference for the variable definitions created in the Online Designer)
-- RC-BL-01 — Branching Logic Overview and Scope (prerequisite for understanding branching logic concepts used in Section 9)
-- RC-BL-02 — Branching Logic Syntax and Atomic Statements (next step after mastering the Drag-N-Drop Logic Builder)
-- RC-CALC-02 — Calculated Fields (full coverage of calculated field syntax and configuration)
-- RC-DE-05 — Field Validations (how min/max and @FORCE-MINMAX constraints work from the data entry side)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (conceptual overview: what it is, when to use it, Development vs. Production mode behavior)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite: covers the overall form design workflow and tool selection)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (bulk editing alternative to the Online Designer; required for restructuring matrices or moving many fields at once)
+- [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) — Instrument Library and Zip Files (importing and exporting instruments)
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (read-only reference for the variable definitions created in the Online Designer)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview and Scope (prerequisite for understanding branching logic concepts used in Section 9)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Branching Logic Syntax and Atomic Statements (next step after mastering the Drag-N-Drop Logic Builder)
+- [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md) (full coverage of calculated field syntax and configuration)
+- [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) (how min/max and @FORCE-MINMAX constraints work from the data entry side)
 
 ---
 
@@ -592,14 +592,14 @@ Each matrix row is an independent field and supports its own branching logic. Cl
 
 # 15. Related Articles
 
-- RC-FD-01 — Form Design Overview
-- RC-FD-02 — Online Designer
-- RC-FD-03 — Data Dictionary
-- RC-FD-04 — Instrument Library & Zip Files
-- RC-FD-05 — Codebook
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
-- RC-BL-01 — Branching Logic: Overview & Scope
-- RC-BL-02 — Branching Logic: Syntax & Atomic Statements
-- RC-CALC-02 — Calculated Fields
-- RC-DE-05 — Field Validations
-- RC-NAV-UI-01 — Project Navigation UI
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
+- [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md)
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)
+- [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md)
+- [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md)
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md)

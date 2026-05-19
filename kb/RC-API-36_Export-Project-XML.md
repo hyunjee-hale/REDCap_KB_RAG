@@ -1,17 +1,17 @@
-RC-API-36
+[RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)
 
 **Export Project XML API**
 
-| **Article ID** | RC-API-36 |
+| **Article ID** | [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-34 — Export Project Info; RC-API-37 — Import Project (Create Project) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info; [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project) |
 
 ---
 
@@ -158,7 +158,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -173,7 +173,7 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 # 6. Common Questions
 
 **Q: Can I use the exported XML to create a new project?**
-**A:** Yes. Use the Export Project XML API to download your project design, then use RC-API-37 (Import Project / Create Project) with that XML to clone the project.
+**A:** Yes. Use the Export Project XML API to download your project design, then use [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) (Import Project / Create Project) with that XML to clone the project.
 
 **Q: What is the difference between `returnMetadataOnly` true and false?**
 **A:** `'true'` returns only the project structure — all fields, forms, events, and arms — with no data records. `'false'` (the default) returns both metadata and data, optionally filtered by `records`, `fields`, `events`, or `filterLogic`.
@@ -210,8 +210,8 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-API-34 — Export Project Info
-- RC-API-37 — Import Project (Create Project)
-- RC-FD-01 — Form Design Overview (instrument structure captured in the project XML)
-- RC-FD-03 — Data Dictionary (the metadata embedded in the exported XML)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info
+- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument structure captured in the project XML)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the metadata embedded in the exported XML)

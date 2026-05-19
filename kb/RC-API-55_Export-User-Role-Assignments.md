@@ -1,17 +1,17 @@
-RC-API-55
+[RC-API-55 — Export User-Role Assignments API](RC-API-55_Export-User-Role-Assignments.md)
 
 **Export User-Role Assignments API**
 
-| **Article ID** | RC-API-55 |
+| **Article ID** | [RC-API-55 — Export User-Role Assignments API](RC-API-55_Export-User-Role-Assignments.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-25 — Export User Roles; RC-API-56 — Import User-Role Assignments; RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) — Export User Roles; [RC-API-56 — Import User-Role Assignments API](RC-API-56_Import-User-Role-Assignments.md) — Import User-Role Assignments; [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 
 ---
 
@@ -125,7 +125,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5.
 
 ---
 
@@ -134,7 +134,7 @@ print $output;
 On success, the method returns the list of user-role assignments in the requested format. Each record contains two fields:
 
 - `username` — The REDCap username of the assigned user.
-- `unique_role_name` — The system-generated role ID the user is assigned to (e.g., `U-527D39JXAC`). Use the Export User Roles method (RC-API-25) to look up what role name and privileges correspond to each ID.
+- `unique_role_name` — The system-generated role ID the user is assigned to (e.g., `U-527D39JXAC`). Use the Export User Roles method ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)) to look up what role name and privileges correspond to each ID.
 
 Users who have no role assignment are not included in the response.
 
@@ -144,11 +144,11 @@ Users who have no role assignment are not included in the response.
 
 **Q: What's the difference between this method and Export Users?**
 
-**A:** Export Users (RC-API-22) returns each user's full permission set as currently configured. Export User-Role Assignments returns only the username-to-role mapping — which role each user is assigned to. If you need to know a user's effective permissions, use Export Users. If you need to know which users belong to which role templates, use this method.
+**A:** Export Users ([RC-API-22 — Export Users API](RC-API-22_Export-Users.md)) returns each user's full permission set as currently configured. Export User-Role Assignments returns only the username-to-role mapping — which role each user is assigned to. If you need to know a user's effective permissions, use Export Users. If you need to know which users belong to which role templates, use this method.
 
 **Q: How do I find out what permissions a role grants?**
 
-**A:** Use Export User Roles (RC-API-25) to retrieve role definitions. Cross-reference the `unique_role_name` from this method's response against the role list to see the full permission set.
+**A:** Use Export User Roles ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)) to retrieve role definitions. Cross-reference the `unique_role_name` from this method's response against the role list to see the full permission set.
 
 **Q: Are users without a role assignment included?**
 
@@ -156,15 +156,15 @@ Users who have no role assignment are not included in the response.
 
 **Q: Can I use this export to feed an import?**
 
-**A:** Yes. The format returned by this method matches what Import User-Role Assignments (RC-API-56) expects. You can export assignments from one project and import them into another to replicate the role structure.
+**A:** Yes. The format returned by this method matches what Import User-Role Assignments ([RC-API-56 — Import User-Role Assignments API](RC-API-56_Import-User-Role-Assignments.md)) expects. You can export assignments from one project and import them into another to replicate the role structure.
 
 ---
 
 # 7. Common Mistakes & Gotchas
 
-**Confusing this method with Export User Roles.** Export User Roles (RC-API-25) returns role *definitions* (what permissions each role has). This method returns role *assignments* (which users are in which role). Both are needed for a full picture of project access.
+**Confusing this method with Export User Roles.** Export User Roles ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)) returns role *definitions* (what permissions each role has). This method returns role *assignments* (which users are in which role). Both are needed for a full picture of project access.
 
-**Expecting users without roles to appear.** If a user has direct individual permissions rather than a role assignment, they will not appear in this export. Use Export Users (RC-API-22) to capture all users regardless of assignment method.
+**Expecting users without roles to appear.** If a user has direct individual permissions rather than a role assignment, they will not appear in this export. Use Export Users ([RC-API-22 — Export Users API](RC-API-22_Export-Users.md)) to capture all users regardless of assignment method.
 
 **Interpreting `unique_role_name` directly.** The `unique_role_name` is a system ID (e.g., `U-527D39JXAC`), not a human-readable label. You need to cross-reference it against Export User Roles to get the `role_label`.
 
@@ -174,9 +174,9 @@ Users who have no role assignment are not included in the response.
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API (foundational; required reading before using any API method)
-- RC-API-22 — Export Users (export full per-user permission sets)
-- RC-API-25 — Export User Roles (export role definitions and their privilege sets)
-- RC-API-26 — Import User Roles (create or update role definitions)
-- RC-API-56 — Import User-Role Assignments API (assign users to roles via API)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (conceptual overview of roles and assignments)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
+- [RC-API-22 — Export Users API](RC-API-22_Export-Users.md) — Export Users (export full per-user permission sets)
+- [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) — Export User Roles (export role definitions and their privilege sets)
+- [RC-API-26 — Import User Roles API](RC-API-26_Import-User-Roles.md) — Import User Roles (create or update role definitions)
+- [RC-API-56 — Import User-Role Assignments API](RC-API-56_Import-User-Role-Assignments.md) (assign users to roles via API)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (conceptual overview of roles and assignments)

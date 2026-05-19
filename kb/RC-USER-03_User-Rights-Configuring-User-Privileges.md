@@ -1,22 +1,22 @@
-RC-USER-03
+[RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
 
 **User Rights — Configuring User Privileges**
 
-| **Article ID** | RC-USER-03 |
+| **Article ID** | [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 |---|---|
 | **Domain** | User Rights |
 | **Applies To** | All REDCap project types; requires User Rights privilege |
-| **Prerequisite** | RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Prerequisite** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-USER-02 — Adding Users & Managing Roles; RC-USER-04 — User Management; RC-DAG-01 — Data Access Groups; RC-EXPRT-01 — Data Export: Overview & Workflow |
+| **Related Topics** | [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles; [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 
 ---
 
 # 1. Overview
 
-This article explains every user rights setting available in the user privileges popup in REDCap — both the Basic Privileges panel and the per-instrument data rights settings. It also covers miscellaneous user rights that exist outside the main User Rights page, including report-level and dashboard-level access controls and smart-variable-based restrictions. The rights described here apply to individual users and to roles. See RC-USER-02 — Adding Users & Managing Roles for how to open the privileges popup.
+This article explains every user rights setting available in the user privileges popup in REDCap — both the Basic Privileges panel and the per-instrument data rights settings. It also covers miscellaneous user rights that exist outside the main User Rights page, including report-level and dashboard-level access controls and smart-variable-based restrictions. The rights described here apply to individual users and to roles. See [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles for how to open the privileges popup.
 
 ---
 
@@ -70,7 +70,7 @@ These three settings give users broad administrative power within the project. B
 
 - **User Rights** — grants access to the User Rights menu. A user with this right can modify any user's rights in the project, including their own. This is effectively a super-admin right for the project and should be assigned with care.
 
-- **Data Access Groups** — grants access to the DAG management page, where the user can create, edit, and delete DAGs and assign users to them. See RC-DAG-01 — Data Access Groups.
+- **Data Access Groups** — grants access to the DAG management page, where the user can create, edit, and delete DAGs and assign users to them. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
 ## 3.3 Other Basic Privileges
 
@@ -184,7 +184,7 @@ There are four export access levels for each instrument:
 | **Remove Identifier Fields Only** | Similar to De-identified, but only designated identifier fields are stripped. Free-text and date/time fields are included. |
 | **Full Data Set** | The user can export all data from this instrument without restriction. This is the default. The user can optionally apply de-identification settings during the export process. |
 
-See RC-EXPRT-01 — Data Export: Overview & Workflow and RC-EXPRT-03 — Data Export: User Rights & Export Access for how export rights interact with the export workflow.
+See [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) and [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) for how export rights interact with the export workflow.
 
 > **Note for longitudinal projects:** Like data viewing rights, export rights apply per instrument across all events and repeating instances.
 
@@ -283,19 +283,19 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-22 — Export Users API** — retrieve a full list of users with their current privilege settings
-- **RC-API-23 — Import Users API** — set or update user privileges programmatically using the same field names documented in this article
+- **[RC-API-22 — Export Users API](RC-API-22_Export-Users.md)** — retrieve a full list of users with their current privilege settings
+- **[RC-API-23 — Import Users API](RC-API-23_Import-Users.md)** — set or update user privileges programmatically using the same field names documented in this article
 
 ---
 
 
 # 9. Related Articles
 
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-USER-02 — User Rights: Adding Users & Managing Roles
-- RC-USER-04 — User Rights: User Management (editing, suspending, removing users)
-- RC-DAG-01 — Data Access Groups
-- RC-EXPRT-01 — Data Export: Overview & Workflow
-- RC-EXPRT-03 — Data Export: User Rights & Export Access
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
+- [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) (editing, suspending, removing users)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md)

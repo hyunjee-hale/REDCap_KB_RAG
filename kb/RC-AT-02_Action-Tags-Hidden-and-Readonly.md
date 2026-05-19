@@ -1,16 +1,16 @@
-RC-AT-02
+[RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md)
 
 **@HIDDEN & @READONLY — Visibility Control**
 
-| **Article ID** | RC-AT-02 |
+| **Article ID** | [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Overview; RC-AT-03 — Radio/Dropdown Tags; RC-FD-02 — Online Designer; RC-BL-01 — Branching Logic Overview |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Tags; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview |
 
 ---
 
@@ -122,6 +122,6 @@ These two tag families can be mixed to achieve fine-grained control. For example
 
 # 7. Related Articles
 
-- RC-AT-01 — Action Tags Overview
-- RC-FD-02 — Online Designer (where these tags are applied)
-- RC-BL-01 — Branching Logic Overview (understand how @HIDDEN overrides logic)
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where these tags are applied)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview (understand how @HIDDEN overrides logic)

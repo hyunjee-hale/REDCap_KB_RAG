@@ -1,8 +1,8 @@
-RC-CC-10
+[RC-CC-10 — Control Center: URL Shortener](RC-CC-10_URL-Shortener.md)
 
 **URL Shortener**
 
-| **Article ID** | RC-CC-10 |
+| **Article ID** | [RC-CC-10 — Control Center: URL Shortener](RC-CC-10_URL-Shortener.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-10
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-01 — Notifications & Reporting |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting |
 
 ---
 
@@ -104,4 +104,4 @@ Shortened URLs remain active as long as the external service maintains them. Sin
 
 # 8. Related Articles
 
-- RC-CC-01 — Notifications & Reporting
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting

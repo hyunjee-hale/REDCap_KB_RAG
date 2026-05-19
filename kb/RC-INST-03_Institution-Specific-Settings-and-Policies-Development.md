@@ -1,17 +1,17 @@
-RC-INST-03
+[RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md)
 
 **Institution-Specific Settings & Policies — Development Instance**
 
-| Article ID | RC-INST-03 |
+| Article ID | [RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md) |
 |---|---|
 | Instance | Development |
 | Domain | Institution |
 | Applies To | REDCap administrators and IT staff using the Development instance |
-| Prerequisite | RC-INST-01 — Institution-Specific Settings (Production) |
+| Prerequisite | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings (Production) |
 | Version | 1.0 |
 | Last Updated | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| Related Topics | RC-INST-01 — Production Settings; RC-INST-02 — Test / Staging Settings |
+| Related Topics | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Production Settings; [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md) — Test / Staging Settings |
 
 ---
 
@@ -19,7 +19,7 @@ RC-INST-03
 >
 > **This article covers the Development instance and is currently a template. It does not yet contain instance-specific information.**
 >
-> RC-INST-03 documents settings and policies specific to the Development environment. This instance is intended for REDCap administrators, IT staff, and module developers. It is not intended for research projects or study teams, and should not be used to collect real participant data.
+> [RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md) documents settings and policies specific to the Development environment. This instance is intended for REDCap administrators, IT staff, and module developers. It is not intended for research projects or study teams, and should not be used to collect real participant data.
 >
 > **Before going live with this KB, your REDCap administrator should:**
 > 1. Replace every `[FILL IN]` placeholder with the actual value for the Development instance
@@ -28,7 +28,7 @@ RC-INST-03
 > 4. Delete this notice block once the article is fully populated
 >
 > **Adding more instance articles:** If your organization runs additional REDCap instances beyond Production, Test/Staging, and Development — for example, a 21 CFR Part 11-compliant instance, a FISMA-compliant instance, a GDPR-scoped instance, a dedicated Training environment, or a separate instance for a specific faculty or department — create a new article for each:
-> 1. Copy RC-INST-01 (Production) as a starting template.
+> 1. Copy [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) (Production) as a starting template.
 > 2. Assign the next sequential Article ID (`RC-INST-04`, `RC-INST-05`, etc.) and update all metadata fields accordingly.
 > 3. Set the `Instance` metadata field to a short, unambiguous label that the RAG system can use to scope retrieval (e.g., `Part 11 — Production`, `FISMA`, `Training`, `Faculty of Medicine`).
 > 4. Adjust contextual notes in Sections 4 (Authentication), 7 (Project Lifecycle), and 8 (Feature Availability) to reflect what is typical or required for that environment.
@@ -78,7 +78,7 @@ Most institutions run REDCap across multiple environments, each with its own URL
 
 > **Warning:** Test/staging instances may have the REDCap cron job accessible via browser trigger. If scheduled alerts, invitations, or notifications have been configured on a test project that mirrors production content, triggering the cron manually can send those emails to real recipients. Exercise caution when running background processes on non-production instances.
 
-Production settings are documented in RC-INST-01. Test / Staging settings are in RC-INST-02.
+Production settings are documented in [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md). Test / Staging settings are in [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md).
 
 ---
 
@@ -150,7 +150,7 @@ REDCap schedules all time-sensitive operations — survey expiration, automated 
 
 **Practical guidance:** When scheduling anything in REDCap (invitations, alerts, survey expiration), check the server time shown in the scheduling dialog and calculate the offset relative to your local time before saving.
 
-> See also: RC-SURV-03 (Survey Expiration), RC-SURV-05 (Survey Invitations), RC-SURV-06 (Automated Survey Invitations), RC-ALERT-01 (Alerts & Notifications)
+> See also: [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md) (Survey Expiration), [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) (Survey Invitations), [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) (Automated Survey Invitations), [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (Alerts & Notifications)
 
 ---
 
@@ -168,7 +168,7 @@ Access to the Development instance is typically restricted to REDCap administrat
 
 **Domain restriction:** `[FILL IN — e.g., "Only email addresses ending in @yoursite.nl can be associated with REDCap accounts on this instance." / "No email domain restriction."]`
 
-> See also: RC-USER-02 — User Rights: Adding Users & Managing Roles
+> See also: [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
 
 ## 6.2 Account Suspension & Expiration
 
@@ -180,7 +180,7 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 **Re-activation process:** `[FILL IN — e.g., "Contact the REDCap support team to request reactivation" / "Submit a helpdesk ticket with the affected username"]`
 
-> See also: RC-USER-04 — User Rights: User Management
+> See also: [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
 
 ## 6.3 User Access Dashboard (UAD)
 
@@ -225,7 +225,7 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 `[If using a production move survey:]` You will be prompted to complete a short checklist or certification form before the move is finalized.
 
-> See also: RC-PROJ-01 — Project Lifecycle: Status and Settings
+> See also: [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)
 
 ## 7.3 Draft Mode Approval Policy
 
@@ -239,7 +239,7 @@ When a project is in **Production** status, structural changes (adding/editing/d
 
 **Turnaround time for manual review:** `[FILL IN — e.g., 1–2 business days]`
 
-> See also: RC-FD-02 — Online Designer
+> See also: [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
 
 ## 7.4 Production Modifications Without Draft Mode
 
@@ -273,14 +273,14 @@ Some REDCap features must be enabled at the instance level by an administrator. 
 | Feature | Status | Notes |
 |---|---|---|
 | **Surveys** | `[Enabled / Disabled]` | Core survey functionality; project-level enable in Project Setup |
-| **Randomization** | `[Enabled / Disabled]` | See RC-RAND-01 |
-| **REDCap API** | `[Enabled / Disabled]` | See Section 9 and RC-API-01 |
-| **REDCap Mobile App** (offline data entry) | `[Enabled / Disabled]` | See RC-MOB-01; users need explicit mobile app rights |
-| **MyCap Mobile App** (participant app) | `[Enabled / Disabled / Admin activation required per project]` | See RC-MYCAP-01; longitudinal projects supported as of MyCap 2.0 (Sept 2023) |
+| **Randomization** | `[Enabled / Disabled]` | See [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) |
+| **REDCap API** | `[Enabled / Disabled]` | See Section 9 and [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
+| **REDCap Mobile App** (offline data entry) | `[Enabled / Disabled]` | See [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md); users need explicit mobile app rights |
+| **MyCap Mobile App** (participant app) | `[Enabled / Disabled / Admin activation required per project]` | See [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md); longitudinal projects supported as of MyCap 2.0 (Sept 2023) |
 | **REDCap Messenger** | `[Enabled / Disabled]` | In-platform user-to-user messaging |
 | **Text-to-Speech for Surveys** | `[Enabled / Disabled]` | Audio processed by IBM Watson via Vanderbilt; consult IRB before using on sensitive surveys |
-| **Data Resolution Workflow** (Queries) | `[Enabled / Disabled]` | Must also be activated per project; see RC-DE-12 |
-| **e-Consent Framework** | `[Enabled / Disabled]` | See RC-SURV-08; IRB acceptability is study-specific |
+| **Data Resolution Workflow** (Queries) | `[Enabled / Disabled]` | Must also be activated per project; see [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) |
+| **e-Consent Framework** | `[Enabled / Disabled]` | See [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md); IRB acceptability is study-specific |
 | **E-Signature** | `[Enabled / Disabled]` | Note: not compatible with Shibboleth or OAuth2 authentication |
 | **Bulk Record Delete** | `[Enabled / Disabled]` | Available to users with Delete Records rights when enabled |
 | **REDCap Shared Library** | `[Enabled / Disabled]` | Import from Consortium instrument library in Online Designer |
@@ -288,18 +288,18 @@ Some REDCap features must be enabled at the instance level by an administrator. 
 | **Stats & Charts** | `[Enabled / Disabled]` | Aggregate data visualizations on project Stats & Charts tab |
 | **Email Logging** | `[Enabled / Disabled]` | Users with User Rights can access outgoing email history for their project |
 | **Protected Email Mode** | `[Enabled / Disabled]` | When active, alert/invitation bodies are replaced with secure links; see project-level settings |
-| **Data Entry Trigger** | `[Enabled / Disabled]` | POST to external URL on record save; see RC-INTG-01 |
+| **Data Entry Trigger** | `[Enabled / Disabled]` | POST to external URL on record save; see [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) |
 | **URL Shortening (REDCAP.LINK)** | `[Enabled / Disabled]` | Short links for public surveys, dashboards, and reports |
 | **Video Embedding** | `[Enabled / Disabled]` | Embed video on Descriptive fields |
 | **Google reCAPTCHA on Public Surveys** | `[Configured / Not configured]` | Per-project toggle available if configured; applies to public survey links only |
-| **Twilio (SMS/voice)** | `[Enabled / Disabled / Admin activation required]` | For SMS survey invitations and alerts; see RC-TXT-01 |
+| **Twilio (SMS/voice)** | `[Enabled / Disabled / Admin activation required]` | For SMS survey invitations and alerts; see [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) |
 | **Send-It (secure file transfer)** | `[Enabled / Disabled / Limited to: File Repository only / Home page only]` | Generates expiring download links for files |
 | **File Upload Field Enhancement** (Part 11) | `[Enabled / Disabled]` | Password-verified file access for regulated studies |
 | **E-Signature + Record Locking Enhancement** (Part 11) | `[Enabled / Disabled]` | PDF audit trail on lock; for regulated studies only |
 | **Sync Calendar to External Application** | `[Enabled / Disabled]` | Calendar feed export from projects |
 | **Computer Adaptive Tests (CATs)** | `[Enabled / Disabled]` | PROMIS and similar instruments from Shared Library |
-| **Clinical Data Interoperability Services (CDIS)** | `[Enabled / Disabled / Admin activation required]` | EHR/clinical data pull; see RC-CDIS-01 |
-| **Multi-Language Management (MLM)** | `[Enabled / Disabled]` | See RC-MLM-01 |
+| **Clinical Data Interoperability Services (CDIS)** | `[Enabled / Disabled / Admin activation required]` | EHR/clinical data pull; see [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) |
+| **Multi-Language Management (MLM)** | `[Enabled / Disabled]` | See [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md) |
 | **Double Data Entry** | `[Enabled / Disabled]` | Project-level feature for parallel data entry and adjudication |
 
 > **If a feature listed as enabled is not visible in your project**, it may need to be activated at the project level, or your user rights may not include it. Contact the support team.
@@ -322,7 +322,7 @@ External modules extend REDCap's functionality and are developed by the REDCap c
 
 **Policy on enabling modules per project:** `[FILL IN — e.g., "Users can enable approved modules themselves from the External Modules section in Project Setup." / "All module activations must be requested from the support team."]`
 
-> See also: RC-EM-01 — External Modules Overview
+> See also: [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview
 
 ---
 
@@ -376,7 +376,7 @@ Certain file extensions are blocked from upload system-wide for security reasons
 
 **Super API Tokens:** `[FILL IN — e.g., "Super API Tokens (which allow project creation via API) are available only to designated users. Contact the support team if your integration requires project creation." / "Super API Tokens are not issued on this instance."]`
 
-> See also: RC-API-01 — REDCap API
+> See also: [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 
 ---
 
@@ -467,7 +467,7 @@ Different instances at this institution may have different data classification a
 
 # 15. Related Articles
 
-- RC-INST-01 — Institution-Specific Settings: Production
-- RC-INST-02 — Institution-Specific Settings: Test/Staging
-- RC-CC-02 — Control Center: General System Configuration
-- RC-CC-06 — Control Center: Modules & Services Configuration
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings: Production
+- [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md) — Institution-Specific Settings: Test/Staging
+- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

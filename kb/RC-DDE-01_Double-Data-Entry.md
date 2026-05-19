@@ -1,16 +1,16 @@
-RC-DDE-01
+[RC-DDE-01 — Double Data Entry](RC-DDE-01_Double-Data-Entry.md)
 
 **Double Data Entry**
 
-| **Article ID** | RC-DDE-01 |
+| **Article ID** | [RC-DDE-01 — Double Data Entry](RC-DDE-01_Double-Data-Entry.md) |
 |---|---|
 | **Domain** | Double Data Entry |
 | **Applies To** | All REDCap project types (except survey-only projects; see Section 7) |
-| **Prerequisite** | RC-DE-02 — Basic Data Entry |
+| **Prerequisite** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-04 — Editing Data & Audit Trail; RC-USER-03 — User Rights: Configuring User Privileges; RC-EXPRT-01 — Data Export: Overview & Workflow |
+| **Related Topics** | [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 
 ---
 
@@ -183,8 +183,8 @@ This means that a project's exported dataset reflects only the reconciled, revie
 
 # 9. Related Articles
 
-- RC-DE-02 — Basic Data Entry (foundational data entry skills required before using DDE)
-- RC-DE-04 — Editing Data & Audit Trail (audit trail behavior in DDE; the --1 and --2 copies each have their own audit trail)
-- RC-USER-03 — User Rights: Configuring User Privileges (DDE role assignment; how DDE rights interact with standard user rights)
-- RC-EXPRT-01 — Data Export: Overview & Workflow (understanding that only merged records appear in exports)
-- RC-DE-12 — Data Resolution Workflow (can be used alongside DDE for additional data quality tracking)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills required before using DDE)
+- [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (audit trail behavior in DDE; the --1 and --2 copies each have their own audit trail)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (DDE role assignment; how DDE rights interact with standard user rights)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (understanding that only merged records appear in exports)
+- [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) (can be used alongside DDE for additional data quality tracking)

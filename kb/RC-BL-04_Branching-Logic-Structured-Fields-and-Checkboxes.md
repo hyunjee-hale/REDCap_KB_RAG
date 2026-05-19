@@ -1,16 +1,16 @@
-RC-BL-04
+[RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md)
 
 **Branching Logic — Structured Fields & Checkboxes**
 
-| **Article ID** | RC-BL-04 |
+| **Article ID** | [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) |
 | --- | --- |
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-BL-02 — Syntax & Atomic Statements |
+| **Prerequisite** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-02 — Syntax & Atomic Statements; RC-BL-03 — Combining Statements; RC-FD-05 — Codebook; RC-DE-02 — Basic Data Entry |
+| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements; [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Statements; [RC-FD-05 — Codebook](RC-FD-05_Codebook.md); [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 
 ---
 
@@ -90,7 +90,7 @@ field can share a raw value.
 
 ## 3.2 Where to Look Up Raw Values
 
-- **Codebook (RC-FD-05):** The Codebook displays all options for every
+- **Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)):** The Codebook displays all options for every
     field in human-readable format, including raw values. This is the
     fastest reference when writing logic.
 
@@ -237,7 +237,7 @@ Show a field when a specific option is explicitly NOT checked:
 
 **Q: How do I find the raw values for a field\'s options?**
 
-**A:** Open the Codebook (RC-FD-05) and navigate to the field. The
+**A:** Open the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) and navigate to the field. The
 Codebook displays all options in raw value, label format. Alternatively,
 open the field in the Online Designer\'s edit dialog and check the
 Choices section.
@@ -315,16 +315,16 @@ are affected.
 
 # 8. Related Articles
 
-- RC-BL-02 — Syntax & Atomic Statements (prerequisite — covers
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements (prerequisite — covers
     operators, quotes, brackets)
 
-- RC-BL-03 — Combining Logic Statements (AND, OR, parentheses ---
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Logic Statements (AND, OR, parentheses ---
     often needed with checkbox logic)
 
-- RC-BL-01 — Branching Logic Overview & Scope
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope
 
-- RC-FD-05 — Codebook (the fastest way to look up raw values for any
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (the fastest way to look up raw values for any
     field)
 
-- RC-DE-02 — Basic Data Entry (explains how branching logic appears
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (explains how branching logic appears
     during data entry)

@@ -1,17 +1,17 @@
-RC-API-51
+[RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md)
 
 **Export Repeating Instruments and Events API**
 
-| **Article ID** | RC-API-51 |
+| **Article ID** | [RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | Projects with repeating instruments or repeating events |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-09 — Export Instruments; RC-API-10 — Export Instrument-Event Mappings; RC-API-19 — Export Events; RC-LONG-02 — Repeated Instruments & Events Setup |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings; [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events; [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) |
 
 ---
 
@@ -151,7 +151,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -211,7 +211,7 @@ In the second entry above, `form_name` is blank, indicating that the entire `fol
 
 **Q: Does this method return all instruments, or only the repeating ones?**
 
-**A:** Only repeating instruments and repeating events are returned. Instruments that are not configured as repeating do not appear. Use RC-API-09 (Export Instruments) to get a full list of all instruments in the project.
+**A:** Only repeating instruments and repeating events are returned. Instruments that are not configured as repeating do not appear. Use [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) (Export Instruments) to get a full list of all instruments in the project.
 
 **Q: Why does this method require Project Setup/Design privilege in addition to API Export?**
 
@@ -229,20 +229,20 @@ In the second entry above, `form_name` is blank, indicating that the entire `fol
 
 # 9. Common Mistakes & Gotchas
 
-**Assuming all instruments appear in the response.** This method only returns instruments configured as repeating. Non-repeating instruments are excluded entirely. If you need the full instrument list, call RC-API-09 separately.
+**Assuming all instruments appear in the response.** This method only returns instruments configured as repeating. Non-repeating instruments are excluded entirely. If you need the full instrument list, call [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) separately.
 
 **Misreading blank form_name as an error.** A blank `form_name` in the response is intentional — it signals a repeating event, not missing data. Always check for this before processing the result set.
 
 **Forgetting the Project Setup/Design permission.** Most API export calls require only API Export. This method also requires Project Setup/Design. If a user's token lacks this permission, the call returns a permissions error even though the token is otherwise valid. Confirm both privileges are enabled in User Rights.
 
-**Using form_name values in the wrong context.** The `form_name` returned here matches the instrument name in the Data Dictionary (form_name column) and in other API calls like RC-API-02 (Export Records). Do not confuse it with the human-readable instrument label.
+**Using form_name values in the wrong context.** The `form_name` returned here matches the instrument name in the Data Dictionary (form_name column) and in other API calls like [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) (Export Records). Do not confuse it with the human-readable instrument label.
 
 ---
 
 # 10. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-09 — Export Instruments (full list of all instruments; not just repeating)
-- RC-API-10 — Export Instrument-Event Mappings (which instruments are assigned to which events in longitudinal projects)
-- RC-API-19 — Export Events (list all events in a longitudinal project)
-- RC-LONG-02 — Repeated Instruments & Events Setup (configuring repeating instruments and events via the UI)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (full list of all instruments; not just repeating)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings (which instruments are assigned to which events in longitudinal projects)
+- [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events (list all events in a longitudinal project)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeating instruments and events via the UI)

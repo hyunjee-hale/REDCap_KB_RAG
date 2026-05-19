@@ -1,8 +1,8 @@
-RC-PROF-01
+[RC-PROF-01 — My Profile: User Profile Settings](RC-PROF-01_My-Profile-User-Profile-Settings.md)
 
 **My Profile — User Profile Settings**
 
-| **Article ID** | RC-PROF-01 |
+| **Article ID** | [RC-PROF-01 — My Profile: User Profile Settings](RC-PROF-01_My-Profile-User-Profile-Settings.md) |
 | --- | --- |
 | **Domain** | Profile (PROF) |
 | **Applies To** | All REDCap users |
@@ -10,7 +10,7 @@ RC-PROF-01
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-03 — Security & Authentication Configuration; RC-CC-07 — Users & Access Management; RC-USER-01 — User Rights Overview; RC-API-01 — REDCap API; RC-MSG-01 — REDCap Messenger |
+| **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) — Security & Authentication Configuration; [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) — Users & Access Management; [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview; [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md) |
 
 ---
 
@@ -120,7 +120,7 @@ After adjusting settings, click **Save Messenger Preferences**.
 
 For users authenticated via **table-based (local) authentication**, the profile page includes a section to change your password. Enter your current password and then the new password twice to confirm.
 
-Password requirements (minimum length, complexity, reuse rules) are set by your administrator and are displayed in this section. See RC-CC-03 for a description of the system-level password policy settings.
+Password requirements (minimum length, complexity, reuse rules) are set by your administrator and are displayed in this section. See [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) for a description of the system-level password policy settings.
 
 > **SSO users** (Shibboleth, Google OAuth2, Microsoft Entra ID, LDAP, etc.) do not see a password change section here. Your password is managed through your institution's identity system, not REDCap.
 
@@ -158,7 +158,7 @@ From this section you can:
 
 > **Tokens are project-specific.** Each token grants API access to exactly one project. If you need access to multiple projects via the API, you will have one token per project.
 
-> **Administrators** have a system-wide API Tokens view in the Control Center (RC-CC-07) that shows all tokens across all users and projects. Standard users only see their own tokens.
+> **Administrators** have a system-wide API Tokens view in the Control Center ([RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)) that shows all tokens across all users and projects. Standard users only see their own tokens.
 
 If you need a token revoked or regenerated (for example, if a token was accidentally shared), contact your REDCap administrator — only administrators can delete or regenerate tokens.
 
@@ -231,8 +231,8 @@ No. User account deletion is an administrator function. Contact your REDCap admi
 
 # 13. Related Articles
 
-- RC-CC-03 — Control Center: Security & Authentication Configuration
-- RC-CC-07 — Control Center: Users & Access Management
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-API-01 — REDCap API
-- RC-MSG-01 — REDCap Messenger
+- [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) Configuration
+- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md)

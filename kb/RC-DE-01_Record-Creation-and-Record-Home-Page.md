@@ -1,16 +1,16 @@
-RC-DE-01
+[RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md)
 
 **Record Creation & the Record Home Page**
 
-| **Article ID** | RC-DE-01 |
+| **Article ID** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) |
 | --- | --- |
 | **Domain** | Data Entry |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-NAV-REC-01 — Record Navigation Overview |
+| **Prerequisite** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-02 — Basic Data Entry; RC-NAV-REC-01 — Record Navigation Overview; RC-NAV-REC-04 — Record Status Dashboard |
+| **Related Topics** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
 
 ---
 
@@ -137,7 +137,7 @@ single variable for speed in large projects.
     instruments in the project for quick switching.
 
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** The \'Choose action for record\' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in RC-DE-13 — Record Administration: Choose Action for Record.
+  **Note:** The \'Choose action for record\' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in [RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md).
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---
@@ -192,7 +192,7 @@ Page entirely.
 
 **Q: How can I bulk create multiple records at once instead of adding them one by one?**
 
-**A:** You can import multiple records at once using the CSV import feature or the REDCap API. For CSV import, go to Data Import & Export on the left menu and use the Bulk Upload feature. For programmatic creation, use the RC-API-03 — Import Records API to create records in batch. Both methods are faster than manually creating records through the Add/Edit Records page.
+**A:** You can import multiple records at once using the CSV import feature or the REDCap API. For CSV import, go to Data Import & Export on the left menu and use the Bulk Upload feature. For programmatic creation, use the [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) to create records in batch. Both methods are faster than manually creating records through the Add/Edit Records page.
 
 ---
 
@@ -218,22 +218,22 @@ Page entirely.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-03 — Import Records API** — create new records programmatically by importing data; a new record is created if the record ID does not exist
-- **RC-API-05 — Rename Record API** — rename an existing record ID to a new value programmatically
+- **[RC-API-03 — Import Records API](RC-API-03_Import-Records.md)** — create new records programmatically by importing data; a new record is created if the record ID does not exist
+- **[RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md)** — rename an existing record ID to a new value programmatically
 
 ---
 
 
 # 6. Related Articles
 
-- RC-DE-02 — Basic Data Entry (field types, saving, form status)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (field types, saving, form status)
 
-- RC-DE-03 — Longitudinal Projects & Data Access Groups (how project
+- [RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md) — Longitudinal Projects & Data Access Groups (how project
     structure affects the Record Home Page)
 
-- RC-NAV-REC-01 — Record Navigation Overview (dot colors, navigation
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) (dot colors, navigation
     paths)
 
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)

@@ -1,8 +1,8 @@
-RC-CC-08
+[RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md)
 
 **Control Center: Home Page, Templates, Project Defaults & Field Validations**
 
-| **Article ID** | RC-CC-08 |
+| **Article ID** | [RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-08
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-02 — General Configuration; RC-CC-04 — User Settings & Defaults; RC-DE-05 — Field Validations; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration; [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) — User Settings & Defaults; [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -217,8 +217,8 @@ Institution-specific templates allow you to standardize data collection across p
 
 # 9. Related Articles
 
-- RC-CC-02 — General Configuration
-- RC-CC-04 — User Settings & Defaults
-- RC-DE-05 — Field Validations
-- RC-FD-02 — Online Designer
-- RC-PROJ-01 — Project Lifecycle: Status and Settings
+- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration
+- [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) — User Settings & Defaults
+- [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)

@@ -1,8 +1,8 @@
-RC-DSGN-01
+[RC-DSGN-01 — REDCap Project Design Best Practices](RC-DSGN-01_REDCap-Project-Design-Best-Practices.md)
 
 **REDCap Project Design Best Practices**
 
-| **Article ID** | RC-DSGN-01 |
+| **Article ID** | [RC-DSGN-01 — REDCap Project Design Best Practices](RC-DSGN-01_REDCap-Project-Design-Best-Practices.md) |
 | --- | --- |
 | **Domain** | Project Design Best Practices |
 | **Applies To** | All REDCap projects; all REDCap project designers and reviewers |
@@ -10,7 +10,7 @@ RC-DSGN-01
 | **Version** | 1.4 |
 | **Last Updated** | 2026-05-16 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques; RC-FD-06 — Online Designer: Instrument and Field Management; RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments & Events Setup; RC-OPS-01 — Using REDCap as an Operational Request Management System; RC-SURV-06 — Automated Survey Invitations; RC-PIPE-05 — Smart Variables: User; RC-BL-01 — Branching Logic: Basics and Syntax |
+| **Related Topics** | [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md); [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer: Instrument and Field Management; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md); [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations; [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic: Basics and Syntax |
 
 ---
 
@@ -29,7 +29,7 @@ These are defaults, not mandates. Individual projects may deviate when there is 
 
 # 2. Field Alignment (Column N — Custom Alignment)
 
-REDCap supports four alignment codes: `LH`, `LV`, `RH`, and `RV`. See RC-FD-08 Section 5.12 for a full explanation of what each code does visually.
+REDCap supports four alignment codes: `LH`, `LV`, `RH`, and `RV`. See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) Section 5.12 for a full explanation of what each code does visually.
 
 The short version:
 - **L (Left)** = field spans full page width
@@ -252,8 +252,8 @@ Example for a project request instrument:
 
 **Where to set it:**
 
-- **Repeating instruments** — Project Setup → Enable optional modules and customizations → Repeating instruments (Enable / Modify). In the popup, enter the piping expression in the custom label field next to the instrument name. This is the only place this label can be configured; it is not available in the Online Designer. (RC-LONG-02 §4–6)
-- **Repeating events** — The custom label field in the repeating instruments popup is greyed out for events set to "Repeat entire event." Instead, set the label in **Define My Events** using the **Custom Event Label** column. (RC-LONG-01 §4.2, RC-LONG-02 §6)
+- **Repeating instruments** — Project Setup → Enable optional modules and customizations → Repeating instruments (Enable / Modify). In the popup, enter the piping expression in the custom label field next to the instrument name. This is the only place this label can be configured; it is not available in the Online Designer. ([RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) §4–6)
+- **Repeating events** — The custom label field in the repeating instruments popup is greyed out for events set to "Repeat entire event." Instead, set the label in **Define My Events** using the **Custom Event Label** column. ([RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) §4.2, [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) §6)
 
 ---
 
@@ -488,12 +488,12 @@ Enabling this option causes REDCap to re-evaluate the trigger logic immediately 
 
 # 8. Related Articles
 
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques
-- RC-FD-06 — Online Designer: Instrument and Field Management
-- RC-LONG-01 — Longitudinal Project Setup
-- RC-LONG-02 — Repeated Instruments & Events Setup
-- RC-OPS-01 — Using REDCap as an Operational Request Management System
-- RC-SURV-01 — Survey Basics
-- RC-SURV-06 — Automated Survey Invitations
-- RC-PIPE-05 — Smart Variables: User
-- RC-BL-01 — Branching Logic: Basics and Syntax
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
+- [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer: Instrument and Field Management
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md)
+- [RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Survey Basics
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations
+- [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic: Basics and Syntax

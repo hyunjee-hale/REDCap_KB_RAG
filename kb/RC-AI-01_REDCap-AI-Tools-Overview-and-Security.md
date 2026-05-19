@@ -1,8 +1,8 @@
-RC-AI-01
+[RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md)
 
 **REDCap AI Tools: Overview & Security**
 
-| **Article ID** | RC-AI-01 |
+| **Article ID** | [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) |
 | --- | --- |
 | **Domain** | AI Tools |
 | **Applies To** | All project types; feature availability depends on administrator configuration |
@@ -10,7 +10,7 @@ RC-AI-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AI-02 — AI Writing Tools; RC-AI-03 — AI Translations; RC-AI-04 — AI Summarization; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md); [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -32,15 +32,15 @@ REDCap's AI features do not support open-ended chat. Instead, each feature offer
 
 ## AI Writing Tools
 
-The first of REDCap's three main AI features. Accessible anywhere the rich text editor is available, this feature generates or rewrites text based on a selected action (grammar correction, tone adjustment, length changes, etc.). See RC-AI-02 — AI Writing Tools for procedural details.
+The first of REDCap's three main AI features. Accessible anywhere the rich text editor is available, this feature generates or rewrites text based on a selected action (grammar correction, tone adjustment, length changes, etc.). See [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md) for procedural details.
 
 ## AI Translations
 
-The second main AI feature. Integrated directly into the Multi-Language Management (MLM) module, this feature automatically translates instrument content and the REDCap interface into a target language. See RC-AI-03 — AI Translations for procedural details.
+The second main AI feature. Integrated directly into the Multi-Language Management (MLM) module, this feature automatically translates instrument content and the REDCap interface into a target language. See [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md) for procedural details.
 
 ## AI Summarization
 
-The third main AI feature. Located in the Reports section of a project, this feature summarizes free-text variable data across records. See RC-AI-04 — AI Summarization for procedural details.
+The third main AI feature. Located in the Reports section of a project, this feature summarizes free-text variable data across records. See [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md) for procedural details.
 
 ## Rich Text Editor
 
@@ -88,13 +88,13 @@ REDCap's AI tools require both a configured AI server and explicit enablement by
 
 **What must be configured in the Control Center:**
 
-- The AI server URL and credentials must be entered under the AI configuration section of the Control Center (under System Configuration → Modules/Services Configuration — see **RC-CC-06**).
+- The AI server URL and credentials must be entered under the AI configuration section of the Control Center (under System Configuration → Modules/Services Configuration — see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**).
 - Each of the three AI features can be enabled or disabled independently.
 - Administrators can restrict availability to specific projects rather than enabling globally.
 
 If you do not see the AI writing tools icon (purple wizard's wand) in the rich text editor, AI translations in MLM, or the AI summarization icon in reports, the feature is either disabled system-wide or not enabled for your specific project. Contact your REDCap administrator.
 
-> **See also:** RC-CC-06 — Control Center: Modules & Services Configuration
+> **See also:** [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 
 ---
 
@@ -132,8 +132,8 @@ As of version 15.5.3, REDCap provides three main AI features. Additional capabil
 
 # 7. Related Articles
 
-- RC-AI-02 — AI Writing Tools
-- RC-AI-03 — AI Translations
-- RC-AI-04 — AI Summarization
-- RC-NAV-UI-01 — Project Navigation UI
-- RC-CC-06 — Control Center: Modules & Services Configuration (where AI features are enabled system-wide)
+- [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
+- [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
+- [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md)
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (where AI features are enabled system-wide)

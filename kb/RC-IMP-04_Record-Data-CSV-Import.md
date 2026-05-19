@@ -1,17 +1,17 @@
-RC-IMP-04
+[RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md)
 
 **Record Data CSV Import — Column Reference and Format Guide**
 
-| **Article ID** | RC-IMP-04 |
+| **Article ID** | [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-IMP-01 — Data Import Overview; RC-IMP-03 — CSV Upload Reference |
+| **Prerequisite** | [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-01 — Data Import Overview; RC-IMP-03 — CSV Upload Reference; RC-LONG-01 — Longitudinal Project Setup; RC-LONG-02 — Repeated Instruments and Events Setup; RC-API-03 — Import Records API |
+| **Related Topics** | [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — Repeated Instruments and Events Setup; [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) |
 
 ---
 
@@ -25,7 +25,7 @@ The REDCap Data Import Tool accepts a CSV file containing participant record dat
 
 > **Important:** Clicking "Upload File" only stages a preview. The data is not saved until you scroll down and click **Import Data** on the results screen. Navigating away after "Upload File" discards the staged import without saving anything.
 
-For a general overview of the Data Import Tool workflow, see RC-IMP-01 — Data Import Overview, Sections 8 and 9.
+For a general overview of the Data Import Tool workflow, see [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md), Sections 8 and 9.
 
 ---
 
@@ -112,19 +112,19 @@ The API equivalent of the Data Import Tool CSV upload is the Import Records endp
 
 | **Feature** | **Export** | **Import** | **Delete** |
 |---|---|---|---|
-| Record Data | RC-API-02 | RC-API-03 | RC-API-04 |
+| Record Data | [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) | [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) | [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) |
 
-See RC-API-01 — REDCap API for authentication, token management, and setup.
+See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
 ---
 
 # 8. Related Articles
 
-- RC-IMP-01 — Data Import Overview (full workflow and import tool walkthrough)
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-LONG-01 — Longitudinal Project Setup (arms, events, and unique event name reference)
-- RC-LONG-02 — Repeated Instruments and Events Setup (repeating instance reference)
-- RC-DAG-01 — Data Access Groups (DAG assignment and the `redcap_data_access_group` column)
-- RC-API-02 — Export Records API
-- RC-API-03 — Import Records API
-- RC-API-04 — Delete Records API
+- [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (full workflow and import tool walkthrough)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms, events, and unique event name reference)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — Repeated Instruments and Events Setup (repeating instance reference)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG assignment and the `redcap_data_access_group` column)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)
+- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)

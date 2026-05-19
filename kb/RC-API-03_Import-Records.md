@@ -1,17 +1,17 @@
-RC-API-03
+[RC-API-03 — Import Records API](RC-API-03_Import-Records.md)
 
 **Import Records API**
 
-| **Article ID** | RC-API-03 |
+| **Article ID** | [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-02 — Export Records; RC-API-04 — Delete Records; RC-API-07 — Export Metadata |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records; [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata |
 
 ---
 
@@ -207,7 +207,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -306,11 +306,11 @@ On error, the API returns an error message describing what went wrong (e.g., mis
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-02 — Export Records (reading data from REDCap)
-- RC-API-04 — Delete Records (removing records)
-- RC-API-07 — Export Metadata (get the data dictionary to understand field names)
-- RC-INTG-01 — Data Entry Trigger (explains why DET does not fire on API imports)
-- RC-IMP-01 — Data Import Overview (manual import workflow and formatting rules)
-- RC-DAG-01 — Data Access Groups (how DAGs affect imported data)
-- RC-LONG-02 — Repeated Instruments & Events Setup (repeat instance handling in imports)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading data from REDCap)
+- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records (removing records)
+- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata (get the data dictionary to understand field names)
+- [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (explains why DET does not fire on API imports)
+- [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (manual import workflow and formatting rules)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (how DAGs affect imported data)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (repeat instance handling in imports)

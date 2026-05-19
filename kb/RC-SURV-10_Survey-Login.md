@@ -1,16 +1,16 @@
-RC-SURV-10
+[RC-SURV-10 — Survey Login](RC-SURV-10_Survey-Login.md)
 
 **Survey Login**
 
-| **Article ID** | RC-SURV-10 |
+| **Article ID** | [RC-SURV-10 — Survey Login](RC-SURV-10_Survey-Login.md) |
 | --- | --- |
 | **Domain** | Surveys |
 | **Applies To** | All REDCap projects with surveys enabled; Survey Login cannot be applied to a Public Survey |
-| **Prerequisite** | RC-SURV-01 — Surveys – Basics; RC-SURV-02 — Survey Settings: Basic Options & Design |
+| **Prerequisite** | [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-SURV-01 — Surveys – Basics; RC-SURV-03 — Survey Settings: Behavior, Access & Termination; RC-SURV-04 — Survey Link Types & Access Methods; RC-SURV-05 — Participant List & Manual Survey Invitations |
+| **Related Topics** | [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md); [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md); [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) |
 
 ---
 
@@ -27,7 +27,7 @@ By default, anyone who possesses a survey link can open and complete a survey. S
 ## Scope and Assumptions
 
 This article covers Survey Login configuration only. It assumes:
-- Surveys are already enabled for the project (see RC-SURV-01).
+- Surveys are already enabled for the project (see [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)).
 - At least one instrument is enabled as a survey.
 - The relevant login fields already exist in the project's data dictionary and contain values for each record that will be prompted to log in.
 
@@ -182,9 +182,9 @@ Set **Apply survey login to** to *Only selected surveys*, then enable Survey Log
 
 # 8. Related Articles
 
-- RC-SURV-01 — Surveys – Basics
-- RC-SURV-02 — Survey Settings: Basic Options & Design
-- RC-SURV-03 — Survey Settings: Behavior, Access & Termination
-- RC-SURV-04 — Survey Link Types & Access Methods
-- RC-SURV-05 — Participant List & Manual Survey Invitations
-- RC-SURV-07 — Survey Queue
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
+- [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md)
+- [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md)
+- [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md)
+- [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md)
+- [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md)

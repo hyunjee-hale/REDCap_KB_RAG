@@ -1,16 +1,16 @@
-RC-AT-04
+[RC-AT-04 — Checkbox Action Tags](RC-AT-04_Action-Tags-Checkbox.md)
 
 **Checkbox Action Tags**
 
-| **Article ID** | RC-AT-04 |
+| **Article ID** | [RC-AT-04 — Checkbox Action Tags](RC-AT-04_Action-Tags-Checkbox.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Overview; RC-AT-03 — Radio/Dropdown Tags; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Tags; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -126,6 +126,6 @@ Both operate independently and do not interfere with each other.
 
 # 7. Related Articles
 
-- RC-AT-01 — Action Tags Overview
-- RC-AT-03 — Radio/Dropdown Action Tags
-- RC-FD-02 — Online Designer
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Action Tags
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

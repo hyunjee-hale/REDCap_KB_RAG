@@ -1,16 +1,16 @@
-RC-AT-09
+[RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md)
 
 **Action Tags — @CALCTEXT and @CALCDATE: Calculation Action Tags**
 
-| **Article ID** | RC-AT-09 |
+| **Article ID** | [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview; familiarity with REDCap calculated fields |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; familiarity with REDCap calculated fields |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Action Tags Overview; RC-AT-06 — Autofill Action Tags; RC-AT-08 — @IF; RC-DE-05 — Field Validations |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF; [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) |
 
 ---
 
@@ -20,7 +20,7 @@ RC-AT-09
 
 Both tags behave like calculated fields in key ways: the field is not editable by users, the value updates in real time during data entry, and the value can be updated via data import or when Data Quality rule H is run.
 
-> **Do not use @CALCTEXT or @CALCDATE inside @IF.** The calculation tags operate in more contexts than `@IF` does (real-time recalculation, imports, Data Quality rules). Nesting them inside `@IF` produces unpredictable results. See RC-AT-08 for guidance on `@IF`.
+> **Do not use @CALCTEXT or @CALCDATE inside @IF.** The calculation tags operate in more contexts than `@IF` does (real-time recalculation, imports, Data Quality rules). Nesting them inside `@IF` produces unpredictable results. See [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) for guidance on `@IF`.
 
 ---
 
@@ -220,13 +220,13 @@ This pattern is useful in operational or administrative projects where a value m
 
 **Cross-event source fields in @CALCDATE breaking silently after schema changes.** When `@CALCDATE` references a field from a different event using the `[event_name][field_name]` syntax — for example, `@CALCDATE([baseline_arm_1][enrol_date], 45, 'd')` — the expression depends on two identifiers that are easy to change accidentally: the event's unique name and the field's variable name. If the baseline event is renamed (which regenerates its unique event name) or the source field is renamed, every `@CALCDATE` field referencing it returns blank with no error or warning. This failure mode is especially consequential when multiple downstream fields all chain from the same source (e.g., a randomisation date used to calculate several visit windows). Before moving a project to production, document all cross-event field references in `@CALCDATE` and `@CALCTEXT` expressions. Treat the referenced event names and field names as frozen — equivalent to a primary key — and apply a branching logic audit whenever either is changed.
 
-**`[previous-instance]` chains may go stale without a recalculate module.** When `@CALCTEXT` fields in a repeating instrument use `[previous-instance]` to build accumulated values (see RC-PIPE-10 §7), REDCap does not automatically recalculate earlier instances when a later one changes, or vice versa. If a user edits instance 2 after instances 3–5 already exist, the accumulated values in those later instances will not update. The `recalculate` external module (if installed on your instance) can force a full recalculation across all instances. When designing accumulator-chain patterns, confirm that `recalculate` is available or plan for the possibility of stale values.
+**`[previous-instance]` chains may go stale without a recalculate module.** When `@CALCTEXT` fields in a repeating instrument use `[previous-instance]` to build accumulated values (see [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) §7), REDCap does not automatically recalculate earlier instances when a later one changes, or vice versa. If a user edits instance 2 after instances 3–5 already exist, the accumulated values in those later instances will not update. The `recalculate` external module (if installed on your instance) can force a full recalculation across all instances. When designing accumulator-chain patterns, confirm that `recalculate` is available or plan for the possibility of stale values.
 
 ---
 
 # 8. Related Articles
 
-- RC-AT-01 — Action Tags Overview: what action tags are and how to add them
-- RC-AT-06 — Autofill Action Tags: `@DEFAULT` and `@SETVALUE` for pre-filling values at page load
-- RC-AT-08 — @IF: conditional action tag logic; note that @CALCTEXT and @CALCDATE cannot be nested inside @IF
-- RC-DE-05 — Field Validations: date and datetime validations required by @CALCDATE
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview: what action tags are and how to add them
+- [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md): `@DEFAULT` and `@SETVALUE` for pre-filling values at page load
+- [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF: conditional action tag logic; note that @CALCTEXT and @CALCDATE cannot be nested inside @IF
+- [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md): date and datetime validations required by @CALCDATE

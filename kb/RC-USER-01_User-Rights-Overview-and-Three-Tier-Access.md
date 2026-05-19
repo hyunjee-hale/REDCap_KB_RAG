@@ -1,8 +1,8 @@
-RC-USER-01
+[RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
 
 **User Rights — Overview & Three-Tier Access**
 
-| **Article ID** | RC-USER-01 |
+| **Article ID** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 |---|---|
 | **Domain** | User Rights |
 | **Applies To** | All REDCap project types |
@@ -10,7 +10,7 @@ RC-USER-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-USER-02 — Adding Users & Managing Roles; RC-USER-03 — Configuring User Privileges; RC-USER-04 — User Management; RC-DAG-01 — Data Access Groups; RC-NAV-UI-01 — Project Navigation UI; RC-NAV-UI-02 — Project Menu Reference; RC-NAV-REC-04 — Record Status Dashboard |
+| **Related Topics** | [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles; [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges; [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
 
 ---
 
@@ -91,10 +91,10 @@ Having project access does not mean having full access. Within a project, user r
 
 This is the most complex tier. User rights are highly configurable and differ from project to project. The remaining articles in this series cover the details:
 
-- RC-USER-02 — Adding Users & Managing Roles
-- RC-USER-03 — Configuring User Privileges
-- RC-USER-04 — User Management
-- RC-DAG-01 — Data Access Groups
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges
+- [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
 
 ---
 
@@ -152,24 +152,24 @@ When a user reports they cannot access a project or perform an expected action, 
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-22 — Export Users API** — retrieve user permissions and settings for all users in a project
-- **RC-API-23 — Import Users API** — add or update user access and permissions programmatically
-- **RC-API-24 — Delete Users API** — remove a user from a project programmatically
-- **RC-API-25 — Export User Roles API** — retrieve custom role definitions and their permission sets
-- **RC-API-26 — Import User Roles API** — create or update custom user roles programmatically
-- **RC-API-27 — Delete User Roles API** — remove a custom role from the project programmatically
+- **[RC-API-22 — Export Users API](RC-API-22_Export-Users.md)** — retrieve user permissions and settings for all users in a project
+- **[RC-API-23 — Import Users API](RC-API-23_Import-Users.md)** — add or update user access and permissions programmatically
+- **[RC-API-24 — Delete Users API](RC-API-24_Delete-Users.md)** — remove a user from a project programmatically
+- **[RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)** — retrieve custom role definitions and their permission sets
+- **[RC-API-26 — Import User Roles API](RC-API-26_Import-User-Roles.md)** — create or update custom user roles programmatically
+- **[RC-API-27 — Delete User Roles API](RC-API-27_Delete-User-Roles.md)** — remove a custom role from the project programmatically
 
 ---
 
 
 # 7. Related Articles
 
-- RC-USER-02 — User Rights: Adding Users & Managing Roles
-- RC-USER-03 — User Rights: Configuring User Privileges
-- RC-USER-04 — User Rights: User Management
-- RC-DAG-01 — Data Access Groups
-- RC-NAV-UI-01 — Project Navigation UI (user rights control which menu items a user can see; explains why menu items may appear or disappear)
-- RC-NAV-UI-02 — Project Menu Reference (the User Rights and DAGs menu items are described here, along with every other feature they gate)
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links (instrument-level access rights and DAG membership filter what appears on the dashboard)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
+- [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) (user rights control which menu items a user can see; explains why menu items may appear or disappear)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the User Rights and DAGs menu items are described here, along with every other feature they gate)
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (instrument-level access rights and DAG membership filter what appears on the dashboard)

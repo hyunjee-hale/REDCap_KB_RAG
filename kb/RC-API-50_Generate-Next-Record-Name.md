@@ -1,17 +1,17 @@
-RC-API-50
+[RC-API-50 — Generate Next Record Name API](RC-API-50_Generate-Next-Record-Name.md)
 
 **Generate Next Record Name API**
 
-| **Article ID** | RC-API-50 |
+| **Article ID** | [RC-API-50 — Generate Next Record Name API](RC-API-50_Generate-Next-Record-Name.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-03 — Import Records API; RC-API-05 — Rename Record API |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md); [RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md) |
 
 ---
 
@@ -123,7 +123,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -181,6 +181,6 @@ On error, an error message string is returned.
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-03 — Import Records API (creating records; use `forceAutoNumber` to avoid race conditions)
-- RC-API-05 — Rename Record API (changing record IDs after creation)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) (creating records; use `forceAutoNumber` to avoid race conditions)
+- [RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md) (changing record IDs after creation)

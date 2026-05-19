@@ -1,17 +1,17 @@
-RC-API-40
+[RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)
 
 **Export Survey Link API**
 
-| **Article ID** | RC-API-40 |
+| **Article ID** | [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects with surveys enabled |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-41 — Export Survey Queue Link; RC-API-42 — Export Survey Return Code |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link; [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code |
 
 ---
 
@@ -147,7 +147,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -198,9 +198,9 @@ The URL is valid immediately and can be distributed via email, text message, or 
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-API-41 — Export Survey Queue Link
-- RC-API-42 — Export Survey Return Code
-- RC-API-43 — Export Survey Participants
-- RC-SURV-01 — Surveys – Basics (survey fundamentals and how survey links work)
-- RC-SURV-04 — Survey Link Types & Access Methods (the link types this method generates)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link
+- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code
+- [RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md) — Export Survey Participants
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals and how survey links work)
+- [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md) (the link types this method generates)

@@ -1,17 +1,17 @@
-RC-IMP-09
+[RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md)
 
 **Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings**
 
-| **Article ID** | RC-IMP-09 |
+| **Article ID** | [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | Longitudinal REDCap projects |
-| **Prerequisite** | RC-IMP-03 — CSV Upload Reference; RC-LONG-01 — Longitudinal Project Setup |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-03 — CSV Upload Reference; RC-LONG-01 — Longitudinal Project Setup; RC-API-16 through RC-API-21 — Arms and Events API methods |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) through [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) — Arms and Events API methods |
 
 ---
 
@@ -23,7 +23,7 @@ Three CSV uploads govern the fundamental structure of a longitudinal REDCap proj
 
 > **Single-arm projects:** Arm 1 is created automatically when longitudinal mode is enabled. Skip the arms upload entirely — start directly with the events upload.
 
-For a general overview of longitudinal project setup in the REDCap UI, see RC-LONG-01 — Longitudinal Project Setup.
+For a general overview of longitudinal project setup in the REDCap UI, see [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md).
 
 ---
 
@@ -153,22 +153,22 @@ All three CSV uploads have corresponding API methods.
 
 | **Feature** | **Export** | **Import** | **Delete** |
 |---|---|---|---|
-| Arms | RC-API-16 | RC-API-17 | RC-API-18 |
-| Events | RC-API-19 | RC-API-20 | RC-API-21 |
-| Instrument–Event Mappings | RC-API-10 | RC-API-11 | — |
+| Arms | [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) | [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md) | [RC-API-18 — Delete Arms API](RC-API-18_Delete-Arms.md) |
+| Events | [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) | [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) | [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) |
+| Instrument–Event Mappings | [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) | [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) | — |
 
-See RC-API-01 — REDCap API for authentication, token management, and setup.
+See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
 ---
 
 # 7. Related Articles
 
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-LONG-01 — Longitudinal Project Setup (full UI walkthrough for longitudinal configuration)
-- RC-LONG-02 — Repeated Instruments and Events Setup (repeating instrument and event configuration)
-- RC-API-10 — Export Instrument-Event Mappings API
-- RC-API-11 — Import Instrument-Event Mappings API
-- RC-API-16 — Export Arms API
-- RC-API-17 — Import Arms API
-- RC-API-19 — Export Events API
-- RC-API-20 — Import Events API
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (full UI walkthrough for longitudinal configuration)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) — Repeated Instruments and Events Setup (repeating instrument and event configuration)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)
+- [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md)
+- [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md)
+- [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md)
+- [RC-API-19 — Export Events API](RC-API-19_Export-Events.md)
+- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)

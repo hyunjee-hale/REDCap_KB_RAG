@@ -1,17 +1,17 @@
-RC-API-52
+[RC-API-52 — Randomize Record API](RC-API-52_Randomize-Record.md)
 
 **Randomize Record API**
 
-| **Article ID** | RC-API-52 |
+| **Article ID** | [RC-API-52 — Randomize Record API](RC-API-52_Randomize-Record.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects with Randomization enabled |
-| **Prerequisite** | RC-API-01 — REDCap API; RC-RAND-01 — Randomization Concepts & Terminology |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | RC-API-01 — REDCap API; RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide; RC-RAND-03 — Working with & Managing Randomization |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md); [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md) |
 
 ---
 
@@ -150,7 +150,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -209,7 +209,7 @@ On failure, an error message is returned in the requested `returnFormat`. Common
 
 **Q: Does the record need to already exist before I call this method?**
 
-**A:** Yes. The record must already exist in REDCap and all stratification fields for the selected randomization must be populated. Use the Import Records API (RC-API-03) to create the record first if it does not exist.
+**A:** Yes. The record must already exist in REDCap and all stratification fields for the selected randomization must be populated. Use the Import Records API ([RC-API-03 — Import Records API](RC-API-03_Import-Records.md)) to create the record first if it does not exist.
 
 ---
 
@@ -229,7 +229,7 @@ On failure, an error message is returned in the requested `returnFormat`. Common
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-RAND-01 — Randomization Concepts & Terminology (allocation tables, concealment, stratification)
-- RC-RAND-02 — Randomization Setup Guide (how to configure randomization definitions and find the randomization_id)
-- RC-RAND-03 — Working with & Managing Randomization (manual randomization workflow; reverting randomizations)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) (allocation tables, concealment, stratification)
+- [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) (how to configure randomization definitions and find the randomization_id)
+- [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md) (manual randomization workflow; reverting randomizations)

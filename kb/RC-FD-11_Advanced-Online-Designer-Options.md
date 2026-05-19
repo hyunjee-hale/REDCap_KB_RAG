@@ -1,16 +1,16 @@
-RC-FD-11
+[RC-FD-11 — Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS](RC-FD-11_Advanced-Online-Designer-Options.md)
 
 **Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS**
 
-| **Article ID** | RC-FD-11 |
+| **Article ID** | [RC-FD-11 — Online Designer – Advanced Options: Quick-Modify, Field Navigator, and Custom CSS](RC-FD-11_Advanced-Online-Designer-Options.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-02 — Online Designer; RC-FD-06 — Online Designer – Instrument and Field Management |
+| **Prerequisite** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-06 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-03 — Data Dictionary; RC-FD-07 — Field Embedding; RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques; RC-BL-01 — Branching Logic Overview and Scope; RC-AT-01 — Action Tags Overview |
+| **Related Topics** | [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md); [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview and Scope; [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 
 ---
 
@@ -62,7 +62,7 @@ The toolbar is organized into two rows. The top row contains the primary structu
 | --- | --- | --- |
 | **Required ON / OFF** | Marks all selected fields as required or not required | — |
 | **Identifier ON / OFF** | Marks all selected fields as PHI identifiers or clears that flag | — |
-| **Set Alignment** | Applies one of four alignment codes to all selected fields: **RV** (Right/Vertical), **RH** (Right/Horizontal), **LV** (Left/Vertical), **LH** (Left/Horizontal) | See RC-FD-08 Section 5.12 for a full explanation of alignment codes |
+| **Set Alignment** | Applies one of four alignment codes to all selected fields: **RV** (Right/Vertical), **RH** (Right/Horizontal), **LV** (Left/Vertical), **LH** (Left/Horizontal) | See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) Section 5.12 for a full explanation of alignment codes |
 | **Set Validation** | Sets a text box validation type for all selected fields | Only applies to Text Box fields; has no effect on other field types |
 | **Edit Sliders** | Opens the slider configuration editor | Only applies when all selected fields are Slider type |
 | **Edit Field Notes** | Opens a field note editor for all selected fields | Applies the same note text to every selected field |
@@ -151,7 +151,7 @@ For the most durable CSS, target the `id` attributes that REDCap generates from 
 
 ## 4.6 Relationship to the Data Dictionary and Survey Settings
 
-Custom CSS is stored internally and is also exposed in the **Survey Settings bulk CSV export/import** as the `custom_css` column. If your institution uses bulk Survey Settings import to manage project configurations, this column can be used to transfer or apply CSS programmatically. See RC-SURV-02 for more on the Survey Settings page.
+Custom CSS is stored internally and is also exposed in the **Survey Settings bulk CSV export/import** as the `custom_css` column. If your institution uses bulk Survey Settings import to manage project configurations, this column can be used to transfer or apply CSS programmatically. See [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) for more on the Survey Settings page.
 
 ---
 
@@ -195,10 +195,10 @@ Custom CSS is stored internally and is also exposed in the **Survey Settings bul
 
 # 7. Related Articles
 
-- RC-FD-02 — Online Designer (prerequisite — overview and Development vs. Production behavior)
-- RC-FD-06 — Online Designer – Instrument and Field Management (prerequisite — field types, alignment, field notes, field annotation, individual field editing)
-- RC-FD-03 — Data Dictionary (alternative tool for bulk restructuring that Quick-modify cannot perform, such as splitting instruments)
-- RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques (alignment code reference in Section 5.12)
-- RC-BL-01 — Branching Logic Overview and Scope (background on branching logic editing, used by the Quick-modify branching logic action)
-- RC-AT-01 — Action Tags Overview (background on action tags, used by the Quick-modify action tag editor)
-- RC-SURV-02 — Survey Settings: Basic Options & Design (Survey Settings bulk CSV, which exposes the `custom_css` column)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (prerequisite — overview and Development vs. Production behavior)
+- [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) (prerequisite — field types, alignment, field notes, field annotation, individual field editing)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (alternative tool for bulk restructuring that Quick-modify cannot perform, such as splitting instruments)
+- [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (alignment code reference in Section 5.12)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview and Scope (background on branching logic editing, used by the Quick-modify branching logic action)
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview (background on action tags, used by the Quick-modify action tag editor)
+- [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) (Survey Settings bulk CSV, which exposes the `custom_css` column)

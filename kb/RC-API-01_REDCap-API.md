@@ -1,17 +1,17 @@
-RC-API-01
+[RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 
 **REDCap API**
 
-| **Article ID** | RC-API-01 |
+| **Article ID** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-USER-03 — User Rights: Configuring User Privileges |
+| **Prerequisite** | [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 | **Version** | 1.3 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation |
-| **Related Topics** | RC-INTG-01 — Data Entry Trigger; RC-EXPRT-01 — Data Export Overview; RC-IMP-01 — Data Import Overview; RC-USER-03 — User Rights: Configuring User Privileges; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Data Export Overview; [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -67,7 +67,7 @@ A special token required to use the **Create Project** API method. Super tokens 
 
 Before requesting a token:
 
-1. Confirm that API access is enabled at the system level — the REDCap API must be enabled by an administrator in the Control Center (System Configuration → Modules/Services Configuration — see **RC-CC-06**). If the API link is missing from the project menu entirely, the API may be disabled instance-wide.
+1. Confirm that API access is enabled at the system level — the REDCap API must be enabled by an administrator in the Control Center (System Configuration → Modules/Services Configuration — see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). If the API link is missing from the project menu entirely, the API may be disabled instance-wide.
 2. Verify that you have been granted the **API Export** and/or **API Import** user right in the project (User Rights → your user → API section).
 
 ## 3.2 Requesting a Token
@@ -265,7 +265,7 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 **Q: Can the API trigger the Data Entry Trigger (DET)?**
 
-**A:** No. The DET fires only on interactive data entry — saves made by a user on a REDCap form or survey. Data imported via the API does not trigger the DET. See RC-INTG-01 — Data Entry Trigger for details.
+**A:** No. The DET fires only on interactive data entry — saves made by a user on a REDCap form or survey. Data imported via the API does not trigger the DET. See [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) for details.
 
 **Q: I requested a token but don't see it on the API page. What's wrong?**
 
@@ -313,16 +313,16 @@ The REDCap API must be enabled at the system level before any project can use it
 
 Administrators can also manage and revoke API tokens for any user from the Control Center under Users → API Tokens. Super tokens (required for the Create Project method) must be granted there as well.
 
-> **See also:** RC-CC-06 — Control Center: Modules & Services Configuration
+> **See also:** [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 
 ---
 
 # 11. Related Articles
 
-- RC-INTG-01 — Data Entry Trigger (separate mechanism for real-time notification of data changes to external systems; does not fire on API imports)
-- RC-EXPRT-01 — Data Export Overview (manual export workflow; for comparison with API-based export)
-- RC-IMP-01 — Data Import Overview (manual import methods; API import is the programmatic equivalent)
-- RC-USER-03 — User Rights: Configuring User Privileges (where API Export and API Import rights are granted)
-- RC-DAG-01 — Data Access Groups (DAG-scoped access applies equally to API tokens)
-- RC-LONG-02 — Repeated Instruments & Events Setup (essential background for working with repeating data via the API)
-- RC-CC-06 — Control Center: Modules & Services Configuration (system-level API enable/disable and token management)
+- [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (separate mechanism for real-time notification of data changes to external systems; does not fire on API imports)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Data Export Overview (manual export workflow; for comparison with API-based export)
+- [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (manual import methods; API import is the programmatic equivalent)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (where API Export and API Import rights are granted)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG-scoped access applies equally to API tokens)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (essential background for working with repeating data via the API)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level API enable/disable and token management)

@@ -1,16 +1,16 @@
-RC-PIPE-09
+[RC-PIPE-09 — Smart Variables: Event & Arm](RC-PIPE-09_Smart-Variables-Event-and-Arm.md)
 
 **Smart Variables: Event & Arm**
 
-| **Article ID** | RC-PIPE-09 |
+| **Article ID** | [RC-PIPE-09 — Smart Variables: Event & Arm](RC-PIPE-09_Smart-Variables-Event-and-Arm.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | Longitudinal projects only |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview; RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers; RC-PIPE-10 — Smart Variables: Repeating Instruments and Events |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers; [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) |
 
 ---
 
@@ -133,7 +133,7 @@ Both approaches work; use smart variables for flexibility and hard-coded event n
 
 **Q: I need to create a link from the current event to the next event's form. How do I do that?**
 
-**A:** Use `[next-event-name][form-link:instrument]`. For example: `[next-event-name][form-link:visit_data_form]` creates a link to the Visit Data form in the next event. See RC-PIPE-07 for more on form links.
+**A:** Use `[next-event-name][form-link:instrument]`. For example: `[next-event-name][form-link:visit_data_form]` creates a link to the Visit Data form in the next event. See [RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md) for more on form links.
 
 **Q: What happens if I use an event smart variable in the last event?**
 
@@ -167,8 +167,8 @@ Both approaches work; use smart variables for flexibility and hard-coded event n
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (hard-coded event references and event prefixes)
-- RC-PIPE-07 — Smart Variables: Form (form links and URLs for cross-event navigation)
-- RC-PIPE-08 — Smart Variables: Survey (survey links with event prefixes)
-- RC-PIPE-10 — Smart Variables: Repeating Instruments and Events (instance qualifiers for repeating data)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (hard-coded event references and event prefixes)
+- [RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md) (form links and URLs for cross-event navigation)
+- [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md) (survey links with event prefixes)
+- [RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md) (instance qualifiers for repeating data)

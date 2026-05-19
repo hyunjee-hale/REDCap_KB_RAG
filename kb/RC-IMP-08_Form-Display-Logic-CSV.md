@@ -1,17 +1,17 @@
-RC-IMP-08
+[RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md)
 
 **Form Display Logic CSV — Column Reference and Format Guide**
 
-| **Article ID** | RC-IMP-08 |
+| **Article ID** | [RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-IMP-03 — CSV Upload Reference; RC-FDL-01 — Form Display Logic |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-03 — CSV Upload Reference; RC-FDL-01 — Form Display Logic; RC-MYCAP-02 — Designing Instruments for MyCap |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md); [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap |
 
 ---
 
@@ -27,7 +27,7 @@ The Form Display Logic (FDL) module supports CSV export and import of FDL rules.
 
 **Always download first.** Start from an exported file to ensure correct column order and to have a recovery snapshot, particularly because empty-string conditions in FDL use CSV double-quote escaping that plain-text editors frequently corrupt.
 
-For full coverage of Form Display Logic and its use cases, see RC-FDL-01 — Form Display Logic.
+For full coverage of Form Display Logic and its use cases, see [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md).
 
 ---
 
@@ -90,8 +90,8 @@ contact_info,,"[record_id]<>""""",y,y,n
 
 # 5. Related Articles
 
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-FDL-01 — Form Display Logic (full module reference)
-- RC-BL-01 — Branching Logic Overview (logic expression syntax used in `control_condition`)
-- RC-MYCAP-02 — Designing Instruments for MyCap (`apply_to_mycap_tasks` context)
-- RC-USER-01 — User Rights Overview (`[user-role-name]` smart variable context)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md) (full module reference)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview (logic expression syntax used in `control_condition`)
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap (`apply_to_mycap_tasks` context)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview (`[user-role-name]` smart variable context)

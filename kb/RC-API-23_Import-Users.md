@@ -1,17 +1,17 @@
-RC-API-23
+[RC-API-23 — Import Users API](RC-API-23_Import-Users.md)
 
 **Import Users API**
 
-| **Article ID** | RC-API-23 |
+| **Article ID** | [RC-API-23 — Import Users API](RC-API-23_Import-Users.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -347,7 +347,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5.
 
 ---
 
@@ -395,9 +395,9 @@ On success, the API returns a count of users added or modified. For example: `2`
 
 # 9. Related Articles
 
-- RC-API-01 — REDCap API (foundational; required reading before using any API method)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (explains the three access tiers and role-based access)
-- RC-USER-03 — User Rights: Configuring User Privileges (complete reference for all permission names and meanings)
-- RC-API-22 — Export Users (retrieve user list and current permissions)
-- RC-API-24 — Delete Users (remove users from a project)
-- RC-API-26 — Import User Roles (assign users to custom roles)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains the three access tiers and role-based access)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (complete reference for all permission names and meanings)
+- [RC-API-22 — Export Users API](RC-API-22_Export-Users.md) — Export Users (retrieve user list and current permissions)
+- [RC-API-24 — Delete Users API](RC-API-24_Delete-Users.md) — Delete Users (remove users from a project)
+- [RC-API-26 — Import User Roles API](RC-API-26_Import-User-Roles.md) — Import User Roles (assign users to custom roles)

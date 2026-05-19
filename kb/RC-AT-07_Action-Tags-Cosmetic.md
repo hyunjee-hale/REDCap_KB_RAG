@@ -1,16 +1,16 @@
-RC-AT-07
+[RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md)
 
 **Cosmetic Action Tags**
 
-| **Article ID** | RC-AT-07 |
+| **Article ID** | [RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Overview; RC-AT-05 — Free Text Tags; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md) — Free Text Tags; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -143,6 +143,6 @@ This displays the file inline as if `@INLINE` (without parameters) were applied,
 
 # 8. Related Articles
 
-- RC-AT-01 — Action Tags Overview
-- RC-AT-05 — Free Text Action Tags
-- RC-FD-02 — Online Designer
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

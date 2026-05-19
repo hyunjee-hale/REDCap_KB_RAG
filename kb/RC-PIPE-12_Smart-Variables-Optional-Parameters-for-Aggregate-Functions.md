@@ -1,16 +1,16 @@
-RC-PIPE-12
+[RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md)
 
 **Smart Variables: Optional Parameters for Aggregate Functions**
 
-| **Article ID** | RC-PIPE-12 |
+| **Article ID** | [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) |
 |---|---|
 | **Domain** | Piping |
-| **Applies To** | Projects using aggregate functions, charts, and tables (RC-PIPE-11) |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Applies To** | Projects using aggregate functions, charts, and tables ([RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md)) |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview; RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) |
 
 ---
 
@@ -190,5 +190,5 @@ To include multiple DAGs or events, use comma separation (no spaces): `[aggregat
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables (detailed reference for functions and charts)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) (detailed reference for functions and charts)

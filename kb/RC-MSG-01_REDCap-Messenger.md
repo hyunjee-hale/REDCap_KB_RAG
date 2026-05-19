@@ -1,8 +1,8 @@
-RC-MSG-01
+[RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md)
 
 **REDCap Messenger**
 
-| **Article ID** | RC-MSG-01 |
+| **Article ID** | [RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md) |
 |---|---|
 | **Domain** | Messenger |
 | **Applies To** | All REDCap users; no project-specific setup required |
@@ -10,7 +10,7 @@ RC-MSG-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PROF-01 — My Profile: User Profile Settings; RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Related Topics** | [RC-PROF-01 — My Profile: User Profile Settings](RC-PROF-01_My-Profile-User-Profile-Settings.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 
 ---
 
@@ -143,7 +143,7 @@ Messenger is intended for communication between REDCap users only. It cannot be 
 
 **Q: Can I use REDCap Messenger to send messages to study participants?**
 
-**A:** No. Messenger is designed for communication between REDCap users only. Participants who access REDCap only through surveys do not have REDCap user accounts and cannot be reached via Messenger. For participant communication, see the Alerts & Notifications feature (RC-ALERT-01) or Texting/SMS (RC-TXT-01).
+**A:** No. Messenger is designed for communication between REDCap users only. Participants who access REDCap only through surveys do not have REDCap user accounts and cannot be reached via Messenger. For participant communication, see the Alerts & Notifications feature ([RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)) or Texting/SMS ([RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md)).
 
 **Q: Are my messages private? Can administrators read them?**
 
@@ -185,7 +185,7 @@ Messenger is intended for communication between REDCap users only. It cannot be 
 
 # 10. Related Articles
 
-- RC-PROF-01 — My Profile: User Profile Settings (where Messenger email notification preferences are configured)
-- RC-ALERT-01 — Alerts & Notifications: Setup (for automated notifications to project team members or participants)
-- RC-TXT-01 — Texting in REDCap: Setup and Usage (for SMS-based participant communication)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (for background on REDCap user accounts)
+- [RC-PROF-01 — My Profile: User Profile Settings](RC-PROF-01_My-Profile-User-Profile-Settings.md) (where Messenger email notification preferences are configured)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (for automated notifications to project team members or participants)
+- [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) (for SMS-based participant communication)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (for background on REDCap user accounts)

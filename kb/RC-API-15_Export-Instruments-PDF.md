@@ -1,17 +1,17 @@
-RC-API-15
+[RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md)
 
 **Export Instruments PDF API**
 
-| **Article ID** | RC-API-15 |
+| **Article ID** | [RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -140,7 +140,7 @@ fputs($fh, $output);
 fclose($fh);
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -198,6 +198,6 @@ The method returns a binary PDF file. The PDF should be written to disk using a 
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-FD-01 — Form Design Overview (instrument design concepts and terminology)
-- RC-SURV-09 — PDF Snapshots of Records (manual PDF export for records; related concept)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument design concepts and terminology)
+- [RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md) (manual PDF export for records; related concept)

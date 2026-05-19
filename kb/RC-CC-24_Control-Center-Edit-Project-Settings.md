@@ -1,16 +1,16 @@
-RC-CC-24
+[RC-CC-24 — Control Center: Edit Project Settings](RC-CC-24_Control-Center-Edit-Project-Settings.md)
 
 **Control Center: Edit Project Settings**
 
-| **Article ID** | RC-CC-24 |
+| **Article ID** | [RC-CC-24 — Control Center: Edit Project Settings](RC-CC-24_Control-Center-Edit-Project-Settings.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators only |
-| **Prerequisite** | RC-CC-21 — Control Center: Overview & Navigation |
+| **Prerequisite** | [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-08 — Home Page, Templates & Project Defaults; RC-CC-05 — File Storage Settings; RC-CC-06 — Modules & Services Configuration; RC-PROJ-04 — Project Setup: Additional Customizations; RC-AI-01 — AI Tools Overview; RC-CDIS-01 — Clinical Data Interoperability Services |
+| **Related Topics** | [RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md) — Home Page, Templates & Project Defaults; [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) — File Storage Settings; [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md); [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) — AI Tools Overview; [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) — Clinical Data Interoperability Services |
 
 ---
 
@@ -20,8 +20,8 @@ The **Edit Project Settings** page (`ControlCenter/edit_project.php`) is an admi
 
 This page is distinct from two similar-sounding areas:
 
-- **Default Project Settings** (RC-CC-08) — sets system-wide defaults applied when *new* projects are created
-- **Additional Customizations** in Project Setup (RC-PROJ-04) — project-level settings accessible to *project administrators* (users with Design & Setup rights)
+- **Default Project Settings** ([RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md)) — sets system-wide defaults applied when *new* projects are created
+- **Additional Customizations** in Project Setup ([RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md)) — project-level settings accessible to *project administrators* (users with Design & Setup rights)
 
 Edit Project Settings exposes a superset of those settings, including ones only REDCap admins can touch (online/offline status, Twilio toggle, GDPR erasure features, per-project AI endpoint override, and system-value overrides like contact name, logo URL, and file size limits).
 
@@ -102,13 +102,13 @@ A text block displayed at the bottom of all survey pages in this specific projec
 - **Link text (optional):** If provided, this text appears as a clickable link at the bottom of every survey page. Clicking it opens the custom text in a modal dialog. If left blank, the custom text is displayed inline instead.
 - **Custom survey footer text:** The actual content. HTML is supported (styled text, links, images).
 
-> **Note:** The system-level default custom survey footer is configured in Default Project Settings (RC-CC-08). This project-level override takes precedence for this project only.
+> **Note:** The system-level default custom survey footer is configured in Default Project Settings ([RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md)). This project-level override takes precedence for this project only.
 
 ---
 
 # 6. AI Services — Project-Level Override
 
-If AI Services are enabled globally (configured in **Modules & Services Configuration**, RC-CC-06), this section allows an admin to supply a *project-specific* AI endpoint that replaces the system-level configuration for this project only.
+If AI Services are enabled globally (configured in **Modules & Services Configuration**, [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)), this section allows an admin to supply a *project-specific* AI endpoint that replaces the system-level configuration for this project only.
 
 Three types of AI service are supported:
 
@@ -159,11 +159,11 @@ Date shifting is applied when a user selects the date-shifting de-identification
 
 ## 7.4 DTS (Data Transfer Services)
 
-Cannot be enabled here unless the global DTS setting has first been turned on in **Modules & Services Configuration** (RC-CC-06). If the global setting is off, this control is disabled.
+Cannot be enabled here unless the global DTS setting has first been turned on in **Modules & Services Configuration** ([RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)). If the global setting is off, this control is disabled.
 
 ## 7.5 CDIS: Allow Patient Email Address from EHR
 
-Applies only to the **Clinical Data Mart** and **Clinical Data Pull** services within CDIS (RC-CDIS-01). Controls whether the patient's email address can be imported from the EHR for this project.
+Applies only to the **Clinical Data Mart** and **Clinical Data Pull** services within CDIS ([RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md)). Controls whether the patient's email address can be imported from the EHR for this project.
 
 This project-level setting is only active when the global CDIS setting is configured as "Allow individual projects to decide." If the global setting is "Yes" or "No," this field is overridden and becomes read-only.
 
@@ -270,12 +270,12 @@ When a user exports data from the Data Exports, Reports & Stats page and selects
 
 # 12. Related Articles
 
-- RC-CC-08 — Control Center: Home Page, Templates & Project Defaults (system-wide defaults this page can override)
-- RC-CC-05 — Control Center: File Storage Settings (global file size settings)
-- RC-CC-06 — Control Center: Modules & Services Configuration (global AI and Twilio settings)
-- RC-CC-21 — Control Center: Overview & Navigation (CC structure and navigation)
-- RC-PROJ-04 — Project Setup: Additional Customizations (project-level settings accessible to project admins)
-- RC-PROJ-01 — Project Lifecycle: Status and Settings (production/development status; Draft Mode)
-- RC-AI-01 — REDCap AI Tools: Overview and Security (AI features enabled by the AI settings configured here)
-- RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup (FHIR/EHR integration configured here)
-- RC-TXT-02 — Texting: Administrator Setup (Twilio global configuration)
+- [RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md) (system-wide defaults this page can override)
+- [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) — Control Center: File Storage Settings (global file size settings)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (global AI and Twilio settings)
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) (CC structure and navigation)
+- [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md) (project-level settings accessible to project admins)
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) (production/development status; Draft Mode)
+- [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) — REDCap AI Tools: Overview and Security (AI features enabled by the AI settings configured here)
+- [RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md) (FHIR/EHR integration configured here)
+- [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md) (Twilio global configuration)

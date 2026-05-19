@@ -1,16 +1,16 @@
-RC-BL-02
+[RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)
 
 **Branching Logic — Syntax & Atomic Statements**
 
-| **Article ID** | RC-BL-02 |
+| **Article ID** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) |
 | --- | --- |
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-BL-01 — Branching Logic Overview & Scope |
+| **Prerequisite** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-01 — Overview; RC-BL-03 — Combining Statements; RC-BL-04 — Structured Fields; RC-FD-03 — Data Dictionary |
+| **Related Topics** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Overview; [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Statements; [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Structured Fields; [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
 
 ---
 
@@ -140,7 +140,7 @@ lowercase are accepted.
   ------------------ --------------------------------------------------------------------------- ------------------------------------------
 
 Combining AND and OR in the same statement requires parentheses to
-control evaluation order. See RC-BL-03 for full details.
+control evaluation order. See [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) for full details.
 
 ---
 
@@ -279,7 +279,7 @@ series. See the dedicated functions training for details.
 **A:** The Online Designer\'s logic validator will flag the statement as
 invalid and will not save it. In the Data Dictionary, an invalid
 variable reference will cause an upload error. Always verify variable
-names against the Codebook (RC-FD-05) before writing logic.
+names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) before writing logic.
 
 ---
 
@@ -311,16 +311,16 @@ names against the Codebook (RC-FD-05) before writing logic.
 
 # 9. Related Articles
 
-- RC-BL-01 — Branching Logic Overview & Scope (prerequisite)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (prerequisite)
 
-- RC-BL-03 — Combining Logic Statements (AND, OR, parentheses)
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Logic Statements (AND, OR, parentheses)
 
-- RC-BL-04 — Branching Logic for Structured Fields & Checkboxes
+- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Branching Logic for Structured Fields & Checkboxes
 
-- RC-FD-02 — Online Designer (where branching logic is configured
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where branching logic is configured
     per field)
 
-- RC-FD-03 — Data Dictionary (bulk logic editing via CSV)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (bulk logic editing via CSV)
 
-- RC-FD-05 — Codebook (look up variable names and raw values when
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (look up variable names and raw values when
     writing logic)

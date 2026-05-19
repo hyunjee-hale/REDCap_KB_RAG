@@ -1,17 +1,17 @@
-RC-API-22
+[RC-API-22 — Export Users API](RC-API-22_Export-Users.md)
 
 **Export Users API**
 
-| **Article ID** | RC-API-22 |
+| **Article ID** | [RC-API-22 — Export Users API](RC-API-22_Export-Users.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -120,7 +120,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5.
 
 ---
 
@@ -141,7 +141,7 @@ On success, the method returns an array (JSON, CSV, or XML) of user objects. Eac
 | Form-level rights (REDCap ≥ 15.6) | `128` = No Access, `129` = Read Only, `130` = View & edit records (survey responses read-only); add `8` to also grant Edit Survey Responses; add `16` to also grant Delete |
 | All other permission attributes | `0` = No Access, `1` = Access |
 
-See RC-USER-03 for a full explanation of each permission name.
+See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for a full explanation of each permission name.
 
 ---
 
@@ -161,7 +161,7 @@ See RC-USER-03 for a full explanation of each permission name.
 
 **Q: Can I see which role a user is assigned to?**
 
-**A:** The Export Users method returns each user's individual permission flags, but not the role name if the user is role-based. To see role assignments, use the Export User-DAG Assignments method (RC-API-31) to see DAG assignments, and export the user roles separately using Export User Roles (RC-API-25).
+**A:** The Export Users method returns each user's individual permission flags, but not the role name if the user is role-based. To see role assignments, use the Export User-DAG Assignments method ([RC-API-31 — Export User-DAG Assignments API](RC-API-31_Export-User-DAG-Assignments.md)) to see DAG assignments, and export the user roles separately using Export User Roles ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)).
 
 ---
 
@@ -181,9 +181,9 @@ See RC-USER-03 for a full explanation of each permission name.
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API (foundational; required reading before using any API method)
-- RC-USER-01 — User Rights: Overview & Three-Tier Access (explains the three access tiers and role-based access)
-- RC-USER-03 — User Rights: Configuring User Privileges (complete reference for all permission names and meanings)
-- RC-API-23 — Import Users (create and modify users via API)
-- RC-API-24 — Delete Users (remove users from a project via API)
-- RC-API-25 — Export User Roles (export custom role definitions)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains the three access tiers and role-based access)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (complete reference for all permission names and meanings)
+- [RC-API-23 — Import Users API](RC-API-23_Import-Users.md) — Import Users (create and modify users via API)
+- [RC-API-24 — Delete Users API](RC-API-24_Delete-Users.md) — Delete Users (remove users from a project via API)
+- [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) — Export User Roles (export custom role definitions)

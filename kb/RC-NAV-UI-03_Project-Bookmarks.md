@@ -1,16 +1,16 @@
-RC-NAV-UI-03
+[RC-NAV-UI-03 — Project Bookmarks](RC-NAV-UI-03_Project-Bookmarks.md)
 
 **Project Bookmarks**
 
-| **Article ID** | RC-NAV-UI-03 |
+| **Article ID** | [RC-NAV-UI-03 — Project Bookmarks](RC-NAV-UI-03_Project-Bookmarks.md) |
 | --- | --- |
 | **Domain** | Project Navigation |
 | **Applies To** | All project types |
-| **Prerequisite** | RC-NAV-UI-01 — Project Navigation UI |
+| **Prerequisite** | [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-NAV-UI-01 — Project Navigation UI, RC-NAV-UI-02 — Project Menu Reference, RC-PROJ-01 — Project Lifecycle: Status and Settings, RC-PROJ-04 — Project Setup: Additional Customizations, RC-DAG-01 — Data Access Groups, RC-PIPE-03 — Smart Variables Overview, RC-API-01 — REDCap API |
+| **Related Topics** | [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md), [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md), [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md), [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md), [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -155,10 +155,10 @@ Yes. When setting User Access to "Selected users," you can choose specific users
 
 # 7. Related Articles
 
-- RC-NAV-UI-01 — Project Navigation UI
-- RC-NAV-UI-02 — Project Menu Reference
-- RC-PROJ-01 — Project Lifecycle: Status and Settings
-- RC-PROJ-04 — Project Setup: Additional Customizations
-- RC-DAG-01 — Data Access Groups
-- RC-PIPE-03 — Smart Variables Overview
-- RC-API-01 — REDCap API
+- [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md)
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)
+- [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)

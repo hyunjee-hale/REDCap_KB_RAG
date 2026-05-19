@@ -1,16 +1,16 @@
-RC-FD-04
+[RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)
 
 **Instrument Library & Zip Files**
 
-| **Article ID** | RC-FD-04 |
+| **Article ID** | [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-01 — Form Design Overview |
+| **Prerequisite** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-01 — Form Design Overview; RC-FD-02 — Online Designer; RC-FD-03 — Data Dictionary; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -265,24 +265,24 @@ institution\'s REDCap administrator to start the process.
 
 # 8. Administrator Configuration
 
-Access to the REDCap Shared Library (the consortium's instrument repository) requires a system-level setting to be enabled by a REDCap administrator. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **RC-CC-06**, "REDCap Shared Library" toggle).
+Access to the REDCap Shared Library (the consortium's instrument repository) requires a system-level setting to be enabled by a REDCap administrator. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**, "REDCap Shared Library" toggle).
 
 When the Shared Library is disabled, the "REDCap Shared Library" button does not appear on the Project Setup page or in the Online Designer. The zip file import/export feature (Section 4) is a local operation and is unaffected by this setting — zip files work regardless of whether the Shared Library is enabled.
 
 Outbound HTTP access to the Consortium's server (`redcap.vumc.org`) is also required for the Shared Library to function. In restricted-network environments, this connection may need to be allowed through a firewall.
 
-> **See also:** RC-CC-06 — Control Center: Modules & Services Configuration
+> **See also:** [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 
 ---
 
 # 9. Related Articles
 
-- RC-FD-01 — Form Design Overview (prerequisite)
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite)
 
-- RC-FD-02 — Online Designer (the access point for zip file import
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the access point for zip file import
     and export)
 
-- RC-FD-03 — Data Dictionary (alternative approach for bulk
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (alternative approach for bulk
     instrument management)
 
-- RC-CC-06 — Control Center: Modules & Services Configuration (system-level REDCap Shared Library enable/disable)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level REDCap Shared Library enable/disable)

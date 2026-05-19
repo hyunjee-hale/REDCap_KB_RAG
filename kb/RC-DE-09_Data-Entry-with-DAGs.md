@@ -1,22 +1,22 @@
-RC-DE-09
+[RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)
 
 **Data Entry — Working with Data Access Groups**
 
-| **Article ID** | RC-DE-09 |
+| **Article ID** | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) |
 |---|---|
 | **Domain** | Data Entry |
 | **Applies To** | Projects with Data Access Groups enabled; data entry users assigned to one or more DAGs |
-| **Prerequisite** | RC-DE-02 — Basic Data Entry |
+| **Prerequisite** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DAG-01 — Data Access Groups; RC-DE-01 — Record Creation & the Record Home Page; RC-DE-02 — Basic Data Entry |
+| **Related Topics** | [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md); [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 
 ---
 
 # 1. Overview
 
-This article explains how Data Access Groups (DAGs) affect the data entry experience in REDCap. DAGs partition records within a project so that users from one group cannot see records belonging to another group — a common requirement in multi-site studies. This article covers the practical implications of DAGs for data entry users: what you can and cannot see, how record creation and assignment works, how record IDs behave when DAGs are active, and how to switch between DAGs if you are assigned to more than one. For information on how DAGs are created and configured, see RC-DAG-01 — Data Access Groups.
+This article explains how Data Access Groups (DAGs) affect the data entry experience in REDCap. DAGs partition records within a project so that users from one group cannot see records belonging to another group — a common requirement in multi-site studies. This article covers the practical implications of DAGs for data entry users: what you can and cannot see, how record creation and assignment works, how record IDs behave when DAGs are active, and how to switch between DAGs if you are assigned to more than one. For information on how DAGs are created and configured, see [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
 ---
 
@@ -108,7 +108,7 @@ If your user account is not assigned to any DAG, your behavior is different from
 
 **Q: I have no DAG assignment. Does that mean I can edit records from any DAG?**
 
-**A:** Having no DAG assignment allows you to view all records, but your ability to edit those records depends on your user rights (instrument-level access, data entry rights, etc.), not on your DAG assignment. Data editing rights are controlled separately. See RC-USER-03 — User Rights: Configuring User Privileges.
+**A:** Having no DAG assignment allows you to view all records, but your ability to edit those records depends on your user rights (instrument-level access, data entry rights, etc.), not on your DAG assignment. Data editing rights are controlled separately. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md).
 
 **Q: Can I switch DAGs while I am inside a record?**
 
@@ -130,21 +130,21 @@ If your user account is not assigned to any DAG, your behavior is different from
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-28 — Export DAGs API** — retrieve DAG definitions programmatically
-- **RC-API-29 — Import DAGs API** — create or update DAG definitions programmatically
-- **RC-API-30 — Delete DAGs API** — remove DAG definitions programmatically
-- **RC-API-31 — Export User-DAG Assignments API** — retrieve which users are assigned to which DAGs
-- **RC-API-32 — Import User-DAG Assignments API** — assign users to DAGs programmatically
-- **RC-API-33 — Switch DAG API** — change the active DAG context for the token user programmatically
+- **[RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md)** — retrieve DAG definitions programmatically
+- **[RC-API-29 — Import DAGs API](RC-API-29_Import-DAGs.md)** — create or update DAG definitions programmatically
+- **[RC-API-30 — Delete DAGs API](RC-API-30_Delete-DAGs.md)** — remove DAG definitions programmatically
+- **[RC-API-31 — Export User-DAG Assignments API](RC-API-31_Export-User-DAG-Assignments.md)** — retrieve which users are assigned to which DAGs
+- **[RC-API-32 — Import User-DAG Assignments API](RC-API-32_Import-User-DAG-Assignments.md)** — assign users to DAGs programmatically
+- **[RC-API-33 — Switch DAG API](RC-API-33_Switch-DAG.md)** — change the active DAG context for the token user programmatically
 
 ---
 
 
 # 8. Related Articles
 
-- RC-DAG-01 — Data Access Groups (covers DAG creation, configuration, and administrator management)
-- RC-DE-01 — Record Creation & the Record Home Page (record creation workflow and the Choose Action for Record menu)
-- RC-DE-02 — Basic Data Entry (foundational data entry skills)
-- RC-USER-03 — User Rights: Configuring User Privileges (how data entry rights interact with DAG access)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (covers DAG creation, configuration, and administrator management)
+- [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (record creation workflow and the Choose Action for Record menu)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (how data entry rights interact with DAG access)

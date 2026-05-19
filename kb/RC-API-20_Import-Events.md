@@ -1,17 +1,17 @@
-RC-API-20
+[RC-API-20 — Import Events API](RC-API-20_Import-Events.md)
 
 **Import Events API**
 
-| **Article ID** | RC-API-20 |
+| **Article ID** | [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | Longitudinal REDCap projects only |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-19 — Export Events; RC-API-21 — Delete Events |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events; [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) — Delete Events |
 
 ---
 
@@ -174,7 +174,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -213,7 +213,7 @@ Example response:
 
 **Q: What happens if I specify an `arm_num` that does not exist?**
 
-**A:** The API will return an error. You must specify `arm_num` values that correspond to existing arms in the project. Use Export Arms (RC-API-16) to discover valid arm numbers.
+**A:** The API will return an error. You must specify `arm_num` values that correspond to existing arms in the project. Use Export Arms ([RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md)) to discover valid arm numbers.
 
 ---
 
@@ -233,8 +233,8 @@ Example response:
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-19 — Export Events (retrieve event metadata from a project)
-- RC-API-21 — Delete Events (remove events from a project)
-- RC-LONG-01 — Longitudinal Project Setup (how events are structured; use case for programmatic import)
-- RC-LONG-02 — Repeated Instruments & Events Setup (how repeating events integrate with the event structure)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events (retrieve event metadata from a project)
+- [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) — Delete Events (remove events from a project)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (how events are structured; use case for programmatic import)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (how repeating events integrate with the event structure)

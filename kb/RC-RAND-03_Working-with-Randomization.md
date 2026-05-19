@@ -1,16 +1,16 @@
-RC-RAND-03
+[RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)
 
 **REDCap Randomization – Working with & Managing Randomization**
 
-| **Article ID** | RC-RAND-03 |
+| **Article ID** | [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md) |
 | --- | --- |
 | **Domain** | Randomization |
 | **Applies To** | Study Coordinators and data entry staff (Sections 4–6); REDCap Administrators (Section 7); requires project in Production with a configured randomization model |
-| **Prerequisite** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide |
+| **Prerequisite** | [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-02 — Randomization Setup Guide; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-EXPRT-01 — Data Exports, Reports, and Stats; RC-ALERT-01 — Alerts & Notifications |
+| **Related Topics** | [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Data Exports, Reports, and Stats; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts & Notifications |
 
 ---
 
@@ -296,22 +296,22 @@ reason properly**
 
 # 10. Related Articles
 
-- **RC-RAND-01:** Randomization Concepts & Terminology ---
+- **[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md):** Randomization Concepts & Terminology ---
     foundational concepts
 
-- **RC-RAND-02:** Randomization Setup Guide — pre-flight checklist
+- **[RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md):** Randomization Setup Guide — pre-flight checklist
     and setup procedure
 
-- **RC-USER-01:** User Rights: Overview & Three-Tier Access — managing Randomize, Setup,
+- **[RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md):** User Rights: Overview & Three-Tier Access — managing Randomize, Setup,
     and Dashboard rights
 
-- **RC-EXPRT-01:** Data Exports, Reports, and Stats — building
+- **[RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md):** Data Exports, Reports, and Stats — building
     reports that include randomization variable data
 
-- **RC-ALERT-01:** Alerts & Notifications — setting up alerts based
+- **[RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md):** Alerts & Notifications — setting up alerts based
     on randomization events using smart variables
 
-- **RC-PIPE-13:** Smart Variables: Randomization — reference for the
+- **[RC-PIPE-13 — Smart Variables: Randomization](RC-PIPE-13_Smart-Variables-Randomization.md):** Smart Variables: Randomization — reference for the
     \[rand-time\], \[rand-utc-time\], and \[rand-number\] smart variables
 
 ---
@@ -323,16 +323,16 @@ reason properly**
 | **15.4.4+** | Randomization 2.0: automatic trigger options available. Smart variable behavior and dashboard columns consistent with this document. Verified compatible through REDCap 17. |
 | **Pre-15.x** | Automatic triggers not available. Section 4.2 (automatic trigger behavior) does not apply. Manual-only randomization. Smart variables \[rand-time\], \[rand-utc-time\], \[rand-number\] — verify availability in your version. |
 
-REDCap LLM Knowledge Base \| RC-RAND-03 \| Working with & Managing
+REDCap LLM Knowledge Base \| [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md) \| Working with & Managing
 Randomization
 
 ---
 
 # 12. Related Articles
 
-- RC-RAND-01 — Randomization Concepts & Terminology
-- RC-RAND-02 — Randomization Setup Guide
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-ALERT-01 — Alerts & Notifications: Setup
-- RC-EXPRT-01 — Data Export: Overview & Workflow
-- RC-PIPE-13 — Smart Variables: Randomization
+- [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
+- [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)
+- [RC-PIPE-13 — Smart Variables: Randomization](RC-PIPE-13_Smart-Variables-Randomization.md)

@@ -1,22 +1,22 @@
-RC-ALERT-02
+[RC-ALERT-02 — Alert Management & Notification Log](RC-ALERT-02_Alert-Management-and-Notification-Log.md)
 
 **Alert Management & Notification Log**
 
-| **Article ID** | RC-ALERT-02 |
+| **Article ID** | [RC-ALERT-02 — Alert Management & Notification Log](RC-ALERT-02_Alert-Management-and-Notification-Log.md) |
 | --- | --- |
 | **Domain** | Alerts & Notifications |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-ALERT-01 — Alerts & Notifications: Setup |
+| **Prerequisite** | [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-ALERT-01 — Alerts & Notifications: Setup; RC-PIPE-04 — Piping: Emails, Notifications & Logic Features |
+| **Related Topics** | [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) |
 
 ---
 
 # 1. Overview
 
-This article covers how to manage a collection of alerts in an active REDCap project, and how to use the Notification Log to review past and scheduled alert sends. Once a project has multiple alerts, the Alerts & Notifications management page becomes the primary workspace for organizing, editing, copying, deactivating, and re-evaluating alerts. The Notification Log provides a record of every alert instance that has been sent or is scheduled to be sent, and allows you to cancel individual scheduled sends. This article assumes familiarity with alert creation — see RC-ALERT-01 — Alerts & Notifications: Setup for the full setup workflow.
+This article covers how to manage a collection of alerts in an active REDCap project, and how to use the Notification Log to review past and scheduled alert sends. Once a project has multiple alerts, the Alerts & Notifications management page becomes the primary workspace for organizing, editing, copying, deactivating, and re-evaluating alerts. The Notification Log provides a record of every alert instance that has been sent or is scheduled to be sent, and allows you to cancel individual scheduled sends. This article assumes familiarity with alert creation — see [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) for the full setup workflow.
 
 ---
 
@@ -256,7 +256,7 @@ Both exports can be generated multiple times without restriction.
 
 # 8. Related Articles
 
-- RC-ALERT-01 — Alerts & Notifications: Setup (required prerequisite — trigger types, scheduling, message settings)
-- RC-PIPE-04 — Piping: Emails, Notifications & Logic Features (piping and smart variable usage in alert messages)
-- RC-PIPE-03 — Smart Variables Overview (reference for smart variables used in alert message bodies)
-- RC-LONG-02 — Repeated Instruments & Events Setup (context for trigger limits and repeated-instrument alert behavior)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (required prerequisite — trigger types, scheduling, message settings)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) (piping and smart variable usage in alert messages)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (reference for smart variables used in alert message bodies)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (context for trigger limits and repeated-instrument alert behavior)

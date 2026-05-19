@@ -1,17 +1,17 @@
-RC-API-44
+[RC-API-44 — Export REDCap Version API](RC-API-44_Export-REDCap-Version.md)
 
 **Export REDCap Version API**
 
-| **Article ID** | RC-API-44 |
+| **Article ID** | [RC-API-44 — Export REDCap Version API](RC-API-44_Export-REDCap-Version.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap instances |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -125,7 +125,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -173,4 +173,4 @@ The format is `MAJOR.MINOR.PATCH`. For example:
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)

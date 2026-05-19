@@ -1,8 +1,8 @@
-RC-CC-11
+[RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
 
 **System Statistics**
 
-| **Article ID** | RC-CC-11 |
+| **Article ID** | [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-11
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-01 — Notifications & Reporting; RC-CC-12 — User Activity Log; RC-CC-13 — User Activity Graphs |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs |
 
 ---
 
@@ -119,7 +119,7 @@ To export:
 
 # 5. Reporting to the Consortium
 
-The statistics displayed on the System Statistics page overlap with (but are not identical to) metrics reported to the REDCap Consortium. For details on consortium reporting, including which statistics are reported, frequency, and any privacy considerations, see RC-CC-01 — Notifications & Reporting.
+The statistics displayed on the System Statistics page overlap with (but are not identical to) metrics reported to the REDCap Consortium. For details on consortium reporting, including which statistics are reported, frequency, and any privacy considerations, see [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting.
 
 ---
 
@@ -169,6 +169,6 @@ The REDCap version is listed under the Infrastructure section of the System Stat
 
 # 9. Related Articles
 
-- RC-CC-01 — Notifications & Reporting
-- RC-CC-12 — User Activity Log
-- RC-CC-13 — User Activity Graphs
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs

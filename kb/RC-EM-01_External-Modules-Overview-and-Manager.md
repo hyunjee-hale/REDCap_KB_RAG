@@ -1,8 +1,8 @@
-RC-EM-01
+[RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)
 
 **External Modules — Overview & Control Center Manager**
 
-| **Article ID** | RC-EM-01 |
+| **Article ID** | [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) |
 |---|---|
 | **Domain** | External Modules |
 | **Applies To** | REDCap administrators; also relevant to project users when enabling modules at the project level |
@@ -10,7 +10,7 @@ RC-EM-01
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EM-02 — External Modules Catalog; RC-AT-01 — Action Tags Overview; RC-INST-01 — Institution-Specific Settings |
+| **Related Topics** | [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) — External Modules Catalog; [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings |
 
 ---
 
@@ -165,15 +165,15 @@ Disabling a module deactivates its functionality but does not delete any data st
 **How do I know which modules are available at my installation?**
 The "Enable a module" button in the Module Manager shows all currently downloaded modules. The REDCap Repo (via "View modules available in the REDCap Repo") shows the full community catalog of available modules.
 
-> See RC-EM-02 for a catalog of modules commonly installed at REDCap installations, with descriptions and use cases.
+> See [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) for a catalog of modules commonly installed at REDCap installations, with descriptions and use cases.
 
 ---
 
 # 10. Related Articles
 
-- RC-EM-02 — External Modules: Installed Catalog
-- RC-EM-03 — External Modules: Test/Staging Catalog
-- RC-EM-04 — External Modules: Development Catalog
-- RC-AT-01 — Action Tags: Overview
-- RC-CC-06 — Control Center: Modules & Services Configuration
-- RC-INST-01 — Institution-Specific Settings & Policies
+- [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) — External Modules: Installed Catalog
+- [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md) — External Modules: Test/Staging Catalog
+- [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md) — External Modules: Development Catalog
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies

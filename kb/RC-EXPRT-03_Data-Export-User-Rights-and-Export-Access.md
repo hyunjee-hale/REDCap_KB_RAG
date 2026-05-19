@@ -1,16 +1,16 @@
-RC-EXPRT-03
+[RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md)
 
 **Data Export — User Rights & Export Access**
 
-| **Article ID** | RC-EXPRT-03 |
+| **Article ID** | [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) |
 | --- | --- |
 | **Domain** | Exports, Reports & Stats |
 | **Applies To** | All REDCap project types |
-| **Prerequisite** | RC-EXPRT-01 — Data Export: Overview & Workflow |
+| **Prerequisite** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EXPRT-01 — Overview & Workflow; RC-EXPRT-04 — De-identification & Formatting Options; RC-USER-01 — User Rights (when available) |
+| **Related Topics** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Overview & Workflow; [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) — De-identification & Formatting Options; [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights (when available) |
 
 ---
 
@@ -76,7 +76,7 @@ determines what the export dialog shows and what options are available.
   **Level**                          **What the user can export**
   **No Access**                      No data from this instrument can be exported in any form. The instrument\'s variables are excluded from all exports, including All Data and custom reports.
   **De-identified**                  Exports the instrument with all free-form text fields, date/time fields, and identifier-flagged fields automatically removed. The de-identification options in the export dialog become required rather than optional. The user cannot choose to export identified data.
-  **Remove All Identifier Fields**   Exports all fields except those flagged as identifiers. The user can optionally apply further de-identification in the export dialog (see RC-EXPRT-04). Free-form text and date fields are included unless the user elects to remove them.
+  **Remove All Identifier Fields**   Exports all fields except those flagged as identifiers. The user can optionally apply further de-identification in the export dialog (see [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)). Free-form text and date fields are included unless the user elects to remove them.
   **Full Data Set**                  Exports all fields including identifiers. The user can choose to export in identified or de-identified form. All de-identification options in the export dialog are optional.
   ---------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -182,12 +182,12 @@ addressed.
 
 # 8. Related Articles
 
-- RC-EXPRT-01 — Data Export: Overview & Workflow (prerequisite)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite)
 
-- RC-EXPRT-04 — Data Export: De-identification & Formatting Options
+- [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)
     (how de-identification options work in the export dialog)
 
-- RC-EXPRT-05 — Data Export: Report Types
+- [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) — Data Export: Report Types
 
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links (DAG
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (DAG
     filtering behavior)

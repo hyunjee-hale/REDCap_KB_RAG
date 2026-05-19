@@ -1,16 +1,16 @@
-RC-AT-05
+[RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)
 
 **Free Text Action Tags**
 
-| **Article ID** | RC-AT-05 |
+| **Article ID** | [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md) |
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-AT-01 — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AT-01 — Overview; RC-AT-06 — Autofill Tags; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md) — Autofill Tags; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -112,7 +112,7 @@ Displays hint text inside an empty field. The hint appears in grey and disappear
 
 > **Note:** Single and double quotes cannot be used within the placeholder text.
 
-> **Note:** To pre-fill a value that is saved when the field is submitted, use `@DEFAULT` or `@SETVALUE` instead (see RC-AT-06).
+> **Note:** To pre-fill a value that is saved when the field is submitted, use `@DEFAULT` or `@SETVALUE` instead (see [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)).
 
 **Use case:** Date format reminders, suggested answer formats, or brief instructions visible within the field.
 
@@ -132,6 +132,6 @@ Displays hint text inside an empty field. The hint appears in grey and disappear
 
 # 9. Related Articles
 
-- RC-AT-01 — Action Tags Overview
-- RC-AT-06 — Autofill Action Tags
-- RC-FD-02 — Online Designer
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

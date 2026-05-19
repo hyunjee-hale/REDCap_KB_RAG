@@ -1,17 +1,17 @@
-RC-API-34
+[RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)
 
 **Export Project Info API**
 
-| **Article ID** | RC-API-34 |
+| **Article ID** | [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-35 — Import Project Info; RC-API-36 — Export Project XML; RC-API-37 — Import Project (Create Project) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-35 — Import Project Info API](RC-API-35_Import-Project-Info.md) — Import Project Info; [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md) — Export Project XML; [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project) |
 
 ---
 
@@ -133,7 +133,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -178,7 +178,7 @@ The API returns project metadata in the format specified. Boolean values are rep
 # 6. Common Questions
 
 **Q: What is the difference between Export Project Info and Export Project XML?**
-**A:** Export Project Info (RC-API-34) returns only project metadata and configuration. Export Project XML (RC-API-36) returns the complete project structure including instruments, fields, events, and can be used to recreate the project.
+**A:** Export Project Info ([RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)) returns only project metadata and configuration. Export Project XML ([RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)) returns the complete project structure including instruments, fields, events, and can be used to recreate the project.
 
 **Q: Can I export all projects' metadata at once?**
 **A:** No. Each API call requires a project-specific token. You must loop through your project tokens and call the API for each project separately.
@@ -187,7 +187,7 @@ The API returns project metadata in the format specified. Boolean values are rep
 **A:** You need the API Export right at the user level within the project.
 
 **Q: Can I modify project settings using this API?**
-**A:** Not with this method. Use RC-API-35 (Import Project Info) to update project settings. Export Project Info is read-only.
+**A:** Not with this method. Use [RC-API-35 — Import Project Info API](RC-API-35_Import-Project-Info.md) (Import Project Info) to update project settings. Export Project Info is read-only.
 
 **Q: What format options are available?**
 **A:** You can request `'csv'`, `'json'`, or `'xml'`. The default is `'xml'` if no format is specified. JSON is more commonly used in modern integrations, so it's worth specifying explicitly.
@@ -206,7 +206,7 @@ The API returns project metadata in the format specified. Boolean values are rep
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-API-35 — Import Project Info
-- RC-API-36 — Export Project XML
-- RC-API-37 — Import Project (Create Project)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-API-35 — Import Project Info API](RC-API-35_Import-Project-Info.md) — Import Project Info
+- [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md) — Export Project XML
+- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project)

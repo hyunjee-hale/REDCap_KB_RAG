@@ -1,8 +1,8 @@
-RC-CC-03
+[RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md)
 
 **Control Center: Security & Authentication Configuration**
 
-| **Article ID** | RC-CC-03 |
+| **Article ID** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-03
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-INST-01 — Institution-Specific Settings & Policies; RC-USER-02 — User Rights; RC-USER-04 — User Management |
+| **Related Topics** | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies; [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights; [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management |
 
 ---
 
@@ -491,7 +491,7 @@ Yes. The "Shibboleth & Table-based" option (section 2.1) presents a splash page 
 
 # 17. Related Articles
 
-- RC-CC-04 — Control Center: User Settings & Defaults (user creation and account defaults)
-- RC-CC-07 — Control Center: Users & Access Management (user account management and suspension)
-- RC-USER-02 — User Rights: Overview & Three-Tier Access (authentication relationship to project-level permissions)
-- RC-INST-01 — Institution-Specific Settings & Policies (institutional security policies and authentication strategy)
+- [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (user creation and account defaults)
+- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) (user account management and suspension)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights: Overview & Three-Tier Access (authentication relationship to project-level permissions)
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies (institutional security policies and authentication strategy)

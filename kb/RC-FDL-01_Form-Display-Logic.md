@@ -1,16 +1,16 @@
-RC-FDL-01
+[RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md)
 
 **Form Display Logic**
 
-| **Article ID** | RC-FDL-01 |
+| **Article ID** | [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md) |
 |---|---|
 | **Domain** | Form Display Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights to configure |
-| **Prerequisite** | RC-BL-02 — Branching Logic: Syntax & Atomic Statements |
+| **Prerequisite** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026-05 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-01 — Branching Logic Overview; RC-PIPE-05 — Smart Variables: User; RC-NAV-REC-04 — Record Status Dashboard; RC-SURV-07 — Survey Queue |
+| **Related Topics** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview; [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard; [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) |
 
 ---
 
@@ -69,7 +69,7 @@ Form Display Logic is managed from the Project Setup area. Each condition row de
 | `apply_to_survey_autocontinue` | `y` or `n` — whether this condition affects Survey Auto-Continue behavior. |
 | `apply_to_mycap_tasks` | `y` or `n` — whether this condition affects MyCap task availability. |
 
-Conditions use the same logic syntax as branching logic and calculated fields. See RC-BL-02 — Branching Logic: Syntax & Atomic Statements for the full syntax reference.
+Conditions use the same logic syntax as branching logic and calculated fields. See [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) for the full syntax reference.
 
 ---
 
@@ -104,7 +104,7 @@ The most commonly used user smart variables in Form Display Logic are:
 
 > **Caution with `[user-role-id]`:** Role IDs are unique across the entire REDCap installation and change when a project is copied. If you use role IDs in Form Display Logic and later copy the project, those IDs will be invalid in the new project. Use `[user-role-name]` in place of `[user-role-id]` when you anticipate copying the project.
 
-See RC-PIPE-05 — Smart Variables: User for the full reference.
+See [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) for the full reference.
 
 ---
 
@@ -248,7 +248,7 @@ Form Display Logic can be exported as a CSV and re-imported to another project o
 
 **Double-quote escaping in exported CSVs.** REDCap uses `""` (two double-quotes) to represent an empty string in logic conditions, for example `[record_id]<>""`. When REDCap exports this as a CSV, the condition cell is wrapped in outer quotes and the internal `""` is escaped to `""""`, producing: `"[record_id]<>""""`. Spreadsheet applications (Excel, Google Sheets, LibreOffice) handle this transparently and show the correct expression. However, if you open the CSV in a plain text editor or process it with a script, you must account for this escaping — otherwise conditions containing empty string comparisons will appear to have extra quotes or will fail to parse correctly.
 
-For the full column-by-column reference, accepted values, an annotated example, and common mistakes, see **RC-IMP-08 — Form Display Logic CSV**.
+For the full column-by-column reference, accepted values, an annotated example, and common mistakes, see **[RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md) — Form Display Logic CSV**.
 
 ---
 
@@ -304,10 +304,10 @@ For the full column-by-column reference, accepted values, an annotated example, 
 
 # 12. Related Articles
 
-- RC-BL-01 — Branching Logic: Overview & Scope (field-level logic vs. form-level logic)
-- RC-BL-02 — Branching Logic: Syntax & Atomic Statements (the logic language used in conditions)
-- RC-BL-05 — Branching Logic in Longitudinal Projects (event-based field references used in conditions)
-- RC-PIPE-05 — Smart Variables: User (user-based variables usable in Form Display Logic conditions)
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links (where Form Display Logic visually takes effect)
-- RC-SURV-07 — Survey Queue (related feature not affected by Form Display Logic)
-- RC-USER-03 — User Rights: Configuring User Privileges (instrument-level access rights, a related access control mechanism)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) (field-level logic vs. form-level logic)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (the logic language used in conditions)
+- [RC-BL-05 — Branching Logic — Longitudinal Projects](RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md) — Branching Logic in Longitudinal Projects (event-based field references used in conditions)
+- [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) (user-based variables usable in Form Display Logic conditions)
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (where Form Display Logic visually takes effect)
+- [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (related feature not affected by Form Display Logic)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (instrument-level access rights, a related access control mechanism)

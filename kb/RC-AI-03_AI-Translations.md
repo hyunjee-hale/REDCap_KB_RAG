@@ -1,16 +1,16 @@
-RC-AI-03
+[RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
 
 **AI Translations**
 
-| **Article ID** | RC-AI-03 |
+| **Article ID** | [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md) |
 | --- | --- |
 | **Domain** | AI Tools |
 | **Applies To** | Projects using the Multi-Language Management module |
-| **Prerequisite** | RC-AI-01 — REDCap AI Tools: Overview & Security |
+| **Prerequisite** | [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-AI-01 — REDCap AI Tools: Overview & Security; RC-MLM-01 — Multi-Language Management |
+| **Related Topics** | [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md); [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md) |
 
 ---
 
@@ -169,7 +169,7 @@ REDCap passes the Language Display Name to the AI as the target language instruc
 
 # 7. Related Articles
 
-- RC-AI-01 — REDCap AI Tools: Overview & Security
-- RC-AI-02 — AI Writing Tools
-- RC-AI-04 — AI Summarization
-- RC-MLM-01 — Multi-Language Management
+- [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md)
+- [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
+- [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md)
+- [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)

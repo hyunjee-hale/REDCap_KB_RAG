@@ -1,16 +1,16 @@
-RC-PIPE-06
+[RC-PIPE-06 — Smart Variables: Record](RC-PIPE-06_Smart-Variables-Record.md)
 
 **Smart Variables: Record**
 
-| **Article ID** | RC-PIPE-06 |
+| **Article ID** | [RC-PIPE-06 — Smart Variables: Record](RC-PIPE-06_Smart-Variables-Record.md) |
 |---|---|
 | **Domain** | Piping |
 | **Applies To** | All project types |
-| **Prerequisite** | RC-PIPE-03 — Smart Variables Overview |
+| **Prerequisite** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PIPE-03 — Smart Variables Overview; RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers |
+| **Related Topics** | [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers |
 
 ---
 
@@ -130,7 +130,7 @@ The email will contain a clickable link with your custom text. Note that the Cal
 
 # 7. Related Articles
 
-- RC-PIPE-03 — Smart Variables Overview (overview of all smart variable categories)
-- RC-PIPE-02 — Piping in Longitudinal, Repeated Instruments & Modifiers (smart variable syntax and modifiers)
-- RC-PIPE-05 — Smart Variables: User (user-based smart variables for comparison)
-- RC-ALERT-01 — Alerts and Notifications Setup (using record smart variables in alert emails)
+- [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (smart variable syntax and modifiers)
+- [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) (user-based smart variables for comparison)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup (using record smart variables in alert emails)

@@ -1,17 +1,17 @@
-RC-API-53
+[RC-API-53 — Import Repeating Instruments and Events API](RC-API-53_Import-Repeating-Instruments-and-Events.md)
 
 **Import Repeating Instruments and Events API**
 
-| **Article ID** | RC-API-53 |
+| **Article ID** | [RC-API-53 — Import Repeating Instruments and Events API](RC-API-53_Import-Repeating-Instruments-and-Events.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | Projects with repeating instruments or repeating events |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-51 — Export Repeating Instruments and Events; RC-API-09 — Export Instruments; RC-API-10 — Export Instrument-Event Mappings; RC-LONG-02 — Repeated Instruments & Events Setup |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md) — Export Repeating Instruments and Events; [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings; [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) |
 
 ---
 
@@ -72,7 +72,7 @@ Super API Tokens (issued by a REDCap administrator via the API Tokens page in th
 
 # 6. Data Structure
 
-The `data` payload follows the same structure as the export response from RC-API-51. Each item represents one repeating instrument or one repeating event.
+The `data` payload follows the same structure as the export response from [RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md). Each item represents one repeating instrument or one repeating event.
 
 **Key fields:**
 
@@ -227,7 +227,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -247,7 +247,7 @@ On failure, an error message is returned in the format specified by `returnForma
 
 **Q: Does this method add to the existing repeating configuration, or does it replace it?**
 
-**A:** This method replaces the project's repeating instrument/event configuration entirely. Any instruments or events not included in the submitted data will no longer be configured as repeating after the call. If you want to preserve existing entries, export them first with RC-API-51 and merge before re-importing.
+**A:** This method replaces the project's repeating instrument/event configuration entirely. Any instruments or events not included in the submitted data will no longer be configured as repeating after the call. If you want to preserve existing entries, export them first with [RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md) and merge before re-importing.
 
 **Q: Can I use this method to configure repeating instruments on a project that has existing record data?**
 
@@ -263,13 +263,13 @@ On failure, an error message is returned in the format specified by `returnForma
 
 **Q: How do I indicate a repeating event vs. a repeating instrument?**
 
-**A:** Leave `form_name` blank or null to configure a repeating event. Provide a value in `form_name` to configure a repeating instrument. This mirrors the convention used in the export method (RC-API-51).
+**A:** Leave `form_name` blank or null to configure a repeating event. Provide a value in `form_name` to configure a repeating instrument. This mirrors the convention used in the export method ([RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md)).
 
 ---
 
 # 10. Common Mistakes & Gotchas
 
-**Submitting a partial list and losing existing configuration.** This method overwrites the full repeating configuration. If you only include one instrument in the payload, all other repeating instruments are removed. Always export the current configuration first (RC-API-51) and merge your changes before importing.
+**Submitting a partial list and losing existing configuration.** This method overwrites the full repeating configuration. If you only include one instrument in the payload, all other repeating instruments are removed. Always export the current configuration first ([RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md)) and merge your changes before importing.
 
 **Forgetting Project Setup/Design permission.** This method requires both API Import/Update and Project Setup/Design. A token with only API Import/Update will receive a permissions error. Confirm both privileges are enabled in User Rights.
 
@@ -283,8 +283,8 @@ On failure, an error message is returned in the format specified by `returnForma
 
 # 11. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-51 — Export Repeating Instruments and Events (retrieve current repeating configuration before importing)
-- RC-API-09 — Export Instruments (get full instrument list to verify form names before importing)
-- RC-API-10 — Export Instrument-Event Mappings (confirm event-instrument assignments in longitudinal projects)
-- RC-LONG-02 — Repeated Instruments & Events Setup (configuring repeating instruments and events via the UI)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md) — Export Repeating Instruments and Events (retrieve current repeating configuration before importing)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (get full instrument list to verify form names before importing)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings (confirm event-instrument assignments in longitudinal projects)
+- [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeating instruments and events via the UI)

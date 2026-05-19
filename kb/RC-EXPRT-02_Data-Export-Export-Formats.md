@@ -1,16 +1,16 @@
-RC-EXPRT-02
+[RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md)
 
 **Data Export — Export Formats**
 
-| **Article ID** | RC-EXPRT-02 |
+| **Article ID** | [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) |
 | --- | --- |
 | **Domain** | Exports, Reports & Stats |
 | **Applies To** | All REDCap project types; requires Data Export user rights |
-| **Prerequisite** | RC-EXPRT-01 — Data Export: Overview & Workflow |
+| **Prerequisite** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-EXPRT-01 — Overview & Workflow; RC-EXPRT-03 — User Rights & Export Access; RC-EXPRT-04 — De-identification & Formatting Options |
+| **Related Topics** | [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Overview & Workflow; [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) — User Rights & Export Access; [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) — De-identification & Formatting Options |
 
 ---
 
@@ -105,7 +105,7 @@ REDCap using the Data Import Tool.
 ## 4.4 For programmatic access
 
 R users can also pull data directly from REDCap using the API, bypassing
-the manual export process entirely. See RC-API-01 for details.
+the manual export process entirely. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for details.
 
 ---
 
@@ -116,7 +116,7 @@ the manual export process entirely. See RC-API-01 for details.
   *I downloaded my SPSS export but the data file has no variable labels. What happened?*   SPSS exports generate three files — the data file (.sav), a syntax file (.sps), and an instructions file (.txt). You must run the syntax file against the data file in SPSS to apply the variable labels. Download all three files and follow the included instructions.
   *Which format should I use if I\'m not sure?*                                            CSV / Excel (raw data) is the most universally compatible format and works in any spreadsheet application. If you\'re exporting for a statistician, ask them which software they use.
   *Can I re-import a CSV labels export back into REDCap?*                                  No. Only CSV / Excel (raw data) and CDISC ODM (XML) can be re-imported into REDCap. The labels format is for human review only.
-  *Does the export format affect which data is included?*                                  No. The export format controls how values are represented and how many files are generated — it does not filter which records or variables are included. Report type and user rights determine what data is exported. See RC-EXPRT-03 and RC-EXPRT-05.
+  *Does the export format affect which data is included?*                                  No. The export format controls how values are represented and how many files are generated — it does not filter which records or variables are included. Report type and user rights determine what data is exported. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md).
   *What is CDISC ODM and when would I use it?*                                             CDISC ODM is a standard XML format for exchanging data between EDC systems. Use it if you need to transfer data to another EDC tool that supports the CDISC standard, or if you want a complete backup that can be re-imported into REDCap along with its metadata.
   ---------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -144,27 +144,27 @@ from both formats in an analysis will produce mismatched values.
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-02 — Export Records API** — supports the same format options (CSV, JSON, XML, SPSS labels) via the `type` and `rawOrLabel` parameters
+- **[RC-API-02 — Export Records API](RC-API-02_Export-Records.md)** — supports the same format options (CSV, JSON, XML, SPSS labels) via the `type` and `rawOrLabel` parameters
 
 ---
 
 
 # 7. Related Articles
 
-- RC-EXPRT-01 — Data Export: Overview & Workflow (prerequisite ---
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite ---
     the standard export process)
 
-- RC-EXPRT-03 — Data Export: User Rights & Export Access (how rights
+- [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (how rights
     affect what you can export)
 
-- RC-EXPRT-04 — Data Export: De-identification & Formatting Options
+- [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md)
 
-- RC-EXPRT-05 — Data Export: Report Types
+- [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) — Data Export: Report Types
 
-- RC-API-01 — API (pulling data directly into R or other tools via
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — API (pulling data directly into R or other tools via
     the REDCap API)
 
-- RC-FD-03 — Data Dictionary (CSV raw data format is also used for
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (CSV raw data format is also used for
     Data Dictionary uploads)

@@ -1,17 +1,17 @@
-RC-API-47
+[RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md)
 
 **Export a File (File Repository) API**
 
-| **Article ID** | RC-API-47 |
+| **Article ID** | [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects (all types) |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-45 — Create Folder (File Repository) API; RC-API-46 — List Files and Folders (File Repository) API; RC-API-12 — Export File; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md); [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File; [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -19,14 +19,14 @@ RC-API-47
 
 The Export a File (File Repository) API method downloads a single file stored in the project's **File Repository** by its `doc_id`. The method returns the **raw file content** (the bytes of the file itself) — not JSON, CSV, or XML data. Callers must write the response to disk (or a byte stream) rather than treating it as text.
 
-Because this method acts on a specific file by `doc_id`, you normally discover the `doc_id` first by calling List Files and Folders (RC-API-46), which enumerates the files in a given folder and returns each file's `doc_id`. Export a File is the File Repository analogue of Export File (RC-API-12), which downloads a file from a record-level file-upload field. The two methods look similar but operate on different storage areas of the project.
+Because this method acts on a specific file by `doc_id`, you normally discover the `doc_id` first by calling List Files and Folders ([RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)), which enumerates the files in a given folder and returns each file's `doc_id`. Export a File is the File Repository analogue of Export File ([RC-API-12 — Export File API](RC-API-12_Export-File.md)), which downloads a file from a record-level file-upload field. The two methods look similar but operate on different storage areas of the project.
 
 ---
 
 # 2. Key Concepts & Definitions
 
 ### Doc ID
-A numeric identifier assigned to each file in the File Repository. Obtained by calling List Files and Folders (RC-API-46) and used to export, delete, or otherwise act upon a specific file.
+A numeric identifier assigned to each file in the File Repository. Obtained by calling List Files and Folders ([RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)) and used to export, delete, or otherwise act upon a specific file.
 
 ### File Repository
 The project-level centralized file storage area, distinct from record-level file-upload fields. Contains shared documents and auto-generated files accessible through folder structure with optional access restrictions.
@@ -163,7 +163,7 @@ $output = curl_exec($ch);
 file_put_contents('/tmp/exported_file.bin', $output);
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -181,7 +181,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **Q: How do I find the `doc_id` of the file I want to export?**
 
-**A:** Call List Files and Folders (RC-API-46) on the folder that contains the file. Each file entry in the response includes a `doc_id`. If the file is nested under a sub-folder, call List on the parent folder first to get the sub-folder's `folder_id`, then call List again on that sub-folder to find the file's `doc_id`.
+**A:** Call List Files and Folders ([RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)) on the folder that contains the file. Each file entry in the response includes a `doc_id`. If the file is nested under a sub-folder, call List on the parent folder first to get the sub-folder's `folder_id`, then call List again on that sub-folder to find the file's `doc_id`.
 
 **Q: Why can't I see the exported file in my terminal or browser when I run the request?**
 
@@ -191,9 +191,9 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **A:** The original filename is provided in the `Content-Disposition` response header, and the MIME type is provided in `Content-Type`. If your HTTP client exposes response headers, you can use those to save the file with its original name and detect its type.
 
-**Q: What's the difference between this method and Export File (RC-API-12)?**
+**Q: What's the difference between this method and Export File ([RC-API-12 — Export File API](RC-API-12_Export-File.md))?**
 
-**A:** RC-API-12 exports a file from a **record-level file-upload field** — the file is attached to a specific record through a field on an instrument. RC-API-47 exports a file from the **project-level File Repository**, which is a shared, project-wide file store separate from record data. They use different `content` values (`file` vs `fileRepository`) and different parameters (RC-API-12 takes `record`/`field`/`event`, RC-API-47 takes `doc_id`).
+**A:** [RC-API-12 — Export File API](RC-API-12_Export-File.md) exports a file from a **record-level file-upload field** — the file is attached to a specific record through a field on an instrument. [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md) exports a file from the **project-level File Repository**, which is a shared, project-wide file store separate from record data. They use different `content` values (`file` vs `fileRepository`) and different parameters ([RC-API-12 — Export File API](RC-API-12_Export-File.md) takes `record`/`field`/`event`, [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md) takes `doc_id`).
 
 **Q: Is there a file size limit?**
 
@@ -201,7 +201,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **Q: Can I export a whole folder's worth of files in one call?**
 
-**A:** No. This method exports one file per call, identified by `doc_id`. To bulk-download a folder, first call List (RC-API-46) to enumerate the `doc_id`s, then iterate and call Export a File for each.
+**A:** No. This method exports one file per call, identified by `doc_id`. To bulk-download a folder, first call List ([RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)) to enumerate the `doc_id`s, then iterate and call Export a File for each.
 
 ---
 
@@ -215,16 +215,16 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 **Forgetting that `returnFormat` only shapes errors.** Setting `returnFormat=json` does not wrap the file contents in JSON. On success, the response body remains the raw file. `returnFormat` only affects how errors are returned when something goes wrong.
 
-**Using this method to download files from record file-upload fields.** Record-attached files are not in the File Repository — use RC-API-12 (Export File) for those. The two endpoints look superficially similar but pull from different storage areas.
+**Using this method to download files from record file-upload fields.** Record-attached files are not in the File Repository — use [RC-API-12 — Export File API](RC-API-12_Export-File.md) (Export File) for those. The two endpoints look superficially similar but pull from different storage areas.
 
 ---
 
 # 10. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-45 — Create Folder (File Repository) API (create folders that this method's files live in)
-- RC-API-46 — List Files and Folders (File Repository) API (discover `doc_id`s for files to export)
-- RC-API-12 — Export File (download files from record-level file-upload fields — distinct from File Repository files)
-- RC-API-13 — Import File (upload files to record-level file-upload fields)
-- RC-API-14 — Delete File (remove files from record-level file-upload fields)
-- RC-USER-03 — User Rights: Configuring User Privileges (granting API Export and File Repository privileges)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md) (create folders that this method's files live in)
+- [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md) (discover `doc_id`s for files to export)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from record-level file-upload fields — distinct from File Repository files)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to record-level file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from record-level file-upload fields)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (granting API Export and File Repository privileges)

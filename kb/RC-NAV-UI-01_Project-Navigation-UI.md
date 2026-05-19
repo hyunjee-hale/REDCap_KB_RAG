@@ -1,8 +1,8 @@
-RC-NAV-UI-01
+[RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md)
 
 **Project Navigation UI**
 
-| **Article ID** | RC-NAV-UI-01 |
+| **Article ID** | [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) |
 | --- | --- |
 | **Domain** | Project Navigation |
 | **Applies To** | All project types |
@@ -10,7 +10,7 @@ RC-NAV-UI-01
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-NAV-UI-02 — Project Menu Reference, RC-NAV-UI-04 — My Projects Page, RC-NAV-REC-01 — Record Navigation Overview, RC-PROJ-01 — Project Lifecycle, RC-DE-02 — Basic Data Entry, RC-SURV-01 — Surveys Basics, RC-USER-01 — User Rights Overview, RC-MYCAP-01 — MyCap Overview, RC-FD-01 — Form Design Overview, RC-MOB-01 — REDCap Mobile App |
+| **Related Topics** | [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md), [RC-NAV-UI-04 — My Projects Page](RC-NAV-UI-04_My-Projects-Page.md), [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle, [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md), [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys Basics, [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview, [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) — MyCap Overview, [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md), [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md) |
 
 ---
 
@@ -22,7 +22,7 @@ Every REDCap project uses a consistent two-panel layout: a persistent left-hand 
 
 # 2. Key Concepts & Definitions
 
-**Menu** — The persistent left-hand panel in any REDCap project. Contains navigation links to all features the current user can access. Organized into labeled sections (see RC-NAV-UI-02 — Project Menu Reference for a full breakdown).
+**Menu** — The persistent left-hand panel in any REDCap project. Contains navigation links to all features the current user can access. Organized into labeled sections (see [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) for a full breakdown).
 
 **Workspace** — The right-hand panel. Changes entirely depending on which section of REDCap the user is working in: a form designer, a data entry screen, user rights settings, reports, and so on.
 
@@ -30,7 +30,7 @@ Every REDCap project uses a consistent two-panel layout: a persistent left-hand 
 
 **Hamburger mode** — A collapsed view of the left menu that activates when the browser window is narrow or on a mobile device. Named after the three-line icon (☰) used to toggle it. The menu is still accessible; it is just hidden by default to save screen space.
 
-**Project Status** — One of four lifecycle stages a REDCap project can be in: Development, Production, Analysis/Cleanup, or Completed. Controls what changes are allowed and whether certain menu items appear. See RC-PROJ-01 — Project Lifecycle: Status and Settings for full details.
+**Project Status** — One of four lifecycle stages a REDCap project can be in: Development, Production, Analysis/Cleanup, or Completed. Controls what changes are allowed and whether certain menu items appear. See [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) for full details.
 
 ---
 
@@ -40,7 +40,7 @@ Every REDCap project uses a consistent two-panel layout: a persistent left-hand 
 
 | **Step** | **Action & Detail** |
 | --- | --- |
-| **1 — Log in** | Open your institution's REDCap URL (see RC-INST-01 for this installation's URL) and log in with your credentials. You will land on the My Projects page. |
+| **1 — Log in** | Open your institution's REDCap URL (see [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) for this installation's URL) and log in with your credentials. You will land on the My Projects page. |
 | **2 — Find your project** | Locate your project in the list. Projects can be searched or filtered. Click the project name to open it. |
 | **3 — Confirm you are in the project** | The left menu will appear with project-specific sections. The workspace will show the Project Home page by default. |
 
@@ -95,12 +95,12 @@ Yes. Click the REDCap logo or the My Projects link at the top of the left menu f
 
 # 6. Related Articles
 
-- RC-NAV-UI-02 — Project Menu Reference — detailed guide to every item in the REDCap left menu
-- RC-NAV-REC-01 — Record Navigation Overview — how to navigate to records and instruments once inside a project
-- RC-PROJ-01 — Project Lifecycle: Status and Settings — detailed coverage of Development, Production, Analysis/Cleanup, and Completed stages
-- RC-DE-02 — Basic Data Entry — covers Record Status Dashboard and Add/Edit Records
-- RC-SURV-01 — Surveys – Basics — referenced by the Survey Distribution Tools menu item
-- RC-USER-01 — User Rights: Overview & Three-Tier Access — how to configure permissions that control which menu items a user can see
-- RC-FD-01 — Form Design Overview — covers the Online Designer and Data Dictionary accessible from the Project Home and Design menu section
-- RC-MOB-01 — REDCap Mobile App — offline data collection for study staff
-- RC-MYCAP-01 — MyCap: Overview & Enabling — participant-facing mobile data entry; distinct from the REDCap Mobile App
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) — detailed guide to every item in the REDCap left menu
+- [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — how to navigate to records and instruments once inside a project
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — detailed coverage of Development, Production, Analysis/Cleanup, and Completed stages
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) — covers Record Status Dashboard and Add/Edit Records
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — referenced by the Survey Distribution Tools menu item
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — how to configure permissions that control which menu items a user can see
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) — covers the Online Designer and Data Dictionary accessible from the Project Home and Design menu section
+- [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md) — offline data collection for study staff
+- [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) — participant-facing mobile data entry; distinct from the REDCap Mobile App

@@ -1,16 +1,16 @@
-RC-RAND-02
+[RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)
 
 **REDCap Randomization Setup**
 
-| **Article ID** | RC-RAND-02 |
+| **Article ID** | [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) |
 | --- | --- |
 | **Domain** | Randomization |
 | **Applies To** | All REDCap project types with Randomization module enabled; requires Project Design and Setup rights and User Rights management access |
-| **Prerequisite** | RC-RAND-01 — Randomization Concepts & Terminology; RC-LONG-01 — Longitudinal Projects; RC-USER-01 — User Rights: Overview & Three-Tier Access |
+| **Prerequisite** | [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) — Longitudinal Projects; [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-RAND-01 — Randomization Concepts & Terminology; RC-RAND-03 — Working with & Managing Randomization; RC-USER-01 — User Rights: Overview & Three-Tier Access; RC-CC-06 — Control Center: Modules & Services Configuration |
+| **Related Topics** | [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -21,7 +21,7 @@ RC-RAND-02
 This document is the operational setup guide for REDCap randomization.
 It covers everything from pre-flight preparation through moving a
 randomized project to production. It assumes the reader has already
-reviewed RC-RAND-01 and understands core randomization concepts and
+reviewed [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) and understands core randomization concepts and
 terminology.
 
 ## Why does it matter?
@@ -75,7 +75,7 @@ cause of model rebuilds.
 
   ------- ----------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------
   **✓**   **Pre-flight item**                                                                                               **Skip if...**
-  ☐       **Confirm Randomization is enabled system-wide** — verify with your REDCap administrator that the Randomization module is enabled in the Control Center (RC-CC-06). If the Randomization option does not appear in Project Setup, the module is disabled.   *Never — must be enabled before any project can use it*
+  ☐       **Confirm Randomization is enabled system-wide** — verify with your REDCap administrator that the Randomization module is enabled in the Control Center ([RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)). If the Randomization option does not appear in Project Setup, the module is disabled.   *Never — must be enabled before any project can use it*
   ☐       Decide: open (unblinded) or blinded randomization?                                                                *Never — this decision drives variable type and workflow*
   ☐       Decide: will you use stratification? If yes, list your strata (max 14, all must be single-choice field types)     *No stratification planned*
   ☐       Decide: will you use Data Access Groups (DAGs) for multi-site stratification?                                     *No DAGs in this project*
@@ -161,7 +161,7 @@ if they do not apply to your project design.
 ## 4.3 Define the randomization model (Step 8)
 
 This is the most critical step. Decisions made here are locked once the
-model is saved. Review RC-RAND-01 before proceeding if you have any
+model is saved. Review [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) before proceeding if you have any
 uncertainty about the concepts below.
 
 +--------+------------------------------------------------------------+
@@ -350,27 +350,27 @@ feature — verify your REDCap version supports it.
 
 # 7. Administrator Configuration
 
-The Randomization module must be enabled at the system level before it can be enabled in any project. Administrators do this in the Control Center under System Configuration → Modules/Services Configuration. See **RC-CC-06** for details.
+The Randomization module must be enabled at the system level before it can be enabled in any project. Administrators do this in the Control Center under System Configuration → Modules/Services Configuration. See **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)** for details.
 
-> **See also:** RC-CC-06 — Control Center: Modules & Services Configuration
+> **See also:** [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 
 ---
 
 # 8. Related Articles
 
-- **RC-RAND-01:** Randomization Concepts & Terminology — required
+- **[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md):** Randomization Concepts & Terminology — required
     prerequisite for this guide
 
-- **RC-RAND-03:** Working with & Managing Randomization — running,
+- **[RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md):** Working with & Managing Randomization — running,
     monitoring, dashboard, and admin options
 
-- **RC-USER-01:** User Rights: Overview & Three-Tier Access — DAG setup and user rights
+- **[RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md):** User Rights: Overview & Three-Tier Access — DAG setup and user rights
     management
 
-- **RC-LONG-01:** Longitudinal Projects — arm and event setup
+- **[RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md):** Longitudinal Projects — arm and event setup
     prerequisite for longitudinal randomization
 
-- **RC-CC-06:** Control Center: Modules & Services Configuration — system-level Randomization enable/disable
+- **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md):** Control Center: Modules & Services Configuration — system-level Randomization enable/disable
 
 ---
 
@@ -381,14 +381,14 @@ The Randomization module must be enabled at the system level before it can be en
 | **15.4.4+** | Randomization 2.0: automatic trigger options (step 11) are available. This document is written for this version and has been verified compatible through REDCap 17. |
 | **Pre-15.x** | Automatic trigger options do not exist. Step 11 is not applicable. Manual-only randomization is the only option. |
 
-REDCap LLM Knowledge Base \| RC-RAND-02 \| Randomization Setup Guide
+REDCap LLM Knowledge Base \| [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) \| Randomization Setup Guide
 
 ---
 
 # 10. Related Articles
 
-- RC-RAND-01 — Randomization Concepts & Terminology
-- RC-RAND-03 — Working with & Managing Randomization
-- RC-USER-01 — User Rights: Overview & Three-Tier Access
-- RC-LONG-01 — Longitudinal Project Setup
-- RC-CC-06 — Control Center: Modules & Services Configuration
+- [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
+- [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

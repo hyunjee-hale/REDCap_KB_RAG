@@ -1,16 +1,16 @@
-RC-CAL-01
+[RC-CAL-01 — Calendar](RC-CAL-01_Calendar.md)
 
 **Calendar**
 
-| **Article ID** | RC-CAL-01 |
+| **Article ID** | [RC-CAL-01 — Calendar](RC-CAL-01_Calendar.md) |
 | --- | --- |
 | **Domain** | Calendar |
 | **Applies To** | All project types; primarily used in longitudinal projects |
-| **Prerequisite** | RC-NAV-UI-02 — Project Menu Reference |
+| **Prerequisite** | [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 | **Version** | 1.8 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-LONG-01 — Longitudinal Project Setup; RC-ALERT-01 — Alerts & Notifications: Setup; RC-SURV-06 — Automated Survey Invitations; RC-NAV-UI-02 — Project Menu Reference |
+| **Related Topics** | [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations; [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -32,7 +32,7 @@ The project-level feature that provides the Calendar interface. The Calendar is 
 A separate, optional REDCap feature for longitudinal projects that calculates and assigns target visit dates (and acceptable offset windows) to each event for each participant, based on a reference date (such as enrollment). When active, the Scheduling module can automatically populate Calendar entries for each scheduled visit. The Scheduling module and the Calendar module are distinct features; the Calendar can be used without Scheduling, and Scheduling data is only reflected in the Calendar when both are enabled.
 
 ## Visit Window
-In the Scheduling module context, the range of dates (defined by `offset_min` and `offset_max` around a target date) within which a participant's visit is considered on-schedule. Visit windows are configured per-event and displayed in the Calendar when Scheduling is active. See RC-LONG-01 — Longitudinal Project Setup for Scheduling module configuration details.
+In the Scheduling module context, the range of dates (defined by `offset_min` and `offset_max` around a target date) within which a participant's visit is considered on-schedule. Visit windows are configured per-event and displayed in the Calendar when Scheduling is active. See [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) for Scheduling module configuration details.
 
 ## Ad Hoc Event
 A Calendar entry that is tied to a specific record but not to a defined project event. Ad Hoc events are added from the View or Edit Schedule tab after selecting a record, so they are always record-linked. They are excluded from the bulk date-shift calculation when a scheduled event date is changed. Common uses include tracking contact attempts (e.g., called participant — no answer), logging reminders for study staff to follow up, or recording unplanned interactions that don't correspond to a formal protocol visit.
@@ -193,7 +193,7 @@ Once a schedule is generated, Calendar entries appear for each event in the part
 
 Understanding what the Calendar does *not* do prevents common misuse:
 
-**Not a notification or reminder tool.** The Calendar displays scheduled dates but does not send emails, text messages, or other reminders when an appointment date arrives. For automated notifications, use Alerts & Notifications (see RC-ALERT-01) or Automated Survey Invitations (see RC-SURV-06).
+**Not a notification or reminder tool.** The Calendar displays scheduled dates but does not send emails, text messages, or other reminders when an appointment date arrives. For automated notifications, use Alerts & Notifications (see [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)) or Automated Survey Invitations (see [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)).
 
 **Not a survey scheduler.** Calendar entries do not trigger survey sends. Surveys are scheduled through Automated Survey Invitations or the Survey Queue, not through the Calendar.
 
@@ -217,7 +217,7 @@ Understanding what the Calendar does *not* do prevents common misuse:
 **A:** The Calendar is a passive display tool — it shows scheduled events but does nothing on its own. Alerts & Notifications is an active system that evaluates conditions and sends messages when those conditions are met. They serve different purposes and can be used together: you might manually note an appointment in the Calendar while also setting up an alert to email the participant a reminder the day before.
 
 **Q: Will the Calendar send reminders to participants or staff when an appointment date arrives?**
-**A:** No. The Calendar does not send any notifications. Use Alerts & Notifications (RC-ALERT-01) or Automated Survey Invitations (RC-SURV-06) to send time-based communications.
+**A:** No. The Calendar does not send any notifications. Use Alerts & Notifications ([RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)) or Automated Survey Invitations ([RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)) to send time-based communications.
 
 **Q: If I delete a record, will its scheduled Calendar entries also be deleted?**
 **A:** Scheduled entries (generated by the Scheduling module) are tied to the record. Manually created Calendar entries (added via the +New button) are freestanding notes not linked to any record, so they are unaffected by record deletion regardless.
@@ -272,10 +272,10 @@ Understanding what the Calendar does *not* do prevents common misuse:
 
 # 9. Related Articles
 
-- RC-NAV-UI-02 — Project Menu Reference (Calendar listed as a conditional project menu item)
-- RC-LONG-01 — Longitudinal Project Setup (Scheduling module configuration, `day_offset` and offset windows)
-- RC-ALERT-01 — Alerts & Notifications: Setup (time-based automated notifications)
-- RC-SURV-06 — Automated Survey Invitations (scheduling survey delivery)
-- RC-DE-10 — Longitudinal & Repeated Data Entry (navigating data entry across events)
-- RC-PROJ-02 — Project Setup Checklist (enabling optional modules)
-- RC-USER-03 — User Rights: Configuring User Privileges (Calendar checkbox in user rights)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (Calendar listed as a conditional project menu item)
+- [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (Scheduling module configuration, `day_offset` and offset windows)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (time-based automated notifications)
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations (scheduling survey delivery)
+- [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) (navigating data entry across events)
+- [RC-PROJ-02 — Project Setup Checklist](RC-PROJ-02_Project-Setup-Checklist.md) (enabling optional modules)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (Calendar checkbox in user rights)

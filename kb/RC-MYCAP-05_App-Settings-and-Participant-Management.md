@@ -1,16 +1,16 @@
-RC-MYCAP-05
+[RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)
 
 **MyCap: App Settings & Participant Management**
 
-| **Article ID** | RC-MYCAP-05 |
+| **Article ID** | [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) |
 |---|---|
 | **Domain** | MyCap Mobile App |
 | **Applies To** | Projects with MyCap enabled |
-| **Prerequisite** | RC-MYCAP-01 — MyCap: Overview & Enabling |
+| **Prerequisite** | [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-MYCAP-02 — Designing Instruments for MyCap; RC-MYCAP-04 — Participant Onboarding |
+| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap; [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding |
 
 ---
 
@@ -156,7 +156,7 @@ From Participant Management, you can view whether a participant has joined. For 
 - Copy or resend the App Link from their row.
 - Display or download their QR code.
 
-For automated invitation workflows, see RC-MYCAP-04 — Participant Onboarding.
+For automated invitation workflows, see [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding.
 
 ## 5.3 Sending Messages
 
@@ -257,8 +257,8 @@ If a participant's data fails to sync correctly, a sync issue flag appears in th
 
 # 8. Related Articles
 
-- RC-MYCAP-01 — MyCap: Overview & Enabling
-- RC-MYCAP-02 — Designing Instruments for MyCap (publishing workflow)
-- RC-MYCAP-04 — Participant Onboarding (invitation and joining methods)
-- RC-MYCAP-07 — Advanced Features: FDL, MLM, and Survey Links
-- RC-MYCAP-08 — Testing MyCap (testing App Settings and notifications)
+- [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap (publishing workflow)
+- [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding (invitation and joining methods)
+- [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md) — Advanced Features: FDL, MLM, and Survey Links
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (testing App Settings and notifications)

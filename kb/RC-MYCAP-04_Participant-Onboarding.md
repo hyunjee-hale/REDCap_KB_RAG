@@ -1,16 +1,16 @@
-RC-MYCAP-04
+[RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md)
 
 **MyCap: Participant Onboarding**
 
-| **Article ID** | RC-MYCAP-04 |
+| **Article ID** | [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) |
 |---|---|
 | **Domain** | MyCap Mobile App |
 | **Applies To** | Projects with MyCap enabled |
-| **Prerequisite** | RC-MYCAP-01 — MyCap: Overview & Enabling |
+| **Prerequisite** | [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-MYCAP-05 — App Settings & Participant Management; RC-PIPE-16 — Smart Variables: MyCap; RC-ALERT-01 — Alerts & Notifications: Setup |
+| **Related Topics** | [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management; [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
 
 ---
 
@@ -48,7 +48,7 @@ A system-generated unique identifier for the REDCap project within MyCap. Embedd
 
 **Smart Variable**
 
-A REDCap syntax expression that generates participant-specific values at runtime. The MyCap-specific smart variable `[mycap-participant-link]` generates an App Link for the current record. See RC-PIPE-16 — Smart Variables: MyCap for the full reference.
+A REDCap syntax expression that generates participant-specific values at runtime. The MyCap-specific smart variable `[mycap-participant-link]` generates an App Link for the current record. See [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md) for the full reference.
 
 **Survey Completion Text**
 
@@ -62,8 +62,8 @@ Before a participant can join a MyCap project, a record for that participant mus
 
 - **Manual creation:** A coordinator creates the record in REDCap data entry.
 - **Survey-based creation:** The participant completes an enrollment survey; REDCap auto-creates a record on survey submission. The joining link can then be delivered via Survey Completion Text or an automated alert.
-- **Import:** Records are created via bulk import (RC-IMP-01 — Data Import Overview).
-- **API:** Records are created programmatically (RC-API-03 — Import Records).
+- **Import:** Records are created via bulk import ([RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md)).
+- **API:** Records are created programmatically ([RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records).
 
 ---
 
@@ -82,7 +82,7 @@ App Links work well for **fully remote studies** where participants are not in-p
 
 The App Link for a participant is available in two ways:
 
-- **Smart variable:** Use `[mycap-participant-link:Custom Text]` in an email, alert, or Survey Completion Text to generate a clickable link. The raw URL can also be retrieved with `[mycap-participant-url]`. See RC-PIPE-16 — Smart Variables: MyCap.
+- **Smart variable:** Use `[mycap-participant-link:Custom Text]` in an email, alert, or Survey Completion Text to generate a clickable link. The raw URL can also be retrieved with `[mycap-participant-url]`. See [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md).
 - **Participant Management:** In the MyCap section of the left menu, go to **Participant Management**. The participant's App Link is displayed in their row and can be copied.
 
 ## 4.3 Firebase Dynamic Links Migration (August 2025)
@@ -149,7 +149,7 @@ The participant receives their unique link immediately after submitting the surv
 
 ## 6.2 Alerts & Notifications
 
-Use Alerts & Notifications (RC-ALERT-01) to send the App Link automatically based on a trigger (e.g., record creation, a status change):
+Use Alerts & Notifications ([RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)) to send the App Link automatically based on a trigger (e.g., record creation, a status change):
 
 1. Go to **Alerts & Notifications** in the left menu.
 2. Create a new alert triggered by the appropriate condition (e.g., when a record is created).
@@ -233,8 +233,8 @@ Participants receive the email automatically when the trigger condition is met.
 
 # 11. Related Articles
 
-- RC-MYCAP-01 — MyCap: Overview & Enabling
-- RC-MYCAP-05 — App Settings & Participant Management (participant tracking and resending invitations)
-- RC-MYCAP-08 — Testing MyCap (testing joining methods)
-- RC-PIPE-16 — Smart Variables: MyCap (full smart variable reference)
-- RC-ALERT-01 — Alerts & Notifications: Setup
+- [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
+- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management (participant tracking and resending invitations)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (testing joining methods)
+- [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md) (full smart variable reference)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)

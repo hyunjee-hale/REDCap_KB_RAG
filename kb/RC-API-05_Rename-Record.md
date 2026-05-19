@@ -1,17 +1,17 @@
-RC-API-05
+[RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md)
 
 **Rename Record API**
 
-| **Article ID** | RC-API-05 |
+| **Article ID** | [RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | All REDCap projects |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-02 — Export Records; RC-API-03 — Import Records; RC-API-04 — Delete Records |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records; [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records |
 
 ---
 
@@ -127,7 +127,7 @@ print $output;
 ?>
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `false` for compatibility. Set it to `true` in production. See RC-API-01 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `false` for compatibility. Set it to `true` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for why SSL certificate validation matters.
 
 ---
 
@@ -180,8 +180,8 @@ On success, the API returns `"1"`. On failure, it returns an error message strin
 
 # 7. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-02 — Export Records (reading record data)
-- RC-API-03 — Import Records (creating and updating records)
-- RC-API-04 — Delete Records (removing records)
-- RC-DE-01 — Record Creation & the Record Home Page (how record IDs are assigned and what auto-numbering means)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading record data)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records (creating and updating records)
+- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records (removing records)
+- [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (how record IDs are assigned and what auto-numbering means)

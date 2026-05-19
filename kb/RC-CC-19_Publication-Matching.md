@@ -1,8 +1,8 @@
-RC-CC-19
+[RC-CC-19 — Control Center: Publication Matching](RC-CC-19_Publication-Matching.md)
 
 **Control Center: Publication Matching**
 
-| **Article ID** | RC-CC-19 |
+| **Article ID** | [RC-CC-19 — Control Center: Publication Matching](RC-CC-19_Publication-Matching.md) |
 | --- | --- |
 | **Domain** | Control Center (Admin) |
 | **Applies To** | REDCap administrators |
@@ -10,7 +10,7 @@ RC-CC-19
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-CC-21 — Control Center Overview; RC-CC-06 — Modules & Services Configuration; RC-PROJ-01 — Project Lifecycle |
+| **Related Topics** | [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview; [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle |
 
 ---
 
@@ -140,6 +140,6 @@ Yes. All matched publications are surfaced for administrator review in the P.I.-
 
 # 9. Related Articles
 
-- RC-CC-21 — Control Center Overview
-- RC-CC-06 — Modules & Services Configuration
-- RC-PROJ-01 — Project Lifecycle
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration
+- [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) — Project Lifecycle

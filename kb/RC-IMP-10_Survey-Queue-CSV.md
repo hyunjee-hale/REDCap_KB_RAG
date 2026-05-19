@@ -1,17 +1,17 @@
-RC-IMP-10
+[RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md)
 
 **Survey Queue CSV — Column Reference and Format Guide**
 
-| **Article ID** | RC-IMP-10 |
+| **Article ID** | [RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md) |
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | REDCap projects with surveys and Survey Queue enabled |
-| **Prerequisite** | RC-IMP-03 — CSV Upload Reference; RC-SURV-07 — Survey Queue |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-IMP-03 — CSV Upload Reference; RC-SURV-07 — Survey Queue; RC-IMP-06 — Automated Survey Invitations CSV |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md); [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV |
 
 ---
 
@@ -27,7 +27,7 @@ The Survey Queue module supports CSV export and import of queue configurations. 
 
 **Always download first.** Start from a file exported from the project rather than building from scratch. This ensures the correct column structure and gives you a recovery snapshot. The Survey Queue must already be enabled in the project before this option appears.
 
-For full coverage of configuring the Survey Queue through the REDCap UI, see RC-SURV-07 — Survey Queue.
+For full coverage of configuring the Survey Queue through the REDCap UI, see [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md).
 
 ---
 
@@ -84,8 +84,8 @@ Key points illustrated:
 
 # 5. Related Articles
 
-- RC-IMP-03 — CSV Upload Reference (index of all CSV upload types in REDCap)
-- RC-SURV-07 — Survey Queue (full module reference including UI configuration)
-- RC-IMP-06 — Automated Survey Invitations CSV (related: ASI format reference)
-- RC-SURV-01 — Surveys: Basics (survey fundamentals)
-- RC-BL-01 — Branching Logic Overview (logic expression syntax used in `condition_logic`)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (full module reference including UI configuration)
+- [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV (related: ASI format reference)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics (survey fundamentals)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview (logic expression syntax used in `condition_logic`)

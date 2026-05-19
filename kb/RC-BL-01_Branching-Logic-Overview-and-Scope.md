@@ -1,16 +1,16 @@
-RC-BL-01
+[RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
 
 **Branching Logic — Overview & Scope**
 
-| **Article ID** | RC-BL-01 |
+| **Article ID** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) |
 |---|---|
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-02 — Online Designer |
+| **Prerequisite** | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-BL-02 — Syntax & Atomic Statements; RC-BL-03 — Combining Statements; RC-BL-04 — Structured Fields & Checkboxes; RC-FD-02 — Online Designer |
+| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements; [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Statements; [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Structured Fields & Checkboxes; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -68,7 +68,7 @@ The same logic syntax that powers branching logic is also used in several other 
 | Calculated Fields | Perform arithmetic operations on field values | Numerical result (not true/false) |
 | Action Tags (selected) | Drive dynamic behavior such as default values or date comparisons | Varies by action tag |
 
-> **Note:** Calculated fields and action tags use the same logic syntax but do not produce a true/false outcome. Calculated fields always return a number. Action tags use the syntax for a range of non-boolean purposes. Calculated fields are covered in RC-CALC-02 — Calculated Fields. Action tags that use logic syntax are covered in the RC-AT series — start with RC-AT-01 — Action Tags Overview.
+> **Note:** Calculated fields and action tags use the same logic syntax but do not produce a true/false outcome. Calculated fields always return a number. Action tags use the syntax for a range of non-boolean purposes. Calculated fields are covered in [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md). Action tags that use logic syntax are covered in the RC-AT series — start with [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview.
 
 ---
 
@@ -96,19 +96,19 @@ Branching logic for a specific field is configured in the Online Designer. There
 
 This knowledge base series covers the foundations of REDCap's logic syntax. The following topics are covered:
 
-- Logic syntax elements: operators, brackets, quotes, boolean operators (RC-BL-02)
-- Writing atomic (single-condition) logic statements (RC-BL-02)
-- Combining statements with AND, OR, and parentheses (RC-BL-03)
-- Writing logic for structured field types including checkboxes (RC-BL-04)
+- Logic syntax elements: operators, brackets, quotes, boolean operators ([RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md))
+- Writing atomic (single-condition) logic statements ([RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md))
+- Combining statements with AND, OR, and parentheses ([RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md))
+- Writing logic for structured field types including checkboxes ([RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md))
 
 The following topics are outside the scope of this series. Each has its own dedicated article:
 
-- Calculated fields and calculation syntax — RC-CALC-02 — Calculated Fields
-- Action tags that use logic syntax — RC-AT-01 — Action Tags Overview (start here for the full series)
-- Smart variables — RC-PIPE-03 — Smart Variables Overview
-- Field embedding (curly bracket syntax) — RC-FD-07 — Field Embedding
-- Event-based logic in longitudinal projects — RC-BL-05 — Branching Logic in Longitudinal Projects
-- REDCap functions (e.g., datediff, rounddown) — RC-CALC-01 — Special Functions Reference
+- Calculated fields and calculation syntax — [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md)
+- Action tags that use logic syntax — [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview (start here for the full series)
+- Smart variables — [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md)
+- Field embedding (curly bracket syntax) — [RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md)
+- Event-based logic in longitudinal projects — [RC-BL-05 — Branching Logic — Longitudinal Projects](RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md) — Branching Logic in Longitudinal Projects
+- REDCap functions (e.g., datediff, rounddown) — [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md)
 
 ---
 
@@ -168,16 +168,16 @@ Apply this expression as the branching logic for every field that should only ap
 
 **Limitation:** This pattern uses branching logic at the field level. It does not prevent a respondent from submitting the form with only the gate checkbox checked and nothing else — if subsequent fields are not individually marked as required, the form can be saved in that state. Consider whether the context warrants making key downstream fields required in addition to the gate.
 
-> **Note:** This pattern uses checkbox field syntax — see RC-BL-04 — Branching Logic for Structured Fields & Checkboxes for the `(option_code)` notation used with checkbox fields.
+> **Note:** This pattern uses checkbox field syntax — see [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Branching Logic for Structured Fields & Checkboxes for the `(option_code)` notation used with checkbox fields.
 
 ---
 
 # 10. Related Articles
 
-- RC-BL-02 — Branching Logic Syntax & Atomic Statements (the logic language and writing your first statement)
-- RC-BL-03 — Combining Logic Statements (AND, OR, parentheses)
-- RC-BL-04 — Branching Logic for Structured Fields & Checkboxes
-- RC-FD-02 — Online Designer (where branching logic is configured)
-- RC-FD-03 — Data Dictionary (alternative location for writing logic in bulk)
-- RC-DE-02 — Basic Data Entry (explains how branching logic appears from the data entry user's perspective)
-- RC-FD-09 — Field Embedding: Advanced Patterns (related pattern: embedding sub-fields inside radio choice labels alongside branching logic)
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Branching Logic Syntax & Atomic Statements (the logic language and writing your first statement)
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Logic Statements (AND, OR, parentheses)
+- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Branching Logic for Structured Fields & Checkboxes
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where branching logic is configured)
+- [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (alternative location for writing logic in bulk)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (explains how branching logic appears from the data entry user's perspective)
+- [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md) — Field Embedding: Advanced Patterns (related pattern: embedding sub-fields inside radio choice labels alongside branching logic)

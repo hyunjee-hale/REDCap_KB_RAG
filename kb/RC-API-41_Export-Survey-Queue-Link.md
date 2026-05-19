@@ -1,17 +1,17 @@
-RC-API-41
+[RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)
 
 **Export Survey Queue Link API**
 
-| **Article ID** | RC-API-41 |
+| **Article ID** | [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects with Survey Queue enabled |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation (Export a Survey Queue Link for a Participant) |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-40 — Export Survey Link; RC-API-42 — Export Survey Return Code |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link; [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code |
 
 ---
 
@@ -135,7 +135,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -154,7 +154,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 # 6. Common Questions
 
 **Q: What is the difference between a survey link and a survey queue link?**
-**A:** A survey link (RC-API-40) is specific to one instrument. A survey queue link (RC-API-41) presents multiple surveys in a guided workflow on a single page.
+**A:** A survey link ([RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)) is specific to one instrument. A survey queue link ([RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)) presents multiple surveys in a guided workflow on a single page.
 
 **Q: Which surveys appear in the queue?**
 **A:** The queue displays all surveys assigned to the record based on your project's Survey Queue configuration. The order and visibility are set in the project design, not via API.
@@ -175,7 +175,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 
 # 7. Common Mistakes & Gotchas
 
-**Confusing surveyLink and surveyQueueLink:** These are distinct content types. Use `'surveyLink'` (RC-API-40) for a link to a single instrument; use `'surveyQueueLink'` for the full multi-survey queue workflow.
+**Confusing surveyLink and surveyQueueLink:** These are distinct content types. Use `'surveyLink'` ([RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)) for a link to a single instrument; use `'surveyQueueLink'` for the full multi-survey queue workflow.
 
 **Including event or instrument parameters:** This method does not accept `event` or `instrument`. Passing them won't necessarily cause an error — REDCap may simply ignore them — but they serve no purpose and can cause confusion.
 
@@ -187,8 +187,8 @@ This URL presents the respondent with all surveys in their queue for the specifi
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-API-40 — Export Survey Link
-- RC-API-42 — Export Survey Return Code
-- RC-SURV-01 — Surveys – Basics (survey fundamentals)
-- RC-SURV-07 — Survey Queue (how the survey queue works; context for the queue link)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link
+- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals)
+- [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (how the survey queue works; context for the queue link)

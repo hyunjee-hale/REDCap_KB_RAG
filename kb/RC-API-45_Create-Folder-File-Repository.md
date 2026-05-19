@@ -1,17 +1,17 @@
-RC-API-45
+[RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md)
 
 **Create Folder (File Repository) API**
 
-| **Article ID** | RC-API-45 |
+| **Article ID** | [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects (all types) |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-12 — Export File; RC-API-13 — Import File; RC-API-14 — Delete File; RC-DAG-01 — Data Access Groups; RC-USER-03 — User Rights: Configuring User Privileges |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File; [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File; [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -19,7 +19,7 @@ RC-API-45
 
 The Create Folder (File Repository) API method creates a new folder inside the project's **File Repository** — the project-level file storage area that holds shared documents, auto-generated files (e.g., e-consent PDFs, data export archives), and any files uploaded through the File Repository page.
 
-Unlike the Import File / Export File / Delete File methods (RC-API-12, RC-API-13, RC-API-14), which operate on **file-upload fields attached to individual records**, this method operates on the **project-wide File Repository** and only creates directory structure (no file content). The method returns the `folder_id` of the newly created folder, which can then be used as a parent reference for subsequent nested folders or for uploading files into that folder.
+Unlike the Import File / Export File / Delete File methods ([RC-API-12 — Export File API](RC-API-12_Export-File.md), [RC-API-13 — Import File API](RC-API-13_Import-File.md), [RC-API-14 — Delete File API](RC-API-14_Delete-File.md)), which operate on **file-upload fields attached to individual records**, this method operates on the **project-wide File Repository** and only creates directory structure (no file content). The method returns the `folder_id` of the newly created folder, which can then be used as a parent reference for subsequent nested folders or for uploading files into that folder.
 
 The method optionally supports creating the new folder as a **sub-folder** of an existing folder, and optionally restricting access to a specific **Data Access Group (DAG)** or **User Role**.
 
@@ -180,7 +180,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See RC-API-01 — Section 3.5 for why SSL certificate validation matters.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is shown as `FALSE` for compatibility. Set it to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) — Section 3.5 for why SSL certificate validation matters.
 
 ---
 
@@ -211,7 +211,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 # 8. Common Questions
 
-**Q: What's the difference between this method and Import File (RC-API-13)?**
+**Q: What's the difference between this method and Import File ([RC-API-13 — Import File API](RC-API-13_Import-File.md))?**
 
 **A:** Import File uploads a file to a **file-upload field on a record** (record-level data). Create Folder operates on the **File Repository**, which is a separate project-level file storage area accessed from the project's left-hand menu. They use different `content` values (`file` vs `fileRepository`) and serve different purposes.
 
@@ -239,13 +239,13 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 # 9. Common Mistakes & Gotchas
 
-**Confusing the File Repository with record-level file uploads.** Create Folder only affects the project-level File Repository — it has no connection to file-upload fields attached to records. If you need to store a file against a specific record, use Import File (RC-API-13) instead. Files stored in the File Repository are not linked to any particular record.
+**Confusing the File Repository with record-level file uploads.** Create Folder only affects the project-level File Repository — it has no connection to file-upload fields attached to records. If you need to store a file against a specific record, use Import File ([RC-API-13 — Import File API](RC-API-13_Import-File.md)) instead. Files stored in the File Repository are not linked to any particular record.
 
-**Forgetting the File Repository privilege.** The API token's owner must have **both** API Import/Update and File Repository privileges assigned in User Rights. Tokens issued to users with API rights but no File Repository access will fail this call with a permissions error. See RC-USER-03 — User Rights: Configuring User Privileges for how to grant File Repository access.
+**Forgetting the File Repository privilege.** The API token's owner must have **both** API Import/Update and File Repository privileges assigned in User Rights. Tokens issued to users with API rights but no File Repository access will fail this call with a permissions error. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for how to grant File Repository access.
 
 **Assuming DAG/Role restriction is inherited from the parent folder.** Access restrictions must be set explicitly on each folder via `dag_id` and/or `role_id`. A sub-folder does **not** automatically inherit the restrictions of its parent — each folder's access is evaluated independently.
 
-**Passing the DAG name instead of the `dag_id`.** The `dag_id` parameter is the numeric internal ID of the DAG, not its unique name or display label. Call the Export DAGs API (RC-API-28) first to retrieve the `dag_id` values if you do not already know them.
+**Passing the DAG name instead of the `dag_id`.** The `dag_id` parameter is the numeric internal ID of the DAG, not its unique name or display label. Call the Export DAGs API ([RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md)) first to retrieve the `dag_id` values if you do not already know them.
 
 **Leaving `dag_id` and `role_id` unset when you want the folder to be generally accessible.** When both are omitted, the folder is accessible to users in all DAGs and all User Roles — including users assigned to no DAG and no User Role. This is almost always the desired behavior, but be aware that "unrestricted" means exactly that.
 
@@ -253,11 +253,11 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 # 10. Related Articles
 
-- RC-API-01 — REDCap API (overview; authentication, tokens, playground)
-- RC-API-12 — Export File (download files from record-level file-upload fields)
-- RC-API-13 — Import File (upload files to record-level file-upload fields)
-- RC-API-14 — Delete File (remove files from record-level file-upload fields)
-- RC-API-28 — Export DAGs API (look up `dag_id` values for folder access restriction)
-- RC-API-25 — Export User Roles API (look up `role_id` values for folder access restriction)
-- RC-DAG-01 — Data Access Groups (concept reference for `dag_id`)
-- RC-USER-03 — User Rights: Configuring User Privileges (granting API and File Repository privileges)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from record-level file-upload fields)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to record-level file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from record-level file-upload fields)
+- [RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md) (look up `dag_id` values for folder access restriction)
+- [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) (look up `role_id` values for folder access restriction)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (concept reference for `dag_id`)
+- [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (granting API and File Repository privileges)

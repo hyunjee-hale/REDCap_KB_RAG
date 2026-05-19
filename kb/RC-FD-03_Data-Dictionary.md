@@ -1,17 +1,17 @@
-RC-FD-03
+[RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
 
 **Data Dictionary**
 
-| **Article ID** | RC-FD-03 |
+| **Article ID** | [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
 | --- | --- |
 | **Domain** | Form Design |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | RC-FD-01 — Form Design Overview; familiarity with spreadsheet editing |
+| **Prerequisite** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); familiarity with spreadsheet editing |
 | **Skill Level** | Advanced |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-FD-01 — Form Design Overview; RC-FD-02 — Online Designer; RC-FD-05 — Codebook |
+| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) |
 
 ---
 
@@ -145,7 +145,7 @@ works.
 - If an upload produces unintended results, re-upload the snapshot you
     saved before making changes.
 
-- If no snapshot exists, use the Codebook (RC-FD-05) or the current
+- If no snapshot exists, use the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) or the current
     Online Designer view to manually reconstruct what was there before
     — a slow and error-prone process.
 
@@ -290,21 +290,21 @@ usable in branching logic and calculated fields — for example,
 
 ## API Access
 
-> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See RC-API-01 — REDCap API for authentication, token management, and setup.
+> **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
-- **RC-API-07 — Export Metadata (Data Dictionary) API** — export the full data dictionary as JSON or CSV programmatically
-- **RC-API-08 — Import Metadata (Data Dictionary) API** — upload a new or modified data dictionary to the project programmatically
+- **[RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)** — export the full data dictionary as JSON or CSV programmatically
+- **[RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)** — upload a new or modified data dictionary to the project programmatically
 
 ---
 
 
 # 9. Related Articles
 
-- RC-FD-01 — Form Design Overview (prerequisite — tool selection
+- [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite — tool selection
     and navigation)
 
-- RC-FD-02 — Online Designer (the guardrailed alternative for
+- [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the guardrailed alternative for
     smaller changes)
 
-- RC-FD-05 — Codebook (useful as a reference when building or
+- [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (useful as a reference when building or
     reviewing the Data Dictionary)

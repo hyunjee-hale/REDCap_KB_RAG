@@ -1,17 +1,17 @@
-RC-API-38
+[RC-API-38 — Export Reports API](RC-API-38_Export-Reports.md)
 
 **Export Reports API**
 
-| **Article ID** | RC-API-38 |
+| **Article ID** | [RC-API-38 — Export Reports API](RC-API-38_Export-Reports.md) |
 |---|---|
 | **Domain** | API |
 | **Applies To** | REDCap projects with custom reports configured |
-| **Prerequisite** | RC-API-01 — REDCap API |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | RC-API-01 — REDCap API; RC-API-02 — Export Records |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records |
 
 ---
 
@@ -149,7 +149,7 @@ $output = curl_exec($ch);
 print $output;
 ```
 
-> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See RC-API-01 Section 3.5.
+> **Note:** In PHP examples, `CURLOPT_SSL_VERIFYPEER` is `FALSE` for compatibility. Set to `TRUE` in production. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) Section 3.5.
 
 ---
 
@@ -219,9 +219,9 @@ The API returns data rows as configured in the report, ordered first by record (
 
 # 8. Related Articles
 
-- RC-API-01 — REDCap API
-- RC-API-02 — Export Records
-- RC-EXPRT-01 — Data Export: Overview & Workflow (manual report export workflow)
-- RC-EXPRT-06 — Custom Reports: Setup & Field Selection (how to build the reports exported by this method)
-- RC-EXPRT-07 — Custom Reports: Filtering & Ordering (how report filters affect exported data)
-- RC-EXPRT-08 — Custom Reports: Management & Organization (report IDs and organization)
+- [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (manual report export workflow)
+- [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) (how to build the reports exported by this method)
+- [RC-EXPRT-07 — Custom Reports: Filtering & Ordering](RC-EXPRT-07_Custom-Reports-Filtering-and-Ordering.md) (how report filters affect exported data)
+- [RC-EXPRT-08 — Custom Reports: Management & Organization](RC-EXPRT-08_Custom-Reports-Management-and-Organization.md) (report IDs and organization)

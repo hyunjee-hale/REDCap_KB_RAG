@@ -1,22 +1,22 @@
-RC-DE-12
+[RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md)
 
 **Data Entry — Data Resolution Workflow**
 
-| **Article ID** | RC-DE-12 |
+| **Article ID** | [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) |
 |---|---|
 | **Domain** | Data Entry |
 | **Applies To** | All REDCap project types; requires the Data Resolution Workflow mode to be enabled |
-| **Prerequisite** | RC-DE-08 — Field Comment Log |
+| **Prerequisite** | [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-DE-02 — Basic Data Entry; RC-DE-04 — Editing Data & Audit Trail; RC-DE-08 — Field Comment Log; RC-NAV-UI-02 — Project Menu Reference; RC-NAV-REC-04 — Record Status Dashboard |
+| **Related Topics** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md); [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
 
 ---
 
 # 1. Overview
 
-This article covers REDCap's Data Resolution Workflow (DRW) — what it is, how it differs from the Field Comment Log, how to enable and configure it, and how to open, respond to, close, and review queries. The DRW is a structured issue-tracking system built directly into REDCap that allows study teams to flag data problems, assign them to specific users, track resolution status, and audit the entire process without leaving REDCap. It is best suited for projects with multiple data entry users, distributed teams, or regulatory requirements around data quality documentation. For simpler annotation needs, see RC-DE-08 — Field Comment Log.
+This article covers REDCap's Data Resolution Workflow (DRW) — what it is, how it differs from the Field Comment Log, how to enable and configure it, and how to open, respond to, close, and review queries. The DRW is a structured issue-tracking system built directly into REDCap that allows study teams to flag data problems, assign them to specific users, track resolution status, and audit the entire process without leaving REDCap. It is best suited for projects with multiple data entry users, distributed teams, or regulatory requirements around data quality documentation. For simpler annotation needs, see [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md).
 
 > **Note:** The Data Resolution Workflow and the Field Comment Log are mutually exclusive modes. A project runs in one mode at a time. See Section 3 for how to switch between them.
 
@@ -284,10 +284,10 @@ Use Resolution Metrics to identify recurring data entry problems (candidate fiel
 
 # 10. Related Articles
 
-- RC-DE-02 — Basic Data Entry (foundational data entry skills required before using the DRW)
-- RC-DE-04 — Editing Data & Audit Trail (related audit features; the DRW is itself an audit trail for data quality decisions)
-- RC-DE-08 — Field Comment Log (the simpler annotation alternative to the DRW; also covers setup shared between both modes)
-- RC-DE-05 — Field Validations (field validations and DRW queries are often used together to document out-of-range or exceptional values)
-- RC-DAG-01 — Data Access Groups (the DRW dashboard can be filtered by DAG; useful context for multi-site projects)
-- RC-NAV-UI-02 — Project Menu Reference (the Data Resolution Workflow appears in the Applications section as "Resolve Issues"; replaces the Field Comment Log when enabled)
-- RC-NAV-REC-04 — Record Status Dashboard & Other Record Links (the DRW provides variable-level links that navigate directly to a specific field within an instrument)
+- [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills required before using the DRW)
+- [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (related audit features; the DRW is itself an audit trail for data quality decisions)
+- [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md) (the simpler annotation alternative to the DRW; also covers setup shared between both modes)
+- [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) (field validations and DRW queries are often used together to document out-of-range or exceptional values)
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (the DRW dashboard can be filtered by DAG; useful context for multi-site projects)
+- [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the Data Resolution Workflow appears in the Applications section as "Resolve Issues"; replaces the Field Comment Log when enabled)
+- [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (the DRW provides variable-level links that navigate directly to a specific field within an instrument)
