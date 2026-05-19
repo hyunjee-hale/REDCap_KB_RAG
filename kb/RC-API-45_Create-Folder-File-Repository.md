@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File; [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File; [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md); [RC-API-13 — Import File API](RC-API-13_Import-File.md); [RC-API-14 — Delete File API](RC-API-14_Delete-File.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -254,9 +254,9 @@ When called as a background process (`backgroundProcess=true`), the response is 
 # 10. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from record-level file-upload fields)
-- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to record-level file-upload fields)
-- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from record-level file-upload fields)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md)(download files from record-level file-upload fields)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md)(upload files to record-level file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md)(remove files from record-level file-upload fields)
 - [RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md) (look up `dag_id` values for folder access restriction)
 - [RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md) (look up `role_id` values for folder access restriction)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (concept reference for `dag_id`)

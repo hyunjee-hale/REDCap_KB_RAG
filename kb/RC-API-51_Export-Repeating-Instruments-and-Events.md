@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings; [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events; [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md); [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md); [RC-API-19 — Export Events API](RC-API-19_Export-Events.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) |
 
 ---
 
@@ -242,7 +242,7 @@ In the second entry above, `form_name` is blank, indicating that the entire `fol
 # 10. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (full list of all instruments; not just repeating)
-- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings (which instruments are assigned to which events in longitudinal projects)
-- [RC-API-19 — Export Events API](RC-API-19_Export-Events.md) — Export Events (list all events in a longitudinal project)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)(full list of all instruments; not just repeating)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)(which instruments are assigned to which events in longitudinal projects)
+- [RC-API-19 — Export Events API](RC-API-19_Export-Events.md)(list all events in a longitudinal project)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeating instruments and events via the UI)

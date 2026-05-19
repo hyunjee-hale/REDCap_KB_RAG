@@ -273,7 +273,7 @@ Click the green **Add Attachments** button at the bottom of the message panel.
 
 **Q: Can I use branching logic syntax in an alert trigger?**
 
-**A:** Yes. The alert logic editor uses the same syntax as branching logic. Any valid branching logic expression is valid as an alert trigger condition. If you are new to logic syntax, review [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) and [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements.
+**A:** Yes. The alert logic editor uses the same syntax as branching logic. Any valid branching logic expression is valid as an alert trigger condition. If you are new to logic syntax, review [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) and [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)
 
 **Q: What does the "Ensure logic is still true" checkbox do, and when should I use it?**
 

@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | MyCap Mobile App |
 | **Applies To** | Projects with MyCap enabled |
-| **Prerequisite** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap |
+| **Prerequisite** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md); [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md) — Active Tasks & Mobile Toolbox; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) |
+| **Related Topics** | [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md); [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) |
 
 ---
 
@@ -144,7 +144,7 @@ For Repeating schedules, you must specify when the task stops recurring:
 When a new task instance becomes available (i.e., the schedule window opens), MyCap sends a push notification to the participant's device.
 
 - Notifications are sent at **8:00 AM local device time** by default.
-- The notification time can be changed in App Settings (see [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management).
+- The notification time can be changed in App Settings (see [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)
 - Notifications are not sent retroactively if the participant has not opened the app — the task will appear the next time they open the app, but no additional notification is sent for overdue tasks.
 - MLM (Multi-Language Management) does not affect notification content independently — notification text is not translated separately.
 
@@ -160,7 +160,7 @@ For standard (non-longitudinal) projects:
 4. Configure the schedule-specific settings (delay, frequency, end condition).
 5. Optionally set whether to schedule relative to the **install date** or **baseline date** (if baseline date is configured on the project).
 6. Click **Save**.
-7. After all schedules are set, **Publish** the project (see [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap, Section 8).
+7. After all schedules are set, **Publish** the project (see [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
 
 ---
 
@@ -244,10 +244,10 @@ For MTB tasks, REDCap v14.3.8 or later is required. MTB tasks appear in the same
 
 # 12. Related Articles
 
-- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap (baseline date setup, publishing)
-- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management (notification time settings)
-- [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md) — Active Tasks & Mobile Toolbox
-- [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md) — Advanced Features: FDL, MLM, and Survey Links (Form Display Logic with scheduling considerations)
-- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (schedule testing workflow)
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(baseline date setup, publishing)
+- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)(notification time settings)
+- [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md)
+- [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)(Form Display Logic with scheduling considerations)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md)(schedule testing workflow)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md)

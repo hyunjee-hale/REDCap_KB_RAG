@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md) — Free Text Tags; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md); [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -174,7 +174,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 # 9. Related Articles
 
-- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (for the [previous-event-name] example)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

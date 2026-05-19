@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md); [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md); [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md); [RC-API-48 — Import a File (File Repository) API](RC-API-48_Import-File-File-Repository.md); [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File; [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md); [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md); [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md); [RC-API-48 — Import a File (File Repository) API](RC-API-48_Import-File-File-Repository.md); [RC-API-14 — Delete File API](RC-API-14_Delete-File.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) |
 
 ---
 
@@ -219,7 +219,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 - [RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md) (discover `doc_id`s before deleting)
 - [RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md) (download a file — e.g., as a backup before deletion)
 - [RC-API-48 — Import a File (File Repository) API](RC-API-48_Import-File-File-Repository.md) (upload files into the File Repository)
-- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from record-level file-upload fields — distinct from File Repository deletes)
-- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from record-level file-upload fields)
-- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to record-level file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md)(remove files from record-level file-upload fields — distinct from File Repository deletes)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md)(download files from record-level file-upload fields)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md)(upload files to record-level file-upload fields)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (granting API Import/Update and File Repository privileges)

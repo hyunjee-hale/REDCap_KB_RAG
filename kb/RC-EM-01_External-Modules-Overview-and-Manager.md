@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) — External Modules Catalog; [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings |
+| **Related Topics** | [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md); [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md); [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)|
 
 ---
 
@@ -171,9 +171,9 @@ The "Enable a module" button in the Module Manager shows all currently downloade
 
 # 10. Related Articles
 
-- [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) — External Modules: Installed Catalog
-- [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md) — External Modules: Test/Staging Catalog
-- [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md) — External Modules: Development Catalog
+- [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md)
+- [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md)
+- [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md)
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
-- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)

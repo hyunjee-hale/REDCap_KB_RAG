@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md); [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)|
 
 ---
 
@@ -218,7 +218,7 @@ The method returns a list ordered by field order. Each entry contains three attr
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading record data)
-- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata (reading the complete data dictionary)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading record data)
+- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)(reading the complete data dictionary)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the source of field definitions returned by this method)
 - [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (detailed field attribute reference)

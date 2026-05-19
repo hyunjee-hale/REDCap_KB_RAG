@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info; [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md); [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)(Create Project) |
 
 ---
 
@@ -158,5 +158,5 @@ On error, you receive an error message with details about what failed.
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info
-- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project)
+- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)
+- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)(Create Project)

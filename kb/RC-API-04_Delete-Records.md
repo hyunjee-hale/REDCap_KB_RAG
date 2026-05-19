@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)|
 
 ---
 
@@ -199,6 +199,6 @@ On error, the API returns an error message describing the problem (e.g., invalid
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading records)
-- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records (creating and updating records)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading records)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)(creating and updating records)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG membership controls which records a token can delete)

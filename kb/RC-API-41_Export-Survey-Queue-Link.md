@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation (Export a Survey Queue Link for a Participant) |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link; [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md); [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md)|
 
 ---
 
@@ -188,7 +188,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link
-- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code
+- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)
+- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals)
 - [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (how the survey queue works; context for the queue link)

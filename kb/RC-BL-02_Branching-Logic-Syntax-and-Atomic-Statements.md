@@ -6,11 +6,11 @@
 | --- | --- |
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
+| **Prerequisite** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Overview; [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Statements; [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Structured Fields; [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
+| **Related Topics** | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md); [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md); [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
 
 ---
 
@@ -311,11 +311,11 @@ names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) befor
 
 # 9. Related Articles
 
-- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (prerequisite)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)(prerequisite)
 
-- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Logic Statements (AND, OR, parentheses)
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)(AND, OR, parentheses)
 
-- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md) — Branching Logic for Structured Fields & Checkboxes
+- [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md)
 
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where branching logic is configured
     per field)

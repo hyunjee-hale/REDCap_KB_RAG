@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) — Export Arms; [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md) — Import Arms |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md); [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md)|
 
 ---
 
@@ -178,6 +178,6 @@ Example response:
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md) — Export Arms (retrieve arm metadata from a project)
-- [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md) — Import Arms (add or modify arms in a project)
+- [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md)(retrieve arm metadata from a project)
+- [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md)(add or modify arms in a project)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms overview; context for when deletion is appropriate)

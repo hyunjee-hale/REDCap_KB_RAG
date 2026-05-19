@@ -211,15 +211,15 @@ The Action Tags knowledge base series is organized by tag category:
 # 9. Related Articles
 
 - [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) — @HIDDEN & @READONLY
-- [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) — Radio/Dropdown Action Tags
+- [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md)
 - [RC-AT-04 — Checkbox Action Tags](RC-AT-04_Action-Tags-Checkbox.md)
 - [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)
 - [RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md)
 - [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF: Conditional Logic
 - [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — @CALCTEXT & @CALCDATE: Calculations
-- [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md) — Language Action Tags
-- [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md) — Mobile App Action Tags
-- [RC-AT-EM-01 — External Module Action Tags: HIDESUBMIT](RC-AT-EM-01_Action-Tags-HIDESUBMIT-External-Module.md) — External Module Action Tags (HIDESUBMIT)
+- [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md)
+- [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md)
+- [RC-AT-EM-01 — External Module Action Tags: HIDESUBMIT](RC-AT-EM-01_Action-Tags-HIDESUBMIT-External-Module.md)(HIDESUBMIT)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)

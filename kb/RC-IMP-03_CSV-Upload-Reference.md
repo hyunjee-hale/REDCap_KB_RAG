@@ -72,7 +72,7 @@ This article is a comprehensive index of every REDCap setting that supports CSV 
 
 Arms, events, and instrument-event mappings are always used together and must be uploaded in sequence. The column reference, upload order, and common mistakes for all three are covered in a single dedicated article.
 
-**Full format reference:** [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md) — Longitudinal Structure CSV
+**Full format reference:** [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md)
 
 ---
 
@@ -115,7 +115,7 @@ Arms, events, and instrument-event mappings are always used together and must be
 - `username` — REDCap login name; must match an existing project user.
 - `redcap_data_access_group` — The `unique_group_name` of the target DAG (not the display name). Leave blank to remove the user from all DAGs (grants all-DAG access).
 
-**Full details:** [RC-API-29 — Import DAGs API](RC-API-29_Import-DAGs.md) — Import DAGs; [RC-API-32 — Import User-DAG Assignments API](RC-API-32_Import-User-DAG-Assignments.md) — Import User-DAG Assignments; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), Section 7
+**Full details:** [RC-API-29 — Import DAGs API](RC-API-29_Import-DAGs.md); [RC-API-32 — Import User-DAG Assignments API](RC-API-32_Import-User-DAG-Assignments.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), Section 7
 
 ---
 
@@ -125,7 +125,7 @@ Arms, events, and instrument-event mappings are always used together and must be
 
 The record data CSV has a detailed column-by-column format reference, including handling of longitudinal projects, repeating instruments, checkbox fields, and system columns. See the dedicated article:
 
-**Full format reference:** [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md) — Record Data CSV Import
+**Full format reference:** [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md)
 
 ---
 
@@ -141,7 +141,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 **Rights required:** Project Design and Setup.
 
-**Full format reference:** [RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md) — Alerts & Notifications CSV
+**Full format reference:** [RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md)
 
 ---
 
@@ -155,7 +155,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 **Rights required:** Project Design and Setup (at least one survey must be enabled in the project).
 
-**Full format reference:** [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV
+**Full format reference:** [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md)
 
 ---
 
@@ -169,7 +169,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 **Rights required:** Project Design and Setup.
 
-**Full format reference:** [RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md) — Survey Queue CSV
+**Full format reference:** [RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md)
 
 ---
 
@@ -183,7 +183,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 **Rights required:** Project Design and Setup (at least one instrument must be survey-enabled in the project).
 
-**Full format reference:** [RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md) — Survey Settings CSV
+**Full format reference:** [RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md)
 
 ---
 
@@ -197,7 +197,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 **Rights required:** Project Design and Setup.
 
-**Full format reference:** [RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md) — Form Display Logic CSV
+**Full format reference:** [RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md)
 
 ---
 
@@ -396,7 +396,7 @@ The following are download-only or not file-based:
 
 **Uploading a Data Dictionary without a backup.** The Data Dictionary upload replaces your entire instrument configuration. If you accidentally omit rows (e.g., by filtering your spreadsheet), those variables and their data are deleted on upload. Always save a dated snapshot before editing.
 
-**Longitudinal structure upload mistakes (arms, events, instrument-event mappings).** The most common mistakes — wrong upload order, hand-typed unique event names, building the mapping file from scratch — are covered in [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md) — Longitudinal Structure CSV.
+**Longitudinal structure upload mistakes (arms, events, instrument-event mappings).** The most common mistakes — wrong upload order, hand-typed unique event names, building the mapping file from scratch — are covered in [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md)
 
 ---
 
@@ -428,13 +428,13 @@ Most CSV upload features in REDCap have a corresponding API method that achieves
 # 11. Related Articles
 
 - [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (overview of all import mechanisms including XML and zip files)
-- [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md) — Record Data CSV Import (column reference for participant data imports)
-- [RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md) — Alerts & Notifications CSV (column reference for alert bulk upload)
-- [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV (column reference for ASI bulk upload)
-- [RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md) — Survey Settings CSV (column reference for survey settings bulk upload)
-- [RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md) — Form Display Logic CSV (column reference for FDL bulk upload)
-- [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md) — Longitudinal Structure CSV (arms, events, and instrument-event mapping format reference)
-- [RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md) — Survey Queue CSV (column reference for survey queue bulk upload)
+- [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md)(column reference for participant data imports)
+- [RC-IMP-05 — Alerts & Notifications CSV — Column Reference and Format Guide](RC-IMP-05_Alerts-Notifications-CSV.md)(column reference for alert bulk upload)
+- [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md)(column reference for ASI bulk upload)
+- [RC-IMP-07 — Survey Settings CSV — Column Reference and Format Guide](RC-IMP-07_Survey-Settings-CSV.md)(column reference for survey settings bulk upload)
+- [RC-IMP-08 — Form Display Logic CSV — Column Reference and Format Guide](RC-IMP-08_Form-Display-Logic-CSV.md)(column reference for FDL bulk upload)
+- [RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md)(arms, events, and instrument-event mapping format reference)
+- [RC-IMP-10 — Survey Queue CSV — Column Reference and Format Guide](RC-IMP-10_Survey-Queue-CSV.md)(column reference for survey queue bulk upload)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (complete Data Dictionary reference)
 - [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (column-by-column DD format reference)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms, events, and instrument–event mapping uploads)

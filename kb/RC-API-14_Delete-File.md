@@ -11,7 +11,7 @@
 | Last Updated | 2026 |
 | Author | See KB-SOURCE-ATTESTATION.md |
 | Source | REDCap API v16.1.3 official documentation examples |
-| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File; [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File |
+| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-12 — Export File API](RC-API-12_Export-File.md); [RC-API-13 — Import File API](RC-API-13_Import-File.md)|
 
 ---
 
@@ -186,5 +186,5 @@ Example success response (JSON):
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-12 — Export File API](RC-API-12_Export-File.md) — Export File (download files from file-upload fields)
-- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to file-upload fields)
+- [RC-API-12 — Export File API](RC-API-12_Export-File.md)(download files from file-upload fields)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md)(upload files to file-upload fields)

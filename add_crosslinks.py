@@ -7,19 +7,16 @@ Usage:
     python add_crosslinks.py           # dry run: prints what would change
     python add_crosslinks.py --apply   # writes changes to files
 
-What it does:
-  - Reads meta/KB-INDEX.md to build an ID → (title, filename) map
-  - For each article, matches occurrences like:
-      RC-AI-02 — AI Writing Tools      →  [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
-      RC-AI-02                         →  [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
-  - Skips patterns already inside a markdown link [...](...)
-  - Skips code blocks, the KB-REFERENCE-MAP.md stub, and index.md
+Strategy:
+  - In table rows (lines starting with |) and list items (lines starting with - / * / number):
+      Matches "RC-XX-XX — any title text" up to the next hard delimiter (; | newline).
+      Consumes whatever title text is present regardless of whether it matches the
+      canonical title, and replaces the whole thing with the canonical link.
+  - In body text:
+      Matches "RC-XX-XX — canonical title" exactly, then falls back to bare "RC-XX-XX".
+      This avoids accidentally consuming surrounding sentence words.
 
-Strategy: uses the canonical title from KB-INDEX.md rather than trying to parse the
-inline title text. This prevents the regex from "eating" words that follow the title.
-For each ID, we first try to match "ID — Canonical Title", then fall back to bare "ID".
-
-Safe to re-run: already-linked IDs are not double-linked.
+Safe to re-run: already-linked IDs (inside [...]) are not double-linked.
 """
 
 import os
@@ -32,7 +29,7 @@ APPLY = "--apply" in sys.argv
 
 # ── 1. Build ID → (title, filename) map from KB-INDEX.md ──────────────────────
 
-id_map = {}  # e.g. "RC-AI-02" → ("AI Writing Tools", "RC-AI-02_AI-Writing-Tools.md")
+id_map = {}
 
 with open(INDEX_FILE, encoding="utf-8") as fh:
     for line in fh:
@@ -42,55 +39,85 @@ with open(INDEX_FILE, encoding="utf-8") as fh:
 
 print(f"Loaded {len(id_map)} article IDs from {INDEX_FILE}")
 
-# ── 2. Build per-ID patterns (longest IDs first to avoid partial matches) ─────
-
-# Sort IDs longest-first so RC-NAV-UI-01 is matched before RC-NAV
+# Sort longest IDs first to avoid partial matches (e.g. RC-NAV-UI before RC-NAV)
 sorted_ids = sorted(id_map.keys(), key=len, reverse=True)
 
-def make_per_id_pattern(article_id, title):
+# ── 2. Pattern builders ────────────────────────────────────────────────────────
+
+def structured_pattern(article_id):
     """
-    Returns a regex that matches:
-      - "RC-XX-XX — Canonical Title"  (with em dash or double hyphen)
-      - "RC-XX-XX"                    (bare ID)
-    Not preceded by [ (already inside a link label).
+    For table rows and list items: match the ID + optional ' — any title text'
+    up to a hard delimiter (; | newline end-of-string).
+    This consumes whatever title text is present in the article.
+    """
+    eid = re.escape(article_id)
+    return re.compile(
+        rf'(?<!\[)(?<!\]\()'
+        rf'({eid}(?:\s*[—\-]{{1,2}}\s*[^;\|\n\[\]]+?)?)'
+        rf'(?!\])'
+        rf'(?=\s*[;\|\n\[]|$)'
+    )
+
+def body_pattern(article_id, title):
+    """
+    For body text: match 'ID — canonical title' exactly, or bare 'ID'.
+    Avoids consuming surrounding sentence words.
     """
     eid = re.escape(article_id)
     etitle = re.escape(title)
-    # Try "ID — Title" first (with optional em dash variations), then bare ID
     return re.compile(
-        rf'(?<!\[)(?<!\]\()({eid}(?:\s*[—\-]{{1,2}}\s*{etitle})?)(?!\])',
+        rf'(?<!\[)(?<!\]\()({eid}(?:\s*[—\-]{{1,2}}\s*{etitle})?)(?!\])'
     )
 
-# Pre-compile all patterns
-patterns = [
-    (article_id, id_map[article_id][0], id_map[article_id][1],
-     make_per_id_pattern(article_id, id_map[article_id][0]))
-    for article_id in sorted_ids
+# Pre-compile patterns for all IDs
+structured_patterns = [
+    (aid, id_map[aid][0], id_map[aid][1], structured_pattern(aid))
+    for aid in sorted_ids
+]
+body_patterns = [
+    (aid, id_map[aid][0], id_map[aid][1], body_pattern(aid, id_map[aid][0]))
+    for aid in sorted_ids
 ]
 
+# ── 3. Linkify a single line ───────────────────────────────────────────────────
+
+# Cleans up orphaned " — Title Text" fragments left after an article link,
+# e.g. "[RC-API-03 — Import Records API](url) — Import Records" → "[...](url)"
+ORPHAN_CLEANUP = re.compile(
+    r'(\]\([^)]+\.md\))'       # closing ](filename.md)
+    r'\s*[—\-]{1,2}\s*'        # followed by a dash
+    r'[A-Z][^;\|\n\[\](]*'     # and title-like text (starts with capital)
+)
+
 def linkify_line(line):
-    """Apply all ID→link substitutions to a single line."""
-    for article_id, title, filename, pattern in patterns:
-        link_text = f"[{article_id} — {title}]({filename})"
+    is_table = line.strip().startswith('|')
+    is_list  = bool(re.match(r'^\s*[-*]|\s*\d+\.', line.strip()))
 
-        def replacer(m, aid=article_id, t=title, fn=filename):
-            matched = m.group(1)
-            # Don't re-link if already inside [...](...)
-            # Check what follows the match
-            return f"[{aid} — {t}]({fn})"
+    if is_table or is_list:
+        patterns = structured_patterns
+    else:
+        patterns = body_patterns
 
-        line = pattern.sub(replacer, line)
+    for aid, title, filename, pat in patterns:
+        line = pat.sub(
+            lambda m, a=aid, t=title, f=filename: f"[{a} — {t}]({f})",
+            line
+        )
+
+    # Remove orphaned " — Title" fragments left after article links,
+    # but only in table rows and list items where we know the context is safe.
+    if is_table or is_list:
+        line = ORPHAN_CLEANUP.sub(r'\1', line)
+
     return line
 
-# ── 3. Process each file ───────────────────────────────────────────────────────
+# ── 4. Process each file ───────────────────────────────────────────────────────
 
 skip_files = {"KB-REFERENCE-MAP.md", "index.md"}
 changed_files = []
 
 for fname in sorted(os.listdir(KB_DIR)):
-    if not fname.endswith(".md"):
-        continue
-    if fname in skip_files:
+    if not fname.endswith(".md") or fname in skip_files:
         continue
 
     fpath = os.path.join(KB_DIR, fname)
@@ -102,15 +129,12 @@ for fname in sorted(os.listdir(KB_DIR)):
     in_code_block = False
 
     for line in lines:
-        # Track fenced code blocks
         if re.match(r'^\s*(`{3,}|~{3,})', line):
             in_code_block = not in_code_block
-
         if in_code_block:
             new_lines.append(line)
-            continue
-
-        new_lines.append(linkify_line(line))
+        else:
+            new_lines.append(linkify_line(line))
 
     updated = "\n".join(new_lines)
 
@@ -120,7 +144,7 @@ for fname in sorted(os.listdir(KB_DIR)):
             with open(fpath, "w", encoding="utf-8") as fh:
                 fh.write(updated)
 
-# ── 4. Report ──────────────────────────────────────────────────────────────────
+# ── 5. Report ──────────────────────────────────────────────────────────────────
 
 mode = "APPLIED" if APPLY else "DRY RUN"
 print(f"\n[{mode}] {len(changed_files)} files would be/were updated:\n")

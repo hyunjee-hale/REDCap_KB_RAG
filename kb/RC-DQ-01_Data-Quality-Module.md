@@ -10,7 +10,7 @@
 | Version | 1.2 |
 | Last Updated | 2026 |
 | Author | See KB-SOURCE-ATTESTATION.md |
-| Related Topics | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md); [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md); [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md); [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard |
+| Related Topics | [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md); [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md); [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md); [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)|
 
 ---
 
@@ -307,6 +307,6 @@ Rule H deserves separate attention because it serves a specific remediation func
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (context for real-time execution during form saves)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (audit trail behavior after Auto-correct)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG filtering of discrepancy results)
-- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights: Overview (Data Quality user right)
+- [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)(Data Quality user right)
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the Data Quality module appears in the Applications section of the left menu)
 - [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (Data Quality results include variable-level links that navigate directly to a specific field within a record)

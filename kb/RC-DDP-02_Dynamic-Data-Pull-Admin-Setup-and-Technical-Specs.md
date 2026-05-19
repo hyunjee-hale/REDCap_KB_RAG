@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | Integration — Dynamic Data Pull |
 | **Applies To** | REDCap Administrators |
-| **Prerequisite** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — Dynamic Data Pull: Overview & User Guide |
+| **Prerequisite** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — DDP Overview & User Guide; [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) |
+| **Related Topics** | [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md); [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) |
 
 ---
 
@@ -315,6 +315,6 @@ After system-level DDP configuration is complete:
 
 # 8. Related Articles
 
-- [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md) — Dynamic Data Pull: Overview & User Guide (user-facing concepts, mapping, adjudication)
+- [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)(user-facing concepts, mapping, adjudication)
 - [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (related integration pattern using HTTP POST)
-- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — User Rights: Adding Users and Managing Roles (DDP privilege assignment)
+- [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)(DDP privilege assignment)

@@ -7,11 +7,11 @@
 | Instance | Production |
 | Domain | External Modules |
 | Applies To | REDCap administrators; project designers on the Production instance |
-| Prerequisite | [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview & Manager |
+| Prerequisite | [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)|
 | Version | 1.0 |
 | Last Updated | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| Related Topics | [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview; [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md) — Test / Staging Catalog; [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md) — Development Catalog |
+| Related Topics | [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md); [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md); [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md)|
 
 ---
 
@@ -165,6 +165,6 @@ Once a module is installed at the system level, it must also be enabled at the p
 # 6. Related Articles
 
 - [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)
-- [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md) — External Modules: Test/Staging Catalog
-- [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md) — External Modules: Development Catalog
+- [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md)
+- [RC-EM-04 — External Modules: Installed Catalog — Development](RC-EM-04_External-Modules-Installed-Catalog-Development.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

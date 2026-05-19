@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info; [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project) |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md); [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)(Create Project) |
 
 ---
 
@@ -211,7 +211,7 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info
-- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) — Import Project (Create Project)
+- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)
+- [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)(Create Project)
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument structure captured in the project XML)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the metadata embedded in the exported XML)

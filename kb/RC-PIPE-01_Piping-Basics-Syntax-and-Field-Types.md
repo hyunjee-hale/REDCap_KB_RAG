@@ -10,7 +10,7 @@
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers; [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications; [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope |
+| **Related Topics** | [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md); [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)|
 
 ---
 
@@ -109,7 +109,7 @@ Piping works anywhere REDCap displays text. The complete list of supported locat
 
 **The @DEFAULT action tag.** A piped value can serve as the pre-filled default for a field. Note: when piping the value (not label) of a multiple choice field into @DEFAULT, the `:value` modifier must be used.
 
-**Emails and notifications.** Alert & Notification messages can contain piped values. See [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications.
+**Emails and notifications.** Alert & Notification messages can contain piped values. See [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md)
 
 > **Security note:** User data viewing privileges are **not** enforced during piping. If a field on instrument A is piped into a label on instrument B, any user who can view instrument B will see that piped value — even if they have "No Access" rights to instrument A. Keep this in mind when designing projects that use piping across instruments with different access controls.
 
@@ -199,7 +199,7 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 **Q: Can I use piping in calculated fields?**
 
-**A:** No — calculated fields use REDCap's calculation syntax, not piping. You reference other variables in a calculation expression without brackets, using a different syntax. Branching logic and action tags use a related but distinct syntax. See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope for the shared logic syntax.
+**A:** No — calculated fields use REDCap's calculation syntax, not piping. You reference other variables in a calculation expression without brackets, using a different syntax. Branching logic and action tags use a related but distinct syntax. See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
 
 **Q: What does REDCap display when I pipe a checkbox field?**
 
@@ -223,9 +223,9 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 # 9. Related Articles
 
-- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — Piping in Longitudinal, Repeated Instruments & Modifiers (cross-event piping, repeated instrument scenarios, :value and other modifiers)
+- [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(cross-event piping, repeated instrument scenarios, :value and other modifiers)
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (system-level bracket expressions)
-- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails & Notifications (confirmation emails, survey invitations, alerts)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md)(confirmation emails, survey invitations, alerts)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where piping references are configured)
 - [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (quick reference for variable names when building pipe references)
-- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope (using the same bracket syntax in logic conditions)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)(using the same bracket syntax in logic conditions)

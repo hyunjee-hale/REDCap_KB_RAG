@@ -6,11 +6,11 @@
 | --- | --- |
 | **Domain** | Texting (SMS) |
 | **Applies To** | Projects with surveys enabled; requires Twilio or Mosio configured at the system level |
-| **Prerequisite** | [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics |
+| **Prerequisite** | [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) — Participant List and Manual Survey Invitations; [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup; [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
+| **Related Topics** | [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md); [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -337,9 +337,9 @@ Overlapping invitations occur when a participant receives a second invitation be
 
 # 10. Related Articles
 
-- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics
-- [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) — Participant List and Manual Survey Invitations
-- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations
-- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts and Notifications Setup
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
+- [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md)
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)
 - [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md) (full admin setup: credentials, access control, provider configuration)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level Twilio/Mosio enablement and access permissions)

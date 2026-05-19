@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation |
-| **Related Topics** | [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Data Export Overview; [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
+| **Related Topics** | [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md); [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -320,7 +320,7 @@ Administrators can also manage and revoke API tokens for any user from the Contr
 # 11. Related Articles
 
 - [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (separate mechanism for real-time notification of data changes to external systems; does not fire on API imports)
-- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) — Data Export Overview (manual export workflow; for comparison with API-based export)
+- [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)(manual export workflow; for comparison with API-based export)
 - [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (manual import methods; API import is the programmatic equivalent)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (where API Export and API Import rights are granted)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (DAG-scoped access applies equally to API tokens)

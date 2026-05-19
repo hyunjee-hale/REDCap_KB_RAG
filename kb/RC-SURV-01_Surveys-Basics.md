@@ -361,7 +361,7 @@ Additional survey-related settings that administrators control in the Control Ce
 | REDCap Version | Note |
 | --- | --- |
 | General | This article covers the baseline survey setup with longitudinal mode and DAGs disabled. Projects with those features enabled will see additional options in the Online Designer and Survey Distribution Tools. |
-| General | The "Automated Invitations" button visible in the Online Designer's Survey Related Options column is covered in [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts & Notifications Setup. |
+| General | The "Automated Invitations" button visible in the Online Designer's Survey Related Options column is covered in [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)|
 
 ---
 

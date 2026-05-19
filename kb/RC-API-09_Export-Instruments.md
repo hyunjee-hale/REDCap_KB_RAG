@@ -11,7 +11,7 @@
 | Last Updated | 2026 |
 | Author | See KB-SOURCE-ATTESTATION.md |
 | Source | REDCap API v16.1.3 official documentation examples |
-| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata; [RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md) — Export Instruments PDF |
+| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md); [RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md)|
 
 ---
 
@@ -204,9 +204,9 @@ The method returns the project's instruments in the requested format, **ordered 
 # 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (use instrument names to export specific forms)
-- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata (get detailed field information within instruments)
-- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings (see instrument assignments in longitudinal projects)
-- [RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md) — Export Instruments PDF (export instrument as PDF files)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(use instrument names to export specific forms)
+- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)(get detailed field information within instruments)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)(see instrument assignments in longitudinal projects)
+- [RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md)(export instrument as PDF files)
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument design concepts and terminology)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the GUI for creating and managing instruments)

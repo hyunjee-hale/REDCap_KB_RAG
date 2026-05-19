@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records; [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names; [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md); [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md); [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)|
 
 ---
 
@@ -251,10 +251,10 @@ The method returns records in the requested format (JSON, CSV, XML, or ODM), ord
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records (writing data to REDCap)
-- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records (removing records)
-- [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names (get metadata about fields)
-- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md) — Export Metadata (get the data dictionary)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)(writing data to REDCap)
+- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)(removing records)
+- [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md)(get metadata about fields)
+- [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)(get the data dictionary)
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (manual export workflows and format options)
 - [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (format reference for CSV, SPSS, SAS, R, Stata)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (how DAGs filter exported data)

@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management; [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
+| **Related Topics** | [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md); [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
 
 ---
 
@@ -63,7 +63,7 @@ Before a participant can join a MyCap project, a record for that participant mus
 - **Manual creation:** A coordinator creates the record in REDCap data entry.
 - **Survey-based creation:** The participant completes an enrollment survey; REDCap auto-creates a record on survey submission. The joining link can then be delivered via Survey Completion Text or an automated alert.
 - **Import:** Records are created via bulk import ([RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md)).
-- **API:** Records are created programmatically ([RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records).
+- **API:** Records are created programmatically ([RC-API-03 — Import Records API](RC-API-03_Import-Records.md)
 
 ---
 
@@ -234,7 +234,7 @@ Participants receive the email automatically when the trigger condition is met.
 # 11. Related Articles
 
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
-- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management (participant tracking and resending invitations)
-- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (testing joining methods)
+- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)(participant tracking and resending invitations)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md)(testing joining methods)
 - [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md) (full smart variable reference)
 - [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)

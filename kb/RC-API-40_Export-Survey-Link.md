@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link; [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md); [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md)|
 
 ---
 
@@ -199,8 +199,8 @@ The URL is valid immediately and can be distributed via email, text message, or 
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link
-- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md) — Export Survey Return Code
-- [RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md) — Export Survey Participants
+- [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)
+- [RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md)
+- [RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals and how survey links work)
 - [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md) (the link types this method generates)

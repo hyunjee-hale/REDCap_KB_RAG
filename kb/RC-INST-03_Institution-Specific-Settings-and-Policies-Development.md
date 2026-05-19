@@ -7,11 +7,11 @@
 | Instance | Development |
 | Domain | Institution |
 | Applies To | REDCap administrators and IT staff using the Development instance |
-| Prerequisite | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings (Production) |
+| Prerequisite | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)(Production) |
 | Version | 1.0 |
 | Last Updated | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| Related Topics | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Production Settings; [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md) — Test / Staging Settings |
+| Related Topics | [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md); [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md)|
 
 ---
 
@@ -467,7 +467,7 @@ Different instances at this institution may have different data classification a
 
 # 15. Related Articles
 
-- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings: Production
-- [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md) — Institution-Specific Settings: Test/Staging
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
+- [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md)
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

@@ -11,7 +11,7 @@
 | Last Updated | 2026 |
 | Author | See KB-SOURCE-ATTESTATION.md |
 | Source | REDCap API v16.1.3 official documentation examples |
-| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File; [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File |
+| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-13 — Import File API](RC-API-13_Import-File.md); [RC-API-14 — Delete File API](RC-API-14_Delete-File.md)|
 
 ---
 
@@ -203,5 +203,5 @@ The `returnFormat` parameter controls the format of error messages only and does
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-13 — Import File API](RC-API-13_Import-File.md) — Import File (upload files to file-upload fields)
-- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md) — Delete File (remove files from file-upload fields)
+- [RC-API-13 — Import File API](RC-API-13_Import-File.md)(upload files to file-upload fields)
+- [RC-API-14 — Delete File API](RC-API-14_Delete-File.md)(remove files from file-upload fields)

@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics; [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
+| **Related Topics** | [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) |
 
 ---
 
@@ -146,7 +146,7 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 # 8. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational — covers the data entry workflow that triggers the DET)
-- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics (surveys are a common DET trigger source; explains survey completion status)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)(surveys are a common DET trigger source; explains survey completion status)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (required reading if your project uses repeating elements; explains `redcap_repeat_instance` and `redcap_repeat_instrument` context)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains `redcap_data_access_group` and how DAGs are assigned to records)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level Data Entry Trigger enable/disable)

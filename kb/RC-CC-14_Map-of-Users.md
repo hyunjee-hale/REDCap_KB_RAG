@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs; [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report |
+| **Related Topics** | [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md); [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md); [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)|
 
 ---
 
@@ -97,5 +97,5 @@ The map is displayed in Google Maps, which allows you to take screenshots or sav
 
 # 9. Related Articles
 
-- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
-- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)

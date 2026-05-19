@@ -258,4 +258,4 @@ For the full smart variable syntax used in each of these contexts, see [RC-PIPE-
 - [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) (filtering by DAG, event, or report)
 - [RC-PIPE-14 — Smart Variables: Project Dashboards](RC-PIPE-14_Smart-Variables-Project-Dashboards.md) (smart variables for sharing dashboard URLs and links)
 - [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (the system-generated record completion view — distinct from Project Dashboards)
-- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails and Notifications (using dashboard links in alerts and survey invitations)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md)(using dashboard links in alerts and survey invitations)

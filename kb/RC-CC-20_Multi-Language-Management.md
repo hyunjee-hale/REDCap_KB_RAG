@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration; [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md) — Action Tags: Language |
+| **Related Topics** | [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md)|
 
 ---
 
@@ -183,6 +183,6 @@ Yes. The base language is the fallback language shown to users who have not sele
 # 7. Related Articles
 
 - [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)
-- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Modules & Services Configuration
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 - [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
-- [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md) — Action Tags: Language
+- [RC-AT-10 — Action Tags: Language Action Tags](RC-AT-10_Action-Tags-Language.md)

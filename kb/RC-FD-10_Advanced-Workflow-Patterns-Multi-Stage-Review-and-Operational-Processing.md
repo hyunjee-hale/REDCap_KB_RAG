@@ -10,7 +10,7 @@
 | **Version** | 1.1 |
 | **Last Updated** | 2026-04-28 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md); [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md); [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE; [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails and Notifications; [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
+| **Related Topics** | [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md); [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md); [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md); [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md); [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) |
 
 ---
 
@@ -591,8 +591,8 @@ A common enhancement is to hide retired or internal-only service codes using `@H
 - [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md) (prerequisite; approval workflow patterns, email preview instruments, dual syntax)
 - [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) (@HIDECHOICE and @SHOWCHOICE behavior; export gotcha)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md) (@DEFAULT behavior; @TODAY/@NOW validation pitfall; hidden anchor field pattern)
-- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md) — Action Tags: @CALCTEXT & @CALCDATE (@CALCTEXT syntax, nested if() expressions, limitations)
-- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md) — Piping in Emails and Notifications (piping in Alerts and ASIs; [survey-link:] in email context)
+- [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md)(@CALCTEXT syntax, nested if() expressions, limitations)
+- [RC-PIPE-04 — Piping: Emails, Notifications & Logic Features](RC-PIPE-04_Piping-in-Emails-and-Notifications.md)(piping in Alerts and ASIs; [survey-link:] in email context)
 - [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md) ([survey-link:] and [form-link:] full reference)
 - [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (configuring checkbox-triggered Alerts; trigger conditions)
 - [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md) (if() and nested function syntax used in @CALCTEXT)

@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026-04 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | RC-PLUS-02 — Project Migration Tool *(planned)*; [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Control Center Overview |
+| **Related Topics** | RC-PLUS-02 — Project Migration Tool *(planned)*; [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)|
 
 ---
 
@@ -204,4 +204,4 @@ No. REDCap+ subscribers have full discretion over the types of research and oper
 
 - RC-PLUS-02 — Project Migration Tool *(planned)* (moving projects between REDCap installations)
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) Configuration (system-level admin configuration)
-- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules: Overview & Control Center Manager (analogous subscription-based add-on model for context)
+- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)(analogous subscription-based add-on model for context)

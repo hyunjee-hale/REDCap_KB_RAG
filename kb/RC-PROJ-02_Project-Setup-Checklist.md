@@ -10,7 +10,7 @@
 | **Version** | 1.3 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) |
+| **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md) |
 
 ---
 
@@ -45,9 +45,9 @@ Instruments (forms) are the foundation for every other configuration step. Field
 - [ ] **[Required] Add fields to each instrument.** Choose the appropriate field type, enter field labels, and assign variable names. Variable names cannot be easily changed after data has been collected — choose them carefully.
 - [ ] **Set field validation** on text fields where applicable (e.g., date, integer, email). See [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md).
 - [ ] **Mark required fields** (fields that must be completed before a form can be saved). Use sparingly — over-use of required fields frustrates data entry and survey respondents.
-- [ ] **Add branching logic** to fields that should only appear under certain conditions. In longitudinal projects, cross-event references must include the unique event name (e.g., `[baseline_arm_1][field_name]`). See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview.
+- [ ] **Add branching logic** to fields that should only appear under certain conditions. In longitudinal projects, cross-event references must include the unique event name (e.g., `[baseline_arm_1][field_name]`). See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
 - [ ] **Add calculated fields** for any derived values (totals, scores, age from date of birth). Calculations reference existing fields and update automatically. See [RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md).
-- [ ] **Add action tags** to fields that require special behavior (auto-fill, hidden display, read-only, etc.). See [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview.
+- [ ] **Add action tags** to fields that require special behavior (auto-fill, hidden display, read-only, etc.). See [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [ ] **Set a custom record label** to make individual records identifiable at a glance in the record list. Configure this under Project Setup → Additional Customizations using piping syntax (e.g., `[first_name] [last_name] ([email])`). Without a custom label, records display only by their numeric record ID, which is unhelpful for staff who need to locate a specific participant.
 - [ ] **Set a secondary unique field** if the project needs to prevent duplicate entries based on a respondent-supplied value (e.g., email address, employee ID). Configure this under Project Setup → Additional Customizations. REDCap will warn users when a new record's value in that field matches an existing record. This is particularly useful for public-facing signup surveys where the same person might submit multiple times.
 - [ ] **Review the Codebook** ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) to confirm field types, variable names, and choice codes before proceeding. Errors are much easier to fix now than after data collection has started.
@@ -67,7 +67,7 @@ Complete this phase only if longitudinal mode was enabled in Phase 1. Arms must 
 - [ ] **Designate instruments to events** on the Designate Instruments for My Events page. Check every instrument-event combination where data should be collected. See [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) §5.
   - **Always designate the first instrument (containing the record ID field) to the first event in every arm.** Omitting this causes records to save incorrectly.
   - An instrument can be designated to multiple events (e.g., a vitals form collected at every visit).
-- [ ] **Review branching logic and calculated fields** that cross event boundaries. All cross-event references must use the unique event name prefix (e.g., `[baseline_arm_1][dob]`). See [RC-BL-05 — Branching Logic — Longitudinal Projects](RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md) — Branching Logic in Longitudinal Projects.
+- [ ] **Review branching logic and calculated fields** that cross event boundaries. All cross-event references must use the unique event name prefix (e.g., `[baseline_arm_1][dob]`). See [RC-BL-05 — Branching Logic — Longitudinal Projects](RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md)
 
 ---
 
@@ -92,7 +92,7 @@ Survey features become available after enabling surveys in Phase 1. Each instrum
 - [ ] **Configure survey settings per instrument:** set the survey title, instructions, completion text, auto-continue behavior, save-and-return options, and any response limit. See [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md).
 - [ ] **Configure access and termination settings** for each survey: public vs. private link, stop actions, response limits. See [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md).
 - [ ] **[Survey Queue] Set up the Survey Queue** to chain multiple surveys in sequence. Requires at least two instruments to be enabled as surveys. Define the condition under which each subsequent survey is activated. See [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md).
-- [ ] **[Automated invitations] Set up Automated Survey Invitations (ASI)** for any survey that should be sent automatically based on a trigger condition or schedule. Requires the survey to be enabled and any trigger fields to already exist. See [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations.
+- [ ] **[Automated invitations] Set up Automated Survey Invitations (ASI)** for any survey that should be sent automatically based on a trigger condition or schedule. Requires the survey to be enabled and any trigger fields to already exist. See [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)
 - [ ] **[e-Consent] Set up the e-Consent framework** if the project collects electronic informed consent. Requires a dedicated consent instrument with a signature field. See [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md).
 
 ---
@@ -102,10 +102,10 @@ Survey features become available after enabling surveys in Phase 1. Each instrum
 User roles should be defined before individual users are added, so each new user can be placed directly into the correct role. Data Access Groups (if used) should be configured before assigning users, since DAG membership affects what data each user can see and enter.
 
 - [ ] **[DAGs] Create Data Access Groups** via the DAGs page. Define one DAG per site, cohort, or data access boundary. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
-- [ ] **Create User Roles** that match your team's access needs (e.g., Data Entry, Monitor, PI, Administrator). Define the privileges for each role once rather than configuring every user individually. See [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles.
+- [ ] **Create User Roles** that match your team's access needs (e.g., Data Entry, Monitor, PI, Administrator). Define the privileges for each role once rather than configuring every user individually. See [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
 - [ ] **Add users to the project** and assign each user to the appropriate role. See [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md).
 - [ ] **[DAGs] Assign users to DAGs** after they have been added to the project. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
-- [ ] **Review each role's instrument-level permissions.** Confirm that each role can see and edit only the instruments it should have access to. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges.
+- [ ] **Review each role's instrument-level permissions.** Confirm that each role can see and edit only the instruments it should have access to. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
 
 > **Tip:** Test user access before going live by logging in as a test account with each role and verifying that the correct instruments, records, and menu options are visible.
 
@@ -258,7 +258,7 @@ All setup steps can be completed through the REDCap user interface. The table be
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms, events, and instrument-event designations)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeating instruments and events)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals)
-- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations (scheduling and triggering survey sends)
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)(scheduling and triggering survey sends)
 - [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (chaining surveys in sequence)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (access control fundamentals)
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) (creating roles and adding users)

@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md), [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md) — Repeated Instruments & Events, [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md), [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — User Rights Overview, [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges, [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), [RC-PROJ-03 — Project Dashboards](RC-PROJ-03_Project-Dashboards.md), [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) — Custom Reports Setup, [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) — Participant List and Survey Invitations, [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md), [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md), [RC-DQ-01 — Data Quality Module](RC-DQ-01_Data-Quality-Module.md) |
+| **Related Topics** | [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md), [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md), [RC-NAV-REC-03 — Repeated Instruments & Repeated Events](RC-NAV-REC-03_Repeated-Instruments-and-Events.md)[RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md), [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md), [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)[RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)[RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md), [RC-PROJ-03 — Project Dashboards](RC-PROJ-03_Project-Dashboards.md), [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md)[RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md)[RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md), [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md), [RC-DQ-01 — Data Quality Module](RC-DQ-01_Data-Quality-Module.md) |
 
 ---
 
@@ -232,13 +232,13 @@ project.
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — instrument-
     level access settings that filter dashboard visibility
 
-- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) — DAG membership restricts which
+- [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
     records appear on the dashboard; key troubleshooting context
 
 - [RC-PROJ-03 — Project Dashboards](RC-PROJ-03_Project-Dashboards.md) — creating custom dashboards that
     filter, sort, or group the default dashboard view
 
-- [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) — Report
+- [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md)
     Record IDs are clickable links to the Record Home Page; custom
     dashboards and reports are complementary tools
 
@@ -246,7 +246,7 @@ project.
     invitation logs contain Record ID links, but only in identified
     (non-anonymous) survey mode
 
-- [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md) — Record IDs in the comment log link
+- [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md)
     to the Record Home Page; variable-level links also available
 
 - [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md) — deep variable links to

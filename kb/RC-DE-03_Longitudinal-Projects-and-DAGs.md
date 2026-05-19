@@ -6,11 +6,11 @@
 | --- | --- |
 | **Domain** | Data Entry |
 | **Applies To** | REDCap projects with Longitudinal mode or Data Access Groups enabled |
-| **Prerequisite** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) — Record Creation; [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
+| **Prerequisite** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md); [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 | **Version** | 2.0 |
 | **Last Updated** | 2026-05-11 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) — Data Entry with DAGs; [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md); [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) — Record Status Dashboard; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
+| **Related Topics** | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md); [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md); [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
 
 ---
 
@@ -24,7 +24,7 @@ Two optional project features significantly affect how data entry works in REDCa
 
 **Longitudinal mode** allows the same instrument to be reused across multiple timepoints (events) within a record. The Record Home Page changes from a simple list to a grid where rows are instruments and columns are events. Each cell in the grid is an independent data entry. → Full coverage: **[RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md)**
 
-**Data Access Groups (DAGs)** partition records into named subsets — typically one per study site or department. When DAGs are enabled, you can only see and create records within your own group. Records from other DAGs are invisible to you. → Full coverage: **[RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) — Data Entry with DAGs**
+**Data Access Groups (DAGs)** partition records into named subsets — typically one per study site or department. When DAGs are enabled, you can only see and create records within your own group. Records from other DAGs are invisible to you. → Full coverage: **[RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)
 
 These features are independent — a project can use one, both, or neither. When both are active, longitudinal mode changes the record layout while DAGs filter which records you can see. They do not interfere with each other.
 
@@ -36,8 +36,8 @@ These features are independent — a project can use one, both, or neither. When
 | --- | --- |
 | Understand the grid layout, events, and arms in a longitudinal project | [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) |
 | Understand repeated instruments or repeated events | [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) |
-| Understand why I can only see certain records | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) — Data Entry with DAGs |
-| Switch between DAGs (DAG Switcher) | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) — Data Entry with DAGs |
+| Understand why I can only see certain records | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)|
+| Switch between DAGs (DAG Switcher) | [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)|
 | Understand how arms and events are structured | [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md) |
 | Understand how DAGs are set up and managed | [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
 
@@ -45,7 +45,7 @@ These features are independent — a project can use one, both, or neither. When
 
 # 3. Related Articles
 
-- [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md) — Data Entry with DAGs
+- [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)
 - [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
 - [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md)

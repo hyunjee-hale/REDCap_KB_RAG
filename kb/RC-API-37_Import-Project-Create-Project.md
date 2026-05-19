@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info; [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md) — Export Project XML |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md); [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)|
 
 ---
 
@@ -264,5 +264,5 @@ On error, you receive an error message:
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md) — Export Project Info
-- [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md) — Export Project XML
+- [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)
+- [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)

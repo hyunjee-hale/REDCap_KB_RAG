@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names; [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md) — Import Metadata |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md); [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)|
 
 ---
 
@@ -226,8 +226,8 @@ The method returns the complete data dictionary in the requested format. Each ro
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md) — Export Field Names (get a lightweight list of field names only)
-- [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md) — Import Metadata (create or update the data dictionary)
+- [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md)(get a lightweight list of field names only)
+- [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)(create or update the data dictionary)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the GUI for building the data dictionary)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (the full data dictionary format exported by this method)
 - [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) (detailed column reference)

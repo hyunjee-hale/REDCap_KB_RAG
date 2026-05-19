@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Overview; [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md) — Autofill Tags; [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md); [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
 
 ---
 
@@ -132,6 +132,6 @@ Displays hint text inside an empty field. The hint appears in grey and disappear
 
 # 9. Related Articles
 
-- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)

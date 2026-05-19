@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md); [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md); [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)|
 
 ---
 
@@ -169,6 +169,6 @@ The REDCap version is listed under the Infrastructure section of the System Stat
 
 # 9. Related Articles
 
-- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting
-- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
-- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)

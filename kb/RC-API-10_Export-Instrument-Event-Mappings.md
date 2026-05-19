@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) — Import Instrument-Event Mappings; [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md); [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md); [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)|
 | **Important** | **Longitudinal projects only** — This method is only available for longitudinal projects (projects with multiple arms and/or repeating events). Classic projects do not have instrument-event mappings. |
 
 ---
@@ -214,8 +214,8 @@ The method returns the mapping of instruments to events, organized by arm and ev
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (list available instruments)
-- [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md) — Import Instrument-Event Mappings (modify the mappings)
-- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events (create or update events)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)(list available instruments)
+- [RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md)(modify the mappings)
+- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)(create or update events)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (how arms and events are configured; instrument-event mapping context)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (how repeating instruments affect event mappings)

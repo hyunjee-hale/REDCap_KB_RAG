@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records; [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records; [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-02 — Export Records API](RC-API-02_Export-Records.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md); [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)|
 
 ---
 
@@ -181,7 +181,7 @@ On success, the API returns `"1"`. On failure, it returns an error message strin
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records (reading record data)
-- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) — Import Records (creating and updating records)
-- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md) — Delete Records (removing records)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading record data)
+- [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)(creating and updating records)
+- [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)(removing records)
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (how record IDs are assigned and what auto-numbering means)

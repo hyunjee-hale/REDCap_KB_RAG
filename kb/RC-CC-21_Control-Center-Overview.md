@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting; [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration; [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) — Users & Access Management; [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md) — To-Do List |
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)|
 
 ---
 
@@ -133,7 +133,7 @@ Many Control Center changes are low-risk (e.g., updating contact information, ad
 
 # 6. Related Articles
 
-- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting
-- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration
-- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) — Users & Access Management
-- [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md) — To-Do List
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)
+- [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
+- [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)
+- [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)

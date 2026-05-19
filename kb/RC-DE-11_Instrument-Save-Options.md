@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md); [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics |
+| **Related Topics** | [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md); [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)|
 
 ---
 
@@ -147,4 +147,4 @@ Two save options appear exclusively when working with repeated instruments. They
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (prerequisite — general data entry workflow and instrument navigation)
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (prerequisite — understanding the Record Home Page)
 - [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md) (record creation in longitudinal projects; adding repeated instrument and event instances)
-- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics (survey configuration and how surveys differ from standard data entry instruments)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)(survey configuration and how surveys differ from standard data entry instruments)

@@ -11,7 +11,7 @@
 | Last Updated | 2026 |
 | Author | See KB-SOURCE-ATTESTATION.md |
 | Source | REDCap API v16.1.3 official documentation examples |
-| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events; [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) — Delete Events |
+| Related Topics | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-20 — Import Events API](RC-API-20_Import-Events.md); [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md)|
 
 ---
 
@@ -190,7 +190,7 @@ Example JSON response:
 # 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events (add or modify events in a project)
-- [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md) — Delete Events (remove events from a project)
+- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)(add or modify events in a project)
+- [RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md)(remove events from a project)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (how events are configured in a longitudinal project)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (how repeating events relate to standard events)

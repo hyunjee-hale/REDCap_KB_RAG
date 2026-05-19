@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) — System Statistics; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs; [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting |
+| **Related Topics** | [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md); [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md); [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)|
 
 ---
 
@@ -121,6 +121,6 @@ The User Activity Log displays all events matching your filters in the current v
 
 # 11. Related Articles
 
-- [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) — System Statistics
-- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs
-- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting
+- [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)
+- [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)

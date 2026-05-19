@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) — Overview & Three-Tier Access; [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges; [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md) — User Management; [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
+| **Related Topics** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) |
 
 ---
 
@@ -71,7 +71,7 @@ Use this method when you want to configure a user's rights specifically, without
 2. In the section labeled "Add new user," enter the user's name, email address, or username in the search box.
 3. Select the correct user from the dropdown list of search results that appears.
 4. Click **+ Add with custom rights**.
-5. Configure the user's rights in the popup. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges for details on each setting.
+5. Configure the user's rights in the popup. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
 6. Click **Add user** in the bottom right of the popup.
 
 If successful, the project will appear in the user's My Projects page.
@@ -106,7 +106,7 @@ Roles are most valuable when multiple users need identical access — for exampl
 1. On the User Rights page, find the "Enter new role name" text box.
 2. Type a descriptive name for the role.
 3. Click **Create role**.
-4. Configure the desired user rights in the popup. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) — Configuring User Privileges for details.
+4. Configure the desired user rights in the popup. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
 5. Click **Create role** in the bottom right of the popup.
 
 > **Note:** Roles cannot have a pre-assigned Data Access Group or a default expiration date. Both of those settings are configured per user, not per role. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) for DAG assignment options, and [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for expiration date configuration.
@@ -224,7 +224,7 @@ All project users appear in this file, including those without a role assignment
 
 **Q: I entered a user's name but they didn't appear in the search results — what's wrong?**
 
-**A:** The user does not have an account in this REDCap installation. They need to register or be provisioned before they can be added to any project. See **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 5: User Account Creation** for the process at this installation.
+**A:** The user does not have an account in this REDCap installation. They need to register or be provisioned before they can be added to any project. See **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
 
 **Q: Can I add someone to multiple projects at once?**
 

@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | MyCap Mobile App |
 | **Applies To** | Projects with MyCap enabled; Active Tasks availability varies by device OS and app version |
-| **Prerequisite** | [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling |
+| **Prerequisite** | [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap; [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling |
+| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md); [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)|
 
 ---
 
@@ -168,7 +168,7 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 - **REDCap version required:** v14.3.8 or later.
 - MTB tasks measure cognitive domains including processing speed, attention, memory, and executive function — the same domains assessed by standard NIH Toolbox instruments.
 - MTB tasks are added in the MyCap **Active Tasks** tab, separate from standard Active Tasks.
-- MTB tasks use the same four schedule types as other MyCap tasks (One-time, Infinite, Repeating, Fixed). See [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling.
+- MTB tasks use the same four schedule types as other MyCap tasks (One-time, Infinite, Repeating, Fixed). See [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)
 - Results are stored in REDCap using the same metadata fields as other Active Tasks (`@MC-TASK-SUPPLEMENTALDATA`, `@MC-TASK-SERIALIZEDRESULT`).
 
 ---
@@ -181,7 +181,7 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 2. Click **Add Active Task**.
 3. Select the task type from the list of available tasks.
 4. Configure the task-specific parameters.
-5. Set the schedule (see [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling for schedule types).
+5. Set the schedule (see [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)
 6. Save the task.
 7. Publish the project.
 
@@ -253,6 +253,6 @@ Add fields with these annotations to the instrument associated with the Active T
 
 # 10. Related Articles
 
-- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap (task metadata annotations)
-- [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling (scheduling Active Tasks)
-- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap (testing Active Task appearance and functionality)
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(task metadata annotations)
+- [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)(scheduling Active Tasks)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md)(testing Active Task appearance and functionality)

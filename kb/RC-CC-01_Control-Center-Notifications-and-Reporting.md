@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) — Security & Authentication; [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md) — To-Do List; [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) — System Statistics |
+| **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md); [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)|
 
 ---
 
@@ -128,5 +128,5 @@ The Notifications & Reporting page displays the date statistics were last succes
 
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) (Consortium reporting settings, Easy Upgrade configuration)
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (server security recommendations)
-- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) — Control Center: Modules & Services (external module management overview)
-- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview (external module concepts and management)
+- [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)(external module management overview)
+- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)(external module concepts and management)

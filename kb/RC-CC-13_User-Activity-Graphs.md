@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) — System Statistics; [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users; [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report |
+| **Related Topics** | [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md); [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md); [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md); [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)|
 
 ---
 
@@ -116,6 +116,6 @@ Charts are typically near real-time, but may have a slight delay (minutes to hou
 
 # 9. Related Articles
 
-- [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md) — System Statistics
-- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
-- [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users
+- [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+- [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md)

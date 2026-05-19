@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) — File Storage & Upload Settings; [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) — General Configuration; [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts & Notifications; [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview; [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies; [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md); [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md); [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md) |
+| **Related Topics** | [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md); [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md); [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md); [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md); [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md); [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md); [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md) |
 
 ---
 
@@ -300,9 +300,9 @@ OpenAI (Azure) and Google Gemini are cloud-hosted, managed services that require
 - [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) (overview of AI features enabled by this page)
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) (related system-wide settings)
 - [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) (file-related module settings)
-- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) — Alerts & Notifications (alert configuration and SendGrid integration)
-- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md) — External Modules Overview (external module concepts and management)
+- [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)(alert configuration and SendGrid integration)
+- [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)(external module concepts and management)
 - [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md) (mobile app module configuration)
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) (MyCap module configuration)
 - [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) (randomization module configuration)
-- [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) — SMS Texting: Overview & Workflows (SMS service configuration and usage)
+- [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md)(SMS service configuration and usage)

@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation (Export a Survey Participant List) |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)|
 
 ---
 
@@ -233,7 +233,7 @@ Example JSON response:
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link
-- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md) — Export Records
+- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)
+- [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals)
 - [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) (the participant list this method reads from)

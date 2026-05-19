@@ -6,11 +6,11 @@
 |---|---|
 | **Domain** | Action Tags |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; familiarity with REDCap calculated fields |
+| **Prerequisite** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md); familiarity with REDCap calculated fields |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview; [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF; [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) |
+| **Related Topics** | [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md); [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md); [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF; [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) |
 
 ---
 
@@ -226,7 +226,7 @@ This pattern is useful in operational or administrative projects where a value m
 
 # 8. Related Articles
 
-- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview: what action tags are and how to add them
+- [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md): `@DEFAULT` and `@SETVALUE` for pre-filling values at page load
 - [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF: conditional action tag logic; note that @CALCTEXT and @CALCDATE cannot be nested inside @IF
 - [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md): date and datetime validations required by @CALCDATE

@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log; [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs; [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users; [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor |
+| **Related Topics** | [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md); [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md); [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md); [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md)|
 
 ---
 
@@ -112,8 +112,8 @@ No. The report tracks many HTTP requests but not all. For a complete record of a
 
 # 9. Related Articles
 
-- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
-- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md) — User Activity Graphs
-- [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md) — Map of Users
-- [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md) — Database Activity Monitor
-- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+- [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)
+- [RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md)
+- [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md)
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)

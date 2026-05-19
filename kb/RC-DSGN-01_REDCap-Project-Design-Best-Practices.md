@@ -10,7 +10,7 @@
 | **Version** | 1.4 |
 | **Last Updated** | 2026-05-16 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md); [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer: Instrument and Field Management; [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md); [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations; [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic: Basics and Syntax |
+| **Related Topics** | [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md); [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md); [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md); [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md); [RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md); [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md); [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md); [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)|
 
 ---
 
@@ -489,11 +489,11 @@ Enabling this option causes REDCap to re-evaluate the trigger logic immediately 
 # 8. Related Articles
 
 - [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
-- [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) — Online Designer: Instrument and Field Management
+- [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md)
 - [RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md)
-- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Survey Basics
-- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
+- [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)
 - [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md)
-- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic: Basics and Syntax
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)

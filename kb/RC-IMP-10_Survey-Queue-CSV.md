@@ -6,12 +6,12 @@
 |---|---|
 | **Domain** | Data Import |
 | **Applies To** | REDCap projects with surveys and Survey Queue enabled |
-| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) |
+| **Prerequisite** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md); [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) |
 | **Skill Level** | Intermediate |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-05-07 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference; [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md); [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV |
+| **Related Topics** | [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md); [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md); [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md)|
 
 ---
 
@@ -84,8 +84,8 @@ Key points illustrated:
 
 # 5. Related Articles
 
-- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md) — CSV Upload Reference (index of all CSV upload types in REDCap)
+- [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (full module reference including UI configuration)
-- [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV (related: ASI format reference)
-- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) — Surveys: Basics (survey fundamentals)
-- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview (logic expression syntax used in `condition_logic`)
+- [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md)(related: ASI format reference)
+- [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)(survey fundamentals)
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)(logic expression syntax used in `condition_logic`)

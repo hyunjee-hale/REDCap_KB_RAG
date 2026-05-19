@@ -11,7 +11,7 @@
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API official documentation (Export a Survey Return Code for a Participant) |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link; [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md); [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)|
 
 ---
 
@@ -205,8 +205,8 @@ Retrieve the base survey link separately using the Export Survey Link method ([R
 # 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
-- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md) — Export Survey Link
-- [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md) — Export Survey Queue Link
-- [RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md) — Export Survey Participants
+- [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)
+- [RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)
+- [RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (survey fundamentals)
 - [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md) (return code configuration in survey settings)

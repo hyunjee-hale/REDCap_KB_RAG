@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report; [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md) — Database Query Tool; [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log |
+| **Related Topics** | [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md); [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md); [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)|
 
 ---
 
@@ -138,7 +138,7 @@ If the database is down or unreachable, the monitor will not load and will displ
 
 # 13. Related Articles
 
-- [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md) — Top Usage Report
-- [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md) — Database Query Tool
-- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md) — User Activity Log
-- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) — Control Center Overview
+- [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)
+- [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)
+- [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+- [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)

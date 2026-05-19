@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap; [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling; [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding; [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
+| **Related Topics** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md); [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md); [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md); [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) |
 
 ---
 
@@ -143,7 +143,7 @@ Once enabled, a **MyCap** section appears in the left-hand menu with subsections
 
 ## 6.3 Prerequisites Before Enabling
 
-- Instruments (forms) should be designed before enabling them for MyCap. See [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap.
+- Instruments (forms) should be designed before enabling them for MyCap. See [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
 - At least one record must exist in REDCap before a participant can join via the app. Participants cannot create their own records.
 
 ---
@@ -177,7 +177,7 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 �
 
 **Q: Can I use MyCap with a longitudinal project?**
 
-**A:** Yes, with the current MyCap app (purple logo, released September 2023), longitudinal projects are supported. MyCap Classic did not support longitudinal projects. See [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling for longitudinal scheduling details.
+**A:** Yes, with the current MyCap app (purple logo, released September 2023), longitudinal projects are supported. MyCap Classic did not support longitudinal projects. See [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)
 
 **Q: What iOS and Android versions does MyCap support?**
 
@@ -209,7 +209,7 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 �
 
 **Enabling MyCap before designing instruments.** Instruments that were not designed with MyCap in mind (relying on piping, calculated fields, or unsupported action tags) will behave unexpectedly in the app. Review field compatibility ([RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)) before enabling instruments.
 
-**Assuming calculated fields update in MyCap.** Calculated fields do not compute inside MyCap. If you need to show participants a calculated value (e.g., a score), use the Survey Links feature to embed a REDCap survey link instead (see [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md) — Advanced Features).
+**Assuming calculated fields update in MyCap.** Calculated fields do not compute inside MyCap. If you need to show participants a calculated value (e.g., a score), use the Survey Links feature to embed a REDCap survey link instead (see [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)
 
 **Not publishing after configuration changes.** Schedule changes, App Settings changes, and newly enabled instruments do not reach participants' devices until the project is published. See [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) for publishing steps.
 
@@ -217,15 +217,15 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 �
 
 # 10. Related Articles
 
-- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md) — Designing Instruments for MyCap
-- [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md) — Task Scheduling
-- [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding
-- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md) — App Settings & Participant Management
-- [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md) — Active Tasks & Mobile Toolbox
-- [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md) — Advanced Features: FDL, MLM, and Survey Links
-- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md) — Testing MyCap
+- [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
+- [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)
+- [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md)
+- [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)
+- [RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md)
+- [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)
+- [RC-MYCAP-08 — MyCap: Testing](RC-MYCAP-08_Testing-MyCap.md)
 - [RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md)
 - [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md)
-- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md) (system-level MyCap enable/disable and per-project access control)
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the MyCap Participant Management item appears in the Data Collection section of the left menu; mutually exclusive with longitudinal mode)

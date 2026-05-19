@@ -6,12 +6,12 @@
 |---|---|
 | **Domain** | API |
 | **Applies To** | Longitudinal REDCap projects only |
-| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings |
+| **Prerequisite** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)|
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
 | **Source** | REDCap API v16.1.3 official documentation examples |
-| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments; [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings; [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events |
+| **Related Topics** | [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md); [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md); [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)|
 | **Important** | **Longitudinal projects only** — This method is only available for longitudinal projects (projects with multiple arms and/or repeating events). Classic projects do not have instrument-event mappings. |
 
 ---
@@ -299,9 +299,9 @@ On success, the method returns the number of instrument-event mappings imported 
 # 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
-- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md) — Export Instrument-Event Mappings (read current mappings)
-- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md) — Export Instruments (list available instruments)
-- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md) — Import Events (create or update events)
-- [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md) — Import Metadata (create or update instruments/fields)
+- [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)(read current mappings)
+- [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)(list available instruments)
+- [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)(create or update events)
+- [RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)(create or update instruments/fields)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (how arms and events are structured)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (how repeating instruments are configured per event)

@@ -6,11 +6,11 @@
 | --- | --- |
 | **Domain** | Branching Logic |
 | **Applies To** | All REDCap project types; requires Project Design and Setup rights |
-| **Prerequisite** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements |
+| **Prerequisite** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | See KB-SOURCE-ATTESTATION.md |
-| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements; [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Statements; [RC-FD-05 — Codebook](RC-FD-05_Codebook.md); [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
+| **Related Topics** | [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md); [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md); [RC-FD-05 — Codebook](RC-FD-05_Codebook.md); [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) |
 
 ---
 
@@ -315,13 +315,13 @@ are affected.
 
 # 8. Related Articles
 
-- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) — Syntax & Atomic Statements (prerequisite — covers
+- [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)(prerequisite — covers
     operators, quotes, brackets)
 
-- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) — Combining Logic Statements (AND, OR, parentheses ---
+- [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)(AND, OR, parentheses ---
     often needed with checkbox logic)
 
-- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope
+- [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
 
 - [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) (the fastest way to look up raw values for any
     field)
