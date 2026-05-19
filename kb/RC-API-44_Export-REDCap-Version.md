@@ -1,4 +1,4 @@
-[RC-API-44 — Export REDCap Version API](RC-API-44_Export-REDCap-Version.md)
+
 
 **Export REDCap Version API**
 

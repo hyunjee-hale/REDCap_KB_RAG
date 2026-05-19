@@ -1,4 +1,4 @@
-[RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md)
+
 
 **Control Center: Security & Authentication Configuration**
 

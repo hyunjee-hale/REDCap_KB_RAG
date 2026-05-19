@@ -1,4 +1,4 @@
-[RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)
+
 
 **MyCap: App Settings & Participant Management**
 

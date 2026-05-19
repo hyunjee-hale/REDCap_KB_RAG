@@ -1,4 +1,4 @@
-[RC-LOCK-01 — Record Locking & E-Signatures](RC-LOCK-01_Record-Locking-and-E-Signatures.md)
+
 
 **Record Locking & E-Signatures**
 

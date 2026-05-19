@@ -1,4 +1,4 @@
-[RC-API-13 — Import File API](RC-API-13_Import-File.md)
+
 
 **Import File API**
 

@@ -1,4 +1,4 @@
-[RC-API-14 — Delete File API](RC-API-14_Delete-File.md)
+
 
 **Delete File API**
 

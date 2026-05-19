@@ -1,4 +1,4 @@
-[RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md)
+
 
 **Texting: Administrator Setup**
 

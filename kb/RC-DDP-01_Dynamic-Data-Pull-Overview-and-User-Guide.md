@@ -1,4 +1,4 @@
-[RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)
+
 
 **Dynamic Data Pull (DDP) — Overview & User Guide**
 

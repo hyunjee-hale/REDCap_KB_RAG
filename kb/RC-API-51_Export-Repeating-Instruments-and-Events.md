@@ -1,4 +1,4 @@
-[RC-API-51 — Export Repeating Instruments and Events API](RC-API-51_Export-Repeating-Instruments-and-Events.md)
+
 
 **Export Repeating Instruments and Events API**
 

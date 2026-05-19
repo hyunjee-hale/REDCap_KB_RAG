@@ -89,7 +89,7 @@ ORPHAN_CLEANUP = re.compile(
     r'[A-Z][^;\|\n\[\](]*'     # and title-like text (starts with capital)
 )
 
-def linkify_line(line):
+def linkify_line(line, current_file=None):
     is_table = line.strip().startswith('|')
     is_list  = bool(re.match(r'^\s*[-*]|\s*\d+\.', line.strip()))
 
@@ -99,6 +99,9 @@ def linkify_line(line):
         patterns = body_patterns
 
     for aid, title, filename, pat in patterns:
+        # Skip self-referencing links (don't link an article to itself)
+        if current_file and filename == current_file:
+            continue
         line = pat.sub(
             lambda m, a=aid, t=title, f=filename: f"[{a} — {t}]({f})",
             line
@@ -134,7 +137,7 @@ for fname in sorted(os.listdir(KB_DIR)):
         if in_code_block:
             new_lines.append(line)
         else:
-            new_lines.append(linkify_line(line))
+            new_lines.append(linkify_line(line, current_file=fname))
 
     updated = "\n".join(new_lines)
 

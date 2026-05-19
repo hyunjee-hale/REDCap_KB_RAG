@@ -1,4 +1,4 @@
-[RC-API-08 — Import Metadata (Data Dictionary) API](RC-API-08_Import-Metadata.md)
+
 
 **Import Metadata (Data Dictionary) API**
 

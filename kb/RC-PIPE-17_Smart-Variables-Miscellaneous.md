@@ -1,4 +1,4 @@
-[RC-PIPE-17 — Smart Variables: Miscellaneous](RC-PIPE-17_Smart-Variables-Miscellaneous.md)
+
 
 **Smart Variables: Miscellaneous**
 

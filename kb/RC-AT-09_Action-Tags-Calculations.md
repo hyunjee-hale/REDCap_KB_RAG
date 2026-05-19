@@ -1,4 +1,4 @@
-[RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md)
+
 
 **Action Tags — @CALCTEXT and @CALCDATE: Calculation Action Tags**
 

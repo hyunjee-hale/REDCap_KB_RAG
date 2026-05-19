@@ -1,4 +1,4 @@
-[RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md)
+
 
 **Field Embedding**
 

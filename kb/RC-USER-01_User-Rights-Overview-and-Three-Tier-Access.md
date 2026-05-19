@@ -1,4 +1,4 @@
-[RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
+
 
 **User Rights — Overview & Three-Tier Access**
 

@@ -1,4 +1,4 @@
-[RC-API-21 — Delete Events API](RC-API-21_Delete-Events.md)
+
 
 **Delete Events API**
 

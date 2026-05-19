@@ -1,4 +1,4 @@
-[RC-IMP-09 — Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings](RC-IMP-09_Longitudinal-Structure-CSV.md)
+
 
 **Longitudinal Structure CSV — Arms, Events, and Instrument-Event Mappings**
 

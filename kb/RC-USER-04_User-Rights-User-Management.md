@@ -1,4 +1,4 @@
-[RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
+
 
 **User Rights — User Management**
 

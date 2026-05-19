@@ -1,4 +1,4 @@
-[RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md)
+
 
 **Surveys — Survey Link Types & Access Methods**
 

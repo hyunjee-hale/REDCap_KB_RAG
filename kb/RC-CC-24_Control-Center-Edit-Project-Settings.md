@@ -1,4 +1,4 @@
-[RC-CC-24 — Control Center: Edit Project Settings](RC-CC-24_Control-Center-Edit-Project-Settings.md)
+
 
 **Control Center: Edit Project Settings**
 

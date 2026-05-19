@@ -1,4 +1,4 @@
-[RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)
+
 
 **MyCap: Advanced Features — Form Display Logic, MLM, and Survey Links**
 

@@ -1,4 +1,4 @@
-[RC-OPS-01 — Using REDCap as an Operational Request Management System](RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md)
+
 
 **Using REDCap as an Operational Request Management System**
 

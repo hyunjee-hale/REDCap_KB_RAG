@@ -1,4 +1,4 @@
-[RC-IMP-02 — XML / CDISC ODM Import: Format Reference and Workflow](RC-IMP-02_XML-CDISC-ODM-Import.md)
+
 
 **XML / CDISC ODM Import: Format Reference and Workflow**
 

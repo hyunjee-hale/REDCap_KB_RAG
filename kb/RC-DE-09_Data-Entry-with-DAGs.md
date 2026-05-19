@@ -1,4 +1,4 @@
-[RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)
+
 
 **Data Entry — Working with Data Access Groups**
 

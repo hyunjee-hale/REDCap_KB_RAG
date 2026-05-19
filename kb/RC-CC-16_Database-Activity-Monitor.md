@@ -1,4 +1,4 @@
-[RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md)
+
 
 **Database Activity Monitor**
 

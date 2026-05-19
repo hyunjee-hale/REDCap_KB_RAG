@@ -1,4 +1,4 @@
-[RC-API-52 — Randomize Record API](RC-API-52_Randomize-Record.md)
+
 
 **Randomize Record API**
 

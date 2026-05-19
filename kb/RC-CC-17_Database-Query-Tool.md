@@ -1,4 +1,4 @@
-[RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)
+
 
 **Database Query Tool**
 

@@ -1,4 +1,4 @@
-[RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md)
+
 
 **Data Entry — Data Resolution Workflow**
 

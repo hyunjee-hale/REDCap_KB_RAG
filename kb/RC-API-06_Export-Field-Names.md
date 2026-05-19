@@ -1,4 +1,4 @@
-[RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md)
+
 
 **Export Field Names API**
 

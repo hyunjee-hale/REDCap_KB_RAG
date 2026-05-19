@@ -1,4 +1,4 @@
-[RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
+
 
 **Branching Logic — Overview & Scope**
 

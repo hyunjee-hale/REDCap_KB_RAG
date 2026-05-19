@@ -1,4 +1,4 @@
-[RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md)
+
 
 **Smart Variables: MyCap**
 

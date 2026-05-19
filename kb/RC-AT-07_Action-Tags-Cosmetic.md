@@ -1,4 +1,4 @@
-[RC-AT-07 — Cosmetic Action Tags](RC-AT-07_Action-Tags-Cosmetic.md)
+
 
 **Cosmetic Action Tags**
 

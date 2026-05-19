@@ -1,4 +1,4 @@
-[RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md)
+
 
 **Smart Variables: User**
 

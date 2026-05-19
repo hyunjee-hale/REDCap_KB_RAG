@@ -1,4 +1,4 @@
-[RC-CC-10 — Control Center: URL Shortener](RC-CC-10_URL-Shortener.md)
+
 
 **URL Shortener**
 

@@ -1,4 +1,4 @@
-[RC-API-50 — Generate Next Record Name API](RC-API-50_Generate-Next-Record-Name.md)
+
 
 **Generate Next Record Name API**
 

@@ -1,4 +1,4 @@
-[RC-API-49 — Delete a File (File Repository) API](RC-API-49_Delete-File-File-Repository.md)
+
 
 **Delete a File (File Repository) API**
 

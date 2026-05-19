@@ -1,4 +1,4 @@
-[RC-PIPE-07 — Smart Variables: Form](RC-PIPE-07_Smart-Variables-Form.md)
+
 
 **Smart Variables: Form**
 

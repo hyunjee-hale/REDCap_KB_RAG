@@ -1,4 +1,4 @@
-[RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md)
+
 
 **Special Functions Reference**
 

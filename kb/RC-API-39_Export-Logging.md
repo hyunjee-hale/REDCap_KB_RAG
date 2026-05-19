@@ -1,4 +1,4 @@
-[RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md)
+
 
 **Export Logging API**
 

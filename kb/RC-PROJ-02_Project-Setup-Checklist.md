@@ -1,4 +1,4 @@
-[RC-PROJ-02 — Project Setup Checklist](RC-PROJ-02_Project-Setup-Checklist.md)
+
 
 **Project Setup Checklist**
 

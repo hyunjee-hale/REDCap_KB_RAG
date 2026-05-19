@@ -1,4 +1,4 @@
-[RC-API-42 — Export Survey Return Code API](RC-API-42_Export-Survey-Return-Code.md)
+
 
 **Export Survey Return Code API**
 

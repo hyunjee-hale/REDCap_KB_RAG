@@ -1,4 +1,4 @@
-[RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md)
+
 
 **MyCap: Participant Onboarding**
 

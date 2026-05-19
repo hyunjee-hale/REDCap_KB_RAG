@@ -1,4 +1,4 @@
-[RC-PIPE-15 — Smart Variables: Public Reports](RC-PIPE-15_Smart-Variables-Public-Reports.md)
+
 
 **Smart Variables: Public Reports**
 

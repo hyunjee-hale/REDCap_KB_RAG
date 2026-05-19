@@ -1,4 +1,4 @@
-[RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)
+
 
 **Branching Logic — Combining Statements**
 

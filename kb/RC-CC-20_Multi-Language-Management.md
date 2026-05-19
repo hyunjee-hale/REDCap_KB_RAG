@@ -1,4 +1,4 @@
-[RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md)
+
 
 **Control Center: Multi-Language Management**
 

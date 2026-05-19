@@ -1,4 +1,4 @@
-[RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)
+
 
 **Branching Logic — Syntax & Atomic Statements**
 

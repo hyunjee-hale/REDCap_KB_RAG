@@ -1,4 +1,4 @@
-[RC-PIPE-14 — Smart Variables: Project Dashboards](RC-PIPE-14_Smart-Variables-Project-Dashboards.md)
+
 
 **Smart Variables: Project Dashboards**
 

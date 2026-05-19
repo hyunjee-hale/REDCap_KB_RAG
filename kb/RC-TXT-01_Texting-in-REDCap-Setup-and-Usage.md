@@ -1,4 +1,4 @@
-[RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md)
+
 
 **Texting in REDCap: Setup and Usage**
 

@@ -1,4 +1,4 @@
-[RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md)
+
 
 **Smart Variables: Aggregate Functions, Charts, and Tables**
 

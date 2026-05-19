@@ -1,4 +1,4 @@
-[RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md)
+
 
 **Field Embedding: Advanced Layout Patterns & Workflow Design**
 

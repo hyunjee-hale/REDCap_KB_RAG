@@ -1,4 +1,4 @@
-[RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md)
+
 
 **Data Entry Trigger**
 

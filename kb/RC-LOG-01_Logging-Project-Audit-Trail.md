@@ -1,4 +1,4 @@
-[RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Audit-Trail.md)
+
 
 **Logging — Project Audit Trail**
 

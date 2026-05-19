@@ -1,4 +1,4 @@
-[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
+
 
 **REDCap Randomization – Concepts & Terminology**
 

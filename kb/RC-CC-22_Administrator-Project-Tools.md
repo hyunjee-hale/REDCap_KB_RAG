@@ -1,4 +1,4 @@
-[RC-CC-22 — Admin: Administrator Project Tools (View as User, Project Switcher)](RC-CC-22_Administrator-Project-Tools.md)
+
 
 **Administrator Project Tools**
 

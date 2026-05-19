@@ -1,4 +1,4 @@
-[RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md)
+
 
 **Smart Variables: Survey**
 

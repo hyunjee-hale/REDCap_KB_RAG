@@ -1,4 +1,4 @@
-[RC-MYCAP-06 — MyCap: Active Tasks & Mobile Toolbox](RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md)
+
 
 **MyCap: Active Tasks & Mobile Toolbox**
 

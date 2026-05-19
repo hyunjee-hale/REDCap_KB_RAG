@@ -1,4 +1,4 @@
-[RC-API-27 — Delete User Roles API](RC-API-27_Delete-User-Roles.md)
+
 
 **Delete User Roles API**
 

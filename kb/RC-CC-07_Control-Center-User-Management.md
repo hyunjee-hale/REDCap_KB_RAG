@@ -1,4 +1,4 @@
-[RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)
+
 
 **Control Center: Users & Access Management**
 

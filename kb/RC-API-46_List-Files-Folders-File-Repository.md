@@ -1,4 +1,4 @@
-[RC-API-46 — List Files and Folders (File Repository) API](RC-API-46_List-Files-Folders-File-Repository.md)
+
 
 **List Files and Folders (File Repository) API**
 

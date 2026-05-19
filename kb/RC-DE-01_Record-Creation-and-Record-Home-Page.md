@@ -1,4 +1,4 @@
-[RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md)
+
 
 **Record Creation & the Record Home Page**
 

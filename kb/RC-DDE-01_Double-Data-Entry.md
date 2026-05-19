@@ -1,4 +1,4 @@
-[RC-DDE-01 — Double Data Entry](RC-DDE-01_Double-Data-Entry.md)
+
 
 **Double Data Entry**
 

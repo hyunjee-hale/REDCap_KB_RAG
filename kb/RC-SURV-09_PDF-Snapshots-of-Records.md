@@ -1,4 +1,4 @@
-[RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md)
+
 
 **PDF Snapshots of Records**
 

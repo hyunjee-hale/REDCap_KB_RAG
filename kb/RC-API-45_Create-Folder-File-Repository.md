@@ -1,4 +1,4 @@
-[RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md)
+
 
 **Create Folder (File Repository) API**
 

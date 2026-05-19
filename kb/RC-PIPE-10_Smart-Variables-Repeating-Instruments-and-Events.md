@@ -1,4 +1,4 @@
-[RC-PIPE-10 — Smart Variables: Repeating Instruments and Events](RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md)
+
 
 **Smart Variables: Repeating Instruments and Events**
 

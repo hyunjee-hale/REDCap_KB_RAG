@@ -1,4 +1,4 @@
-[RC-API-43 — Export Survey Participants API](RC-API-43_Export-Survey-Participants.md)
+
 
 **Export Survey Participants API**
 

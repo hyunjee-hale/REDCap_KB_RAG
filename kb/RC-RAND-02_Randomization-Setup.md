@@ -1,4 +1,4 @@
-[RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)
+
 
 **REDCap Randomization Setup**
 

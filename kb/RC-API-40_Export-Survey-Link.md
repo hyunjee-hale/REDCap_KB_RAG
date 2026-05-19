@@ -1,4 +1,4 @@
-[RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)
+
 
 **Export Survey Link API**
 

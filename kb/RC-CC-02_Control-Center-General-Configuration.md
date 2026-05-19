@@ -1,4 +1,4 @@
-[RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
+
 
 **Control Center: General System Configuration**
 

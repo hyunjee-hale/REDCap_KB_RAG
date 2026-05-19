@@ -1,4 +1,4 @@
-[RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
+
 
 **System Statistics**
 

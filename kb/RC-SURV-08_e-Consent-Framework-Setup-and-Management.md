@@ -1,4 +1,4 @@
-[RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md)
+
 
 **e-Consent Framework: Setup & Management**
 

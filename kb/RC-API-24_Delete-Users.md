@@ -1,4 +1,4 @@
-[RC-API-24 — Delete Users API](RC-API-24_Delete-Users.md)
+
 
 **Delete Users API**
 

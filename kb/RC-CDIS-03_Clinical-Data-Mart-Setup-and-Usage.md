@@ -1,4 +1,4 @@
-[RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage](RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md)
+
 
 **Clinical Data Mart (CDM): Setup and Usage**
 

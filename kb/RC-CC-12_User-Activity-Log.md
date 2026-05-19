@@ -1,4 +1,4 @@
-[RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
+
 
 **User Activity Log**
 

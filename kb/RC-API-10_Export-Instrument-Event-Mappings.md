@@ -1,4 +1,4 @@
-[RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)
+
 
 **Export Instrument-Event Mappings API**
 

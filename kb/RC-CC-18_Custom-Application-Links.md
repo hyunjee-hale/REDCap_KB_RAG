@@ -1,4 +1,4 @@
-[RC-CC-18 — Control Center: Custom Application Links](RC-CC-18_Custom-Application-Links.md)
+
 
 **Control Center: Custom Application Links**
 

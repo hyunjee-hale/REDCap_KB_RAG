@@ -1,4 +1,4 @@
-[RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)
+
 
 **Import Project (Create Project) API**
 

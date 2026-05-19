@@ -1,4 +1,4 @@
-[RC-API-15 — Export Instruments PDF API](RC-API-15_Export-Instruments-PDF.md)
+
 
 **Export Instruments PDF API**
 

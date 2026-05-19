@@ -1,4 +1,4 @@
-[RC-API-02 — Export Records API](RC-API-02_Export-Records.md)
+
 
 **Export Records API**
 

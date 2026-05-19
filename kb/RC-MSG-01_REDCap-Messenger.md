@@ -1,4 +1,4 @@
-[RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md)
+
 
 **REDCap Messenger**
 

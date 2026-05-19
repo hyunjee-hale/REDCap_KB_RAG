@@ -1,4 +1,4 @@
-[RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)
+
 
 **REDCap Randomization – Working with & Managing Randomization**
 

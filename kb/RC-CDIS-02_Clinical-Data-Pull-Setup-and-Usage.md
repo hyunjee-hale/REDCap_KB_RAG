@@ -1,4 +1,4 @@
-[RC-CDIS-02 — Clinical Data Pull (CDP): Setup and Usage](RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md)
+
 
 **Clinical Data Pull (CDP): Setup and Usage**
 

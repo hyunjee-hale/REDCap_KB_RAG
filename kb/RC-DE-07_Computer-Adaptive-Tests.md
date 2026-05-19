@@ -1,4 +1,4 @@
-[RC-DE-07 — Computer Adaptive Tests (CAT)](RC-DE-07_Computer-Adaptive-Tests.md)
+
 
 **Data Entry — Computer Adaptive Tests (CAT)**
 

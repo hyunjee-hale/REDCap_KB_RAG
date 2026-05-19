@@ -1,4 +1,4 @@
-[RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md)
+
 
 **Smart Variables: Optional Parameters for Aggregate Functions**
 

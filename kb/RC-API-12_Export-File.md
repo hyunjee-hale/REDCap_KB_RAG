@@ -1,4 +1,4 @@
-[RC-API-12 — Export File API](RC-API-12_Export-File.md)
+
 
 **Export File API**
 

@@ -1,4 +1,4 @@
-[RC-DSGN-01 — REDCap Project Design Best Practices](RC-DSGN-01_REDCap-Project-Design-Best-Practices.md)
+
 
 **REDCap Project Design Best Practices**
 

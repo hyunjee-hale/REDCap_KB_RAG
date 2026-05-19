@@ -1,4 +1,4 @@
-[RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md)
+
 
 **Action Tags — Mobile App Action Tags**
 

@@ -1,4 +1,4 @@
-[RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
+
 
 **Data Dictionary**
 

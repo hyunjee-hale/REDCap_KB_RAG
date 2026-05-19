@@ -1,4 +1,4 @@
-[RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md)
+
 
 **Basic Data Entry**
 

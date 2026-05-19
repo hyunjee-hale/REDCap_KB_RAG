@@ -1,4 +1,4 @@
-[RC-API-38 — Export Reports API](RC-API-38_Export-Reports.md)
+
 
 **Export Reports API**
 

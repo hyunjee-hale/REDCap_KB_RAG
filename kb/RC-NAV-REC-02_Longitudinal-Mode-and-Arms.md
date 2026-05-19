@@ -1,4 +1,4 @@
-[RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md)
+
 
 **Longitudinal Mode and Arms**
 

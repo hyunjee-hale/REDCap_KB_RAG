@@ -1,4 +1,4 @@
-[RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md)
+
 
 **Automated Survey Invitations CSV — Column Reference and Format Guide**
 

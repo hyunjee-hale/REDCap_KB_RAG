@@ -1,4 +1,4 @@
-[RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md)
+
 
 **Control Center: File Storage & Upload Settings**
 

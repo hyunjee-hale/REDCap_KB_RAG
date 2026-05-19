@@ -1,4 +1,4 @@
-[RC-PIPE-09 — Smart Variables: Event & Arm](RC-PIPE-09_Smart-Variables-Event-and-Arm.md)
+
 
 **Smart Variables: Event & Arm**
 

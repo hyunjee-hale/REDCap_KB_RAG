@@ -1,4 +1,4 @@
-[RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md)
+
 
 **Piping — Basics, Syntax & Field Types**
 

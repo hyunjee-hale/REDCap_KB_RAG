@@ -1,4 +1,4 @@
-[RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md)
+
 
 **Longitudinal & Repeated Data Entry**
 

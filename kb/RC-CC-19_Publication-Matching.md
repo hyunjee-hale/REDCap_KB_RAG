@@ -1,4 +1,4 @@
-[RC-CC-19 — Control Center: Publication Matching](RC-CC-19_Publication-Matching.md)
+
 
 **Control Center: Publication Matching**
 

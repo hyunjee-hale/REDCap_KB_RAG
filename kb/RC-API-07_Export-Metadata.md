@@ -1,4 +1,4 @@
-[RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)
+
 
 **Export Metadata (Data Dictionary) API**
 

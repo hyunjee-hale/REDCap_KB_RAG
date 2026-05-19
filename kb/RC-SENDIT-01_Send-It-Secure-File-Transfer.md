@@ -1,4 +1,4 @@
-[RC-SENDIT-01 — Send-It: Secure File Transfer](RC-SENDIT-01_Send-It-Secure-File-Transfer.md)
+
 
 **Send-It: Secure File Transfer**
 

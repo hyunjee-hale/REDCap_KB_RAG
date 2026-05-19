@@ -1,4 +1,4 @@
-[RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)
+
 
 **Project Lifecycle: Status and Settings**
 

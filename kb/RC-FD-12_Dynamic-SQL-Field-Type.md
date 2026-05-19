@@ -1,4 +1,4 @@
-[RC-FD-12 — Dynamic SQL Field Type](RC-FD-12_Dynamic-SQL-Field-Type.md)
+
 
 **Dynamic SQL Field Type**
 

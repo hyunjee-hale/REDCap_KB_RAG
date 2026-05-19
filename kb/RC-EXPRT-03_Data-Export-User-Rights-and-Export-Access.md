@@ -1,4 +1,4 @@
-[RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md)
+
 
 **Data Export — User Rights & Export Access**
 

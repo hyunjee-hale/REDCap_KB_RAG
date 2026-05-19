@@ -1,4 +1,4 @@
-[RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)
+
 
 **Top Usage Report**
 

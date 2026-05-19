@@ -1,4 +1,4 @@
-[RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)
+
 
 **AI Translations**
 

@@ -1,4 +1,4 @@
-[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
+
 
 **Control Center: Modules & Services Configuration**
 

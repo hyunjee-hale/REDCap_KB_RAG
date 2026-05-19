@@ -1,4 +1,4 @@
-[RC-API-20 — Import Events API](RC-API-20_Import-Events.md)
+
 
 **Import Events API**
 

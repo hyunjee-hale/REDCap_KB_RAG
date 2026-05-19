@@ -1,4 +1,4 @@
-[RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)
+
 
 **User Activity Graphs**
 

@@ -1,4 +1,4 @@
-[RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md)
+
 
 **Delete Records API**
 

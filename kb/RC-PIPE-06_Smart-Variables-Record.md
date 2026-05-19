@@ -1,4 +1,4 @@
-[RC-PIPE-06 — Smart Variables: Record](RC-PIPE-06_Smart-Variables-Record.md)
+
 
 **Smart Variables: Record**
 

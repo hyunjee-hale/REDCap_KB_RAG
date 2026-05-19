@@ -1,4 +1,4 @@
-[RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md)
+
 
 **Data Entry — Field Comment Log**
 

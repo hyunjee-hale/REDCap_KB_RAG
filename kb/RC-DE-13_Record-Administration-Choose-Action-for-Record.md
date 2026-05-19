@@ -1,4 +1,4 @@
-[RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md)
+
 
 **Data Entry — Record Administration: Choose Action for Record**
 

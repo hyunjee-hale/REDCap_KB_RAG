@@ -1,4 +1,4 @@
-[RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)
+
 
 **Control Center: Overview & Navigation**
 

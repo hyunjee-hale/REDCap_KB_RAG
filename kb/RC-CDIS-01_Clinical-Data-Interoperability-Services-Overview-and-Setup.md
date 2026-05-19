@@ -1,4 +1,4 @@
-[RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md)
+
 
 **Clinical Data Interoperability Services (CDIS): Overview and Control Center Setup**
 

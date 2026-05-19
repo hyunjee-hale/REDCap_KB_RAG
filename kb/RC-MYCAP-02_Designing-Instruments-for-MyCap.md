@@ -1,4 +1,4 @@
-[RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
+
 
 **Designing Instruments for MyCap**
 

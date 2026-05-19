@@ -1,4 +1,4 @@
-[RC-API-31 — Export User-DAG Assignments API](RC-API-31_Export-User-DAG-Assignments.md)
+
 
 **Export User-DAG Assignments API**
 

@@ -1,4 +1,4 @@
-[RC-DE-03 — Longitudinal Projects & DAGs](RC-DE-03_Longitudinal-Projects-and-DAGs.md)
+
 
 **Longitudinal Projects & Data Access Groups**
 

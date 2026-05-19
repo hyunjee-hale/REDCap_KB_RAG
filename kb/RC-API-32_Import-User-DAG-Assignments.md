@@ -1,4 +1,4 @@
-[RC-API-32 — Import User-DAG Assignments API](RC-API-32_Import-User-DAG-Assignments.md)
+
 
 **Import User-DAG Assignments API**
 

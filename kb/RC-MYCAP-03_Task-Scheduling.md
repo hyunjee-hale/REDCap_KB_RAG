@@ -1,4 +1,4 @@
-[RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)
+
 
 **MyCap: Task Scheduling**
 

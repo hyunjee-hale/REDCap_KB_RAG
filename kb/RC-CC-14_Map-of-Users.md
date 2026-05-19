@@ -1,4 +1,4 @@
-[RC-CC-14 — Control Center: Map of Users](RC-CC-14_Map-of-Users.md)
+
 
 **Map of Users**
 

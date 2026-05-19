@@ -1,4 +1,4 @@
-[RC-CALC-02 — Calculated Fields](RC-CALC-02_Calculated-Fields.md)
+
 
 **Calculated Fields**
 

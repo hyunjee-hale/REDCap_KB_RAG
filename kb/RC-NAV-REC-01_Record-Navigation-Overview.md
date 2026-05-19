@@ -1,4 +1,4 @@
-[RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md)
+
 
 **Record Navigation Overview**
 

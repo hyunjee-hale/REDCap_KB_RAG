@@ -1,4 +1,4 @@
-[RC-API-19 — Export Events API](RC-API-19_Export-Events.md)
+
 
 **Export Events API**
 

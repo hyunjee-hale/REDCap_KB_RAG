@@ -1,4 +1,4 @@
-[RC-API-47 — Export a File (File Repository) API](RC-API-47_Export-File-File-Repository.md)
+
 
 **Export a File (File Repository) API**
 

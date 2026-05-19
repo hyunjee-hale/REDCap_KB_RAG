@@ -1,4 +1,4 @@
-[RC-API-48 — Import a File (File Repository) API](RC-API-48_Import-File-File-Repository.md)
+
 
 **Import a File (File Repository) API**
 

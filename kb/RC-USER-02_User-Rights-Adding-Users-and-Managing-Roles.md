@@ -1,4 +1,4 @@
-[RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
+
 
 **User Rights — Adding Users & Managing Roles**
 

@@ -1,4 +1,4 @@
-[RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
+
 
 **Data Dictionary: Column Reference & Advanced Techniques**
 

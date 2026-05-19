@@ -1,4 +1,4 @@
-[RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md)
+
 
 **Repeated Instruments & Events Setup**
 

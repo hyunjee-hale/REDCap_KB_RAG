@@ -1,4 +1,4 @@
-[RC-API-33 — Switch DAG API](RC-API-33_Switch-DAG.md)
+
 
 **Switch DAG API**
 

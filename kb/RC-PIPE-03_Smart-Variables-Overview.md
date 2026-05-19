@@ -1,4 +1,4 @@
-[RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md)
+
 
 **Smart Variables — Overview**
 

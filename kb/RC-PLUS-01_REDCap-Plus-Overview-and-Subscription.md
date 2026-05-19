@@ -1,4 +1,4 @@
-[RC-PLUS-01 — REDCap+: Overview and Subscription](RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md)
+
 
 **REDCap+: Overview and Subscription**
 

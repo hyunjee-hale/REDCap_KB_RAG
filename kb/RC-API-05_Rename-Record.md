@@ -1,4 +1,4 @@
-[RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md)
+
 
 **Rename Record API**
 

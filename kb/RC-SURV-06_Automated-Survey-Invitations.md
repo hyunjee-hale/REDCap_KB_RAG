@@ -1,4 +1,4 @@
-[RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)
+
 
 **Surveys — Automated Survey Invitations (ASI)**
 

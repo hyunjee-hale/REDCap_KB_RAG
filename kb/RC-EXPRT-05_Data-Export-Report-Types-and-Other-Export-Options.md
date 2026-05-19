@@ -1,4 +1,4 @@
-[RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md)
+
 
 **Data Export — Report Types & Other Export Options**
 

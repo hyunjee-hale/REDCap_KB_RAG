@@ -1,4 +1,4 @@
-[RC-PIPE-13 — Smart Variables: Randomization](RC-PIPE-13_Smart-Variables-Randomization.md)
+
 
 **Smart Variables: Randomization**
 

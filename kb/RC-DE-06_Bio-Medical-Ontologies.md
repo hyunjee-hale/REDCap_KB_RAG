@@ -1,4 +1,4 @@
-[RC-DE-06 — Bio-Medical Ontologies](RC-DE-06_Bio-Medical-Ontologies.md)
+
 
 **Data Entry — Bio-Medical Ontologies**
 

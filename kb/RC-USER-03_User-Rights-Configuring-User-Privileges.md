@@ -1,4 +1,4 @@
-[RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
+
 
 **User Rights — Configuring User Privileges**
 

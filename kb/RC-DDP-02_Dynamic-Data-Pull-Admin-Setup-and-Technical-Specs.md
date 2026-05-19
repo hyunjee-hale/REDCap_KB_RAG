@@ -1,4 +1,4 @@
-[RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md)
+
 
 **Dynamic Data Pull (DDP) — Admin Setup & Technical Specs**
 

@@ -1,4 +1,4 @@
-[RC-API-53 — Import Repeating Instruments and Events API](RC-API-53_Import-Repeating-Instruments-and-Events.md)
+
 
 **Import Repeating Instruments and Events API**
 

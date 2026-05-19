@@ -1,4 +1,4 @@
-[RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md)
+
 
 **Survey Settings: Basic Options & Design**
 

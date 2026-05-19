@@ -1,4 +1,4 @@
-[RC-FD-10 — Advanced Workflow Patterns: Multi-Stage Review and Operational Processing](RC-FD-10_Advanced-Workflow-Patterns-Multi-Stage-Review-and-Operational-Processing.md)
+
 
 **Advanced Workflow Patterns: Multi-Stage Review and Operational Processing**
 

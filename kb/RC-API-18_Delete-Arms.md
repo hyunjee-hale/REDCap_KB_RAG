@@ -1,4 +1,4 @@
-[RC-API-18 — Delete Arms API](RC-API-18_Delete-Arms.md)
+
 
 **Delete Arms API**
 

@@ -1,4 +1,4 @@
-[RC-MCP-01 — REDCap MCP Server: Setup and Management](RC-MCP-01_MCP-Server-Setup-and-Management.md)
+
 
 **REDCap MCP Server: Setup and Management**
 

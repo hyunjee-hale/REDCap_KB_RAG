@@ -1,4 +1,4 @@
-[RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)
+
 
 **Control Center: User Settings & Defaults**
 

@@ -1,4 +1,4 @@
-[RC-API-11 — Import Instrument-Event Mappings API](RC-API-11_Import-Instrument-Event-Mappings.md)
+
 
 **Import Instrument-Event Mappings API**
 

@@ -1,4 +1,4 @@
-[RC-API-30 — Delete DAGs API](RC-API-30_Delete-DAGs.md)
+
 
 **Delete DAGs API**
 

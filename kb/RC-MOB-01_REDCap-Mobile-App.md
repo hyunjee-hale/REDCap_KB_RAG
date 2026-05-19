@@ -1,4 +1,4 @@
-[RC-MOB-01 — REDCap Mobile App](RC-MOB-01_REDCap-Mobile-App.md)
+
 
 **REDCap Mobile App**
 
