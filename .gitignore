@@ -13,3 +13,5 @@ __pycache__/
 
 # Local tooling — not for distribution
 tools/
+
+site/

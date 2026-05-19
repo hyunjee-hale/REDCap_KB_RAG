@@ -1,0 +1,323 @@
+site_name: REDCap Knowledge Base
+site_description: Structured REDCap documentation for support and reference
+docs_dir: kb
+exclude_docs: KB-REFERENCE-MAP.md
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+
+nav:
+  - Home: index.md
+  - AI Tools:
+    - "REDCap AI Tools Overview and Security": RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md
+    - "AI Writing Tools": RC-AI-02_AI-Writing-Tools.md
+    - "AI Translations": RC-AI-03_AI-Translations.md
+    - "AI Summarization": RC-AI-04_AI-Summarization.md
+  - API:
+    - "REDCap API": RC-API-01_REDCap-API.md
+    - "Export Records": RC-API-02_Export-Records.md
+    - "Import Records": RC-API-03_Import-Records.md
+    - "Delete Records": RC-API-04_Delete-Records.md
+    - "Rename Record": RC-API-05_Rename-Record.md
+    - "Export Field Names": RC-API-06_Export-Field-Names.md
+    - "Export Metadata": RC-API-07_Export-Metadata.md
+    - "Import Metadata": RC-API-08_Import-Metadata.md
+    - "Export Instruments": RC-API-09_Export-Instruments.md
+    - "Export Instrument Event Mappings": RC-API-10_Export-Instrument-Event-Mappings.md
+    - "Import Instrument Event Mappings": RC-API-11_Import-Instrument-Event-Mappings.md
+    - "Export File": RC-API-12_Export-File.md
+    - "Import File": RC-API-13_Import-File.md
+    - "Delete File": RC-API-14_Delete-File.md
+    - "Export Instruments PDF": RC-API-15_Export-Instruments-PDF.md
+    - "Export Arms": RC-API-16_Export-Arms.md
+    - "Import Arms": RC-API-17_Import-Arms.md
+    - "Delete Arms": RC-API-18_Delete-Arms.md
+    - "Export Events": RC-API-19_Export-Events.md
+    - "Import Events": RC-API-20_Import-Events.md
+    - "Delete Events": RC-API-21_Delete-Events.md
+    - "Export Users": RC-API-22_Export-Users.md
+    - "Import Users": RC-API-23_Import-Users.md
+    - "Delete Users": RC-API-24_Delete-Users.md
+    - "Export User Roles": RC-API-25_Export-User-Roles.md
+    - "Import User Roles": RC-API-26_Import-User-Roles.md
+    - "Delete User Roles": RC-API-27_Delete-User-Roles.md
+    - "Export DAGs": RC-API-28_Export-DAGs.md
+    - "Import DAGs": RC-API-29_Import-DAGs.md
+    - "Delete DAGs": RC-API-30_Delete-DAGs.md
+    - "Export User DAG Assignments": RC-API-31_Export-User-DAG-Assignments.md
+    - "Import User DAG Assignments": RC-API-32_Import-User-DAG-Assignments.md
+    - "Switch DAG": RC-API-33_Switch-DAG.md
+    - "Export Project Info": RC-API-34_Export-Project-Info.md
+    - "Import Project Info": RC-API-35_Import-Project-Info.md
+    - "Export Project XML": RC-API-36_Export-Project-XML.md
+    - "Import Project Create Project": RC-API-37_Import-Project-Create-Project.md
+    - "Export Reports": RC-API-38_Export-Reports.md
+    - "Export Logging": RC-API-39_Export-Logging.md
+    - "Export Survey Link": RC-API-40_Export-Survey-Link.md
+    - "Export Survey Queue Link": RC-API-41_Export-Survey-Queue-Link.md
+    - "Export Survey Return Code": RC-API-42_Export-Survey-Return-Code.md
+    - "Export Survey Participants": RC-API-43_Export-Survey-Participants.md
+    - "Export REDCap Version": RC-API-44_Export-REDCap-Version.md
+    - "Create Folder File Repository": RC-API-45_Create-Folder-File-Repository.md
+    - "List Files Folders File Repository": RC-API-46_List-Files-Folders-File-Repository.md
+    - "Export File File Repository": RC-API-47_Export-File-File-Repository.md
+    - "Import File File Repository": RC-API-48_Import-File-File-Repository.md
+    - "Delete File File Repository": RC-API-49_Delete-File-File-Repository.md
+    - "Generate Next Record Name": RC-API-50_Generate-Next-Record-Name.md
+    - "Export Repeating Instruments and Events": RC-API-51_Export-Repeating-Instruments-and-Events.md
+    - "Randomize Record": RC-API-52_Randomize-Record.md
+    - "Import Repeating Instruments and Events": RC-API-53_Import-Repeating-Instruments-and-Events.md
+    - "Export Survey Access Code": RC-API-54_Export-Survey-Access-Code.md
+    - "Export User Role Assignments": RC-API-55_Export-User-Role-Assignments.md
+    - "Import User Role Assignments": RC-API-56_Import-User-Role-Assignments.md
+  - Action Tags:
+    - "Action Tags Overview": RC-AT-01_Action-Tags-Overview.md
+    - "Action Tags Hidden and Readonly": RC-AT-02_Action-Tags-Hidden-and-Readonly.md
+    - "Action Tags Radio Dropdown": RC-AT-03_Action-Tags-Radio-Dropdown.md
+    - "Action Tags Checkbox": RC-AT-04_Action-Tags-Checkbox.md
+    - "Action Tags Free Text": RC-AT-05_Action-Tags-Free-Text.md
+    - "Action Tags Autofill": RC-AT-06_Action-Tags-Autofill.md
+    - "Action Tags Cosmetic": RC-AT-07_Action-Tags-Cosmetic.md
+    - "Action Tags Conditional IF": RC-AT-08_Action-Tags-Conditional-IF.md
+    - "Action Tags Calculations": RC-AT-09_Action-Tags-Calculations.md
+    - "Action Tags Language": RC-AT-10_Action-Tags-Language.md
+    - "Action Tags Mobile App": RC-AT-11_Action-Tags-Mobile-App.md
+    - "Action Tags HIDESUBMIT External Module": RC-AT-EM-01_Action-Tags-HIDESUBMIT-External-Module.md
+  - Alerts & Notifications:
+    - "Alerts and Notifications Setup": RC-ALERT-01_Alerts-and-Notifications-Setup.md
+    - "Alert Management and Notification Log": RC-ALERT-02_Alert-Management-and-Notification-Log.md
+  - Branching Logic:
+    - "Branching Logic Overview and Scope": RC-BL-01_Branching-Logic-Overview-and-Scope.md
+    - "Branching Logic Syntax and Atomic Statements": RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md
+    - "Branching Logic Combining Statements": RC-BL-03_Branching-Logic-Combining-Statements.md
+    - "Branching Logic Structured Fields and Checkboxes": RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md
+    - "Branching Logic in Longitudinal Projects": RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md
+  - Calculations:
+    - "Special Functions Reference": RC-CALC-01_Special-Functions-Reference.md
+    - "Calculated Fields": RC-CALC-02_Calculated-Fields.md
+  - Calendar:
+    - "Calendar": RC-CAL-01_Calendar.md
+  - Clinical Data Interoperability:
+    - "Clinical Data Interoperability Services Overview and Setup": RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md
+    - "Clinical Data Pull Setup and Usage": RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md
+    - "Clinical Data Mart Setup and Usage": RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md
+    - "CDP vs CDM Feature Comparison": RC-CDIS-04_CDP-vs-CDM-Feature-Comparison.md
+  - Control Center:
+    - "Control Center Notifications and Reporting": RC-CC-01_Control-Center-Notifications-and-Reporting.md
+    - "Control Center General Configuration": RC-CC-02_Control-Center-General-Configuration.md
+    - "Control Center Security and Authentication": RC-CC-03_Control-Center-Security-and-Authentication.md
+    - "Control Center User Settings": RC-CC-04_Control-Center-User-Settings.md
+    - "Control Center File Storage Settings": RC-CC-05_Control-Center-File-Storage-Settings.md
+    - "Control Center Modules and Services": RC-CC-06_Control-Center-Modules-and-Services.md
+    - "Control Center User Management": RC-CC-07_Control-Center-User-Management.md
+    - "Control Center Home Page Templates and Defaults": RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md
+    - "To Do List": RC-CC-09_To-Do-List.md
+    - "URL Shortener": RC-CC-10_URL-Shortener.md
+    - "System Statistics": RC-CC-11_System-Statistics.md
+    - "User Activity Log": RC-CC-12_User-Activity-Log.md
+    - "User Activity Graphs": RC-CC-13_User-Activity-Graphs.md
+    - "Map of Users": RC-CC-14_Map-of-Users.md
+    - "Top Usage Report": RC-CC-15_Top-Usage-Report.md
+    - "Database Activity Monitor": RC-CC-16_Database-Activity-Monitor.md
+    - "Database Query Tool": RC-CC-17_Database-Query-Tool.md
+    - "Custom Application Links": RC-CC-18_Custom-Application-Links.md
+    - "Publication Matching": RC-CC-19_Publication-Matching.md
+    - "Multi Language Management": RC-CC-20_Multi-Language-Management.md
+    - "Control Center Overview": RC-CC-21_Control-Center-Overview.md
+    - "Administrator Project Tools": RC-CC-22_Administrator-Project-Tools.md
+    - "Backup Options": RC-CC-23_Backup-Options.md
+    - "Control Center Edit Project Settings": RC-CC-24_Control-Center-Edit-Project-Settings.md
+  - Data Access Groups:
+    - "Data Access Groups": RC-DAG-01_Data-Access-Groups.md
+  - Data Entry:
+    - "Record Creation and Record Home Page": RC-DE-01_Record-Creation-and-Record-Home-Page.md
+    - "Basic Data Entry": RC-DE-02_Basic-Data-Entry.md
+    - "Longitudinal Projects and DAGs": RC-DE-03_Longitudinal-Projects-and-DAGs.md
+    - "Editing Data and Audit Trail": RC-DE-04_Editing-Data-and-Audit-Trail.md
+    - "Field Validations": RC-DE-05_Field-Validations.md
+    - "Bio Medical Ontologies": RC-DE-06_Bio-Medical-Ontologies.md
+    - "Computer Adaptive Tests": RC-DE-07_Computer-Adaptive-Tests.md
+    - "Field Comment Log": RC-DE-08_Field-Comment-Log.md
+    - "Data Entry with DAGs": RC-DE-09_Data-Entry-with-DAGs.md
+    - "Longitudinal and Repeated Data Entry": RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md
+    - "Instrument Save Options": RC-DE-11_Instrument-Save-Options.md
+    - "Data Resolution Workflow": RC-DE-12_Data-Resolution-Workflow.md
+    - "Record Administration Choose Action for Record": RC-DE-13_Record-Administration-Choose-Action-for-Record.md
+  - Data Export:
+    - "Data Export Overview and Workflow": RC-EXPRT-01_Data-Export-Overview-and-Workflow.md
+    - "Data Export Export Formats": RC-EXPRT-02_Data-Export-Export-Formats.md
+    - "Data Export User Rights and Export Access": RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md
+    - "Data Export De identification and Formatting Options": RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md
+    - "Data Export Report Types and Other Export Options": RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md
+    - "Custom Reports Setup and Field Selection": RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md
+    - "Custom Reports Filtering and Ordering": RC-EXPRT-07_Custom-Reports-Filtering-and-Ordering.md
+    - "Custom Reports Management and Organization": RC-EXPRT-08_Custom-Reports-Management-and-Organization.md
+  - Data Import:
+    - "Data Import Overview": RC-IMP-01_Data-Import-Overview.md
+    - "XML CDISC ODM Import": RC-IMP-02_XML-CDISC-ODM-Import.md
+    - "CSV Upload Reference": RC-IMP-03_CSV-Upload-Reference.md
+    - "Record Data CSV Import": RC-IMP-04_Record-Data-CSV-Import.md
+    - "Alerts Notifications CSV": RC-IMP-05_Alerts-Notifications-CSV.md
+    - "Automated Survey Invitations CSV": RC-IMP-06_Automated-Survey-Invitations-CSV.md
+    - "Survey Settings CSV": RC-IMP-07_Survey-Settings-CSV.md
+    - "Form Display Logic CSV": RC-IMP-08_Form-Display-Logic-CSV.md
+    - "Longitudinal Structure CSV": RC-IMP-09_Longitudinal-Structure-CSV.md
+    - "Survey Queue CSV": RC-IMP-10_Survey-Queue-CSV.md
+  - Data Quality:
+    - "Data Quality Module": RC-DQ-01_Data-Quality-Module.md
+  - Double Data Entry:
+    - "Double Data Entry": RC-DDE-01_Double-Data-Entry.md
+  - Dynamic Data Pull:
+    - "Dynamic Data Pull Overview and User Guide": RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md
+    - "Dynamic Data Pull Admin Setup and Technical Specs": RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md
+  - External Modules:
+    - "External Modules Overview and Manager": RC-EM-01_External-Modules-Overview-and-Manager.md
+    - "External Modules Installed Catalog": RC-EM-02_External-Modules-Installed-Catalog.md
+    - "External Modules Installed Catalog Test": RC-EM-03_External-Modules-Installed-Catalog-Test.md
+    - "External Modules Installed Catalog Development": RC-EM-04_External-Modules-Installed-Catalog-Development.md
+  - File Repository:
+    - "File Repository": RC-FILE-01_File-Repository.md
+  - Form Design:
+    - "Form Design Overview": RC-FD-01_Form-Design-Overview.md
+    - "Online Designer": RC-FD-02_Online-Designer.md
+    - "Data Dictionary": RC-FD-03_Data-Dictionary.md
+    - "Instrument Library and Zip Files": RC-FD-04_Instrument-Library-and-Zip-Files.md
+    - "Codebook": RC-FD-05_Codebook.md
+    - "Online Designer Instrument and Field Management": RC-FD-06_Online-Designer-Instrument-and-Field-Management.md
+    - "Field Embedding": RC-FD-07_Field-Embedding.md
+    - "Data Dictionary Column Reference and Advanced Techniques": RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md
+    - "Field Embedding Advanced Patterns and Workflow Design": RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md
+    - "Advanced Workflow Patterns Multi Stage Review and Operational Processing": RC-FD-10_Advanced-Workflow-Patterns-Multi-Stage-Review-and-Operational-Processing.md
+    - "Advanced Online Designer Options": RC-FD-11_Advanced-Online-Designer-Options.md
+    - "Dynamic SQL Field Type": RC-FD-12_Dynamic-SQL-Field-Type.md
+  - Form Display Logic:
+    - "Form Display Logic": RC-FDL-01_Form-Display-Logic.md
+  - Institution-Specific Settings:
+    - "Institution Specific Settings and Policies": RC-INST-01_Institution-Specific-Settings-and-Policies.md
+    - "Institution Specific Settings and Policies Test": RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md
+    - "Institution Specific Settings and Policies Development": RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md
+  - Integrations:
+    - "Data Entry Trigger": RC-INTG-01_Data-Entry-Trigger.md
+  - Logging & Audit Trail:
+    - "Logging Project Audit Trail": RC-LOG-01_Logging-Project-Audit-Trail.md
+  - Longitudinal Project Setup:
+    - "Longitudinal Project Setup": RC-LONG-01_Longitudinal-Project-Setup.md
+    - "Repeated Instruments and Events Setup": RC-LONG-02_Repeated-Instruments-and-Events-Setup.md
+    - "Longitudinal Clinical Research Design Patterns": RC-LONG-03_Longitudinal-Clinical-Research-Design-Patterns.md
+  - Messenger:
+    - "REDCap Messenger": RC-MSG-01_REDCap-Messenger.md
+  - Mobile App:
+    - "REDCap Mobile App": RC-MOB-01_REDCap-Mobile-App.md
+  - Multi-Language Management:
+    - "Multi Language Management": RC-MLM-01_Multi-Language-Management.md
+  - My Profile:
+    - "My Profile User Profile Settings": RC-PROF-01_My-Profile-User-Profile-Settings.md
+  - MyCap:
+    - "MyCap Overview and Enabling": RC-MYCAP-01_MyCap-Overview-and-Enabling.md
+    - "Designing Instruments for MyCap": RC-MYCAP-02_Designing-Instruments-for-MyCap.md
+    - "Task Scheduling": RC-MYCAP-03_Task-Scheduling.md
+    - "Participant Onboarding": RC-MYCAP-04_Participant-Onboarding.md
+    - "App Settings and Participant Management": RC-MYCAP-05_App-Settings-and-Participant-Management.md
+    - "Active Tasks and Mobile Toolbox": RC-MYCAP-06_Active-Tasks-and-Mobile-Toolbox.md
+    - "Advanced Features FDL MLM Survey Links": RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md
+    - "Testing MyCap": RC-MYCAP-08_Testing-MyCap.md
+  - Navigation:
+    - "Record Navigation Overview": RC-NAV-REC-01_Record-Navigation-Overview.md
+    - "Longitudinal Mode and Arms": RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md
+    - "Repeated Instruments and Events": RC-NAV-REC-03_Repeated-Instruments-and-Events.md
+    - "Record Status Dashboard and Links": RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md
+    - "Project Navigation UI": RC-NAV-UI-01_Project-Navigation-UI.md
+    - "Project Menu Reference": RC-NAV-UI-02_Project-Menu-Reference.md
+    - "Project Bookmarks": RC-NAV-UI-03_Project-Bookmarks.md
+    - "My Projects Page": RC-NAV-UI-04_My-Projects-Page.md
+  - Operational Use Cases:
+    - "REDCap as an Operational Request Management System": RC-OPS-01_REDCap-as-an-Operational-Request-Management-System.md
+  - Piping & Smart Variables:
+    - "Piping Basics Syntax and Field Types": RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md
+    - "Piping Longitudinal Repeated Instruments and Modifiers": RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md
+    - "Smart Variables Overview": RC-PIPE-03_Smart-Variables-Overview.md
+    - "Piping in Emails and Notifications": RC-PIPE-04_Piping-in-Emails-and-Notifications.md
+    - "Smart Variables User": RC-PIPE-05_Smart-Variables-User.md
+    - "Smart Variables Record": RC-PIPE-06_Smart-Variables-Record.md
+    - "Smart Variables Form": RC-PIPE-07_Smart-Variables-Form.md
+    - "Smart Variables Survey": RC-PIPE-08_Smart-Variables-Survey.md
+    - "Smart Variables Event and Arm": RC-PIPE-09_Smart-Variables-Event-and-Arm.md
+    - "Smart Variables Repeating Instruments and Events": RC-PIPE-10_Smart-Variables-Repeating-Instruments-and-Events.md
+    - "Smart Variables Aggregate Functions Charts and Tables": RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md
+    - "Smart Variables Optional Parameters for Aggregate Functions": RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md
+    - "Smart Variables Randomization": RC-PIPE-13_Smart-Variables-Randomization.md
+    - "Smart Variables Project Dashboards": RC-PIPE-14_Smart-Variables-Project-Dashboards.md
+    - "Smart Variables Public Reports": RC-PIPE-15_Smart-Variables-Public-Reports.md
+    - "Smart Variables MyCap": RC-PIPE-16_Smart-Variables-MyCap.md
+    - "Smart Variables Miscellaneous": RC-PIPE-17_Smart-Variables-Miscellaneous.md
+  - Project Design Best Practices:
+    - "REDCap Project Design Best Practices": RC-DSGN-01_REDCap-Project-Design-Best-Practices.md
+  - Project Lifecycle:
+    - "Project Lifecycle Status and Settings": RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md
+    - "Project Setup Checklist": RC-PROJ-02_Project-Setup-Checklist.md
+    - "Project Dashboards": RC-PROJ-03_Project-Dashboards.md
+    - "Project Setup Additional Customizations": RC-PROJ-04_Project-Setup-Additional-Customizations.md
+    - "Project Migration": RC-PROJ-05_Project-Migration.md
+  - REDCap MCP Server:
+    - "MCP Server Setup and Management": RC-MCP-01_MCP-Server-Setup-and-Management.md
+  - REDCap+:
+    - "REDCap Plus Overview and Subscription": RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md
+  - Randomization:
+    - "Randomization Concepts": RC-RAND-01_Randomization-Concepts.md
+    - "Randomization Setup": RC-RAND-02_Randomization-Setup.md
+    - "Working with Randomization": RC-RAND-03_Working-with-Randomization.md
+  - Record Locking & E-Signatures:
+    - "Record Locking and E Signatures": RC-LOCK-01_Record-Locking-and-E-Signatures.md
+  - Send-It:
+    - "Send It Secure File Transfer": RC-SENDIT-01_Send-It-Secure-File-Transfer.md
+  - Surveys:
+    - "Surveys Basics": RC-SURV-01_Surveys-Basics.md
+    - "Survey Settings Basic Options and Design": RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md
+    - "Survey Settings Behavior Access and Termination": RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md
+    - "Survey Link Types and Access Methods": RC-SURV-04_Survey-Link-Types-and-Access-Methods.md
+    - "Participant List and Manual Survey Invitations": RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md
+    - "Automated Survey Invitations": RC-SURV-06_Automated-Survey-Invitations.md
+    - "Survey Queue": RC-SURV-07_Survey-Queue.md
+    - "e Consent Framework Setup and Management": RC-SURV-08_e-Consent-Framework-Setup-and-Management.md
+    - "PDF Snapshots of Records": RC-SURV-09_PDF-Snapshots-of-Records.md
+    - "Survey Login": RC-SURV-10_Survey-Login.md
+  - Texting (SMS):
+    - "Texting in REDCap Setup and Usage": RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md
+    - "Texting Administrator Setup": RC-TXT-02_Texting-Administrator-Setup.md
+  - User Rights:
+    - "User Rights Overview and Three Tier Access": RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md
+    - "User Rights Adding Users and Managing Roles": RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md
+    - "User Rights Configuring User Privileges": RC-USER-03_User-Rights-Configuring-User-Privileges.md
+    - "User Rights User Management": RC-USER-04_User-Rights-User-Management.md
