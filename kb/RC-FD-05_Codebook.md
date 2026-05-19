@@ -222,9 +222,9 @@ calculated fields using the standard variable name syntax:
 [intake_complete] = '2'
 ```
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** The Codebook always reflects the currently applied state of the project. In Production mode, pending (unapproved) Online Designer changes are not shown — the Codebook shows only what is live.
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** The Codebook always reflects the currently applied state of the project. In Production mode, pending (unapproved) Online Designer changes are not shown — the Codebook shows only what is live.
+
 
 ---
 
@@ -280,13 +280,12 @@ The Codebook is the right tool in these situations:
 
 # 7. Codebook vs. Other Reference Options
 
-  ---------------------------------- ----------------------------------------- ------------------------------- ------------------------------------------------------------------
-  **Reference Tool**                 **Format**                                **Editable?**                   **Best For**
-  Codebook                           Web view, organized by instrument         No (links to editors)           Human-readable review; looking up variable names while designing; getting event names
-  Data Dictionary (downloaded CSV)   Spreadsheet                               Yes (upload to apply changes)   Bulk editing; offline reference; version control
-  Download PDF of All Instruments    PDF                                       No                              Documentation; IRB submissions; stakeholder review
-  Online Designer                    Web interface, one instrument at a time   Yes                             Making edits; previewing form appearance
-  ---------------------------------- ----------------------------------------- ------------------------------- ------------------------------------------------------------------
+| **Reference Tool** | **Format** | **Editable?** | **Best For** |
+| --- | --- | --- | --- |
+| Codebook | Web view, organized by instrument | No (links to editors) | Human-readable review; looking up variable names while designing; getting event names |
+| Data Dictionary (downloaded CSV) | Spreadsheet | Yes (upload to apply changes) | Bulk editing; offline reference; version control |
+| Download PDF of All Instruments | PDF | No | Documentation; IRB submissions; stakeholder review |
+| Online Designer | Web interface, one instrument at a time | Yes | Making edits; previewing form appearance |
 
 > **Note:** The **PDF export of the Codebook** (accessible from the Design Your Data Collection Instruments section) and the
 > **Download PDF of All Instruments** option produce similar outputs but differ in layout. The Codebook PDF follows the

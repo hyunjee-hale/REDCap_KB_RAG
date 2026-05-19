@@ -91,12 +91,11 @@ distinct tools for creating and modifying instruments. Each serves
 different use cases and skill levels. Dedicated articles in this series
 cover each tool in detail.
 
-  --------------------------- ----------------------------------------------------------------------------------------- -------------
-  **Tool**                    **Best For**                                                                              **Article**
-  Online Designer             Beginners; making a small number of changes; wanting immediate visual feedback            [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
-  Data Dictionary             Advanced users; defining many variables at once; splitting or restructuring instruments   [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)
-  REDCap Instrument Library   Importing validated or community-contributed instruments (e.g., PHQ-9)                    [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)
-  --------------------------- ----------------------------------------------------------------------------------------- -------------
+| **Tool** | **Best For** | **Article** |
+| --- | --- | --- |
+| Online Designer | Beginners; making a small number of changes; wanting immediate visual feedback | [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) |
+| Data Dictionary | Advanced users; defining many variables at once; splitting or restructuring instruments | [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) |
+| REDCap Instrument Library | Importing validated or community-contributed instruments (e.g., PHQ-9) | [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md) |
 
 ---
 
@@ -154,9 +153,9 @@ features extend what instruments can do but require a solid grasp of
 basic instrument design before use. This knowledge base series does not
 cover them in depth.
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** The text and layout of the Design Your Data Collection Instruments section may vary slightly depending on which project features are enabled (e.g., Surveys mode). The core tools and links described here are present in all configurations.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** The text and layout of the Design Your Data Collection Instruments section may vary slightly depending on which project features are enabled (e.g., Surveys mode). The core tools and links described here are present in all configurations.
+
 
 ---
 
@@ -165,18 +164,17 @@ cover them in depth.
 Use this guide to select the appropriate tool for your task. For full
 details on each tool, see the linked articles.
 
-  ----------------------------------------------------------------------- -------------------------------------------------------------
-  **Task**                                                                **Recommended Tool**
-  Create your first instrument or add a few fields                        Online Designer ([RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md))
-  Build or restructure many variables or instruments at once              Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md))
-  Split one instrument into two                                           Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md))
-  Import a validated clinical scale (e.g., PHQ-9, GAD-7)                  Instrument Library ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
-  Reuse an instrument from another project                                Zip File import ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
-  Back up your instrument definitions before a major change               Download Data Dictionary or Zip File export ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md))
-  Review all variables and their attributes in a readable format          Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md))
-  Check or update which variables are flagged as identifiers              Check for Identifiers (this article, Section 5.3)
-  Generate a PDF of all instruments for documentation or IRB submission   Download PDF of All Instruments (this article, Section 5.1)
-  ----------------------------------------------------------------------- -------------------------------------------------------------
+| **Task** | **Recommended Tool** |
+| --- | --- |
+| Create your first instrument or add a few fields | Online Designer ([RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)) |
+| Build or restructure many variables or instruments at once | Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)) |
+| Split one instrument into two | Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)) |
+| Import a validated clinical scale (e.g., PHQ-9, GAD-7) | Instrument Library ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)) |
+| Reuse an instrument from another project | Zip File import ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)) |
+| Back up your instrument definitions before a major change | Download Data Dictionary or Zip File export ([RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)) |
+| Review all variables and their attributes in a readable format | Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) |
+| Check or update which variables are flagged as identifiers | Check for Identifiers (this article, Section 5.3) |
+| Generate a PDF of all instruments for documentation or IRB submission | Download PDF of All Instruments (this article, Section 5.1) |
 
 ---
 

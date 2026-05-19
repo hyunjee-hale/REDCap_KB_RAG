@@ -65,66 +65,63 @@ the dataset. Logic statements must reference raw values, not labels.
 REDCap supports standard arithmetic operators for use in calculated
 fields and numeric comparisons. These operate on numbers only.
 
-  -------------- ---------------- ---------------------------
-  **Operator**   **Meaning**      **Example**
-  \+             Addition         \[score\_a\]+\[score\_b\]
-  \-             Subtraction      \[total\]-\[deductions\]
-  \*             Multiplication   \[dose\]\*\[weight\]
-  /              Division         \[total\]/\[count\]
-  \^             Exponent         \[base\]\^2
-  =              Equals           \[status\]=1
-  -------------- ---------------- ---------------------------
+| **Operator** | **Meaning** | **Example** |
+| --- | --- | --- |
+| + | Addition | [score_a]+[score_b] |
+| - | Subtraction | [total]-[deductions] |
+| * | Multiplication | [dose]*[weight] |
+| / | Division | [total]/[count] |
+| ^ | Exponent | [base]^2 |
+| = | Equals | [status]=1 |
 
 ## 3.2 Comparison Operators
 
 Comparison operators are the most common operators in branching logic.
 They compare a variable to a value and return true or false.
 
-  -------------- -------------------------- ------------------
-  **Operator**   **Meaning**                **Example**
-  =              Equal to                   \[gender\]=\'1\'
-  \<\>           Not equal to               \[status\]\<\>0
-  \>             Greater than               \[age\]\>18
-  \>=            Greater than or equal to   \[age\]\>=18
-  \<             Less than                  \[bmi\]\<25
-  \<=            Less than or equal to      \[bmi\]\<=25
-  -------------- -------------------------- ------------------
+| **Operator** | **Meaning** | **Example** |
+| --- | --- | --- |
+| = | Equal to | [gender]='1' |
+| <> | Not equal to | [status]<>0 |
+| > | Greater than | [age]>18 |
+| >= | Greater than or equal to | [age]>=18 |
+| < | Less than | [bmi]<25 |
+| <= | Less than or equal to | [bmi]<=25 |
 
 ## 3.3 Quotation Marks
 
 Any comparison value that is not a number must be enclosed in quotation
 marks. Both single and double quotes are accepted.
 
-+----------------------------------------------------------+
-| \[fav\_color\]=\"green\" // double quotes                |
-|                                                          |
-| \[fav\_color\]=\'green\' // single quotes — equivalent |
-|                                                          |
-| \[email\]\<\>\"\" // empty string check (double quotes)  |
-|                                                          |
-| \[email\]\<\>\'\' // empty string check (single quotes)  |
-+----------------------------------------------------------+
+```
+[fav_color]="green" // double quotes               
+                                                        
+[fav_color]='green' // single quotes — equivalent
+                                                        
+[email]<>"" // empty string check (double quotes) 
+                                                        
+[email]<>'' // empty string check (single quotes) 
+```
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Best Practice:** If you plan to edit your logic via the Data Dictionary in Excel or another spreadsheet program, use single quotes throughout. Excel interprets double quotes as part of its own formula syntax, which can corrupt logic statements during CSV import/export.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Best Practice:** If you plan to edit your logic via the Data Dictionary in Excel or another spreadsheet program, use single quotes throughout. Excel interprets double quotes as part of its own formula syntax, which can corrupt logic statements during CSV import/export.
+
 
 ## 3.4 Square Brackets \[ \] and Their Uses
 
 Square brackets are used to reference three types of identifiers in
 REDCap logic:
 
-  ------------------------------- -------------------------------- -----------------------------------------------------
-  **What Is Referenced**          **Syntax**                       **Example**
-  Regular field variable          \[variable\_name\]               \[first\_name\], \[dob\]
-  Checkbox sub-variable           \[variable\_name(raw\_value)\]   \[conditions(3)\]
-  Longitudinal event (advanced)   \[event\_name\]                  \[baseline\_arm\_1\] — covered in advanced series
-  Smart variable (advanced)       \[smart\_variable\_name\]        Covered in separate training
-  ------------------------------- -------------------------------- -----------------------------------------------------
+| **What Is Referenced** | **Syntax** | **Example** |
+| --- | --- | --- |
+| Regular field variable | [variable_name] | [first_name], [dob] |
+| Checkbox sub-variable | [variable_name(raw_value)] | [conditions(3)] |
+| Longitudinal event (advanced) | [event_name] | [baseline_arm_1] — covered in advanced series |
+| Smart variable (advanced) | [smart_variable_name] | Covered in separate training |
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** Curly brackets { } are used exclusively by the Field Embedding feature and have no role in branching logic syntax. If you see curly brackets in a logic field, something has gone wrong.
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** Curly brackets { } are used exclusively by the Field Embedding feature and have no role in branching logic syntax. If you see curly brackets in a logic field, something has gone wrong.
+
 
 ## 3.5 Boolean Operators
 
@@ -132,12 +129,11 @@ Boolean operators join two or more logic statements together. REDCap
 supports AND, OR, and NOT (expressed as \<\>). Both uppercase and
 lowercase are accepted.
 
-  ------------------ --------------------------------------------------------------------------- ------------------------------------------
-  **Operator**       **Behavior**                                                                **Example**
-  AND / and          Both statements must be true for the combined statement to be true          \[age\]\>=18 and \[consent\]=\'1\'
-  OR / or            At least one statement must be true for the combined statement to be true   \[country\]=\'US\' or \[country\]=\'CA\'
-  \<\> (not equal)   True when the variable does NOT equal the comparison value                  \[email\]\<\>\'\'
-  ------------------ --------------------------------------------------------------------------- ------------------------------------------
+| **Operator** | **Behavior** | **Example** |
+| --- | --- | --- |
+| AND / and | Both statements must be true for the combined statement to be true | [age]>=18 and [consent]='1' |
+| OR / or | At least one statement must be true for the combined statement to be true | [country]='US' or [country]='CA' |
+| <> (not equal) | True when the variable does NOT equal the comparison value | [email]<>'' |
 
 Combining AND and OR in the same statement requires parentheses to
 control evaluation order. See [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md) for full details.
@@ -149,22 +145,20 @@ control evaluation order. See [RC-BL-03 — Branching Logic: Combining Statement
 Every logic statement — no matter how complex — is built from atomic
 statements. An atomic statement always has exactly three parts:
 
-  ---------------------- -------------------------------------------------------------------------- ---------------------------------------------
-  **Part**               **What It Is**                                                             **Examples**
-  1\. Variable           A reference to a field in the current record, written in square brackets   \[age\] \[consent\_date\] \[exclusion\_q3\]
-  2\. Operator           Defines the comparison relationship                                        = \<\> \> \>= \< \<=
-  3\. Comparison value   What the variable is being compared to                                     18 \'yes\' \[other\_var\] \'\'
-  ---------------------- -------------------------------------------------------------------------- ---------------------------------------------
+| **Part** | **What It Is** | **Examples** |
+| --- | --- | --- |
+| 1. Variable | A reference to a field in the current record, written in square brackets | [age] [consent_date] [exclusion_q3] |
+| 2. Operator | Defines the comparison relationship | = <> > >= < <= |
+| 3. Comparison value | What the variable is being compared to | 18 'yes' [other_var] '' |
 
 The comparison value can be one of the following types:
 
-  --------------------------- --------------------------------------------- -------------------------
-  **Comparison Value Type**   **Format**                                    **Example**
-  Number                      No quotes needed (quotes also accepted)       \[age\]\>=18
-  Text string                 Must be enclosed in single or double quotes   \[status\]=\'enrolled\'
-  Empty / blank               Two quotes with nothing between them          \[email\]\<\>\'\'
-  Another variable            Variable name in square brackets              \[email1\]=\[email2\]
-  --------------------------- --------------------------------------------- -------------------------
+| **Comparison Value Type** | **Format** | **Example** |
+| --- | --- | --- |
+| Number | No quotes needed (quotes also accepted) | [age]>=18 |
+| Text string | Must be enclosed in single or double quotes | [status]='enrolled' |
+| Empty / blank | Two quotes with nothing between them | [email]<>'' |
+| Another variable | Variable name in square brackets | [email1]=[email2] |
 
 ---
 
@@ -172,18 +166,18 @@ The comparison value can be one of the following types:
 
 **Example 1 — Equality: Show field only if age is exactly 18**
 
-  ------------
-  \[age\]=18
-  ------------
+
+> [age]=18
+
 
 The field is shown only when the value of \[age\] equals exactly 18. Any
 other value hides the field.
 
 **Example 2 — Greater Than or Equal: Show field for adults**
 
-  --------------
-  \[age\]\>=18
-  --------------
+
+> [age]>=18
+
 
 The field is shown when \[age\] is 18 or any higher number. The field is
 hidden for values below 18.
@@ -191,9 +185,9 @@ hidden for values below 18.
 **Example 3 — Not Equal: Show field for any non-zero number of
 pregnancies**
 
-  --------------------------
-  \[nr\_pregnancies\]\<\>0
-  --------------------------
+
+> [nr_pregnancies]<>0
+
 
 The field is shown when \[nr\_pregnancies\] is any value other than 0
 (e.g., 1, 2, 3). Important: 0 (numeric zero) and \'\' (empty/blank) are
@@ -202,9 +196,9 @@ entered at all.
 
 **Example 4 — Empty Check: Show warning when email field is blank**
 
-  -------------------
-  \[email\]\<\>\'\'
-  -------------------
+
+> [email]<>''
+
 
 The field is shown when \[email\] contains any value at all. It
 disappears the moment the user types anything into \[email\]. This
@@ -213,17 +207,17 @@ that have not yet been filled in.
 
 **Example 5 — Comparing Two Variables**
 
-  -----------------------------------------
-  \[email\_primary\]=\[email\_secondary\]
-  -----------------------------------------
+
+> [email_primary]=[email_secondary]
+
 
 The field is shown when the value of \[email\_primary\] exactly matches
 the value of \[email\_secondary\]. Useful for validating that two fields
 have the same entry (e.g., email confirmation).
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** REDCap validates that your logic syntax is correct (valid operators, properly closed brackets, known variable names), but it does not validate whether the logic makes sense for your study. A statement like \[age\]=999 is syntactically valid but will never match any realistic data. Always test your logic against real or realistic test data.
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** REDCap validates that your logic syntax is correct (valid operators, properly closed brackets, known variable names), but it does not validate whether the logic makes sense for your study. A statement like [age]=999 is syntactically valid but will never match any realistic data. Always test your logic against real or realistic test data.
+
 
 ---
 
@@ -232,15 +226,14 @@ have the same entry (e.g., email confirmation).
 One of the most common logic errors in REDCap is treating an empty field
 as equivalent to a field containing zero. They are not the same.
 
-  ---------------- ----------------------------------------------------------------------------------------------- --------------------------------------
-  **State**        **What It Means**                                                                               **How to Test For It**
-  Empty / blank    No data has been entered into this field at all. The field has never been saved with a value.   \[field\]=\'\' (equals empty string)
-  Zero (numeric)   The user actively entered the value 0 into a number field. Zero is a data value.                \[field\]=0 or \[field\]=\'0\'
-  ---------------- ----------------------------------------------------------------------------------------------- --------------------------------------
+| **State** | **What It Means** | **How to Test For It** |
+| --- | --- | --- |
+| Empty / blank | No data has been entered into this field at all. The field has never been saved with a value. | [field]='' (equals empty string) |
+| Zero (numeric) | The user actively entered the value 0 into a number field. Zero is a data value. | [field]=0 or [field]='0' |
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** Using \[nr\_pregnancies\]\<\>0 will evaluate to true for both an empty field AND for values like 1, 2, 3. If you specifically want to test for a field that has been actively filled in with a non-zero number, combine conditions: \[nr\_pregnancies\]\<\>\'\' and \[nr\_pregnancies\]\<\>0.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** Using [nr_pregnancies]<>0 will evaluate to true for both an empty field AND for values like 1, 2, 3. If you specifically want to test for a field that has been actively filled in with a non-zero number, combine conditions: [nr_pregnancies]<>'' and [nr_pregnancies]<>0.
+
 
 ---
 

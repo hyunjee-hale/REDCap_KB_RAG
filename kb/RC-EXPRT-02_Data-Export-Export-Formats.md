@@ -64,20 +64,19 @@ REDCap offers seven export formats. Select the format that matches your
 analysis tool or downstream use case. If exporting for someone else, ask
 them which format they prefer before exporting.
 
-  -------------------------------- ----------- ------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Format**                       **Files**   **File Type(s)**   **Description & Use Case**
-  **CSV / Excel (raw data)**       1           CSV                Exports coded option values (e.g., 1, 0) for structured fields. Best for programmatic analysis and re-importing data into REDCap. Compatible with any spreadsheet application.
-  **CSV / Excel (labels)**         1           CSV                Exports display labels (e.g., \'Checked\', \'Yes\') instead of raw coded values. Best for human-readable review. Not suitable for re-import.
-  **SPSS Statistical Software**    3           SAV + SPS + TXT    Exports data with embedded variable metadata. All three files required to load data in SPSS. Eliminates manual value labeling.
-  **SAS Statistical Software**     2           CSV + SAS          Exports data with a SAS syntax file for variable labels and formats. Both files required.
-  **R Statistical Software**       2           CSV + R            Exports data with an R script for labeling and formatting. Both files required. R is open-source; data can also be pulled directly via the REDCap API.
-  **Stata Statistical Software**   2           DTA + DO           Exports data with a Stata do-file for variable metadata. Both files required.
-  **CDISC ODM (XML)**              1           XML                Standard EDC interchange format. Can be imported into other EDC systems. Also functions as a REDCap re-import format.
-  -------------------------------- ----------- ------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Format** | **Files** | **File Type(s)** | **Description & Use Case** |
+| --- | --- | --- | --- |
+| **CSV / Excel (raw data)** | 1 | CSV | Exports coded option values (e.g., 1, 0) for structured fields. Best for programmatic analysis and re-importing data into REDCap. Compatible with any spreadsheet application. |
+| **CSV / Excel (labels)** | 1 | CSV | Exports display labels (e.g., 'Checked', 'Yes') instead of raw coded values. Best for human-readable review. Not suitable for re-import. |
+| **SPSS Statistical Software** | 3 | SAV + SPS + TXT | Exports data with embedded variable metadata. All three files required to load data in SPSS. Eliminates manual value labeling. |
+| **SAS Statistical Software** | 2 | CSV + SAS | Exports data with a SAS syntax file for variable labels and formats. Both files required. |
+| **R Statistical Software** | 2 | CSV + R | Exports data with an R script for labeling and formatting. Both files required. R is open-source; data can also be pulled directly via the REDCap API. |
+| **Stata Statistical Software** | 2 | DTA + DO | Exports data with a Stata do-file for variable metadata. Both files required. |
+| **CDISC ODM (XML)** | 1 | XML | Standard EDC interchange format. Can be imported into other EDC systems. Also functions as a REDCap re-import format. |
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** For formats that generate multiple files (SPSS, SAS, R, Stata), all files must be downloaded and kept together. Opening only the data file without its companion syntax file will result in raw, unlabeled output.
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** For formats that generate multiple files (SPSS, SAS, R, Stata), all files must be downloaded and kept together. Opening only the data file without its companion syntax file will result in raw, unlabeled output.
+
 
 ---
 
@@ -111,14 +110,13 @@ the manual export process entirely. See [RC-API-01 — REDCap API](RC-API-01_RED
 
 # 5. Common Questions
 
-  ---------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  *What is the difference between CSV raw data and CSV labels?*                            Raw data exports the coded values stored internally by REDCap (e.g., 1, 0, 2). Labels exports the display text shown to users (e.g., \'Yes\', \'No\', \'Checked\'). Raw data is used for analysis and re-import; labels are easier to read but not suitable for re-import.
-  *I downloaded my SPSS export but the data file has no variable labels. What happened?*   SPSS exports generate three files — the data file (.sav), a syntax file (.sps), and an instructions file (.txt). You must run the syntax file against the data file in SPSS to apply the variable labels. Download all three files and follow the included instructions.
-  *Which format should I use if I\'m not sure?*                                            CSV / Excel (raw data) is the most universally compatible format and works in any spreadsheet application. If you\'re exporting for a statistician, ask them which software they use.
-  *Can I re-import a CSV labels export back into REDCap?*                                  No. Only CSV / Excel (raw data) and CDISC ODM (XML) can be re-imported into REDCap. The labels format is for human review only.
-  *Does the export format affect which data is included?*                                  No. The export format controls how values are represented and how many files are generated — it does not filter which records or variables are included. Report type and user rights determine what data is exported. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md).
-  *What is CDISC ODM and when would I use it?*                                             CDISC ODM is a standard XML format for exchanging data between EDC systems. Use it if you need to transfer data to another EDC tool that supports the CDISC standard, or if you want a complete backup that can be re-imported into REDCap along with its metadata.
-  ---------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| *What is the difference between CSV raw data and CSV labels?* | Raw data exports the coded values stored internally by REDCap (e.g., 1, 0, 2). Labels exports the display text shown to users (e.g., 'Yes', 'No', 'Checked'). Raw data is used for analysis and re-import; labels are easier to read but not suitable for re-import. |
+| --- | --- |
+| *I downloaded my SPSS export but the data file has no variable labels. What happened?* | SPSS exports generate three files — the data file (.sav), a syntax file (.sps), and an instructions file (.txt). You must run the syntax file against the data file in SPSS to apply the variable labels. Download all three files and follow the included instructions. |
+| *Which format should I use if I'm not sure?* | CSV / Excel (raw data) is the most universally compatible format and works in any spreadsheet application. If you're exporting for a statistician, ask them which software they use. |
+| *Can I re-import a CSV labels export back into REDCap?* | No. Only CSV / Excel (raw data) and CDISC ODM (XML) can be re-imported into REDCap. The labels format is for human review only. |
+| *Does the export format affect which data is included?* | No. The export format controls how values are represented and how many files are generated — it does not filter which records or variables are included. Report type and user rights determine what data is exported. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md). |
+| *What is CDISC ODM and when would I use it?* | CDISC ODM is a standard XML format for exchanging data between EDC systems. Use it if you need to transfer data to another EDC tool that supports the CDISC standard, or if you want a complete backup that can be re-imported into REDCap along with its metadata. |
 
 ---
 

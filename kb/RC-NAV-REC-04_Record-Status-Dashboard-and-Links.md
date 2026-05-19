@@ -76,9 +76,9 @@ REDCap automatically filters the dashboard based on your access level:
 - Data Access Group (DAG) membership: if you are in a DAG, you only
     see records that belong to your DAG.
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Troubleshooting:** If instruments seem to be missing from the dashboard, the most likely cause is either a custom dashboard filter or your access level. Check whether you are viewing a custom dashboard vs. the default dashboard.
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Troubleshooting:** If instruments seem to be missing from the dashboard, the most likely cause is either a custom dashboard filter or your access level. Check whether you are viewing a custom dashboard vs. the default dashboard.
+
 
 ---
 
@@ -89,15 +89,14 @@ REDCap automatically filters the dashboard based on your access level:
 A user with Project Design rights can create custom dashboards with the
 following options:
 
-  ------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------
-  **Customization Option**       **What It Does**
-  Show a selection of events     Hides unused or less-relevant events to condense the view.
-  Filter by arm                  Shows records from one specific arm, or all arms.
-  Filter by logic                Applies a REDCap logic expression to show only matching records (e.g., only consented participants).
-  Group by event or instrument   Reorganizes the grid to group all instances of one instrument or event together — useful for reviewing adverse events across all timepoints.
-  Vertical header orientation    Rotates column headers to vertical text, narrowing columns when instrument or event names are long.
-  Custom sorting                 Sorts records by a variable other than Record ID (e.g., by date of birth or visit date).
-  ------------------------------ ------------------------------------------------------------------------------------------------------------------------------------------------
+| **Customization Option** | **What It Does** |
+| --- | --- |
+| Show a selection of events | Hides unused or less-relevant events to condense the view. |
+| Filter by arm | Shows records from one specific arm, or all arms. |
+| Filter by logic | Applies a REDCap logic expression to show only matching records (e.g., only consented participants). |
+| Group by event or instrument | Reorganizes the grid to group all instances of one instrument or event together — useful for reviewing adverse events across all timepoints. |
+| Vertical header orientation | Rotates column headers to vertical text, narrowing columns when instrument or event names are long. |
+| Custom sorting | Sorts records by a variable other than Record ID (e.g., by date of birth or visit date). |
 
 ## 4.2 Accessing Custom Dashboards
 
@@ -131,9 +130,9 @@ to the Record Home Page:
 
 - Calendars
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** Survey invitation logs and the participant list only contain working Record ID links when the survey is in identified mode. In anonymous mode, the links are deactivated to protect respondent anonymity.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** Survey invitation logs and the participant list only contain working Record ID links when the survey is in identified mode. In anonymous mode, the links are deactivated to protect respondent anonymity.
+
 
 ## 5.2 Variable Links (to a Specific Instrument and Field)
 

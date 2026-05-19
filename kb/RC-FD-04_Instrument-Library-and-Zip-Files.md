@@ -106,9 +106,9 @@ library, contact your local REDCap support team. The submission process
 involves committee review by the REDCap consortium before the instrument
 is made publicly available.
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** Always review imported instruments in the Online Designer after import. Variable names from the library may conflict with names already in your project, or the instrument\'s branching logic may reference variables that don\'t exist in your project context.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** Always review imported instruments in the Online Designer after import. Variable names from the library may conflict with names already in your project, or the instrument's branching logic may reference variables that don't exist in your project context.
+
 
 ---
 
@@ -164,24 +164,23 @@ is made publicly available.
 - Review the imported instrument in the Online Designer to verify the
     import is correct.
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** Zip file import does not overwrite existing instruments — it adds the imported instrument as a new one. If you want to replace an existing instrument with a zip file version, you must delete the existing instrument first (only possible if it contains no data).
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** Zip file import does not overwrite existing instruments — it adds the imported instrument as a new one. If you want to replace an existing instrument with a zip file version, you must delete the existing instrument first (only possible if it contains no data).
+
 
 ---
 
 # 5. Library vs. Zip File: When to Use Each
 
-  -------------------- ------------------------------------------------- ----------------------------------------------------------
-  **Factor**           **Instrument Library**                            **Zip File**
-  Source               Centrally curated, Vanderbilt-hosted              Any REDCap user or project
-  Curation             Committee-reviewed before publication             Not curated — quality varies
-  Licensing            Some instruments require a fee                    No licensing constraints
-  Use case             Validated clinical scales; community tools        Reusing your own instruments; sharing with collaborators
-  Backup use           Not applicable                                    Yes — export for safekeeping
-  Access point         Project Setup page or Online Designer             Online Designer only
-  Collision handling   Automatic detection; must resolve before import   Automatic detection with suggested alternatives
-  -------------------- ------------------------------------------------- ----------------------------------------------------------
+| **Factor** | **Instrument Library** | **Zip File** |
+| --- | --- | --- |
+| Source | Centrally curated, Vanderbilt-hosted | Any REDCap user or project |
+| Curation | Committee-reviewed before publication | Not curated — quality varies |
+| Licensing | Some instruments require a fee | No licensing constraints |
+| Use case | Validated clinical scales; community tools | Reusing your own instruments; sharing with collaborators |
+| Backup use | Not applicable | Yes — export for safekeeping |
+| Access point | Project Setup page or Online Designer | Online Designer only |
+| Collision handling | Automatic detection; must resolve before import | Automatic detection with suggested alternatives |
 
 ---
 

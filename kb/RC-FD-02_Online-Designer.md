@@ -145,9 +145,9 @@ These project-level buttons are distinct from the per-instrument buttons that ap
 | Approval required | No | Yes — automatic or administrator, per institutional policy |
 | Rollback | Re-edit or re-upload a saved Data Dictionary | Cancel before approval; no rollback after approval |
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** The level of automatic approvals in Production mode is set centrally by your institution\'s REDCap support team. Some institutions allow minor changes (adding a new field) to be auto-approved, while others require administrator review for any change. For this installation\'s specific policy, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** The level of automatic approvals in Production mode is set centrally by your institution's REDCap support team. Some institutions allow minor changes (adding a new field) to be auto-approved, while others require administrator review for any change. For this installation's specific policy, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
+
 
 ---
 

@@ -72,17 +72,17 @@ in the database and what you must use in logic statements.
 
 In the Online Designer, options are entered one per line in the format:
 
-+---------------------------------------------------+
-| raw\_value, Display Label                         |
-|                                                   |
-| // Example — a radio button with three options: |
-|                                                   |
-| 1, Strongly Agree                                 |
-|                                                   |
-| 2, Agree                                          |
-|                                                   |
-| 3, Disagree                                       |
-+---------------------------------------------------+
+```
+raw_value, Display Label                        
+                                                 
+// Example — a radio button with three options:
+                                                 
+1, Strongly Agree                                
+                                                 
+2, Agree                                         
+                                                 
+3, Disagree                                      
+```
 
 Raw values are typically integers, but they can be any text string. The
 raw value is **unique within the field** — no two options in the same
@@ -100,9 +100,9 @@ field can share a raw value.
 - **Data Dictionary:** The Choices, Calculations, OR Slider Labels
     column contains all option definitions in raw value, label format.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** Always use the raw value in logic statements, never the display label. If the label is \'Strongly Agree\' and the raw value is 1, write \[field\]=\'1\' — not \[field\]=\'Strongly Agree\'. Labels can be changed by the project designer at any time; raw values are stable.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** Always use the raw value in logic statements, never the display label. If the label is 'Strongly Agree' and the raw value is 1, write [field]='1' — not [field]='Strongly Agree'. Labels can be changed by the project designer at any time; raw values are stable.
+
 
 ---
 
@@ -114,15 +114,14 @@ statement pattern.
 
 ## 4.1 Supported Single-Choice Field Types
 
-  ------------------ --------------------------------------- ---------------------
-  **Field Type**     **Stored Value**                        **Logic Example**
-  Radio button       Raw value of selected option            \[gender\]=\'1\'
-  Dropdown           Raw value of selected option            \[country\]=\'US\'
-  Yes / No           \'1\' = Yes, \'0\' = No                 \[consent\]=\'1\'
-  True / False       \'1\' = True, \'0\' = False             \[eligible\]=\'1\'
-  Slider             The numeric position value selected     \[pain\_score\]\>=7
-  Calculated field   The numeric result of the calculation   \[bmi\]\>=25
-  ------------------ --------------------------------------- ---------------------
+| **Field Type** | **Stored Value** | **Logic Example** |
+| --- | --- | --- |
+| Radio button | Raw value of selected option | [gender]='1' |
+| Dropdown | Raw value of selected option | [country]='US' |
+| Yes / No | '1' = Yes, '0' = No | [consent]='1' |
+| True / False | '1' = True, '0' = False | [eligible]='1' |
+| Slider | The numeric position value selected | [pain_score]>=7 |
+| Calculated field | The numeric result of the calculation | [bmi]>=25 |
 
 ## 4.2 Bonus: File Upload and Signature Fields
 
@@ -130,13 +129,13 @@ File Upload and Signature fields do not store a traditional value, but
 you can use them in logic to check whether a file has been attached or a
 signature captured:
 
-+-------------------------------------------------------------------+
-| \[consent\_form\]\<\>\'\' // True when a file has been uploaded   |
-|                                                                   |
-| \[signature\]\<\>\'\' // True when a signature has been captured  |
-|                                                                   |
-| \[consent\_form\]=\'\' // True when no file has been uploaded yet |
-+-------------------------------------------------------------------+
+```
+[consent_form]<>'' // True when a file has been uploaded  
+                                                                 
+[signature]<>'' // True when a signature has been captured 
+                                                                 
+[consent_form]='' // True when no file has been uploaded yet
+```
 
 You cannot compare the file contents — only the presence or absence of
 the file.
@@ -161,13 +160,13 @@ values:
 
 Example: a checkbox field named \[conditions\] with three options:
 
-+-----------------+
-| 1, Diabetes     |
-|                 |
-| 2, Hypertension |
-|                 |
-| 3, Cancer       |
-+-----------------+
+```
+1, Diabetes    
+               
+2, Hypertension
+               
+3, Cancer      
+```
 
 This creates three sub-variables: \[conditions(1)\], \[conditions(2)\],
 \[conditions(3)\]. Each is independently 0 or 1.
@@ -177,59 +176,58 @@ This creates three sub-variables: \[conditions(1)\], \[conditions(2)\],
 To reference a specific checkbox option in logic, place the raw value of
 that option inside parentheses within the variable name:
 
-+----------------------------------------------------------------+
-| Format: \[variable\_name(raw\_value)\]                         |
-|                                                                |
-| Examples:                                                      |
-|                                                                |
-| \[conditions(1)\]=\'1\' // Is the Diabetes option checked?     |
-|                                                                |
-| \[conditions(2)\]=\'1\' // Is the Hypertension option checked? |
-|                                                                |
-| \[conditions(3)\]=\'0\' // Is the Cancer option NOT checked?   |
-+----------------------------------------------------------------+
+```
+Format: [variable_name(raw_value)]                        
+                                                              
+Examples:                                                     
+                                                              
+[conditions(1)]='1' // Is the Diabetes option checked?    
+                                                              
+[conditions(2)]='1' // Is the Hypertension option checked?
+                                                              
+[conditions(3)]='0' // Is the Cancer option NOT checked?  
+```
 
 ## 5.3 Comparing Radio vs. Checkbox Syntax
 
-  ------------------------------------------ ------------------ -------------------------------------------------------------------------------
-  **Scenario**                               **Radio Button**   **Checkbox**
-  Option with raw value 12 is selected       \[radio\]=12       \[checkbox(12)\]=\'1\'
-  Option with raw value 12 is NOT selected   \[radio\]\<\>12    \[checkbox(12)\]=\'0\'
-  Field has no selection (empty)             \[radio\]=\'\'     Not directly testable as a single expression — check each option separately
-  ------------------------------------------ ------------------ -------------------------------------------------------------------------------
+| **Scenario** | **Radio Button** | **Checkbox** |
+| --- | --- | --- |
+| Option with raw value 12 is selected | [radio]=12 | [checkbox(12)]='1' |
+| Option with raw value 12 is NOT selected | [radio]<>12 | [checkbox(12)]='0' |
+| Field has no selection (empty) | [radio]='' | Not directly testable as a single expression — check each option separately |
 
 ## 5.4 Practical Checkbox Logic Patterns
 
 Show a follow-up field when at least one of several checkbox options is
 checked:
 
-+----------------------------------------------------------------------+
-| \[conditions(1)\]=\'1\' or \[conditions(2)\]=\'1\' or                |
-| \[conditions(3)\]=\'1\'                                              |
-|                                                                      |
-| // True when Diabetes OR Hypertension OR Cancer is checked           |
-+----------------------------------------------------------------------+
+```
+[conditions(1)]='1' or [conditions(2)]='1' or               
+[conditions(3)]='1'                                             
+                                                                    
+// True when Diabetes OR Hypertension OR Cancer is checked          
+```
 
 Show a field only when a specific combination of checkboxes is checked:
 
-+--------------------------------------------------------------+
-| \[conditions(1)\]=\'1\' and \[conditions(2)\]=\'1\'          |
-|                                                              |
-| // True only when BOTH Diabetes AND Hypertension are checked |
-+--------------------------------------------------------------+
+```
+[conditions(1)]='1' and [conditions(2)]='1'         
+                                                            
+// True only when BOTH Diabetes AND Hypertension are checked
+```
 
 Show a field when a specific option is explicitly NOT checked:
 
-+----------------------------------------------------------------------+
-| \[conditions(3)\]=\'0\'                                              |
-|                                                                      |
-| // True when Cancer is NOT checked (i.e., option is unchecked or     |
-| never shown)                                                         |
-+----------------------------------------------------------------------+
+```
+[conditions(3)]='0'                                             
+                                                                    
+// True when Cancer is NOT checked (i.e., option is unchecked or    
+never shown)                                                        
+```
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Warning:** Do not switch a checkbox field to a radio button field (or vice versa) after branching logic has been written that references it. The sub-variable syntax for checkboxes is incompatible with the single-value syntax for radio buttons. Any existing logic referencing that field will break and must be rewritten.
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Warning:** Do not switch a checkbox field to a radio button field (or vice versa) after branching logic has been written that references it. The sub-variable syntax for checkboxes is incompatible with the single-value syntax for radio buttons. Any existing logic referencing that field will break and must be rewritten.
+
 
 ---
 

@@ -73,20 +73,19 @@ Complete every applicable item below before opening the REDCap
 randomization setup interface. Items skipped prematurely are the leading
 cause of model rebuilds.
 
-  ------- ----------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------
-  **✓**   **Pre-flight item**                                                                                               **Skip if...**
-  ☐       **Confirm Randomization is enabled system-wide** — verify with your REDCap administrator that the Randomization module is enabled in the Control Center ([RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)). If the Randomization option does not appear in Project Setup, the module is disabled.   *Never — must be enabled before any project can use it*
-  ☐       Decide: open (unblinded) or blinded randomization?                                                                *Never — this decision drives variable type and workflow*
-  ☐       Decide: will you use stratification? If yes, list your strata (max 14, all must be single-choice field types)     *No stratification planned*
-  ☐       Decide: will you use Data Access Groups (DAGs) for multi-site stratification?                                     *No DAGs in this project*
-  ☐       Consult your statistician and confirm allocation table strategy (size, format, software)                          *Never — statistician input is always recommended*
-  ☐       Create your randomization variable in the instrument designer (dropdown/radio for open; plain text for blinded)   *Never — must exist before setup*
-  ☐       Create all stratification variables in the instrument designer (dropdown, radio, yes/no, true/false only)         *No stratification planned*
-  ☐       Set up Data Access Groups if using DAG-based site stratification                                                  *Not using DAGs*
-  ☐       Set up at least the framework of your longitudinal model (arms and events) if applicable                          *Non-longitudinal project*
-  ☐       Confirm you have Project Design and Setup rights AND User Rights management access                                *Never — both are required*
-  ☐       Confirm your allocation table is ready (or a plan is in place to obtain it)                                       *Never — required before going to production*
-  ------- ----------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------
+| **✓** | **Pre-flight item** | **Skip if...** |
+| --- | --- | --- |
+| ☐ | **Confirm Randomization is enabled system-wide** — verify with your REDCap administrator that the Randomization m | dule is enabled in the Control Center ([RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)). If the Randomization option does not appear in Project Setup, the module is disabled.   *Never — must be enabled before any project can use it* |
+| ☐ | Decide: open (unblinded) or blinded randomization? | *Never — this decision drives variable type and workflow* |
+| ☐ | Decide: will you use stratification? If yes, list your strata (max 14, all must be single-choice field types) | *No stratification planned* |
+| ☐ | Decide: will you use Data Access Groups (DAGs) for multi-site stratification? | *No DAGs in this project* |
+| ☐ | Consult your statistician and confirm allocation table strategy (size, format, software) | *Never — statistician input is always recommended* |
+| ☐ | Create your randomization variable in the instrument designer (dropdown/radio for open; plain text for blinded) | *Never — must exist before setup* |
+| ☐ | Create all stratification variables in the instrument designer (dropdown, radio, yes/no, true/false only) | *No stratification planned* |
+| ☐ | Set up Data Access Groups if using DAG-based site stratification | *Not using DAGs* |
+| ☐ | Set up at least the framework of your longitudinal model (arms and events) if applicable | *Non-longitudinal project* |
+| ☐ | Confirm you have Project Design and Setup rights AND User Rights management access | *Never — both are required* |
+| ☐ | Confirm your allocation table is ready (or a plan is in place to obtain it) | *Never — required before going to production* |
 
 ---
 
@@ -97,30 +96,30 @@ if they do not apply to your project design.
 
 ## 4.1 Variable and framework setup (Steps 1--4)
 
-+-------+-------------------------------------------------------------+
-| **1** | **Create your randomization variable**                      |
-|       |                                                             |
-|       | *Open: create a dropdown or radio button field. Use group   |
-|       | names as options (e.g., \'Control\' / \'Intervention\').    |
-|       | Use a simple, memorable variable name --- branching logic   |
-|       | will reference it frequently. Blinded: create a plain text  |
-|       | field with no validation.*                                  |
-+-------+-------------------------------------------------------------+
+```
+**1** | **Create your randomization variable**                     
+      |                                                            
+      | *Open: create a dropdown or radio button field. Use group  
+      | names as options (e.g., 'Control' / 'Intervention').   
+      | Use a simple, memorable variable name --- branching logic  
+      | will reference it frequently. Blinded: create a plain text 
+      | field with no validation.*                                 
+```
 | **2** | **Create your stratification variables (optional)**         |
 |       |                                                             |
 |       | *For each stratum, create a single-choice field: dropdown,  |
 |       | radio button, yes/no, or true/false. Maximum 14             |
 |       | stratification variables. Skip if not using                 |
 |       | stratification.*                                            |
-+-------+-------------------------------------------------------------+
-| **3** | **Set up Data Access Groups (optional)**                    |
-|       |                                                             |
-|       | *Navigate to Applications → DAGs and configure your site    |
-|       | groups. Must be done before the randomization model is      |
-|       | defined --- you cannot add new DAGs to an existing          |
-|       | production model. Skip if not using DAG-based site          |
-|       | stratification.*                                            |
-+-------+-------------------------------------------------------------+
+```
+**3** | **Set up Data Access Groups (optional)**                   
+      |                                                            
+      | *Navigate to Applications → DAGs and configure your site   
+      | groups. Must be done before the randomization model is     
+      | defined --- you cannot add new DAGs to an existing         
+      | production model. Skip if not using DAG-based site         
+      | stratification.*                                           
+```
 | **4** | **Set up your longitudinal framework (optional)**           |
 |       |                                                             |
 |       | *Define arms and events. Critically: decide which event     |
@@ -129,25 +128,23 @@ if they do not apply to your project design.
 |       | modify events later as long as you do not change the event  |
 |       | that holds the randomization variable. Skip if not using    |
 |       | longitudinal mode.*                                         |
-+-------+-------------------------------------------------------------+
-
+```
 ## 4.2 Enable the module (Steps 5--7)
-
-+-------+-------------------------------------------------------------+
+```
 | **5** | **Confirm user rights — Part 1**                          |
 |       |                                                             |
 |       | *Verify you have both \'Project Design and Setup\' AND      |
 |       | \'User Rights\' management rights. Both are required.       |
 |       | Obtain them before proceeding.*                             |
-+-------+-------------------------------------------------------------+
-| **6** | **Enable the randomization module**                         |
-|       |                                                             |
-|       | *Go to Project Setup → \'Enable optional modules and        |
-|       | customizations\'. Click Enable next to Randomization.       |
-|       | Confirmation: the module label turns green, the button      |
-|       | changes to Disable, and a Randomization item appears in the |
-|       | Applications menu.*                                         |
-+-------+-------------------------------------------------------------+
+```
+**6** | **Enable the randomization module**                        
+      |                                                            
+      | *Go to Project Setup → 'Enable optional modules and       
+      | customizations'. Click Enable next to Randomization.      
+      | Confirmation: the module label turns green, the button     
+      | changes to Disable, and a Randomization item appears in the
+      | Applications menu.*                                        
+```
 | **7** | **Assign randomization user rights — Part 2**             |
 |       |                                                             |
 |       | *Navigate to Applications → User Rights. Enabling the       |
@@ -156,28 +153,26 @@ if they do not apply to your project design.
 |       | Randomize → data entry staff and project builders (for      |
 |       | testing). Dashboard → PIs, statisticians, coordinators,     |
 |       | project builders.*                                          |
-+-------+-------------------------------------------------------------+
-
+```
 ## 4.3 Define the randomization model (Step 8)
 
 This is the most critical step. Decisions made here are locked once the
 model is saved. Review [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) before proceeding if you have any
 uncertainty about the concepts below.
-
-+--------+------------------------------------------------------------+
+```
 | **8a** | **Open the randomization setup**                           |
 |        |                                                            |
 |        | *Go to Applications → Randomization. Click \'+ Add new     |
 |        | randomization model\'.*                                    |
-+--------+------------------------------------------------------------+
-| **8b** | **Configure stratification**                               |
-|        |                                                            |
-|        | *If using stratification, check \'Use stratified           |
-|        | randomization\'. Select up to 14 stratification variables  |
-|        | from the dropdown. For longitudinal projects, also select  |
-|        | the event each stratification variable belongs to. If not  |
-|        | using stratification, leave unchecked.*                    |
-+--------+------------------------------------------------------------+
+```
+**8b** | **Configure stratification**                              
+       |                                                           
+       | *If using stratification, check 'Use stratified          
+       | randomization'. Select up to 14 stratification variables 
+       | from the dropdown. For longitudinal projects, also select 
+       | the event each stratification variable belongs to. If not 
+       | using stratification, leave unchecked.*                   
+```
 | **8c** | **Configure multi-site / DAGs**                            |
 |        |                                                            |
 |        | *If randomizing by site using DAGs, check \'Use Data       |
@@ -185,32 +180,30 @@ uncertainty about the concepts below.
 |        | dedicated variable for site, select it from the dropdown   |
 |        | (and event if longitudinal). If not using multi-site,      |
 |        | skip.*                                                     |
-+--------+------------------------------------------------------------+
-| **8d** | **Select the randomization variable**                      |
-|        |                                                            |
-|        | *Select your pre-created randomization variable from the   |
-|        | dropdown. For longitudinal projects, also select the       |
-|        | corresponding event. REDCap shows all valid options for    |
-|        | both open and blinded setups. Warning: if the variable     |
-|        | already contains data from testing, saving the model will  |
-|        | erase that data. REDCap will warn you.*                    |
-+--------+------------------------------------------------------------+
+```
+**8d** | **Select the randomization variable**                     
+       |                                                           
+       | *Select your pre-created randomization variable from the  
+       | dropdown. For longitudinal projects, also select the      
+       | corresponding event. REDCap shows all valid options for   
+       | both open and blinded setups. Warning: if the variable    
+       | already contains data from testing, saving the model will 
+       | erase that data. REDCap will warn you.*                   
+```
 | **8e** | **Save the model**                                         |
 |        |                                                            |
 |        | *Click \'Save randomization model\'. The model is now      |
 |        | locked. To make structural changes, you must use \'Erase   |
 |        | randomization model\' and rebuild from scratch --- which   |
 |        | also erases all randomization data in that variable.*      |
-+--------+------------------------------------------------------------+
-
-> **⚠ Warning:** *\'Erase randomization model\' is available in
+```
+> **⚠ Warning:** *'Erase randomization model' is available in
 > Development mode only. In Production, only a REDCap administrator can
 > make structural changes, and doing so has major consequences. Test
 > thoroughly before going to production.*
 
 ## 4.4 Allocation tables (Steps 9--10)
-
-+--------+------------------------------------------------------------+
+```
 | **9**  | **Download the allocation table template**                 |
 |        |                                                            |
 |        | *In the randomization setup page, download the template    |
@@ -218,17 +211,17 @@ uncertainty about the concepts below.
 |        | settings (open vs. blinded, stratification, etc.) and      |
 |        | includes instructions. Share this template with your       |
 |        | statistician if they are generating the table.*            |
-+--------+------------------------------------------------------------+
-| **10** | **Upload the development allocation table**                |
-|        |                                                            |
-|        | *Once you have a valid allocation table, upload it to the  |
-|        | Development slot. Click \'Choose file\', select the file,  |
-|        | then click \'Upload File\'. Confirmation: the icon changes |
-|        | to a checkmark labeled \'Already uploaded\'. Development   |
-|        | tables can be deleted and re-uploaded for testing. Note:   |
-|        | re-uploading affects test records --- create fresh test    |
-|        | records when testing a new table.*                         |
-+--------+------------------------------------------------------------+
+```
+**10** | **Upload the development allocation table**               
+       |                                                           
+       | *Once you have a valid allocation table, upload it to the 
+       | Development slot. Click 'Choose file', select the file, 
+       | then click 'Upload File'. Confirmation: the icon changes
+       | to a checkmark labeled 'Already uploaded'. Development  
+       | tables can be deleted and re-uploaded for testing. Note:  
+       | re-uploading affects test records --- create fresh test   
+       | records when testing a new table.*                        
+```
 
 ## 4.5 Trigger options (Step 11)
 
@@ -243,17 +236,17 @@ feature — verify your REDCap version supports it.
 
 ## 4.6 Test, finalize, and go to production (Steps 12--14)
 
-+--------+------------------------------------------------------------+
-| **12** | **Test thoroughly in Development mode**                    |
-|        |                                                            |
-|        | *Test every randomization pathway: manual button, trigger  |
-|        | logic (if used), stratification prompts, blinded/open      |
-|        | display, dashboard counts. Create multiple test records.   |
-|        | Verify allocation table consumption. Check that users      |
-|        | without Randomize rights see the field greyed out. It is   |
-|        | rare to get randomization right on the first attempt ---   |
-|        | build in time for this step.*                              |
-+--------+------------------------------------------------------------+
+```
+**12** | **Test thoroughly in Development mode**                   
+       |                                                           
+       | *Test every randomization pathway: manual button, trigger 
+       | logic (if used), stratification prompts, blinded/open     
+       | display, dashboard counts. Create multiple test records.  
+       | Verify allocation table consumption. Check that users     
+       | without Randomize rights see the field greyed out. It is  
+       | rare to get randomization right on the first attempt ---  
+       | build in time for this step.*                             
+```
 | **13** | **Upload the production allocation table**                 |
 |        |                                                            |
 |        | *Once satisfied with testing, upload the allocation table  |
@@ -262,18 +255,18 @@ feature — verify your REDCap version supports it.
 |        | randomization models have a production allocation table    |
 |        | --- REDCap will not allow the project to move to           |
 |        | production otherwise.*                                     |
-+--------+------------------------------------------------------------+
-| **14** | **Move the project to Production**                         |
-|        |                                                            |
-|        | *Go to Project Setup and move the project to Production    |
-|        | status. REDCap will ask whether to delete existing records |
-|        | --- if you have only test records, deletion is             |
-|        | appropriate. Do not start real randomization in            |
-|        | Development mode and then switch --- randomization values  |
-|        | in the randomization variable will be cleared when moving  |
-|        | to production. Always begin real data collection in        |
-|        | Production.*                                               |
-+--------+------------------------------------------------------------+
+```
+**14** | **Move the project to Production**                        
+       |                                                           
+       | *Go to Project Setup and move the project to Production   
+       | status. REDCap will ask whether to delete existing records
+       | --- if you have only test records, deletion is            
+       | appropriate. Do not start real randomization in           
+       | Development mode and then switch --- randomization values 
+       | in the randomization variable will be cleared when moving 
+       | to production. Always begin real data collection in       
+       | Production.*                                              
+```
 
 ---
 

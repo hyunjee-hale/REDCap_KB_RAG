@@ -79,15 +79,14 @@ the Add/Edit/Organize Reports right is not granted.
 
 ## 3.1 From the Left-Hand Menu
 
-  ------- -----------------------------------------------------------------------------------
-  **1**   Log in and open your project from the My Projects page.
-  **2**   In the left-hand menu, locate the Applications section.
-  **3**   Click Data Exports, Reports, and Stats. The application opens to the report list.
-  ------- -----------------------------------------------------------------------------------
+| **1** | Log in and open your project from the My Projects page. |
+| --- | --- |
+| **2** | In the left-hand menu, locate the Applications section. |
+| **3** | Click Data Exports, Reports, and Stats. The application opens to the report list. |
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** If Data Exports, Reports, and Stats does not appear in your menu, your account has no Data Export rights and the Add/Edit/Organize Reports right is not enabled. Contact your project administrator to review your user rights.
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** If Data Exports, Reports, and Stats does not appear in your menu, your account has no Data Export rights and the Add/Edit/Organize Reports right is not enabled. Contact your project administrator to review your user rights.
+
 
 ---
 
@@ -96,34 +95,32 @@ the Add/Edit/Organize Reports right is not granted.
 Every export in REDCap follows the same sequence of steps, regardless of
 the report type or export format selected.
 
-  ------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **1**   Navigate to the Data Exports, Reports, and Stats application (see Section 3).
-  **2**   Locate the report you want to export — All Data, Selected Instruments/Events, or a custom report. Click Export Data for that report.
-  **3**   Choose an export format from the seven available options. See [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) for guidance on which format to choose.
-  **4**   Set de-identification options if required or desired. Options available depend on your Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details.
-  **5**   Review additional export options and data formatting options. The defaults are appropriate for most exports. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details on each option.
-  **6**   Click the Export Data button to generate the export files.
-  **7**   Download all generated files. The number of files depends on the export format — some formats generate multiple files that must all be downloaded. Read the included format-specific instructions carefully.
-  **8**   Click the Close button to finish. REDCap saves a copy of this export in the File Repository automatically.
-  ------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **1** | Navigate to the Data Exports, Reports, and Stats application (see Section 3). |
+| --- | --- |
+| **2** | Locate the report you want to export — All Data, Selected Instruments/Events, or a custom report. Click Export Data for that report. |
+| **3** | Choose an export format from the seven available options. See [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) for guidance on which format to choose. |
+| **4** | Set de-identification options if required or desired. Options available depend on your Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for full details. |
+| **5** | Review additional export options and data formatting options. The defaults are appropriate for most exports. See [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details on each option. |
+| **6** | Click the Export Data button to generate the export files. |
+| **7** | Download all generated files. The number of files depends on the export format — some formats generate multiple files that must all be downloaded. Read the included format-specific instructions carefully. |
+| **8** | Click the Close button to finish. REDCap saves a copy of this export in the File Repository automatically. |
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Tip:** If you need to re-download an export you generated previously, navigate to the File Repository application in the left-hand menu. REDCap stores a copy of every export there. You do not need to run the export again.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Tip:** If you need to re-download an export you generated previously, navigate to the File Repository application in the left-hand menu. REDCap stores a copy of every export there. You do not need to run the export again.
+
 
 ---
 
 # 5. Common Questions
 
-  ---------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  *Where do I find the Data Exports, Reports, and Stats application?*                            In the left-hand project menu under Applications. If it does not appear, you do not have Data Export rights or the Add/Edit/Organize Reports right. Contact your project administrator.
-  *I ran an export this morning and accidentally deleted the file. Do I have to run it again?*   No. Navigate to the File Repository application in the left-hand menu. REDCap automatically saves a copy of every export there. Download it directly without repeating the export process.
-  *How many files does REDCap generate when I export?*                                           It depends on the export format. CSV/Excel generates one file. SPSS generates three files. SAS, R, and Stata each generate two files. CDISC ODM generates one XML file. All files for a given format must be downloaded together for the data to load correctly in the target application.
-  *Do I have to set de-identification options every time?*                                       No. De-identification options are optional if your export rights allow a Full Data Set export. They are required only if your rights are set to De-identified or Remove All Identifier Fields. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details.
-  *Why can\'t I see the Data Exports, Reports, and Stats application in my menu?*                The application only appears if you have at least one of the following: any Data Export right above No Access, or the Add/Edit/Organize Reports right. If neither is granted, the application is hidden entirely.
-  *Can I export data from multiple instruments at once?*                                         Yes. Use the Selected Instruments/Events report to choose which instruments to include. For longitudinal projects, you must also select one or more events. See [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) for details on report types.
-  *What happens if I close the export dialog before downloading my files?*                       The files are still saved in the File Repository. Navigate there to download them at any time.
-  ---------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| *Where do I find the Data Exports, Reports, and Stats application?* | In the left-hand project menu under Applications. If it does not appear, you do not have Data Export rights or the Add/Edit/Organize Reports right. Contact your project administrator. |
+| --- | --- |
+| *I ran an export this morning and accidentally deleted the file. Do I have to run it again?* | No. Navigate to the File Repository application in the left-hand menu. REDCap automatically saves a copy of every export there. Download it directly without repeating the export process. |
+| *How many files does REDCap generate when I export?* | It depends on the export format. CSV/Excel generates one file. SPSS generates three files. SAS, R, and Stata each generate two files. CDISC ODM generates one XML file. All files for a given format must be downloaded together for the data to load correctly in the target application. |
+| *Do I have to set de-identification options every time?* | No. De-identification options are optional if your export rights allow a Full Data Set export. They are required only if your rights are set to De-identified or Remove All Identifier Fields. See [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) and [RC-EXPRT-04 — Data Export: De-identification & Formatting Options](RC-EXPRT-04_Data-Export-De-identification-and-Formatting-Options.md) for details. |
+| *Why can't I see the Data Exports, Reports, and Stats application in my menu?* | The application only appears if you have at least one of the following: any Data Export right above No Access, or the Add/Edit/Organize Reports right. If neither is granted, the application is hidden entirely. |
+| *Can I export data from multiple instruments at once?* | Yes. Use the Selected Instruments/Events report to choose which instruments to include. For longitudinal projects, you must also select one or more events. See [RC-EXPRT-05 — Data Export: Report Types & Other Export Options](RC-EXPRT-05_Data-Export-Report-Types-and-Other-Export-Options.md) for details on report types. |
+| *What happens if I close the export dialog before downloading my files?* | The files are still saved in the File Repository. Navigate there to download them at any time. |
 
 ---
 

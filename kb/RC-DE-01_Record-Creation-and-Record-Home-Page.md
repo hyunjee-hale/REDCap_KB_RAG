@@ -83,9 +83,9 @@ single variable for speed in large projects.
 - If the project contains multiple instruments or events, REDCap opens
     the Record Home Page first.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** The Record ID is permanent once assigned. It cannot be changed through normal data entry. Treat it as an opaque system identifier — avoid using it as a meaningful clinical or participant identifier.
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** The Record ID is permanent once assigned. It cannot be changed through normal data entry. Treat it as an opaque system identifier — avoid using it as a meaningful clinical or participant identifier.
+
 
 ## 3.3 Finding an Existing Record by ID
 
@@ -136,9 +136,9 @@ single variable for speed in large projects.
 - Once inside an instrument, the left-hand menu shows a list of all
     instruments in the project for quick switching.
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** The \'Choose action for record\' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in [RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md).
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** The 'Choose action for record' button on the Record Home Page provides advanced administrative functions (moving records, deleting records, etc.). These are covered in [RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md).
+
 
 ---
 

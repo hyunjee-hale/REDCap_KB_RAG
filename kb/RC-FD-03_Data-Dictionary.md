@@ -125,9 +125,9 @@ works.
 
 # 5. Essential Safety Practices
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Critical:** The Data Dictionary overwrites your existing project configuration on upload. Always download and save a snapshot of the current Data Dictionary before making any significant changes. This is your only reliable recovery path if an upload produces unintended results.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Critical:** The Data Dictionary overwrites your existing project configuration on upload. Always download and save a snapshot of the current Data Dictionary before making any significant changes. This is your only reliable recovery path if an upload produces unintended results.
+
 
 ## 5.1 Before Uploading
 

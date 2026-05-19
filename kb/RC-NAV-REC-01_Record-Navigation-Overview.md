@@ -123,15 +123,14 @@ opening individual records.
 Every instrument in REDCap is represented by a colored dot. The color
 encodes the completion status of that instrument for a given record.
 
-  ----------------------------- -----------------------------------------------------------------------------------------------------------------------
-  **Dot Appearance**            **Meaning**
-  Grey                          Incomplete — no data has been entered. This is the default state.
-  Red                           Data has been saved, but the Form Status field is still set to Incomplete.
-  Yellow                        Form Status field is set to Unverified by a user.
-  Green                         Form Status field is set to Complete by a user.
-  Orange with white checkmark   The instrument was opened as a survey but only partially completed (e.g., participant closed the browser mid-survey).
-  Green with white checkmark    The instrument was completed in full as a survey.
-  ----------------------------- -----------------------------------------------------------------------------------------------------------------------
+| **Dot Appearance** | **Meaning** |
+| --- | --- |
+| Grey | Incomplete — no data has been entered. This is the default state. |
+| Red | Data has been saved, but the Form Status field is still set to Incomplete. |
+| Yellow | Form Status field is set to Unverified by a user. |
+| Green | Form Status field is set to Complete by a user. |
+| Orange with white checkmark | The instrument was opened as a survey but only partially completed (e.g., participant closed the browser mid-survey). |
+| Green with white checkmark | The instrument was completed in full as a survey. |
 
 **Important distinctions:**
 
@@ -145,9 +144,9 @@ encodes the completion status of that instrument for a given record.
 - Survey statuses (orange and green with checkmarks) are set
     automatically when a survey is submitted or partially completed.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Technical Note:** Instrument status values are stored as part of the project dataset and can be manipulated in bulk via data import. Grey and red are both coded as 0; yellow = 1; green = 2. Survey statuses (orange checkmark = 1, green checkmark = 2) only appear when the instrument is used as a survey.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Technical Note:** Instrument status values are stored as part of the project dataset and can be manipulated in bulk via data import. Grey and red are both coded as 0; yellow = 1; green = 2. Survey statuses (orange checkmark = 1, green checkmark = 2) only appear when the instrument is used as a survey.
+
 
 ---
 

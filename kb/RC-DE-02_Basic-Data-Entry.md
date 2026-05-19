@@ -77,15 +77,14 @@ input) and unstructured (free text).
 Structured fields restrict input to a defined set of options or a
 validated format. They reduce entry errors and improve data consistency.
 
-  ---------------- ------------------------------------------------------------------------------------------------------------------------
-  **Field Type**   **How It Works**
-  Radio button     Select exactly one option from a visible list. Cannot be deselected once chosen — use the reset button if available.
-  Dropdown         Select exactly one option from a collapsed list. More compact than radio buttons for long option lists.
-  Checkbox         Select one or more options independently. Each checkbox is stored as a separate yes/no variable in the dataset.
-  Slider           Drag a handle along a scale to select a numeric value. Commonly used for visual analog scales (e.g., pain scores).
-  File upload      Attach a file (PDF, image, etc.) to the record. One file per field per instance.
-  Signature        Capture a drawn signature in the browser. Stored as an image file.
-  ---------------- ------------------------------------------------------------------------------------------------------------------------
+| **Field Type** | **How It Works** |
+| --- | --- |
+| Radio button | Select exactly one option from a visible list. Cannot be deselected once chosen — use the reset button if available. |
+| Dropdown | Select exactly one option from a collapsed list. More compact than radio buttons for long option lists. |
+| Checkbox | Select one or more options independently. Each checkbox is stored as a separate yes/no variable in the dataset. |
+| Slider | Drag a handle along a scale to select a numeric value. Commonly used for visual analog scales (e.g., pain scores). |
+| File upload | Attach a file (PDF, image, etc.) to the record. One file per field per instance. |
+| Signature | Capture a drawn signature in the browser. Stored as an image file. |
 
 ## 3.2 Unstructured Field Types
 
@@ -93,11 +92,10 @@ Unstructured fields accept free-text input. They can be configured with
 optional validation to enforce a format without restricting the user to
 a predefined list.
 
-  ---------------- ------------------------------------------------------------------------------------------------------------
-  **Field Type**   **How It Works**
-  Text box         Single-line free-text entry. Can have validation applied (see below).
-  Notes box        Multi-line free-text entry. No validation options. Used for comments, narratives, or open-ended responses.
-  ---------------- ------------------------------------------------------------------------------------------------------------
+| **Field Type** | **How It Works** |
+| --- | --- |
+| Text box | Single-line free-text entry. Can have validation applied (see below). |
+| Notes box | Multi-line free-text entry. No validation options. Used for comments, narratives, or open-ended responses. |
 
 **Text Box Validation Types**
 
@@ -105,16 +103,15 @@ A text box can be configured with a validation rule that restricts
 accepted input to a specific format. REDCap enforces the format on save
 and shows an error if the value does not match.
 
-  ------------------------ -----------------------------------------------------------------------------------------------------------
-  **Validation Type**      **What It Enforces**
-  Date (various formats)   Requires a valid date. Available in multiple regional formats (MM/DD/YYYY, DD/MM/YYYY, YYYY-MM-DD, etc.).
-  Time                     Requires a valid time value (HH:MM).
-  Number                   Requires a numeric value. Can optionally enforce a min/max range.
-  Integer                  Requires a whole number (no decimals).
-  Email                    Requires a valid email address format.
-  Phone number             Requires a phone number format (format varies by configuration).
-  Zipcode                  Requires a US ZIP code format.
-  ------------------------ -----------------------------------------------------------------------------------------------------------
+| **Validation Type** | **What It Enforces** |
+| --- | --- |
+| Date (various formats) | Requires a valid date. Available in multiple regional formats (MM/DD/YYYY, DD/MM/YYYY, YYYY-MM-DD, etc.). |
+| Time | Requires a valid time value (HH:MM). |
+| Number | Requires a numeric value. Can optionally enforce a min/max range. |
+| Integer | Requires a whole number (no decimals). |
+| Email | Requires a valid email address format. |
+| Phone number | Requires a phone number format (format varies by configuration). |
+| Zipcode | Requires a US ZIP code format. |
 
 ---
 
@@ -124,9 +121,9 @@ A required field is marked with a red asterisk (\*) next to the field
 label. If you attempt to save the instrument while a required field is
 empty, REDCap displays a warning listing the empty required fields.
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** Required fields are a soft constraint for regular users. The save warning can be dismissed and the form saved anyway with the required field empty. If your study protocol requires these fields to be filled, enforce compliance through team training and data quality checks — not solely through REDCap\'s required-field mechanism.
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** Required fields are a soft constraint for regular users. The save warning can be dismissed and the form saved anyway with the required field empty. If your study protocol requires these fields to be filled, enforce compliance through team training and data quality checks — not solely through REDCap's required-field mechanism.
+
 
 ---
 
@@ -150,9 +147,9 @@ instrument (or in some configurations, other instruments).
     field you expect to see is not visible, it means the logic condition
     has not been met based on current values.
 
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Troubleshooting:** If a field seems to be missing from an instrument, check whether branching logic may be hiding it before reporting it as a bug. Changing an earlier field value may reveal it.
-  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Troubleshooting:** If a field seems to be missing from an instrument, check whether branching logic may be hiding it before reporting it as a bug. Changing an earlier field value may reveal it.
+
 
 ---
 
@@ -162,13 +159,12 @@ Every instrument has a Form Status dropdown at the bottom, labeled
 \'Complete?\'. This field controls the color of the instrument\'s status
 dot in the Record Home Page and Record Status Dashboard.
 
-  ----------------------- --------------- ---------------------------------------------------------------------------------------------------------------
-  **Form Status Value**   **Dot Color**   **Meaning & Who Sets It**
-  (no data saved)         Grey            No data has been entered. Default state. Set automatically by REDCap.
-  Incomplete              Red             Data has been saved but status has not been updated. Default for any saved form. Set automatically by REDCap.
-  Unverified              Yellow          Data entry complete but not yet verified. Set manually by the study team.
-  Complete                Green           Data entry verified and complete. Set manually by the study team.
-  ----------------------- --------------- ---------------------------------------------------------------------------------------------------------------
+| **Form Status Value** | **Dot Color** | **Meaning & Who Sets It** |
+| --- | --- | --- |
+| (no data saved) | Grey | No data has been entered. Default state. Set automatically by REDCap. |
+| Incomplete | Red | Data has been saved but status has not been updated. Default for any saved form. Set automatically by REDCap. |
+| Unverified | Yellow | Data entry complete but not yet verified. Set manually by the study team. |
+| Complete | Green | Data entry verified and complete. Set manually by the study team. |
 
 - Only grey and red are enforced automatically by REDCap. Yellow and
     green must be set manually.
@@ -187,23 +183,22 @@ dot in the Record Home Page and Record Status Dashboard.
 
 # 7. Saving Data
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Critical:** REDCap does not auto-save. If you close the browser tab, navigate away, or click Cancel without saving, all unsaved data on the current form is lost.
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Critical:** REDCap does not auto-save. If you close the browser tab, navigate away, or click Cancel without saving, all unsaved data on the current form is lost.
+
 
 Every instrument has four save options at the bottom of the page:
 
-  ---------------------------- -----------------------------------------------------------------------------------------------------------------------------------------
-  **Save Option**              **What Happens After Saving**
-  Save and Exit Form           Saves the form and returns you to the Record Home Page for that record.
-  Save and Stay                Saves the form and remains on the current instrument. Use when making multiple edits or reviewing your entry.
-  Save and Exit Record         Saves the form and returns you to the Add/Edit Records page. Use when you are done with this record entirely.
-  Save and Go to Next Record   Saves the form and opens the same instrument in the next record (by Record ID order). Use for batch data entry across multiple records.
-  ---------------------------- -----------------------------------------------------------------------------------------------------------------------------------------
+| **Save Option** | **What Happens After Saving** |
+| --- | --- |
+| Save and Exit Form | Saves the form and returns you to the Record Home Page for that record. |
+| Save and Stay | Saves the form and remains on the current instrument. Use when making multiple edits or reviewing your entry. |
+| Save and Exit Record | Saves the form and returns you to the Add/Edit Records page. Use when you are done with this record entirely. |
+| Save and Go to Next Record | Saves the form and opens the same instrument in the next record (by Record ID order). Use for batch data entry across multiple records. |
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-  **Warning:** Clicking Cancel on an instrument discards all unsaved changes on that form and returns you to the Record Home Page. There is no undo.
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Warning:** Clicking Cancel on an instrument discards all unsaved changes on that form and returns you to the Record Home Page. There is no undo.
+
 
 ---
 

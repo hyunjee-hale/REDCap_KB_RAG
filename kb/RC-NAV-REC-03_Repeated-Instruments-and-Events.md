@@ -61,30 +61,28 @@ space.
 
 ## 3.1 Symbols at a Glance
 
-  ----------------------- -------------------------------------------------------------------------
-  **Symbol**              **Meaning**
-  Plus symbol (+)         Repeated instrument with at least one entry. Click to add a new entry.
-  Stacked dot             Repeated instrument with more than one entry. Click to see all entries.
-  Double back arrow       Repeated event with 3+ repetitions. Click to collapse the columns.
-  Down arrow (on table)   Collapse the repeated instrument table on the Record Home Page.
-  ----------------------- -------------------------------------------------------------------------
+| **Symbol** | **Meaning** |
+| --- | --- |
+| Plus symbol (+) | Repeated instrument with at least one entry. Click to add a new entry. |
+| Stacked dot | Repeated instrument with more than one entry. Click to see all entries. |
+| Double back arrow | Repeated event with 3+ repetitions. Click to collapse the columns. |
+| Down arrow (on table) | Collapse the repeated instrument table on the Record Home Page. |
 
 ## 3.2 Stacked Dot Color Codes
 
 The color of a stacked dot summarizes the statuses of all entries for
 that repeated instrument:
 
-  ----------------------- ---------------------------------------------------------------------------------------
-  **Stacked Dot Color**   **Meaning**
-  Red stacked dot         All entries are tagged as Incomplete.
-  Yellow stacked dot      All entries are tagged as Unverified.
-  Green stacked dot       All entries are tagged as Complete.
-  Blue stacked dot        There is a mix of statuses across the entries (e.g., some complete, some incomplete).
-  ----------------------- ---------------------------------------------------------------------------------------
+| **Stacked Dot Color** | **Meaning** |
+| --- | --- |
+| Red stacked dot | All entries are tagged as Incomplete. |
+| Yellow stacked dot | All entries are tagged as Unverified. |
+| Green stacked dot | All entries are tagged as Complete. |
+| Blue stacked dot | There is a mix of statuses across the entries (e.g., some complete, some incomplete). |
 
-  -------------------------------------------------------------------------------------------
-  **Note:** A completed survey entry counts as Complete when determining stacked dot color.
-  -------------------------------------------------------------------------------------------
+
+> **Note:** A completed survey entry counts as Complete when determining stacked dot color.
+
 
 ---
 
@@ -138,17 +136,16 @@ that repeated instrument:
 Repeated instruments and longitudinal mode can be combined in several
 ways:
 
-  ----------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
-  **Combination**                                                               **Effect on Navigation**
-  Repeated instrument in a single event                                         Stacked dot appears in that event\'s column on the Record Home Page.
-  Same repeated instrument in multiple events                                   Stacked dot appears independently in each designated event\'s column.
-  Entire event made repeatable                                                  New columns appear for each repetition of the event. Double back arrow available at 3+ repetitions.
-  Repeated instrument within a non-repeated event + a separate repeated event   Both behaviors appear simultaneously. Stacked dots and repeated event columns are shown together.
-  ----------------------------------------------------------------------------- -----------------------------------------------------------------------------------------------------
+| **Combination** | **Effect on Navigation** |
+| --- | --- |
+| Repeated instrument in a single event | Stacked dot appears in that event's column on the Record Home Page. |
+| Same repeated instrument in multiple events | Stacked dot appears independently in each designated event's column. |
+| Entire event made repeatable | New columns appear for each repetition of the event. Double back arrow available at 3+ repetitions. |
+| Repeated instrument within a non-repeated event + a separate repeated event | Both behaviors appear simultaneously. Stacked dots and repeated event columns are shown together. |
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** A repeated instrument and a repeated event are mutually exclusive within the same event. You cannot have a repeated instrument inside a repeated event. Either the entire event repeats, or individual instruments within a non-repeated event repeat — but not both at once.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** A repeated instrument and a repeated event are mutually exclusive within the same event. You cannot have a repeated instrument inside a repeated event. Either the entire event repeats, or individual instruments within a non-repeated event repeat — but not both at once.
+
 
 ---
 

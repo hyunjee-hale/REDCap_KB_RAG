@@ -75,9 +75,9 @@ first time:
 
 - Save the form using any of the four save options.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** REDCap automatically logs the old and new values, the user who made the change, and the timestamp. You do not need to do anything special to trigger audit logging — it happens on every save.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** REDCap automatically logs the old and new values, the user who made the change, and the timestamp. You do not need to do anything special to trigger audit logging — it happens on every save.
+
 
 ## 3.2 What Gets Logged
 
@@ -121,9 +121,9 @@ first time:
 - Use Logging when you need to audit multiple records or find out what
     a specific user changed across the project.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Note:** Access to the Logging application is controlled by user rights. If you do not see it in the left-hand menu, your account has not been granted Logging access. Contact your project administrator.
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Note:** Access to the Logging application is controlled by user rights. If you do not see it in the left-hand menu, your account has not been granted Logging access. Contact your project administrator.
+
 
 ---
 
@@ -159,9 +159,9 @@ deliberate action that requires an explicit user right.
 - Save the form using any of the four save options. Do not navigate
     away without saving — unsaved changes are lost.
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Important:** Editing a survey response does not notify the original survey respondent. The edit is logged in the project\'s audit trail with your username and timestamp. Document any such edits in your study\'s data management notes per your protocol SOPs.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+> **Important:** Editing a survey response does not notify the original survey respondent. The edit is logged in the project's audit trail with your username and timestamp. Document any such edits in your study's data management notes per your protocol SOPs.
+
 
 ---
 
