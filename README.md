@@ -20,10 +20,10 @@ This repo supports an LLM-powered REDCap assistant. Rather than feeding raw docu
 
 ```
 REDCap_KB_RAG/
-├── kb/                               # Markdown KB articles (RAG-ready) — 236 articles
+├── kb/                               # Markdown KB articles (RAG-ready) — 239 articles
 │   ├── KB-REFERENCE-MAP.md                # Redirect stub pointing to meta/ files (legacy)
 │   └── RC-[DOMAIN]-[NN]_...               # Individual KB articles
-├── kb (YAML)/                        # Same articles converted to YAML frontmatter format — 237 files
+├── kb (YAML)/                        # Same articles converted to YAML frontmatter format — 239 files
 │   └── RC-[DOMAIN]-[NN]_...               # One file per source article
 ├── meta/                             # Navigation & cross-reference metadata (not for RAG indexing)
 │   ├── KB-INDEX.md                        # Article index: ID → Title → Filename (load for topic lookup)
@@ -89,6 +89,7 @@ RC-[DOMAIN]-[NN]_Title-With-Hyphens.md
 | `RC-DDP` | Dynamic Data Pull |
 | `RC-DE` | Data Entry |
 | `RC-DQ` | Data Quality Module |
+| `RC-DSGN` | Project Design Best Practices |
 | `RC-EM` | External Modules |
 | `RC-EXPRT` | Data Export & Custom Reports |
 | `RC-FD` | Form Design |
