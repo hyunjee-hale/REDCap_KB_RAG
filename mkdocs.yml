@@ -322,3 +322,4 @@ nav:
     - "User Rights User Management": RC-USER-04_User-Rights-User-Management.md
   - About:
     - "Source Attestation": KB-SOURCE-ATTESTATION.md
+    - "Dependency Graph": KB-Dependency-Graph.md
