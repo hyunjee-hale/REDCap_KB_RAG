@@ -1,0 +1,9 @@
+/* Widen the content area to use more of the screen */
+.md-grid {
+  max-width: 1400px;
+}
+
+/* Give the article body a bit more breathing room */
+.md-content__inner {
+  max-width: 100%;
+}
