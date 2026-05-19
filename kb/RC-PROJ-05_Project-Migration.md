@@ -9,7 +9,7 @@
 | **Prerequisite** | [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md); [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md); [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md); [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md); [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) |
 
 > **Note on REDCap+:** This article covers the standard project migration workflow available in all REDCap installations using the built-in backup and restore feature. REDCap+ includes a revamped Project Migration tool with expanded capabilities. If your installation has REDCap+, check the dedicated REDCap+ documentation for that tool.

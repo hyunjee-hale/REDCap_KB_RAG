@@ -9,7 +9,7 @@
 | **Prerequisite** | REDCap administrator access |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)|
 
 ---

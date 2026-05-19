@@ -9,7 +9,7 @@
 | **Prerequisite** | [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)|
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md); [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md); [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)|
 
 ---

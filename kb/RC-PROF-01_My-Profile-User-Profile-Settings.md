@@ -9,7 +9,7 @@
 | **Prerequisite** | Active REDCap user account |
 | **Version** | 1.1 |
 | **Last Updated** | 2026 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md); [RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md) |
 
 ---

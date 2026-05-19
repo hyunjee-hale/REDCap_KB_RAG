@@ -9,7 +9,7 @@
 | **Prerequisite** | None |
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md); [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md); [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md) |
 
 ---

@@ -9,7 +9,7 @@
 | **Prerequisite** | Existing REDCap License (REDCap Core installation) |
 | **Version** | 1.0 |
 | **Last Updated** | 2026-04 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | RC-PLUS-02 — Project Migration Tool *(planned)*; [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)|
 
 ---

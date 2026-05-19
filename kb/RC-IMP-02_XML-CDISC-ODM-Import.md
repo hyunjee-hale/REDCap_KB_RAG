@@ -9,7 +9,7 @@
 | **Prerequisite** | [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) |
 | **Version** | 1.1 |
 | **Last Updated** | 2026-05-13 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md); [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md); [RC-API-03 — Import Records API](RC-API-03_Import-Records.md); [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) |
 
 ---

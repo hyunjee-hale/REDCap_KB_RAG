@@ -10,7 +10,7 @@
 | **Skill Level** | Advanced |
 | **Version** | 1.0 |
 | **Last Updated** | 2025 |
-| **Author** | See KB-SOURCE-ATTESTATION.md |
+| **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
 | **Related Topics** | [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md); [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md); [RC-FD-05 — Codebook](RC-FD-05_Codebook.md) |
 
 ---

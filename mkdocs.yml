@@ -320,3 +320,5 @@ nav:
     - "User Rights Adding Users and Managing Roles": RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md
     - "User Rights Configuring User Privileges": RC-USER-03_User-Rights-Configuring-User-Privileges.md
     - "User Rights User Management": RC-USER-04_User-Rights-User-Management.md
+  - About:
+    - "Source Attestation": KB-SOURCE-ATTESTATION.md

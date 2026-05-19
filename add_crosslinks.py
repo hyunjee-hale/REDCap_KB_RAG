@@ -116,7 +116,7 @@ def linkify_line(line, current_file=None):
 
 # ── 4. Process each file ───────────────────────────────────────────────────────
 
-skip_files = {"KB-REFERENCE-MAP.md", "index.md"}
+skip_files = {"KB-REFERENCE-MAP.md", "index.md", "KB-SOURCE-ATTESTATION.md"}
 changed_files = []
 
 for fname in sorted(os.listdir(KB_DIR)):
