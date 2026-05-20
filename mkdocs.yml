@@ -4,6 +4,7 @@ docs_dir: kb
 exclude_docs: KB-REFERENCE-MAP.md
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: blue
