@@ -169,7 +169,7 @@ Next to "Configure settings," the **Analyze surveys for SMS & Voice Calls** butt
 5. Click **Save**.s
 
 > **Note:** Mosio is only available in the US and Canada. If your study contacts participants in other countries, use Twilio instead.
-If you need help with the mosio part specifically, check out their website here: https://www.mosio.com/redcap/
+If you need help with the mosio part specifically, check out their website here: [Mosio](https://www.mosio.com/redcap/)
 
 ## 5.2 Configure Mosio settings
 
