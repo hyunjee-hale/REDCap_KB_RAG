@@ -166,9 +166,10 @@ Next to "Configure settings," the **Analyze surveys for SMS & Voice Calls** butt
 2. Click **Enable**. A credentials popup appears.
 3. Set the **Mosio SMS Services** dropdown to **Enabled**.
 4. Enter your **Mosio API Key** in the corresponding field. This is found in your Mosio account dashboard.
-5. Click **Save**.
+5. Click **Save**.s
 
 > **Note:** Mosio is only available in the US and Canada. If your study contacts participants in other countries, use Twilio instead.
+If you need help with the mosio part specifically, check out their website here: https://www.mosio.com/redcap/
 
 ## 5.2 Configure Mosio settings
 
