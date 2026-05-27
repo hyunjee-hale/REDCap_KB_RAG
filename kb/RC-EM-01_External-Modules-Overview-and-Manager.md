@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 External Modules are individual packages of software that can be downloaded and installed by a REDCap administrator. Modules extend REDCap's current functionality and can provide customizations and enhancements for REDCap's existing behavior and appearance — either at the system level (affecting all projects) or at the project level (enabled per project).
 
@@ -24,7 +24,7 @@ A separate **Project Module Manager** exists within each individual project, whe
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **External Module**
 A self-contained add-on that extends REDCap beyond its built-in feature set. Modules are distributed through the REDCap Repo (a curated community repository maintained by Vanderbilt) or can be developed and installed locally. Each module is identified by a unique prefix (e.g., `instance_table`, `hide_submit`).
@@ -43,7 +43,7 @@ A module installed by an administrator is not automatically active in every proj
 
 ---
 
-# 3. Accessing the Module Manager
+## 3. Accessing the Module Manager
 
 The Control Center Module Manager is accessible two ways:
 
@@ -54,9 +54,9 @@ The External Modules section in the Control Center left sidebar also shows a **V
 
 ---
 
-# 4. Module Manager Interface
+## 4. Module Manager Interface
 
-## 4.1 Module Update Notifications
+### 4.1 Module Update Notifications
 
 When one or more installed modules have newer versions available in the REDCap Repo, a yellow notification banner appears at the top of the Manager page. The banner shows how many updates are available and lists each module along with its current and available version. Options:
 
@@ -64,7 +64,7 @@ When one or more installed modules have newer versions available in the REDCap R
 - **Update** (per module) — upgrades an individual module
 - **Release Notes** (per module) — opens the module's GitHub release page in a new tab
 
-## 4.2 Primary Action Buttons
+### 4.2 Primary Action Buttons
 
 | Button | Function |
 |---|---|
@@ -72,14 +72,14 @@ When one or more installed modules have newer versions available in the REDCap R
 | **View modules available in the REDCap Repo** | Opens the REDCap Repo in a new browser tab (authenticated using your REDCap credentials). Browse and download new modules from here. |
 | **Configure Cron Start Times** | Opens a dialog to set system-wide start times for any modules that use scheduled cron jobs. |
 
-## 4.3 Module Action Tag and API Method Reference
+### 4.3 Module Action Tag and API Method Reference
 
 Below the primary buttons, two smaller buttons provide quick access to module-contributed extensions:
 
 - **@ Action Tags** — lists all action tags registered by currently enabled External Modules (separate from the built-in REDCap action tags)
 - **API Methods** — lists all API endpoints registered by enabled External Modules
 
-## 4.4 Currently Enabled Modules Table
+### 4.4 Currently Enabled Modules Table
 
 The main table lists all modules currently enabled at the system level. Each row shows:
 
@@ -100,7 +100,7 @@ A search box in the top-right of the table allows filtering the enabled modules 
 
 ---
 
-# 5. Custom Text for the Project Module Manager
+## 5. Custom Text for the Project Module Manager
 
 Administrators can configure optional custom text that appears to all users on the External Modules "Project Module Manager" page within each project. This is useful for:
 
@@ -112,7 +112,7 @@ To configure: click the **Set custom text for Project Module Manager page** butt
 
 ---
 
-# 6. Module Settings Export and Import
+## 6. Module Settings Export and Import
 
 The Module Manager supports exporting and importing module configuration settings, which is useful when moving a module configuration between projects or systems.
 
@@ -127,7 +127,7 @@ The Module Manager supports exporting and importing module configuration setting
 
 ---
 
-# 7. Developer Tools
+## 7. Developer Tools
 
 The Module Manager page includes a **Developer Tools** section with:
 
@@ -138,7 +138,7 @@ These tools are aimed at administrators and developers who maintain or author Ex
 
 ---
 
-# 8. Project-Level Module Management
+## 8. Project-Level Module Management
 
 Within each project, users with Project Design and Setup rights can access the **External Modules** link in the left-hand project menu. This opens the **Project Module Manager**, where they can:
 
@@ -151,7 +151,7 @@ Whether project users can enable modules themselves, or must request administrat
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Where do module files live on the server?**
 Each installed module version is stored as a directory on the REDCap web server under the modules path (e.g., `modules/instance_table_v1.13.3/`). Multiple versions of the same module can coexist on disk, though only one version is active at a time.
@@ -169,7 +169,7 @@ The "Enable a module" button in the Module Manager shows all currently downloade
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md)
 - [RC-EM-03 — External Modules: Installed Catalog — Test / Staging](RC-EM-03_External-Modules-Installed-Catalog-Test.md)

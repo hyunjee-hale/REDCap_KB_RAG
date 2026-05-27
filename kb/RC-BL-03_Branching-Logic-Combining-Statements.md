@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to combine multiple atomic logic statements
 using AND, OR, and parentheses. Combined statements unlock more precise
@@ -24,7 +24,7 @@ intended.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Compound Statement**
 
@@ -60,12 +60,12 @@ correctness.
 
 ---
 
-# 3. The AND Operator
+## 3. The AND Operator
 
 **AND** joins two statements. The combined result is true only when
 **all** joined statements are true.
 
-## 3.1 Basic AND
+### 3.1 Basic AND
 
 ```
 [sky]='blue' and [grass]='green'
@@ -73,7 +73,7 @@ correctness.
 // True only when BOTH conditions are met simultaneously
 ```
 
-## 3.2 Chaining Multiple ANDs
+### 3.2 Chaining Multiple ANDs
 
 ```
 [sky]='blue' and [grass]='green' and [water]='wet'
@@ -81,7 +81,7 @@ correctness.
 // True only when ALL THREE conditions are met
 ```
 
-## 3.3 Common Use: Defining a Numeric Range
+### 3.3 Common Use: Defining a Numeric Range
 
 AND is the natural operator for expressing a range — a value must be
 both above a lower bound AND below an upper bound.
@@ -94,7 +94,7 @@ both above a lower bound AND below an upper bound.
 // False for age 34 or age 46
 ```
 
-## 3.4 Impossible AND Statements
+### 3.4 Impossible AND Statements
 
 It is possible to write an AND statement that can never be true.
 REDCap's syntax checker will not catch this — it only validates
@@ -113,7 +113,7 @@ syntax, not logic.
 !!! warning
     An impossible AND statement means the field it governs will never appear to any user. The Online Designer will accept it without error. Always test logic with actual records.
 
-## 3.5 Always-True AND Statements
+### 3.5 Always-True AND Statements
 
 The reverse is also possible — a statement that is always true,
 causing the field to always show regardless of data values.
@@ -130,7 +130,7 @@ for every record regardless of what is stored in `[status]`.
 
 ---
 
-### ⚠️ Common confusion — this is NOT always-true:
+#### ⚠️ Common confusion — this is NOT always-true:
 
 ```
 // NOT always-true — only true when age = exactly 35
@@ -143,12 +143,12 @@ For a real range, the bounds must differ: `[age]>=18 and [age]<=35`.
 
 ---
 
-# 4. The OR Operator
+## 4. The OR Operator
 
 **OR** joins two statements. The combined result is true when **at least
 one** joined statement is true.
 
-## 4.1 Basic OR
+### 4.1 Basic OR
 
 ```
 [sky]='blue' or [sky]='black'
@@ -156,7 +156,7 @@ one** joined statement is true.
 // True when sky is either blue OR black (or both, if that were possible)
 ```
 
-## 4.2 Chaining Multiple ORs
+### 4.2 Chaining Multiple ORs
 
 ```
 [country]='US' or [country]='CA' or [country]='MX'
@@ -164,7 +164,7 @@ one** joined statement is true.
 // True when country is any one of the three values
 ```
 
-## 4.3 Common Use: Checking a Set of Checkbox Conditions
+### 4.3 Common Use: Checking a Set of Checkbox Conditions
 
 OR is natural for 'at least one of these applies' conditions — for
 example, showing a follow-up question when any of several checkboxes is
@@ -178,7 +178,7 @@ checked:
 
 Checkbox syntax is covered fully in [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md).
 
-## 4.4 Always-True OR Statements
+### 4.4 Always-True OR Statements
 
 OR statements are easy to make always-true by accident. A number is
 always either >= 35 or <= 35 — so this statement evaluates to true
@@ -195,14 +195,14 @@ for every possible value:
 
 ---
 
-# 5. Combining AND and OR
+## 5. Combining AND and OR
 
 When AND and OR appear in the same expression, the order of evaluation
 matters. Without parentheses, AND is evaluated before OR (following
 standard boolean operator precedence). Using parentheses explicitly
 controls which conditions are grouped.
 
-## 5.1 Why Parentheses Are Essential
+### 5.1 Why Parentheses Are Essential
 
 Consider these two statements — identical tokens, different
 parentheses, different behavior:
@@ -228,14 +228,14 @@ The only difference is where the parentheses are placed. The field will
 show for entirely different populations depending on which statement is
 used.
 
-## 5.2 Rules for Parentheses
+### 5.2 Rules for Parentheses
 
 - Statements inside parentheses are always evaluated first.
 - Parentheses can be nested: the innermost group is evaluated first.
 - Every opening parenthesis must have a matching closing parenthesis. Mismatched parentheses cause a syntax error.
 - When in doubt, add more parentheses — extra grouping does not change logic if placed correctly, but prevents misinterpretation.
 
-## 5.3 Reference: AND vs. OR Behavior
+### 5.3 Reference: AND vs. OR Behavior
 
 | **Operator** | **Result is TRUE when...** | **Result is FALSE when...** |
 |---|---|---|
@@ -244,7 +244,7 @@ used.
 
 ---
 
-# 6. Worked Examples
+## 6. Worked Examples
 
 **Example 1 — Age range with AND**
 
@@ -294,7 +294,7 @@ medication.
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Does REDCap differentiate between uppercase AND/OR and lowercase and/or?**
 
@@ -331,7 +331,7 @@ to'.
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 - **Omitting parentheses when mixing AND and OR:** without parentheses, AND takes precedence over OR. A statement that looks like it should test two groups may not behave as expected. Always parenthesize when combining both operators.
 
@@ -345,7 +345,7 @@ to'.
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (prerequisite)
 - [RC-BL-04 — Branching Logic: Structured Fields & Checkboxes](RC-BL-04_Branching-Logic-Structured-Fields-and-Checkboxes.md)

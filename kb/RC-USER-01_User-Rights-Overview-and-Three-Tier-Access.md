@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how REDCap controls who can access what. Access in REDCap is governed by a three-tier system: global system access, project-level access, and per-project user rights. Understanding all three tiers is essential for troubleshooting access issues and for setting up a project correctly. This article is the entry point for the User Rights knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **REDCap Installation**
 
@@ -56,11 +56,11 @@ A named, reusable set of user rights that can be assigned to multiple users. Rol
 
 ---
 
-# 3. The Three-Tier Access Model
+## 3. The Three-Tier Access Model
 
 REDCap access works as three successive gates. A user must pass all three to perform any action in a project.
 
-## 3.1 Tier 1: Global System Access
+### 3.1 Tier 1: Global System Access
 
 Before a user can do anything in REDCap, they must have an active account in the installation and be able to log in successfully.
 
@@ -75,7 +75,7 @@ Some installations also require two-factor authentication as an additional layer
 
 A suspended account (disabled at the system level by an administrator) will receive a suspension message at login and cannot access any projects.
 
-## 3.2 Tier 2: Project-Level Access
+### 3.2 Tier 2: Project-Level Access
 
 REDCap strictly separates data by project. A user with a valid account cannot see or access any project unless they have been explicitly added to it.
 
@@ -85,7 +85,7 @@ A user can be added to any number of projects, or to none at all. There are thre
 - **Automatically upon creation** — when a user creates or requests a new project, they are automatically added with full rights.
 - **By a REDCap administrator** — administrators can add users to any project. In practice, this is typically done only when there are no other active users on a project to perform the task themselves.
 
-## 3.3 Tier 3: Project-Level User Rights
+### 3.3 Tier 3: Project-Level User Rights
 
 Having project access does not mean having full access. Within a project, user rights define exactly what a user can see and do: which instruments they can view or edit, whether they can export data, whether they can modify the project design, and much more.
 
@@ -98,7 +98,7 @@ This is the most complex tier. User rights are highly configurable and differ fr
 
 ---
 
-# 4. Troubleshooting Access
+## 4. Troubleshooting Access
 
 When a user reports they cannot access a project or perform an expected action, follow this checklist in order. Each step narrows down which tier is causing the problem.
 
@@ -112,7 +112,7 @@ When a user reports they cannot access a project or perform an expected action, 
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: A user can log in but cannot find the project — what's wrong?**
 
@@ -140,7 +140,7 @@ When a user reports they cannot access a project or perform an expected action, 
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Contacting the wrong support team for login issues.** If the installation uses SSO, the REDCap support team cannot help with password resets or account lockouts — that must go through central IT. Knowing which authentication method is in use saves time for everyone.
 
@@ -150,7 +150,7 @@ When a user reports they cannot access a project or perform an expected action, 
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -164,7 +164,7 @@ When a user reports they cannot access a project or perform an expected action, 
 ---
 
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)

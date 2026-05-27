@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers action tags that automatically populate field values when a form or survey is first loaded: the `@NOW` and `@TODAY` families, device-based tags, user-based tags, and the flexible `@DEFAULT` and `@SETVALUE` tags.
 
@@ -22,7 +22,7 @@ Autofill tags only populate values on page load if the field is currently empty.
 
 ---
 
-# 2. Date & Time Autofill Tags
+## 2. Date & Time Autofill Tags
 
 These tags fill text boxes with date and/or time values. All have no parameters.
 
@@ -41,7 +41,7 @@ These tags fill text boxes with date and/or time values. All have no parameters.
 
 ---
 
-# 3. Device & User Autofill Tags
+## 3. Device & User Autofill Tags
 
 | Tag | Fills with | Notes |
 |---|---|---|
@@ -56,7 +56,7 @@ These tags fill text boxes with date and/or time values. All have no parameters.
 
 ---
 
-# 4. @DEFAULT — Pre-fill on First Load
+## 4. @DEFAULT — Pre-fill on First Load
 
 Pre-fills a field only when the form has never had data entered (status is "grey/incomplete"). Once the respondent saves data, `@DEFAULT` no longer applies.
 
@@ -64,13 +64,13 @@ Pre-fills a field only when the form has never had data entered (status is "grey
 
 **Use case:** Setting expected default values that respondents may override.
 
-## 4.1 Static Values in Text/Notes Boxes
+### 4.1 Static Values in Text/Notes Boxes
 
 ```
 @DEFAULT='Green'
 ```
 
-## 4.2 Raw Values in Radio/Dropdown/Checkbox
+### 4.2 Raw Values in Radio/Dropdown/Checkbox
 
 ```
 @DEFAULT='2'
@@ -82,7 +82,7 @@ For multiple selections in checkboxes:
 @DEFAULT='1,2'
 ```
 
-## 4.3 Dynamic Values — Piping
+### 4.3 Dynamic Values — Piping
 
 Pre-fill with a value from another field in the same record:
 
@@ -90,7 +90,7 @@ Pre-fill with a value from another field in the same record:
 @DEFAULT='[email]'
 ```
 
-## 4.4 Dynamic Values — Smart Variables
+### 4.4 Dynamic Values — Smart Variables
 
 Pre-fill with a system value:
 
@@ -98,7 +98,7 @@ Pre-fill with a system value:
 @DEFAULT='[user-fullname]'
 ```
 
-## 4.5 Longitudinal Projects
+### 4.5 Longitudinal Projects
 
 Carry forward a value from the previous event:
 
@@ -110,7 +110,7 @@ Pre-fills the field with the value of `rx1` from the most recent prior event. Re
 
 ---
 
-# 5. @SETVALUE — Pre-fill on Every Load
+## 5. @SETVALUE — Pre-fill on Every Load
 
 Like `@DEFAULT`, but fills the field every time the form is loaded, overwriting any existing value. Use when the field should always reflect the most current value on load.
 
@@ -122,7 +122,7 @@ Like `@DEFAULT`, but fills the field every time the form is loaded, overwriting 
 
 ---
 
-# 6. Combining Autofill Tags with Visibility Tags
+## 6. Combining Autofill Tags with Visibility Tags
 
 Autofill tags are often combined with `@HIDDEN` or `@READONLY` variants:
 
@@ -140,7 +140,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: When should I use @DEFAULT versus @SETVALUE?**
 
@@ -160,7 +160,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 ---
 
-# 8. Common Mistakes
+## 8. Common Mistakes
 
 **Using `@SETVALUE` on fields where respondents expect data to persist.** Unlike `@DEFAULT`, `@SETVALUE` replaces the value every time the form loads. Avoid on fields where users expect their previous entries to remain.
 
@@ -172,7 +172,7 @@ Pre-populates with the current user's username and locks it to prevent manual ed
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)

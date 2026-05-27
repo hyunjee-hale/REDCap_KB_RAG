@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how to add users to a REDCap project, how to use roles to apply pre-configured rights to multiple users at once, and how to manage roles. It is part of the User Rights series. Before a user can be added to a project, they must already have an active account in the REDCap installation — see [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) for an explanation of the three-tier access model.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **User Rights Menu**
 
@@ -48,7 +48,7 @@ A feature accessible from the User Rights page that allows downloading and uploa
 
 ---
 
-# 3. Prerequisites for Adding a User
+## 3. Prerequisites for Adding a User
 
 Two conditions must be true before you can add someone to your project:
 
@@ -59,11 +59,11 @@ If the User Rights menu is visible in the project's application menu or on the P
 
 ---
 
-# 4. Adding Users
+## 4. Adding Users
 
 There are two methods for adding users to a project: individually with custom rights, or directly into a role.
 
-## 4.1 Individual Method
+### 4.1 Individual Method
 
 Use this method when you want to configure a user's rights specifically, without applying a role.
 
@@ -78,7 +78,7 @@ If successful, the project will appear in the user's My Projects page.
 
 > **Important:** Always select the user from the dropdown list — do not type a name and press Enter without selecting from the results. Partial names are accepted; REDCap will return all matching users. Skipping the selection step creates a ghost user (see Section 6).
 
-## 4.2 Role Method
+### 4.2 Role Method
 
 Use this method when you want to add a user with a predefined set of rights (a role). This is faster when onboarding multiple users who need the same level of access.
 
@@ -95,13 +95,13 @@ If successful, the project will appear in the user's My Projects page.
 
 ---
 
-# 5. Creating and Managing Roles
+## 5. Creating and Managing Roles
 
-## 5.1 Why Use Roles
+### 5.1 Why Use Roles
 
 Roles are most valuable when multiple users need identical access — for example, a team of data entry staff or a group of co-investigators. When you update a role's rights, the change propagates automatically to all users assigned to that role. Roles are also useful for compliance-aligned project setups (e.g., projects designed to meet 21 CFR Part 11 or GDPR requirements).
 
-## 5.2 Creating a Role
+### 5.2 Creating a Role
 
 1. On the User Rights page, find the "Enter new role name" text box.
 2. Type a descriptive name for the role.
@@ -111,11 +111,11 @@ Roles are most valuable when multiple users need identical access — for exampl
 
 > **Note:** Roles cannot have a pre-assigned Data Access Group or a default expiration date. Both of those settings are configured per user, not per role. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) for DAG assignment options, and [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for expiration date configuration.
 
-## 5.3 Editing a Role
+### 5.3 Editing a Role
 
 Click the role name on the User Rights page to open the role's edit popup. Change any settings and save. All users currently assigned to that role will immediately reflect the updated rights.
 
-## 5.4 Copying and Deleting a Role
+### 5.4 Copying and Deleting a Role
 
 Within the role edit popup, you have options to copy or delete the role.
 
@@ -124,7 +124,7 @@ Within the role edit popup, you have options to copy or delete the role.
 
 ---
 
-# 6. Ghost Users
+## 6. Ghost Users
 
 A ghost user is an entry in the user list that is not tied to a real REDCap account. Ghost users are created when someone types a name into the "Add new user" or "Assign new user to role" box and activates the action without selecting an account from the search results dropdown.
 
@@ -134,7 +134,7 @@ Ghost users have no real account attached and are harmless in terms of data acce
 
 ---
 
-# 7. Bulk User Management
+## 7. Bulk User Management
 
 The **Upload or download users, roles, and assignments** button (top right of the User Rights page) allows you to:
 
@@ -147,7 +147,7 @@ This is useful for large projects, for migrating a user configuration from one p
 
 > **Golden rule:** Always download first, then edit the downloaded file. The CSV formats contain encoded values (especially for form-level permissions) that are impractical to construct from scratch. Starting from a downloaded template avoids column order mistakes and encoding errors.
 
-## 7.1 Users CSV
+### 7.1 Users CSV
 
 **Filename produced by download:** `[ProjectName]_Users_[Date].csv`
 
@@ -191,7 +191,7 @@ Each row represents one project user. The full column set:
 
 **Form access encoding.** The integer values in the `forms` column are REDCap's internal encoded permission levels — they are not simple 0/1 flags. Values observed in downloaded files include `130` (read/write) and `138` (a different access variant, likely read-only or a survey-specific permission). Do not attempt to construct these values from memory; always use a downloaded file as your template and modify only the specific forms you need to change.
 
-## 7.2 User Roles CSV
+### 7.2 User Roles CSV
 
 **Filename produced by download:** `[ProjectName]_UserRoles_[Date].csv`
 
@@ -203,7 +203,7 @@ Each row represents one custom user role. Columns are nearly identical to the Us
 
 > **Column order difference:** The three locking columns appear in a different order than in the Users CSV. In the Users file: `lock_records_all_forms`, `lock_records`, `lock_records_customization`. In the User Roles file: `lock_records_customization`, `lock_records`, `lock_records_all_forms`. This is one more reason to always start from a downloaded template rather than building manually.
 
-## 7.3 User–Role Assignments CSV
+### 7.3 User–Role Assignments CSV
 
 **Filename produced by download:** `[ProjectName]_UserRoleAssignments_[Date].csv`
 
@@ -220,7 +220,7 @@ All project users appear in this file, including those without a role assignment
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: I entered a user's name but they didn't appear in the search results — what's wrong?**
 
@@ -248,7 +248,7 @@ All project users appear in this file, including those without a role assignment
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Skipping the dropdown selection and creating ghost users.** This is the most common error when adding users. Always wait for the search results to appear and click the correct user from the list. Never press Enter or click Add without selecting a result. Ghost users do not have real accounts and contribute nothing except confusion.
 
@@ -262,7 +262,7 @@ All project users appear in this file, including those without a role assignment
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -274,7 +274,7 @@ All project users appear in this file, including those without a role assignment
 ---
 
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (prerequisites and the three-tier model)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (all individual right settings explained)

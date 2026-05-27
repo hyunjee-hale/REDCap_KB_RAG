@@ -16,7 +16,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import Metadata API method allows you to create or update the data dictionary (metadata) for a REDCap project programmatically. This is the primary way to modify project structure via API — adding fields, forms, validation rules, branching logic, and other configuration details. This method enables automated project setup, project cloning, and bulk metadata modifications.
 
@@ -24,7 +24,7 @@ When to use this method: When you need to programmatically create or modify the 
 
 ---
 
-# 2. Important Notes
+## 2. Important Notes
 
 - **Development status only:** This method is restricted to projects in Development status. Attempting to use it on a Production or Analysis/Cleanup project will fail. This restriction exists because of the method's destructive potential.
 - **Dual permission requirement:** You must have both API Import/Update privileges and Project Design/Setup privileges. Either one alone is not sufficient.
@@ -33,7 +33,7 @@ When to use this method: When you need to programmatically create or modify the 
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -45,7 +45,7 @@ When to use this method: When you need to programmatically create or modify the 
 
 ---
 
-# 4. Data Structure
+## 4. Data Structure
 
 The `data` parameter must contain field definitions in JSON format. Each field is an object with the following structure:
 
@@ -78,9 +78,9 @@ All Data Dictionary columns are supported in the import structure. Empty strings
 
 ---
 
-# 5. Request Examples
+## 5. Request Examples
 
-## 5.1 PHP (Full Example)
+### 5.1 PHP (Full Example)
 
 ```php
 <?php
@@ -139,7 +139,7 @@ print $output;
 
 ---
 
-# 6. Response
+## 6. Response
 
 The method returns a count of fields that were successfully created or modified, along with any validation errors.
 
@@ -159,7 +159,7 @@ The method returns a count of fields that were successfully created or modified,
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What permissions do I need to use this method?**
 
@@ -187,7 +187,7 @@ The method returns a count of fields that were successfully created or modified,
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Attempting to import on a Production or Analysis/Cleanup project.** This method is restricted to Development status only. If your project has already moved to Production, the API call will fail. You must either use the GUI to make changes in Production (which requires a move-to-production request) or move the project back to Development if your institution allows it.
 
@@ -207,7 +207,7 @@ The method returns a count of fields that were successfully created or modified,
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-07 — Export Metadata (Data Dictionary) API](RC-API-07_Export-Metadata.md)(read the data dictionary)

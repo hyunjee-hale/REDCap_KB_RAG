@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers three advanced capabilities of the Online Designer instrument editor that experienced designers use to work more efficiently on larger instruments:
 
@@ -26,25 +26,25 @@ All three features are accessed from within an open instrument in the Online Des
 
 ---
 
-# 2. Quick-Modify Field(s)
+## 2. Quick-Modify Field(s)
 
-## 2.1 What It Does
+### 2.1 What It Does
 
 Quick-modify is a multi-field selection and bulk-action system built into the instrument editor. Instead of opening each field individually to make the same change across many fields, you select the fields you want, then apply a single action to all of them at once.
 
 Common use cases include bulk-setting alignment on a group of choice fields, applying the same action tag to a set of text boxes, copying a block of fields to reuse in another instrument, or mass-deleting fields during a redesign.
 
-## 2.2 Activating the Toolbar
+### 2.2 Activating the Toolbar
 
 Check the checkbox in the **upper-right corner** of any field card in the instrument editor. As soon as at least one field is selected, the **Quick-modify field(s) toolbar** appears as a sticky bar at the top of the instrument editor. You can continue checking additional field checkboxes to grow the selection. Selected fields are visually highlighted.
 
 To clear the entire selection without taking any action, click the **Clear selection** button (×) in the toolbar.
 
-## 2.3 Available Actions
+### 2.3 Available Actions
 
 The toolbar is organized into two rows. The top row contains the primary structural actions; the bottom row contains property-level bulk actions.
 
-### Primary actions (top row)
+#### Primary actions (top row)
 
 | Action | Description | Constraints |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ The toolbar is organized into two rows. The top row contains the primary structu
 | **Edit Action Tags** | Opens the action tag editor for all selected fields | Useful for applying the same tag (e.g., `@HIDDEN-SURVEY`) to many fields at once |
 | **Edit Choices** | Opens a bulk choices editor | Only available when all selected fields are choice-type fields (radio, dropdown, checkbox, yes-no, true-false) |
 
-### Property-level actions (bottom row)
+#### Property-level actions (bottom row)
 
 | Action | Description | Constraints |
 | --- | --- | --- |
@@ -67,15 +67,15 @@ The toolbar is organized into two rows. The top row contains the primary structu
 | **Edit Sliders** | Opens the slider configuration editor | Only applies when all selected fields are Slider type |
 | **Edit Field Notes** | Opens a field note editor for all selected fields | Applies the same note text to every selected field |
 
-## 2.4 Navigating Within the Selection
+### 2.4 Navigating Within the Selection
 
 Once you have multiple fields selected, two small **prev / next** arrows appear in the toolbar. These scroll the page to each selected field in order, which is useful for verifying your selection on long instruments before committing to a bulk action.
 
-## 2.5 Expanding the Selection with the QEES Panel
+### 2.5 Expanding the Selection with the QEES Panel
 
 For instruments with many fields, manually checking individual checkboxes is slow. The **expand** button (↕ icon) in the Quick-modify toolbar opens the **selection expansion panel**, which lets you build or refine your selection by direction and field type filter.
 
-### Direction controls
+#### Direction controls
 
 | Option | Behavior |
 | --- | --- |
@@ -86,51 +86,51 @@ For instruments with many fields, manually checking individual checkboxes is slo
 | **Up** | Selects all fields between the current field and the next selected field above it |
 | **Down** | Selects all fields between the current field and the next selected field below it |
 
-### Field type inclusion filters
+#### Field type inclusion filters
 
 The inclusion row limits which field types are included in the expansion. Available filters: Radio, Yes/No, True/False, Dropdown, Checkbox, Text (any validation), Number (any numeric validation), Date/Time, Email, Phone, Notes (textarea), Signature, Slider.
 
 When a filter is active, only fields matching that type (within the chosen direction) are added. This lets you do things like "select all email text boxes on this instrument" in two clicks.
 
-### Add vs. Replace
+#### Add vs. Replace
 
 - **Add** — adds the matching fields to your current selection without clearing existing selections.
 - **Replace** — discards the current selection and replaces it entirely with the fields matching the current direction and type filter.
 
 ---
 
-# 3. Field Navigator
+## 3. Field Navigator
 
-## 3.1 What It Does
+### 3.1 What It Does
 
 The Field Navigator is a "Go to field" widget that lets you jump directly to any field in the instrument editor by typing part of its variable name or label. On instruments with dozens or hundreds of fields, this eliminates the need to scroll.
 
-## 3.2 Accessing It
+### 3.2 Accessing It
 
 The Field Navigator appears in the floating **help/tips panel** on the right side of the instrument editor (labeled "Field Navigator" with a compass icon). You can also activate it at any time using the keyboard shortcut:
 
 - **CTRL-G** on Windows/Linux
 - **CMD-G** on Mac
 
-## 3.3 How to Use It
+### 3.3 How to Use It
 
 Type a variable name or part of a label into the Go to field search box. REDCap will match against field variable names and scroll the instrument editor to the matching field, selecting it in the process. The selected field is then available as the starting point for a Quick-modify expansion (see Section 2.5).
 
 ---
 
-# 4. Custom CSS Styling
+## 4. Custom CSS Styling
 
-## 4.1 What It Does
+### 4.1 What It Does
 
 Each instrument in the Online Designer has an optional **Custom CSS** editor. CSS entered here is injected into the rendered data entry form and survey page for that instrument only. This allows designers to apply visual styling — hiding elements, changing font sizes, adding spacing, colorizing section headers — beyond what REDCap's built-in alignment and section header settings provide.
 
 Custom CSS is **instrument-scoped**: CSS saved on one instrument does not affect other instruments in the project.
 
-## 4.2 Accessing the CSS Editor
+### 4.2 Accessing the CSS Editor
 
 Open an instrument in the Online Designer. Near the instrument's action toolbar (same row as the Survey settings button), look for the palette icon button labeled **"Add custom CSS styling"** (or **"Edit custom CSS styling"** if CSS has already been saved for this instrument). Clicking it opens the CSS Editor dialog.
 
-## 4.3 Writing CSS
+### 4.3 Writing CSS
 
 The CSS editor accepts standard CSS. Important rules:
 
@@ -139,23 +139,23 @@ The CSS editor accepts standard CSS. Important rules:
 - There is a **Fullscreen Mode** button in the editor dialog for working with longer stylesheets.
 - Click **Update & Close Editor** when finished to save and close the dialog. The CSS is saved when you return to the instrument editor.
 
-## 4.4 Where the CSS Is Applied
+### 4.4 Where the CSS Is Applied
 
 The CSS applies to the **rendered data entry form and survey page** — what users see when filling in the instrument. It does not affect how the instrument looks inside the Online Designer itself.
 
-## 4.5 Stability Warning
+### 4.5 Stability Warning
 
 > **⚠️ Use with caution.** CSS that targets specific REDCap internal element classes or IDs (e.g., `.rc-field-label`, `#questiontable`) may **break without notice**. REDCap updates can change or remove internal class names at any time, and changes of this kind are not announced in the release notes. Stability of selectors targeting internal REDCap structure is not guaranteed across REDCap versions.
 
 For the most durable CSS, target the `id` attributes that REDCap generates from your own variable names (e.g., `#row-my_variable_name`) rather than internal REDCap class names, as variable-based IDs are stable as long as you don't rename the variable.
 
-## 4.6 Relationship to the Data Dictionary and Survey Settings
+### 4.6 Relationship to the Data Dictionary and Survey Settings
 
 Custom CSS is stored internally and is also exposed in the **Survey Settings bulk CSV export/import** as the `custom_css` column. If your institution uses bulk Survey Settings import to manage project configurations, this column can be used to transfer or apply CSS programmatically. See [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) for more on the Survey Settings page.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I selected 20 fields and clicked Move, but only some of them moved. What happened?**
 
@@ -179,7 +179,7 @@ Custom CSS is stored internally and is also exposed in the **Survey Settings bul
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 - **Including `<style>` tags in the CSS editor**: the editor only accepts raw CSS rules. Adding `<style>` tags causes them to appear as literal text on the rendered form, which looks wrong and may break layout.
 
@@ -193,7 +193,7 @@ Custom CSS is stored internally and is also exposed in the **Survey Settings bul
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (prerequisite — overview and Development vs. Production behavior)
 - [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) (prerequisite — field types, alignment, field notes, field annotation, individual field editing)

@@ -14,19 +14,19 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Project Bookmarks is a project-level module that allows project managers to create custom navigation links that appear on the left-hand project menu. Each bookmark is a configurable web link — pointing to another page within REDCap, another REDCap project, or any external website — that users see and can click directly from the project menu. Bookmarks can be restricted to specific users or Data Access Groups, and can be configured to pass contextual information (such as the current record or project ID) to the destination URL. Projects that require users to navigate frequently between related tools, external data systems, or companion REDCap projects benefit from having direct links built into the project menu rather than relying on users to find and remember URLs separately.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## 2.1 Where Project Bookmarks Appear
+### 2.1 Where Project Bookmarks Appear
 
 Project Bookmarks are configured from the left-hand project menu under the **Project Bookmarks** section. Once a bookmark is created and saved, it appears as a clickable link in that section for all users who have access to it. The section only appears in the menu if at least one bookmark has been created for the project.
 
-## 2.2 Link Types
+### 2.2 Link Types
 
 Each bookmark has a **link type** that determines how the link behaves when clicked:
 
@@ -36,18 +36,18 @@ Each bookmark has a **link type** that determines how the link behaves when clic
 
 **Advanced Link** — A developer-oriented option that uses an HTTP POST request to send an encrypted identity token (authkey) to the destination website, allowing the external site to verify who the REDCap user is. This requires that the destination site be developed or managed by someone who can write the necessary server-side code to receive and process the authkey. See Section 4 for technical details.
 
-## 2.3 User Access
+### 2.3 User Access
 
 By default, a bookmark is visible to **all users** in the project. Access can instead be restricted to **selected users** or **selected Data Access Groups**, in which case a list of users or DAGs appears for selection. Users or DAGs not in the selected list will not see the bookmark in their menu.
 
-## 2.4 Piping in Bookmark URLs
+### 2.4 Piping in Bookmark URLs
 
 Field variables and Smart Variables can be piped directly into the URL of a Project Bookmark:
 
 - **Smart Variables** that do not require a record context (e.g., `[redcap-base-url]`) work in all situations.
 - **Field variables** and **record-context Smart Variables** (e.g., `[record-name]`, `[previous-event-name]`) only resolve when the user is inside a record — for example, while viewing the Record Home Page or a data entry form. If the user is not in a record context when clicking the bookmark, these variables will not resolve.
 
-## 2.5 Append Options
+### 2.5 Append Options
 
 Two optional settings let a bookmark automatically append information to the URL:
 
@@ -59,15 +59,15 @@ Two optional settings let a bookmark automatically append information to the URL
 
 ---
 
-# 3. How To
+## 3. How To
 
-## 3.1 Navigate to Project Bookmarks
+### 3.1 Navigate to Project Bookmarks
 
 From within a project, click **Project Bookmarks** in the left-hand menu. This opens the Project Bookmarks setup page.
 
 > Configuring Project Bookmarks requires appropriate user rights. Users without the necessary privileges will not see the configuration interface, though they may still see published bookmarks in the menu.
 
-## 3.2 Add a New Bookmark
+### 3.2 Add a New Bookmark
 
 1. On the Project Bookmarks setup page, click **Add a new bookmark** (or click directly into the empty row at the bottom of the bookmarks table).
 2. Fill in the **Link Label** — this is the text that will appear on the left-hand menu.
@@ -80,21 +80,21 @@ From within a project, click **Project Bookmarks** in the left-hand menu. This o
    - **Append project ID to URL** — appends the project's pid
 7. Click **Add** to save the bookmark.
 
-## 3.3 Edit an Existing Bookmark
+### 3.3 Edit an Existing Bookmark
 
 Click on the label or URL of an existing bookmark row to edit it inline. Changes save automatically when you click away from the field.
 
-## 3.4 Reorder Bookmarks
+### 3.4 Reorder Bookmarks
 
 Bookmarks can be dragged and reordered using the drag handle on the left side of each row. The order in the table matches the order they appear in the left-hand menu.
 
-## 3.5 Delete a Bookmark
+### 3.5 Delete a Bookmark
 
 Click the **Delete** button in the rightmost column of the bookmark row. The bookmark is removed immediately.
 
 ---
 
-# 4. Advanced Link — Technical Reference
+## 4. Advanced Link — Technical Reference
 
 The Advanced Link type is intended for scenarios where an external website needs to confirm the identity of the REDCap user who clicked the link. It is not a standard HTML anchor — it submits an HTTP POST request to the destination URL.
 
@@ -114,7 +114,7 @@ If the steps above are unclear or not feasible for your team, the Advanced Link 
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Who can create and configure project bookmarks?**
 Users need the appropriate project user right to access the Project Bookmarks setup page. Project-level access to this feature is typically tied to project design or setup rights. Contact your REDCap administrator if you are unsure whether you have this right.
@@ -139,7 +139,7 @@ Yes. When setting User Access to "Selected users," you can choose specific users
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **PHI in record names.** Enabling "Append record info to URL" sends the record name to the destination website. If record names contain identifiers such as medical record numbers or social security numbers, this constitutes a data disclosure. Confirm with your privacy officer before enabling this option for projects with identifiable record names.
 
@@ -153,7 +153,7 @@ Yes. When setting User Access to "Selected users," you can choose specific users
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md)
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md)

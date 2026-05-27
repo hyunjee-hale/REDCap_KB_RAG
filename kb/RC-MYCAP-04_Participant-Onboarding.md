@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how participants join a MyCap project — from the initial requirement that a REDCap record must exist, through the two joining methods (App Links and QR Codes), to automated invitation workflows. It also covers the migration from Firebase Dynamic Links to App Links that took effect in August 2025, and guidance on the smart variable used to embed participant links in emails and messages. This article is for study coordinators configuring the onboarding workflow; participant-facing instructions are separate documentation provided by the study team.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record**
 
@@ -56,7 +56,7 @@ A configurable message displayed to a participant after they complete a REDCap s
 
 ---
 
-# 3. Prerequisite: Record Must Exist First
+## 3. Prerequisite: Record Must Exist First
 
 Before a participant can join a MyCap project, a record for that participant must exist in REDCap. The study team (or an automated workflow) must create the record. Options:
 
@@ -67,9 +67,9 @@ Before a participant can join a MyCap project, a record for that participant mus
 
 ---
 
-# 4. Joining Method 1: App Link
+## 4. Joining Method 1: App Link
 
-## 4.1 How App Links Work
+### 4.1 How App Links Work
 
 An App Link is a URL unique to each participant (record). When clicked on a mobile device:
 
@@ -78,14 +78,14 @@ An App Link is a URL unique to each participant (record). When clicked on a mobi
 
 App Links work well for **fully remote studies** where participants are not in-person with study staff.
 
-## 4.2 Generating an App Link for a Participant
+### 4.2 Generating an App Link for a Participant
 
 The App Link for a participant is available in two ways:
 
 - **Smart variable:** Use `[mycap-participant-link:Custom Text]` in an email, alert, or Survey Completion Text to generate a clickable link. The raw URL can also be retrieved with `[mycap-participant-url]`. See [RC-PIPE-16 — Smart Variables: MyCap](RC-PIPE-16_Smart-Variables-MyCap.md).
 - **Participant Management:** In the MyCap section of the left menu, go to **Participant Management**. The participant's App Link is displayed in their row and can be copied.
 
-## 4.3 Firebase Dynamic Links Migration (August 2025)
+### 4.3 Firebase Dynamic Links Migration (August 2025)
 
 Firebase Dynamic Links (domain: `mycapplusbeta.page.link`) were deprecated on August 25, 2025. All MyCap projects must use the new App Links (domain: `app.projectmycap.org`).
 
@@ -100,9 +100,9 @@ The smart variable `[mycap-participant-link]` was also updated automatically in 
 
 ---
 
-# 5. Joining Method 2: QR Code
+## 5. Joining Method 2: QR Code
 
-## 5.1 How QR Codes Work
+### 5.1 How QR Codes Work
 
 A QR Code encodes the same joining information as an App Link but in scannable format. The participant scans the QR code using the **MyCap app's built-in QR scanner** — not the device's default camera app or a third-party scanner.
 
@@ -111,7 +111,7 @@ QR Code contents:
 - Project code (unique to the project)
 - Institution identifier (links to the correct REDCap server)
 
-## 5.2 Generating a QR Code
+### 5.2 Generating a QR Code
 
 QR Codes are generated per-record in the **Participant Management** section:
 1. In the MyCap section of the left menu, go to **Participant Management**.
@@ -120,7 +120,7 @@ QR Codes are generated per-record in the **Participant Management** section:
 
 QR Codes can also be generated in bulk for multiple participants.
 
-## 5.3 When to Use QR Codes vs. App Links
+### 5.3 When to Use QR Codes vs. App Links
 
 | Scenario | Recommended method |
 |---|---|
@@ -131,11 +131,11 @@ QR Codes can also be generated in bulk for multiple participants.
 
 ---
 
-# 6. Automated Invitation Delivery
+## 6. Automated Invitation Delivery
 
 Rather than manually sending each participant their joining link, you can automate delivery using standard REDCap tools.
 
-## 6.1 Survey Completion Text
+### 6.1 Survey Completion Text
 
 If participants complete an enrollment survey before joining MyCap, add the App Link smart variable to the survey's **Survey Completion Text** (the message shown on the final survey screen):
 
@@ -147,7 +147,7 @@ Download the MyCap app and use this link to join the study:
 
 The participant receives their unique link immediately after submitting the survey.
 
-## 6.2 Alerts & Notifications
+### 6.2 Alerts & Notifications
 
 Use Alerts & Notifications ([RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md)) to send the App Link automatically based on a trigger (e.g., record creation, a status change):
 
@@ -163,7 +163,7 @@ Participants receive the email automatically when the trigger condition is met.
 
 ---
 
-# 7. Step-by-Step: Onboarding a Participant (In-Person, QR Code)
+## 7. Step-by-Step: Onboarding a Participant (In-Person, QR Code)
 
 1. Ensure the participant's record exists in REDCap.
 2. Navigate to **MyCap > Participant Management** and locate the participant's record.
@@ -174,7 +174,7 @@ Participants receive the email automatically when the trigger condition is met.
 
 ---
 
-# 8. Step-by-Step: Onboarding a Participant (Remote, App Link)
+## 8. Step-by-Step: Onboarding a Participant (Remote, App Link)
 
 1. Ensure the participant's record exists in REDCap.
 2. Set up an Alert or Survey Completion Text with the `[mycap-participant-link:Custom Text]` smart variable (see Section 6).
@@ -185,7 +185,7 @@ Participants receive the email automatically when the trigger condition is met.
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: What if a participant uses the link on a desktop computer instead of their phone?**
 
@@ -217,7 +217,7 @@ Participants receive the email automatically when the trigger condition is met.
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Sending App Links before the participant's record exists.** The App Link is generated per-record. If no record exists yet, there is no link to send. Create the record first, then trigger the invitation.
 
@@ -231,7 +231,7 @@ Participants receive the email automatically when the trigger condition is met.
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
 - [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)(participant tracking and resending invitations)

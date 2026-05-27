@@ -14,19 +14,19 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Database Activity Monitor displays a real-time, enhanced view of the MySQL/MariaDB process list for the REDCap database server. It shows all active database queries currently being executed, which makes it useful for diagnosing database-level performance issues, identifying long-running queries, and understanding what is happening on the database server at any given moment.
 
 ---
 
-# 2. Accessing the Monitor
+## 2. Accessing the Monitor
 
 The Database Activity Monitor is located in the REDCap Control Center under "Dashboards & Activity" in the sidebar. Requires super-user administrator access.
 
 ---
 
-# 3. Display Information
+## 3. Display Information
 
 The page header shows:
 - Database server hostname
@@ -35,7 +35,7 @@ The page header shows:
 
 ---
 
-# 4. Per-Process Information
+## 4. Per-Process Information
 
 For each active database process, the monitor displays:
 
@@ -48,7 +48,7 @@ For each active database process, the monitor displays:
 
 ---
 
-# 5. Query Display Modes
+## 5. Query Display Modes
 
 Administrators can toggle between:
 
@@ -57,7 +57,7 @@ Administrators can toggle between:
 
 ---
 
-# 6. Auto-Refresh
+## 6. Auto-Refresh
 
 The page automatically reloads at a configurable interval. Administrators can select from:
 - Every 10 seconds
@@ -68,7 +68,7 @@ The page continues auto-refreshing until the browser tab is closed or refreshed 
 
 ---
 
-# 7. Killing a Process
+## 7. Killing a Process
 
 Administrators can kill (terminate) a running MySQL process by clicking the kill button for that process. A confirmation dialog warns that:
 
@@ -80,7 +80,7 @@ Administrators can kill (terminate) a running MySQL process by clicking the kill
 
 ---
 
-# 8. Common Use Cases
+## 8. Common Use Cases
 
 The Database Activity Monitor is helpful in these scenarios:
 
@@ -92,7 +92,7 @@ The Database Activity Monitor is helpful in these scenarios:
 
 ---
 
-# 9. Best Practices
+## 9. Best Practices
 
 - **Monitor periodically during peak usage** to establish baseline performance
 - **Never kill a process without understanding its context** — verify the associated user and project first
@@ -101,13 +101,13 @@ The Database Activity Monitor is helpful in these scenarios:
 
 ---
 
-# 10. Access Requirements
+## 10. Access Requirements
 
 This page requires full super-user administrator access. Because it provides visibility into all database activity across all users and projects, access should be restricted to trusted administrators.
 
 ---
 
-# 11. Common Questions
+## 11. Common Questions
 
 **Q: What is the difference between "Script Time" and "Query Time"?**
 Script Time is how long the overall REDCap page or script has been running. Query Time is how long the specific database query shown in that row has been executing. A query may have been running for 5 seconds while the overall script has been running for 20 seconds because other operations or queries completed before this one.
@@ -126,7 +126,7 @@ If the database is down or unreachable, the monitor will not load and will displ
 
 ---
 
-# 12. Common Mistakes & Gotchas
+## 12. Common Mistakes & Gotchas
 
 **Killing a process without understanding its impact.** Terminating a database process can cause cascading effects. The query may have been initiated by a scheduled task, API call, or user action. Killing it can interrupt data imports, break user sessions, or leave partial data in an inconsistent state. Always verify the context before killing a process.
 
@@ -136,7 +136,7 @@ If the database is down or unreachable, the monitor will not load and will displ
 
 ---
 
-# 13. Related Articles
+## 13. Related Articles
 
 - [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)
 - [RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)

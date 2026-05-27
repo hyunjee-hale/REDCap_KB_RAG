@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to create new records in REDCap and how to
 navigate to existing ones using the Add/Edit Records page. It also
@@ -23,7 +23,7 @@ describes the Record Home Page — the central hub for any single record
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record**
 
@@ -60,9 +60,9 @@ single variable for speed in large projects.
 
 ---
 
-# 3. Step-by-Step Procedures
+## 3. Step-by-Step Procedures
 
-## 3.1 Navigating to the Add/Edit Records Page
+### 3.1 Navigating to the Add/Edit Records Page
 
 - Log in to your REDCap instance and open the project from the My
     Projects page.
@@ -70,7 +70,7 @@ single variable for speed in large projects.
 - In the left-hand menu, under Data Collection, click Add / Edit
     Records.
 
-## 3.2 Creating a New Record
+### 3.2 Creating a New Record
 
 - On the Add/Edit Records page, click the Add new record button.
 
@@ -87,7 +87,7 @@ single variable for speed in large projects.
 > **Important:** The Record ID is permanent once assigned. It cannot be changed through normal data entry. Treat it as an opaque system identifier — avoid using it as a meaningful clinical or participant identifier.
 
 
-## 3.3 Finding an Existing Record by ID
+### 3.3 Finding an Existing Record by ID
 
 - On the Add/Edit Records page, use the Choose an existing record
     dropdown.
@@ -101,7 +101,7 @@ single variable for speed in large projects.
 - In projects with a large number of records, use Data Search (Section
     3.4) instead — the dropdown becomes unwieldy at scale.
 
-## 3.4 Finding an Existing Record by Value (Data Search)
+### 3.4 Finding an Existing Record by Value (Data Search)
 
 - On the Add/Edit Records page, locate the Data Search section.
 
@@ -120,7 +120,7 @@ single variable for speed in large projects.
 - Matching results appear in a dropdown. Selecting a result takes you
     directly to the instrument and record where that value was found.
 
-## 3.5 The Record Home Page
+### 3.5 The Record Home Page
 
 - The Record Home Page displays all instruments for a record as
     colored status dots.
@@ -142,7 +142,7 @@ single variable for speed in large projects.
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: What is the Record ID and why does REDCap need it?**
 
@@ -196,7 +196,7 @@ Page entirely.
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 - Searching all variables in a large project: searching across all
     variables can be slow in projects with thousands of records and many
@@ -216,7 +216,7 @@ Page entirely.
     simple projects show a single dot; longitudinal projects show a
     grid. The layout depends entirely on the project configuration.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -226,7 +226,7 @@ Page entirely.
 ---
 
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (field types, saving, form status)
 

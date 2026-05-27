@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Every REDCap user has a **My Profile** page where they can view and update their personal account information, set display preferences, manage notification settings, and access their API tokens. My Profile is a user-facing page — it controls only your own account and is separate from the administrator tools in the Control Center.
 
@@ -22,13 +22,13 @@ What is available on My Profile depends partly on how your REDCap instance is co
 
 ---
 
-# 2. Accessing My Profile
+## 2. Accessing My Profile
 
 My Profile is accessible from the top of any REDCap page. Click on your username in the global navigation bar to reveal a dropdown menu, then click **Profile**. This takes you directly to your profile settings page.
 
 ---
 
-# 3. Basic Information
+## 3. Basic Information
 
 The **Basic Information** section of My Profile contains your core contact details:
 
@@ -45,7 +45,7 @@ After editing fields, click **Save Basic Info** to apply changes.
 
 ---
 
-# 4. Additional Email Addresses
+## 4. Additional Email Addresses
 
 The **Additional Options** section allows you to add up to two additional email addresses to your account — a **secondary email** and a **tertiary email**.
 
@@ -60,11 +60,11 @@ To add a secondary or tertiary email, enter the address and click **Add email**.
 
 ---
 
-# 5. User Preferences
+## 5. User Preferences
 
 The **User Preferences** section controls how dates, numbers, and data exports are displayed to you personally within REDCap. These are per-user settings and do not affect how data is stored or how other users see the interface.
 
-## 5.1 Date and Time Format
+### 5.1 Date and Time Format
 
 Choose your preferred format for how dates and timestamps are displayed. REDCap supports many combinations of ordering (month-day-year vs. day-month-year vs. year-month-day) and separators (hyphen, slash, period), as well as 12-hour (AM/PM) or 24-hour time. Examples:
 
@@ -72,15 +72,15 @@ Choose your preferred format for how dates and timestamps are displayed. REDCap 
 - `DD/MM/YYYY and 24-hour time` (e.g., 31/12/2004 22:57)
 - `YYYY-MM-DD and 24-hour time` (e.g., 2004-12-31 22:57)
 
-## 5.2 Number Format — Decimal Character
+### 5.2 Number Format — Decimal Character
 
 Choose whether a period (`.`) or comma (`,`) is used as the decimal separator when displaying numbers (e.g., `3.14` vs `3,14`).
 
-## 5.3 Number Format — Thousands Separator
+### 5.3 Number Format — Thousands Separator
 
 Choose the character used to group thousands in large numbers. Options include comma, period, apostrophe, blank space, or no separator (e.g., `1,000,000` vs `1.000.000` vs `1 000 000`).
 
-## 5.4 CSV File Download Delimiter
+### 5.4 CSV File Download Delimiter
 
 Choose the field delimiter used when you download data as a CSV file. Options include comma, semicolon, tab, blank space, pipe (`|`), or caret (`^`). This is useful if your statistical software or spreadsheet application expects a specific delimiter.
 
@@ -88,11 +88,11 @@ After adjusting any preference, click **Save Preferences**.
 
 ---
 
-# 6. Messenger Notification Preferences
+## 6. Messenger Notification Preferences
 
 The **Notification Preferences for REDCap Messenger** section controls how REDCap notifies you about incoming messages in the Messenger system when you are not actively logged in.
 
-## 6.1 Message Digest Frequency
+### 6.1 Message Digest Frequency
 
 Choose how often REDCap sends you an email notifying you of unread Messenger messages. Note: the notification email tells you that messages are waiting — it does not include the message content itself. Options are:
 
@@ -104,11 +104,11 @@ Choose how often REDCap sends you an email notifying you of unread Messenger mes
 - Daily digest
 - None (email notifications disabled)
 
-## 6.2 Instant Notifications for Important or Tagged Messages
+### 6.2 Instant Notifications for Important or Tagged Messages
 
 A separate checkbox lets you override the digest frequency for high-priority messages: if enabled, REDCap sends an immediate email notification whenever you receive a message marked as **Important** or whenever you are tagged with **@username** in a conversation. This applies even if your digest is set to a long interval or disabled.
 
-## 6.3 General and System Notifications
+### 6.3 General and System Notifications
 
 A second checkbox controls whether you receive email notifications for **General Notifications** (broadcast messages sent by REDCap administrators) and **System Notifications** (announcements about new features and system updates).
 
@@ -116,7 +116,7 @@ After adjusting settings, click **Save Messenger Preferences**.
 
 ---
 
-# 7. Password Management
+## 7. Password Management
 
 For users authenticated via **table-based (local) authentication**, the profile page includes a section to change your password. Enter your current password and then the new password twice to confirm.
 
@@ -126,27 +126,27 @@ Password requirements (minimum length, complexity, reuse rules) are set by your 
 
 ---
 
-# 8. Two-Factor Authentication Setup
+## 8. Two-Factor Authentication Setup
 
 If two-factor authentication (2FA) is enabled on your REDCap instance, users can set up their preferred verification method from My Profile.
 
-## 8.1 Authenticator App (TOTP)
+### 8.1 Authenticator App (TOTP)
 
 If the **Google/Microsoft Authenticator** option is enabled by your administrator, a QR code is displayed on your profile page. Scan this code with the Google Authenticator or Microsoft Authenticator app on your phone to register REDCap. After setup, the app generates a 6-digit code you enter at login.
 
 This setup step must be completed on My Profile before you can use the authenticator app option at login.
 
-## 8.2 Other 2FA Methods
+### 8.2 Other 2FA Methods
 
 Other methods — email-based codes, SMS via Twilio, Duo push — do not require setup on the profile page. They use the email address or phone number already on your account, or authenticate via the Duo service.
 
-## 8.3 Trusted Devices
+### 8.3 Trusted Devices
 
 If your administrator has enabled device trust, you may see a list of previously trusted devices on your profile page. You can remove trusted devices here to force re-authentication on the next login from those devices.
 
 ---
 
-# 9. API Tokens
+## 9. API Tokens
 
 The My Profile page includes an **API Tokens** section listing all REDCap API tokens associated with your account — one per project for which you have been granted API access.
 
@@ -164,7 +164,7 @@ If you need a token revoked or regenerated (for example, if a token was accident
 
 ---
 
-# 10. What Cannot Be Changed on My Profile
+## 10. What Cannot Be Changed on My Profile
 
 The following account properties are not user-editable from My Profile:
 
@@ -180,7 +180,7 @@ If you need to change your username or resolve an account access issue, contact 
 
 ---
 
-# 11. Common Questions
+## 11. Common Questions
 
 **Q: How do I access My Profile?**
 Click your username in the global navigation bar at the top of any REDCap page and select "Profile" from the dropdown menu.
@@ -211,7 +211,7 @@ No. User account deletion is an administrator function. Contact your REDCap admi
 
 ---
 
-# 12. Common Mistakes & Gotchas
+## 12. Common Mistakes & Gotchas
 
 **Changing your primary email to an address you don't yet control.** Because REDCap locks your account until the new email is verified, entering a typo or an address you cannot immediately access will lock you out. Double-check the address using the re-entry confirmation field before saving.
 
@@ -229,7 +229,7 @@ No. User account deletion is an administrator function. Contact your REDCap admi
 
 ---
 
-# 13. Related Articles
+## 13. Related Articles
 
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) Configuration
 - [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)

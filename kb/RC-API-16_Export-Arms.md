@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Arms API method retrieves the list of arms (study branches) in a longitudinal REDCap project. Arms exist only in longitudinal projects and represent parallel or sequential study pathways. Each arm has a number and a name.
 
@@ -25,7 +25,7 @@ This method returns metadata about arms: their arm numbers, names, and any other
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -37,9 +37,9 @@ This method returns metadata about arms: their arm numbers, names, and any other
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -56,7 +56,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -71,7 +71,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -85,7 +85,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -119,7 +119,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns the arms for the project in the format specified. The default format is `xml`; pass `format=json` or `format=csv` to change it.
 
@@ -139,7 +139,7 @@ Example JSON response:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I called Export Arms on my project and got an error. Why?**
 
@@ -163,7 +163,7 @@ Example JSON response:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Calling Export Arms on a classic project.** Arms are a longitudinal-only feature. If your project is not longitudinal, this method will fail. Always verify your project type before calling this method.
 
@@ -175,7 +175,7 @@ Example JSON response:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-17 — Import Arms API](RC-API-17_Import-Arms.md)(add or modify arms in a project)

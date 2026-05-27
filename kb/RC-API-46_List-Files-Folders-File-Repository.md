@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The List Files and Folders (File Repository) API method returns a listing of everything inside a folder of the project's **File Repository** — both sub-folders and files. Each sub-folder is returned with its own `folder_id`, and each file is returned with its own `doc_id`. These IDs are the handles you use to act on that item with other File Repository API methods (e.g., to list a sub-folder's contents, export a specific file, or delete it).
 
@@ -25,20 +25,20 @@ This method is the entry point for programmatic navigation of the File Repositor
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Doc ID
+#### Doc ID
 A numeric identifier that uniquely identifies a file in the File Repository. Used to export, delete, or reference specific files.
 
-### Folder ID
+#### Folder ID
 A numeric identifier that uniquely identifies a folder in the File Repository. Used to list contents of a specific folder or as a parent reference when creating sub-folders.
 
-### Access Restrictions
+#### Access Restrictions
 Folder-level permissions that limit access to specific users based on their Data Access Group or User Role assignment. Restricted folders include `role` and/or `dag` fields in the response.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -51,7 +51,7 @@ Folder-level permissions that limit access to specific users based on their Data
 
 ---
 
-# 4. Permissions Required
+## 4. Permissions Required
 
 To call this method, the API token's owner must have **both** of the following in the project:
 
@@ -62,7 +62,7 @@ Calls from tokens lacking either privilege will fail with a permissions error.
 
 ---
 
-# 5. Endpoint
+## 5. Endpoint
 
 ```
 POST https://your-redcap-instance.edu/api/
@@ -72,9 +72,9 @@ Only `POST` is supported.
 
 ---
 
-# 6. Request Examples
+## 6. Request Examples
 
-## 6.1 Python
+### 6.1 Python
 
 List the top-level of the File Repository:
 
@@ -109,7 +109,7 @@ fields = {
 }
 ```
 
-## 6.2 R
+### 6.2 R
 
 ```r
 source('config.R')
@@ -126,7 +126,7 @@ result <- postForm(
 print(result)
 ```
 
-## 6.3 cURL
+### 6.3 cURL
 
 ```sh
 . ./config
@@ -140,7 +140,7 @@ $CURL -H "Accept: application/json" \
       $API_URL
 ```
 
-## 6.4 PHP
+### 6.4 PHP
 
 ```php
 <?php
@@ -175,7 +175,7 @@ print $output;
 
 ---
 
-# 7. Response
+## 7. Response
 
 The API returns the list of files and sub-folders inside the requested folder. Each sub-folder entry has a `folder_id` and each file entry has a `doc_id`. Restricted folders also include a `role` (unique User Role name) and/or `dag` (unique Data Access Group name).
 
@@ -208,7 +208,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: How do I list the contents of the entire File Repository?**
 
@@ -236,7 +236,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Expecting a recursive tree from one call.** The response lists the direct children of the requested folder only. If you need a full File Repository tree, you must walk it yourself by re-calling the method for each nested `folder_id`.
 
@@ -250,7 +250,7 @@ When called as a background process (`backgroundProcess=true`), the response is 
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-45 — Create Folder (File Repository) API](RC-API-45_Create-Folder-File-Repository.md) (creates folders whose contents this method can list)

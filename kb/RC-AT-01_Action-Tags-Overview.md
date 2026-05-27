@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article introduces REDCap's action tags feature — what action tags are, why they exist, how to find the ones available in your project, and the three ways to add them to a field. It is the entry point for the Action Tags knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Action Tag**
 
@@ -46,7 +46,7 @@ Third-party External Modules can introduce additional action tags beyond REDCap'
 
 ---
 
-# 3. What Action Tags Do
+## 3. What Action Tags Do
 
 Action tags were introduced to change the default behavior of individual REDCap fields without requiring additional buttons or settings in the interface. The system is intentionally lightweight and extensible: new action tags are added with REDCap upgrades, and as of version 15.x there are over fifty standard tags.
 
@@ -58,7 +58,7 @@ Every action tag shares three characteristics:
 
 ---
 
-# 4. Finding Available Action Tags
+## 4. Finding Available Action Tags
 
 The action tags available to you depend on your REDCap version and any External Modules installed on your instance. The built-in reference is the most reliable way to see what is available.
 
@@ -76,15 +76,15 @@ All of these buttons open the same popup, which lists every currently available 
 
 ---
 
-# 5. How to Add an Action Tag
+## 5. How to Add an Action Tag
 
 There are three ways to add action tags to a field.
 
-## 5.1 Individually — Edit Field Dialog
+### 5.1 Individually — Edit Field Dialog
 
 Open the *Edit Field* popup in the Online Designer and type the action tag into the red *Action Tags / Field Annotation* box. Tags always start with `@`. Some need only their name (e.g., `@HIDDEN`); others require a parameter (e.g., `@HIDECHOICE='1'`).
 
-## 5.2 In Bulk — Quick-Modify Field(s)
+### 5.2 In Bulk — Quick-Modify Field(s)
 
 Most fields in the Online Designer have a checkbox in their top-right corner. Selecting one or more of these checkboxes opens the *Quick-Modify Field(s)* popup. Click the **@** button within that popup to open the *Edit Action Tags?* menu, which applies changes to all selected fields at once:
 
@@ -99,13 +99,13 @@ Most fields in the Online Designer have a checkbox in their top-right corner. Se
 
 Click **Apply** to confirm any changes.
 
-## 5.3 Via the Data Dictionary
+### 5.3 Via the Data Dictionary
 
 The *Action Tags / Field Annotation* column (column R in Excel) in the Data Dictionary accepts action tags exactly as the Online Designer does. However, most spreadsheet applications interpret the `@` character as a formula prefix and may prevent editing. To work around this, format column R as **Text** before making edits.
 
 ---
 
-# 6. Action Tag Quick Reference
+## 6. Action Tag Quick Reference
 
 Use this table to quickly find which article covers a specific action tag.
 
@@ -172,7 +172,7 @@ Use this table to quickly find which article covers a specific action tag.
 
 ---
 
-# 7. Scope of This Series
+## 7. Scope of This Series
 
 The Action Tags knowledge base series is organized by tag category:
 
@@ -192,7 +192,7 @@ The Action Tags knowledge base series is organized by tag category:
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: How do I know if an action tag is available on my REDCap instance?**
 
@@ -208,7 +208,7 @@ The Action Tags knowledge base series is organized by tag category:
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) — @HIDDEN & @READONLY
 - [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md)

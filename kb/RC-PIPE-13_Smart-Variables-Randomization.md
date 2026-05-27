@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Randomization smart variables expose information about a record's randomization assignment in REDCap projects using the Randomization module. They return the randomization number/allocation group assigned to the record, the date and time the randomization occurred, and the equivalent UTC timestamp. These variables are useful for personalizing forms and emails based on randomization status, validating that randomization has occurred, and tracking randomization timestamps. They are only available in projects with the Randomization module enabled.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Randomization**
 
@@ -52,7 +52,7 @@ Projects can have more than one randomization scheme. The `:n` suffix (e.g., `:1
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -69,7 +69,7 @@ Projects can have more than one randomization scheme. The `:n` suffix (e.g., `:1
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Randomization Module Required**
 
@@ -113,7 +113,7 @@ If a record has not been randomized, all randomization smart variables return bl
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I display a record's randomization assignment in a form field or email?**
 
@@ -145,7 +145,7 @@ If a record has not been randomized, all randomization smart variables return bl
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using randomization smart variables in projects without the Randomization module enabled.** If your project does not have the Randomization module, these smart variables return blank or produce errors. Confirm that your project has randomization enabled before relying on these variables.
 
@@ -163,7 +163,7 @@ If a record has not been randomized, all randomization smart variables return bl
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(timestamp formats and modifiers)

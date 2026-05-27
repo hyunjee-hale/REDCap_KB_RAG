@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the mechanics of entering data into a REDCap
 instrument. It explains the field types you will encounter, how required
@@ -24,7 +24,7 @@ entering any data in REDCap.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Instrument (Form)**
 
@@ -67,12 +67,12 @@ bottom of every instrument.
 
 ---
 
-# 3. Field Types
+## 3. Field Types
 
 REDCap fields fall into two broad categories: structured (constrained
 input) and unstructured (free text).
 
-## 3.1 Structured Field Types
+### 3.1 Structured Field Types
 
 Structured fields restrict input to a defined set of options or a
 validated format. They reduce entry errors and improve data consistency.
@@ -86,7 +86,7 @@ validated format. They reduce entry errors and improve data consistency.
 | File upload | Attach a file (PDF, image, etc.) to the record. One file per field per instance. |
 | Signature | Capture a drawn signature in the browser. Stored as an image file. |
 
-## 3.2 Unstructured Field Types
+### 3.2 Unstructured Field Types
 
 Unstructured fields accept free-text input. They can be configured with
 optional validation to enforce a format without restricting the user to
@@ -115,7 +115,7 @@ and shows an error if the value does not match.
 
 ---
 
-# 4. Required Fields
+## 4. Required Fields
 
 A required field is marked with a red asterisk (\*) next to the field
 label. If you attempt to save the instrument while a required field is
@@ -127,7 +127,7 @@ empty, REDCap displays a warning listing the empty required fields.
 
 ---
 
-# 5. Branching Logic
+## 5. Branching Logic
 
 Branching logic allows the project designer to conditionally show or
 hide fields based on the current values of other fields in the same
@@ -153,7 +153,7 @@ instrument (or in some configurations, other instruments).
 
 ---
 
-# 6. Form Status
+## 6. Form Status
 
 Every instrument has a Form Status dropdown at the bottom, labeled
 'Complete?'. This field controls the color of the instrument's status
@@ -181,7 +181,7 @@ dot in the Record Home Page and Record Status Dashboard.
 
 ---
 
-# 7. Saving Data
+## 7. Saving Data
 
 
 > **Critical:** REDCap does not auto-save. If you close the browser tab, navigate away, or click Cancel without saving, all unsaved data on the current form is lost.
@@ -203,7 +203,7 @@ Every instrument has the following core save options at the bottom of the page:
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: A required field has a red asterisk but I need to save the form
 without filling it in. Can I?**
@@ -255,7 +255,7 @@ back), it starts empty.
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 - Losing data by closing the browser: REDCap does not auto-save.
     Always use one of the save buttons before navigating away.
@@ -283,7 +283,7 @@ back), it starts empty.
     branching logic before reporting a problem. It may be intentionally
     hidden based on another field's value.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -295,7 +295,7 @@ back), it starts empty.
 ---
 
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (prerequisite)
 

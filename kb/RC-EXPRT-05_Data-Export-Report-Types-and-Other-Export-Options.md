@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article describes the types of reports available in REDCap's Data
 Exports, Reports, and Stats application — what each one exports and
@@ -25,7 +25,7 @@ de-identification options are applied after the report is selected.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Report**
 
@@ -65,9 +65,9 @@ download, PDF of all records, and Tableau integration.
 
 ---
 
-# 3. Built-in Report Types
+## 3. Built-in Report Types
 
-## 3.1 All Data
+### 3.1 All Data
 
 Exports the complete dataset — every record, every instrument, every
 variable — at the current point in time. This is the quickest path to
@@ -81,7 +81,7 @@ export format.
 
 - DAG membership still limits which records are included.
 
-## 3.2 Selected Instruments and/or Events
+### 3.2 Selected Instruments and/or Events
 
 Allows the user to select one or more instruments to include in the
 export. All records are included for the selected instruments — this
@@ -99,9 +99,9 @@ report does not filter by record.
 
 ---
 
-# 4. Custom Reports
+## 4. Custom Reports
 
-## 4.1 What Custom Reports Can Do
+### 4.1 What Custom Reports Can Do
 
 Custom reports extend beyond the built-in options by allowing
 fine-grained control over what is included in an export.
@@ -114,7 +114,7 @@ fine-grained control over what is included in an export.
 | **Left-menu shortcut** | Custom reports automatically appear in the left-hand menu for quick access, in addition to the report list. |
 | **Folder organization** | Reports can be organized into named folders in the left-hand menu. Use folders when a project has accumulated many reports to keep navigation manageable. |
 
-## 4.2 Creating and Editing Custom Reports
+### 4.2 Creating and Editing Custom Reports
 
 Creating and editing custom reports requires the Add/Edit/Organize
 Reports user right. This right is independent of Data Export Rights. A
@@ -128,7 +128,7 @@ rights levels.
 
 ---
 
-# 5. Other Export Options
+## 5. Other Export Options
 
 The Other Export Options tab at the top of the Data Exports, Reports,
 and Stats page provides bulk export options that operate at the project
@@ -148,7 +148,7 @@ used but serve specific purposes.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 | *What is the difference between All Data and Selected Instruments?* | All Data exports every instrument and every variable in the project for all records. Selected Instruments lets you choose specific instruments to include — useful when you only need a subset of the data. Both include all records you have access to. |
 | --- | --- |
@@ -160,7 +160,7 @@ used but serve specific purposes.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using All Data when only a subset is needed.** Exporting the full
 dataset when only one instrument's data is required shares more data
@@ -183,7 +183,7 @@ The REDCap XML export captures the full project including data. Use the
 XML export for complete backups; use the Data Dictionary for instrument
 structure management.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -192,7 +192,7 @@ structure management.
 ---
 
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite ---
     the full export process)

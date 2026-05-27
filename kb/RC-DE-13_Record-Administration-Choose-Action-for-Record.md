@@ -14,40 +14,40 @@
 
 ---
 
-# [RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md)
+## [RC-DE-13 — Record Administration: Choose Action for Record](RC-DE-13_Record-Administration-Choose-Action-for-Record.md)
 
-## Section 1: Overview
+### Section 1: Overview
 
 The **Choose action for record** button on the Record Home Page is the central control point for record-level administrative operations. From this dropdown, authorized users can download a PDF of the record, lock or unlock the entire record, assign the record to a Data Access Group, rename it, or permanently delete it. Administrators also see a set of diagnostic shortcut links that filter project logs, alerts, and email history to the current record. This article covers every option in the menu, the user rights required to access each one, and the important limitations and consequences of destructive actions like deletion.
 
 ---
 
-## Section 2: Key Concepts & Definitions
+### Section 2: Key Concepts & Definitions
 
-### Choose Action for Record
+#### Choose Action for Record
 A dropdown button on the Record Home Page that exposes record-level administrative functions. It is distinct from instrument-level save options and from the data-editing actions available inside individual instruments. The button only displays actions the current user is permitted to perform; options requiring rights the user does not hold are omitted from the menu.
 
-### Record Home Page
+#### Record Home Page
 The page that opens when a specific record is selected. It shows the instrument-event grid (in longitudinal projects) or the instrument list (in classic projects), the completion status of each instrument, and the **Choose action for record** button. See [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md).
 
-### Current Arm (Longitudinal Projects)
+#### Current Arm (Longitudinal Projects)
 In longitudinal projects, several record-level actions — rename and delete — apply only to the arm currently being viewed. REDCap treats each arm as a semi-independent context for these operations. Navigating to a different arm and performing the same action affects that arm's data independently.
 
-### Lock/Unlock Entire Record
+#### Lock/Unlock Entire Record
 A setting that prevents any user from editing any instrument in the record until the lock is removed. This is distinct from locking an individual instrument. Locking an entire record requires the **Lock/Unlock entire records** user right. See [RC-LOCK-01 — Record Locking & E-Signatures](RC-LOCK-01_Record-Locking-and-E-Signatures.md).
 
-### Data Access Group (DAG)
+#### Data Access Group (DAG)
 A project-level grouping that restricts which records a user can see and edit. Assigning a record to a DAG means only users in that group (and those with no DAG assignment) can access it. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
 ---
 
-## Section 3: Accessing the Menu
+### Section 3: Accessing the Menu
 
 The **Choose action for record** button is located at the top of the Record Home Page, to the right of the record identifier. It is displayed as a button with a small dropdown arrow. Clicking it opens a list of available actions.
 
 The button is visible to any user who can view the Record Home Page. However, which items appear in the dropdown depends on the user's assigned rights. Users who hold none of the rights required for any action in the menu will see a reduced or empty list; the button itself may be hidden if no actions are available.
 
-### Steps to access
+#### Steps to access
 1. Navigate to **Add/Edit Records** in the left menu.
 2. Select an existing record, or use the Record Status Dashboard to open a specific record.
 3. On the Record Home Page, click the **Choose action for record** button near the top of the page.
@@ -55,7 +55,7 @@ The button is visible to any user who can view the Record Home Page. However, wh
 
 ---
 
-## Section 4: Action Reference
+### Section 4: Action Reference
 
 The table below lists every option in the **Choose action for record** menu, the user right required, and the scope of the action.
 
@@ -77,9 +77,9 @@ The table below lists every option in the **Choose action for record** menu, the
 
 ---
 
-## Section 5: Action Details
+### Section 5: Action Details
 
-### 5.1 Download PDF
+#### 5.1 Download PDF
 
 Two PDF options are available:
 
@@ -88,7 +88,7 @@ Two PDF options are available:
 
 Both PDFs include the current data at the moment of generation. They are downloaded directly to the browser; no file is stored in the project's File Repository. The **Export Data** user right is required.
 
-### 5.2 Lock / Unlock Entire Record
+#### 5.2 Lock / Unlock Entire Record
 
 Selecting **Lock entire record** displays a confirmation dialog: *"This will lock the ENTIRE record, not just a single instrument. After doing this, no one will be able to edit this record until it is unlocked by someone with Lock/Unlock privileges."*
 
@@ -100,7 +100,7 @@ After confirming:
 
 The action is logged in the project's Logging module. For e-signature functionality and instrument-level locking, see [RC-LOCK-01 — Record Locking & E-Signatures](RC-LOCK-01_Record-Locking-and-E-Signatures.md).
 
-### 5.3 Assign to Data Access Group
+#### 5.3 Assign to Data Access Group
 
 Selecting **Assign to Data Access Group** opens a dialog with a dropdown listing all DAGs defined in the project, plus an option to remove the current DAG assignment (assign to no group).
 
@@ -111,7 +111,7 @@ After selecting a group and confirming:
 
 For full context on how DAGs affect data access, see [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
-### 5.4 Rename Record
+#### 5.4 Rename Record
 
 Selecting **Rename record** opens a dialog pre-populated with the current record name and a text field for the new name.
 
@@ -126,7 +126,7 @@ Behavior:
 
 For the API equivalent, see [RC-API-05 — Rename Record API](RC-API-05_Rename-Record.md).
 
-### 5.5 Delete Record (All Forms/Events)
+#### 5.5 Delete Record (All Forms/Events)
 
 Selecting **Delete record (all forms/events)** opens a confirmation dialog:
 
@@ -145,7 +145,7 @@ A separate delete operation — **Delete all data on event** — is available as
 
 For the API equivalent, see [RC-API-04 — Delete Records API](RC-API-04_Delete-Records.md).
 
-### 5.6 Admin Diagnostic Links
+#### 5.6 Admin Diagnostic Links
 
 For users with system administrator access, the menu includes a separator followed by five shortcut links. Each opens a separate page pre-filtered to show information related only to the current record:
 
@@ -159,7 +159,7 @@ These links are for diagnostic use only and do not perform any action on the rec
 
 ---
 
-## Section 6: Audit Trail Behavior
+### Section 6: Audit Trail Behavior
 
 All record-level administrative actions performed through the **Choose action for record** menu are captured in the project's **Logging** module. Each log entry includes:
 
@@ -172,7 +172,7 @@ For deletion specifically, the log retains a record that the entry existed and w
 
 ---
 
-## Section 7: Common Questions
+### Section 7: Common Questions
 
 **Q: Can I undo a record deletion?**
 No. Deletion through the Choose action for record menu is permanent and cannot be reversed through the REDCap interface. The only recovery path is a database-level restore by a system administrator from a backup taken before the deletion. Contact your REDCap administrator immediately if a deletion was made in error.
@@ -200,7 +200,7 @@ Yes. If you belong to a specific DAG and reassign the record to a different DAG,
 
 ---
 
-## Section 8: Common Mistakes & Gotchas
+### Section 8: Common Mistakes & Gotchas
 
 **Deleting in the wrong arm.** In longitudinal projects, the delete operation targets the current arm. Users sometimes delete on Arm 1 intending to remove all data, then discover data on Arm 2 is still present. Verify which arm you are on before confirming a deletion, and repeat the operation for each arm if full removal is needed.
 
@@ -216,7 +216,7 @@ Yes. If you belong to a specific DAG and reassign the record to a different DAG,
 
 ---
 
-## Related Articles
+### Related Articles
 
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) *(prerequisite — covers the Record Home Page layout and context)*
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md)

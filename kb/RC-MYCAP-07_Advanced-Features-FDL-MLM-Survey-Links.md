@@ -14,15 +14,15 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers three advanced MyCap features that extend the base task-and-schedule model: Form Display Logic (FDL) for conditional task display, Multi-Language Management (MLM) for translating the app experience, and Survey Links for embedding REDCap surveys inside a MyCap task. Each feature has its own version requirements, configuration steps, and limitations specific to the MyCap context. These features can be combined — for example, an MLM-translated project can use Survey Links to return results, with FDL controlling when the results task appears.
 
 ---
 
-# 2. Feature 1: Form Display Logic (FDL) in MyCap
+## 2. Feature 1: Form Display Logic (FDL) in MyCap
 
-### 2.1 Overview
+#### 2.1 Overview
 
 Form Display Logic (FDL) controls which tasks appear in a participant's MyCap task list based on conditions evaluated from the REDCap project data. FDL is a project-level feature — not MyCap-specific — but MyCap has additional constraints and limitations on how FDL behaves in the app context.
 
@@ -31,7 +31,7 @@ Form Display Logic (FDL) controls which tasks appear in a participant's MyCap ta
 
 > **Note:** FDL must be explicitly enabled for MyCap. Enabling FDL for the project does not automatically enable it for MyCap — the "Enable support for MyCap App" checkbox is a separate step.
 
-### 2.2 How FDL Works in MyCap
+#### 2.2 How FDL Works in MyCap
 
 When FDL is enabled for MyCap, each instrument can have display logic that evaluates conditions from the REDCap project (e.g., responses to earlier tasks, data entered by study staff). If the condition is true, the task appears in the participant's app; if false, the task is hidden.
 
@@ -47,7 +47,7 @@ FDL conditions can reference:
 4. Use baseline responses to customize which tasks a participant sees throughout the study.
 5. Gate the release of subsequent assessments until an earlier one is submitted.
 
-### 2.3 MyCap-Specific FDL Limitations
+#### 2.3 MyCap-Specific FDL Limitations
 
 FDL behavior in MyCap differs from standard REDCap FDL in the following ways:
 
@@ -59,11 +59,11 @@ FDL behavior in MyCap differs from standard REDCap FDL in the following ways:
 | No Retroactive Completion for FDL-triggering tasks | Instruments that trigger FDL conditions cannot use the Retroactive Completion feature. If your workflow requires retroactive completion, do not use that instrument as an FDL trigger. |
 | No Infinite schedule on FDL-controlled tasks | Tasks governed by FDL cannot use the Infinite schedule type. Use a One-Time, Repeating, or Fixed schedule instead. |
 
-### 2.4 FDL Publishing Behavior
+#### 2.4 FDL Publishing Behavior
 
 **FDL changes do not require publishing.** Updates to Form Display Logic conditions take effect the next time the participant opens the app and syncs — no manual publish step is needed. This is different from instrument and schedule changes, which require publishing.
 
-### 2.5 Configuring FDL for MyCap
+#### 2.5 Configuring FDL for MyCap
 
 1. Ensure FDL is enabled for the project: **Project Setup > Enable optional modules > Form Display Logic**.
 2. Enable FDL specifically for MyCap: **MyCap > Additional Settings > Enable support for MyCap App**.
@@ -72,9 +72,9 @@ FDL behavior in MyCap differs from standard REDCap FDL in the following ways:
 
 ---
 
-# 3. Feature 2: Multi-Language Management (MLM) in MyCap
+## 3. Feature 2: Multi-Language Management (MLM) in MyCap
 
-### 3.1 Overview
+#### 3.1 Overview
 
 Multi-Language Management (MLM) allows projects to present MyCap content in multiple languages. Participants select their preferred language when they first join the app, and all translated content is displayed in their chosen language.
 
@@ -82,7 +82,7 @@ Multi-Language Management (MLM) allows projects to present MyCap content in mult
 - **Minimum MyCap app version:** v2.1.0
 - **Supported languages:** 20, identified by IETF language tags
 
-### 3.2 Supported Languages
+#### 3.2 Supported Languages
 
 | Language | Language ID |
 |---|---|
@@ -109,11 +109,11 @@ Multi-Language Management (MLM) allows projects to present MyCap content in mult
 
 > **Note:** Language IDs must match the codes in this table exactly. Mismatched language IDs will cause the language to fail to appear in the app.
 
-### 3.3 All-or-Nothing Language Enabling for MyCap
+#### 3.3 All-or-Nothing Language Enabling for MyCap
 
 In the standard REDCap MLM interface, you can enable different languages for different instruments. For MyCap, language enabling is **all-or-nothing**: when you enable a language for MyCap, it applies to all MyCap-enabled instruments in the project. You cannot enable a language for some MyCap tasks but not others.
 
-### 3.4 What Needs to Be Translated for MyCap
+#### 3.4 What Needs to Be Translated for MyCap
 
 MLM translation for a MyCap project requires translating content in two tabs in the MLM interface:
 
@@ -128,7 +128,7 @@ MLM translation for a MyCap project requires translating content in two tabs in 
 - **Contacts:** Translated contact names and roles.
 - **Links:** Translated link labels.
 
-### 3.5 Participant Language Selection
+#### 3.5 Participant Language Selection
 
 When a participant joins a MyCap project that has MLM enabled:
 1. The app presents the list of available languages.
@@ -137,22 +137,22 @@ When a participant joins a MyCap project that has MLM enabled:
 
 The participant's language selection is stored in their record and persists across sessions. The participant can change their language from the app's settings.
 
-### 3.6 MLM Publishing Behavior
+#### 3.6 MLM Publishing Behavior
 
 **MLM changes do not require publishing.** When you save updated translations in the MLM interface, participants see the updated content on their next app sync. No manual publish step is needed for MLM changes.
 
 ---
 
-# 4. Feature 3: Survey Links in MyCap
+## 4. Feature 3: Survey Links in MyCap
 
-### 4.1 Overview
+#### 4.1 Overview
 
 Survey Links allow you to embed a REDCap survey link inside a MyCap task. When a participant opens the task in the app, they are directed to a standard REDCap survey in their mobile browser, complete it, and return to MyCap. This feature enables capabilities that are not available natively in MyCap instruments.
 
 - **Minimum REDCap version:** v15.8.4
 - **Minimum MyCap app version:** v2.6.0
 
-### 4.2 Use Cases
+#### 4.2 Use Cases
 
 **Use case 1: Data collection with calculated fields or piping**
 MyCap instruments do not support calculated fields or piping. By embedding a Survey Link in a MyCap task, you can direct participants to a standard REDCap survey where calculated fields and piping work normally. The survey collects the data; the participant returns to MyCap after completing it.
@@ -160,7 +160,7 @@ MyCap instruments do not support calculated fields or piping. By embedding a Sur
 **Use case 2: Returning results to participants**
 After the study team or an automated calculation generates a result (e.g., a composite score), that result can be piped into a REDCap survey and displayed to the participant via a Survey Link task. Because the REDCap survey supports piping, the participant sees their personalized result.
 
-### 4.3 Smart Variables for Survey Links
+#### 4.3 Smart Variables for Survey Links
 
 Two smart variables generate the link to include in the MyCap task:
 
@@ -176,7 +176,7 @@ Replace `instrument_name` with the REDCap variable name (unique instrument name)
 [survey-link:results_display:View Your Results]
 ```
 
-### 4.4 Preventing Accidental Task Completion
+#### 4.4 Preventing Accidental Task Completion
 
 When a participant opens a Survey Link task in MyCap, they may complete the survey and return to the task — then accidentally tap "Done" on the MyCap task before completing the survey. To prevent this:
 
@@ -188,7 +188,7 @@ Please tap the link below to complete your assessment. After the survey
 opens in your browser and you submit it, return to this screen and tap Done.
 ```
 
-### 4.5 Configuring a Results Task
+#### 4.5 Configuring a Results Task
 
 A common pattern for returning results to participants:
 
@@ -199,7 +199,7 @@ A common pattern for returning results to participants:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Does FDL in MyCap work when the participant is offline?**
 
@@ -231,7 +231,7 @@ A common pattern for returning results to participants:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Not enabling FDL for MyCap specifically.** Enabling FDL for the project in Project Setup does not automatically enable it for MyCap. You must also check "Enable support for MyCap App" in MyCap Additional Settings. If participants see tasks regardless of FDL conditions, check this setting.
 
@@ -247,7 +247,7 @@ A common pattern for returning results to participants:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(field design and annotations)
 - [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)(schedule types, FDL interaction with Infinite schedule)

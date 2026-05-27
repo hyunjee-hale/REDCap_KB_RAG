@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how Data Access Groups (DAGs) affect the data entry experience in REDCap. DAGs partition records within a project so that users from one group cannot see records belonging to another group — a common requirement in multi-site studies. This article covers the practical implications of DAGs for data entry users: what you can and cannot see, how record creation and assignment works, how record IDs behave when DAGs are active, and how to switch between DAGs if you are assigned to more than one. For information on how DAGs are created and configured, see [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Access Group (DAG)**
 
@@ -40,7 +40,7 @@ When a user is assigned to multiple DAGs, the active DAG is the one currently in
 
 ---
 
-# 3. Single DAG Assignment
+## 3. Single DAG Assignment
 
 If your user account is assigned to exactly one DAG, the experience is straightforward:
 
@@ -52,7 +52,7 @@ If your user account is assigned to exactly one DAG, the experience is straightf
 
 ---
 
-# 4. Multiple DAG Assignment
+## 4. Multiple DAG Assignment
 
 If your user account is assigned to more than one DAG, the experience involves an additional concept: the active DAG.
 
@@ -66,7 +66,7 @@ If your user account is assigned to more than one DAG, the experience involves a
 
 ---
 
-# 5. No DAG Assignment
+## 5. No DAG Assignment
 
 If your user account is not assigned to any DAG, your behavior is different from DAG-assigned users in several ways. This configuration is typically reserved for project managers and data managers rather than standard data entry staff.
 
@@ -88,7 +88,7 @@ If your user account is not assigned to any DAG, your behavior is different from
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: I can't find a record that I know exists. What should I check?**
 
@@ -116,7 +116,7 @@ If your user account is not assigned to any DAG, your behavior is different from
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Switching DAGs and then creating records unintentionally in the wrong DAG.** After switching your active DAG, any new records you create are automatically assigned to the newly active DAG. Confirm which DAG is active before creating new records, especially if you frequently switch between sites.
 
@@ -128,7 +128,7 @@ If your user account is not assigned to any DAG, your behavior is different from
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -142,7 +142,7 @@ If your user account is not assigned to any DAG, your behavior is different from
 ---
 
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (covers DAG creation, configuration, and administrator management)
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (record creation workflow and the Choose Action for Record menu)

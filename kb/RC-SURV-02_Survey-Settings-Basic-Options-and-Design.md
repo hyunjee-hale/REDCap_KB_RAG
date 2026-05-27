@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article is the first of a two-part series on the REDCap Survey Settings page. It covers the **Basic Options** section (survey status, title, and instructions) and the **Survey Design Options** section (layout, logo, typography, and color themes). Together these settings control whether a survey is accessible to participants and how it looks when they open it. The companion article, [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md), covers behavioral customizations, access controls, and termination options.
 
@@ -22,41 +22,41 @@ To reach Survey Settings, navigate to your project, open the **Online Designer**
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## Survey Settings Page
+### Survey Settings Page
 
 A configuration interface available for each instrument that has been enabled as a survey. Accessed through the Online Designer. Changes apply to that survey only.
 
-## Survey Status
+### Survey Status
 
 A dropdown that activates or deactivates a survey without deleting any settings. When set to **Survey Offline**, participants cannot access the survey via its public or individual link. Logged-in REDCap users can still fill out an offline survey as a regular instrument.
 
-## Survey Title
+### Survey Title
 
 The label displayed at the top of the survey page and in the participant's browser tab. Defaults to the instrument name but can be set to any value. Supports a limited set of HTML formatting tags.
 
-## Survey Instructions
+### Survey Instructions
 
 An optional block of introductory text displayed between the survey title and the first question. Supports rich text editing.
 
-## Survey Design Options
+### Survey Design Options
 
 The set of settings that control the visual appearance of a survey: layout width, logo, button style, text size, font, and color theme.
 
-## Survey Theme
+### Survey Theme
 
 A saved collection of eight color settings that define the background and text colors for various regions of the survey interface. REDCap ships with built-in themes; institutions may add custom themes aligned to their branding guidelines. Themes can also be created and saved by individual users.
 
-## Enhanced Radio Buttons and Checkboxes
+### Enhanced Radio Buttons and Checkboxes
 
 An optional display mode that renders radio button and checkbox options as large tap-friendly blocks rather than small clickable circles. Intended for participants entering data on a mobile device.
 
 ---
 
-# 3. Basic Survey Options
+## 3. Basic Survey Options
 
-## 3.1 Survey Status
+### 3.1 Survey Status
 
 The **Survey Status** dropdown is the first control on the Survey Settings page. It has two values:
 
@@ -71,7 +71,7 @@ Example offline messages:
 
 > **Note:** Taking a survey offline via the Status dropdown is non-destructive — all settings, design choices, and collected data are preserved. This is the recommended approach for temporarily suspending a survey.
 
-## 3.2 Survey Title
+### 3.2 Survey Title
 
 The **Survey Title** field controls what participants see at the top of the survey and in their browser tab. It is pre-populated with the instrument name but can be changed independently.
 
@@ -81,7 +81,7 @@ Use a participant-friendly title when the instrument name is technical or intern
 
 > **Note:** The survey title supports a limited set of HTML tags, including `<u>` (underline) and `<i>` (italic). Full HTML or script tags are not permitted.
 
-## 3.3 Survey Instructions
+### 3.3 Survey Instructions
 
 The **Survey Instructions** field places a block of text between the survey title and the first question. Use it to provide context, completion guidance, or consent-adjacent information that participants should read before starting.
 
@@ -89,9 +89,9 @@ This field supports full rich text editing — bold, italic, underline, bullet l
 
 ---
 
-# 4. Survey Design Options
+## 4. Survey Design Options
 
-## 4.1 Survey Width
+### 4.1 Survey Width
 
 The **Width of Survey** setting controls the horizontal extent of the survey on the participant's screen. Options include:
 
@@ -102,13 +102,13 @@ The **Width of Survey** setting controls the horizontal extent of the survey on 
 
 Higher percentages can cause very wide surveys on large monitors; lower percentages can make surveys feel cramped. If you use a percentage width, test on multiple screen sizes before distributing.
 
-## 4.2 Logo
+### 4.2 Logo
 
 The **Logo** setting lets you place an image at the top of the survey, above the title. Common image formats (PNG, JPG, GIF) are supported. Images wider than 600 pixels are automatically scaled down to 600 pixels to fit the survey header.
 
 You can optionally **hide the survey title** when a logo is present, leaving only the image at the top.
 
-## 4.3 Enhanced Radio Buttons and Checkboxes
+### 4.3 Enhanced Radio Buttons and Checkboxes
 
 Standard radio button and checkbox controls are small and designed for precise mouse clicks. On touchscreen devices, small targets are difficult to tap accurately.
 
@@ -120,19 +120,19 @@ Enabling **Enhanced Radios and Checkboxes** replaces the standard controls with 
 
 Consider enabling this setting if you expect participants to complete the survey on a phone or tablet.
 
-## 4.4 Survey Text Size
+### 4.4 Survey Text Size
 
 The **Survey Text Size** setting sets the default font size for all text in the survey. By default, participants can also adjust the text size themselves using a control displayed on the survey page. To remove the participant-facing resize control, see the **Font Resize Options** setting in [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md).
 
 Tailor the default size to your audience. Surveys targeting older participants or those with low vision may benefit from a larger default.
 
-## 4.5 Survey Text Font
+### 4.5 Survey Text Font
 
 The **Survey Text Font** setting applies a single typeface to all survey text. The default font, **Open Sans**, is a clean, neutral choice appropriate for most surveys.
 
 All available fonts are web-safe or embedded — participants do not need any fonts installed on their device. Choose a font that aligns with your study's branding or the expectations of your participant population.
 
-## 4.6 Survey Themes
+### 4.6 Survey Themes
 
 A **Survey Theme** is a set of eight color values that define the colors of the survey's header, body background, text, buttons, and borders. Selecting a theme applies all eight values at once.
 
@@ -142,7 +142,7 @@ A **Survey Design Preview** section appears at the bottom of the Survey Design O
 
 > **Best practice:** Always test your survey design in a live test survey on all device types where you expect participants to respond — desktop, laptop, tablet, and phone. The preview is helpful but does not fully replicate mobile rendering.
 
-### Custom Survey Themes
+#### Custom Survey Themes
 
 If none of the available themes fit your needs, click the **Customize** button next to the theme dropdown to open the custom theme editor.
 
@@ -157,13 +157,13 @@ Click **Choose** (or click outside the picker) to confirm a color. When all eigh
 
 Use **Manage Saved Themes** to edit or delete your custom themes at any time.
 
-### Copying Design Settings to Other Surveys
+#### Copying Design Settings to Other Surveys
 
 The **Copy Design to Other Surveys** button (top-right of the Survey Design Options section) lets you apply your design settings to other surveys in the same project. After clicking the button, a popup lets you select which settings to copy and which surveys to copy them to. Use this to keep a consistent look across a project with multiple surveys.
 
 ---
 
-# 5. Survey Notifications
+## 5. Survey Notifications
 
 Survey Notifications is a per-survey feature that sends a brief system-generated email to a project user each time a participant completes a survey. It is configured separately from the Survey Settings page and does not appear inside the Survey Settings dialog.
 
@@ -181,7 +181,7 @@ Survey Notifications is best suited for simple, low-volume projects where a sing
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 
 **Q: Can I notify multiple users when a survey is completed?**
@@ -213,7 +213,7 @@ No. Custom themes are linked to the user account that created them. Other projec
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Expecting Survey Notifications to send a customized message.** The notification email is system-generated and contains no project data, custom subject, or body text. If you need a tailored message with participant details — such as a record ID, name, or response summary — use Alerts & Notifications instead.
 
@@ -229,7 +229,7 @@ No. Custom themes are linked to the user account that created them. Other projec
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
 - [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md)

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Data Dictionary is REDCap's spreadsheet-based instrument design
 tool. It allows you to define or modify every variable and instrument in
@@ -26,7 +26,7 @@ safety practices that prevent data loss.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Dictionary**
 
@@ -70,9 +70,9 @@ works.
 
 ---
 
-# 3. Accessing the Data Dictionary
+## 3. Accessing the Data Dictionary
 
-## 3.1 Downloading the Current Data Dictionary
+### 3.1 Downloading the Current Data Dictionary
 
 - From the Project Setup page or Designer page, click Download the
     current Data Dictionary in the Design Your Data Collection
@@ -84,7 +84,7 @@ works.
 - The downloaded file is a CSV. Open it in spreadsheet software
     (Excel, Google Sheets, LibreOffice Calc) for editing.
 
-## 3.2 Uploading a Modified Data Dictionary
+### 3.2 Uploading a Modified Data Dictionary
 
 - From the Project Setup page or Designer page, click the Data
     Dictionary button to open the upload interface.
@@ -99,7 +99,7 @@ works.
 
 ---
 
-# 4. What the Data Dictionary Can Do
+## 4. What the Data Dictionary Can Do
 
 - Define any number of variables and instruments in a single upload
     — far more efficient than the Online Designer for large projects.
@@ -123,13 +123,13 @@ works.
 
 ---
 
-# 5. Essential Safety Practices
+## 5. Essential Safety Practices
 
 
 > **Critical:** The Data Dictionary overwrites your existing project configuration on upload. Always download and save a snapshot of the current Data Dictionary before making any significant changes. This is your only reliable recovery path if an upload produces unintended results.
 
 
-## 5.1 Before Uploading
+### 5.1 Before Uploading
 
 - Download the current Data Dictionary and save it as a backup ---
     label it with the date (e.g.,
@@ -140,7 +140,7 @@ works.
 - Review REDCap's validation output before confirming the upload. The
     summary tells you exactly what will be added, changed, or deleted.
 
-## 5.2 Recovering from a Bad Upload
+### 5.2 Recovering from a Bad Upload
 
 - If an upload produces unintended results, re-upload the snapshot you
     saved before making changes.
@@ -154,7 +154,7 @@ works.
 
 ---
 
-# 6. When to Use the Data Dictionary
+## 6. When to Use the Data Dictionary
 
 The Data Dictionary is the right tool in these situations:
 
@@ -175,7 +175,7 @@ The Data Dictionary is the right tool in these situations:
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What happens to data already collected if I delete a variable via
 the Data Dictionary?**
@@ -252,7 +252,7 @@ usable in branching logic and calculated fields — for example,
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 - Uploading without a backup: the most common and costliest mistake.
     Always download a snapshot of the current Data Dictionary before
@@ -288,7 +288,7 @@ usable in branching logic and calculated fields — for example,
     If you notice the field counts differ between your Codebook PDF and your
     Data Dictionary, this is the reason.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -298,7 +298,7 @@ usable in branching logic and calculated fields — for example,
 ---
 
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite — tool selection
     and navigation)

@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Control Center is the administrative hub of a REDCap instance. It is only accessible to REDCap **administrators** (also called super users). Standard project users and project-level admins do not have access to the Control Center. Administrators reach it via the **Control Center** link in the left-hand navigation menu, which is only visible to accounts with administrator privileges.
 
@@ -24,21 +24,21 @@ From the Control Center, an administrator can configure system-wide settings, ma
 
 ---
 
-# 2. Navigation Overview
+## 2. Navigation Overview
 
 The Control Center is organized into several top-level sections, each accessible from a sidebar menu. The sections and their primary purposes are:
 
-## Control Center Home
+### Control Center Home
 The landing page of the Control Center. Displays system notifications, recent errors, and a to-do list for items that may need administrator attention. No configurable settings live here — it is an informational dashboard. See **[RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)** for full details on the Notifications & Reporting dashboard, and **[RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)** for the To-Do List.
 
 > **REDCap Plus** — A subscription add-on visible in the Control Center Home menu that unlocks premium features. See **[RC-PLUS-01 — REDCap+: Overview and Subscription](RC-PLUS-01_REDCap-Plus-Overview-and-Subscription.md)** for details.
 
-## Administrator Resources
+### Administrator Resources
 Links to REDCap community resources, training materials, API documentation, and plugin/hook documentation. Also includes:
 - **Language File Creator/Updater** — for managing system language files
 - **URL Shortener** — a utility for generating shortened URLs from any link in the system (see **[RC-CC-10 — Control Center: URL Shortener](RC-CC-10_URL-Shortener.md)**)
 
-## Dashboards & Activity
+### Dashboards & Activity
 Read-only statistical and monitoring views. Includes:
 - **System Statistics** — usage trends across the instance (see **[RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)**)
 - **User Activity Log** — per-user activity history (see **[RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)**)
@@ -50,13 +50,13 @@ Read-only statistical and monitoring views. Includes:
 - **Database Activity Monitor** — in-depth query-level monitoring of the database (see **[RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md)**)
 - **Database Query Tool** — allows administrators to run SQL queries directly against the REDCap database (see **[RC-CC-17 — Control Center: Database Query Tool](RC-CC-17_Database-Query-Tool.md)**)
 
-## Projects
+### Projects
 Tools for looking up and managing individual projects:
 - **Browse Projects** — search and view any project on the instance
 - **Edit Project Settings** — modify settings for a specific project directly; individual project defaults are configured in other sections of the Control Center
 - **Link Lookup** — reverse-lookup which project a given survey or other REDCap link belongs to
 
-## Users
+### Users
 Administrative tools for user account management. See **[RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)** for full details. Includes:
 - Browse Users
 - User Allowlist
@@ -66,7 +66,7 @@ Administrative tools for user account management. See **[RC-CC-07 — Control Ce
 - Administrator Privileges
 - Access Control Groups
 
-## Miscellaneous Modules
+### Miscellaneous Modules
 Configuration for optional or institution-specific modules:
 - **Multi-Language Management (MLM)** — Control Center configuration covered in **[RC-CC-20 — Control Center: Multi-Language Management](RC-CC-20_Multi-Language-Management.md)**; full feature documentation in [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)
 - **Clinical Data Interoperability Services (CDIS)** — integration with clinical data sources (e.g., EHR systems)
@@ -74,7 +74,7 @@ Configuration for optional or institution-specific modules:
 - **Custom Application Links** — add institution-specific links to the left-hand project menu (e.g., help desk, training portal, external applications). See [RC-CC-18 — Control Center: Custom Application Links](RC-CC-18_Custom-Application-Links.md).
 - **Publication Matching** — automated nightly PubMed search to associate research projects with PI publications. See [RC-CC-19 — Control Center: Publication Matching](RC-CC-19_Publication-Matching.md).
 
-## System Configuration
+### System Configuration
 The largest section of the Control Center, containing all system-wide behavioral and technical settings. Sub-pages include:
 
 | Sub-page | KB Article | Summary |
@@ -94,7 +94,7 @@ The largest section of the Control Center, containing all system-wide behavioral
 
 ---
 
-# 3. Who Can Access the Control Center?
+## 3. Who Can Access the Control Center?
 
 The Control Center is visible **only to REDCap administrators** (super users). On the left navigation, regular users will not see the Control Center link. Administrator accounts are managed under **Users → Administrator Privileges** in the Control Center itself (see [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)).
 
@@ -102,7 +102,7 @@ Different tiers of administrator access may exist depending on instance configur
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: If I make a change in the Control Center, how quickly does it take effect across all projects?**
 Most Control Center changes take effect immediately. For example, disabling a feature, enabling a module, or changing email settings updates the behavior system-wide right away. However, some changes may require users to log out and log back in to see the effect, or may only apply to new data created after the change. Always document when you make changes so you can explain timing to affected users.
@@ -121,7 +121,7 @@ Many Control Center changes are low-risk (e.g., updating contact information, ad
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Making system-wide changes without considering impacts on active projects.** Control Center settings affect all projects on the instance. For example, disabling file uploads, changing field validation types, or modifying default project settings impacts every project immediately. Always assess the downstream effects before making changes, and communicate with project managers when you are making system-wide modifications.
 
@@ -131,7 +131,7 @@ Many Control Center changes are low-risk (e.g., updating contact information, ad
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)

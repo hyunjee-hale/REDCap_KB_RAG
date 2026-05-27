@@ -1,4 +1,4 @@
-# REDCap Knowledge Base
+## REDCap Knowledge Base
 
 A structured knowledge base covering REDCap features, workflows, and configuration — written for quick lookup and support reference.
 
@@ -6,7 +6,7 @@ Use the navigation tabs above to browse by topic area, or use the **search bar**
 
 ---
 
-## Topic Areas
+### Topic Areas
 
 | Domain | Description |
 |---|---|

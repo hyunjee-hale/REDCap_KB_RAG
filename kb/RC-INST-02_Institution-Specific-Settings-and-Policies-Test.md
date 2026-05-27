@@ -37,7 +37,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article documents the settings, policies, and configurations that apply to a specific REDCap instance at this institution. REDCap is a platform that every institution — and every instance within that institution — configures independently. Feature availability, login method, approval workflows, file size limits, time zones, and support channels all vary by instance. When another KB article says "check with your local support team" or "see institution-specific settings," this is the article to consult.
 
@@ -47,7 +47,7 @@ This article documents the settings, policies, and configurations that apply to 
 
 ---
 
-# 2. About This Instance
+## 2. About This Instance
 
 **Instance name:** `[FILL IN — e.g., Test / Staging / UAT]`
 
@@ -65,7 +65,7 @@ This article documents the settings, policies, and configurations that apply to 
 
 ---
 
-# 3. Other Instances at This Institution
+## 3. Other Instances at This Institution
 
 Most institutions run REDCap across multiple environments, each with its own URL, configuration, and purpose. Certain settings — authentication method, 2FA, record limits, feature toggles, and External Module availability — commonly differ between instances. **An API token generated on one instance is not valid on another.**
 
@@ -82,9 +82,9 @@ Production settings are documented in [RC-INST-01 — Institution-Specific Setti
 
 ---
 
-# 4. Authentication & Login
+## 4. Authentication & Login
 
-## 4.1 Authentication Method
+### 4.1 Authentication Method
 
 **Method in use on this instance:** `[FILL IN — e.g., Microsoft Entra ID (SSO) / Shibboleth & Table-based / Table-based only / LDAP / OpenID Connect]`
 
@@ -94,7 +94,7 @@ Production settings are documented in [RC-INST-01 — Institution-Specific Setti
 
 `[If table-based only:]` Users log in with a REDCap-specific username and password. See Section 4.4 for password requirements.
 
-## 4.2 Two-Factor Authentication (2FA)
+### 4.2 Two-Factor Authentication (2FA)
 
 **2FA status on this instance:** `[FILL IN — Disabled / Required for all users / Required for table-based users only]`
 
@@ -113,19 +113,19 @@ Production settings are documented in [RC-INST-01 — Institution-Specific Setti
 
 **Note:** 2FA requirements on Test / Staging instances commonly differ from Production. Confirm the exact policy for this instance before documenting it here.
 
-## 4.3 Session Timeout
+### 4.3 Session Timeout
 
 **Auto-logout after inactivity:** `[FILL IN — e.g., "30 minutes" / "Disabled"]`
 
 REDCap will display a 2-minute warning before logging you out. Unsaved form data will be lost. Save regularly when entering data on long forms.
 
-## 4.4 Login Lockout
+### 4.4 Login Lockout
 
 **Failed login lockout:** `[FILL IN — e.g., "After 5 failed attempts, your account is locked for 15 minutes" / "Lockout is not enabled on this instance"]`
 
 If you are locked out, wait for the lockout period to expire and try again, or contact the support team to unlock your account manually.
 
-## 4.5 Password Policy (Table-based accounts only)
+### 4.5 Password Policy (Table-based accounts only)
 
 This section applies only if your account uses table-based authentication. SSO-managed accounts follow the password policy of the identity provider, not REDCap.
 
@@ -140,7 +140,7 @@ This section applies only if your account uses table-based authentication. SSO-m
 
 ---
 
-# 5. Server Time Zone
+## 5. Server Time Zone
 
 **Server time zone:** `[FILL IN — e.g., Europe/Amsterdam (CET/CEST)]`
 
@@ -152,9 +152,9 @@ REDCap schedules all time-sensitive operations — survey expiration, automated 
 
 ---
 
-# 6. User Accounts & Access
+## 6. User Accounts & Access
 
-## 6.1 Account Creation
+### 6.1 Account Creation
 
 REDCap users must have an active account on **this instance** before they can be added to any project. If a colleague is not found when you search the user list in User Rights, they do not yet have an account on this instance.
 
@@ -166,7 +166,7 @@ REDCap users must have an active account on **this instance** before they can be
 
 > See also: [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)
 
-## 6.2 Account Suspension & Expiration
+### 6.2 Account Suspension & Expiration
 
 REDCap distinguishes between project-level suspension (managed by project users) and global suspension (managed by administrators only). Global suspension prevents a user from logging in to REDCap at all.
 
@@ -178,19 +178,19 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 > See also: [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
 
-## 6.3 User Access Dashboard (UAD)
+### 6.3 User Access Dashboard (UAD)
 
 **UAD status:** `[FILL IN — Disabled / Enabled: notification only / Enabled: notification + monthly email reminder]`
 
 `[If enabled:]` The User Access Dashboard (UAD) prompts project owners and users with User Rights privileges to periodically review who has access to their projects. `[FILL IN — e.g., "A reminder appears on your My Projects page. A monthly email reminder is sent on the first weekday of each month."]` The UAD is only visible to users who have User Rights privileges in at least one project.
 
-## 6.4 Access Control Groups
+### 6.4 Access Control Groups
 
 **Access Control Groups (ACGs) in use:** `[FILL IN — Yes / No]`
 
 `[If yes:]` This instance uses Access Control Groups, which define a system-wide ceiling on what user privileges can be granted within projects. If you are a project owner trying to assign a specific right to a colleague and find the checkbox is unavailable or the change is rejected, it may be because the applicable ACG does not permit that right. Contact the support team for assistance.
 
-## 6.5 User Profile Editing
+### 6.5 User Profile Editing
 
 **Can users edit their own name and email in their REDCap Profile?**
 
@@ -203,9 +203,9 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 ---
 
-# 7. Project Creation & Lifecycle
+## 7. Project Creation & Lifecycle
 
-## 7.1 Creating a New Project
+### 7.1 Creating a New Project
 
 **Can users create projects directly?** `[FILL IN — Yes, any user can create a new project from the My Projects page / No, users must submit a request and an administrator creates the project]`
 
@@ -213,7 +213,7 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 `[If using a project creation survey:]` When you create or copy a project, you will be redirected to a short intake form. Complete this form to register project metadata (e.g., IRB number, PI details, data classification) with the support team.
 
-## 7.2 Moving a Project to Production
+### 7.2 Moving a Project to Production
 
 **Can users move projects to Production status themselves?** `[FILL IN — Yes / No, a request is submitted to an administrator]`
 
@@ -225,7 +225,7 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 > See also: [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)
 
-## 7.3 Draft Mode Approval Policy
+### 7.3 Draft Mode Approval Policy
 
 When a project is in **Production** status, structural changes (adding/editing/deleting fields, forms, or events) must be made in **Draft Mode**. Once submitted, changes either auto-approve or wait for administrator review — this is controlled at the instance level.
 
@@ -239,7 +239,7 @@ When a project is in **Production** status, structural changes (adding/editing/d
 
 > See also: [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md)
 
-## 7.4 Production Modifications Without Draft Mode
+### 7.4 Production Modifications Without Draft Mode
 
 Some structural changes on Production projects may be allowed without Draft Mode involvement, depending on instance configuration.
 
@@ -248,13 +248,13 @@ Some structural changes on Production projects may be allowed without Draft Mode
 | Modify repeating instruments / events setup | `[Yes / No — admin only]` |
 | Add or modify events and arms (longitudinal) | `[Yes / No — admin only]` |
 
-## 7.5 Development Project Record Limit
+### 7.5 Development Project Record Limit
 
 **Maximum records in a Development-status project:** `[FILL IN — e.g., 100 records / No limit]`
 
 `[If a limit is set:]` When the limit is reached, you cannot create additional records until the project moves to Production. This is intentional — it prevents large amounts of test data from accumulating in development projects. If you need a higher limit for a specific project, contact the support team.
 
-## 7.6 Project Deletion
+### 7.6 Project Deletion
 
 When a user requests project deletion, REDCap does not immediately purge the project. The project is hidden from users but remains in the database during a lag period, during which an administrator can restore it.
 
@@ -264,7 +264,7 @@ After this period, the project is permanently deleted and can only be recovered 
 
 ---
 
-# 8. Feature Availability
+## 8. Feature Availability
 
 Some REDCap features must be enabled at the instance level by an administrator. The table below documents what is available on this instance. Features marked as requiring admin activation must be enabled per project by an administrator — contact the support team.
 
@@ -306,7 +306,7 @@ Some REDCap features must be enabled at the instance level by an administrator. 
 
 ---
 
-# 9. External Modules
+## 9. External Modules
 
 External modules extend REDCap's functionality and are developed by the REDCap community. They must be downloaded and enabled by the administrator before being available to projects.
 
@@ -324,11 +324,11 @@ External modules extend REDCap's functionality and are developed by the REDCap c
 
 ---
 
-# 10. File Upload & Storage
+## 10. File Upload & Storage
 
 Upload limits and available features differ by context. The values below apply to this instance.
 
-## 10.1 Upload Size Limits
+### 10.1 Upload Size Limits
 
 | Upload Location | Maximum File Size |
 |---|---|
@@ -340,19 +340,19 @@ Upload limits and available features differ by context. The values below apply t
 
 If you receive an error when uploading a file, it is likely exceeding the limit for that context. Contact the support team if you need the limit raised for a specific project.
 
-## 10.2 Restricted File Types
+### 10.2 Restricted File Types
 
 Certain file extensions are blocked from upload system-wide for security reasons. Blocked extensions include executables, scripts, and installer formats (.exe, .bat, .js, .php, .vbs, and others). You cannot upload these file types anywhere in REDCap, including the File Repository and file upload fields.
 
 `[FILL IN — if the institution has added custom blocked types beyond REDCap defaults, list them here]`
 
-## 10.3 File Version History
+### 10.3 File Version History
 
 **File version history for File Upload fields:** `[Enabled by default / Disabled]`
 
 `[If enabled:]` When you upload a new file to a File Upload field that already has a file, the previous file is retained as a version rather than deleted. Previous versions are accessible from the Data History popup on the field.
 
-## 10.4 Public File Sharing from the File Repository
+### 10.4 Public File Sharing from the File Repository
 
 **Public file links from File Repository:** `[Enabled / Disabled]`
 
@@ -362,7 +362,7 @@ Certain file extensions are blocked from upload system-wide for security reasons
 
 ---
 
-# 11. API Access
+## 11. API Access
 
 **REDCap API status on this instance:** `[Enabled / Disabled]`
 
@@ -378,7 +378,7 @@ Certain file extensions are blocked from upload system-wide for security reasons
 
 ---
 
-# 12. User & Display Defaults
+## 12. User & Display Defaults
 
 These system defaults apply to all new accounts on this instance. Individual users can typically change these in their Profile.
 
@@ -393,33 +393,33 @@ These system defaults apply to all new accounts on this instance. Individual use
 
 ---
 
-# 13. Local Policies & Procedures
+## 13. Local Policies & Procedures
 
-## 13.1 Data Storage & Retention
+### 13.1 Data Storage & Retention
 
 `[FILL IN — e.g., "REDCap data is stored on institution-managed servers located in [location]. Retention policies follow [policy name/link]. Projects in 'Completed' status are retained for [X years] before archiving/deletion."]`
 
-## 13.2 Backup & Disaster Recovery
+### 13.2 Backup & Disaster Recovery
 
 `[FILL IN — e.g., "The REDCap database is backed up nightly. Backups are retained for [X days]. In the event of accidental deletion or corruption, contact the support team immediately — recovery from backup may be possible if the request is made promptly."]`
 
-## 13.3 Data Classification & Permitted Data Types
+### 13.3 Data Classification & Permitted Data Types
 
 `[FILL IN — e.g., "This instance is approved for storage of [pseudonymous / anonymized / identifiable] research data. Directly identifiable data such as BSN (Dutch citizen service number) may not be stored. For questions about data classification, contact the Data Protection Officer at [email]."]`
 
 Different instances at this institution may have different data classification approvals. Verify the classification level of the instance you are using before uploading participant data.
 
-## 13.4 Training Requirements
+### 13.4 Training Requirements
 
 `[FILL IN — e.g., "All new REDCap users must complete the introductory e-learning module before accessing production projects. Training is available at [link]."]`
 
-## 13.5 Maintenance & Downtime
+### 13.5 Maintenance & Downtime
 
 `[FILL IN — e.g., "Scheduled maintenance takes place on [day/time]. An announcement is posted on the REDCap home page at least [X days] in advance. Emergency maintenance may occur with shorter notice; check [status page URL] for current system status."]`
 
 ---
 
-# 14. Common Questions
+## 14. Common Questions
 
 **Q: I can't find a colleague in the user search when adding them to my project. What should I do?**
 
@@ -463,7 +463,7 @@ Different instances at this institution may have different data classification a
 
 ---
 
-# 15. Related Articles
+## 15. Related Articles
 
 - [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
 - [RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md)

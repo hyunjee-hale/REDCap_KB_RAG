@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Survey Participants API retrieves the participant list for a survey-enabled instrument. It returns contact information, invitation status, response status, and direct survey access links. This is useful for tracking invitation delivery, monitoring response rates, and programmatically retrieving per-participant survey links.
 
@@ -23,29 +23,29 @@ The Export Survey Participants API retrieves the participant list for a survey-e
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Participant List
+#### Participant List
 A list of contact information (typically names and email addresses) entered in REDCap for survey distribution. Each participant receives an access code and survey link.
 
-### Access Code
+#### Access Code
 A short alphanumeric code assigned to each participant that they can use instead of the full survey URL to access their survey from a survey login page.
 
-### Invitation Status
+#### Invitation Status
 A flag indicating whether an invitation has been sent to the participant (via REDCap's built-in notification system). Does not confirm email delivery.
 
-### Response Status
+#### Response Status
 A value indicating the completion state of a survey: `0` (No response), `1` (Partial response), or `2` (Completed).
 
-### Email Occurrence
+#### Email Occurrence
 A count of how many times a particular email address appears in the participant list. Used with the email field to uniquely identify a participant row, since the same email can be added multiple times.
 
-### Survey Distribution Tools Privilege
+#### Survey Distribution Tools Privilege
 A user-level permission required to access participant lists and survey distribution features. Required along with API Export privilege to use this method.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -58,9 +58,9 @@ A user-level permission required to access participant lists and survey distribu
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 #!/usr/bin/env python
 
@@ -80,7 +80,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -98,7 +98,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -113,7 +113,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -148,7 +148,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API returns an array of participant records. Each record contains exactly these eight fields:
 
@@ -194,7 +194,7 @@ Example JSON response:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What does `invitation_sent_status` mean?**
 **A:** `1` means an invitation has been sent to the participant; `0` means no invitation has been sent yet. Note: this reflects REDCap's tracking of distribution — it is not confirmation of email delivery.
@@ -216,7 +216,7 @@ Example JSON response:
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Calling without Survey Distribution Tools privilege:** This method requires both API Export and Survey Distribution Tools rights. If your token belongs to a user without Survey Distribution Tools access, the API returns an error — not an empty result. Verify user privileges before troubleshooting elsewhere.
 
@@ -230,7 +230,7 @@ Example JSON response:
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 - [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Delete Records API method removes records or data from a REDCap project. You can use it to delete entire records, delete specific instruments (forms) for a record, delete data for a specific event in a longitudinal project, or delete data from specific arms in a multi-arm project. Use this method with caution — deletion is permanent and cannot be undone.
 
@@ -23,7 +23,7 @@ When to use this method: When you need to remove records from the project, clean
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -40,9 +40,9 @@ When to use this method: When you need to remove records from the project, clean
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -64,7 +64,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -84,7 +84,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -100,7 +100,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -137,7 +137,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns:
 
@@ -148,7 +148,7 @@ On error, the API returns an error message describing the problem (e.g., invalid
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can I delete only the data in a specific instrument without deleting the entire record?**
 
@@ -180,7 +180,7 @@ On error, the API returns an error message describing the problem (e.g., invalid
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Deleting entire records when you meant to delete one instrument.** Always check whether you want to delete the whole record or just one instrument's data. If you omit the `instrument` parameter, the entire record (all instruments and events) is deleted.
 
@@ -196,7 +196,7 @@ On error, the API returns an error message describing the problem (e.g., invalid
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading records)

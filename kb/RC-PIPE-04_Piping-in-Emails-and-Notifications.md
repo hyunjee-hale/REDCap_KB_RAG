@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how piping is used beyond instrument field labels — specifically in outgoing emails and notifications, and as input to REDCap's branching logic and action tag features. Piping in emails allows you to personalize messages with participant data and smart variable links. Piping as input to logic and action tags enables dynamic pre-filling and conditional behavior driven by stored or context-level values.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Confirmation Email**
 
@@ -44,7 +44,7 @@ A special instruction added to a field's Action Tags field in the Online Designe
 
 ---
 
-# 3. Piping in Confirmation Emails
+## 3. Piping in Confirmation Emails
 
 Confirmation emails are configured within the survey settings for each instrument. When a participant submits the survey, REDCap sends the confirmation email to an address you specify — typically piped in from a field capturing the participant's email.
 
@@ -64,15 +64,15 @@ Your next survey will be available at: [survey-queue-url]
 
 ---
 
-# 4. Piping in Survey Invitations
+## 4. Piping in Survey Invitations
 
 Both manual survey invitations and automated survey invitations support piping.
 
-## 4.1 Manual Invitations
+### 4.1 Manual Invitations
 
 Sent through the Survey Distribution Tools. If REDCap can associate the invitation with a specific record, you can pipe any field value from that record into the invitation body.
 
-## 4.2 Automated Survey Invitations (ASI)
+### 4.2 Automated Survey Invitations (ASI)
 
 ASIs are linked to a specific instrument and trigger automatically based on conditions. Because they are record-specific, they support the full range of piping — field values, smart variables, and instrument-specific links.
 
@@ -82,13 +82,13 @@ ASIs are linked to a specific instrument and trigger automatically based on cond
 
 > **Institution-specific:** Local policies around automated survey invitations and email-sending from REDCap vary by installation. Contact your REDCap administrator to confirm any approval steps or institutional requirements before setting up automated communications.
 
-## 4.3 Piping Identifiable Information in Invitations
+### 4.3 Piping Identifiable Information in Invitations
 
 Standard piping of identifiable information (such as participant names) works in survey invitations by default, provided that the relevant field values are available in the record at the time the invitation is sent.
 
 ---
 
-# 5. Piping in Alerts & Notifications
+## 5. Piping in Alerts & Notifications
 
 The Alerts & Notifications module provides more flexibility than confirmation emails and ASIs. Alerts are not bound to a specific instrument or event — they can be triggered by any data change or logic condition across the project.
 
@@ -108,7 +108,7 @@ The Alerts & Notifications module provides more flexibility than confirmation em
 
 ---
 
-# 6. Piping as Input to Branching Logic
+## 6. Piping as Input to Branching Logic
 
 Branching logic and piping use the same bracket syntax, but their roles differ:
 
@@ -128,7 +128,7 @@ Smart variables can also be used in branching logic conditions. A common example
 
 ---
 
-# 7. Piping in Action Tags
+## 7. Piping in Action Tags
 
 Action tags modify or extend field behavior. Several accept piped values or smart variables as parameters, enabling dynamic configuration.
 
@@ -160,7 +160,7 @@ If `pref` equals 1, the field is pre-filled with the value of `nick_name`; other
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Can I include a participant's name in a survey invitation email?**
 
@@ -188,7 +188,7 @@ If `pref` equals 1, the field is pre-filled with the value of `nick_name`; other
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Not enabling identifiable piping in Alerts.** The most common reason piped names and contact information are blank in alerts is that the per-alert setting to allow identifiable piping has not been enabled. Check each alert's configuration individually — there is no global enable.
 
@@ -202,7 +202,7 @@ If `pref` equals 1, the field is pre-filled with the value of `nick_name`; other
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md)(core piping syntax)
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (smart variables for links, user info, survey metadata)

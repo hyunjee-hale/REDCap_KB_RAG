@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap's **Calculated Field** — a dedicated field type whose value is computed automatically from a formula rather than entered manually. Calculated fields always return a number. If you need a calculation that produces a text result, use `@CALCTEXT`. If you need to compute a date, use `@CALCDATE` or the `datediff()` family of functions. This article explains how to create and configure calculated fields, how formulas work, when the value updates, and how calculated fields compare to the `@CALCTEXT` and `@CALCDATE` action tags.
 
@@ -22,7 +22,7 @@ For the full reference on Special Functions that can be used inside formulas (su
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Calculated Field**
 
@@ -46,9 +46,9 @@ A built-in Data Quality rule that re-evaluates all calculated fields across all 
 
 ---
 
-# 3. Creating a Calculated Field
+## 3. Creating a Calculated Field
 
-## 3.1 Online Designer
+### 3.1 Online Designer
 
 1. Open the instrument in the **Online Designer**.
 2. Click **Add Field** (or edit an existing field with the pencil icon).
@@ -60,7 +60,7 @@ A built-in Data Quality rule that re-evaluates all calculated fields across all 
 
 > **Tip:** The Online Designer validates formula syntax when you save. If your formula references an unknown variable or has unbalanced brackets, the designer will flag the error and prevent saving. However, it does not verify that the formula logic is correct — test your formula against real or realistic data before going to Production.
 
-## 3.2 Data Dictionary
+### 3.2 Data Dictionary
 
 In the Data Dictionary CSV, a calculated field is defined as follows:
 
@@ -77,7 +77,7 @@ The formula goes in the **Choices, Calculations, OR Slider Labels** column — t
 
 ---
 
-# 4. Formula Syntax
+## 4. Formula Syntax
 
 Calculated field formulas use the same syntax as REDCap branching logic:
 
@@ -101,7 +101,7 @@ Calculated field formulas use the same syntax as REDCap branching logic:
 
 ---
 
-# 5. The Numeric-Only Constraint
+## 5. The Numeric-Only Constraint
 
 **Calculated fields must always return a number.** This is the single most important constraint of the field type. Formulas that produce text strings, date strings, or mixed outputs will not store a value — the field will appear blank.
 
@@ -120,7 +120,7 @@ This constraint has two practical consequences:
 
 ---
 
-# 6. When Values Update
+## 6. When Values Update
 
 A calculated field's value is recomputed in three contexts:
 
@@ -134,7 +134,7 @@ A calculated field's value is recomputed in three contexts:
 
 ---
 
-# 7. Display Behavior and Read-Only Enforcement
+## 7. Display Behavior and Read-Only Enforcement
 
 **Display.** During data entry, the calculated value is displayed in the field as soon as all input variables have values. If any input variable is blank, the displayed value depends on the formula: a `sum()` of blanks returns 0; arithmetic with `+` returns blank if any operand is blank. The stored value matches what is displayed.
 
@@ -146,7 +146,7 @@ A calculated field's value is recomputed in three contexts:
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: What is the difference between a Calculated Field and a Text Box with @CALCTEXT?**
 
@@ -182,7 +182,7 @@ A calculated field's value is recomputed in three contexts:
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Expecting a text result to be stored.** Formulas that produce a non-numeric result — including text strings, date strings, or empty strings — will not store a value in the calculated field. The field will appear blank. If you need a non-numeric result, switch to a Text Box field with `@CALCTEXT` or `@CALCDATE`.
 
@@ -196,7 +196,7 @@ A calculated field's value is recomputed in three contexts:
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-CALC-01 — Special Functions Reference](RC-CALC-01_Special-Functions-Reference.md) (full reference for `datediff()`, `round()`, `sum()`, `if()`, and all other functions usable in formulas)
 - [RC-AT-09 — Action Tags: @CALCTEXT & @CALCDATE — Calculations](RC-AT-09_Action-Tags-Calculations.md)(for text output or date output calculations)

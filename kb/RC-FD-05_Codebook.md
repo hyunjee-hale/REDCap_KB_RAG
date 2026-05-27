@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Codebook is a read-only, human-readable view of every instrument and
 variable in a REDCap project. It provides a comprehensive, always
@@ -24,7 +24,7 @@ explains what the Codebook shows, where to find it, and when to use it.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Codebook**
 
@@ -49,7 +49,7 @@ not to an editable state within the Codebook itself.
 
 ---
 
-# 3. Accessing the Codebook
+## 3. Accessing the Codebook
 
 - From the Project Setup page: click **Codebook** in the Design Your Data
     Collection Instruments section.
@@ -62,11 +62,11 @@ not to an editable state within the Codebook itself.
 
 ---
 
-# 4. Codebook Layout
+## 4. Codebook Layout
 
 The Codebook is structured in three main sections:
 
-## 4.1 Header
+### 4.1 Header
 
 At the top of the Codebook (and the PDF export), REDCap displays:
 
@@ -77,7 +77,7 @@ At the top of the Codebook (and the PDF export), REDCap displays:
 This header is useful for documentation and audit purposes — it makes
 clear exactly which project and snapshot the codebook represents.
 
-## 4.2 Instruments (and Events) Summary Table
+### 4.2 Instruments (and Events) Summary Table
 
 Below the header, the Codebook shows a summary table of all instruments
 in the project. Each row lists:
@@ -106,7 +106,7 @@ but not others, so it's worth checking each event individually in this
 table. Together, the two tables give a complete picture of the project's
 repeating structure at a glance — before you even reach the field definitions.
 
-## 4.3 Field Table
+### 4.3 Field Table
 
 The main body of the Codebook is a field-by-field table with three columns:
 
@@ -123,7 +123,7 @@ in green).
 
 ---
 
-# 5. What the Codebook Shows
+## 5. What the Codebook Shows
 
 For each variable, the Codebook displays the following:
 
@@ -228,7 +228,7 @@ calculated fields using the standard variable name syntax:
 
 ---
 
-# 6. When to Use the Codebook
+## 6. When to Use the Codebook
 
 The Codebook is the right tool in these situations:
 
@@ -278,7 +278,7 @@ The Codebook is the right tool in these situations:
 
 ---
 
-# 7. Codebook vs. Other Reference Options
+## 7. Codebook vs. Other Reference Options
 
 | **Reference Tool** | **Format** | **Editable?** | **Best For** |
 | --- | --- | --- | --- |
@@ -294,7 +294,7 @@ The Codebook is the right tool in these situations:
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Can I edit variables directly from the Codebook?**
 
@@ -351,7 +351,7 @@ be different.
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 - **Expecting to edit from the Codebook:** the Codebook is read-only. Use
     the inline links to jump to the Online Designer if you need to make
@@ -404,7 +404,7 @@ be different.
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite)
 

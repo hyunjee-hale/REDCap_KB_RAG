@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the REDCap Mobile App — a native iOS and Android application that allows study team members to enter and edit record data offline from a mobile device. The app is distinct from MyCap (the participant-facing mobile application). It is intended for study staff who collect data in environments without reliable internet access, such as clinical settings, field sites, refugee settlements, rural communities, or participant homes. Data entered offline is stored locally on the device and synchronized with the REDCap server when a connection becomes available. This is the only article in the RC-MOB series.
 
@@ -23,51 +23,51 @@ This article covers the REDCap Mobile App — a native iOS and Android applicati
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## REDCap Mobile App
+### REDCap Mobile App
 
 The official REDCap application for iOS and Android, published by Vanderbilt University. It is used by study team members (not participants) and requires a REDCap login. The app enables offline data entry for any REDCap project it has been initialized with.
 
-## API Token
+### API Token
 
 A 32-character hex string unique to a particular REDCap user's rights in a particular project. The Mobile App uses API tokens to determine which project data is accessible from the device. A single token grants access to one project with the user rights assigned to the corresponding REDCap account. Users obtain their token through the REDCap Mobile App section in the project's left-hand menu.
 
-## QR Code / Initialization Code
+### QR Code / Initialization Code
 
 Two methods for adding a project to the Mobile App on a device. After a user obtains their API token, REDCap generates a QR code they can scan with their device, or a 10-digit initialization code they can type manually. The initialization code expires after 10 minutes.
 
-## Mobile App Admin Account
+### Mobile App Admin Account
 
 A special administrative account within the Mobile App (separate from REDCap user accounts) that manages all Mobile App users on a device. The Admin can create, update, and delete Mobile App users, reset user PINs, and grant user rights across projects. The Admin password cannot be reset — it must not be lost.
 
-## Mobile App User
+### Mobile App User
 
 A device-level credential created by the Mobile App Admin. Each user has a unique app username and a 6-digit PIN that is separate from their REDCap server credentials. The user's REDCap project rights (form access, DAG membership) are mirrored from the server via their API token.
 
-## App Username
+### App Username
 
 The username a mobile user enters when logging into the app. This may differ from the user's REDCap server username. The action tag `@APPUSERNAME-APP` captures the app username at the time of data entry (see [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md)).
 
-## Initialize (a project)
+### Initialize (a project)
 
 The process of downloading a project's structure (instruments, branching logic, data dictionary) and optionally existing records to the mobile device. A project must be initialized before offline data entry can begin. Initialization requires an internet connection and uses the user's QR code or initialization code.
 
-## Synchronize (Sync)
+### Synchronize (Sync)
 
 The process of uploading locally entered data to the REDCap server and downloading any changes made on the server since the last sync. Sync requires an internet connection and must be initiated manually by the user.
 
-## Offline Mode
+### Offline Mode
 
 When the device has no internet connection, the app operates offline. Data entered during offline mode is stored locally and uploaded during the next sync.
 
-## Draft Record
+### Draft Record
 
 A record edited or created in the Mobile App that has not yet been synchronized to the server. Draft records are visible in the app and flagged as pending until sync completes.
 
 ---
 
-# 3. REDCap Mobile App vs. MyCap vs. Browser-Based Entry
+## 3. REDCap Mobile App vs. MyCap vs. Browser-Based Entry
 
 The REDCap Mobile App is one of three primary data collection interfaces in REDCap. Choosing the right interface depends on who is collecting data and under what conditions.
 
@@ -86,9 +86,9 @@ Use the REDCap Mobile App when study staff need to collect data in person at a l
 
 ---
 
-# 4. Supported and Unsupported Features
+## 4. Supported and Unsupported Features
 
-## 4.1 Supported
+### 4.1 Supported
 
 The following REDCap features work in the Mobile App:
 
@@ -105,7 +105,7 @@ The following REDCap features work in the Mobile App:
 - Instrument securing with a PIN (see Section 6.5)
 - Interface translation (buttons and instructions; instruments are not translated)
 
-## 4.2 Not Supported
+### 4.2 Not Supported
 
 The following features are not available in the Mobile App:
 
@@ -123,17 +123,17 @@ The following features are not available in the Mobile App:
 
 ---
 
-# 5. Administrator Setup
+## 5. Administrator Setup
 
 Before any project can use the REDCap Mobile App, a REDCap administrator must enable the Mobile App module for the server.
 
-## 5.1 Enable the Mobile App Module
+### 5.1 Enable the Mobile App Module
 
 A REDCap administrator enables the Mobile App module in the REDCap Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). Once enabled, the module becomes available to all projects on the server.
 
 > **Institution-specific:** Whether the Mobile App module is already enabled and whether projects require administrator approval or a request form before use varies by installation. Contact your REDCap administrator to confirm.
 
-## 5.2 Mobile App Settings in the Control Center
+### 5.2 Mobile App Settings in the Control Center
 
 Administrators can configure server-wide settings including:
 
@@ -143,27 +143,27 @@ Administrators can configure server-wide settings including:
 
 ---
 
-# 6. Project-Level Setup
+## 6. Project-Level Setup
 
-## 6.1 Enable the Mobile App for a Project
+### 6.1 Enable the Mobile App for a Project
 
 In the project, navigate to **Project Setup** → **Enable optional modules and customizations** → check **Use the REDCap Mobile App**. This exposes the Mobile App section in the left sidebar under Applications.
 
 > **Institution-specific:** Some institutions require a formal Mobile App request through a Help Desk form before enabling the module on a project. Confirm local procedures with your REDCap administrator.
 
-## 6.2 Grant User Rights
+### 6.2 Grant User Rights
 
 Navigate to **User Rights** and grant the **REDCap Mobile App** privilege to each user who will collect data in the app. This enables the user to set up the project on a device and sync data.
 
 An additional privilege — **Allow user to download data for all records to the app** — controls whether the user can download existing server records during initialization. Unchecking this is recommended for users who should only create new records and never access existing data on a device.
 
-## 6.3 Obtain API Tokens
+### 6.3 Obtain API Tokens
 
 Each user navigates to **Applications** → **REDCap Mobile App** in the project and requests an API token. Once the token is generated (by the REDCap admin team at some institutions, or automatically), the user receives a notification and can access their QR code or initialization code from that same page.
 
 > **Important:** Each user should have their own API token. Do not share a single token across multiple users or devices — doing so will merge all activity under one account and compromise the audit trail. If a single person needs to be separately identifiable across two devices, create a separate REDCap user account for each use.
 
-## 6.4 Create Mobile App User Accounts on the Device
+### 6.4 Create Mobile App User Accounts on the Device
 
 On the device, the Mobile App Admin account manages device-level user credentials. The Admin (typically the project administrator) creates an account for each data collector with a unique **app username** and **6-digit PIN**. These credentials are separate from REDCap server logins.
 
@@ -178,9 +178,9 @@ If multiple users need to access the same project, each must set up the project 
 
 ---
 
-# 7. Initializing a Project on the Device
+## 7. Initializing a Project on the Device
 
-## 7.1 Install the App
+### 7.1 Install the App
 
 Download the REDCap Mobile App from the Apple App Store (iOS) or Google Play Store (Android). Search for "REDCap" — the publisher is Vanderbilt University Medical Center.
 
@@ -189,14 +189,14 @@ Minimum OS requirements:
 - Android: version 4.3 or later
 - The device must support encryption. Amazon Fire devices are not supported.
 
-## 7.2 Add a Project to the App
+### 7.2 Add a Project to the App
 
 Log in to the app with your app username and PIN, then select **Set Up Mobile Project**. Two options are available:
 
 - **Scan QR Code** — requires the device to have a camera and a QR code reader. The QR code is generated in the project's REDCap Mobile App section.
 - **Enter Initialization Code** — a 10-digit code available from the same REDCap Mobile App section. This code expires in 10 minutes.
 
-## 7.3 Choose What Data to Download
+### 7.3 Choose What Data to Download
 
 During initialization, the app downloads the project's data dictionary. If the project already has records, the app will offer three options:
 
@@ -210,9 +210,9 @@ Option 2 is useful in longitudinal studies where field staff only need records f
 
 ---
 
-# 8. Offline Data Entry
+## 8. Offline Data Entry
 
-## 8.1 Entering Data
+### 8.1 Entering Data
 
 Once initialized, the app can be used without an internet connection:
 
@@ -224,25 +224,25 @@ Once initialized, the app can be used without an internet connection:
 
 For projects with auto-numbering disabled, records can be renamed on the first instrument. Renamed records will appear as new records when synced — the original record on the server must be manually deleted afterward to complete the replacement.
 
-## 8.2 Securing an Instrument
+### 8.2 Securing an Instrument
 
 Instruments can be secured with the user's PIN before handing the device to a participant. In secured mode, the participant can only enter data on the visible instrument and cannot browse other records or navigate elsewhere in the app. The instrument is unlocked by the user entering their PIN.
 
 This is the standard approach when a study team member conducts a face-to-face interview where the participant self-enters answers on a portion of the instrument, or when confidentiality between the device holder and others must be maintained.
 
-## 8.3 Supported Media During Data Entry
+### 8.3 Supported Media During Data Entry
 
 Photos can be captured directly from the device's camera and stored in File Upload fields. GPS coordinates can be captured in GPS fields. Audio and video files can be uploaded to file fields, but they will not be downloaded back to the app during subsequent syncs.
 
 ---
 
-# 9. Synchronization
+## 9. Synchronization
 
-## 9.1 Initiating a Sync
+### 9.1 Initiating a Sync
 
 Sync requires an active internet connection. Tap **Send Data** (or the sync button) within the project view. The app uploads all draft records and edits to the REDCap server.
 
-## 9.2 What Happens During Sync
+### 9.2 What Happens During Sync
 
 **New records** created in the app are added to the REDCap project immediately if no conflicts exist.
 
@@ -250,35 +250,35 @@ Sync requires an active internet connection. Tap **Send Data** (or the sync butt
 
 **Deleted records**: deleting a record in the app does not delete it on the server. Records can only be permanently deleted from the REDCap web interface.
 
-## 9.3 Partial Sends
+### 9.3 Partial Sends
 
 A partial set of records can be sent instead of all pending drafts. This is recommended when a large number of records have accumulated and a full sync would be slow.
 
-## 9.4 Post-Sync Refresh
+### 9.4 Post-Sync Refresh
 
 After syncing, three options are typically presented. Selecting **Refresh Setup & Data** removes all locally stored data from the device and replaces it with the most current project information from the server. This is the recommended practice after each sync session — it keeps the local copy clean and reduces the risk of stale data accumulating on the device.
 
-## 9.5 Conflict Handling
+### 9.5 Conflict Handling
 
 If the same record was edited both in the app and on the REDCap server between syncs, a conflict may occur. REDCap flags the conflict for resolution. Avoid parallel editing of the same record in the app and the browser to prevent this.
 
-## 9.6 Emergency Data Dump
+### 9.6 Emergency Data Dump
 
 If something prevents the app from syncing normally (e.g., a network error that cannot be resolved in the field), use **Send Emergency Data Dump** to transmit data to the server as a raw CSV file. The file appears under the **Mobile App File Archive** tab in the project. This is a fallback mechanism; normal sync should be used whenever possible since the CSV requires manual review and import.
 
 ---
 
-# 10. Device Management and Activity Logging
+## 10. Device Management and Activity Logging
 
-## 10.1 Device List and Nicknames
+### 10.1 Device List and Nicknames
 
 The Mobile App page in the REDCap project (under Applications) displays a list of all devices that have access to the project. Each device is identified by a UUID. Devices can be given a nickname (e.g., "Kenya tablet 1", "Rob's iPhone") to make activity tracking meaningful. Nicknames appear in the activity tables, dashboard, and file download tables.
 
-## 10.2 Per-Device Blocking
+### 10.2 Per-Device Blocking
 
 Individual devices can be blocked from accessing the project without revoking the API token entirely. This is useful if a single device is lost or stolen while other devices using the same project should continue operating.
 
-## 10.3 Remote Lockout
+### 10.3 Remote Lockout
 
 Two levels of remote lockout are available:
 
@@ -288,7 +288,7 @@ Two levels of remote lockout are available:
 
 > **Note:** If a device is physically stolen, revoking or deleting the token prevents future syncs and downloads — but it does not remotely wipe data already on the device. For true remote wipe capability, use a Mobile Device Management (MDM) system.
 
-## 10.4 Activity Log
+### 10.4 Activity Log
 
 The Mobile App Activity Log is stored in the **Mobile App File Archive** within the project. It records:
 
@@ -300,7 +300,7 @@ Logs can be transmitted to the server from within the app by tapping **Send Proj
 
 ---
 
-# 11. Security Considerations
+## 11. Security Considerations
 
 The REDCap Mobile App stores project data locally on the device, introducing risks that do not apply to browser-based access.
 
@@ -318,7 +318,7 @@ The REDCap Mobile App stores project data locally on the device, introducing ris
 
 ---
 
-# 12. Best Practices
+## 12. Best Practices
 
 - **Designate a point of contact** for the Mobile App setup and for field data collectors. If these are different people, the field manager needs to be as well trained as the person who set up the project.
 - **Test the project on the app before deployment.** Form layout and field rendering look different in the app than in the browser. Check validated forms and instruments with complex branching logic for significant visual changes.
@@ -331,7 +331,7 @@ The REDCap Mobile App stores project data locally on the device, introducing ris
 
 ---
 
-# 13. Common Questions
+## 13. Common Questions
 
 **Q: What is the difference between the REDCap Mobile App and MyCap?**
 
@@ -375,7 +375,7 @@ The REDCap Mobile App stores project data locally on the device, introducing ris
 
 ---
 
-# 14. Common Mistakes & Gotchas
+## 14. Common Mistakes & Gotchas
 
 **Forgetting to sync before ending a session.** Data in the app is not transmitted to the server until sync is manually triggered. Staff who close the app or leave a site without syncing risk data loss if the device is damaged, lost, or reset. Build sync into end-of-session workflows as a required step, and run Refresh Setup & Data afterward.
 
@@ -393,7 +393,7 @@ The REDCap Mobile App stores project data locally on the device, introducing ris
 
 ---
 
-# 15. Related Articles
+## 15. Related Articles
 
 - [RC-AT-11 — Action Tags: Mobile App Action Tags](RC-AT-11_Action-Tags-Mobile-App.md) (`@APPUSERNAME-APP`, `@BARCODE-APP`, `@SYNC-APP`, `@HIDDEN-APP`, `@READONLY-APP`)
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md) (participant-facing mobile app; MyCap vs. REDCap Mobile App comparison)

@@ -14,17 +14,17 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The System Statistics page provides a comprehensive snapshot of the REDCap instance's usage, configuration, and infrastructure. It is accessible under "Dashboards & Activity" in the Control Center sidebar. Statistics are displayed in a table format and can be exported as a CSV file for further analysis or trend tracking.
 
 ---
 
-# 2. Statistics Categories
+## 2. Statistics Categories
 
 The System Statistics page displays statistics across multiple categories:
 
-## Projects by Status
+### Projects by Status
 
 - **Development**: Count of projects in development status (not yet in production)
 - **Production**: Count of active production projects
@@ -32,34 +32,34 @@ The System Statistics page displays statistics across multiple categories:
 - **Archived**: Count of archived projects
 - **Total**: Overall count of all projects on the instance
 
-## User Activity
+### User Activity
 
 - **Total registered users**: Count of all user accounts registered on the instance
 - **Active users** (by time period): Count of users active within a specified recent time interval (e.g., last 30 days, last 90 days, depending on configuration)
 - **Recently logged in users**: Count of users with recent login activity
 
-## Records and Data
+### Records and Data
 
 - **Total records**: Cumulative count of all records across all projects
 - **Data entry records**: Count of records created through standard data entry (not survey responses)
 - **Survey responses**: Count of records or responses completed via survey interface
 
-## Survey Usage
+### Survey Usage
 
 - **Survey-enabled projects**: Count of projects with at least one survey instrument
 - **Total survey invitations sent**: Count of all survey invitations distributed (across all time)
 
-## API Activity
+### API Activity
 
 - **API-enabled projects**: Count of projects with API access enabled
 - **API call volume**: Count or frequency of API requests made to the instance
 
-## External Modules
+### External Modules
 
 - **Installed modules**: Count of external modules installed on the instance
 - **Enabled projects per module**: Breakdown of how many projects have each installed module enabled
 
-## REDCap Features
+### REDCap Features
 
 Statistics on instance-wide feature adoption, including:
 - Projects using randomization
@@ -70,25 +70,25 @@ Statistics on instance-wide feature adoption, including:
 - Projects with eConsent enabled
 - Any other feature-specific adoption metrics
 
-## Infrastructure
+### Infrastructure
 
 - **REDCap version**: Current version number of the REDCap installation
 - **PHP version**: Version of PHP running on the server
 - **Database version**: Version of MySQL, MariaDB, or other database backend in use
 
-## Dynamic Data Pull (DDP)
+### Dynamic Data Pull (DDP)
 
 - **Projects using DDP**: Count of projects with Dynamic Data Pull configured
 - **Values pulled**: Count or total number of individual data pulls performed
 - **Records imported (loaded dynamically)**: Count of records populated via DDP
 
-## Logged Events
+### Logged Events
 
 - **Total count of logged events**: Cumulative count of audit log entries across the system (all user actions, data modifications, system changes, etc.)
 
 ---
 
-# 3. Dynamic Loading
+## 3. Dynamic Loading
 
 Some statistics on the System Statistics page are loaded asynchronously after the page renders. These statistics require time-consuming database queries and may not be available immediately:
 
@@ -99,7 +99,7 @@ When the page initially loads, these fields display "Loading..." or a similar pl
 
 ---
 
-# 4. Exporting Statistics
+## 4. Exporting Statistics
 
 A "Download as CSV" button located on the System Statistics page exports all visible statistics to a CSV file. Key features:
 
@@ -117,13 +117,13 @@ To export:
 
 ---
 
-# 5. Reporting to the Consortium
+## 5. Reporting to the Consortium
 
 The statistics displayed on the System Statistics page overlap with (but are not identical to) metrics reported to the REDCap Consortium. For details on consortium reporting, including which statistics are reported, frequency, and any privacy considerations, see [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md) — Notifications & Reporting.
 
 ---
 
-# 6. FHIR Statistics
+## 6. FHIR Statistics
 
 A separate System Statistics page is available for FHIR (Fast Healthcare Interoperability Resources) reporting on instances with FHIR integration or Dynamic Data Pull enabled. This page, accessible at `ControlCenter/fhir_stats.php`, displays FHIR-specific metrics and is typically linked in the Control Center sidebar adjacent to the main System Statistics page.
 
@@ -131,7 +131,7 @@ For more information on FHIR integration and statistics, consult your institutio
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Why do some statistics show "Loading..." on the System Statistics page?**
 Some statistics require time-consuming database queries (such as total logged events and Dynamic Data Pull metrics). These statistics are loaded asynchronously after the page renders to keep the page responsive. Wait a few seconds to a few minutes depending on your database size and server performance.
@@ -153,7 +153,7 @@ The REDCap version is listed under the Infrastructure section of the System Stat
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Assuming all statistics are loaded immediately.** Administrators sometimes screenshot or export the System Statistics page before asynchronous statistics have finished loading, capturing incomplete data. Always wait for all "Loading..." placeholders to be replaced with actual values before exporting or relying on the statistics.
 
@@ -167,7 +167,7 @@ The REDCap version is listed under the Infrastructure section of the System Stat
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)
 - [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)

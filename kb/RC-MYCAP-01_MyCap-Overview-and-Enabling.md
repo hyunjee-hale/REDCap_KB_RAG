@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article introduces MyCap, the participant-facing mobile application built into REDCap. It covers what MyCap is, when to use it, how it compares to the REDCap Mobile App, the difference between the current MyCap app and the legacy MyCap Classic, security architecture, and how to enable MyCap on a project. This is the first article in the RC-MYCAP series. For instrument design, scheduling, and onboarding, see the subsequent articles in this series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **MyCap**
 
@@ -56,9 +56,9 @@ The action of pushing the current MyCap project configuration (schedule, App Set
 
 ---
 
-# 3. When to Use MyCap
+## 3. When to Use MyCap
 
-## 3.1 Decision Framework
+### 3.1 Decision Framework
 
 Use this table to decide which REDCap data collection method fits a study's needs:
 
@@ -72,7 +72,7 @@ Use this table to decide which REDCap data collection method fits a study's need
 | Active sensor-based assessments (gait, cognition, hearing) | **MyCap** |
 | Offline participant data collection on participant's own device | **MyCap** |
 
-## 3.2 MyCap vs. REDCap Mobile App
+### 3.2 MyCap vs. REDCap Mobile App
 
 | Feature | MyCap | REDCap Mobile App |
 |---|---|---|
@@ -86,9 +86,9 @@ Use this table to decide which REDCap data collection method fits a study's need
 
 ---
 
-# 4. MyCap Classic vs. Current MyCap App
+## 4. MyCap Classic vs. Current MyCap App
 
-## 4.1 Version History
+### 4.1 Version History
 
 | | MyCap Classic | MyCap (current) |
 |---|---|---|
@@ -103,13 +103,13 @@ Use this table to decide which REDCap data collection method fits a study's need
 | Multi-user device support | No | Yes |
 | iOS/Android feature parity | Partial | Full |
 
-## 4.2 Action Required
+### 4.2 Action Required
 
 All new projects must direct participants to the current (purple) MyCap app. MyCap Classic is no longer supported and will not receive updates or bug fixes. Participants on MyCap Classic should be prompted to update to the current app.
 
 ---
 
-# 5. Security Architecture
+## 5. Security Architecture
 
 MyCap uses the following security controls for data protection in transit and at rest:
 
@@ -123,9 +123,9 @@ These controls meet common institutional and IRB requirements for mHealth data c
 
 ---
 
-# 6. Enabling MyCap on a Project
+## 6. Enabling MyCap on a Project
 
-## 6.1 Institutional Requirement
+### 6.1 Institutional Requirement
 
 MyCap must first be enabled at the institutional (server) level by a REDCap administrator in the Control Center under System Configuration â†’ Modules/Services Configuration (see **[RC-CC-06 â€” Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). If you do not see the MyCap option in your project, contact your REDCap administrator.
 
@@ -133,7 +133,7 @@ Administrators have an additional sub-setting that controls whether project user
 
 > **Institution-specific:** Whether MyCap is available by default or requires an administrator request varies by installation. Contact your REDCap administrator to confirm availability.
 
-## 6.2 Enabling MyCap in Your Project
+### 6.2 Enabling MyCap in Your Project
 
 1. From the project's left-hand menu, go to **Project Setup**.
 2. In the **Enable optional modules and customizations** section, check **Enable MyCap for this project**.
@@ -141,14 +141,14 @@ Administrators have an additional sub-setting that controls whether project user
 
 Once enabled, a **MyCap** section appears in the left-hand menu with subsections for enabling instruments, scheduling tasks, App Settings, and Participant Management.
 
-## 6.3 Prerequisites Before Enabling
+### 6.3 Prerequisites Before Enabling
 
 - Instruments (forms) should be designed before enabling them for MyCap. See [RC-MYCAP-02 â€” MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
 - At least one record must exist in REDCap before a participant can join via the app. Participants cannot create their own records.
 
 ---
 
-# 7. MyCap Limitations
+## 7. MyCap Limitations
 
 The following REDCap features are not supported within MyCap tasks (instrument-based surveys displayed in the app):
 
@@ -165,7 +165,7 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 â
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Is MyCap the same as the REDCap Mobile App?**
 
@@ -201,7 +201,7 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 â
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Directing participants to MyCap Classic.** MyCap Classic (black logo) was retired in August 2024. If participants download the classic app, they will not receive updates, and some features will not work. Always instruct participants to search for and install the current MyCap app (purple logo).
 
@@ -215,7 +215,7 @@ REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 â
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-MYCAP-02 â€” MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)
 - [RC-MYCAP-03 â€” MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)

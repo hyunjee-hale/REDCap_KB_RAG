@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Survey Queue Link API returns a unique URL in plain text for the specified record. The Survey Queue presents multiple surveys to a respondent in a guided workflow. This API is useful for sending queue links programmatically via email, SMS, or other channels in automated workflows.
 
@@ -25,26 +25,26 @@ Survey Queue must be enabled in the project for this method to work. If it is no
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Survey Queue
+#### Survey Queue
 A REDCap feature that presents multiple surveys to a respondent in a guided, sequential workflow. Differs from individual survey links which target a single instrument.
 
-### Queue Link
+#### Queue Link
 A unique, non-expiring URL that displays all surveys assigned to a record, presented in the order and manner configured in the project. Respondents access via this single link.
 
-### Record
+#### Record
 The unique primary identifier for a participant or subject in REDCap. The queue link is specific to a record and shows all surveys queued for that record.
 
-### Survey Distribution Tools Privilege
+#### Survey Distribution Tools Privilege
 A user-level permission that may be required to generate survey queue links via API, depending on REDCap version. Combined with API Export privilege.
 
-### Content Parameter
+#### Content Parameter
 The identifier sent in API requests specifying which type of resource to export. For Survey Queue Link, always set to `'surveyQueueLink'`.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -55,9 +55,9 @@ The identifier sent in API requests specifying which type of resource to export.
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 #!/usr/bin/env python
 
@@ -75,7 +75,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -91,7 +91,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -106,7 +106,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -139,7 +139,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API returns a unique survey queue URL as a plain text string (not wrapped in JSON or XML):
 
@@ -151,7 +151,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What is the difference between a survey link and a survey queue link?**
 **A:** A survey link ([RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)) is specific to one instrument. A survey queue link ([RC-API-41 — Export Survey Queue Link API](RC-API-41_Export-Survey-Queue-Link.md)) presents multiple surveys in a guided workflow on a single page.
@@ -173,7 +173,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Confusing surveyLink and surveyQueueLink:** These are distinct content types. Use `'surveyLink'` ([RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)) for a link to a single instrument; use `'surveyQueueLink'` for the full multi-survey queue workflow.
 
@@ -185,7 +185,7 @@ This URL presents the respondent with all surveys in their queue for the specifi
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 - [RC-API-40 — Export Survey Link API](RC-API-40_Export-Survey-Link.md)

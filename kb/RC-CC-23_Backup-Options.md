@@ -14,37 +14,37 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap does not include a built-in scheduled backup system accessible to end users. Instead, backup coverage comes from two distinct layers: **project-level backups** that any authorized project user or administrator can trigger manually, and **infrastructure-level backups** that are configured and managed by the institution's IT or database administration team outside of the REDCap application. This article explains both layers, walks through the project XML export as the primary user-accessible backup mechanism, and clarifies what is and is not captured by each approach.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Project XML Export
+#### Project XML Export
 The primary user-accessible backup mechanism. A project XML export produces a single file in **CDISC ODM format** (Operational Data Model version 1.3.1) that encodes the project's structure — all instruments, fields, events, arms, branching logic, and validation settings — and optionally includes all data records. This file can be used to recreate the project on any REDCap instance.
 
-### Metadata-Only Export
+#### Metadata-Only Export
 A project XML export that includes only the project's structure (instruments, fields, events, arms, logic) with no data records. Useful for backing up the project design before making structural changes, or for cloning an empty project template.
 
-### Full Export (Metadata + Data)
+#### Full Export (Metadata + Data)
 A project XML export that includes both the project structure and all data records. This is the closest equivalent to a complete project backup that REDCap provides at the application level.
 
-### Project Copy
+#### Project Copy
 A separate REDCap function that creates a new project with the same structure as an existing project, but contains no data. A project copy is a design clone, not a backup — it cannot be used to restore data.
 
-### Infrastructure-Level Backup
+#### Infrastructure-Level Backup
 A server- or database-level backup of the REDCap MySQL/MariaDB database, configured and managed by the hosting institution's IT team. This captures the entire REDCap instance — all projects, all data, all user accounts — and is independent of any action taken within the REDCap application.
 
-### CDISC ODM Format
+#### CDISC ODM Format
 A standardized XML format used for clinical trial data and metadata. REDCap exports project XML in ODM version 1.3.1, which enables portability across REDCap instances and to other ODM-compatible systems.
 
 ---
 
-# 3. Project-Level Backup via XML Export
+## 3. Project-Level Backup via XML Export
 
-## 3.1 Accessing the Export from the Project UI
+### 3.1 Accessing the Export from the Project UI
 
 The project XML export is available from the **Project Setup** page under the **Other Functionality** tab. Look for the option labeled **Download a backup of the entire project (as a .zip archive)**. Clicking this generates and downloads a ZIP file containing the ODM XML of the project.
 
@@ -52,7 +52,7 @@ By default, the ZIP export includes both metadata and all data records. A metada
 
 > **Note:** This option requires the user to have appropriate project access. A project-level administrator or a user with Data Export rights can perform this action. Check with your REDCap administrator if the option is not visible.
 
-## 3.2 Accessing the Export via API
+### 3.2 Accessing the Export via API
 
 For automated or programmatic backups, the same export is available via the **Export Project XML API** (see **[RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)**). The API provides additional control over what is included:
 
@@ -62,7 +62,7 @@ For automated or programmatic backups, the same export is available via the **Ex
 
 The API approach is the recommended method for scheduled or recurring backups, as it can be automated using a scripted process running on a schedule.
 
-## 3.3 What Is Included in the XML Export
+### 3.3 What Is Included in the XML Export
 
 | Element | Included |
 | --- | --- |
@@ -79,7 +79,7 @@ The API approach is the recommended method for scheduled or recurring backups, a
 | Survey field identifiers and timestamps | ✓ (with `exportSurveyFields=true` via API) |
 | File upload field attachments | ✓ (with `exportFiles=true` via API only) |
 
-## 3.4 What Is NOT Included in the XML Export
+### 3.4 What Is NOT Included in the XML Export
 
 | Element | Not Included | Notes |
 | --- | --- | --- |
@@ -98,11 +98,11 @@ The API approach is the recommended method for scheduled or recurring backups, a
 
 ---
 
-# 4. Restoring from a Project XML Backup
+## 4. Restoring from a Project XML Backup
 
 Restoring from a project XML backup means creating a new REDCap project using the exported file. REDCap does not support overwriting an existing project with an XML restore — the process always produces a new project.
 
-## 4.1 Restore via the REDCap UI
+### 4.1 Restore via the REDCap UI
 
 1. Go to the REDCap home page and click **New Project**.
 2. On the Create Project page, select the option to **Upload a REDCap project XML file** (or equivalent wording — the upload option appears alongside the blank project and template options).
@@ -112,11 +112,11 @@ Restoring from a project XML backup means creating a new REDCap project using th
 
 > **Note:** After restore, user rights, Data Access Groups, custom reports, and other non-exported elements must be reconfigured manually.
 
-## 4.2 Restore via API
+### 4.2 Restore via API
 
 Use **[RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)** to programmatically create a new project from an ODM XML string. This is equivalent to the UI upload but scriptable. The API requires a super API token (a special token that allows project creation) provided by a REDCap administrator.
 
-## 4.3 Cross-Instance Restores
+### 4.3 Cross-Instance Restores
 
 An ODM XML export from one REDCap instance can be imported into a different REDCap instance, provided both instances are running compatible REDCap versions. This makes the project XML export useful for migrating projects between institutions or between development and production environments.
 
@@ -124,27 +124,27 @@ An ODM XML export from one REDCap instance can be imported into a different REDC
 
 ---
 
-# 5. Infrastructure-Level Backups
+## 5. Infrastructure-Level Backups
 
 Infrastructure-level backups are the responsibility of the institution hosting the REDCap server, not of individual REDCap administrators or project managers working within the application.
 
-## 5.1 What Is Covered
+### 5.1 What Is Covered
 
 A server- or database-level backup captures the entire REDCap MySQL/MariaDB database, which includes everything that the project XML export does not: user accounts and rights, audit logs, file repository contents, randomization tables, custom reports, survey invitation history, and all project data across every project on the instance.
 
-## 5.2 Configuring Database Backups
+### 5.2 Configuring Database Backups
 
 Database backup scheduling and configuration is handled by your institution's IT infrastructure team, not through the REDCap Control Center. REDCap does not provide a built-in database backup scheduler or configuration interface within the application itself.
 
 Administrators who need to verify backup schedules or recovery procedures should contact their institution's IT team or database administrators.
 
-## 5.3 What Administrators Can Monitor
+### 5.3 What Administrators Can Monitor
 
 Within the Control Center, the **Cron Jobs** page (under System Configuration) shows the status of REDCap's scheduled background processes. This is not a backup configuration interface, but it confirms that REDCap's internal maintenance tasks are running. See **[RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)** for the Cron Jobs location.
 
 ---
 
-# 6. Backup vs. Project Copy
+## 6. Backup vs. Project Copy
 
 These two features are sometimes confused:
 
@@ -160,7 +160,7 @@ Use **Project XML Export** when you need to preserve or restore actual data. Use
 
 ---
 
-# 7. Automated Backup Approaches
+## 7. Automated Backup Approaches
 
 REDCap does not provide a native scheduled backup feature accessible from the project interface. Teams that need recurring automated backups have two practical options:
 
@@ -170,7 +170,7 @@ REDCap does not provide a native scheduled backup feature accessible from the pr
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: How do I back up my REDCap project?**
 **A:** Go to Project Setup → Other Functionality and download the project ZIP archive. This produces an ODM XML file containing your project structure and data. For recurring backups, use the Export Project XML API ([RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)) in an automated script.
@@ -201,7 +201,7 @@ REDCap does not provide a native scheduled backup feature accessible from the pr
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Assuming the UI export always includes all data.** The standard project ZIP download from Project Setup → Other Functionality includes data by default, but if you accidentally choose a metadata-only export, data records will not be in the file. Always verify that the ZIP file contains a reasonably sized XML file — a very small file is likely metadata-only.
 
@@ -217,7 +217,7 @@ REDCap does not provide a native scheduled backup feature accessible from the pr
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)
 - [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md)

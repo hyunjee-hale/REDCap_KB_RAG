@@ -37,7 +37,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article catalogs the External Modules installed on the **Test / Staging** REDCap instance. Module availability may differ from the Production instance — see [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md) for the Production catalog. Always verify module availability in the Module Manager for the instance you are working on.
 
@@ -49,7 +49,7 @@ Module entries marked **[Discoverable]** are visible to project users with Desig
 
 ---
 
-# 2. Module Catalog
+## 2. Module Catalog
 
 List each installed module below. For each entry, provide:
 
@@ -65,7 +65,7 @@ Use the template block below for each module. Remove unused lines.
 
 ---
 
-## `[FILL IN — Module Name]` `[Discoverable, if applicable]`
+### `[FILL IN — Module Name]` `[Discoverable, if applicable]`
 **Prefix:** `[FILL IN — e.g., module_prefix]`
 **Author:** `[FILL IN — Developer name / Institution]`
 
@@ -77,7 +77,7 @@ Use the template block below for each module. Remove unused lines.
 
 ---
 
-## `[FILL IN — Module Name]`
+### `[FILL IN — Module Name]`
 **Prefix:** `[FILL IN]`
 **Author:** `[FILL IN]`
 
@@ -89,11 +89,11 @@ Use the template block below for each module. Remove unused lines.
 
 ---
 
-# 3. Module Categories
+## 3. Module Categories
 
 Once the catalog is populated, this section helps users quickly find modules by type. Update these lists to match your actual installed modules.
 
-## Modules That Add Action Tags
+### Modules That Add Action Tags
 
 Some modules extend REDCap by introducing custom action tags (prefixed with `@`). These tags appear in the **@ Action Tags** popup on the Control Center Module Manager page.
 
@@ -101,13 +101,13 @@ Some modules extend REDCap by introducing custom action tags (prefixed with `@`)
 
 > See also: [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md) — Action Tags Overview for general guidance on using action tags.
 
-## Modules That Extend the API
+### Modules That Extend the API
 
 Some modules add new API endpoints beyond REDCap's built-in API. These endpoints appear in the **API Methods** popup on the Module Manager page.
 
 **Modules with custom API endpoints at this installation:** `[FILL IN — list module names, e.g., Locking API, Data Quality API — or "None"]`
 
-## Locally Developed Modules
+### Locally Developed Modules
 
 Some installations have modules built specifically for local infrastructure — for example, modules that integrate with a local IRB management system, EMR, or institutional directory service.
 
@@ -115,9 +115,9 @@ Some installations have modules built specifically for local infrastructure — 
 
 ---
 
-# 4. Requesting and Enabling Modules
+## 4. Requesting and Enabling Modules
 
-## Requesting a New Module
+### Requesting a New Module
 
 External modules are developed by the REDCap community and shared via the REDCap Repo. If your project needs a module that is not currently installed, you can request it.
 
@@ -125,7 +125,7 @@ External modules are developed by the REDCap community and shared via the REDCap
 
 **Review criteria:** `[FILL IN — optional: describe any local criteria for approving module requests, e.g., security review, validation requirements, IRB compatibility]`
 
-## Enabling a Module for Your Project
+### Enabling a Module for Your Project
 
 Once a module is installed at the system level, it must also be enabled at the project level before it takes effect.
 
@@ -135,7 +135,7 @@ Once a module is installed at the system level, it must also be enabled at the p
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: A module I've heard about isn't listed here. Does that mean it isn't available?**
 
@@ -161,7 +161,7 @@ Once a module is installed at the system level, it must also be enabled at the p
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-EM-01 — External Modules: Overview & Manager](RC-EM-01_External-Modules-Overview-and-Manager.md)
 - [RC-EM-02 — External Modules: Installed Catalog — Production](RC-EM-02_External-Modules-Installed-Catalog.md)

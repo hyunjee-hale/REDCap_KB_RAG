@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains Data Access Groups (DAGs) — what they are, how they restrict record-level access, how to create and manage them, and how to assign users. DAGs are a feature for projects where different groups of users should only see their own records, such as multi-site studies where each site's staff should be separated from the others.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Access Group (DAG)**
 
@@ -44,7 +44,7 @@ A user right ("Data Access Groups") that grants access to the DAG management pag
 
 ---
 
-# 3. How DAGs Work
+## 3. How DAGs Work
 
 A DAG controls record-level access within a project. The key behavior:
 
@@ -59,16 +59,16 @@ DAGs operate independently of instrument-level user rights (data viewing rights 
 
 ---
 
-# 4. Setting Up DAGs
+## 4. Setting Up DAGs
 
-## 4.1 Accessing the DAG Page
+### 4.1 Accessing the DAG Page
 
 The DAG management page can be accessed in two ways:
 
 - From the **Applications menu**, click **DAGs**.
 - From the **User Rights page**, click the **Data Access Group** tab.
 
-## 4.2 Creating a DAG
+### 4.2 Creating a DAG
 
 1. On the DAG page, type a name for the new group in the **"Enter a new group name"** text box.
 2. Click **+ Add Group**.
@@ -76,7 +76,7 @@ The DAG management page can be accessed in two ways:
 
 For creating many DAGs at once, use the **Upload or download DAGs/User-DAG assignments** button to upload a structured file.
 
-## 4.3 Deleting a DAG
+### 4.3 Deleting a DAG
 
 Click the red **X** in the "Delete group" column next to the DAG you want to remove.
 
@@ -84,18 +84,18 @@ Click the red **X** in the "Delete group" column next to the DAG you want to rem
 
 ---
 
-# 5. Assigning Users to a DAG
+## 5. Assigning Users to a DAG
 
 There are several ways to assign a user to a single DAG.
 
-## 5.1 From the DAG Page
+### 5.1 From the DAG Page
 
 1. On the DAG page, in the **"Assign user to a group"** section, select the user from the **Select user** dropdown.
    > **Note:** Only users who have already been added to the project appear in this list.
 2. Select the target DAG from the dropdown to the right of the user dropdown. The dropdown will show the user's current DAG assignment (or "no assignment").
 3. Click **Assign**.
 
-## 5.2 From the User Rights Page
+### 5.2 From the User Rights Page
 
 A user can also be assigned to a DAG from within the User Rights menu, in any of three ways:
 
@@ -105,7 +105,7 @@ A user can also be assigned to a DAG from within the User Rights menu, in any of
 
 ---
 
-# 6. Multi-DAG Access (DAG Switcher)
+## 6. Multi-DAG Access (DAG Switcher)
 
 If a user needs access to records across multiple DAGs — for example, a monitor who oversees two sites — use the DAG Switcher feature on the DAG page.
 
@@ -118,7 +118,7 @@ The DAG Switcher grants access to additional DAGs beyond the user's primary DAG 
 
 ---
 
-# 7. Bulk DAG Management
+## 7. Bulk DAG Management
 
 The **Upload or download DAGs/User-DAG assignments** button (top right of the User Rights page) allows you to:
 
@@ -129,7 +129,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: What does a DAG restrict exactly?**
 
@@ -161,7 +161,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Adding a user to a project without assigning a DAG when they should have one.** A user without a DAG assignment sees all records. For multi-site or restricted-access projects, always verify DAG assignment at the time of user addition. Review the user list regularly to confirm all users have the correct DAG configuration.
 
@@ -179,7 +179,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -193,7 +193,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 ---
 
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) (DAG assignment when adding users)

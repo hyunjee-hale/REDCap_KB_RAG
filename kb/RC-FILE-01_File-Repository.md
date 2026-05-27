@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The File Repository is a project-level storage area where team members can upload, organize, and share files related to a REDCap project. It supports unlimited folders and subfolders, optional per-folder access restrictions (by DAG, user role, or administrators only), bulk file operations, and a Recycle Bin with 30-day recovery. Several system folders are automatically maintained by REDCap to hold data export files, e-consent PDFs, and rich-text editor attachments. The File Repository is accessible from the left-hand Applications menu in any project and is distinct from file-upload fields on instruments, which store files at the individual record level.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **File Repository**
 
@@ -49,7 +49,7 @@ Projects may have a maximum storage limit set by administrators. The storage met
 
 ---
 
-# 3. Accessing the File Repository
+## 3. Accessing the File Repository
 
 Navigate to the project and select **File Repository** from the left-hand Applications menu. Users must have the **File Repository** user right to see this item — users without it cannot access the module at all.
 
@@ -57,13 +57,13 @@ Navigate to the project and select **File Repository** from the left-hand Applic
 
 ---
 
-# 4. Uploading and Managing Files
+## 4. Uploading and Managing Files
 
-## 4.1 Uploading Files
+### 4.1 Uploading Files
 
 Drag files into the upload zone at the top of the page, or click the upload area to browse. Up to 10 files can be uploaded per batch; the maximum file size is 512 MB per file. Certain executable and script file types are blocked for security (e.g., .exe, .dll, .sh, .js, .ps1, .bat, .jar). Navigate into a subfolder before uploading to place files in that location.
 
-## 4.2 File Operations
+### 4.2 File Operations
 
 The following actions are available per file:
 
@@ -80,7 +80,7 @@ The following actions are available per file:
 
 **Search:** A search box filters the listing within the currently open folder.
 
-## 4.3 Folder Management
+### 4.3 Folder Management
 
 **Creating a folder:** Click **Create folder**, enter a name, and optionally configure access restrictions (see Section 4.4). Navigate into the folder before uploading to place files there.
 
@@ -88,7 +88,7 @@ The following actions are available per file:
 
 **Deleting a folder:** Click the X next to the folder name. Folders that still contain files cannot be deleted — all contents must be removed or moved first.
 
-## 4.4 Folder Access Restrictions
+### 4.4 Folder Access Restrictions
 
 When creating a folder, three optional restrictions can be applied:
 
@@ -98,13 +98,13 @@ When creating a folder, three optional restrictions can be applied:
 
 ---
 
-# 5. Recycle Bin and e-Consent PDFs Folder
+## 5. Recycle Bin and e-Consent PDFs Folder
 
-## 5.1 Recycle Bin
+### 5.1 Recycle Bin
 
 Deleted files land in the Recycle Bin and remain recoverable for up to 30 days. The listing shows the original folder location, deletion time, and the deadline for permanent deletion. Click **Restore** to recover a file; if its original folder was also deleted, restoring the file automatically recreates the folder and any required parent folders. Administrators can permanently delete Recycle Bin files immediately — this is irreversible.
 
-## 5.2 e-Consent PDFs Folder
+### 5.2 e-Consent PDFs Folder
 
 When the e-Consent Framework is enabled on a survey instrument, REDCap automatically stores a signed PDF of each completed consent here. The listing shows respondent identifier (name/DOB), IP address, survey completion time, file storage time, version, and consent type. This folder is read-only for project users.
 
@@ -112,7 +112,7 @@ When the e-Consent Framework is enabled on a survey instrument, REDCap automatic
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 | Question | Answer |
 |---|---|
@@ -126,7 +126,7 @@ When the e-Consent Framework is enabled on a survey instrument, REDCap automatic
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Rich text editor uploads are public.** Files uploaded through REDCap's rich text editor (field labels, survey invitations, dashboards) land in the Miscellaneous File Attachments folder with publicly accessible links — no login required to download. Never use this path for PHI, PII, or sensitive documents.
 
@@ -138,7 +138,7 @@ When the e-Consent Framework is enabled on a survey instrument, REDCap automatic
 
 **Admin-only and DAG/role restrictions are mutually exclusive.** A folder restricted to administrators only cannot simultaneously be restricted by DAG or user role. Choose one type of restriction.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to File Repository operations. API usage requires an API token and familiarity with the REDCap API. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication and setup.
 
@@ -150,7 +150,7 @@ When the e-Consent Framework is enabled on a survey instrument, REDCap automatic
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (the right required to access the File Repository)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (how to grant File Repository access)

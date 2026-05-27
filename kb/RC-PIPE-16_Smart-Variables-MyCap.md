@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 MyCap smart variables provide participant-facing links and codes specific to REDCap's MyCap mobile application. These variables generate URLs and access codes that allow participants to enroll in a REDCap project using the MyCap app on their mobile device. Use MyCap smart variables in field notes, survey invitations, emails, and confirmation messages to enable easy mobile enrollment. These variables are only available in projects with the MyCap module enabled.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **REDCap MyCap**
 
@@ -44,7 +44,7 @@ An HTML link (usually embedded in an email or field note) that directs participa
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -56,7 +56,7 @@ An HTML link (usually embedded in an email or field note) that directs participa
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **MyCap Module Required**
 
@@ -114,7 +114,7 @@ The `[mycap-participant-code]` can be included in support materials or error mes
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I send a participant a link to enroll in my project via MyCap?**
 
@@ -150,7 +150,7 @@ This generates a clickable link that will direct the participant to the MyCap en
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using MyCap smart variables in projects without MyCap enabled.** If your project does not have the MyCap module, these variables return blank or produce errors. Verify that your project has MyCap enabled before relying on these variables.
 
@@ -168,7 +168,7 @@ This generates a clickable link that will direct the participant to the MyCap en
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-08 — Smart Variables: Survey](RC-PIPE-08_Smart-Variables-Survey.md) (survey-based smart variables for web enrollment)

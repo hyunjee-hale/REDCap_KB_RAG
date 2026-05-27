@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Switch DAG API method allows the current API user to switch (assign, reassign, or unassign) their active Data Access Group context — but only if they have been assigned to multiple DAGs via the DAG Switcher page in the project. By switching to a specific DAG, the user limits their data view and entry to that group only. Passing an empty string for `dag` unassigns the user, switching them to an all-DAGs view. Use this method to automate DAG context switching in workflows or support multi-site data entry scenarios.
 
@@ -23,29 +23,29 @@ Caution: This method only works for users who have been set up with multiple DAG
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Data Access Group (DAG)
+#### Data Access Group (DAG)
 A data isolation mechanism in REDCap that restricts which records a user can access. Users assigned to a DAG can only view and edit records belonging to that group.
 
-### Unique Group Name
+#### Unique Group Name
 The system identifier for a DAG (e.g., `'group_1'`, `'boston_site'`), distinct from the human-readable display label. The `dag` parameter always requires the unique group name, not the display label.
 
-### DAG Switching
+#### DAG Switching
 The ability for a user to temporarily change their active DAG context to view and edit a different group's data. This is distinct from DAG assignment — a user can only switch to DAGs they are assigned to.
 
-### All-DAGs View
+#### All-DAGs View
 A context in which the user can access records from all Data Access Groups in the project. This is activated by passing an empty string to the `dag` parameter.
 
-### DAG Switcher Page
+#### DAG Switcher Page
 A REDCap administrative interface where administrators designate which users can switch between DAGs. Only users listed on this page can use the Switch DAG API method.
 
-### API Import/Update Privilege
+#### API Import/Update Privilege
 A permission that allows the API token user to perform write operations. While named for "import/update," this privilege is also required for the Switch DAG method (a context-switching operation).
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -56,9 +56,9 @@ A permission that allows the API token user to perform write operations. While n
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 from config import config
 import requests, json
@@ -76,7 +76,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -93,7 +93,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -108,7 +108,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -143,7 +143,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 On success, the API returns `"1"`. If the switch fails for any reason (wrong DAG name, insufficient permissions, user not set up for DAG switching), an error message is returned instead.
 
@@ -154,7 +154,7 @@ Example response:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What is the difference between switching a DAG and being assigned to a DAG?**
 
@@ -186,7 +186,7 @@ Example response:
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using the DAG display name instead of the unique group name.** The `dag` parameter requires the unique group name (e.g., `'group_1'`), not the human-readable label (e.g., `'Boston Site'`). Use the Export DAGs method ([RC-API-28 — Export DAGs API](RC-API-28_Export-DAGs.md)) to find the correct unique names.
 
@@ -204,7 +204,7 @@ Example response:
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains DAG concepts, structure, and configuration)

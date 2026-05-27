@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import Records API method writes record data into a REDCap project. This is the primary way to programmatically create new records or update existing records in an automated workflow. You provide record data in JSON, CSV, or XML format, and the API creates or updates the records based on the record ID and the overwrite behavior you specify.
 
@@ -25,7 +25,7 @@ When to use this method: When you need to load data from an external system into
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -44,9 +44,9 @@ When to use this method: When you need to load data from an external system into
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -89,7 +89,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -134,7 +134,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -152,7 +152,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -211,7 +211,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns content based on the `returnContent` parameter (not applicable for background process imports):
 
@@ -248,7 +248,7 @@ On error, the API returns an error message describing what went wrong (e.g., mis
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What's the difference between normal and overwrite behavior?**
 
@@ -284,7 +284,7 @@ On error, the API returns an error message describing what went wrong (e.g., mis
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Forgetting to JSON-encode the data parameter.** The `data` parameter must be a JSON, CSV, or XML string — not a native object or array. Depending on your language, you must serialize the data first using `json.dumps()`, `toJSON()`, or equivalent.
 
@@ -304,7 +304,7 @@ On error, the API returns an error message describing what went wrong (e.g., mis
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading data from REDCap)

@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap provides administrators with two project-level tools that are invisible to regular users: the **View Project as User** feature and the **Project Switcher**. Both appear within a project at the top-left of the page, just below the "Contact REDCap Administrator" link.
 
@@ -24,19 +24,19 @@ REDCap provides administrators with two project-level tools that are invisible t
 
 ---
 
-# 2. View Project as User
+## 2. View Project as User
 
-## 2.1 What It Does
+### 2.1 What It Does
 
 When an administrator activates this feature, REDCap reloads the current project with the selected user's project privileges applied. The admin sees exactly what that user sees — including which instruments, menu items, and data are visible — based on that user's assigned rights.
 
-## 2.2 Accessing the Feature
+### 2.2 Accessing the Feature
 
 The **View Project as User** dropdown appears at the top-left of any project page, just below the "Contact REDCap Administrator" link. It is only visible to administrators — regular project users do not see it.
 
 When expanded, the dropdown lists all users currently assigned to the project.
 
-## 2.3 Starting a Session
+### 2.3 Starting a Session
 
 1. Open the project.
 2. Expand the **View Project as User** dropdown.
@@ -48,7 +48,7 @@ REDCap confirms the change before reloading:
 
 After the reload, the interface reflects only what that user is permitted to see and do.
 
-## 2.4 Identifying an Active Session
+### 2.4 Identifying an Active Session
 
 While a view-as-user session is active, a green banner appears at the top of every project page:
 
@@ -56,7 +56,7 @@ While a view-as-user session is active, a green banner appears at the top of eve
 
 If you are unsure whether your current view is a normal admin view or an impersonated one, check for this banner.
 
-## 2.5 Ending the Session
+### 2.5 Ending the Session
 
 1. Expand the **View Project as User** dropdown.
 2. Select **[Stop viewing as user]**.
@@ -69,13 +69,13 @@ The administrator's full access is restored after the reload.
 
 ---
 
-# 3. Project Switcher
+## 3. Project Switcher
 
-## 3.1 What It Does
+### 3.1 What It Does
 
 The Project Switcher is a text input field that accepts a Project ID (PID). Pressing Enter navigates directly to that project, bypassing the main project list. It is an admin-only tool — regular users do not see it.
 
-## 3.2 Locations
+### 3.2 Locations
 
 The Project Switcher appears in two places:
 
@@ -83,7 +83,7 @@ The Project Switcher appears in two places:
 
 **Outside a project (main menu):** Located between the REDCap logo at the top-left and the "Home" navigation tab. This allows an administrator to jump to any project directly from the home page or any other non-project page.
 
-## 3.3 Using the Switcher
+### 3.3 Using the Switcher
 
 Type the PID of the target project into the input field and press Enter. REDCap navigates immediately to that project's home page.
 
@@ -91,7 +91,7 @@ Type the PID of the target project into the input field and press Enter. REDCap 
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: Can I make changes while viewing the project as another user?**
 Yes — you retain the ability to act within the project, but only within the bounds of the impersonated user's rights. Actions that require rights the user does not have will behave as they would for that user (e.g., buttons may be hidden or disabled).
@@ -115,7 +115,7 @@ The PID appears in the URL when you are inside a project (e.g., `...redcap.php?p
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Forgetting an active view-as-user session.** If you open a different browser tab or return to the project later in the same browser session, you may still be in view-as-user mode. Always check for the green banner at the top of the page if a project behaves unexpectedly.
 
@@ -127,7 +127,7 @@ The PID appears in the URL when you are inside a project (e.g., `...redcap.php?p
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) (managing user accounts and global access)
 - [RC-CC-24 — Control Center: Edit Project Settings](RC-CC-24_Control-Center-Edit-Project-Settings.md) (project-level admin configuration; Project Switcher `eps` shortcut)

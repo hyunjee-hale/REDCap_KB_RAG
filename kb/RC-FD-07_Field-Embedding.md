@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers field embedding — a REDCap feature that allows form designers to reposition where a field visually appears on an instrument or survey by embedding it inside another field's label. Field embedding does not change a field's variable name, data storage, or behavior; it only changes where the field renders on screen. The two most common applications are embedding a text box next to a specific answer choice, and using a table in a descriptive field to arrange multiple fields in a grid layout.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Field Embedding**
 
@@ -50,7 +50,7 @@ An action tag that displays hint text inside an empty text-box field — similar
 
 ---
 
-# 3. How Field Embedding Works
+## 3. How Field Embedding Works
 
 The embedding mechanism is straightforward: any field that will be embedded must already exist on the same instrument. You then reference it from another field's label using curly braces.
 
@@ -101,11 +101,11 @@ The Preview Instrument button in the Online Designer provides a limited preview 
 
 ---
 
-# 4. Field Embedding in Choices
+## 4. Field Embedding in Choices
 
 One common use of field embedding is displaying a text box directly next to an answer choice — most often an "Other, please specify" option in a radio button or dropdown field.
 
-## 4.1 Setup Overview
+### 4.1 Setup Overview
 
 In this pattern, three elements work together:
 
@@ -113,7 +113,7 @@ In this pattern, three elements work together:
 2. **The embedded text field** (e.g., `other1`) captures the free-text response and has its curly-brace reference placed next to the "Other" choice label.
 3. **Branching logic** on the embedded text field hides it unless the user selects "Other" — preventing the text box from appearing for all respondents.
 
-## 4.2 Placing the Embedding Reference
+### 4.2 Placing the Embedding Reference
 
 To embed a field next to a specific choice:
 
@@ -124,7 +124,7 @@ To embed a field next to a specific choice:
 
 The text box for `other1` will now render inline, immediately to the right of the "Other" label.
 
-## 4.3 Adding Branching Logic
+### 4.3 Adding Branching Logic
 
 Without branching logic, the embedded text field renders for all respondents regardless of whether they selected "Other." Add branching logic to the embedded field so it only appears when relevant:
 
@@ -134,7 +134,7 @@ Without branching logic, the embedded text field renders for all respondents reg
 
 > **Note:** The branching logic condition uses square-bracket syntax (`[radio_choices]`), while the embedding reference uses curly-brace syntax (`{other1}`). Both are required and serve different purposes.
 
-## 4.4 Using @PLACEHOLDER
+### 4.4 Using @PLACEHOLDER
 
 When a field is embedded inline, its label may not render visibly — the label is suppressed to keep the layout clean. Use the `@PLACEHOLDER` action tag to display hint text inside the text box so users understand what to enter:
 
@@ -146,15 +146,15 @@ The text box will display "Please specify" as greyed-out hint text when empty.
 
 ---
 
-# 5. Field Embedding in Table Format
+## 5. Field Embedding in Table Format
 
 A second common application is arranging multiple fields in a grid, making dense forms — such as demographics sections — more compact and easier to read.
 
-## 5.1 How It Works
+### 5.1 How It Works
 
 In this pattern, a **descriptive field** acts as a visual container. Its label is edited using the Rich Text Editor to create an HTML table. Each table cell that should contain a data-entry field holds a curly-brace reference to that field's variable name. The referenced fields render inside the cells when the instrument is viewed.
 
-## 5.2 Setup Steps
+### 5.2 Setup Steps
 
 1. In the Online Designer, create all the fields you intend to embed (e.g., `first_name`, `last_name`, `dob`, `mrn`). These fields can be placed anywhere in the instrument field list — their position in the list does not affect where they render once embedded.
 2. Create a **Descriptive** field where you want the table to appear.
@@ -170,13 +170,13 @@ In this pattern, a **descriptive field** acts as a visual container. Its label i
 
 Calculated fields can be embedded in a table just like text or other data-entry fields — place `{variable_name}` in the target table cell and the computed value will render there. Because calculated fields update in real time as dependent fields are filled in, embedding a calculated field directly in the same table as its input fields creates a live computation panel: the user sees the result update as they type. For example, a table with inputs for salary and FTE percentage could include a third row embedding a calculated "prorated salary" cell — the calculation is visible and updates immediately without the user navigating away.
 
-## 5.3 Multiple Descriptive Fields
+### 5.3 Multiple Descriptive Fields
 
 Large demographics sections are often split across two or more descriptive fields, each containing a separate table. This keeps each table manageable in size and allows section breaks or instructional text to appear between them. Each descriptive field operates independently — fields embedded in the first table do not interfere with fields embedded in the second.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can I embed the same field in more than one location on the same instrument?**
 
@@ -212,7 +212,7 @@ Large demographics sections are often split across two or more descriptive field
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using square brackets instead of curly braces.** The most frequent mistake when first learning field embedding is typing `[variable_name]` (branching logic syntax) instead of `{variable_name}` (embedding syntax). Square brackets in a field label are interpreted as piping, not embedding. The field will not reposition — the reference will be replaced by the field's current value, which is likely blank. Always use curly braces for embedding.
 
@@ -234,7 +234,7 @@ Large demographics sections are often split across two or more descriptive field
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (the tool used to create fields and configure embedding)
 - [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md)(managing field order and instrument structure)

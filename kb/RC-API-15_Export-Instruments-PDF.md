@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Instruments PDF API method generates a PDF document containing one or more data collection instruments (forms) from your REDCap project. It returns the exact same PDF file that is downloadable from a project's data entry form in the web interface.
 
@@ -33,7 +33,7 @@ This method is useful for generating printable forms, creating patient handouts,
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -51,9 +51,9 @@ This method is useful for generating printable forms, creating patient handouts,
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -73,7 +73,7 @@ f.write(r.content)
 f.close()
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -92,7 +92,7 @@ writeBin(as.vector(result), f)
 close(f)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -107,7 +107,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -144,13 +144,13 @@ fclose($fh);
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns a binary PDF file. The PDF should be written to disk using a binary write operation. The HTTP status code will be 200 on success.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I want to export a blank template of all forms. Which parameters should I use?**
 
@@ -182,7 +182,7 @@ The method returns a binary PDF file. The PDF should be written to disk using a 
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Writing the file in text mode instead of binary mode.** The most common mistake is opening the file for writing in text mode. Always use binary mode: `'wb'` in Python, `writeBin()` in R, or `fopen($file, 'wb')` in PHP.
 
@@ -196,7 +196,7 @@ The method returns a binary PDF file. The PDF should be written to disk using a 
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument design concepts and terminology)

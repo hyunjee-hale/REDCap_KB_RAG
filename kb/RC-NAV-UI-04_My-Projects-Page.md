@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The My Projects page is the default landing page after login. It lists every project the current user has access to and provides tools to find, organize, and navigate to those projects. Users with many projects benefit most from understanding the search, sort, and folder features covered in this article.
 
 ---
 
-# 2. The Project List Table
+## 2. The Project List Table
 
 Projects are displayed in a tabular grid with the following columns:
 
@@ -40,7 +40,7 @@ Projects are displayed in a tabular grid with the following columns:
 
 ---
 
-# 3. Searching and Filtering
+## 3. Searching and Filtering
 
 A **"Filter projects by title"** text box appears at the top right of the project table. Typing in this box dynamically filters the visible projects to those whose titles contain the entered text. The filter is case-insensitive.
 
@@ -48,19 +48,19 @@ A **"Filter projects by title"** text box appears at the top right of the projec
 
 ---
 
-# 4. Project Folders
+## 4. Project Folders
 
-## 4.1 What Project Folders Are
+### 4.1 What Project Folders Are
 
 Project Folders are a personal organization system that lets each user group their projects into named folders on the My Projects page. Folders are visible **only to the user who created them** — other users and administrators cannot see your folder structure.
 
 A project can be assigned to **multiple folders simultaneously**. Assigning a project to a folder does not move or remove it from other folders or from the unfoldered view.
 
-## 4.2 Opening the Organize Dialog
+### 4.2 Opening the Organize Dialog
 
 Click the **Organize** button (folder icon, green text) in the header of the My Projects table. This opens the "Organize Projects" dialog, which is divided into two steps.
 
-## 4.3 Step 1 — Create Folders
+### 4.3 Step 1 — Create Folders
 
 The left panel of the dialog shows your existing folders and a text input to create new ones.
 
@@ -68,7 +68,7 @@ The left panel of the dialog shows your existing folders and a text input to cre
 - To **delete** a folder, use the delete control next to its name in the list. Deleting a folder removes the folder and its project assignments; it does not affect the projects themselves.
 - To **reorder** folders, drag and drop them within the left-hand table. The order you set here controls how folders appear on the My Projects page.
 
-## 4.4 Step 2 — Assign Projects to Folders
+### 4.4 Step 2 — Assign Projects to Folders
 
 The right panel lists all projects the current user can access. Use this panel to assign projects to whichever folder is currently selected in the left panel.
 
@@ -76,7 +76,7 @@ The right panel lists all projects the current user can access. Use this panel t
 - Check the **"Hide projects already assigned"** checkbox to show only projects not yet assigned to the selected folder — useful when working through a large project list.
 - Check the checkbox next to a project to assign it to the selected folder; uncheck to remove it from that folder.
 
-## 4.5 Collapsing and Expanding Folders
+### 4.5 Collapsing and Expanding Folders
 
 On the My Projects page, each folder appears as a collapsible row. Click the folder row to toggle it between expanded (projects visible) and collapsed (projects hidden).
 
@@ -84,7 +84,7 @@ The **Collapse All** button (folder-minus icon) in the table header collapses ev
 
 Sorting the project list (by clicking a column header) automatically collapses all folders first.
 
-## 4.6 The "My Hidden Projects" Folder
+### 4.6 The "My Hidden Projects" Folder
 
 REDCap includes a built-in special folder called **My Hidden Projects**. Its behavior differs from user-created folders:
 
@@ -97,7 +97,7 @@ REDCap includes a built-in special folder called **My Hidden Projects**. Its beh
 
 ---
 
-# 5. Completed Projects
+## 5. Completed Projects
 
 Projects in **Completed** status are hidden from the main My Projects list. To access them, scroll to the bottom of the My Projects page and click **"Show Completed Projects."** This reveals all projects in Completed status that you were a member of.
 
@@ -105,19 +105,19 @@ Only a REDCap administrator can change a project's status once it reaches Comple
 
 ---
 
-# 6. Creating a New Project
+## 6. Creating a New Project
 
 The **New Project** link in the top navigation bar (green, with a plus icon) opens the project creation workflow. Depending on your institution's configuration, this may be a direct creation form or a request form that goes to an administrator for approval. See [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) for how project creation rights are configured.
 
 ---
 
-# 7. Mobile View
+## 7. Mobile View
 
 On narrow screens (phones and small tablets), the tabular project grid is replaced by a scrollable list-group view. Each project appears as a card showing the project title and basic metadata. Folder collapse controls and the search box remain available. Sorting by column header is not available in the mobile view.
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: I organized my projects into folders but my colleague can't see them.**
 
@@ -155,7 +155,7 @@ On narrow screens (phones and small tablets), the tabular project grid is replac
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) (project statuses, Completed status, creating and deleting projects)
 - [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) (the two-panel layout inside a project)

@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the Record Status Dashboard in detail — including
 custom dashboards — and describes all other locations in REDCap where
@@ -22,7 +22,7 @@ you can find clickable links to records or specific instruments.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record Status Dashboard**
 
@@ -51,9 +51,9 @@ within that instrument.
 
 ---
 
-# 3. The Record Status Dashboard
+## 3. The Record Status Dashboard
 
-## 3.1 Default Dashboard
+### 3.1 Default Dashboard
 
 - Access it from the left-hand menu under Data Collection \> Record
     Status Dashboard.
@@ -66,7 +66,7 @@ within that instrument.
 - In projects with arms, tabs appear at the top — one per arm. Click
     a tab to switch arms.
 
-## 3.2 Access Restrictions
+### 3.2 Access Restrictions
 
 REDCap automatically filters the dashboard based on your access level:
 
@@ -82,9 +82,9 @@ REDCap automatically filters the dashboard based on your access level:
 
 ---
 
-# 4. Custom Dashboards
+## 4. Custom Dashboards
 
-## 4.1 What Custom Dashboards Can Do
+### 4.1 What Custom Dashboards Can Do
 
 A user with Project Design rights can create custom dashboards with the
 following options:
@@ -98,7 +98,7 @@ following options:
 | Vertical header orientation | Rotates column headers to vertical text, narrowing columns when instrument or event names are long. |
 | Custom sorting | Sorts records by a variable other than Record ID (e.g., by date of birth or visit date). |
 
-## 4.2 Accessing Custom Dashboards
+### 4.2 Accessing Custom Dashboards
 
 - Custom dashboards appear as additional named links in the left-hand
     menu, below the default Record Status Dashboard link.
@@ -108,9 +108,9 @@ following options:
 
 ---
 
-# 5. Other Locations with Record Links
+## 5. Other Locations with Record Links
 
-## 5.1 Record ID Links (to Record Home Page)
+### 5.1 Record ID Links (to Record Home Page)
 
 In the following locations, any displayed Record ID is a clickable link
 to the Record Home Page:
@@ -134,7 +134,7 @@ to the Record Home Page:
 > **Important:** Survey invitation logs and the participant list only contain working Record ID links when the survey is in identified mode. In anonymous mode, the links are deactivated to protect respondent anonymity.
 
 
-## 5.2 Variable Links (to a Specific Instrument and Field)
+### 5.2 Variable Links (to a Specific Instrument and Field)
 
 In a few locations, REDCap links directly to a specific instrument and
 highlights a specific variable. This is most common in data quality and
@@ -150,7 +150,7 @@ data cleaning tools:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Why are some instruments missing from my Record Status Dashboard?**
 
@@ -186,7 +186,7 @@ project.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 - Viewing a custom dashboard and not realizing it: if the dashboard
     appears filtered, check the left-hand menu to see if you are on the
@@ -207,7 +207,7 @@ project.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering Add/Edit Records, the Record Home Page, and dot color

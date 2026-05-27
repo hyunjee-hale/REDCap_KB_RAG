@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import User Roles API method creates new custom user roles or updates existing roles in your project. A user role is a template that bundles a set of permissions together and assigns a human-readable label. The data payload is a JSON or CSV array of role objects, each specifying a role label and a set of permission flags.
 
@@ -23,7 +23,7 @@ Use this method to automate role management, create role templates programmatica
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -33,7 +33,7 @@ Use this method to automate role management, create role templates programmatica
 | `data` | Required | Array of role objects in the specified format. Each object must include `role_label` and permission flags. Optionally include `unique_role_name` to update an existing role. See Section 2.1 for the full attribute list, value KEY, and format examples. |
 | `returnFormat` | Optional | Format for error messages: `'csv'`, `'json'`, or `'xml'`. Defaults to the value of `format` if not specified, or `'xml'` if neither is provided. Does not apply when using background processing. |
 
-## 2.1 Data Attribute Reference
+### 2.1 Data Attribute Reference
 
 All available attributes for the `data` payload:
 
@@ -101,9 +101,9 @@ U-2119C4Y87T,Project Manager,0,0,"demographics:1,day_3:2,other:0","demographics:
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests, json
@@ -151,7 +151,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -200,7 +200,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -215,7 +215,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -280,13 +280,13 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns a count of roles created or modified. For example: `1` means one role was created or updated.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I update an existing role?**
 
@@ -310,7 +310,7 @@ On success, the API returns a count of roles created or modified. For example: `
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Confusing field names between role imports and user imports.** User permission fields sometimes differ from role permission fields. For example, roles use `data_export_tool` while users use `data_export`. Consult [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for the exact field names required for each operation.
 
@@ -324,7 +324,7 @@ On success, the API returns a count of roles created or modified. For example: `
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains role-based access)

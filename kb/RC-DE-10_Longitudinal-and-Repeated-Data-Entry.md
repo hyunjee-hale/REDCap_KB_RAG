@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the data entry workflows that are specific to longitudinal REDCap projects — projects with multiple timepoints (events), multiple arms, repeated instruments, or repeated events. It explains how to create records correctly in single- and multi-arm projects, how to navigate to the right event and instrument, how prefilled fields work, and how to add new instances of repeated instruments and events. For general data entry procedures that apply to all project types, see [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md). For an explanation of how longitudinal mode and arms affect the interface layout, see [RC-NAV-REC-02 — Longitudinal Mode & Arms](RC-NAV-REC-02_Longitudinal-Mode-and-Arms.md).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Arm**
 
@@ -44,17 +44,17 @@ A required field at the bottom of every REDCap instrument that indicates the com
 
 ---
 
-# 3. Record Creation in Longitudinal Projects
+## 3. Record Creation in Longitudinal Projects
 
 In non-longitudinal projects, creating a new record takes you directly into the first instrument. In longitudinal projects, record creation works differently depending on whether the project has one arm or multiple arms.
 
-## 3.1 Single-Arm Projects
+### 3.1 Single-Arm Projects
 
 Creating a record in a single-arm longitudinal project uses the same Add/Edit Records page as a non-longitudinal project — click **Add New Record**. The key difference is what happens next: instead of opening the first instrument directly, REDCap takes you to the **Record Home Page** for that record.
 
 > **Important:** A newly created record is not permanently saved until at least one instrument has been saved with data. If you navigate away from the Record Home Page without saving any instrument, REDCap discards the record.
 
-## 3.2 Multi-Arm Projects
+### 3.2 Multi-Arm Projects
 
 When a project has more than one arm, you must specify which arm the record belongs to before creating it. REDCap cannot assign a record to an arm automatically because a record can only exist in one arm at a time.
 
@@ -66,7 +66,7 @@ REDCap creates the record and takes you to the Record Home Page, scoped to the s
 
 > **Note:** If you need to move a record to a different arm after it has been created, that requires a REDCap administrator. Data entry users cannot reassign records between arms.
 
-## 3.3 Creating Records via Public Survey Links
+### 3.3 Creating Records via Public Survey Links
 
 When using public survey links to collect records from participants, each arm in a longitudinal project has its own unique public survey link. In a single-arm project this is functionally identical to a non-longitudinal project. In a multi-arm project, you must distribute the correct link for each arm to the corresponding participants.
 
@@ -74,15 +74,15 @@ Distributing the wrong public survey link will route a participant's response in
 
 ---
 
-# 4. Entering Data in Longitudinal Events
+## 4. Entering Data in Longitudinal Events
 
-## 4.1 Navigating to an Event and Instrument
+### 4.1 Navigating to an Event and Instrument
 
 The Record Home Page displays a grid when longitudinal mode is active. Each column is an event; each row is an instrument. Click any cell in the grid (represented as a colored dot) to open that specific instrument at that specific event.
 
 The instrument opens in the context of the selected event. To enter data for the same instrument at a different event, return to the Record Home Page and click the dot in the desired event's column. Data entered in one event does not affect the same instrument in another event.
 
-## 4.2 Prefilled Fields
+### 4.2 Prefilled Fields
 
 Some projects use advanced configuration to carry over data from a previous event into a later event. A common example is a medication list: rather than re-entering every medication at each visit, REDCap pre-populates the list from the previous event, allowing the data entry person to adjust for any changes.
 
@@ -91,7 +91,7 @@ Two important behaviors to know:
 - Prefills are generated at the moment you **open** the instrument. If relevant data was entered in an earlier event after you already opened the current instrument, those prefills will not appear — you would need to close and reopen the instrument.
 - Prefilled values are **not saved** until you explicitly save the instrument. Opening an instrument and seeing prefilled data does not write anything to the database.
 
-## 4.3 Form Status Best Practices
+### 4.3 Form Status Best Practices
 
 Every instrument has a Form Status field at the bottom. In simple, non-longitudinal projects, form status is sometimes treated as optional. In longitudinal projects — where the same instrument appears across multiple events and many records — form status becomes a practical necessity.
 
@@ -101,11 +101,11 @@ Best practice: set form status before saving every instrument. Use **Complete** 
 
 ---
 
-# 5. Working with Repeated Instruments
+## 5. Working with Repeated Instruments
 
 When an instrument is configured as a repeated instrument, it can be filled out multiple times within the same event. Each occurrence is an instance.
 
-## 5.1 Adding a New Instance
+### 5.1 Adding a New Instance
 
 After an instrument's first instance has been saved, REDCap provides several ways to add another instance. All of the following create a new blank (or prefilled) instance of the repeated instrument:
 
@@ -119,7 +119,7 @@ After an instrument's first instance has been saved, REDCap provides several way
 
 > **Note:** The **+** icon and the **+ Add New** button are functionally identical — they differ only by the amount of screen space available in that location.
 
-## 5.2 Prefilled Fields in Repeated Instruments
+### 5.2 Prefilled Fields in Repeated Instruments
 
 Just as events can prefill from a previous event, instances of a repeated instrument can prefill from the previous instance. A common use case is tracking a configuration that changes incrementally — rather than re-entering every setting, REDCap pre-populates from the prior instance and the data entry person records only what changed.
 
@@ -127,11 +127,11 @@ The same rules apply as for event prefills: prefills are generated when the inst
 
 ---
 
-# 6. Working with Repeated Events
+## 6. Working with Repeated Events
 
 When an event is configured to repeat, the entire event — including all instruments assigned to it — can be collected multiple times for the same record.
 
-## 6.1 Adding a New Event Instance
+### 6.1 Adding a New Event Instance
 
 There is only one location in REDCap where you can add a new instance of a repeated event: the **Record Home Page**.
 
@@ -142,13 +142,13 @@ REDCap creates a new instance of the event, which includes a new instance of eve
 
 > **Note:** You cannot add a new repeated event instance from within an instrument. Save your current work and return to the Record Home Page to add the new instance.
 
-## 6.2 Prefilled Fields in Repeated Events
+### 6.2 Prefilled Fields in Repeated Events
 
 Repeated events support the same prefill behavior as regular events: fields can be pre-populated from a previous instance of the event or from a different event entirely. The mechanics are identical — prefills appear when the instrument is opened and are not written to the database until the instrument is saved.
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: I created a new record in a longitudinal project, but it disappeared. What happened?**
 
@@ -180,7 +180,7 @@ Repeated events support the same prefill behavior as regular events: fields can 
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Creating a record and navigating away before saving any instrument.** REDCap does not save a new longitudinal record until at least one of its instruments has been saved. Clicking away immediately after creating the record causes it to be silently discarded. Make it a habit to open and save the first instrument before leaving the Record Home Page.
 
@@ -194,7 +194,7 @@ Repeated events support the same prefill behavior as regular events: fields can 
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (prerequisite — record creation basics and Record Home Page layout)
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (prerequisite — general data entry workflow)

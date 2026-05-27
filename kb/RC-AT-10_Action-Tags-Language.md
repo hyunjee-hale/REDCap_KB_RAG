@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap's **Multi-Language Management (MLM)** feature allows a project to be presented in multiple languages. Users and survey respondents can switch between languages using buttons at the top of the page. The language action tags extend this system by allowing language detection, selection, and forcing to be driven by field values and logic rather than only by manual button clicks.
 
@@ -22,7 +22,7 @@ REDCap's **Multi-Language Management (MLM)** feature allows a project to be pres
 
 ---
 
-# 2. Language Action Tag Summary
+## 2. Language Action Tag Summary
 
 | Tag | Context | Purpose |
 |---|---|---|
@@ -38,9 +38,9 @@ REDCap's **Multi-Language Management (MLM)** feature allows a project to be pres
 
 ---
 
-# 3. Capturing the Current Language
+## 3. Capturing the Current Language
 
-### @LANGUAGE-CURRENT-FORM
+#### @LANGUAGE-CURRENT-FORM
 
 Captures the currently active language on a **data entry form** and stores it in the tagged field. The field value is always updated to reflect the current language, making it possible to branch on language or carry it forward to other forms.
 
@@ -53,7 +53,7 @@ Captures the currently active language on a **data entry form** and stores it in
 
 **Has no effect on survey pages** — use `@LANGUAGE-CURRENT-SURVEY` for surveys.
 
-### @LANGUAGE-CURRENT-SURVEY
+#### @LANGUAGE-CURRENT-SURVEY
 
 Same as `@LANGUAGE-CURRENT-FORM`, but captures the language **only on survey pages**. For multi-page surveys, the tag must be present on a field within each page where language capture is relevant (e.g., for branching on language within the same survey).
 
@@ -66,9 +66,9 @@ Same as `@LANGUAGE-CURRENT-FORM`, but captures the language **only on survey pag
 
 ---
 
-# 4. Controlling Language via a Field Value
+## 4. Controlling Language via a Field Value
 
-### @LANGUAGE-SET
+#### @LANGUAGE-SET
 
 When placed on a **Drop-down or Radio Button** field, this tag makes the field act as the language selector. Selecting an option in the field switches the entire page to the corresponding language — the same as clicking the language buttons at the top of the page.
 
@@ -83,19 +83,19 @@ The field's coded values must match the language IDs configured in MLM (e.g., `e
 
 **Tip:** This field can be pre-populated (e.g., by embedding a participant's language ID in a survey URL) to automatically set the language when the survey opens, without requiring the participant to make a selection.
 
-### @LANGUAGE-SET-FORM
+#### @LANGUAGE-SET-FORM
 
 Same as `@LANGUAGE-SET`, but the language switching effect is limited to **data entry forms** only. The field has no effect when the instrument is opened as a survey.
 
-### @LANGUAGE-SET-SURVEY
+#### @LANGUAGE-SET-SURVEY
 
 Same as `@LANGUAGE-SET`, but the language switching effect is limited to **survey pages** only.
 
 ---
 
-# 5. Forcing a Language
+## 5. Forcing a Language
 
-### @LANGUAGE-FORCE
+#### @LANGUAGE-FORCE
 
 Forces the data entry form or survey page to render in a specified language when the field is present on the instrument. The language must be active and configured in MLM. When the forced language loads successfully, the language selector at the top of the page is hidden.
 
@@ -116,17 +116,17 @@ The language ID must be placed inside single or double quotes. Piping is support
 
 > **Tip for "locking in" a language:** Combining `@LANGUAGE-CURRENT-FORM/SURVEY` on a source field with `@LANGUAGE-FORCE` that reads from that source field creates a pattern where the language selected by the participant persists across subsequent pages.
 
-### @LANGUAGE-FORCE-FORM
+#### @LANGUAGE-FORCE-FORM
 
 Same as `@LANGUAGE-FORCE` but applies only to **data entry forms**, not surveys.
 
-### @LANGUAGE-FORCE-SURVEY
+#### @LANGUAGE-FORCE-SURVEY
 
 Same as `@LANGUAGE-FORCE` but applies only to **survey pages**, not data entry forms.
 
 ---
 
-# 6. @LANGUAGE-MENU-STATIC
+## 6. @LANGUAGE-MENU-STATIC
 
 When present on any field of a survey page in a project with MLM active (with at least two active languages), the language selection menu remains visible at all times on that page — it does not collapse after a language button has been clicked.
 
@@ -139,7 +139,7 @@ When present on any field of a survey page in a project with MLM active (with at
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Can I capture the language on one form and use it to force the language on a later form?**
 
@@ -163,7 +163,7 @@ When present on any field of a survey page in a project with MLM active (with at
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Using @LANGUAGE-CURRENT-FORM on a survey page.** The `-FORM` variant has no effect on surveys. Use `@LANGUAGE-CURRENT-SURVEY` for survey pages.
 
@@ -175,7 +175,7 @@ When present on any field of a survey page in a project with MLM active (with at
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF: using @LANGUAGE-FORCE conditionally based on other field values

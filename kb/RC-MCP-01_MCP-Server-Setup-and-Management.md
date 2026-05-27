@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The REDCap MCP server is a small Python program that acts as a bridge between Claude (and other AI tools that support the Model Context Protocol) and your REDCap instance. Once it is running and registered, Claude can call REDCap API methods — exporting records, querying project metadata, checking connections, and more — directly from a conversation, without anyone copying and pasting data or writing custom scripts for each task.
 
@@ -25,7 +25,7 @@ A single server instance handles one REDCap environment (production, test, or de
 
 ---
 
-# 2. How It Works
+## 2. How It Works
 
 The MCP server is a Python script (`redcap_mcp_server.py`) that wraps the REDCap API. When Claude needs to perform a REDCap action, the Claude desktop application starts the Python script as a subprocess, passes the request to it via standard input/output, and the script sends the corresponding HTTP POST to your REDCap API endpoint and returns the response.
 
@@ -42,7 +42,7 @@ This file is read by the Claude desktop application at startup. Any change to it
 
 ---
 
-# 3. Prerequisites
+## 3. Prerequisites
 
 Before running the setup script, confirm the following:
 
@@ -58,9 +58,9 @@ Before running the setup script, confirm the following:
 
 ---
 
-# 4. Initial Setup
+## 4. Initial Setup
 
-## 4.1 Obtain the server files
+### 4.1 Obtain the server files
 
 The MCP server consists of two files:
 
@@ -69,7 +69,7 @@ The MCP server consists of two files:
 
 Save both files to a permanent location on your computer. The Python script must stay at that path after setup because the configuration will reference it by its full path. A dedicated folder works well — for example `~/redcap-mcp/` on macOS or `C:\redcap-mcp\` on Windows.
 
-## 4.2 Edit the install script (macOS)
+### 4.2 Edit the install script (macOS)
 
 Open `install.sh` in any text editor. Near the top, find the three URL variables and fill in the API endpoints for your environments:
 
@@ -83,7 +83,7 @@ If you only have one or two environments, that is fine — the script will still
 
 > **Note:** The URL must end with a trailing slash and must use HTTPS. Plain HTTP is not supported and would expose your API tokens in transit.
 
-## 4.3 Run the install script (macOS)
+### 4.3 Run the install script (macOS)
 
 Open Terminal, navigate to the folder containing the files, and run:
 
@@ -103,7 +103,7 @@ A successful run ends with output similar to:
 ✓ Done! Three MCP servers registered: redcap-prod, redcap-test, redcap-dev
 ```
 
-## 4.4 Relaunch Claude
+### 4.4 Relaunch Claude
 
 The Claude desktop application reads the config file only at startup. After setup completes:
 
@@ -114,7 +114,7 @@ Simply closing the chat window is not sufficient — Claude must be fully quit a
 
 The MCP servers will now be available. You can verify the connection by asking Claude: *"Check my REDCap connection on redcap-prod, token [your token]"* — or by setting a default token first (see Section 5) and then asking without providing the token inline.
 
-## 4.5 Windows Setup (manual)
+### 4.5 Windows Setup (manual)
 
 The `install.sh` script is a bash script and does not run natively on Windows. Windows users configure the server manually in three steps.
 
@@ -167,9 +167,9 @@ Adjust the path in `args` to wherever you saved `redcap_mcp_server.py`. Remove a
 
 ---
 
-# 5. Token Configuration
+## 5. Token Configuration
 
-## 5.1 Supplying a token per call
+### 5.1 Supplying a token per call
 
 By default, no token is stored in the server configuration. You can supply a token at any time by including it in your message to Claude:
 
@@ -177,7 +177,7 @@ By default, no token is stored in the server configuration. You can supply a tok
 
 Claude will pass that token directly to the MCP server for that call. The token is not stored anywhere between conversations.
 
-## 5.2 Setting a default token in the config
+### 5.2 Setting a default token in the config
 
 If you work frequently with a single project, you can embed a default token in the server configuration so you do not have to include it in every request.
 
@@ -215,7 +215,7 @@ After saving the file, fully quit and relaunch Claude. Claude will now use that 
 
 ---
 
-# 6. Managing Servers After Initial Setup
+## 6. Managing Servers After Initial Setup
 
 All server management is done by editing `claude_desktop_config.json` directly. The install script (macOS) only needs to be run once; after that, all changes on both platforms are made by hand. See Section 2 for the config file path on your OS.
 
@@ -241,7 +241,7 @@ Each key under `mcpServers` is the server name Claude will use to identify it. T
 
 **After any edit to this file, fully quit and relaunch Claude before testing.**
 
-## 6.1 Updating a server's API URL
+### 6.1 Updating a server's API URL
 
 If your REDCap instance moves to a new URL, open the config file and change the `REDCAP_URL` value in the relevant server's `env` block:
 
@@ -257,7 +257,7 @@ If your REDCap instance moves to a new URL, open the config file and change the 
 
 Save the file, quit Claude, and relaunch.
 
-## 6.2 Adding a new server
+### 6.2 Adding a new server
 
 To add a fourth environment — for example, a dedicated training instance — add a new entry under `mcpServers`. Choose a unique key name (it becomes the server name Claude will reference):
 
@@ -282,7 +282,7 @@ All four server entries share the same `redcap_mcp_server.py` file — you do no
 
 > **Tip:** Server names like `redcap-prod` or `redcap-training` are what you use when talking to Claude: *"Check the connection on redcap-training, token XYZ"*. Choose names that are short and easy to type conversationally.
 
-## 6.3 Removing a server
+### 6.3 Removing a server
 
 To remove a server, delete its entire entry from the `mcpServers` object. For example, to remove `redcap-dev`:
 
@@ -311,7 +311,7 @@ Save, quit Claude, and relaunch. The removed server will no longer appear and Cl
 
 > **Note:** Removing a server from the config does not delete `redcap_mcp_server.py` or affect your REDCap instance in any way. It only removes Claude's registration of that connection.
 
-## 6.4 Renaming a server
+### 6.4 Renaming a server
 
 To rename a server, change its key in `mcpServers`. For example, to rename `redcap-dev` to `redcap-sandbox`:
 
@@ -329,7 +329,7 @@ After relaunching Claude, use the new name in conversation. Saved prompts or hab
 
 ---
 
-# 7. Verifying the Connection
+## 7. Verifying the Connection
 
 After setup or after making changes, confirm that a server is reachable by asking Claude to run a connection check:
 
@@ -347,7 +347,7 @@ You can also verify which servers are registered by opening `claude_desktop_conf
 
 ---
 
-# 8. Troubleshooting
+## 8. Troubleshooting
 
 **Claude does not recognize the server name / says it has no REDCap tools.**
 The most common cause is that Claude was not fully restarted after the config was changed. On macOS, closing the window is not the same as quitting — use Cmd+Q or right-click the Dock icon and select Quit. On Windows, right-click the system tray icon and choose Quit, or end the Claude process in Task Manager. Then relaunch.
@@ -381,7 +381,7 @@ Confirm the token belongs to a project that has records. Also check whether the 
 
 ---
 
-# 9. Security Considerations
+## 9. Security Considerations
 
 The REDCap MCP server runs locally on your machine. API calls go directly from your computer to your REDCap instance over HTTPS — they do not pass through any external service or Anthropic's servers. The server script enforces SSL certificate validation on every request; this cannot be disabled.
 
@@ -395,7 +395,7 @@ Tokens embedded in the config file are stored in plaintext on your local filesys
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (API fundamentals, token management, available methods)
 - [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) (overview of AI capabilities in REDCap)

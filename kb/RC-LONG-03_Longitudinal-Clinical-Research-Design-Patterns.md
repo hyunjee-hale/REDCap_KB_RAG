@@ -1,4 +1,4 @@
-# 1. Overview
+## 1. Overview
 
 This article documents design patterns observed in complex longitudinal clinical research projects — multi-event studies with validated instruments, medical record abstraction, care coordination tracking, and regulatory data management requirements. The patterns here extend the foundational setup covered in [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) and [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) and focus on recurring architectural decisions that arise when REDCap supports a full research protocol lifecycle.
 
@@ -6,7 +6,7 @@ These patterns are drawn from real projects and reflect tested design choices. E
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Validated Instrument**
 
@@ -38,9 +38,9 @@ A standalone instrument containing only calculated fields that derive scores fro
 
 ---
 
-# 3. Standard Clinical Trial Event Architecture
+## 3. Standard Clinical Trial Event Architecture
 
-## 3.1 The Pattern
+### 3.1 The Pattern
 
 Complex longitudinal studies typically follow a progression of distinct workflow phases. A well-tested event structure for a prospective cohort or interventional study looks like this:
 
@@ -57,13 +57,13 @@ Complex longitudinal studies typically follow a progression of distinct workflow
 
 This structure separates workflow phases cleanly. Each event has a defined role and a distinct set of instruments. Instruments are not duplicated across events unnecessarily — the same instrument is reused where the same data needs to be collected at multiple time points (see Section 4).
 
-## 3.2 Why Event Naming and Ordering Matter
+### 3.2 Why Event Naming and Ordering Matter
 
 Events are displayed in the order they appear on the Define My Events page, and this order controls the record status dashboard layout. Define events in chronological order so the dashboard reads left-to-right as a timeline.
 
 The unique event name is generated from the event label and cannot be manually changed through the UI after creation. Choose event labels carefully before adding records — renaming an event label changes its unique event name, which breaks any branching logic or piping that references it. See [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) Section 2 for the naming algorithm.
 
-## 3.3 Interview Bookend Instruments
+### 3.3 Interview Bookend Instruments
 
 For studies that conduct structured interviews at multiple visits, a pair of lightweight instruments — an **Interview Start** and an **Interview End** — can be placed at the beginning and end of the interview instrument sequence for each event. Staff complete the Start instrument when the session begins and the End instrument when it concludes.
 
@@ -71,7 +71,7 @@ These bookends capture: interview date and start/end times; the interviewing sta
 
 The pattern adds two instruments per event but keeps session metadata cleanly separated from research data. It is most useful when interview duration is tracked for protocol adherence, when multiple staff members may conduct interviews at different events, or when a QC workflow needs a clear "session completed" trigger.
 
-## 3.4 Screening and Eligibility Exception Instruments
+### 3.4 Screening and Eligibility Exception Instruments
 
 Projects with multi-step screening workflows often benefit from separating the primary eligibility check from protocol exceptions:
 
@@ -80,7 +80,7 @@ Projects with multi-step screening workflows often benefit from separating the p
 
 Branching logic on the eligibility exception instrument should be set to show only when a flag on the screening form indicates an exception was granted.
 
-## 3.5 Discontinuation Event
+### 3.5 Discontinuation Event
 
 A dedicated Discontinuation event (placed last in the event sequence) provides a structured place to record why a participant left the study early. Common fields include:
 
@@ -93,15 +93,15 @@ Placing this in its own event (rather than in a miscellaneous field on a visit f
 
 ---
 
-# 4. Reusing Validated Instruments Across Events
+## 4. Reusing Validated Instruments Across Events
 
-## 4.1 The Pattern
+### 4.1 The Pattern
 
 The same instrument can be assigned to multiple events. REDCap stores a separate, independent set of values for each event, so assigning an instrument to Baseline and to a 6-Month Follow-up event creates two separate data collection instances with no shared storage.
 
 This is correct behavior by design. It means you do not need to create `phq_baseline` and `phq_followup` as separate instruments — a single `physician_health_questionnaire` instrument assigned to both events is cleaner and easier to maintain.
 
-## 4.2 When to Reuse
+### 4.2 When to Reuse
 
 Reuse an instrument across events when:
 - The fields, labels, and response options are **identical** at each time point
@@ -112,7 +112,7 @@ Do **not** reuse an instrument across events when:
 - The time points require meaningfully different fields or response options
 - The instrument needs to capture context-specific data that differs per visit (create a separate event-specific instrument instead)
 
-## 4.3 Instrument-Event Mapping
+### 4.3 Instrument-Event Mapping
 
 Assign instruments to events via Project Setup → Define My Events → Designate Instruments for My Events. Any instrument can be assigned to any subset of events. There is no limit on how many events can share the same instrument.
 
@@ -121,7 +121,7 @@ When a validated instrument is reused across events, keep these conventions:
 - Do not add or remove fields between time points in production — scoring algorithms depend on field consistency
 - Use branching logic at the event level (e.g., `[event-name] = 'baseline_arm_1'`) only when a question is genuinely applicable to one time point only
 
-## 4.4 Cross-Event Calculated Fields
+### 4.4 Cross-Event Calculated Fields
 
 When the same instrument appears at multiple events, calculated fields in later events can reference earlier event values using the `[event_name][field_name]` syntax. This enables change-score calculations:
 
@@ -133,13 +133,13 @@ See [RC-BL-05 — Branching Logic — Longitudinal Projects](RC-BL-05_Branching-
 
 ---
 
-# 5. Contact Log as a Repeating Instrument
+## 5. Contact Log as a Repeating Instrument
 
-## 5.1 The Problem
+### 5.1 The Problem
 
 Follow-up data collection in clinical research rarely happens in a single contact. Staff may make multiple phone calls, leave voicemails, send letters, or reach out via proxy before completing an interview or confirming a participant's status. Tracking these attempts is required for protocol adherence documentation, but embedding attempt fields directly on the follow-up instrument creates a messy and fixed-count structure.
 
-## 5.2 The Pattern
+### 5.2 The Pattern
 
 Create a lightweight standalone repeating instrument — a **call log** — and assign it to the relevant follow-up event. Each contact attempt is one instance of the repeating instrument. Staff create a new instance for each outreach attempt and record:
 
@@ -151,7 +151,7 @@ Create a lightweight standalone repeating instrument — a **call log** — and 
 
 The actual follow-up assessment lives on a separate, non-repeating instrument in the same event. The call log and the interview instrument are distinct — one tracks attempts, the other captures research data.
 
-## 5.3 Setup
+### 5.3 Setup
 
 1. Create the call log instrument with the fields above.
 2. Assign it to the follow-up event(s) where it applies.
@@ -160,19 +160,19 @@ The actual follow-up assessment lives on a separate, non-repeating instrument in
 
 See [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) Section 6 for repeating instrument setup details and [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) Section 3 for guidance on using a repeating instrument (rather than a repeating event) when only one instrument within an event needs to repeat.
 
-## 5.4 Why Not a Repeating Event?
+### 5.4 Why Not a Repeating Event?
 
 A repeating event would repeat all instruments in the event together — including the follow-up assessment instrument. That is not the goal here: you want unlimited contact attempts tracked independently, while the assessment itself is completed once (when contact succeeds). A single repeating instrument within a non-repeating event achieves exactly this.
 
 ---
 
-# 6. Adjudication Instruments
+## 6. Adjudication Instruments
 
-## 6.1 The Pattern
+### 6.1 The Pattern
 
 Some data collection workflows require a second-stage review of entered data — for example, confirming a clinical endpoint, adjudicating whether an event meets protocol-defined criteria, or reconciling discrepancies between data sources. An **adjudication instrument** handles this review as a separate, role-restricted form.
 
-## 6.2 Structure
+### 6.2 Structure
 
 A typical adjudication instrument contains:
 
@@ -184,7 +184,7 @@ A typical adjudication instrument contains:
 
 The adjudication instrument is assigned to the same event as the primary data instrument. User rights can restrict which users see the adjudication instrument (via instrument-level user access settings), keeping it accessible only to authorized staff.
 
-## 6.3 Data Separation
+### 6.3 Data Separation
 
 Keeping adjudication on its own instrument rather than appending adjudication fields to the primary instrument avoids mixing raw data entry with reviewed conclusions. This matters for:
 
@@ -194,13 +194,13 @@ Keeping adjudication on its own instrument rather than appending adjudication fi
 
 ---
 
-# 7. Source Document Checklist Instruments
+## 7. Source Document Checklist Instruments
 
-## 7.1 The Pattern
+### 7.1 The Pattern
 
 In GCP-regulated or sponsor-monitored studies, staff must verify that required source documents (consent forms, medical records, lab results, signed paper forms) have been received and are on file. Rather than embedding checklist fields across multiple instruments, a dedicated **source document checklist instrument** centralizes this tracking.
 
-## 7.2 Structure
+### 7.2 Structure
 
 A source document checklist instrument typically contains:
 
@@ -211,7 +211,7 @@ A source document checklist instrument typically contains:
 
 Multiple checklists may exist for different phases: one for consent and baseline documents, one for medical record abstraction documents. Each is its own instrument assigned to the appropriate event.
 
-## 7.3 Why a Separate Instrument
+### 7.3 Why a Separate Instrument
 
 - Source document tracking is operational, not scientific — it should not appear in data exports used for analysis
 - Instrument-level completion status (complete/incomplete) provides a clear monitoring signal independent of the scientific data
@@ -219,29 +219,29 @@ Multiple checklists may exist for different phases: one for consent and baseline
 
 ---
 
-# 8. Separate Scoring Instruments
+## 8. Separate Scoring Instruments
 
-## 8.1 The Pattern
+### 8.1 The Pattern
 
 Validated multi-item instruments (e.g., SF-12, PHQ-9, ESAS) involve complex scoring algorithms that produce summary scores (subscales, total scores, component summaries). These scores can be computed as calculated fields directly on the assessment instrument — or they can be placed in a **dedicated scoring instrument**.
 
 A dedicated scoring instrument contains only calculated fields. No data entry happens there. It is assigned to the same events as the assessment it scores.
 
-## 8.2 When to Separate Scores
+### 8.2 When to Separate Scores
 
 | Approach | When to use |
 |---|---|
 | **Scores on the assessment instrument** | Simple instruments; scores are few and immediately useful to data entry staff during the session |
 | **Separate scoring instrument** | Complex scoring with many intermediate calculations; scoring logic may be updated independently of item text; analysts need a clean scores-only export slice |
 
-## 8.3 Benefits of Separation
+### 8.3 Benefits of Separation
 
 - **Maintainability** — if the scoring algorithm needs revision (e.g., a missing-item imputation rule changes), only the scoring instrument's calculated fields need updating; the item instrument is untouched
 - **Export clarity** — a separate instrument gives analysts a single export target for all computed scores without having to filter out raw items
 - **Data entry clarity** — staff completing the assessment see only items to fill in; scoring fields do not clutter the form
 - **Completion status** — the scoring instrument's completion status (always "incomplete" until all inputs are available) does not interfere with the assessment instrument's completion status
 
-## 8.4 Implementation Notes
+### 8.4 Implementation Notes
 
 Calculated fields in the scoring instrument reference fields on the assessment instrument using standard bracket notation. In a longitudinal project, since both instruments are in the same event, no cross-event reference syntax is needed — `[phq9_item1]` resolves to the current event's value automatically.
 
@@ -249,13 +249,13 @@ If the scoring instrument is assigned to multiple events (the same events as the
 
 ---
 
-# 9. Adverse Event Log as a Repeating Instrument
+## 9. Adverse Event Log as a Repeating Instrument
 
-## 9.1 The Problem
+### 9.1 The Problem
 
 Interventional studies must track adverse events (AEs) throughout the study period. Each event is discrete — it has its own onset date, severity grade, relationship to study treatment, and outcome. The number of AEs per participant is unpredictable. Embedding fixed AE fields directly on a visit instrument (e.g., `ae1_date`, `ae2_date`, `ae3_date`) caps the number that can be recorded, creates mostly-blank data, and makes reporting queries awkward.
 
-## 9.2 The Pattern
+### 9.2 The Pattern
 
 Create a dedicated **adverse event log** instrument and configure it as a repeating instrument within each follow-up event. Each AE is one instance. Staff open a new instance for each event to report.
 
@@ -274,7 +274,7 @@ A typical AE log instrument contains:
 
 Set a custom form label that pipes the onset date and a short description (e.g., `[ae_date] — [ae_description]`) so each instance is identifiable on the record status dashboard.
 
-## 9.3 Severity-Gated Branching Logic
+### 9.3 Severity-Gated Branching Logic
 
 The SAE criteria checklist and regulatory reporting fields should only appear when the event meets the threshold for serious classification. Branching logic on those fields follows this pattern:
 
@@ -296,13 +296,13 @@ The reporting date field should appear only after the staff have confirmed a rep
 [ae_report_submitted] = '1'
 ```
 
-## 9.4 Assignment to Events
+### 9.4 Assignment to Events
 
 Assign the AE log instrument to every event where adverse events should be captured (typically Baseline through End of Study). Do not assign it to Screening — eligibility assessments occur before the participant is enrolled and exposed to study treatment.
 
 Both arms in a two-arm study should have the AE log assigned to the same corresponding events. Since the instrument is shared across arms, no duplication is needed.
 
-## 9.5 Why Not a Fixed Set of Fields?
+### 9.5 Why Not a Fixed Set of Fields?
 
 | Approach | Limitation |
 |---|---|
@@ -312,13 +312,13 @@ Both arms in a two-arm study should have the AE log assigned to the same corresp
 
 ---
 
-# 10. Proxy Assessment Instruments
+## 10. Proxy Assessment Instruments
 
-## 10.1 The Problem
+### 10.1 The Problem
 
 Some validated instruments have a proxy version — designed to be completed by a caregiver, surrogate, or staff observer when the participant cannot self-report (e.g., due to cognitive impairment, illness severity, or inability to communicate). Managing both versions in the same project requires a deliberate design choice about when each version is applicable and how the switch is triggered.
 
-## 10.2 The Pattern
+### 10.2 The Pattern
 
 Create the proxy version as a **separate instrument** alongside the self-report version. Assign both to the same event(s) where the assessment occurs. Use a screener field — typically a capacity or eligibility assessment completed earlier in the event — to gate which version is displayed, via branching logic on the first field of each instrument, or via instrument-level user rights restrictions.
 
@@ -331,9 +331,9 @@ Create the proxy version as a **separate instrument** alongside the self-report 
 
 ---
 
-# 11. Multi-Arm Parallel-Group Study Design
+## 11. Multi-Arm Parallel-Group Study Design
 
-## 10.1 The Pattern
+### 10.1 The Pattern
 
 Parallel-group studies (e.g., randomized controlled trials with a control arm and one or more intervention arms) are supported in REDCap by creating multiple arms with **identical event sequences**. Each arm represents one group in the study; each participant is assigned to exactly one arm at enrollment.
 
@@ -350,7 +350,7 @@ A two-arm RCT with arms "Control" and "Intervention" might define the following 
 
 This sequence is created twice — once under Arm 1 (Control) and once under Arm 2 (Intervention). REDCap generates unique event names for each: `screening_arm_1`, `screening_arm_2`, `3_month_arm_1`, `3_month_arm_2`, and so on.
 
-## 10.2 Instrument Assignment
+### 10.2 Instrument Assignment
 
 Assign the same instruments to the corresponding events in both arms. Since REDCap stores data separately per event (including per-arm event), no duplication of instruments is needed:
 
@@ -360,7 +360,7 @@ Assign the same instruments to the corresponding events in both arms. Since REDC
 
 This mirrors the study protocol: both groups complete the same assessments at the same time points.
 
-## 10.3 Branching Logic and Event References
+### 10.3 Branching Logic and Event References
 
 Branching logic that references a specific event must use the arm-qualified event name. If a field on the End of Study instrument should only display for participants in the intervention arm, the logic references the intervention arm's event:
 
@@ -376,23 +376,23 @@ Conversely, logic that applies equally to both arms should use `or`:
 
 In practice, most instruments in a parallel-group study do not require arm-specific branching logic — both groups complete identical assessments. Reserve event-qualified branching for fields that genuinely differ by group.
 
-## 10.4 Arm Assignment
+### 10.4 Arm Assignment
 
 Participants are assigned to an arm at record creation or via a designated arm-assignment field or randomization module. Once a participant has data entered under an arm, changing their arm is possible but requires care — data entered under the old arm remains attached to those events. For randomized studies, use the REDCap Randomization module (see [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)) rather than manual arm assignment.
 
-## 10.5 Record Status Dashboard
+### 10.5 Record Status Dashboard
 
 In a two-arm project, the record status dashboard displays all events for both arms. For projects with many events and two arms, this produces a wide grid. Consider using custom event labels and grouping related events to keep the dashboard readable. REDCap shows only the arm the record is enrolled in — rows for other arms are greyed out.
 
 ---
 
-# 12. Cross-Event Carry-Forward for a Repeating Instrument
+## 12. Cross-Event Carry-Forward for a Repeating Instrument
 
-## 12.1 The Problem
+### 12.1 The Problem
 
 A repeating medication list collected at every visit requires staff to re-enter the same medications visit after visit unless the prior visit's data is brought forward automatically. REDCap does not have a built-in "copy repeating instances from last event" feature, but the combination of `@IF`, `@DEFAULT`, `[current-instance]`, `[previous-event-name]`, and instance qualifiers can replicate this behaviour.
 
-## 12.2 The Pattern
+### 12.2 The Pattern
 
 Place a `@IF` + `@DEFAULT` expression in the **Field Annotation** column of every field on the repeating instrument. The expression checks the current instance number, looks up the matching instance from the previous event, and pre-fills the field if that prior instance had data. If it did not, the field opens blank.
 
@@ -410,7 +410,7 @@ For a medication name field, the annotation for a list that supports up to N ins
 
 Extend the nesting as far as the maximum number of instances the project needs to support.
 
-### Smart variables used
+#### Smart variables used
 
 | Smart Variable | What it resolves to |
 |---|---|
@@ -418,7 +418,7 @@ Extend the nesting as far as the maximum number of instances the project needs t
 | `[previous-event-name]` | The unique event name of the immediately preceding event in the defined event sequence |
 | `[field][N]` | The value of `field` from the Nth instance of a repeating instrument (at the referenced event) |
 
-## 12.3 Design Details
+### 12.3 Design Details
 
 **The `<> ''` guard** — The condition `[previous-event-name][med_name][N] <> ''` ensures the carry-forward only fires if that instance actually had data at the previous event. Without this guard, REDCap would create empty instances for every instance number up to N, even if the prior visit only had two medications. The guard means REDCap creates only as many pre-filled instances as the previous visit had.
 
@@ -428,11 +428,11 @@ Extend the nesting as far as the maximum number of instances the project needs t
 
 **`[previous-event-name]` resolves structurally, not by completion** — The smart variable points to the immediately prior event in the defined event sequence, regardless of whether data was collected at that event. If a participant skipped the 3-month visit, the 6-month carry-forward still looks to the 3-month event — and finds nothing there. Consider whether skipped visits are expected and whether the carry-forward behavior is still acceptable when they occur.
 
-## 12.4 The Workflow This Creates
+### 12.4 The Workflow This Creates
 
 When a coordinator opens the medication list at a follow-up visit, the instrument automatically creates one pre-filled instance per medication recorded at the previous visit. The coordinator reviews each instance, updates the dose or frequency if anything changed, marks discontinued medications as ended (which triggers the end-date field via branching logic), and adds new medications as fresh instances. Data entry becomes a review-and-update task rather than a full re-entry task.
 
-## 12.5 Caveats
+### 12.5 Caveats
 
 - This pattern applies only when the instrument is a **repeating instrument within a non-repeating event**. It does not work across repeating events.
 - The maximum instance count supported is equal to the nesting depth you build into the `@IF` chain. A medication list designed for up to 10 concurrent medications requires 10 nested `@IF` conditions per field.
@@ -440,9 +440,9 @@ When a coordinator opens the medication list at a follow-up visit, the instrumen
 
 ---
 
-# 13. HTML Summary Panels in Descriptive Fields
+## 13. HTML Summary Panels in Descriptive Fields
 
-## 12.1 The Pattern
+### 12.1 The Pattern
 
 A `descriptive` field type in REDCap renders its `Field Label` content as HTML. This means you can use a descriptive field as a **styled data review panel** — placing a table of key study data pulled from earlier events directly at the top of a late-stage form. Staff see the participant's full history before they start entering data, without navigating away from the form.
 
@@ -453,7 +453,7 @@ A typical summary panel includes:
 - Colour-coded rows for threshold flags or milestones
 - A brief note reminding staff to review before proceeding
 
-## 12.2 HTML in Descriptive Fields
+### 12.2 HTML in Descriptive Fields
 
 REDCap renders HTML markup in the `Field Label` of descriptive field types. The following are supported:
 
@@ -471,7 +471,7 @@ Piping syntax within HTML works normally. `[event_name][field_name:modifier]` re
 
 Test descriptive field HTML in both data entry mode and survey mode. Survey mode may strip certain styling for accessibility reasons.
 
-## 12.3 Arm-Agnostic Piping
+### 12.3 Arm-Agnostic Piping
 
 In a two-arm longitudinal project, a field from the baseline event exists in two namespaces: `[baseline_arm_1][field]` and `[baseline_arm_2][field]`. A given participant has data in exactly one of these — the arm they were enrolled in. The other resolves to blank.
 
@@ -487,7 +487,7 @@ The `:hideunderscore` modifier is essential here. Without it, the blank arm's re
 
 This technique works for any element of the panel that must be arm-agnostic: demographic fields, baseline scores, any event-level variable that exists under both arms.
 
-## 12.4 Cross-Event Score Trajectories
+### 12.4 Cross-Event Score Trajectories
 
 A summary table showing all follow-up events in rows and outcome scores in columns is built by piping each event-specific value into the corresponding table cell:
 
@@ -506,7 +506,7 @@ A summary table showing all follow-up events in rows and outcome scores in colum
 
 If a visit has not yet been completed, the cell displays as empty. This is expected and informative — staff can see at a glance which visits have data.
 
-## 12.5 Practical Considerations
+### 12.5 Practical Considerations
 
 - **Display only** — descriptive fields are never exported. The HTML panel is purely a review aid for data entry staff; it does not appear in data exports or reports.
 - **Data dictionary editing** — a descriptive field with hundreds of characters of HTML makes manual DD editing impractical. Use the Online Designer or a template-based approach when building these fields.
@@ -515,13 +515,13 @@ If a visit has not yet been completed, the cell displays as empty. This is expec
 
 ---
 
-# 14. Quality Control Checklist Instruments
+## 14. Quality Control Checklist Instruments
 
-## 13.1 The Pattern
+### 13.1 The Pattern
 
 In coordinated or monitored studies, a dedicated **Quality Control Checklist** instrument — completed by coordinating centre staff for each record at each event — is an effective way to enforce data quality standards systematically rather than relying on ad-hoc review.
 
-## 13.2 Structure: Paired Pass/Fail Fields
+### 13.2 Structure: Paired Pass/Fail Fields
 
 The most useful QC checklist design uses a consistent paired-field pattern throughout:
 
@@ -536,21 +536,21 @@ This pattern can be applied across all QC domains: consent documentation complet
 - Any QC field can be used in a report filter to identify records with open issues
 - The instrument's overall completion status provides a clean monitoring signal on the record status dashboard
 
-## 13.3 Event-Specific Items in a Shared Form
+### 13.3 Event-Specific Items in a Shared Form
 
 A single QC checklist instrument can serve multiple events by using `[event-name]` branching to show or hide items that apply only to specific time points — for example, a baseline consent verification section that appears only at the baseline event, or a final status field that appears only at the last follow-up. This reduces the number of instruments to maintain while keeping each event's checklist focused.
 
-## 13.4 When to Split Into Multiple Instruments
+### 13.4 When to Split Into Multiple Instruments
 
 For large studies a single QC checklist can exceed 100 fields. Consider splitting by domain (e.g., Consent QC, Interview QC, Medical Records QC) as separate instruments all assigned to the same event. This also allows different team members to own and complete their respective sections independently.
 
-## 13.5 Design Timing
+### 13.5 Design Timing
 
 Design the QC checklist before data collection begins. The instrument effectively codifies the study operations manual in REDCap. Retrofitting QC structure onto an ongoing project is considerably harder and leaves early records without systematic checks.
 
 ---
 
-# 15. Common Questions
+## 15. Common Questions
 
 **Q: Can I assign an instrument to every event in a project?**
 
@@ -606,7 +606,7 @@ When using arms this way, ensure the repeating instrument configuration is ident
 
 ---
 
-# 16. Common Mistakes & Gotchas
+## 16. Common Mistakes & Gotchas
 
 **Duplicating instruments instead of reusing them.** A common mistake is creating `phq_baseline` and `phq_followup` as two separate instruments when the same `physician_health_questionnaire` instrument could simply be assigned to both events. Duplicate instruments double the maintenance burden: any field label change or branching logic fix must be applied to both copies. If the data structure at each time point is identical, use one instrument and assign it to multiple events.
 
@@ -640,7 +640,7 @@ When using arms this way, ensure the repeating instrument configuration is ident
 
 ---
 
-# 17. Related Articles
+## 17. Related Articles
 
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (arms, events, and instrument designation — foundational prerequisite)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (configuring repeating instruments; custom form labels)

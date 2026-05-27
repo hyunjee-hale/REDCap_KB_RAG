@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the Survey Queue — REDCap's feature for controlling the flow of participants through multiple surveys within a single session or across multiple sessions. It explains how to set up the survey queue, define trigger conditions for each survey, configure auto-start behavior, distribute the survey queue link to participants, and understand how the queue works with repeatable instruments and the Save and Return Later feature. It also documents when to use the survey queue versus Automated Survey Invitations (ASIs) versus the auto-continue feature. This article is part of the Surveys knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Survey Queue**
 
@@ -44,7 +44,7 @@ A separate Online Designer feature, adjacent to the survey queue, that restricts
 
 ---
 
-# 3. When to Use the Survey Queue
+## 3. When to Use the Survey Queue
 
 The survey queue, ASIs, and the auto-continue feature all direct participants to the next survey, but they serve different use cases.
 
@@ -61,29 +61,29 @@ The survey queue, ASIs, and the auto-continue feature all direct participants to
 
 ---
 
-# 4. Survey Queue Setup
+## 4. Survey Queue Setup
 
-## 4.1 Setup Location
+### 4.1 Setup Location
 
 The survey queue is managed from the Online Designer. In the **Survey Options** header area at the top of the Online Designer, click the **Survey Queue** button and select **Edit Survey Queue**. This opens the survey queue configuration popup.
 
 The popup is populated by all surveys in the project. In longitudinal projects, the list shows every survey-event combination. For projects with many surveys or events, the list can be long and may take a moment to load.
 
-## 4.2 Activating a Survey in the Queue
+### 4.2 Activating a Survey in the Queue
 
 The first column of the survey queue table, labeled **Activated?**, shows an **Activate** button for each survey that is not yet part of the queue. By default, all surveys are deactivated. Click **Activate** to enable a survey in the queue. Once activated, the button changes to **Deactivate**, which removes it from the queue without deleting its configuration.
 
-## 4.3 Defining Trigger Conditions
+### 4.3 Defining Trigger Conditions
 
 The third column, **"Display survey in the Survey Queue when..."**, is where trigger conditions are defined. This is the most important configuration for any survey in the queue. The three trigger types mirror the ASI trigger structure (see [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md) — Automated Survey Invitations):
 
-### Completion Trigger
+#### Completion Trigger
 
 Check **"When the following survey is completed:"** and select the preceding survey. When that survey is completed, this survey becomes visible (or auto-starts) in the queue.
 
 In longitudinal projects, the list shows all survey-event combinations.
 
-### Logic Trigger
+#### Logic Trigger
 
 Check **"When the following logic becomes true:"** and enter a branching logic statement. When the logic evaluates to true, this survey appears in (or auto-starts from) the queue.
 
@@ -93,11 +93,11 @@ For guidance on writing logic, see [RC-BL-01 — Branching Logic: Overview & Sco
 
 > **Note:** All survey queue logic is re-evaluated whenever a participant completes any survey in the queue. This means branching-based routing updates dynamically as participants progress.
 
-### Combination Trigger
+#### Combination Trigger
 
 Configure both a completion trigger and a logic trigger, then select **AND** (both must be true) or **OR** (either is sufficient) from the dropdown between them.
 
-## 4.4 Auto-Start
+### 4.4 Auto-Start
 
 The fourth column, **Auto Start?**, contains a checkbox for each activated survey.
 
@@ -108,7 +108,7 @@ The fourth column, **Auto Start?**, contains a checkbox for each activated surve
 
 ---
 
-# 5. Overall Survey Queue Options
+## 5. Overall Survey Queue Options
 
 Two additional settings affect the survey queue as a whole, visible at the top of the survey queue configuration popup:
 
@@ -120,7 +120,7 @@ Displays a custom message at the top of the survey queue overview screen. This t
 
 ---
 
-# 6. Bulk Survey Queue Management via CSV
+## 6. Bulk Survey Queue Management via CSV
 
 For projects with many surveys or survey-event combinations, the survey queue can be managed via CSV upload and download.
 
@@ -143,7 +143,7 @@ The CSV has eight columns:
 | `condition_logic` | REDCap branching logic expression, or blank | Logic trigger condition. Same syntax as standard branching logic. Cross-event references use the format `[event_name][field_name]`. Leave blank for a completion-only trigger. |
 | `auto_start` | `1` or `0` | `1` = auto-start enabled (participant moves directly to the next survey without seeing the queue overview); `0` = disabled. |
 
-### Annotated example — multi-arm longitudinal project
+#### Annotated example — multi-arm longitudinal project
 
 The following excerpt shows how a real export looks for a two-arm project with a screening arm and a baseline arm. Each instrument appears once per arm it belongs to; the same instrument can have different trigger logic per arm.
 
@@ -176,17 +176,17 @@ For the full column-by-column reference, accepted values, an annotated example, 
 
 ---
 
-# 7. Distributing the Survey Queue Link
+## 7. Distributing the Survey Queue Link
 
 Unlike individual survey links (which are instrument and event specific), the survey queue link is tied to the record as a whole. There is only one survey queue link per record, and it does not expire as long as the record and project are active.
 
-## 7.1 Participant List
+### 7.1 Participant List
 
 In Survey Distribution Tools → Participant List, the **Survey Queue** column displays a queue icon for any participant that has at least one data point in their record. Clicking the icon opens the survey queue for that record in a new tab. The participant list's **Export List** function includes survey queue links in bulk.
 
 > **Note:** Survey queue icons only appear in identified mode. In anonymous mode, the column is not clickable.
 
-## 7.2 Smart Variables
+### 7.2 Smart Variables
 
 The survey queue has two dedicated smart variables that can be used in ASIs, Alerts & Notifications, instrument fields, or anywhere piping is supported:
 
@@ -197,25 +197,25 @@ The survey queue has two dedicated smart variables that can be used in ASIs, Ale
 
 A common workflow: send an ASI with the survey queue link (`[survey-queue-url]` or `[survey-queue-link:Custom Text]`) at the start of a time point, so participants can complete all surveys for that visit at their own pace across multiple sessions.
 
-## 7.3 Survey Options Menu
+### 7.3 Survey Options Menu
 
 When you open an instrument in a record and the survey queue is configured, the **Survey Options** dropdown inside the instrument gains a fifth option: **Survey Queue**. Clicking it opens the survey queue for that record in a new tab.
 
 ---
 
-# 8. Participant Experience
+## 8. Participant Experience
 
-## 8.1 Non-Sequential Queue (Participant Chooses Order)
+### 8.1 Non-Sequential Queue (Participant Chooses Order)
 
 If auto-start is disabled for all surveys and the queue is not hidden, participants see the survey queue overview after completing each survey. The overview shows completed surveys (with their status) and any surveys that are currently available based on trigger conditions. Participants can choose which available survey to open next.
 
 A simple way to create this experience: activate all surveys in the queue and set each to trigger after the very first survey is completed.
 
-## 8.2 Sequential Queue (Fixed Order)
+### 8.2 Sequential Queue (Fixed Order)
 
 To enforce a specific completion order, cascade the trigger conditions — each survey triggers only when the immediately preceding one is completed. With auto-start disabled, participants see the overview after each survey showing their progress and the next available survey. With auto-start enabled, they flow directly from one survey to the next without seeing the overview.
 
-## 8.3 Repeatable Surveys in the Queue
+### 8.3 Repeatable Surveys in the Queue
 
 A survey can be made repeatable so participants can take it multiple times within the survey queue. Two conditions must both be met:
 
@@ -224,7 +224,7 @@ A survey can be made repeatable so participants can take it multiple times withi
 
 When both conditions are met, the survey queue overview shows all previously completed instances of that survey and a button to take it again. A repeat button also appears at the end of the survey itself, so repeatable surveys can be taken again even without using the queue overview screen.
 
-## 8.4 Save and Return Surveys in the Queue
+### 8.4 Save and Return Surveys in the Queue
 
 If a survey has the **Save and Return Later** feature enabled and the participant has previously completed it, an **Edit Response** button appears in the survey queue overview next to that survey's entry. This allows participants to reopen and modify a completed survey from the queue without needing to know the direct survey link.
 
@@ -234,7 +234,7 @@ This behavior also applies to completed instances of repeatable instruments.
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: What is the difference between the survey queue and ASIs?**
 
@@ -274,7 +274,7 @@ This behavior also applies to completed instances of repeatable instruments.
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Forgetting to activate a survey in the queue.** A survey that is enabled as a survey in the project is not automatically included in the survey queue. Each survey must be explicitly activated in the queue interface or via the CSV upload. An inactivated survey will never appear in the queue regardless of whether its trigger conditions are met.
 
@@ -292,7 +292,7 @@ This behavior also applies to completed instances of repeatable instruments.
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -301,7 +301,7 @@ This behavior also applies to completed instances of repeatable instruments.
 ---
 
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)(email-based automated invitation scheduling; use with survey queue for time-point studies)
 - [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) (manual invitation workflow; participant list survey queue column)

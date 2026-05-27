@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap's e-Consent Framework — a feature that enables electronic consent collection by allowing a participant to review a document, sign it, and generate a permanent, immutable PDF record of that consent. It covers the conceptual model behind e-Consent, everything that must be prepared before configuration, step-by-step setup of the e-Consent Framework, and how to manage consent versions over time. PDF Snapshots, which are related but independently usable, are covered in [RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md).
 
@@ -22,7 +22,7 @@ This article covers REDCap's e-Consent Framework — a feature that enables elec
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **e-Consent**
 
@@ -66,7 +66,7 @@ A project-level file storage area in REDCap. e-Consent PDFs are automatically sa
 
 ---
 
-# 3. How e-Consent Works
+## 3. How e-Consent Works
 
 When a participant completes an e-Consent survey, REDCap executes the following sequence:
 
@@ -96,11 +96,11 @@ The number of concurrent consent versions equals the product of active DAGs (plu
 
 ---
 
-# 4. Preparation Checklist
+## 4. Preparation Checklist
 
 e-Consent pulls configuration from several other areas of REDCap. Setting these up before opening the e-Consent Framework page prevents errors and missing options during setup.
 
-## 4.1 e-Consent Instrument
+### 4.1 e-Consent Instrument
 
 Create a dedicated instrument in the Online Designer to serve as the e-Consent survey. Include the following fields:
 
@@ -122,15 +122,15 @@ Once the instrument is created, enable it as a survey. Adjust the **Survey Instr
 >
 > *Survey Completion Text:* "Thank you for completing our e-Consent."
 
-## 4.2 Languages (if applicable)
+### 4.2 Languages (if applicable)
 
 If the consent will be offered in multiple languages, define at least two languages in the **Multi-Language Management (MLM)** module before configuring e-Consent. Once two or more languages are defined, the e-Consent Framework will display a language assignment option when adding consent versions.
 
-## 4.3 Data Access Groups (if applicable)
+### 4.3 Data Access Groups (if applicable)
 
 If the project uses DAGs (e.g., for a multi-site study), ensure DAGs are configured before setting up e-Consent. The e-Consent Framework will display a DAG assignment option when adding consent versions, allowing site-specific consent content. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) for DAG setup.
 
-## 4.4 Verification Instrument (if using attestation)
+### 4.4 Verification Instrument (if using attestation)
 
 If your protocol requires a staff member to attest to identity verification, build a separate instrument to capture that attestation. At minimum, include:
 
@@ -138,7 +138,7 @@ If your protocol requires a staff member to attest to identity verification, bui
 - **Date/time field** — to record when verification occurred.
 - **Attestation trigger field** — a checkbox or signature field that signals the attestation is complete. This field will be used as the PDF Snapshot trigger in [RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md).
 
-## 4.5 File Upload Fields (optional)
+### 4.5 File Upload Fields (optional)
 
 By default, e-Consent PDFs are saved only to the File Repository. If you want PDFs accessible directly from individual records, create a **File Upload** field for each PDF you want to store per-record. These fields can live in any instrument — consider a dedicated "Documentation" instrument to keep them organized.
 
@@ -151,9 +151,9 @@ File upload fields also enable attaching PDFs to Alerts (e.g., a confirmation em
 
 ---
 
-# 5. e-Consent Framework Setup
+## 5. e-Consent Framework Setup
 
-## 5.1 Accessing the e-Consent Framework
+### 5.1 Accessing the e-Consent Framework
 
 Navigate to **Project Setup → Online Designer**, then click the **"e-Consent"** button. This opens the e-Consent Framework page.
 
@@ -163,7 +163,7 @@ The main page has two tabs:
 - **e-Consent Framework** — where e-Consents are configured and versions managed
 - **PDF Snapshots of Records** — for configuring standalone PDF snapshots (covered in [RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md))
 
-## 5.2 Creating a New e-Consent Entry
+### 5.2 Creating a New e-Consent Entry
 
 Click **"Enable the e-Consent Framework for a survey"** and select the instrument to use as the e-Consent survey. REDCap will display an error if no eligible survey exists.
 
@@ -207,9 +207,9 @@ Click **"Save Settings"** to finalize. Click **Cancel** to discard all entries.
 
 ---
 
-# 6. Adding and Managing Consent Versions
+## 6. Adding and Managing Consent Versions
 
-## 6.1 Adding a Version
+### 6.1 Adding a Version
 
 After saving the e-Consent entry, click **"Add consent form"** in the Survey column of the e-Consent table. The popup contains:
 
@@ -225,7 +225,7 @@ After saving the e-Consent entry, click **"Add consent form"** in the Survey col
 
 > **Note:** If the consent form is for a specific language, write or upload the content in that language. The consent text is not routed through the MLM module for translation.
 
-## 6.2 Managing Versions
+### 6.2 Managing Versions
 
 Click **"View all versions"** in the e-Consent table to see a full history of all versions for a given consent. The version table shows:
 
@@ -242,7 +242,7 @@ Click **"View all versions"** in the e-Consent table to see a full history of al
 
 To deactivate a version without replacing it, click **"Set as inactive."** REDCap will ask for confirmation. To reactivate a deactivated version, you must add it as a new version — there is no direct reactivation.
 
-## 6.3 Managing the e-Consent Table
+### 6.3 Managing the e-Consent Table
 
 The main e-Consent Framework table provides the following controls per row:
 
@@ -257,9 +257,9 @@ Above the table:
 
 ---
 
-# 7. Finding e-Consent PDFs
+## 7. Finding e-Consent PDFs
 
-## 7.1 File Repository
+### 7.1 File Repository
 
 All e-Consent PDFs are stored in the **File Repository** under a folder named **"PDF Snapshot Archive."** Access the File Repository from the left-hand Applications menu (requires appropriate user rights).
 
@@ -280,13 +280,13 @@ The archive table includes the following columns:
 
 The page also supports bulk download of all files as a ZIP archive. Note that large projects can produce very large ZIP files.
 
-## 7.2 File Upload Fields
+### 7.2 File Upload Fields
 
 If you configured per-record file upload fields (Section 4.5), each record's PDF is accessible directly from within the record. These files can be piped, displayed inline, or downloaded in bulk via reports.
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Does REDCap automatically verify the identity of the person signing the consent?**
 **A:** No. REDCap does not perform automated identity verification (such as background checks or account-based identity confirmation). Verification is a procedural step performed by a staff member, captured through a separate attestation instrument and PDF Snapshot.
@@ -320,7 +320,7 @@ If you configured per-record file upload fields (Section 4.5), each record's PDF
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Missing descriptive field placeholder — blank consent content at runtime.** If the e-Consent instrument does not have a descriptive field, the e-Consent Framework cannot inject content into the survey. Participants see a form with name and signature fields but no consent text. Add a descriptive field to the instrument before setting up the e-Consent Framework.
 
@@ -336,7 +336,7 @@ If you configured per-record file upload fields (Section 4.5), each record's PDF
 
 ---
 
-# Administrator Configuration
+## Administrator Configuration
 
 The e-Consent Framework requires system-level enablement by a REDCap administrator before it is visible in any project's survey settings. Administrators configure this in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**):
 
@@ -350,7 +350,7 @@ If the e-Consent option is not visible in your project's Online Designer, contac
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-SURV-09 — PDF Snapshots of Records](RC-SURV-09_PDF-Snapshots-of-Records.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)

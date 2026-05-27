@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The **Edit Project Settings** page (`ControlCenter/edit_project.php`) is an administrator-only tool that allows REDCap admins to view and override the governing settings for any specific project on the instance. It is accessed from the **Projects** section of the Control Center left menu.
 
@@ -27,7 +27,7 @@ Edit Project Settings exposes a superset of those settings, including ones only 
 
 ---
 
-# 2. Key Concepts
+## 2. Key Concepts
 
 **Online Status** — A project can be set to ONLINE (normal access) or OFFLINE (normal users are denied access; admins retain access). Distinct from production/development status.
 
@@ -43,7 +43,7 @@ Edit Project Settings exposes a superset of those settings, including ones only 
 
 ---
 
-# 3. Accessing the Page and Project Info Panel
+## 3. Accessing the Page and Project Info Panel
 
 Navigate to **Control Center → Projects → Edit Project Settings**. On first load, a search box appears to select a project by PID or name. Once a project is selected, the full settings form loads.
 
@@ -57,7 +57,7 @@ At the top of the form, REDCap displays diagnostic information about the selecte
 
 ---
 
-# 4. Core Project Settings
+## 4. Core Project Settings
 
 These settings control fundamental project behavior.
 
@@ -76,18 +76,18 @@ These settings control fundamental project behavior.
 
 ---
 
-# 5. GDPR / Data Privacy Settings
+## 5. GDPR / Data Privacy Settings
 
 This section contains three settings intended to support compliance with data privacy regulations (such as GDPR) that may require "right to erasure."
 
-## 5.1 Delete Record's Logging When Deleting the Record
+### 5.1 Delete Record's Logging When Deleting the Record
 
 When enabled, users deleting a record are prompted to also delete all logged data values and actions for that record from the Project Logging page. The user must type `DELETE` to confirm. The choice is made per-record at deletion time.
 
 - **Scope in multi-arm longitudinal projects:** Logging is deleted only for the record within the *current arm* — not across all arms.
 - **Does not apply to:** Bulk "Erase all data" operations or deleting all records when moving to production. Those operations always delete all data-related log events.
 
-## 5.2 Auto-Delete Data Export Files in the File Repository
+### 5.2 Auto-Delete Data Export Files in the File Repository
 
 Accepts a number of days (1–999). When set to a value greater than 0, a cron job runs every 12 hours and deletes Data Export Files in the File Repository that are older than the specified number of days.
 
@@ -95,7 +95,7 @@ Accepts a number of days (1–999). When set to a value greater than 0, a cron j
 - **To disable:** Set the value to 0 or leave blank.
 - **Warning:** Once enabled, the cron may begin deleting files within a few hours. Enable with care.
 
-## 5.3 Custom Survey Footer Text (Project-Level Override)
+### 5.3 Custom Survey Footer Text (Project-Level Override)
 
 A text block displayed at the bottom of all survey pages in this specific project, overriding or supplementing the system-level default.
 
@@ -106,7 +106,7 @@ A text block displayed at the bottom of all survey pages in this specific projec
 
 ---
 
-# 6. AI Services — Project-Level Override
+## 6. AI Services — Project-Level Override
 
 If AI Services are enabled globally (configured in **Modules & Services Configuration**, [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)), this section allows an admin to supply a *project-specific* AI endpoint that replaces the system-level configuration for this project only.
 
@@ -137,13 +137,13 @@ Project-level values **overwrite** any system-level AI configuration for this pr
 
 ---
 
-# 7. Miscellaneous Project Settings
+## 7. Miscellaneous Project Settings
 
-## 7.1 Names of Contact Persons
+### 7.1 Names of Contact Persons
 
 A free-text field for recording the names of people responsible for or associated with the project. This text is **not displayed anywhere within the project** — it is purely for administrative bookkeeping in the Control Center.
 
-## 7.2 Double Data Entry Module
+### 7.2 Double Data Entry Module
 
 When enabled, two project users can be designated as **Data Entry Person #1** and **Data Entry Person #2** (assigned via the User Rights page). Each person creates records using the same record name and enters data without being able to see the other's entries. All other users are Reviewers.
 
@@ -151,31 +151,31 @@ Reviewers use the **Data Comparison Tool** to view differences between Person #1
 
 Only one person can be designated as Person #1 or #2 at a time.
 
-## 7.3 Date Shifting De-Identification: Date Shift Range
+### 7.3 Date Shifting De-Identification: Date Shift Range
 
 Sets the maximum number of days used when date shifting is applied during data export. The actual shift per record is a random number between 0 and this value.
 
 Date shifting is applied when a user selects the date-shifting de-identification option on the Data Export, Reports & Stats page.
 
-## 7.4 DTS (Data Transfer Services)
+### 7.4 DTS (Data Transfer Services)
 
 Cannot be enabled here unless the global DTS setting has first been turned on in **Modules & Services Configuration** ([RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)). If the global setting is off, this control is disabled.
 
-## 7.5 CDIS: Allow Patient Email Address from EHR
+### 7.5 CDIS: Allow Patient Email Address from EHR
 
 Applies only to the **Clinical Data Mart** and **Clinical Data Pull** services within CDIS ([RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup](RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md)). Controls whether the patient's email address can be imported from the EHR for this project.
 
 This project-level setting is only active when the global CDIS setting is configured as "Allow individual projects to decide." If the global setting is "Yes" or "No," this field is overridden and becomes read-only.
 
-## 7.6 CDIS: Connected FHIR System
+### 7.6 CDIS: Connected FHIR System
 
 Allows selecting a specific FHIR (Fast Healthcare Interoperability Resources) system for the project, if multiple FHIR system configurations have been created on the CDIS Settings page. If set to **Default**, the first FHIR system in the list is used.
 
-## 7.7 e-Consent: Allow Responses to Be Edited
+### 7.7 e-Consent: Allow Responses to Be Edited
 
 When enabled (default), users setting up e-Consent for a survey in this project can choose whether participants' completed e-Consent responses may be modified after submission. When disabled by an admin here, modifications are prevented for all e-Consent responses in the project, regardless of how the survey is configured.
 
-## 7.8 e-Consent: Store Non-Governed PDF Snapshots on External Storage
+### 7.8 e-Consent: Store Non-Governed PDF Snapshots on External Storage
 
 Applies only when the External Storage server ("The Vault") is enabled for the e-Consent Framework in **Modules & Services Configuration**.
 
@@ -185,23 +185,23 @@ When disabled: only e-Consent governed PDF Snapshots are sent to the Vault for t
 
 ---
 
-# 8. Custom Branding and Text
+## 8. Custom Branding and Text
 
-## 8.1 Display Custom Logo and Institution Name
+### 8.1 Display Custom Logo and Institution Name
 
 Controls whether the institution's logo and name (configured globally in General Configuration) appear at the top of every page in this project. Default: Yes.
 
-## 8.2 Custom Text for Project Home Page
+### 8.2 Custom Text for Project Home Page
 
 Rich text (HTML) displayed at the top of the Project Home page for this project. Uses the TinyMCE editor. Leave blank for no custom text.
 
-## 8.3 Custom Text for All Data Entry Pages
+### 8.3 Custom Text for All Data Entry Pages
 
 Rich text (HTML) displayed at the top of every data entry page in this project. Uses the TinyMCE editor. Leave blank for no custom text.
 
 ---
 
-# 9. Custom Project Overrides (Overwrite System Values)
+## 9. Custom Project Overrides (Overwrite System Values)
 
 The fields in this section override system-wide values for this specific project. If left blank, the global/system-level value applies. The current global value is displayed beneath each field in red for reference.
 
@@ -224,7 +224,7 @@ The fields in this section override system-wide values for this specific project
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: What is the difference between Edit Project Settings and Default Project Settings?**
 Default Project Settings (Control Center → System Configuration) set the system-wide defaults applied when *any new project* is created. Edit Project Settings modifies the configuration of *one specific, already-existing* project. Changes here do not affect other projects, and changes to Default Project Settings do not retroactively update existing projects.
@@ -252,7 +252,7 @@ When a user exports data from the Data Exports, Reports & Stats page and selects
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Setting a project offline and forgetting it.** The OFFLINE status is not prominently flagged anywhere users encounter it — they simply get an access-denied message. Administrators sometimes set a project offline during maintenance and then forget to restore it. Set a reminder or add a note to the project's administrative bookkeeping (the Contact Persons field on this page).
 
@@ -268,7 +268,7 @@ When a user exports data from the Data Exports, Reports & Stats page and selects
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md) (system-wide defaults this page can override)
 - [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md)(global file size settings)

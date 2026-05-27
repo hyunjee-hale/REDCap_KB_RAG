@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Send-It is a secure file transfer application built into REDCap that allows users to upload a file and distribute download access to multiple recipients via email. It is designed for two scenarios: sharing files that are too large to attach to a conventional email, and sharing files that contain sensitive data and therefore should not pass through external email systems. Send-It must be enabled by a system administrator before it appears in the navigation for any user.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Send-It**
 
@@ -44,7 +44,7 @@ An optional setting that causes the sender to receive an email notification each
 
 ---
 
-# 3. Accessing Send-It
+## 3. Accessing Send-It
 
 Send-It appears as a link in the main REDCap navigation bar (labeled **Send-It**) when it is enabled on your institution's REDCap instance. It is a system-level feature, not project-specific — it is accessible from any page in REDCap, not just from within a project.
 
@@ -52,13 +52,13 @@ If you do not see a Send-It link in the navigation, the feature has not been ena
 
 ---
 
-# 4. Using Send-It
+## 4. Using Send-It
 
-## 4.1 Opening the Send-It Form
+### 4.1 Opening the Send-It Form
 
 Click the **Send-It** link in the top navigation bar. This opens the Send-It upload form.
 
-## 4.2 Form Fields
+### 4.2 Form Fields
 
 | **Field** | **Required** | **Notes** |
 |---|---|---|
@@ -70,7 +70,7 @@ Click the **Send-It** link in the top navigation bar. This opens the Send-It upl
 | File | Yes | The file to upload. Maximum size is 512 MB. Certain file types are blocked (see Section 5). |
 | Receive Confirmation | No | Check this box to receive an email notification each time one of your recipients downloads the file. |
 
-## 4.3 Submitting the Form
+### 4.3 Submitting the Form
 
 After completing the form, click **Send It!**. REDCap will upload the file and then dispatch two emails to each recipient:
 
@@ -83,7 +83,7 @@ Both emails must be received for a recipient to successfully download the file. 
 
 ---
 
-# 5. File Type Restrictions
+## 5. File Type Restrictions
 
 Certain file types are blocked from upload due to security policy. Blocked extensions include executable and script formats such as `.exe`, `.bat`, `.cmd`, `.js`, `.php`, `.ps1`, `.vbs`, `.dll`, `.msi`, and others. Attempting to upload a blocked file type will display an error message and the upload will not proceed.
 
@@ -91,7 +91,7 @@ The full list of blocked extensions is configured at the system level by the RED
 
 ---
 
-# 6. File Expiration and Deletion
+## 6. File Expiration and Deletion
 
 Files uploaded via Send-It are stored on the REDCap server temporarily. The sender selects an expiration period of 1–14 days at upload time. After that period:
 
@@ -103,7 +103,7 @@ There is no way to extend the expiration after a file has been uploaded. If a fi
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Do recipients need a REDCap account to download a file sent via Send-It?**
 
@@ -135,7 +135,7 @@ There is no way to extend the expiration after a file has been uploaded. If a fi
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Navigating away during upload.** Large file uploads can take time to complete. If you click away or close the browser tab before the confirmation appears, the upload may fail silently. Wait for REDCap to confirm the submission before leaving the page.
 
@@ -149,7 +149,7 @@ There is no way to extend the expiration after a file has been uploaded. If a fi
 
 ---
 
-# 9. Administrator Notes
+## 9. Administrator Notes
 
 Send-It is enabled or disabled at the system level in the Control Center under **Modules/Services Configuration**. When enabled, it appears in the navigation for all logged-in REDCap users. There is no per-user or per-project toggle.
 
@@ -157,7 +157,7 @@ File upload size limits and blocked file types are configurable at the system le
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-MSG-01 — REDCap Messenger](RC-MSG-01_REDCap-Messenger.md) (for secure messaging between REDCap users within the platform)
 - [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md) (for administrator-level file upload configuration)

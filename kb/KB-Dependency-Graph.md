@@ -1,4 +1,4 @@
-# KB Dependency Graph
+## KB Dependency Graph
 
 An interactive map of cross-references between articles. Each node is an article; each edge is a "Related Topics" or "Prerequisite" link. Use it to explore which articles are heavily connected and to find paths between topics.
 

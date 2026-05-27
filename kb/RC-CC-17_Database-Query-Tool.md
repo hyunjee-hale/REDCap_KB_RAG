@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Database Query Tool allows REDCap administrators to run read-only SQL queries directly against REDCap's MySQL/MariaDB database from the browser. It is accessible under "Dashboards & Activity" in the Control Center sidebar and is intended for investigative queries, support troubleshooting, and ad-hoc data lookups without requiring command-line database access.
 
 ---
 
-# 2. Query Restrictions
+## 2. Query Restrictions
 
 Only read-only query types are permitted. Queries must begin with one of:
 
@@ -32,13 +32,13 @@ Any other query type (INSERT, UPDATE, DELETE, DROP, ALTER, etc.) is rejected. Th
 
 ---
 
-# 3. Query Context
+## 3. Query Context
 
 A "Use query context" option allows the query to be run in the context of a specific project or scope, which may affect certain query behaviors or variable resolution. This is optional and depends on the nature of your query.
 
 ---
 
-# 4. Entering and Running Queries
+## 4. Entering and Running Queries
 
 Administrators type their SQL into the query text box and execute it. Results are displayed in a table directly on the page. Multiple query rows can be added for running several queries in sequence.
 
@@ -48,7 +48,7 @@ Administrators type their SQL into the query text box and execute it. Results ar
 - `SELECT COUNT(*) as record_count FROM redcap_data WHERE project_id = 123`
 - `SELECT * FROM redcap_log_event WHERE user = 'username' LIMIT 100`
 
-## 4.1 Built-In System Query: Recent Errors
+### 4.1 Built-In System Query: Recent Errors
 
 The Control Center sidebar includes a **Recent Errors** menu item under "Dashboards & Activity." Despite appearing as a distinct navigation link, it is not a separate tool — it simply opens the Database Query Tool with a pre-canned SQL query already loaded and executed:
 
@@ -64,7 +64,7 @@ Because Recent Errors is just a convenience shortcut into the Database Query Too
 
 ---
 
-# 5. Custom Query Management
+## 5. Custom Query Management
 
 The tool supports saving, organizing, and reusing named custom queries, which is helpful for frequently-run investigative queries:
 
@@ -73,7 +73,7 @@ The tool supports saving, organizing, and reusing named custom queries, which is
 - **Export custom queries (CSV)** — download all custom queries as a CSV file for backup, documentation, or sharing
 - **Import custom queries (CSV)** — upload a CSV to add or modify custom queries in bulk
 
-### Custom Query CSV Format
+#### Custom Query CSV Format
 
 The CSV format for importing/exporting includes columns for:
 - Query name/title (descriptive label)
@@ -81,7 +81,7 @@ The CSV format for importing/exporting includes columns for:
 
 All imported queries must begin with `SELECT`, `SHOW`, or `EXPLAIN`. Imports containing other query types are rejected with an error message.
 
-### Custom Query Best Practices
+#### Custom Query Best Practices
 
 - Use descriptive names for your custom queries (e.g., "Count of Active Projects", "User Login History")
 - Include comments in SQL text to document the purpose of complex queries
@@ -90,7 +90,7 @@ All imported queries must begin with `SELECT`, `SHOW`, or `EXPLAIN`. Imports con
 
 ---
 
-# 6. Database Table Reference
+## 6. Database Table Reference
 
 The right sidebar lists all REDCap database tables, providing a quick reference when composing queries. This reference covers all core REDCap tables, including:
 
@@ -114,7 +114,7 @@ Click any table name in the sidebar to view its column structure and field defin
 
 ---
 
-# 7. Common Use Cases
+## 7. Common Use Cases
 
 The Database Query Tool is helpful in these scenarios:
 
@@ -129,7 +129,7 @@ The Database Query Tool is helpful in these scenarios:
 
 ---
 
-# 8. Performance Considerations
+## 8. Performance Considerations
 
 Because the Database Query Tool provides direct database access, be mindful of performance:
 
@@ -141,7 +141,7 @@ Because the Database Query Tool provides direct database access, be mindful of p
 
 ---
 
-# 9. Access and Safety
+## 9. Access and Safety
 
 This tool requires super-user administrator access. Because it provides direct database access:
 
@@ -152,14 +152,14 @@ This tool requires super-user administrator access. Because it provides direct d
 
 ---
 
-# 10. Related Tools
+## 10. Related Tools
 
 - **Database Activity Monitor ([RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md))** — to see real-time database processes and identify long-running queries
 - **Top Usage Report ([RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md))** — for pre-built usage statistics and analytics
 
 ---
 
-# 11. Common Questions
+## 11. Common Questions
 
 **Q: What is the "Recent Errors" menu item in the Control Center?**
 "Recent Errors" is a shortcut that opens the Database Query Tool with a pre-loaded query against `redcap_error_log`, sorted by most recent error first. It is not a standalone tool — it is simply a pre-canned `SELECT *` query with a 30-day retention window documented in the SQL comment. Once the page loads you can edit the query normally, for example to filter on a specific error type.
@@ -181,7 +181,7 @@ The Database Query Tool displays results in a table on the page. You can select 
 
 ---
 
-# 12. Common Mistakes & Gotchas
+## 12. Common Mistakes & Gotchas
 
 **Running very large or unfiltered queries without a LIMIT clause.** A query like `SELECT * FROM redcap_log_event` with no WHERE clause or LIMIT can retrieve millions of rows, which will freeze your browser, consume significant memory, and put load on the database server. Always start with a LIMIT clause (e.g., `LIMIT 100`) when exploring unfamiliar data, and use specific WHERE clauses to narrow results.
 
@@ -191,7 +191,7 @@ The Database Query Tool displays results in a table on the page. You can select 
 
 ---
 
-# 13. Related Articles
+## 13. Related Articles
 
 - [RC-CC-16 — Control Center: Database Activity Monitor](RC-CC-16_Database-Activity-Monitor.md)
 - [RC-CC-15 — Control Center: Top Usage Report](RC-CC-15_Top-Usage-Report.md)

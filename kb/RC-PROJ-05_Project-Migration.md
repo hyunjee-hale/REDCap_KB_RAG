@@ -16,7 +16,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 There are many reasons to move a REDCap project from one installation to another: changing institutions, consolidating multiple REDCap installations, or sharing a project design with a colleague at a different site. Whatever the reason, REDCap provides a built-in mechanism to export a full project backup and re-import it elsewhere.
 
@@ -33,11 +33,11 @@ This article covers:
 
 ---
 
-# 2. Pre-Migration Checks
+## 2. Pre-Migration Checks
 
 Before exporting anything, review the differences between your source and destination REDCap installations. Migrating without checking first is the most common cause of post-migration problems.
 
-## 2.1 Version Differences
+### 2.1 Version Differences
 
 If there is a significant version gap between the two installations, pay attention to the direction of migration:
 
@@ -46,7 +46,7 @@ If there is a significant version gap between the two installations, pay attenti
 
 Examples of features that may not be available in older versions: Form Display Logic, Multi-Language Management, Alerts & Notifications, MyCap.
 
-## 2.2 Feature Differences
+### 2.2 Feature Differences
 
 REDCap is highly configurable at the administrator level. Features that are active in your source installation may be disabled at the destination — due to cost, security policy, or support capacity. Check whether the following are available at the destination before migrating a project that relies on them:
 
@@ -57,7 +57,7 @@ REDCap is highly configurable at the administrator level. Features that are acti
 
 Contact the destination installation's REDCap support team if you are unsure about any of these.
 
-## 2.3 Policy Differences
+### 2.3 Policy Differences
 
 Every organization runs REDCap differently. The destination installation may have:
 
@@ -69,9 +69,9 @@ Reviewing these policies before you start will prevent surprises at import time.
 
 ---
 
-# 3. Exporting a Project (Backup)
+## 3. Exporting a Project (Backup)
 
-## 3.1 Accessing the Backup Feature
+### 3.1 Accessing the Backup Feature
 
 1. Navigate to the source project's **Project Home** or **Project Setup** page.
 2. Click the **"Other Functionality"** tab.
@@ -79,9 +79,9 @@ Reviewing these policies before you start will prevent surprises at import time.
 
 You will see two export options.
 
-## 3.2 Export Options
+### 3.2 Export Options
 
-### Option A: Download Metadata Only (XML)
+#### Option A: Download Metadata Only (XML)
 
 Exports all project structure, configuration, and settings — but **no data records**. Use this when:
 
@@ -89,7 +89,7 @@ Exports all project structure, configuration, and settings — but **no data rec
 - You are sharing a project template with another site
 - You only need to set up the instrument structure
 
-### Option B: Download Metadata & Data (XML)
+#### Option B: Download Metadata & Data (XML)
 
 Exports the full project including all structure and all data records. Use this when:
 
@@ -100,7 +100,7 @@ Both options produce a single XML file in the **CDISC-ODM format** — a standar
 
 > **File type note:** The export file has an `.xml` extension. Some organizational cybersecurity policies block downloading XML files. If the download fails or is blocked, contact your organization's IT or cybersecurity team.
 
-## 3.3 Optional Inclusions
+### 3.3 Optional Inclusions
 
 Before downloading, REDCap presents a checklist of optional components to include in the backup. Items only appear on the list if they are actively in use in the source project:
 
@@ -118,7 +118,7 @@ Before downloading, REDCap presents a checklist of optional components to includ
 
 If you exclude any of these, you will need to configure them manually in the destination project (or start with a clean slate for those features).
 
-## 3.4 Data Export Options (Metadata & Data Only)
+### 3.4 Data Export Options (Metadata & Data Only)
 
 When exporting metadata and data together, REDCap offers additional options to control the data included:
 
@@ -139,7 +139,7 @@ When exporting metadata and data together, REDCap offers additional options to c
 - *Set CSV delimiter character* — Relevant only if you plan to use the exported data as a CSV import elsewhere.
 - *Force decimal format* — Sets the numeric punctuation convention (e.g., European vs. American format).
 
-## 3.5 What Is NOT Included in the Backup
+### 3.5 What Is NOT Included in the Backup
 
 Certain items are excluded by design because they are tied to the source installation and cannot be meaningfully transferred:
 
@@ -154,9 +154,9 @@ Certain items are excluded by design because they are tied to the source install
 
 ---
 
-# 4. Importing a Project
+## 4. Importing a Project
 
-## 4.1 Standard Import Steps
+### 4.1 Standard Import Steps
 
 1. Navigate to the **My Projects** page or the REDCap home page of the destination installation.
 2. Click **"+ New Project"** (or **"Request New Project"** if your institution requires administrator approval).
@@ -168,7 +168,7 @@ Certain items are excluded by design because they are tied to the source install
 8. Once created, open the new project and verify that all settings, instruments, and configurations transferred correctly.
 9. Add users to the new project. (They did not transfer — see Section 3.5.)
 
-## 4.2 Policy Variations at the Destination
+### 4.2 Policy Variations at the Destination
 
 REDCap administrators can configure the project creation experience in different ways. Common variations you may encounter:
 
@@ -180,9 +180,9 @@ If you are unsure about the process at your destination installation, contact th
 
 ---
 
-# 5. Migration Pitfalls
+## 5. Migration Pitfalls
 
-## 5.1 Import Timeouts on Large Projects
+### 5.1 Import Timeouts on Large Projects
 
 The XML import process runs synchronously — the server must process the entire file in a single request before returning a response. On very large projects (high record counts, many uploaded files, or both), this can exceed the server's request time limit. Most web servers implement health-check timeouts to cut off long-running processes and keep the server responsive, and an oversized import will hit that ceiling before it completes.
 
@@ -194,7 +194,7 @@ If you encounter a timeout during import, options include:
 
 > **REDCap+ note:** The revamped Project Migration tool in REDCap+ does not have this limitation. It runs the migration in the background through a series of API calls rather than a single synchronous request, making it suitable for large-scale migrations that would otherwise time out.
 
-## 5.2 Feature Availability
+### 5.2 Feature Availability
 
 As covered in Section 2, a feature present in the source project may not be available at the destination. Items to check proactively:
 
@@ -203,7 +203,7 @@ As covered in Section 2, a feature present in the source project may not be avai
 - **MyCap and the Mobile App:** Some organizations have not enabled these due to support or security considerations.
 - **External Modules:** Availability varies significantly by installation. Ask the destination support team whether specific modules are available or can be enabled.
 
-## 5.2 Migrating an Active Project
+### 5.2 Migrating an Active Project
 
 The most significant risk in project migration arises when the project is **actively collecting data** — particularly when participants are being invited via survey links, email, or text.
 
@@ -223,13 +223,13 @@ Note that any alerts, text messages, or survey invitations that were already sen
 
 ---
 
-# 6. Strategies for Active Projects
+## 6. Strategies for Active Projects
 
-## 6.1 Option 1 — Avoidance
+### 6.1 Option 1 — Avoidance
 
 If active data collection is expected to end soon, the cleanest approach is to wait until the collection period is complete before migrating. The more limited the remaining collection window, the stronger the case for simply waiting.
 
-## 6.2 Option 2 — Parallel Collection
+### 6.2 Option 2 — Parallel Collection
 
 Run both projects simultaneously for a period:
 
@@ -239,7 +239,7 @@ Run both projects simultaneously for a period:
 
 **Critical requirement:** The instrument design and variable names must be kept in sync between both projects throughout the parallel phase. Any design changes must be applied to both projects simultaneously.
 
-## 6.3 Option 3 — Big Bang (Hard Cutover)
+### 6.3 Option 3 — Big Bang (Hard Cutover)
 
 When a staged migration is not possible, a full hard cutover is the only option. To minimize disruption:
 
@@ -253,25 +253,25 @@ The Big Bang approach carries the highest risk of data collection gaps and parti
 
 ---
 
-# 7. Alternative Migration Methods
+## 7. Alternative Migration Methods
 
 The full XML backup/restore approach moves the entire project in one step. When that is not possible — for example, when migrating to an older REDCap version, or when you only need to move part of a project — the following piece-by-piece alternatives are available.
 
 Note that some features depend on others being in place first. For example, you cannot assign instruments to events until the data dictionary and event definitions are already imported.
 
-## 7.1 Data Dictionary
+### 7.1 Data Dictionary
 
 The Data Dictionary (CSV) defines all instruments and fields in a project. Importing a data dictionary into a new project recreates the full instrument structure.
 
 See **[RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)** for full documentation.
 
-## 7.2 Data Export and Import
+### 7.2 Data Export and Import
 
 If the destination project already has the same instruments and variable definitions, you can export data as CSV from the source project and import it into the destination project.
 
 See **[RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)** and **[RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md)** for details.
 
-## 7.3 Other Feature-Specific Exports
+### 7.3 Other Feature-Specific Exports
 
 Several REDCap features support their own export/import CSV workflows, which can be used to selectively transfer settings:
 
@@ -285,7 +285,7 @@ Use these targeted exports when you only need to transfer specific components, o
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: I'm moving to a new institution. Do I need to do anything special before exporting?**
 
@@ -335,7 +335,7 @@ Use these targeted exports when you only need to transfer specific components, o
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) (project statuses, copy/delete features)
 - [RC-PROJ-02 — Project Setup Checklist](RC-PROJ-02_Project-Setup-Checklist.md) (post-import checklist for setting up your new project)

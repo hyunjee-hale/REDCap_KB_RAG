@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how to configure the schedule that controls when MyCap tasks appear in a participant's app. Topics include the four schedule types (One-time, Infinite, Repeating, Fixed), delay onset, end conditions, how Active Tasks and Mobile Toolbox tasks are scheduled, and the additional considerations for scheduling in longitudinal projects. Schedule configuration is done in the MyCap section of the left-hand menu after instruments have been enabled.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Schedule Reference Date**
 
@@ -60,11 +60,11 @@ Cognitive assessment tasks provided by the NIH Toolbox, available in MyCap as of
 
 ---
 
-# 3. Schedule Types
+## 3. Schedule Types
 
 All MyCap tasks use one of four schedule types. Schedule type is set per instrument (or per event in longitudinal projects).
 
-## 3.1 One-Time
+### 3.1 One-Time
 
 The task appears once at a specified number of days after the schedule reference date. The participant completes it once and it is done.
 
@@ -74,7 +74,7 @@ The task appears once at a specified number of days after the schedule reference
 
 **Use when:** Baseline assessments, enrollment surveys, single-timepoint measures.
 
-## 3.2 Infinite
+### 3.2 Infinite
 
 The task is always available. It does not expire and has no schedule — participants can complete it at any time and it reappears immediately after each submission.
 
@@ -84,7 +84,7 @@ The task is always available. It does not expire and has no schedule — partici
 
 **Use when:** Daily diaries where participants self-initiate, PRN (as-needed) symptom capture, or testing (set to Infinite during development to test without waiting for scheduled windows).
 
-## 3.3 Repeating
+### 3.3 Repeating
 
 The task appears on a regular cadence. Three sub-types are available:
 
@@ -103,7 +103,7 @@ The task appears on a regular cadence. Three sub-types are available:
 
 **Use when:** Weekly questionnaires, monthly assessments, daily symptom tracking.
 
-## 3.4 Fixed
+### 3.4 Fixed
 
 The task appears on a specific list of dates, independent of the participant's schedule reference date. All participants see the task on the same calendar dates.
 
@@ -115,7 +115,7 @@ The task appears on a specific list of dates, independent of the participant's s
 
 ---
 
-# 4. Delay Onset
+## 4. Delay Onset
 
 Delay onset is available for One-Time and Repeating schedule types. It defines the number of days that must pass after the schedule reference date before the task first appears.
 
@@ -127,7 +127,7 @@ For Infinite tasks, delay onset is not applicable — the task is always availab
 
 ---
 
-# 5. End Conditions
+## 5. End Conditions
 
 For Repeating schedules, you must specify when the task stops recurring:
 
@@ -139,7 +139,7 @@ For Repeating schedules, you must specify when the task stops recurring:
 
 ---
 
-# 6. Task Notifications
+## 6. Task Notifications
 
 When a new task instance becomes available (i.e., the schedule window opens), MyCap sends a push notification to the participant's device.
 
@@ -150,7 +150,7 @@ When a new task instance becomes available (i.e., the schedule window opens), My
 
 ---
 
-# 7. Setting Up the Schedule (Traditional / Classic Projects)
+## 7. Setting Up the Schedule (Traditional / Classic Projects)
 
 For standard (non-longitudinal) projects:
 
@@ -164,15 +164,15 @@ For standard (non-longitudinal) projects:
 
 ---
 
-# 8. Scheduling in Longitudinal Projects
+## 8. Scheduling in Longitudinal Projects
 
-## 8.1 Prerequisites
+### 8.1 Prerequisites
 
 In longitudinal projects, an instrument must be designated to at least one arm and event on the instrument–event mapping page before it can be enabled for MyCap and given a schedule. Enabling for MyCap and scheduling are per-event, not per-instrument globally.
 
 > **Note:** The **Days Offset** setting in REDCap's longitudinal event configuration does **not** affect MyCap scheduling. MyCap schedules are entirely independent of event day offsets.
 
-## 8.2 Schedule Setup for Longitudinal Projects
+### 8.2 Schedule Setup for Longitudinal Projects
 
 1. In the MyCap section of the left menu, go to **Schedule Tasks**.
 2. The schedule table shows rows for each instrument–event combination.
@@ -180,13 +180,13 @@ In longitudinal projects, an instrument must be designated to at least one arm a
 4. Use the **Copy below settings to** dropdown to copy a schedule configuration to other events, reducing repetitive data entry.
 5. After configuring all schedules, **Publish** the project.
 
-## 8.3 Active Tasks and Longitudinal Projects
+### 8.3 Active Tasks and Longitudinal Projects
 
 Active Tasks (sensor-based assessments) must be designated to events on the instrument–event mapping page **before** being set up as MyCap Active Tasks. The Active Task setup step comes after event designation, not before.
 
 ---
 
-# 9. Active Tasks and Mobile Toolbox Scheduling
+## 9. Active Tasks and Mobile Toolbox Scheduling
 
 Active Tasks (motor, cognition, speech, hearing assessments) and Mobile Toolbox (MTB) tasks are scheduled using the same four schedule types as instrument-based tasks. The schedule setup for Active Tasks is found in the **Active Tasks** tab within MyCap, not in the instrument schedule table.
 
@@ -196,7 +196,7 @@ For MTB tasks, REDCap v14.3.8 or later is required. MTB tasks appear in the same
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: What is the difference between install date and baseline date for scheduling?**
 
@@ -228,7 +228,7 @@ For MTB tasks, REDCap v14.3.8 or later is required. MTB tasks appear in the same
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Assuming REDCap longitudinal event day offsets control MyCap scheduling.** Day offsets for REDCap events have no effect on MyCap. Participants' task timing is controlled entirely by the MyCap schedule settings. If tasks appear at unexpected times, check the MyCap schedule — not the event configuration.
 
@@ -242,7 +242,7 @@ For MTB tasks, REDCap v14.3.8 or later is required. MTB tasks appear in the same
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(baseline date setup, publishing)
 - [RC-MYCAP-05 — MyCap: App Settings & Participant Management](RC-MYCAP-05_App-Settings-and-Participant-Management.md)(notification time settings)

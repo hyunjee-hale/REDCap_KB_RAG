@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how field validations work in REDCap from a data entry perspective. Validations are predefined checks applied to text box variables that enforce a required format or value range. When you enter a value that does not pass a validation, REDCap displays a popup message before allowing you to continue. Understanding the validation categories — dates and times, numbers, contact information, specialty, and custom — helps you enter data correctly and interpret validation error messages quickly.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Validation**
 
@@ -48,9 +48,9 @@ A value that REDCap (or an advanced feature such as action tags or piping) autom
 
 ---
 
-# 3. Validation Categories
+## 3. Validation Categories
 
-### 3.1 Date and Time Validations
+#### 3.1 Date and Time Validations
 
 REDCap provides a large number of date, time, and date-time validation variants. The specific format in use for any given field is determined by the instrument designer; as a data entry user, you do not choose the format. There are four ways to enter a value into a date or time field:
 
@@ -64,7 +64,7 @@ REDCap provides a large number of date, time, and date-time validation variants.
 
 > **Note:** Date and time validations can also include a minimum, a maximum, or both. These constraints can be hard dates (e.g., no date before January 1, 2000) or dynamic dates derived from another field's value (e.g., a visit date cannot be before the participant's date of birth). If you enter a value outside these bounds, a popup error will appear.
 
-### 3.2 Number Validations
+#### 3.2 Number Validations
 
 Number validations check that the entered value is numeric. The two most common variants are:
 
@@ -77,7 +77,7 @@ Use the integer validation context as a signal from the instrument designer that
 
 Number validations can also include a minimum, maximum, or both. As with date validations, these can be hard values or dynamic values derived from another field. If your entry falls outside the allowed range, a popup error will appear.
 
-### 3.3 Contact Information Validations
+#### 3.3 Contact Information Validations
 
 REDCap provides validations for common contact information formats:
 
@@ -89,7 +89,7 @@ REDCap provides validations for common contact information formats:
 
 If you trigger a contact validation error, the popup will name the specific validation in use, which is usually a reliable hint about the expected format (e.g., "Phone (North America)").
 
-### 3.4 Specialty Validations
+#### 3.4 Specialty Validations
 
 Specialty validations cover formats that do not fit the categories above. Examples include:
 
@@ -99,7 +99,7 @@ Specialty validations cover formats that do not fit the categories above. Exampl
 
 If you trigger a specialty validation error, the popup names the validation. The name is usually descriptive enough to infer the expected format. If the instrument designer has added a field note or placeholder, check those first for guidance.
 
-### 3.5 Custom Validations
+#### 3.5 Custom Validations
 
 In some REDCap installations, the system administrator has added validations specific to that institution. These custom validations behave the same as specialty validations — they display the validation name in the error popup — but they are not part of the standard REDCap distribution. Examples include institution-specific MRN formats, country-specific ID number formats, or locally defined code formats.
 
@@ -107,7 +107,7 @@ In some REDCap installations, the system administrator has added validations spe
 
 ---
 
-# 4. Field Notes and Placeholders
+## 4. Field Notes and Placeholders
 
 Instrument designers frequently pair validations with field notes or placeholders to communicate the expected format to data entry users before an error occurs.
 
@@ -123,7 +123,7 @@ When a field note or placeholder is present, read it before entering data. It wi
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: A validation error popup appeared — what should I do?**
 
@@ -155,7 +155,7 @@ When a field note or placeholder is present, read it before entering data. It wi
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Entering the date in the wrong format.** REDCap supports many date formats, and each field uses exactly one. If you type a date without checking the expected format first, you will trigger a validation error even if the date itself is correct. Use the date picker when in doubt — it formats the value for you automatically.
 
@@ -169,7 +169,7 @@ When a field note or placeholder is present, read it before entering data. It wi
 
 ---
 
-# 7. Administrator Configuration
+## 7. Administrator Configuration
 
 The set of validation types available in the Online Designer is controlled by a REDCap administrator in the Control Center under System Configuration → Home Page, Templates & Project Defaults (see **[RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md)**, "Field Validation Types" section). Administrators can enable or disable any built-in validation type and can register custom institution-specific validation types using JavaScript-based pattern matching or range checking.
 
@@ -181,7 +181,7 @@ If a validation type you expect to see is missing from the Validation dropdown, 
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-CC-08 — Control Center: Home Page, Templates & Project Defaults](RC-CC-08_Control-Center-Home-Page-Templates-and-Defaults.md) (system-level management of available validation types)
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills)

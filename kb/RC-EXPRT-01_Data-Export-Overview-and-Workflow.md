@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to export data from a REDCap project. It
 covers how to navigate to the Data Exports, Reports, and Stats
@@ -24,7 +24,7 @@ base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Exports, Reports, and Stats**
 
@@ -71,13 +71,13 @@ user's Data Export Rights level. See [RC-EXPRT-04 — Data Export: De-identifica
 
 ---
 
-# 3. Navigating to the Data Exports, Reports, and Stats Application
+## 3. Navigating to the Data Exports, Reports, and Stats Application
 
 The Data Exports, Reports, and Stats application is accessed from within
 a REDCap project. It does not appear if a user has no export rights and
 the Add/Edit/Organize Reports right is not granted.
 
-## 3.1 From the Left-Hand Menu
+### 3.1 From the Left-Hand Menu
 
 | **1** | Log in and open your project from the My Projects page. |
 | --- | --- |
@@ -90,7 +90,7 @@ the Add/Edit/Organize Reports right is not granted.
 
 ---
 
-# 4. The Standard Export Workflow
+## 4. The Standard Export Workflow
 
 Every export in REDCap follows the same sequence of steps, regardless of
 the report type or export format selected.
@@ -111,7 +111,7 @@ the report type or export format selected.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 | *Where do I find the Data Exports, Reports, and Stats application?* | In the left-hand project menu under Applications. If it does not appear, you do not have Data Export rights or the Add/Edit/Organize Reports right. Contact your project administrator. |
 | --- | --- |
@@ -124,7 +124,7 @@ the report type or export format selected.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Not downloading all generated files.** Some export formats (SPSS, SAS,
 R, Stata) generate two or three files that must be used together.
@@ -147,7 +147,7 @@ times out or may be dismissed before all files are downloaded. If this
 happens, the files are still accessible in the File Repository ---
 navigate there to complete the download.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -157,7 +157,7 @@ navigate there to complete the download.
 ---
 
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (the seven available
     formats and when to use each)

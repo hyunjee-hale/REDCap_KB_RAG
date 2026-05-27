@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Metadata API method retrieves the complete data dictionary (metadata) for a REDCap project. The data dictionary defines the structure of your project — all fields, instruments, field types, validation rules, branching logic, and other configuration details. This is the most comprehensive way to programmatically understand your project's structure.
 
@@ -23,7 +23,7 @@ When to use this method: When you need to understand the complete structure of a
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -36,9 +36,9 @@ When to use this method: When you need to understand the complete structure of a
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -57,7 +57,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -74,7 +74,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -90,7 +90,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -125,7 +125,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns the complete data dictionary in the requested format. Each row represents one field definition. The response includes all Data Dictionary columns such as field name, form name, field type, field label, validation rules, branching logic, and more.
 
@@ -179,7 +179,7 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What's included in the metadata response?**
 
@@ -207,7 +207,7 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Passing the form display label instead of the form name in the `forms` parameter.** The `forms` parameter takes the unique instrument name as it appears in Column B of the data dictionary (e.g., `baseline_survey`), not the human-readable label shown in the UI (e.g., `Baseline Survey`). Passing the label will return no results without an error.
 
@@ -223,7 +223,7 @@ The method returns the complete data dictionary in the requested format. Each ro
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-06 — Export Field Names API](RC-API-06_Export-Field-Names.md)(get a lightweight list of field names only)

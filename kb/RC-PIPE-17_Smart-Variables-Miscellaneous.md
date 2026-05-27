@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Miscellaneous smart variables provide system-level information about the REDCap installation and the current project. These variables return the project's unique identifier, title, status, purpose, and IRB number, as well as information about the REDCap instance itself (version number, base URL, database table name). These variables are primarily useful for REDCap administrators, system integrators, and power users who need to reference project metadata or system configuration. Most project designers will not need these variables.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Project ID (PID)**
 
@@ -52,7 +52,7 @@ The version number of the REDCap software running on the current installation (e
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -70,7 +70,7 @@ The version number of the REDCap software running on the current installation (e
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Administrator-Focused Variables**
 
@@ -117,7 +117,7 @@ The `[redcap-version]` variable is useful for:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I display the project's IRB number in a form or email?**
 
@@ -148,7 +148,7 @@ The `[redcap-version]` variable is useful for:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Confusing project status and purpose codes with readable text.** Project status and purpose are returned as numbers (0, 1, 2, etc.), not as words like "Production" or "Research". If you need readable text, use a calculated field to convert the codes.
 
@@ -164,6 +164,6 @@ The `[redcap-version]` variable is useful for:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)

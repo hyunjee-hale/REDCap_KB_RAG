@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how REDCap user rights control what data a user
 can export, from which instruments, and in what form. Data Export Rights
@@ -25,7 +25,7 @@ configuring access for project team members.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Viewing Rights**
 
@@ -66,7 +66,7 @@ remove.
 
 ---
 
-# 3. Data Export Rights Levels
+## 3. Data Export Rights Levels
 
 Export rights are configured per instrument in User Rights. A user may
 have different levels for different instruments. The level assigned
@@ -81,31 +81,31 @@ determines what the export dialog shows and what options are available.
 
 ---
 
-# 4. How Rights Affect the Export Dialog
+## 4. How Rights Affect the Export Dialog
 
 The export dialog adapts based on the user's rights. Users with
 restricted rights see fewer options, and some options become mandatory
 rather than optional.
 
-## 4.1 Full Data Set users
+### 4.1 Full Data Set users
 
 See all export options. De-identification options are presented as
 optional checkboxes. The user can export in fully identified or fully
 de-identified form.
 
-## 4.2 Remove All Identifier Fields users
+### 4.2 Remove All Identifier Fields users
 
 The Remove All Identifier Fields de-identification option is pre-checked
 and cannot be unchecked. Additional de-identification options remain
 optional. The user can further restrict but cannot export identifiers.
 
-## 4.3 De-identified users
+### 4.3 De-identified users
 
 All de-identification options (remove identifiers, remove free-form
 text, remove dates) are pre-checked and locked. The user sees a
 restricted export dialog with no ability to include identified data.
 
-## 4.4 No Access users
+### 4.4 No Access users
 
 Instruments where the user has No Access are excluded from the export
 entirely. If all instruments are set to No Access and the user also
@@ -118,7 +118,7 @@ and Stats application may not appear in the menu at all.
 
 ---
 
-# 5. Data Access Groups and Export Scope
+## 5. Data Access Groups and Export Scope
 
 DAG membership limits which records a user can export, regardless of
 their Data Export Rights level.
@@ -138,7 +138,7 @@ their Data Export Rights level.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 | *Why can't I see the Data Exports, Reports, and Stats application in the menu?* | The application only appears if you have at least one instrument with export rights above No Access, or if the Add/Edit/Organize Reports right is enabled. If neither applies, the application is hidden. Contact your project administrator to review your rights. |
 | --- | --- |
@@ -150,7 +150,7 @@ their Data Export Rights level.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Assuming Full Data Set rights means all records are accessible.**
 Export rights control what data can be exported from accessible records.
@@ -178,7 +178,7 @@ addressed.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite)
 

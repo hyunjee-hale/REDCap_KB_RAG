@@ -15,35 +15,35 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export User-DAG Assignments API method retrieves the mapping of users to Data Access Groups (DAGs) in your project. Each record pairs a username with the unique group name of the DAG assigned to that user. Use this method to audit user-DAG assignments, validate your user access structure, identify unassigned users, or export assignments for backup or migration.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### API Token
+#### API Token
 A unique credential string issued by REDCap that authenticates your API requests. For this method, your token must have both API Export and Data Access Groups privileges at the project level.
 
-### Data Access Group (DAG)
+#### Data Access Group (DAG)
 A data isolation mechanism in REDCap that restricts which records a user can view or edit. Each user can be assigned to at most one DAG. Users without a DAG assignment have access to all data across all groups.
 
-### All-DAG Access
+#### All-DAG Access
 When a user is not assigned to any DAG (empty `redcap_data_access_group` field), they can view and edit data from all Data Access Groups in the project. This is typically granted to administrators and managers.
 
-### Unique Group Name
+#### Unique Group Name
 The system identifier for a DAG (e.g., `'group_1'`, `'boston_site'`), distinct from the human-readable display label (e.g., `'Boston Site'`). The API always uses unique group names, not labels.
 
-### User-DAG Mapping
+#### User-DAG Mapping
 The relationship between a username and the unique group name of the DAG to which the user is assigned. One mapping exists per user per project.
 
-### returnFormat Parameter
+#### returnFormat Parameter
 Controls the format of error messages returned by the API (csv, json, or xml). Unlike the `format` parameter, `returnFormat` does not affect the format of successful responses.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -54,9 +54,9 @@ Controls the format of error messages returned by the API (csv, json, or xml). U
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 from config import config
 import requests
@@ -72,7 +72,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -88,7 +88,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -103,7 +103,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -136,7 +136,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API returns a JSON or CSV array of user-DAG mappings. Each record contains:
 
@@ -165,7 +165,7 @@ If the project has no users, an empty array `[]` is returned. Users with an empt
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What does an empty `redcap_data_access_group` mean?**
 
@@ -193,7 +193,7 @@ If the project has no users, an empty array `[]` is returned. Users with an empt
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Confusing user-DAG mappings with user roles.** This export shows DAG assignments only, not roles or permissions. To see what a user can do, also export user roles ([RC-API-25 — Export User Roles API](RC-API-25_Export-User-Roles.md)) or users ([RC-API-22 — Export Users API](RC-API-22_Export-Users.md)) and cross-reference with their permissions.
 
@@ -209,7 +209,7 @@ If the project has no users, an empty array `[]` is returned. Users with an empt
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains DAG concepts, structure, and configuration)

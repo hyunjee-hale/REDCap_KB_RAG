@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Delete Events API method removes one or more events from a longitudinal REDCap project. You specify the unique event names to delete, and REDCap will remove them along with all data stored in those events.
 
@@ -25,7 +25,7 @@ The Delete Events API method removes one or more events from a longitudinal REDC
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -36,9 +36,9 @@ The Delete Events API method removes one or more events from a longitudinal REDC
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -57,7 +57,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -73,7 +73,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -87,7 +87,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -123,7 +123,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the method returns the number of events deleted as a plain integer. The HTTP status code will be 200. All data stored in those events will be permanently removed.
 
@@ -134,7 +134,7 @@ Example response:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can I delete an event on a classic project?**
 
@@ -162,7 +162,7 @@ Example response:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Not backing up data before deletion.** Deleting an event deletes all data in that event. There is no undo. Always export your project data before deleting events if you may need it later.
 
@@ -176,7 +176,7 @@ Example response:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-19 — Export Events API](RC-API-19_Export-Events.md)(retrieve event metadata from a project)

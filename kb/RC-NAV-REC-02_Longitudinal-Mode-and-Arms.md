@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains REDCap's Longitudinal mode and the concept of
 Arms — two features that allow data collection across multiple
@@ -23,7 +23,7 @@ affect record navigation.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Longitudinal Mode**
 
@@ -48,9 +48,9 @@ intervention group vs. placebo group).
 
 ---
 
-# 3. How Longitudinal Mode Affects Navigation
+## 3. How Longitudinal Mode Affects Navigation
 
-## 3.1 Record Home Page in a Longitudinal Project
+### 3.1 Record Home Page in a Longitudinal Project
 
 - Instead of a single row of instrument dots, you see a grid: rows are
     instruments, columns are events.
@@ -59,7 +59,7 @@ intervention group vs. placebo group).
 
 - Click any dot to open that instrument for that event.
 
-## 3.2 Record Status Dashboard in a Longitudinal Project
+### 3.2 Record Status Dashboard in a Longitudinal Project
 
 - The dashboard displays the same grid layout — rows are records,
     columns are events and instruments.
@@ -69,7 +69,7 @@ intervention group vs. placebo group).
 
 - Click a tab to view records belonging to that arm.
 
-## 3.3 Add/Edit Records in a Project with Arms
+### 3.3 Add/Edit Records in a Project with Arms
 
 - An additional dropdown appears at the top of the Add/Edit Records
     page asking you to select an arm.
@@ -80,9 +80,9 @@ intervention group vs. placebo group).
 
 ---
 
-# 4. Step-by-Step: Working with Events and Arms
+## 4. Step-by-Step: Working with Events and Arms
 
-## 4.1 Navigating to a Record in a Specific Event
+### 4.1 Navigating to a Record in a Specific Event
 
 - Go to Add/Edit Records or the Record Status Dashboard.
 
@@ -94,7 +94,7 @@ intervention group vs. placebo group).
 
 - Click the dot for the instrument within that event.
 
-## 4.2 Identifying Which Arm a Record Belongs To
+### 4.2 Identifying Which Arm a Record Belongs To
 
 - The Record Home Page header or the arm tab on the Record Status
     Dashboard indicates the active arm.
@@ -104,7 +104,7 @@ intervention group vs. placebo group).
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the difference between an event and an arm?**
 
@@ -132,7 +132,7 @@ Records only appear in the arm they belong to.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 - Looking for a record in the wrong arm: records are arm-specific. If
     the arm dropdown is set incorrectly, the record will not appear in
@@ -148,7 +148,7 @@ Records only appear in the arm they belong to.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering navigation paths and instrument status dots

@@ -18,7 +18,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Custom Application Links appear at the bottom of the left-hand project menu for every user in every project, by default. Administrators configure them centrally; no project-level action is required from project users.
 
@@ -30,7 +30,7 @@ Typical use cases:
 
 ---
 
-# 2. Per-Link Configuration Options
+## 2. Per-Link Configuration Options
 
 Each custom link has the following settings:
 
@@ -46,27 +46,27 @@ Each custom link has the following settings:
 
 ---
 
-# 3. Link Types
+## 3. Link Types
 
-## Simple Link
+### Simple Link
 
 A Simple Link navigates the user to the target URL in a standard, anonymous fashion. No user or project information is transmitted to the target site. The external site has no way to identify who is visiting.
 
 Use a Simple Link when the destination website does not need to know who the REDCap user is — for example, a public training website or a generic help page.
 
-## REDCap Project
+### REDCap Project
 
 Selecting the **REDCap Project** type presents a list of all projects in production or development status. After selecting a project, REDCap creates a link directly to that project. This allows administrators to surface commonly referenced projects (e.g., a shared resource request form) in every user's menu.
 
 > **Note:** Administrators can link to any project regardless of whether they are a member of that project. Standard users can only link to their own projects when creating bookmarks.
 
-## Advanced Link
+### Advanced Link
 
 The Advanced Link goes beyond simple navigation by transmitting encrypted user identity information to the target website. This allows an external site to verify that the person arriving from REDCap is a valid, active REDCap user.
 
 > **Technical prerequisite:** Using the Advanced Link requires web development knowledge and control over the target external website. The external site must be configured to receive and process the identity verification flow described below.
 
-### How Advanced Link identity verification works
+#### How Advanced Link identity verification works
 
 When a user clicks an Advanced Link, REDCap does not navigate directly to the URL. Instead, it submits an HTML form using the HTTP POST method. A single field — `authkey` — is posted to the external website. The authkey is an encrypted, undecipherable string that encodes the user's session.
 
@@ -104,13 +104,13 @@ If the request is malformed or the user's session has expired, the API returns `
 **Step 4 — Use the returned information**
 The external site can use the returned values to implement user-specific behavior — for example, granting or restricting access based on the REDCap username, pre-populating a form with the user's project context, or logging the visit with the associated project ID.
 
-### Language compatibility
+#### Language compatibility
 
 The REDCap API is language-agnostic. The external site can be written in any server-side language (PHP, Python, Node.js, etc.) as long as it can make a properly formatted HTTP POST request.
 
 ---
 
-# 4. User Access and Project Scope
+## 4. User Access and Project Scope
 
 By default, a custom link appears for **all users** in **all projects**. Administrators can narrow this:
 
@@ -121,7 +121,7 @@ These settings are configured per link and can be updated at any time.
 
 ---
 
-# 5. Adding a New Link
+## 5. Adding a New Link
 
 At the bottom of the Custom Application Links page, provide:
 1. A **Label** — what will appear on the left-hand menu
@@ -132,7 +132,7 @@ Save the link, then configure User Access and other per-link settings as needed.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can I create a link to another REDCap project on the same instance?**
 Yes. Use the REDCap Project link type, which presents a dropdown list of all projects in production or development status. Select the target project, and REDCap will create a link directly to that project. This is useful for surfacing shared resource projects or central intake forms in every user's menu.
@@ -151,7 +151,7 @@ No. The external site can be anywhere, as long as it is accessible over the inte
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using Simple Link instead of Advanced Link when user identity is needed.** If your external application needs to know who the user is, you must use Advanced Link type. Simple Link does not send any user information, so the external site will have no way to identify the person visiting. This is a common mistake when trying to integrate with external systems that require authentication.
 
@@ -161,7 +161,7 @@ No. The external site can be anywhere, as long as it is accessible over the inte
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

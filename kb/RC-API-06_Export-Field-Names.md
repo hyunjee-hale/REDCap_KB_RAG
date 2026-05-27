@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Field Names API method returns the export/import-specific version of field names for all fields (or a single field) in a project. Its primary purpose is to handle **checkbox fields**, which use a different variable name during exports and imports than the one defined in the Online Designer or Data Dictionary. Each checkbox option is represented as its own export field name in this format: `field_name___coded_value` (field name + triple underscore + the coded value for that choice).
 
@@ -27,7 +27,7 @@ When to use this method: When you need to construct correct field name reference
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -39,9 +39,9 @@ When to use this method: When you need to construct correct field name reference
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -61,7 +61,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -79,7 +79,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -95,7 +95,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -131,7 +131,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns a list ordered by field order. Each entry contains three attributes:
 
@@ -177,7 +177,7 @@ The method returns a list ordered by field order. Each entry contains three attr
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What's the difference between export_field_name and other field identifiers?**
 
@@ -201,7 +201,7 @@ The method returns a list ordered by field order. Each entry contains three attr
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Querying a non-existent field returns an error, not empty results.** If you pass an invalid field name via the `field` parameter, the API returns an error response. Validate field names against the project's data dictionary before calling this method with a specific field.
 
@@ -215,7 +215,7 @@ The method returns a list ordered by field order. Each entry contains three attr
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading record data)

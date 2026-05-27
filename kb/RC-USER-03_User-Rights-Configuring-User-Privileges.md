@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains every user rights setting available in the user privileges popup in REDCap — both the Basic Privileges panel and the per-instrument data rights settings. It also covers miscellaneous user rights that exist outside the main User Rights page, including report-level and dashboard-level access controls and smart-variable-based restrictions. The rights described here apply to individual users and to roles. See [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) — Adding Users & Managing Roles for how to open the privileges popup.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Basic Privileges**
 
@@ -48,13 +48,13 @@ A feature that prevents further edits to a completed instrument or record. Separ
 
 ---
 
-# 3. Basic Privileges
+## 3. Basic Privileges
 
 The Basic Privileges panel is shown on the left side of the user privileges popup. The available options vary based on which features are enabled in the project.
 
 > **Note:** REDCap hides options that are not relevant to your project's configuration. For example, "Survey Distribution Tools" will not appear if surveys are not enabled.
 
-## 3.1 Expiration Date
+### 3.1 Expiration Date
 
 An optional date field, blank by default. If set, REDCap will automatically suspend the user from this project when that date arrives. The user's accounts and access to other projects are not affected.
 
@@ -62,7 +62,7 @@ This setting is most useful for temporary contributors such as students, interns
 
 > **Note:** The expiration date is a per-user setting and cannot be pre-defined at the role level.
 
-## 3.2 Highest-Level Privileges
+### 3.2 Highest-Level Privileges
 
 These three settings give users broad administrative power within the project. Best practice is to limit them to one or two users — typically those actively building or managing the project.
 
@@ -72,7 +72,7 @@ These three settings give users broad administrative power within the project. B
 
 - **Data Access Groups** — grants access to the DAG management page, where the user can create, edit, and delete DAGs and assign users to them. See [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md).
 
-## 3.3 Other Basic Privileges
+### 3.3 Other Basic Privileges
 
 Most of the remaining basic privileges either show or hide a specific application or feature in REDCap's interface. Hiding a feature cleans up the interface for users who do not need it and prevents unintended use.
 
@@ -116,7 +116,7 @@ Two separate rights:
 
 If the mobile app is not part of your project's data collection workflow, leave both unchecked.
 
-## 3.4 Record Settings
+### 3.4 Record Settings
 
 These three settings govern how a user can interact with records globally across the project.
 
@@ -125,7 +125,7 @@ These three settings govern how a user can interact with records globally across
 - **Delete records** — allows the user to delete entire or partial records (all forms, all events, all repeating instances). Deleted records **cannot** be restored. Disabled by default to prevent accidental data loss. If deletion is needed, the recommended approach is to grant the right temporarily, perform the deletion, and remove the right again. Users with Delete Records automatically inherit Form-Level Delete for all instruments.
 - **Form-Level Delete Rights** *(new in REDCap v15.7.0)* — allows deletion of data on specific instruments only, without deleting an entire record. This provides finer-grained control when you want a user to be able to remove data from one form (e.g., to correct a mis-entry) without risking accidental deletion of the entire record. Form-Level Delete rights are configured per instrument in the Data Viewing Rights section. Requirements: the user must have View & Edit access for the instrument; if the instrument is enabled as a survey, the user must also have Edit Survey Responses rights. This right may not appear at all institutions depending on local configuration or REDCap version.
 
-## 3.5 Record Locking and E-Signatures
+### 3.5 Record Locking and E-Signatures
 
 Record locking is useful for larger projects where completed instruments should be protected from further edits, or where a formal sign-off process is required.
 
@@ -137,7 +137,7 @@ Record locking is useful for larger projects where completed instruments should 
 >
 > **Important:** The e-signature option requires local password re-entry for every action. It is **not compatible** with Shibboleth (SAML) or OAuth2 authentication — those methods delegate credential verification externally, so REDCap cannot perform the required re-entry step. If your institution uses either of these authentication methods, the e-signature option will not be available to your users. Note that certain external modules are available that provide alternative e-signature workflows compatible with federated authentication — contact your REDCap administrator for options.
 
-## 3.6 Administrator-Granted Rights
+### 3.6 Administrator-Granted Rights
 
 Certain advanced features — such as Clinical Data Pull or SMS texting integrations (Twilio, Mosio) — require an administrator to enable and in some cases to assign at the user level. These will appear in the privileges popup only if enabled for your installation.
 
@@ -145,7 +145,7 @@ Certain advanced features — such as Clinical Data Pull or SMS texting integrat
 
 ---
 
-# 4. Data Viewing Rights
+## 4. Data Viewing Rights
 
 The data viewing rights section controls what data a user can see, configured per instrument.
 
@@ -169,7 +169,7 @@ For instruments enabled as surveys, a fourth option appears:
 
 ---
 
-# 5. Data Export Rights
+## 5. Data Export Rights
 
 The data export rights section controls what data a user can export out of REDCap, configured per instrument. These settings are independent of data viewing rights — it is possible for a user to have edit access to an instrument but be restricted from exporting its data, or vice versa.
 
@@ -192,11 +192,11 @@ See [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-O
 
 ---
 
-# 6. Miscellaneous User Rights
+## 6. Miscellaneous User Rights
 
 Beyond the User Rights page, REDCap has several other places where access is controlled for specific features.
 
-## 6.1 Report-Level Access
+### 6.1 Report-Level Access
 
 Each custom report in REDCap has its own user rights section, accessible from the report's edit page. By default, all project users can view and edit reports (provided they have the "Add/Edit/Organize Reports" basic privilege). However, report-level rights allow much finer control:
 
@@ -210,7 +210,7 @@ To configure report-level rights:
 4. Configure access and edit rights as needed.
 5. Click **Save Report**.
 
-## 6.2 Project Dashboard Access
+### 6.2 Project Dashboard Access
 
 Each Project Dashboard also has its own user rights section. By default, all project users can view dashboards. Only users with the "Project Design and Setup" privilege can create or edit dashboards.
 
@@ -223,7 +223,7 @@ To configure dashboard-level rights:
 4. Configure access as needed.
 5. Click **Save Dashboard**.
 
-## 6.3 Smart Variable–Based Access Restrictions
+### 6.3 Smart Variable–Based Access Restrictions
 
 REDCap's "User" category of smart variables allows field-level or instrument-level visibility to be conditioned on the identity of the currently logged-in user. This goes beyond the instrument-level access controls in the standard user rights popup.
 
@@ -239,7 +239,7 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Some options don't appear in the user rights popup for my project — why?**
 
@@ -267,7 +267,7 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Granting the User Rights privilege too broadly.** A user with the User Rights privilege can change anyone's rights in the project — including giving themselves any privilege they want. Treat this right like a project administrator role. Limit it to one or two users.
 
@@ -281,7 +281,7 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -291,7 +291,7 @@ This approach is flexible but should be used deliberately. It creates implicit a
 ---
 
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md)

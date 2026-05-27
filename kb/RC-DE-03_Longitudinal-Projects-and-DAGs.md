@@ -18,7 +18,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Two optional project features significantly affect how data entry works in REDCap:
 
@@ -30,7 +30,7 @@ These features are independent — a project can use one, both, or neither. When
 
 ---
 
-# 2. Where to Go from Here
+## 2. Where to Go from Here
 
 | I need to… | Go to… |
 | --- | --- |
@@ -43,7 +43,7 @@ These features are independent — a project can use one, both, or neither. When
 
 ---
 
-# 3. Related Articles
+## 3. Related Articles
 
 - [RC-DE-09 — Data Entry with Data Access Groups](RC-DE-09_Data-Entry-with-DAGs.md)
 - [RC-DE-10 — Longitudinal & Repeated Data Entry](RC-DE-10_Longitudinal-and-Repeated-Data-Entry.md)

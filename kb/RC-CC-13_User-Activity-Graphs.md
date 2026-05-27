@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The User Activity Graphs page displays visual charts summarizing REDCap system usage over time. It is accessible under "Dashboards & Activity" in the Control Center sidebar. The charts provide at-a-glance trend views that complement the raw data available in the User Activity Log ([RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)) and System Statistics ([RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)).
 
 ---
 
-# 2. Time Range Selection
+## 2. Time Range Selection
 
 All charts can be filtered by time range using the navigation at the top of the page. The available options are:
 
@@ -36,7 +36,7 @@ Switching between time ranges reloads all charts for the selected period.
 
 ---
 
-# 3. Available Charts
+## 3. Available Charts
 
 Charts are loaded dynamically. Based on REDCap v16.x, the charts include (but may not be limited to):
 
@@ -49,7 +49,7 @@ Charts show "Loading chart..." until the data query completes. The exact set of 
 
 ---
 
-# 4. Chart Interaction
+## 4. Chart Interaction
 
 Most charts display:
 
@@ -61,7 +61,7 @@ Charts can often be hovered over to view exact values for specific time points.
 
 ---
 
-# 5. Relationship to Other Monitoring Tools
+## 5. Relationship to Other Monitoring Tools
 
 Activity Graphs provide trend visualization, complementing:
 
@@ -72,13 +72,13 @@ Activity Graphs provide trend visualization, complementing:
 
 ---
 
-# 6. Performance and Caching
+## 6. Performance and Caching
 
 The charts may take several seconds to load, especially for longer time ranges (Past Year or All). Results are typically cached to improve subsequent load times. If data appears outdated, administrators may need to wait for the cache to refresh or contact system administrators.
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What is the default time range shown when I first load the User Activity Graphs page?**
 The default time range is "Past Week" (last 7 days). This provides a reasonable balance between showing recent trends and avoiding excessive amounts of historical data. You can change the time range using the navigation buttons at the top of the page.
@@ -100,7 +100,7 @@ Charts are typically near real-time, but may have a slight delay (minutes to hou
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Waiting too long for charts to load on "Past Year" or "All" views.** Querying charts for very long time periods can take considerable time, especially on active instances with years of historical data. Be patient and allow several seconds or minutes for results to load. Switching to a shorter time range will load much faster.
 
@@ -114,7 +114,7 @@ Charts are typically near real-time, but may have a slight delay (minutes to hou
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
 - [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)

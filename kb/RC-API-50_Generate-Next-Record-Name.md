@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Generate Next Record Name API method returns what the next record ID would be if a new record were created right now. It determines this by finding the current maximum numerical record ID in the project and incrementing it by one.
 
@@ -27,20 +27,20 @@ The method works whether or not your project has record auto-numbering enabled.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Record ID (Record Name)
+#### Record ID (Record Name)
 A unique identifier for each record in a REDCap project, typically either a numeric auto-generated value or a custom-assigned string. Used as the primary key for data entry and retrieval.
 
-### Auto-Numbering
+#### Auto-Numbering
 A REDCap feature that automatically assigns sequential numeric record IDs to new records. Can be enabled or disabled at the project level.
 
-### Data Access Group (DAG)
+#### Data Access Group (DAG)
 A logical division of project users and records that enforces row-level access control. When DAGs are enabled, record IDs are prefixed with the DAG number (e.g., `223-3`).
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -49,9 +49,9 @@ A logical division of project users and records that enforces row-level access c
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -67,7 +67,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -81,7 +81,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 
 ```sh
 #!/bin/sh
@@ -96,7 +96,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 
 ```php
 <?php
@@ -127,7 +127,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API returns the next record name as a plain text string — the maximum integer record ID in the project plus one.
 
@@ -145,7 +145,7 @@ On error, an error message string is returned.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Does calling this method reserve the record name?**
 
@@ -169,7 +169,7 @@ On error, an error message string is returned.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Treating the result as a reservation.** This method does not lock or reserve the ID. In active projects with concurrent users, the next record name can change between this call and your subsequent import. Use auto-numbering in the import instead if uniqueness is critical.
 
@@ -179,7 +179,7 @@ On error, an error message string is returned.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-03 — Import Records API](RC-API-03_Import-Records.md) (creating records; use `forceAutoNumber` to avoid race conditions)

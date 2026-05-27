@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Record smart variables return metadata about the record (data entry row) currently being viewed or edited. They do not return participant-entered field values but rather REDCap's internal record properties — such as the record's unique identifier, its assigned Data Access Group, and URLs for calendar feeds. Use these variables to reference record-level information in field labels, form notes, emails, and logic expressions.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record Name / Record ID**
 
@@ -40,7 +40,7 @@ Records, like users, can be assigned to a Data Access Group to restrict who can 
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -53,7 +53,7 @@ Records, like users, can be assigned to a Data Access Group to restrict who can 
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Calendar Variables Require Feature Enablement**
 
@@ -77,7 +77,7 @@ Record smart variables are especially useful in emails. For example, a survey co
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I display the current record's ID in a field note?**
 
@@ -114,7 +114,7 @@ The email will contain a clickable link with your custom text. Note that the Cal
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Confusing record DAG variables with user DAG variables.** `[record-dag-label]` refers to the record's DAG assignment; `[user-dag-label]` refers to the logged-in user's DAG. If a user from one DAG is viewing a record from another DAG (possible with elevated permissions), these two variables will return different values. Use the correct variable for your intent.
 
@@ -128,7 +128,7 @@ The email will contain a clickable link with your custom text. Note that the Cal
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(smart variable syntax and modifiers)

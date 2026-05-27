@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import Users API method adds existing REDCap system users to your project and assigns them permissions. This method does not create new REDCap accounts; it adds users who already exist in your REDCap system to your project. The data payload is a JSON or CSV array of user objects, each specifying a username and a set of permission flags (data export, API access, record creation, deletion, and so on).
 
@@ -23,13 +23,13 @@ Use this method to programmatically onboard team members to a project, update us
 
 ---
 
-# 2. Permissions Required
+## 2. Permissions Required
 
 To call this method, your API token must have **API Import/Update** privileges *and* **User Rights** privileges in the project.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -39,7 +39,7 @@ To call this method, your API token must have **API Import/Update** privileges *
 | `data` | Required | Array of user objects in the specified format. See Section 3.1 for full attribute reference and Section 4 for format examples. |
 | `returnFormat` | Optional | Format for error messages: `'csv'`, `'json'`, `'xml'`. Defaults to the value of `format`, or `'xml'` if `format` is not provided. Not applicable when using background processing. |
 
-## 3.1 The `data` attribute
+### 3.1 The `data` attribute
 
 Each user object may include the following attributes:
 
@@ -63,11 +63,11 @@ Note the distinction between `data_access_group` (contains the unique DAG name t
 
 ---
 
-# 4. Data Format Examples
+## 4. Data Format Examples
 
 These examples show the structure of the `data` payload for each format.
 
-## 4.1 JSON
+### 4.1 JSON
 
 ```json
 [
@@ -138,7 +138,7 @@ These examples show the structure of the `data` payload for each format.
 ]
 ```
 
-## 4.2 CSV
+### 4.2 CSV
 
 ```
 username,design,user_rights,forms,forms_export
@@ -146,7 +146,7 @@ harrispa,1,1,"demographics:1,day_3:1,other:1","demographics:1,day_3:0,other:2"
 taylorr4,0,0,"demographics:1,day_3:2,other:0","demographics:1,day_3:2,other:0"
 ```
 
-## 4.3 XML
+### 4.3 XML
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -172,9 +172,9 @@ taylorr4,0,0,"demographics:1,day_3:2,other:0","demographics:1,day_3:2,other:0"
 
 ---
 
-# 5. Request Examples
+## 5. Request Examples
 
-## 5.1 Python
+### 5.1 Python
 ```python
 from config import config
 import requests, json
@@ -222,7 +222,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 5.2 R
+### 5.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -271,7 +271,7 @@ result <- postForm(
 print(result)
 ```
 
-## 5.3 cURL
+### 5.3 cURL
 ```sh
 #!/bin/sh
 
@@ -286,7 +286,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 5.4 PHP
+### 5.4 PHP
 ```php
 <?php
 
@@ -351,13 +351,13 @@ print $output;
 
 ---
 
-# 6. Response
+## 6. Response
 
 On success, the API returns a count of users added or modified. For example: `2` means two users were imported (or their existing permissions were updated).
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What if the username doesn't exist in the REDCap system?**
 
@@ -381,7 +381,7 @@ On success, the API returns a count of users added or modified. For example: `2`
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Assuming this method creates REDCap accounts.** It does not. The username must already exist in the REDCap system. Only project-level access is granted by this method. Coordinate with your REDCap administrator to ensure user accounts exist before importing.
 
@@ -393,7 +393,7 @@ On success, the API returns a count of users added or modified. For example: `2`
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains the three access tiers and role-based access)

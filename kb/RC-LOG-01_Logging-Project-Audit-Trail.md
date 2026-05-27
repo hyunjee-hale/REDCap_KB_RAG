@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains REDCap's project-level Logging module — the built-in audit trail that records every action taken within a project. Logging captures data changes, record creation and deletion, user access, exports, API calls, project configuration changes, and page views. It provides a tamper-evident, timestamped record that supports data integrity verification, user activity review, and regulatory compliance. This article covers how to access Logging, how to read log entries, how to use the filter and export options, and how the project-level log relates to other audit tools in REDCap.
 
@@ -22,40 +22,40 @@ This article explains REDCap's project-level Logging module — the built-in aud
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Logging Module
+#### Logging Module
 The project-level application in REDCap that displays a searchable, filterable history of all actions taken within a single project. Accessible from the left-hand Applications menu when the user has the Logging user right.
 
-### Audit Trail
+#### Audit Trail
 The complete, chronological record of project activity stored by REDCap. Every save, export, import, login, and configuration change generates at least one log entry. The audit trail cannot be edited or deleted by any project user or administrator.
 
-### Log Entry
+#### Log Entry
 A single record in the audit trail. Each entry captures: the timestamp of the action, the username of the person who performed it, an action category and description, and — for data changes — the specific field and value details.
 
-### Logging User Right
+#### Logging User Right
 A project-level user permission that grants access to the Logging module. Users without this right do not see the Logging link in the left menu. It is separate from the field-level field history ('H' button), which is available to all users who can open an instrument.
 
-### Data History Popup
+#### Data History Popup
 A project-level setting (enabled under Project Setup → Additional Customizations) that adds a clock icon next to every field on every instrument. Clicking the icon opens a popup showing a chronological history of all values that field has held for that record — including the previous value, who made each change, and the timestamp. This is the per-field complement to the project-level Logging module. The Data History popup must be enabled for the File Version History feature to work. See [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md).
 
-### Server Timestamp
+#### Server Timestamp
 All log entries record the date and time as reported by the REDCap server, not the user's local browser time. For multi-time-zone teams, confirm the server's timezone with your administrator when reviewing time-sensitive entries.
 
-### Page Views
+#### Page Views
 A distinct event type that records every URL visited within the project by each user. Page views are **excluded from the default Logging view** and must be selected explicitly via the event type filter. They can produce a very high volume of entries.
 
 ---
 
-# 3. Accessing the Logging Module
+## 3. Accessing the Logging Module
 
-## 3.1 Navigation
+### 3.1 Navigation
 
 The Logging module is accessible from the left-hand navigation menu under **Applications**. If you do not see a "Logging" link, you have not been granted the Logging user right for this project. Contact your project administrator to request access.
 
 > **Note:** In projects where you have administrator or project design rights, Logging access is typically granted by default. For data entry accounts, it must be granted explicitly.
 
-## 3.2 Default View
+### 3.2 Default View
 
 When you first open the Logging page, the display defaults to:
 
@@ -64,7 +64,7 @@ When you first open the Logging page, the display defaults to:
 
 A notice at the top of the log confirms this: "By default, only the logged events from the past week are displayed." To see older data or page view entries, use the filters described in Section 5.
 
-## 3.3 Required User Rights
+### 3.3 Required User Rights
 
 The Logging user right is a single checkbox in **User Rights** (left menu → User Rights) labeled "Logging." Granting this right gives the user full read access to the project's audit trail — there is no partial or filtered access at the user-rights level.
 
@@ -74,9 +74,9 @@ To use the API Export Logging endpoint programmatically, the user must also have
 
 ---
 
-# 4. Reading Log Entries
+## 4. Reading Log Entries
 
-## 4.1 Table Columns
+### 4.1 Table Columns
 
 The log table has four columns:
 
@@ -87,7 +87,7 @@ The log table has four columns:
 | **Action** | Action category and description (see Section 4.2 for examples) |
 | **List of Data Changes OR Fields Exported** | For data entry actions: every changed field and its new value. For exports and API calls: what was exported. For page views: the full URL visited. |
 
-## 4.2 Action Format Examples
+### 4.2 Action Format Examples
 
 The Action column uses plain-language descriptions. The format varies by action type:
 
@@ -112,7 +112,7 @@ The event name and arm are shown in parentheses for longitudinal projects. Auto-
 **Page Views:**
 `Page View` — shown in blue text; data column contains the full URL accessed
 
-## 4.3 Data Changes Column Format
+### 4.3 Data Changes Column Format
 
 For record saves, each changed field is listed on a single line:
 ```
@@ -132,9 +132,9 @@ For **alert modifications**, the full alert configuration is captured in the dat
 
 ---
 
-# 5. Filtering the Log
+## 5. Filtering the Log
 
-## 5.1 Filter Controls
+### 5.1 Filter Controls
 
 All filters are displayed in a blue panel at the top of the Logging page. Every filter can be combined with others.
 
@@ -146,7 +146,7 @@ All filters are displayed in a blue panel at the top of the Logging page. Every 
 | **Filter by time range** | Date/time range with quick-select buttons (see Section 5.3) |
 | **DAG filter** | Available via URL parameter (`dag`); filters by Data Access Group |
 
-## 5.2 Event Type Options
+### 5.2 Event Type Options
 
 The "Filter by event" dropdown contains these options (internal API values in parentheses):
 
@@ -164,7 +164,7 @@ The "Filter by event" dropdown contains these options (internal API values in pa
 
 > **Important:** Page Views are deliberately excluded from the default "all event types" view. On active projects, page view logging can generate thousands of entries. Select "Page Views" explicitly when you need to trace which pages a specific user accessed and when.
 
-## 5.3 Time Range Quick Buttons
+### 5.3 Time Range Quick Buttons
 
 Below the date fields, five quick-select buttons pre-fill the time range:
 
@@ -177,9 +177,9 @@ Below the date fields, five quick-select buttons pre-fill the time range:
 
 ---
 
-# 6. Exporting the Log
+## 6. Exporting the Log
 
-## 6.1 CSV Export Buttons
+### 6.1 CSV Export Buttons
 
 Three CSV export buttons appear in the upper-right corner of the Logging page:
 
@@ -191,7 +191,7 @@ Three CSV export buttons appear in the upper-right corner of the Logging page:
 
 For compliance purposes, "All pages using current filters" is usually the most useful: it applies your date range and event type filter while returning all matching rows, not just the visible page.
 
-## 6.2 CSV Column Structure
+### 6.2 CSV Column Structure
 
 The exported CSV has five columns:
 
@@ -203,15 +203,15 @@ The exported CSV has five columns:
 | `List of Data Changes OR Fields Exported` | Full data change or export detail text |
 | `Record` | Record ID if applicable; empty for Manage/Design and user-level actions |
 
-## 6.3 API Export
+### 6.3 API Export
 
 The same audit data is accessible programmatically via the Export Logging API endpoint, which supports additional filter parameters and returns JSON, CSV, or XML. See [RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md).
 
 ---
 
-# 7. Using Logging for Regulatory Compliance
+## 7. Using Logging for Regulatory Compliance
 
-## 7.1 GCP and 21 CFR Part 11 Context
+### 7.1 GCP and 21 CFR Part 11 Context
 
 REDCap's audit trail is frequently cited in regulated research environments as a mechanism for meeting the audit trail requirements of:
 
@@ -220,7 +220,7 @@ REDCap's audit trail is frequently cited in regulated research environments as a
 
 REDCap's logging meets these requirements at the data capture level: every field save is recorded automatically with a timestamp and username, and the record cannot be altered. However, Part 11 compliance also involves controls outside REDCap (system validation, access control policies, training records). The audit log alone does not constitute full regulatory compliance.
 
-## 7.2 Preparing an Audit Package
+### 7.2 Preparing an Audit Package
 
 A common workflow for a formal audit or inspection:
 
@@ -233,9 +233,9 @@ A common workflow for a formal audit or inspection:
 
 ---
 
-# 8. Relationship to Other Audit Tools in REDCap
+## 8. Relationship to Other Audit Tools in REDCap
 
-## 8.1 Project Logging vs. Control Center User Activity Log
+### 8.1 Project Logging vs. Control Center User Activity Log
 
 | Feature | Project Logging ([RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Audit-Trail.md)) | CC User Activity Log ([RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)) |
 |---|---|---|
@@ -245,7 +245,7 @@ A common workflow for a formal audit or inspection:
 | **Use case** | Project-level audit, compliance, user activity review | Instance-wide monitoring, security investigation |
 | **Access location** | Project left menu → Applications → Logging | Control Center → Dashboards & Activity → User Activity Log |
 
-## 8.2 Project Logging vs. Data History Popup
+### 8.2 Project Logging vs. Data History Popup
 
 The Data History popup (clock icon on each field) shows the complete value history for one specific field in one specific record, including the old value before each change. It requires the "Data History Popup" setting to be enabled under Project Setup → Additional Customizations (see [RC-PROJ-04 — Project Setup: Additional Customizations](RC-PROJ-04_Project-Setup-Additional-Customizations.md)). No Logging user right is required to view field history — any user who can open the instrument can access it.
 
@@ -253,19 +253,19 @@ The Logging module, by contrast, shows all saved values across all fields and al
 
 See [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) for more on field-level history.
 
-## 8.3 Project Logging vs. Data Resolution Workflow Log
+### 8.3 Project Logging vs. Data Resolution Workflow Log
 
 The Data Resolution Workflow (DRW) has its own dedicated query and response log showing the history of each data discrepancy note. That log is visible within individual records under the DRW interface and is separate from the main Logging module, although DRW actions do also appear in the project audit trail.
 
 See [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md).
 
-## 8.4 Project Logging vs. Field Comment Log
+### 8.4 Project Logging vs. Field Comment Log
 
 The Field Comment Log captures structured comments attached to individual fields. These appear in the Logging module as a logged event but are also accessible separately through the comment log interface.
 
 See [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md).
 
-## 8.5 Reason for Change and the Logging Module
+### 8.5 Reason for Change and the Logging Module
 
 The **Require a Reason When Making Changes to Existing Records** setting (Project Setup → Additional Customizations) adds a prompt whenever a user saves an instrument that already contains data. The user must enter a short explanation (up to 200 characters) before the save completes.
 
@@ -275,7 +275,7 @@ This setting is commonly used in studies with regulatory requirements for audit 
 
 ---
 
-## 8.6 Email Logging — a Separate Application
+### 8.6 Email Logging — a Separate Application
 
 **Email Logging** (Applications menu → Email Logging) is a distinct feature from the audit trail Logging module. It provides a searchable record of all outgoing emails sent by the project, including:
 
@@ -288,15 +288,15 @@ Email Logging supports keyword search across subject, body, sender, and recipien
 
 ---
 
-# 9. Log Retention and Immutability
+## 9. Log Retention and Immutability
 
-## 9.1 Entries Cannot Be Deleted
+### 9.1 Entries Cannot Be Deleted
 
 REDCap's audit trail is immutable at the project level. No project user, including users with project design rights, can delete, modify, or suppress log entries. This is a core requirement for data integrity and regulatory compliance.
 
 > **Note:** At the system administrator level, a REDCap system admin with direct database access could theoretically alter the underlying database. In practice, this is outside normal operations and would represent a serious compliance deviation. Institutional policies typically prohibit this.
 
-## 9.2 Retention Period
+### 9.2 Retention Period
 
 REDCap does not apply a default expiration to project-level log entries. Logs persist for the life of the project on the server.
 
@@ -304,7 +304,7 @@ REDCap does not apply a default expiration to project-level log entries. Logs pe
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: I don't see "Logging" in the left menu. Why?**
 You have not been granted the Logging user right for this project. Contact your project administrator. Users with project design or admin rights typically have it by default; data entry accounts usually do not.
@@ -335,7 +335,7 @@ When an alert is created or modified, REDCap logs the full configuration includi
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Not realizing the default view is limited to the past week.** The logging page opens showing only the last 7 days. If you are looking for an event that happened more than a week ago and see no results, check the time range — use "No limit" or "Past Year" to expand the scope before concluding the event wasn't logged.
 
@@ -353,7 +353,7 @@ When an alert is created or modified, REDCap logs the full configuration includi
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (field-level 'H' button; covers old vs. new value comparison)
 - [RC-API-39 — Export Logging API](RC-API-39_Export-Logging.md) (programmatic access to the same audit trail data)

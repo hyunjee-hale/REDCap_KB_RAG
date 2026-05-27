@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Dynamic SQL (DSQL) is a special dropdown field type in REDCap where the list of selectable options is driven by the results of a SQL query against the REDCap backend database — rather than a fixed list of choices defined in the Data Dictionary. The query runs each time the page loads, pulling whatever values are currently in the source table and presenting them to the user as a standard dropdown.
 
@@ -28,13 +28,13 @@ DSQL appears in the Data Dictionary with field type `sql` and is otherwise invis
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## Dynamic SQL vs. Standard Dropdown
+### Dynamic SQL vs. Standard Dropdown
 
 A standard `dropdown` field has a fixed choice list defined in Column F of the Data Dictionary — the options never change unless a designer edits and re-uploads the Data Dictionary. A DSQL field has no fixed choices; instead, it runs a SQL query at page load and builds its choice list from the query results. This makes DSQL well-suited for scenarios where the available options are themselves stored as data.
 
-## Required Query Output Format
+### Required Query Output Format
 
 Every DSQL query must return exactly two columns per row:
 
@@ -43,21 +43,21 @@ Every DSQL query must return exactly two columns per row:
 
 This mirrors the `raw_value, Display Label` format used in ordinary dropdown and radio choice lists. How the query arrives at these two columns — via joins, concatenation, filtering, or any other SQL logic — does not matter, as long as the output conforms to this structure.
 
-## Page-Load Behavior
+### Page-Load Behavior
 
 The DSQL query executes when the page (form or survey) loads. The dropdown is populated with whatever the query returns at that moment. If the source data changes after the page has loaded — for example, a new participant is added to the source project — the DSQL dropdown on the currently open page will not reflect that change. The user must reload the page to get a fresh query result.
 
 This is an important workflow consideration: in high-throughput data entry scenarios where new source records are being added continuously, users should be instructed to reload the page before selecting from a DSQL field.
 
-## Auto-Complete
+### Auto-Complete
 
 DSQL fields automatically use REDCap's dropdown auto-complete feature, which allows users to type partial text to filter the visible options. This behavior cannot be disabled and is always active.
 
 ---
 
-# 3. Administrator Responsibilities
+## 3. Administrator Responsibilities
 
-## 3.1 Who Can Create or Edit DSQL Fields
+### 3.1 Who Can Create or Edit DSQL Fields
 
 Creating or modifying a DSQL field requires REDCap administrator access. This restriction applies in all contexts:
 
@@ -67,7 +67,7 @@ Creating or modifying a DSQL field requires REDCap administrator access. This re
 
 > **Practical note for project teams:** If your project contains DSQL fields and you need to make Data Dictionary changes, coordinate with your REDCap administrator. The administrator can either perform the upload or temporarily replace DSQL rows with placeholder fields, let the non-administrator upload their changes, and then restore the DSQL configuration.
 
-## 3.2 SQL Access Requirements
+### 3.2 SQL Access Requirements
 
 Writing a DSQL query requires knowledge of the REDCap backend database schema and SQL skills. The administrator must know which tables to query, what the relevant field names are, and how to join tables correctly. REDCap's database structure is stable across minor versions, but administrators should validate queries after major REDCap version upgrades.
 
@@ -75,7 +75,7 @@ The Control Center Database Query Tool ([RC-CC-17 — Control Center: Database Q
 
 ---
 
-# 4. Common Use Cases
+## 4. Common Use Cases
 
 DSQL is most useful in three broad scenarios:
 
@@ -87,9 +87,9 @@ DSQL is most useful in three broad scenarios:
 
 ---
 
-# 5. SQL Query Guidelines
+## 5. SQL Query Guidelines
 
-## 5.1 Output Structure
+### 5.1 Output Structure
 
 The query must produce exactly two columns in this order:
 
@@ -100,7 +100,7 @@ The query must produce exactly two columns in this order:
 
 Use `SELECT a.value, <label_expression> AS label ...` as your basic pattern. Column names in the output do not matter — only position matters.
 
-## 5.2 Querying REDCap Data
+### 5.2 Querying REDCap Data
 
 Project field values are stored in REDCap's data table(s) in an entity-attribute-value structure. To pull data from a specific project and field, filter on both `project_id` and `field_name`. Always use the `[data-table]` smart variable instead of hardcoding the table name — see Section 5.5.
 
@@ -113,15 +113,15 @@ AND field_name = 'your_field_name'
 
 To build a meaningful label from multiple fields, use `JOIN` statements to combine values across field names for the same record, then format them with `CONCAT_WS` or similar string functions.
 
-## 5.3 Filtering Results
+### 5.3 Filtering Results
 
 You can filter query results using any standard SQL `WHERE` clause logic. A particularly useful pattern is the **self-curating list**: filtering out records that have already been processed or linked in another project. This keeps the dropdown from growing unbounded and only shows records that are still actionable.
 
-## 5.4 Ordering Results
+### 5.4 Ordering Results
 
 Always include an `ORDER BY` clause. Without explicit ordering, the sequence of options in the dropdown is non-deterministic and may change between page loads.
 
-## 5.5 The `[data-table]` Smart Variable
+### 5.5 The `[data-table]` Smart Variable
 
 Older REDCap installations stored all project data in a single `redcap_data` table. As installations grew, REDCap introduced the ability to split data across multiple sub-tables (e.g., `redcap_data`, `redcap_data_1`, `redcap_data_2`, and so on) to improve performance at scale. A given project's records may live in any of these tables depending on how the installation is configured.
 
@@ -154,7 +154,7 @@ AND field_name = 'your_field_name'
 
 > **Note:** When using `[data-table:NNNN]`, also include the matching `project_id = NNNN` filter in the `WHERE` clause. The smart variable resolves the table name; the `project_id` filter ensures you are selecting the right records within that table.
 
-## 5.6 Other Smart Variables in DSQL Queries
+### 5.6 Other Smart Variables in DSQL Queries
 
 Beyond `[data-table]`, other contextual REDCap smart variables can be embedded in a DSQL SQL statement. REDCap resolves them to their current values before executing the query, making it possible to write queries that respond to the context in which the DSQL field is being displayed.
 
@@ -186,9 +186,9 @@ ORDER BY value;
 
 ---
 
-# 6. SQL Examples
+## 6. SQL Examples
 
-## Example 1: Participant Lookup with Name Label
+### Example 1: Participant Lookup with Name Label
 
 This query pulls a participant identifier from one project and builds a label that combines the identifier with the participant's first and last name. The result appears in the dropdown as `P-1001 - Jane Smith`.
 
@@ -223,7 +223,7 @@ GROUP BY a.value
 ORDER BY a.value;
 ```
 
-## Example 2: Self-Curating List (Only Unlinked Participants)
+### Example 2: Self-Curating List (Only Unlinked Participants)
 
 This query shows only participants from a source project who have not yet been linked in the target (current) project. As staff process participants and record their IDs in the target project, those participants disappear from the dropdown automatically on the next page load. This prevents double-assignment without requiring any manual maintenance of the choice list.
 
@@ -266,7 +266,7 @@ ORDER BY a.value;
 
 ---
 
-# 7. Performance Considerations
+## 7. Performance Considerations
 
 DSQL queries execute synchronously at page load. Slow or broad queries will delay the page from rendering for the user.
 
@@ -280,7 +280,7 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Can DSQL populate other fields automatically when the user makes a selection?**
 
@@ -316,7 +316,7 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Returning more than two columns.** REDCap expects exactly two columns (raw value and label) from a DSQL query. If the query returns additional columns, behavior may be undefined or the field may not populate correctly. Select only what you need.
 
@@ -338,7 +338,7 @@ DSQL queries execute synchronously at page load. Slow or broad queries will dela
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (field type selection and form design tools)
 - [RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md) (Data Dictionary upload workflow and safety practices)

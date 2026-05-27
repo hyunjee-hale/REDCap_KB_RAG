@@ -19,7 +19,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap+ is an optional, paid subscription tier that unlocks advanced features on top of the standard REDCap platform (referred to as REDCap Core). It became available in April 2026 starting with REDCap v17.0.0.
 
@@ -29,39 +29,39 @@ The purpose of REDCap+ is to sustain the long-term development of the platform. 
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## REDCap Core
+### REDCap Core
 
 The REDCap system as it existed through v16. REDCap Core remains available at no cost and continues to receive weekly releases of incremental enhancements (new smart variables, action tags, survey settings), security patches, and bug fixes on both standard and long-term support schedules. All major new features going forward are REDCap+ exclusive.
 
-## REDCap+
+### REDCap+
 
 An ever-growing suite of advanced features and modules built on top of REDCap Core. REDCap+ is unlocked by entering a special subscription key in the REDCap Control Center. It is not a separate codebase — it is the same REDCap installation with additional capabilities enabled.
 
-## REDCap License
+### REDCap License
 
 The standard online license agreement signed by a non-profit organization to join the REDCap Consortium. The existing REDCap License is not modified by REDCap+. Institutions that sign the REDCap License are called REDCap Licensed Institutions.
 
-## REDCap+ Subscriber
+### REDCap+ Subscriber
 
 A REDCap Licensed Institution that has signed the REDCap+ Addendum and submitted payment for at least one installation.
 
-## Institution vs. Installation
+### Institution vs. Installation
 
 A REDCap Licensed Institution is the non-profit organization that holds the REDCap License. An installation (also called an instance) is a single REDCap server. One institution may operate multiple installations. REDCap+ is licensed per installation — subscribing for one installation does not cover others.
 
-## Active Users (for pricing)
+### Active Users (for pricing)
 
 For REDCap+ pricing purposes, an active user is any user account that has logged into the REDCap installation in the past 6 months. API-only accounts are not counted unless the user logs in directly.
 
-## REDCap Learning Lab
+### REDCap Learning Lab
 
 A separate, optional fee-based online certification program assessing REDCap proficiency. Learning Lab is not included in a REDCap+ subscription, though future REDCap+ features may integrate with it (e.g., gating project creation on certification status).
 
 ---
 
-# 3. REDCap+ vs. REDCap Core: What Changes
+## 3. REDCap+ vs. REDCap Core: What Changes
 
 | Aspect | REDCap Core | REDCap+ |
 |---|---|---|
@@ -77,14 +77,14 @@ Choosing REDCap+ does not grant access to enhanced or priority support. Administ
 
 ---
 
-# 4. Initial REDCap+ Features (2026)
+## 4. Initial REDCap+ Features (2026)
 
 > **⚠️ REDCap+ Feature Tag**
 > All features listed in this section are REDCap+ exclusive and require a REDCap+ subscription on the target installation.
 
 The first REDCap+ features became available with v17.0.0 in April 2026. Additional features are being released iteratively throughout 2026.
 
-## Project Migration Tool
+### Project Migration Tool
 
 A comprehensive tool to move one or more projects — including all settings and data — from one REDCap server to another. Key points:
 
@@ -92,21 +92,21 @@ A comprehensive tool to move one or more projects — including all settings and
 - This tool can be used to consolidate multiple REDCap installations into a single instance, reducing administrative overhead.
 - See RC-PLUS-02 *(planned)* for procedural details.
 
-## REDCap Rewards
+### REDCap Rewards
 
 Integrates the Tango Gift Card API with REDCap+ to support participant recruitment incentives in research studies. Includes supporting materials for institutional compliance conversations (Finance, Treasury, etc.).
 
-## REDCap SHARE
+### REDCap SHARE
 
 Supports participant-driven sharing of their electronic health record (EHR) data directly with researchers.
 
-## Additional Community Portal Seats
+### Additional Community Portal Seats
 
 REDCap+ subscriptions include up to 12 administrator seats on the REDCap Community Portal (versus the default allocation for non-subscribers).
 
 ---
 
-# 5. Pricing and Tiers
+## 5. Pricing and Tiers
 
 REDCap+ is priced annually based on the number of active user logins on the target installation in the preceding 6 months. Subscriptions begin the day payment is received and are valid for one calendar year.
 
@@ -127,7 +127,7 @@ REDCap+ is priced annually based on the number of active user logins on the targ
 
 ---
 
-# 6. How to Subscribe
+## 6. How to Subscribe
 
 Before accessing REDCap+, an institution must complete the following steps:
 
@@ -143,27 +143,27 @@ To retain the subscription at renewal, institutions must again report active use
 
 ---
 
-# 7. Technical Notes
+## 7. Technical Notes
 
-## Same Codebase
+### Same Codebase
 
 REDCap+ is not a separate product or fork. It is the standard REDCap codebase with additional features unlocked by the subscription key. There is no separate installation process beyond upgrading to v17.0.0+.
 
-## Test / Non-Production Servers
+### Test / Non-Production Servers
 
 REDCap+ subscribers receive both a production and a non-production subscription key. There is no limit on the number of non-production (sandbox/test) REDCap+ installations a subscriber may run. Only the production installation key is subject to user metric reporting requirements.
 
-## What Happens When a Subscription Expires
+### What Happens When a Subscription Expires
 
 When the REDCap+ subscription key expires, all REDCap+ features are immediately deactivated for that installation — for both existing projects that used those features and any new projects. The installation reverts to REDCap Core. Data is not lost, but REDCap+-dependent workflows will stop functioning until the subscription is renewed.
 
-## Per-Project Purchasing
+### Per-Project Purchasing
 
 REDCap+ cannot be purchased on a per-project basis for an existing installation. The subscription applies to the entire installation. The only exception is if an institution wants to create a dedicated new installation solely for one project and subscribe to REDCap+ for that installation.
 
 ---
 
-# 8. Tagging Convention for This KB
+## 8. Tagging Convention for This KB
 
 Because REDCap+ is an additive, subscription-based tier, **any KB article describing a REDCap+ exclusive feature must include the following callout block at the top of the relevant section (or at the article level if the entire article covers a REDCap+ feature):**
 
@@ -178,7 +178,7 @@ As new REDCap+ features are documented (e.g., the Project Migration Tool, REDCap
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Will REDCap Core continue to receive updates?**
 Yes. REDCap Core continues to receive weekly releases covering incremental enhancements, security patches, and bug fixes on both standard and long-term support schedules. Only major new feature modules are exclusive to REDCap+.
@@ -200,7 +200,7 @@ No. REDCap+ subscribers have full discretion over the types of research and oper
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - RC-PLUS-02 — Project Migration Tool *(planned)* (moving projects between REDCap installations)
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) Configuration (system-level admin configuration)

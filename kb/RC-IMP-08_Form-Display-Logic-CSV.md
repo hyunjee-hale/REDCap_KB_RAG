@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Form Display Logic (FDL) module supports CSV export and import of FDL rules. FDL controls which entire instruments are enabled or disabled to users based on field values or user attributes — distinct from branching logic, which operates at the field level.
 
@@ -31,7 +31,7 @@ For full coverage of Form Display Logic and its use cases, see [RC-FDL-01 — Fo
 
 ---
 
-# 2. Column Reference
+## 2. Column Reference
 
 The FDL CSV always has exactly six columns in this order:
 
@@ -50,7 +50,7 @@ The FDL CSV always has exactly six columns in this order:
 
 ---
 
-# 3. Annotated Example
+## 3. Annotated Example
 
 The file below comes from a classic project where two baseline forms are enrolled in FDL solely to suppress them as MyCap tasks, without restricting data entry access.
 
@@ -74,7 +74,7 @@ contact_info,,"[record_id]<>""""",y,y,n
 
 ---
 
-# 4. Common Mistakes
+## 4. Common Mistakes
 
 **Using uppercase `Y`/`N` for flags.** REDCap exports lowercase `y`/`n` and expects the same on import. Uppercase values will cause the row to be rejected.
 
@@ -88,7 +88,7 @@ contact_info,,"[record_id]<>""""",y,y,n
 
 ---
 
-# 5. Related Articles
+## 5. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-FDL-01 — Form Display Logic](RC-FDL-01_Form-Display-Logic.md) (full module reference)

@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers action tags designed for radio button and dropdown fields: `@RANDOMORDER`, `@HIDECHOICE`, `@SHOWCHOICE`, and `@MAXCHOICE`. These tags do not work on matrix fields (except `@MAXCHOICE`).
 
 ---
 
-# 2. @RANDOMORDER
+## 2. @RANDOMORDER
 
 Randomizes the visual order of options every time a page loads. The underlying raw values and stored data are unaffected — only the display order changes.
 
@@ -38,7 +38,7 @@ Randomizes the visual order of options every time a page loads. The underlying r
 
 ---
 
-# 3. @HIDECHOICE
+## 3. @HIDECHOICE
 
 Hides one or more specific options from a field while preserving those options in records where they were already selected.
 
@@ -65,7 +65,7 @@ Use the raw value of the option(s), not the label. Where multiple options need t
 
 ---
 
-# 4. @SHOWCHOICE
+## 4. @SHOWCHOICE
 
 The inverse of `@HIDECHOICE`. Starts with all options hidden and shows only the listed ones.
 
@@ -80,7 +80,7 @@ Use `@SHOWCHOICE` when the number of options to hide is larger than the number t
 
 ---
 
-# 5. @MAXCHOICE
+## 5. @MAXCHOICE
 
 Limits how many times a given option can be selected across all project records. Once the limit is reached, the option is greyed out and unavailable to new respondents.
 
@@ -102,7 +102,7 @@ Each entry is `raw_value=limit`. Separate multiple entries with commas.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can these tags be combined?**
 
@@ -126,7 +126,7 @@ Each entry is `raw_value=limit`. Separate multiple entries with commas.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using the option label instead of the raw value in @HIDECHOICE or @SHOWCHOICE.** These tags require the raw coded value (e.g., `'1'`, `'2'`) not the display label. If you enter the label by mistake, the tag will silently fail and all options will remain visible.
 
@@ -138,7 +138,7 @@ Each entry is `raw_value=limit`. Separate multiple entries with commas.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-04 — Checkbox Action Tags](RC-AT-04_Action-Tags-Checkbox.md)

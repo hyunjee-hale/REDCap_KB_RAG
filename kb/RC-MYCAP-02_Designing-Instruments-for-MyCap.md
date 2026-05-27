@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how to prepare REDCap instruments for use in the MyCap mobile app. Topics include which field types are supported, MyCap-specific action tags (annotations), task metadata fields, form completion status configuration, how to enable instruments for MyCap, how to configure a baseline date, and the publishing workflow. Instrument design for MyCap follows the same Online Designer or Data Dictionary workflow as standard REDCap instruments, with additional mobile-specific constraints and annotations.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **MyCap Instrument**
 
@@ -52,7 +52,7 @@ The action of pushing the current project configuration (enabled instruments, sc
 
 ---
 
-# 3. Field Type Compatibility
+## 3. Field Type Compatibility
 
 Not all REDCap field types are supported in MyCap. The following table lists compatibility:
 
@@ -79,11 +79,11 @@ Not all REDCap field types are supported in MyCap. The following table lists com
 
 ---
 
-# 4. MyCap Annotations
+## 4. MyCap Annotations
 
 MyCap annotations are action tags specific to the MyCap app. Apply them in the **Action Tags / Field Annotation** column of the Online Designer or Data Dictionary. Standard REDCap action tags are generally not honored in MyCap with the exception of `@HIDDEN`.
 
-## 4.1 Field Display Annotations
+### 4.1 Field Display Annotations
 
 | Annotation | Field type | Effect |
 |---|---|---|
@@ -91,7 +91,7 @@ MyCap annotations are action tags specific to the MyCap app. Apply them in the *
 | `@MC-FIELD-SLIDER-BASIC` | Slider | Displays the slider with fixed endpoints; participant selects a point by tapping |
 | `@MC-FIELD-SLIDER-CONTINUOUS` | Slider | Displays the slider as a continuous drag control; allows fine-grained positioning |
 
-## 4.2 Data Capture Annotations
+### 4.2 Data Capture Annotations
 
 | Annotation | Field type | Effect |
 |---|---|---|
@@ -99,7 +99,7 @@ MyCap annotations are action tags specific to the MyCap app. Apply them in the *
 | `@MC-FIELD-FILE-VIDEOCAPTURE` | File upload | Opens the device camera to capture a video; saves the video to the field |
 | `@MC-FIELD-TEXT-BARCODE` | Text | Opens the device camera in barcode/QR-code scanning mode; saves the scanned value as text |
 
-## 4.3 Geolocation Annotations
+### 4.3 Geolocation Annotations
 
 | Annotation | Field type | Effect |
 |---|---|---|
@@ -108,7 +108,7 @@ MyCap annotations are action tags specific to the MyCap app. Apply them in the *
 
 The `@LONGITUDE` and `@LATITUDE` annotations require the participant to grant location permissions to the MyCap app on their device.
 
-## 4.4 Task Metadata Annotations
+### 4.4 Task Metadata Annotations
 
 These annotations are applied to hidden fields to capture MyCap-generated information about each task instance. Add them to fields not visible to the participant (`@MC-FIELD-HIDDEN` or placed on a hidden section).
 
@@ -126,11 +126,11 @@ These annotations are applied to hidden fields to capture MyCap-generated inform
 
 ---
 
-# 5. Form Completion Status
+## 5. Form Completion Status
 
 MyCap determines whether a task has been completed by checking the REDCap form completion status of the submitted data. You must configure which status level qualifies as "done."
 
-## 5.1 Configuration
+### 5.1 Configuration
 
 1. In the MyCap section of the left menu, go to **Enable Instruments**.
 2. For each instrument, locate the **Form Completion Status** column.
@@ -138,14 +138,14 @@ MyCap determines whether a task has been completed by checking the REDCap form c
 
 > **Note:** The default status for MyCap submissions is typically "Unverified." If your workflow requires "Complete" status, a study team member must manually update the status in REDCap after reviewing the data, which will then mark the task done in the participant's app on next sync.
 
-## 5.2 Effect on Task Availability
+### 5.2 Effect on Task Availability
 
 - If the required completion status has been reached: the task is marked done and removed from the participant's active task list (unless on an Infinite or Repeating schedule).
 - If the required completion status has not been reached: the task remains available in the participant's app and they may resubmit.
 
 ---
 
-# 6. Enabling Instruments for MyCap
+## 6. Enabling Instruments for MyCap
 
 Once instruments are designed and form completion status is configured:
 
@@ -157,16 +157,16 @@ Once instruments are designed and form completion status is configured:
 
 ---
 
-# 7. Baseline Date Configuration
+## 7. Baseline Date Configuration
 
 The baseline date is an optional project-level feature that allows tasks to be scheduled relative to a meaningful date (e.g., surgery date, enrollment date, treatment start) rather than the participant's install date.
 
-## 7.1 Requirements
+### 7.1 Requirements
 
 - The baseline date field must reside in a **non-MyCap instrument** (an instrument not enabled for MyCap). Participants cannot set their own baseline date through a MyCap task.
 - The baseline date field must be a **date field** (Date validation type).
 
-## 7.2 Enabling Baseline Date
+### 7.2 Enabling Baseline Date
 
 1. In the MyCap section of the left menu, go to **Additional Settings**.
 2. Check **Use baseline date?**
@@ -176,7 +176,7 @@ The baseline date is an optional project-level feature that allows tasks to be s
    - **Yes/No today question**: asks the participant whether the baseline event happened today (e.g., "Did you have surgery today?")
    - **Past date question**: shown if the participant answers No — asks them to enter the date (e.g., "When did you have surgery?")
 
-## 7.3 Behavior
+### 7.3 Behavior
 
 - When a participant joins, MyCap checks whether a baseline date exists for their record.
 - If no baseline date is recorded, the app prompts the participant with the configured questions.
@@ -188,11 +188,11 @@ The baseline date is an optional project-level feature that allows tasks to be s
 
 ---
 
-# 8. Publishing
+## 8. Publishing
 
 Publishing pushes the current project configuration — enabled instruments, schedule, and App Settings — to all participants' devices.
 
-## 8.1 When to Publish
+### 8.1 When to Publish
 
 Publish is required after any of the following changes:
 - Enabling or disabling instruments
@@ -201,7 +201,7 @@ Publish is required after any of the following changes:
 
 > **Note:** Form Display Logic changes and Multi-Language Management (MLM) changes do **not** require publishing — they apply immediately on the participant's next sync.
 
-## 8.2 How to Publish
+### 8.2 How to Publish
 
 1. In the MyCap section of the left menu, go to **Publish MyCap Version**.
 2. Review the summary of pending changes.
@@ -211,7 +211,7 @@ Participants receive the updated configuration the next time they open the app w
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: Can I use piping inside a MyCap instrument?**
 
@@ -243,7 +243,7 @@ Participants receive the updated configuration the next time they open the app w
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Including calculated fields in MyCap instruments.** Calculated fields are silently skipped — they do not compute and they display blank. Participants may be confused. Remove calculated fields from MyCap instruments. If the calculated value must be shown to participants, use a Survey Link ([RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)).
 
@@ -259,7 +259,7 @@ Participants receive the updated configuration the next time they open the app w
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
 - [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)

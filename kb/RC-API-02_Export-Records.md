@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Records API method retrieves record data from a REDCap project. This is the primary way to programmatically read data that has been entered into your project. The method returns a list of records with the values for all or a subset of fields, instruments, events, and forms. You can export data in JSON, CSV, XML, or CDISC ODM XML format, and you can export raw values or user-friendly labels.
 
@@ -25,7 +25,7 @@ When to use this method: When you need to read record data from REDCap in an aut
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -53,9 +53,9 @@ When to use this method: When you need to read record data from REDCap in an aut
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -75,7 +75,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -93,7 +93,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -109,7 +109,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -145,7 +145,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns records in the requested format (JSON, CSV, XML, or ODM), ordered by record ID and then event ID.
 
@@ -196,7 +196,7 @@ The method returns records in the requested format (JSON, CSV, XML, or ODM), ord
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I export only specific records?**
 
@@ -224,7 +224,7 @@ The method returns records in the requested format (JSON, CSV, XML, or ODM), ord
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using the wrong content value.** The `content` parameter must always be `'record'` for this method. A common mistake is using `'records'` (plural) instead of `'record'` (singular), which will result in an API error.
 
@@ -248,7 +248,7 @@ The method returns records in the requested format (JSON, CSV, XML, or ODM), ord
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-03 — Import Records API](RC-API-03_Import-Records.md)(writing data to REDCap)

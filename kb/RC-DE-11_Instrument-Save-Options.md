@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article documents every save button available in REDCap instruments — what each option does, where it appears, and under what conditions it is available. Most save options are available in all project types; a few appear only in longitudinal projects or projects with repeated instruments. The article also covers Edit Survey Mode, which controls how survey-completed instruments are edited by staff. Understanding save options prevents navigation mistakes and helps data entry staff move efficiently between instruments, events, and records.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Save Button**
 
@@ -40,7 +40,7 @@ A single occurrence of a repeated instrument. Instruments configured to repeat c
 
 ---
 
-# 3. Save Button Locations
+## 3. Save Button Locations
 
 Save buttons appear in two locations in most instruments:
 
@@ -51,7 +51,7 @@ The exception is instruments that have been filled out as a survey. In that case
 
 ---
 
-# 4. Save Button Reference
+## 4. Save Button Reference
 
 The table below lists every save option, what it does after saving, and when it is available.
 
@@ -69,7 +69,7 @@ The table below lists every save option, what it does after saving, and when it 
 
 ---
 
-# 5. Edit Survey Mode
+## 5. Edit Survey Mode
 
 When an instrument is enabled as a survey and a participant has submitted it, the instrument displays as read-only to staff users. A colored box appears at the top of the instrument:
 
@@ -84,7 +84,7 @@ After making changes in Edit Survey Mode, use **Save & Mark Survey as Complete**
 
 ---
 
-# 6. Instance-Specific Save Options
+## 6. Instance-Specific Save Options
 
 Two save options appear exclusively when working with repeated instruments. They do not appear in non-repeated instruments, and they only appear under specific conditions even within repeated instruments.
 
@@ -96,7 +96,7 @@ Two save options appear exclusively when working with repeated instruments. They
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What is the difference between Save & Exit Form and Save & Exit Record?**
 
@@ -128,7 +128,7 @@ Two save options appear exclusively when working with repeated instruments. They
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Using Cancel instead of Save & Exit Form.** The Cancel button is positioned near the other save options and is easy to click accidentally, especially on smaller screens. Cancel discards all unsaved changes — there is no confirmation dialog. If you click Cancel in error, the only recovery is to re-enter the data.
 
@@ -142,7 +142,7 @@ Two save options appear exclusively when working with repeated instruments. They
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (prerequisite — general data entry workflow and instrument navigation)
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md) (prerequisite — understanding the Record Home Page)

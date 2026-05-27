@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers action tags that constrain, enhance, or modify the behavior of text boxes and notes boxes: `@PASSWORDMASK`, `@FORCE-MINMAX`, `@WORDLIMIT`, `@CHARLIMIT`, `@RICHTEXT`, and `@PLACEHOLDER`.
 
 ---
 
-# 2. @PASSWORDMASK
+## 2. @PASSWORDMASK
 
 Obscures text entry by replacing displayed characters with dots, similar to a password field. The underlying data is stored normally and is fully visible in reports, exports, and the Codebook — only the on-screen display is masked.
 
@@ -35,7 +35,7 @@ Obscures text entry by replacing displayed characters with dots, similar to a pa
 
 ---
 
-# 3. @FORCE-MINMAX
+## 3. @FORCE-MINMAX
 
 Text boxes with numeric or date validation can define minimum and/or maximum bounds. By default, REDCap warns users about out-of-range values but allows them to proceed. `@FORCE-MINMAX` makes that warning a hard block — users cannot save or advance until an in-range value is entered.
 
@@ -50,7 +50,7 @@ Text boxes with numeric or date validation can define minimum and/or maximum bou
 
 ---
 
-# 4. @WORDLIMIT
+## 4. @WORDLIMIT
 
 Limits the maximum number of words in a text or notes box. REDCap counts words by spaces between them ("garage door" = 2 words; "garage-door" = 1 word). The remaining word count is displayed below the field.
 
@@ -67,7 +67,7 @@ Limits the maximum number of words in a text or notes box. REDCap counts words b
 
 ---
 
-# 5. @CHARLIMIT
+## 5. @CHARLIMIT
 
 Limits the maximum number of characters in a text or notes box. All characters count (letters, spaces, punctuation). The remaining character count is displayed below the field.
 
@@ -84,7 +84,7 @@ Limits the maximum number of characters in a text or notes box. All characters c
 
 ---
 
-# 6. @RICHTEXT
+## 6. @RICHTEXT
 
 Adds a rich text toolbar to a notes box, enabling bold, italic, bullets, and other formatting options. Without this tag, notes boxes accept only plain text.
 
@@ -99,7 +99,7 @@ Adds a rich text toolbar to a notes box, enabling bold, italic, bullets, and oth
 
 ---
 
-# 7. @PLACEHOLDER
+## 7. @PLACEHOLDER
 
 Displays hint text inside an empty field. The hint appears in grey and disappears when the user starts typing. The placeholder text is never saved — it is purely a UI hint.
 
@@ -118,7 +118,7 @@ Displays hint text inside an empty field. The hint appears in grey and disappear
 
 ---
 
-# 8. Common Mistakes
+## 8. Common Mistakes
 
 **Using `@WORDLIMIT` and `@CHARLIMIT` on the same field.** These are mutually exclusive; only one can be active.
 
@@ -130,7 +130,7 @@ Displays hint text inside an empty field. The hint appears in grey and disappear
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md)

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export DAGs API method retrieves all Data Access Groups (DAGs) defined in your project. Each DAG is returned with its display name and unique group name. Use this method to automate DAG discovery, audit your DAG structure, or retrieve the list of available groups for downstream operations like user-DAG assignment or DAG deletion.
 
@@ -23,7 +23,7 @@ Data Access Groups enable role-based data segregation within a single project. T
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -34,9 +34,9 @@ Data Access Groups enable role-based data segregation within a single project. T
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests
@@ -52,7 +52,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -68,7 +68,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -83,7 +83,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -116,7 +116,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The API returns a JSON or CSV array of all DAGs in the project. Each record contains:
 
@@ -141,7 +141,7 @@ If the project has no DAGs defined, an empty array `[]` is returned.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the difference between `data_access_group_name` and `unique_group_name`?**
 
@@ -165,7 +165,7 @@ If the project has no DAGs defined, an empty array `[]` is returned.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using `data_access_group_name` in API calls instead of `unique_group_name`.** The human-readable label will not work in API operations. Always use the `unique_group_name` value (e.g., `'group_1'`, not `'Boston Site'`) in Delete DAGs, Import User-DAG Assignments, and Switch DAG methods.
 
@@ -179,7 +179,7 @@ If the project has no DAGs defined, an empty array `[]` is returned.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains DAG concepts, structure, and configuration)

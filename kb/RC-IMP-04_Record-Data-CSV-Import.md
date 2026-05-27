@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The REDCap Data Import Tool accepts a CSV file containing participant record data. Any REDCap data export in CSV format can be re-imported into the same project as-is. Partial imports — covering specific fields, specific records, or specific events — are also fully supported.
 
@@ -29,7 +29,7 @@ For a general overview of the Data Import Tool workflow, see [RC-IMP-01 — Data
 
 ---
 
-# 2. Column Reference
+## 2. Column Reference
 
 Every record data CSV — whether built from scratch or downloaded from REDCap — uses the same set of column types. The columns below appear in the order REDCap places them in a standard export.
 
@@ -48,7 +48,7 @@ Every record data CSV — whether built from scratch or downloaded from REDCap �
 
 ---
 
-# 3. Example: Longitudinal Project with a Repeating Instrument
+## 3. Example: Longitudinal Project with a Repeating Instrument
 
 The table below illustrates how a single record spans multiple rows in a longitudinal project that also has a repeating instrument (`medication_list`). Only selected columns are shown — a real export includes all project fields across all instruments, so most cells in any given row will be empty.
 
@@ -71,7 +71,7 @@ Key points illustrated by this example:
 
 ---
 
-# 4. Getting the Right Header Row
+## 4. Getting the Right Header Row
 
 Two methods reliably produce the correct column layout for your project:
 
@@ -82,7 +82,7 @@ Building the header row manually is error-prone. Always start from one of these 
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What columns do I need in my CSV file for a record data import?**
 
@@ -94,7 +94,7 @@ Building the header row manually is error-prone. Always start from one of these 
 
 ---
 
-# 6. Common Mistakes
+## 6. Common Mistakes
 
 **Assuming "Upload File" in the Data Import Tool saves the data.** The upload step only stages a preview. The data is committed only after you scroll down and click "Import Data" at the bottom of the results screen. If you navigate away after clicking "Upload File," nothing is saved.
 
@@ -106,7 +106,7 @@ Building the header row manually is error-prone. Always start from one of these 
 
 ---
 
-# 7. API Equivalent
+## 7. API Equivalent
 
 The API equivalent of the Data Import Tool CSV upload is the Import Records endpoint.
 
@@ -118,7 +118,7 @@ See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, toke
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (full workflow and import tool walkthrough)
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)

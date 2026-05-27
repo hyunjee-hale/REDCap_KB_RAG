@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Delete User Roles API method removes custom user roles from your project. You provide a list of role IDs (the `unique_role_name` values) to delete. This method deletes the role definition; users currently assigned to that role are not deleted, but they lose the role's permission template. If users need to retain access after role deletion, they must be reassigned to another role or have individual permissions set.
 
@@ -23,7 +23,7 @@ Use this method to clean up unused roles, automate role lifecycle management, or
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -34,9 +34,9 @@ Use this method to clean up unused roles, automate role lifecycle management, or
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests, json
@@ -54,7 +54,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -71,7 +71,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -86,7 +86,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -121,13 +121,13 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns a count of roles deleted. For example: `1` means one role was removed from the project. If a role ID does not exist in the project, it is ignored and does not affect the response.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What happens to users assigned to a deleted role?**
 
@@ -151,7 +151,7 @@ On success, the API returns a count of roles deleted. For example: `1` means one
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Deleting a role without reassigning its users.** Users assigned to a deleted role will lose the permissions granted by that role. Before deleting a role in production, ensure that affected users are reassigned to alternative roles or given individual permissions. Consider running an export to identify affected users.
 
@@ -165,7 +165,7 @@ On success, the API returns a count of roles deleted. For example: `1` means one
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains role-based access)

@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the optional de-identification settings and data
 formatting options available in REDCap's export dialog.
@@ -26,7 +26,7 @@ level — see [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPR
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **De-identification**
 
@@ -69,28 +69,28 @@ files to display incorrectly in spreadsheet applications.
 
 ---
 
-# 3. De-identification Options
+## 3. De-identification Options
 
 De-identification options appear in the export dialog under a dedicated
 section. Options available to a user depend on their Data Export Rights
 level — users with De-identified rights have these options pre-checked
 and locked; users with Full Data Set rights have them optional.
 
-## 3.1 Known Identifier Options
+### 3.1 Known Identifier Options
 
 | **Option** | **What it does** |
 | --- | --- |
 | **Remove all Identifier Fields** | Removes all variables flagged as identifiers from the export. This is the simplest and most reliable way to de-identify an export, provided the project designer has correctly flagged all sensitive fields. |
 | **Hash the Record ID Field** | Replaces the Record ID with a hashed (scrambled) value. Use this only if the Record ID itself contains an identifier such as a medical record number, phone number, or social security number. If the Record ID is an auto-assigned integer, hashing is unnecessary. |
 
-## 3.2 Free-Form Text Options
+### 3.2 Free-Form Text Options
 
 | **Option** | **What it does** |
 | --- | --- |
 | **Remove unvalidated Text fields** | Removes all text box fields that have no validation rule applied. Validated text fields (e.g., those with date, number, or email validation) are still included. Use this when unvalidated text fields may contain participant-entered narrative content. |
 | **Remove Notes/Essay box fields** | Removes all Notes box fields from the export. Notes fields can contain large amounts of free-form text that may include identifying information. This option errs on the side of caution by removing all notes fields regardless of content. |
 
-## 3.3 Date and Datetime Options
+### 3.3 Date and Datetime Options
 
 For date de-identification, only one of the two options can be selected.
 
@@ -105,7 +105,7 @@ For date de-identification, only one of the two options can be selected.
 
 ---
 
-# 4. Advanced Data Formatting Options
+## 4. Advanced Data Formatting Options
 
 These options control how the exported data is structured and formatted.
 They appear below the de-identification section in the export dialog.
@@ -117,7 +117,7 @@ The defaults are appropriate for most exports.
 | **Set CSV delimiter character** | Changes the character used to separate values in CSV exports. The default is a comma. If your analysis software or regional settings expect a semicolon or tab delimiter, set this accordingly. Mismatched delimiters cause CSV files to open as a single column in spreadsheet applications. |
 | **Force all numbers into a specified decimal format?** | Standardizes the decimal separator used in numeric values. Use this when your analysis software or regional settings expect a period (.) or comma (,) as the decimal character. Mismatched decimal formats cause numeric fields to be read as text in some applications. |
 
-## 4.1 Additional Options (Feature-Dependent)
+### 4.1 Additional Options (Feature-Dependent)
 
 When certain project features are enabled, additional options appear in
 the export dialog automatically. For example, if one or more Data Access
@@ -127,7 +127,7 @@ options are contextual and only appear when relevant.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 | *My de-identification options are grayed out and pre-checked. Why can't I change them?* | Your Data Export Rights level for one or more instruments is set to De-identified or Remove All Identifier Fields. At these levels, certain de-identification options are mandatory and cannot be unchecked. Contact your project administrator if you need a higher access level. |
 | --- | --- |
@@ -139,7 +139,7 @@ options are contextual and only appear when relevant.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Hashing the Record ID when it is an auto-assigned integer.** Record ID
 hashing is only meaningful when the Record ID contains a real
@@ -164,7 +164,7 @@ confirm the expected delimiter with the recipient before exporting.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (the full export
     process)

@@ -14,19 +14,19 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Top Usage Report identifies the most resource-intensive projects, users, pages, URLs, External Modules, and cron jobs over a specified time period. It is accessible under "Dashboards & Activity" in the Control Center sidebar. Its primary purpose is to help diagnose server performance issues by pinpointing where load is concentrated.
 
 ---
 
-# 2. When to Use
+## 2. When to Use
 
 This report is most useful when REDCap is experiencing performance issues such as slow response times or crash messages. It helps answer questions like "which projects or users are consuming the most server resources right now?" By identifying resource-heavy components, administrators can take targeted action to resolve bottlenecks or investigate unexpected spikes in usage.
 
 ---
 
-# 3. Important Caveats
+## 3. Important Caveats
 
 The Top Usage Report includes several important limitations and clarifications to understand before interpreting results:
 
@@ -40,7 +40,7 @@ The Top Usage Report includes several important limitations and clarifications t
 
 ---
 
-# 4. Filters
+## 4. Filters
 
 Administrators can configure the report using the following parameters:
 
@@ -52,7 +52,7 @@ Administrators can configure the report using the following parameters:
 
 ---
 
-# 5. Report Contents
+## 5. Report Contents
 
 The report surfaces the "top" entries across multiple categories:
 
@@ -68,7 +68,7 @@ The report surfaces the "top" entries across multiple categories:
 
 ---
 
-# 6. Relationship to Other Tools
+## 6. Relationship to Other Tools
 
 The Top Usage Report is one of several tools available for performance monitoring:
 
@@ -81,7 +81,7 @@ Together, these tools provide multiple perspectives on REDCap system performance
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: If a project shows up in the Top Usage Report with high CPU time, does that mean there is a bug?**
 No. High usage simply means the project is being actively used. Many active research projects will appear in top usage reports because they legitimately have many users, records, and transactions. A project appearing in the top report is expected behavior for busy instances.
@@ -100,7 +100,7 @@ No. The report tracks many HTTP requests but not all. For a complete record of a
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Interpreting high usage as a performance problem.** A project appearing in the "Most active projects" list does not indicate a malfunction or problem — it simply means that project is being actively used. High activity is normal and expected. Only investigate further if you are experiencing actual performance issues (slow response times, timeouts, crashes) and the report helps you pinpoint the source.
 
@@ -110,7 +110,7 @@ No. The report tracks many HTTP requests but not all. For a complete record of a
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-12 — Control Center: User Activity Log](RC-CC-12_User-Activity-Log.md)
 - [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)

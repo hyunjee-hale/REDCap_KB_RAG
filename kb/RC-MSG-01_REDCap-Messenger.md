@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap Messenger — a secure, built-in chat and file-sharing platform available to all REDCap users. Messenger allows users to send direct messages to individuals or communicate in group conversations without leaving REDCap. It is HIPAA-compliant, institution-hosted, and accessible from both the My Projects page and from within any individual project.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **REDCap Messenger**
 
@@ -52,35 +52,35 @@ A non-message notification that appears in the Messenger panel, sent either by R
 
 ---
 
-# 3. Accessing Messenger
+## 3. Accessing Messenger
 
-## 3.1 From the My Projects Page
+### 3.1 From the My Projects Page
 
 Messenger is accessible from the top navigation bar on the My Projects page. Click **Messenger** in the top navigation to open the Messenger panel on the left side of the screen.
 
-## 3.2 From Within a Project
+### 3.2 From Within a Project
 
 When working inside any REDCap project, Messenger appears near the top of the left-hand project menu. Clicking it opens the same Messenger panel — all conversations are global to your REDCap account, not scoped to a single project.
 
-## 3.3 Opening and Closing the Panel
+### 3.3 Opening and Closing the Panel
 
 Clicking the Messenger link opens the panel as an overlay on the left side of the page. To close it, click the **X** at the top right of the panel. Messenger will alert you to new messages without requiring the panel to remain open.
 
 ---
 
-# 4. Creating and Managing Conversations
+## 4. Creating and Managing Conversations
 
-## 4.1 Creating a New Conversation
+### 4.1 Creating a New Conversation
 
 Any REDCap user can create a new conversation. When creating one, you automatically become its conversation administrator. From the Messenger panel, use the option to start a new conversation, give it a title, and add participants.
 
 > **Important:** Avoid placing PHI or identifying information in a conversation's **title**. Titles are more broadly visible within the Messenger interface than message content. Place sensitive information only within the body of messages, where access is restricted to conversation members.
 
-## 4.2 Adding Members and Granting Administrator Rights
+### 4.2 Adding Members and Granting Administrator Rights
 
 As a conversation administrator, you can add other REDCap users to the conversation at any time. You may also grant administrator privileges to any member, giving them the same management capabilities as the conversation creator.
 
-## 4.3 User Roles Within a Conversation
+### 4.3 User Roles Within a Conversation
 
 There are exactly two roles within any conversation:
 
@@ -89,57 +89,57 @@ There are exactly two roles within any conversation:
 | Conversation Administrator | Add or remove members; rename the conversation; archive or delete the conversation; post messages and attachments |
 | Conversation Member | View and post messages and attachments only |
 
-## 4.4 Sharing Files and Images
+### 4.4 Sharing Files and Images
 
 Documents and images can be uploaded and shared directly within any conversation. There is no need to use email or external file-sharing services for project-related files. Attachments are stored securely on the REDCap server alongside the rest of your data.
 
 ---
 
-# 5. Messaging Features
+## 5. Messaging Features
 
-## 5.1 Tagging Users with @Mentions
+### 5.1 Tagging Users with @Mentions
 
 In a group conversation, you can draw a specific user's attention by including `@username` anywhere in your message text — for example: *"Please review this, @jsmith."* The tagged user will be prioritized in any email notification Messenger sends if they are not currently logged in.
 
-## 5.2 Marking Messages as Important
+### 5.2 Marking Messages as Important
 
 When composing a message, a **Mark as important** checkbox is available below the text field. Checking it flags the message as important or urgent. Like @mentions, important messages receive priority treatment in offline email notifications.
 
 ---
 
-# 6. Notifications
+## 6. Notifications
 
-## 6.1 Email Notifications for Unread Messages
+### 6.1 Email Notifications for Unread Messages
 
 If you receive a message while you are not logged in to REDCap, Messenger will send an email notification to your registered address after a short delay. The email notifies you that unread messages are waiting — it does **not** include the message content. You must log in to REDCap to read them.
 
-## 6.2 Changing Notification Preferences
+### 6.2 Changing Notification Preferences
 
 Email notification settings for Messenger are managed in your user profile. Navigate to the **Profile** page (accessible from the top right of the My Projects page), and look for the Messenger notification options at the bottom of the page.
 
-## 6.3 System Notifications
+### 6.3 System Notifications
 
 From time to time, automated notices from REDCap itself or direct messages from your REDCap Administrators will appear in the Messenger panel. These may include announcements about new features, scheduled maintenance, or other institutional communications. System notifications do **not** generate email alerts — they are only visible when you open the Messenger panel.
 
 ---
 
-# 7. Mobile and Compliance
+## 7. Mobile and Compliance
 
-## 7.1 Mobile Access
+### 7.1 Mobile Access
 
 REDCap Messenger does not have a dedicated mobile app, but it is fully functional through a mobile browser. Log in to REDCap on your smartphone or tablet as you normally would, and Messenger will behave the same as on a desktop.
 
-## 7.2 Security and Compliance
+### 7.2 Security and Compliance
 
 Messenger is hosted entirely on your institution's REDCap server. Messages are not routed through any third-party service. This design means Messenger can be used in the same compliance environments as REDCap itself, including HIPAA, GCP, 21 CFR Part 11, and FISMA.
 
-## 7.3 Who Can Use Messenger
+### 7.3 Who Can Use Messenger
 
 Messenger is intended for communication between REDCap users only. It cannot be used to contact survey participants or individuals who do not have a REDCap account at your institution.
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Can I use REDCap Messenger to send messages to study participants?**
 
@@ -171,7 +171,7 @@ Messenger is intended for communication between REDCap users only. It cannot be 
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Putting PHI in conversation titles.** Conversation titles are displayed more prominently in the Messenger interface than message content, making them more likely to be seen by people browsing the panel. PHI and identifying information should go in the body of messages only — not in titles.
 
@@ -183,7 +183,7 @@ Messenger is intended for communication between REDCap users only. It cannot be 
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-PROF-01 — My Profile: User Profile Settings](RC-PROF-01_My-Profile-User-Profile-Settings.md) (where Messenger email notification preferences are configured)
 - [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (for automated notifications to project team members or participants)

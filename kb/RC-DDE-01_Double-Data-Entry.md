@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Double Data Entry (DDE) is a data quality feature where every record is entered independently by two separate users, then compared and merged by a reviewer. The goal is to catch transcription errors: when both entries agree, confidence in the data is high; when they disagree, the discrepancy is surfaced and resolved before the data is finalized. DDE is common in clinical trials and any study context where the cost of a transcription error is high.
 
@@ -22,7 +22,7 @@ This article covers what DDE is, how to enable it, the three user roles it intro
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Double Data Entry (DDE)**
 
@@ -46,9 +46,9 @@ The REDCap interface used by the reviewer to compare and merge DDE copies. It pr
 
 ---
 
-# 3. Enabling Double Data Entry
+## 3. Enabling Double Data Entry
 
-### 3.1 Enabling the Feature
+#### 3.1 Enabling the Feature
 
 DDE is disabled by default and cannot be enabled by project owners or designers. It is controlled exclusively through a **project-specific setting** in the REDCap Control Center, which is only accessible to REDCap system administrators. If you want DDE enabled for your project, you must contact your REDCap administrator and request it.
 
@@ -56,13 +56,13 @@ Once a system administrator enables DDE for a project, the **Data Comparison Too
 
 > **Important:** Once DDE is enabled and data collection has begun, disabling it is not recommended. Contact your REDCap administrator before requesting any change to this setting on a live project.
 
-### 3.2 Effect on Existing Records
+#### 3.2 Effect on Existing Records
 
 If DDE is enabled after records already exist in the project, those records do not automatically get split into two copies. The DDE workflow applies to newly created records going forward. Pre-existing records remain in a single-copy state and cannot participate in the standard DDE merge workflow.
 
 ---
 
-# 4. DDE User Roles
+## 4. DDE User Roles
 
 Enabling DDE adds a new setting to every user's configuration in **User Rights**. There are three DDE-specific roles:
 
@@ -78,9 +78,9 @@ Multiple users can share the same DDE role. For example, a team of five data ent
 
 ---
 
-# 5. Workflow: From Creation to Merge
+## 5. Workflow: From Creation to Merge
 
-### 5.1 Record Creation
+#### 5.1 Record Creation
 
 A user creates a new record in the usual way (Add/Edit Records → Add new record). REDCap creates both copies simultaneously: `[recordID]--1` and `[recordID]--2`.
 
@@ -90,13 +90,13 @@ A user creates a new record in the usual way (Add/Edit Records → Add new recor
 
 There is no enforced sequence — both copies can be entered in any order and are independent of each other. REDCap does not prevent one copy from being complete while the other is still empty.
 
-### 5.2 First and Second Data Entry
+#### 5.2 First and Second Data Entry
 
 Each data entry user works through their copy as they would in a normal project: opening instruments, entering data, and saving. The standard instrument save options (incomplete, unverified, complete) apply to each copy independently.
 
 Neither data entry user can see what the other has entered. This independence is intentional — it prevents one user's entries from influencing the other's, which would undermine the error-detection purpose of DDE.
 
-### 5.3 Merging Records (Reviewer Workflow)
+#### 5.3 Merging Records (Reviewer Workflow)
 
 Once both copies are ready to be reviewed, the reviewer uses the **Data Comparison Tool**:
 
@@ -115,7 +115,7 @@ REDCap saves the resolved values as the **merged record** (the record without a 
 
 > **Best practice:** Resolve all discrepancies in a single session. REDCap requires that all flagged fields be resolved before the merge can be saved — any unresolved field will prevent saving.
 
-### 5.4 Exporting Merged Data
+#### 5.4 Exporting Merged Data
 
 Only merged records are included in standard data exports. The `--1` and `--2` copies are excluded from exports by default. If a record has not yet been merged, it will not appear in the export output.
 
@@ -123,7 +123,7 @@ This means that a project's exported dataset reflects only the reconciled, revie
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Do both data entry users have to finish their copy before the reviewer can merge?**
 
@@ -151,7 +151,7 @@ This means that a project's exported dataset reflects only the reconciled, revie
 
 ---
 
-# 7. Limitations
+## 7. Limitations
 
 **Repeating instruments and events have partial support only.** The Data Comparison Tool does not fully support the Repeating Instruments and Events feature. If repeating instruments or repeating events are enabled in the project, comparison and merging is limited to **Instance #1** only. All other repeating instances (Instance #2, #3, etc.) are ignored by the tool and will not be compared or merged. Non-repeating data is not affected and can be compared and merged normally. If your project relies heavily on repeated data collection, evaluate this limitation carefully before using DDE.
 
@@ -167,7 +167,7 @@ This means that a project's exported dataset reflects only the reconciled, revie
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Not assigning DDE roles before data collection begins.** When DDE is first enabled by the administrator, users retain their standard access but have no DDE role assigned. A user without a DDE role assigned may see both copies or no copies depending on REDCap version and configuration. Once the administrator confirms DDE is active, assign DDE roles to all project users before data collection starts.
 
@@ -181,7 +181,7 @@ This means that a project's exported dataset reflects only the reconciled, revie
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills required before using DDE)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (audit trail behavior in DDE; the --1 and --2 copies each have their own audit trail)

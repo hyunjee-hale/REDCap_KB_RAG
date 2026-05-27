@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to write branching logic for structured field
 types — fields with a predefined set of options. It covers the concept
@@ -24,7 +24,7 @@ reference individual checkbox options.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Structured Field**
 
@@ -62,13 +62,13 @@ Each sub-variable has a value of 1 (checked) or 0 (unchecked).
 
 ---
 
-# 3. Raw Values --- What They Are and How to Find Them
+## 3. Raw Values --- What They Are and How to Find Them
 
 Every option in a radio button, dropdown, or checkbox field is defined
 using a 'raw value, label' format. The raw value is what REDCap stores
 in the database and what you must use in logic statements.
 
-## 3.1 How REDCap Defines Options
+### 3.1 How REDCap Defines Options
 
 In the Online Designer, options are entered one per line in the format:
 
@@ -88,7 +88,7 @@ Raw values are typically integers, but they can be any text string. The
 raw value is **unique within the field** — no two options in the same
 field can share a raw value.
 
-## 3.2 Where to Look Up Raw Values
+### 3.2 Where to Look Up Raw Values
 
 - **Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)):** The Codebook displays all options for every
     field in human-readable format, including raw values. This is the
@@ -106,13 +106,13 @@ field can share a raw value.
 
 ---
 
-# 4. Single-Choice Fields in Branching Logic
+## 4. Single-Choice Fields in Branching Logic
 
 Single-choice fields store exactly one value — the raw value of the
 selected option. Writing logic for them follows the standard atomic
 statement pattern.
 
-## 4.1 Supported Single-Choice Field Types
+### 4.1 Supported Single-Choice Field Types
 
 | **Field Type** | **Stored Value** | **Logic Example** |
 | --- | --- | --- |
@@ -123,7 +123,7 @@ statement pattern.
 | Slider | The numeric position value selected | [pain_score]>=7 |
 | Calculated field | The numeric result of the calculation | [bmi]>=25 |
 
-## 4.2 Bonus: File Upload and Signature Fields
+### 4.2 Bonus: File Upload and Signature Fields
 
 File Upload and Signature fields do not store a traditional value, but
 you can use them in logic to check whether a file has been attached or a
@@ -142,13 +142,13 @@ the file.
 
 ---
 
-# 5. Checkbox Fields in Branching Logic
+## 5. Checkbox Fields in Branching Logic
 
 Checkbox fields require a different syntax because they store data
 differently from all other field types. Understanding this distinction
 is essential for writing correct checkbox logic.
 
-## 5.1 How Checkboxes Store Data
+### 5.1 How Checkboxes Store Data
 
 A checkbox field with N options creates N separate sub-variables in the
 REDCap dataset — one per option. Each sub-variable stores only two
@@ -171,7 +171,7 @@ Example: a checkbox field named \[conditions\] with three options:
 This creates three sub-variables: \[conditions(1)\], \[conditions(2)\],
 \[conditions(3)\]. Each is independently 0 or 1.
 
-## 5.2 Checkbox Sub-Variable Syntax
+### 5.2 Checkbox Sub-Variable Syntax
 
 To reference a specific checkbox option in logic, place the raw value of
 that option inside parentheses within the variable name:
@@ -188,7 +188,7 @@ Examples:
 [conditions(3)]='0' // Is the Cancer option NOT checked?  
 ```
 
-## 5.3 Comparing Radio vs. Checkbox Syntax
+### 5.3 Comparing Radio vs. Checkbox Syntax
 
 | **Scenario** | **Radio Button** | **Checkbox** |
 | --- | --- | --- |
@@ -196,7 +196,7 @@ Examples:
 | Option with raw value 12 is NOT selected | [radio]<>12 | [checkbox(12)]='0' |
 | Field has no selection (empty) | [radio]='' | Not directly testable as a single expression — check each option separately |
 
-## 5.4 Practical Checkbox Logic Patterns
+### 5.4 Practical Checkbox Logic Patterns
 
 Show a follow-up field when at least one of several checkbox options is
 checked:
@@ -231,7 +231,7 @@ never shown)
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: How do I find the raw values for a field's options?**
 
@@ -282,7 +282,7 @@ are affected.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 - Using the display label instead of the raw value:
     \[gender\]='Male' will not work if 'Male' is a label and '1'
@@ -311,7 +311,7 @@ are affected.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)(prerequisite — covers
     operators, quotes, brackets)

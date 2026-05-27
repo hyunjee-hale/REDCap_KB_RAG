@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Automated Survey Invitations (ASI) module supports CSV export and import of invitation configurations. This allows bulk editing of invitation schedules outside of REDCap and copying a complex invitation setup from one project to another.
 
@@ -31,7 +31,7 @@ For full coverage of configuring ASIs through the REDCap UI, see [RC-SURV-06 —
 
 ---
 
-# 2. Column Reference
+## 2. Column Reference
 
 | **Column** | **Values / Format** | **Notes** |
 |---|---|---|
@@ -71,7 +71,7 @@ For full coverage of configuring ASIs through the REDCap UI, see [RC-SURV-06 —
 
 ---
 
-# 3. Timing Modes (`condition_send_time_option`)
+## 3. Timing Modes (`condition_send_time_option`)
 
 | **Mode** | **Active columns** | **Behavior** |
 |---|---|---|
@@ -83,7 +83,7 @@ For full coverage of configuring ASIs through the REDCap UI, see [RC-SURV-06 —
 
 ---
 
-# 4. Common Mistakes
+## 4. Common Mistakes
 
 **Quote escaping in logic.** When `condition_logic` contains an empty-string comparison (`""`), the raw CSV value will have doubled double-quotes — `[record_id]<>""` appears as `[record_id]<>""""` in the file. Spreadsheet applications handle this transparently; plain-text editors will show the raw encoding and can corrupt it.
 
@@ -95,7 +95,7 @@ For full coverage of configuring ASIs through the REDCap UI, see [RC-SURV-06 —
 
 ---
 
-# 5. Related Articles
+## 5. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-SURV-06 — Automated Survey Invitations (ASI)](RC-SURV-06_Automated-Survey-Invitations.md)(full module reference)

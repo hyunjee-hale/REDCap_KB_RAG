@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers two related areas of the MyCap project configuration: App Settings and Participant Management. App Settings control how the app presents itself to participants — including the About pages, Contacts, Links, Theme, and Notification settings. Participant Management is the central hub for tracking who has joined, sending messages and announcements, and troubleshooting sync issues. Both are accessed from the MyCap section of the left-hand project menu.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **App Settings**
 
@@ -68,11 +68,11 @@ The action of pushing the current App Settings and project configuration to part
 
 ---
 
-# 3. App Settings
+## 3. App Settings
 
 App Settings are accessed from **MyCap > App Settings** in the left-hand project menu. All App Settings changes require publishing before taking effect on participants' devices.
 
-## 3.1 About Pages
+### 3.1 About Pages
 
 About pages provide participants with information about the study. They appear in the app's project information section.
 
@@ -83,7 +83,7 @@ About pages provide participants with information about the study. They appear i
 
 > **Note:** About pages are static image-based pages. They cannot include interactive elements or dynamic content.
 
-## 3.2 Contacts
+### 3.2 Contacts
 
 The Contacts section allows the study team to provide participant-facing contact information.
 
@@ -91,7 +91,7 @@ The Contacts section allows the study team to provide participant-facing contact
 - **Do not include MyCap or Vanderbilt contact information.** This section is for study-specific contacts only. Participants should contact study staff, not MyCap's development team.
 - Contacts appear in the app under the project's contact section, giving participants a way to reach study staff directly from the app.
 
-## 3.3 Links
+### 3.3 Links
 
 The Links section allows the study team to add web links that participants can access from within the app.
 
@@ -101,14 +101,14 @@ The Links section allows the study team to add web links that participants can a
   - Append the **participant code** to the URL for participant-level identification.
   - This enables integration with external participant portals or result websites that need to identify the study and/or individual participant.
 
-## 3.4 Theme
+### 3.4 Theme
 
 The Theme setting allows customization of the app's primary color using Material Design color options.
 
 - Available on **iOS only**. Android does not support MyCap theme customization.
 - The selected theme color is applied to the app's interface elements (buttons, highlights) for the project.
 
-## 3.5 Notification Settings
+### 3.5 Notification Settings
 
 Controls when MyCap sends push notifications to participants when new tasks become available.
 
@@ -119,7 +119,7 @@ Controls when MyCap sends push notifications to participants when new tasks beco
 
 ---
 
-# 4. Publishing App Settings Changes
+## 4. Publishing App Settings Changes
 
 After making any change to App Settings (About, Contacts, Links, Theme, Notification Settings):
 
@@ -131,11 +131,11 @@ Participants receive the updated App Settings on their next app open with intern
 
 ---
 
-# 5. Participant Management
+## 5. Participant Management
 
 Participant Management is accessed from **MyCap > Participant Management** in the left-hand project menu. It serves as the central hub for all participant-level activity in MyCap.
 
-## 5.1 Participant Status Overview
+### 5.1 Participant Status Overview
 
 The Participant Management table shows a row for each record in the project with MyCap-relevant status information:
 
@@ -149,7 +149,7 @@ The Participant Management table shows a row for each record in the project with
 | Messages | Number of sent messages |
 | Sync Issues | Flag if sync errors are present |
 
-## 5.2 Invitations
+### 5.2 Invitations
 
 From Participant Management, you can view whether a participant has joined. For participants who have not yet joined:
 
@@ -158,7 +158,7 @@ From Participant Management, you can view whether a participant has joined. For 
 
 For automated invitation workflows, see [RC-MYCAP-04 — MyCap: Participant Onboarding](RC-MYCAP-04_Participant-Onboarding.md) — Participant Onboarding.
 
-## 5.3 Sending Messages
+### 5.3 Sending Messages
 
 Messages are direct communications to specific participants. They appear in the participant's app as a message notification.
 
@@ -175,7 +175,7 @@ Messages are direct communications to specific participants. They appear in the 
 
 The participant receives a push notification and the message appears in the MyCap app's messages section.
 
-## 5.4 Sending Announcements
+### 5.4 Sending Announcements
 
 Announcements are broadcast to all participants in the project simultaneously.
 
@@ -191,7 +191,7 @@ All currently enrolled participants receive the announcement as a push notificat
 - Sending holiday or seasonal messages.
 - Communicating maintenance windows.
 
-## 5.5 Troubleshooting Sync Issues
+### 5.5 Troubleshooting Sync Issues
 
 If a participant's data fails to sync correctly, a sync issue flag appears in their row in Participant Management.
 
@@ -209,7 +209,7 @@ If a participant's data fails to sync correctly, a sync issue flag appears in th
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can I customize the notification time per participant?**
 
@@ -241,7 +241,7 @@ If a participant's data fails to sync correctly, a sync issue flag appears in th
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Including MyCap or Vanderbilt contact information in the Contacts section.** The Contacts section is for study-specific contacts only. Do not include MyCap support or Vanderbilt University contact details. Participants with app technical issues should be directed to the study team, who can then contact REDCap support if needed.
 
@@ -255,7 +255,7 @@ If a participant's data fails to sync correctly, a sync issue flag appears in th
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-MYCAP-01 — MyCap: Overview & Enabling](RC-MYCAP-01_MyCap-Overview-and-Enabling.md)
 - [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(publishing workflow)

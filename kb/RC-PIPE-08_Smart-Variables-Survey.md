@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Survey smart variables return information about surveys in REDCap — including survey links, access codes, timestamps for when surveys were started and completed, and the total time spent completing a survey. These variables are especially useful in survey invitation emails, confirmation messages, and field notes within surveys. Use them to dynamically generate survey URLs, reference participant progress, and personalize survey communications based on when participants engaged with the form.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Survey**
 
@@ -48,7 +48,7 @@ The elapsed time from survey start to completion (or from start to current time 
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -69,7 +69,7 @@ The elapsed time from survey start to completion (or from start to current time 
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Survey URL and Link Parameters**
 
@@ -128,7 +128,7 @@ Survey timestamps are most meaningful after a survey has been started or complet
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I send a participant a link to a survey in an email invitation?**
 
@@ -173,7 +173,7 @@ If the survey has not been completed, the variable will be blank.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Omitting the instrument name when it is not assumed.** Inside a survey invitation, you can use `[survey-link]` or `[survey-access-code]` without specifying an instrument. However, in field labels, emails, and other contexts outside the invitation, you must include the instrument: `[survey-link:enrollment_survey]` not just `[survey-link]`. Omitting it will cause the smart variable to return blank.
 
@@ -191,7 +191,7 @@ If the survey has not been completed, the variable will be blank.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(event prefixes and instance qualifiers)

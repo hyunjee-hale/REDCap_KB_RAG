@@ -20,13 +20,13 @@ When enabled, REDCap runs a nightly search using the Principal Investigators (PI
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Publication Matching helps research institutions track and document scholarly output from REDCap projects by automatically discovering publications associated with project Principal Investigators. The system scans PubMed nightly, identifies potential matches, and can notify investigators about publications linked to their research. This is particularly useful for institutions that need to report research productivity or maintain publication records for regulatory and grant compliance purposes.
 
 ---
 
-# 2. Eligibility Requirements
+## 2. Eligibility Requirements
 
 Not all projects participate in Publication Matching. A project must meet **both** of the following criteria:
 
@@ -37,7 +37,7 @@ Additionally, REDCap uses the **project's creation date** as the lower date boun
 
 ---
 
-# 3. Principal Investigator (PI) Data
+## 3. Principal Investigator (PI) Data
 
 Each qualifying project should have PI information associated with it. The following fields are tracked per PI:
 
@@ -53,18 +53,18 @@ A PI is only included in nightly PubMed searches when their record is complete (
 
 ---
 
-# 4. Module Tabs
+## 4. Module Tabs
 
 The Publication Matching page is organized into five tabs:
 
-## 4.1 Setup
+### 4.1 Setup
 
 General configuration for the module. Key settings include:
 
 - **Enable/disable Publication Matching** — toggles the entire module
 - **P.I. Emailing** — controls whether PIs receive email notifications about matched publications. PIs are **not** emailed until this setting is explicitly enabled, even if the module is running
 
-## 4.2 To-Do List
+### 4.2 To-Do List
 
 Displays projects whose PI records are incomplete and therefore excluded from nightly searches. The count of items requiring attention is shown in parentheses next to the tab label (e.g., *To-Do List (349)*).
 
@@ -73,24 +73,24 @@ Administrators use this tab to:
 - Fill in or correct PI information before the next nightly run
 - Copy PI data from an existing PI record using the autocomplete search
 
-## 4.3 Manage Projects
+### 4.3 Manage Projects
 
 Allows administrators to review and edit PI associations for individual projects. Provides:
 - A project selector to navigate between qualifying projects
 - PI name and contact fields, with validation highlighting for missing or malformed entries
 - An autocomplete search field to copy data from an existing PI record to avoid re-entry
 
-## 4.4 P.I.-Pub Matches
+### 4.4 P.I.-Pub Matches
 
 Displays matched publications organized by PI. Use this tab to review which publications have been associated with specific investigators.
 
-## 4.5 Project-Pub Matches
+### 4.5 Project-Pub Matches
 
 Displays matched publications organized by REDCap project. Use this tab to review which publications have been associated with specific projects.
 
 ---
 
-# 5. Nightly Search Process
+## 5. Nightly Search Process
 
 REDCap runs the PubMed search automatically each night. The search uses:
 - The PI's last name and first name (and alias, if provided)
@@ -101,7 +101,7 @@ Results are added to the P.I.-Pub Matches and Project-Pub Matches tabs for revie
 
 ---
 
-# 6. PI Email Notifications
+## 6. PI Email Notifications
 
 When **P.I. Emailing** is enabled in the Setup tab, matched PIs receive email notifications about publications that REDCap has identified as potentially associated with their projects. Emails are sent from the REDCap system and include information about the matched publication for the PI to review.
 
@@ -109,7 +109,7 @@ When **P.I. Emailing** is enabled in the Setup tab, matched PIs receive email no
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Why do some of my research projects not appear in the Publication Matching module?**
 Projects must meet two eligibility criteria: (1) the project's purpose must be set to "Research" in project settings, and (2) the project must be in Production status. Development-mode projects and projects with other purposes (e.g., QA, Training) are excluded. Check each project's settings to confirm it meets both requirements.
@@ -128,7 +128,7 @@ Yes. All matched publications are surfaced for administrator review in the P.I.-
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Enabling PI emailing before completing PI records.** PI emailing is disabled by default. If you enable it before ensuring that all PI records are complete (first name, last name, valid email), PIs may receive emails with incomplete or incorrect information about publication matches. Always complete and verify PI data in the To-Do List and Manage Projects tabs before enabling PI emailing.
 
@@ -138,7 +138,7 @@ Yes. All matched publications are surfaced for administrator review in the P.I.-
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-21 — Control Center: Overview & Navigation](RC-CC-21_Control-Center-Overview.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

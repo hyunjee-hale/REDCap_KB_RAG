@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap offers CSV-based upload and download for many areas of a project — not just participant data. Knowing which settings can be managed via file upload lets you work more efficiently on large projects and move configurations between projects without rebuilding them by hand.
 
@@ -25,7 +25,7 @@ This article is a comprehensive index of every REDCap setting that supports CSV 
 
 ---
 
-# 2. Quick Reference Table
+## 2. Quick Reference Table
 
 | **What you're uploading** | **Location in REDCap** | **Upload behavior** | **Rights required** | **Format reference** |
 |---|---|---|---|---|
@@ -52,9 +52,9 @@ This article is a comprehensive index of every REDCap setting that supports CSV 
 
 ---
 
-# 3. Project Structure
+## 3. Project Structure
 
-## 3.1 Data Dictionary
+### 3.1 Data Dictionary
 
 **Location:** Project Setup → "Data Collection Instruments" section → Data Dictionary button; or the Online Designer header.
 
@@ -68,7 +68,7 @@ This article is a comprehensive index of every REDCap setting that supports CSV 
 
 ---
 
-# 4. Longitudinal Setup (Arms, Events, Instrument-Event Mappings)
+## 4. Longitudinal Setup (Arms, Events, Instrument-Event Mappings)
 
 Arms, events, and instrument-event mappings are always used together and must be uploaded in sequence. The column reference, upload order, and common mistakes for all three are covered in a single dedicated article.
 
@@ -76,9 +76,9 @@ Arms, events, and instrument-event mappings are always used together and must be
 
 ---
 
-# 5. User Access & DAGs
+## 5. User Access & DAGs
 
-## 5.1 Users, User Roles, and User–Role Assignments
+### 5.1 Users, User Roles, and User–Role Assignments
 
 **Location:** User Rights → "Upload or download users, roles, and assignments" button (top right of the User Rights page).
 
@@ -92,7 +92,7 @@ Arms, events, and instrument-event mappings are always used together and must be
 
 ---
 
-## 5.2 Data Access Groups (DAGs) and User–DAG Assignments
+### 5.2 Data Access Groups (DAGs) and User–DAG Assignments
 
 **Location:** Applications → DAGs (or User Rights → Data Access Group tab) → "Upload or download DAGs/User-DAG assignments" button.
 
@@ -119,7 +119,7 @@ Arms, events, and instrument-event mappings are always used together and must be
 
 ---
 
-# 6. Records (Participant Data)
+## 6. Records (Participant Data)
 
 **Location:** Applications → Data Import Tool.
 
@@ -129,9 +129,9 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-# 7. Other Project Configuration
+## 7. Other Project Configuration
 
-## 7.1 Alerts & Notifications
+### 7.1 Alerts & Notifications
 
 **Location:** Applications → Alerts & Notifications → "Upload or download alerts" button.
 
@@ -145,7 +145,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.2 Automated Survey Invitations (ASI)
+### 7.2 Automated Survey Invitations (ASI)
 
 **Location:** Online Designer → "Automated Survey Invitations" button (project-level, not per-instrument).
 
@@ -159,7 +159,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.3 Survey Queue
+### 7.3 Survey Queue
 
 **Location:** Online Designer → Survey Queue → "Upload or download survey queue" option.
 
@@ -173,7 +173,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.4 Survey Settings
+### 7.4 Survey Settings
 
 **Location:** Online Designer → download icon next to "Survey Settings" (project-level download of all survey-enabled instruments).
 
@@ -187,7 +187,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.5 Form Display Logic
+### 7.5 Form Display Logic
 
 **Location:** Online Designer → Form Display Logic → "Upload or download form display logic" option.
 
@@ -201,7 +201,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.6 Data Quality Rules
+### 7.6 Data Quality Rules
 
 **Location:** Applications → Data Quality → "Upload or download rules" option.
 
@@ -225,7 +225,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.7 Multi-Language Management (Language Setups)
+### 7.7 Multi-Language Management (Language Setups)
 
 **Location:** Applications → Multi-Language Management → Export/Import buttons per language row (Languages tab), or per-instrument export icons (Forms/Surveys tab).
 
@@ -235,7 +235,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-### Translation File
+#### Translation File
 
 **Filename pattern:** `REDCapTranslation_{langID}_{pid}_{timestamp}.json`
 
@@ -280,7 +280,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-### Settings File
+#### Settings File
 
 **Filename pattern:** `REDCapTranslation_Settings_{pid}_{timestamp}.json`
 
@@ -318,7 +318,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-### Snapshot ZIP
+#### Snapshot ZIP
 
 **Filename pattern:** `REDCap_MLM_Snapshot_{pid}_{timestamp}.zip`
 
@@ -328,7 +328,7 @@ The record data CSV has a detailed column-by-column format reference, including 
 
 ---
 
-## 7.8 Randomization Allocation Table
+### 7.8 Randomization Allocation Table
 
 **Location:** Applications → Randomization → (select model) → Upload Allocation Table.
 
@@ -361,7 +361,7 @@ Each row represents one allocation slot, consumed in order as subjects are rando
 
 ---
 
-# 8. What Cannot Be Uploaded via CSV
+## 8. What Cannot Be Uploaded via CSV
 
 The following are download-only or not file-based:
 
@@ -372,7 +372,7 @@ The following are download-only or not file-based:
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: Which CSV uploads replace the existing configuration, and which just add to it?**
 
@@ -392,7 +392,7 @@ The following are download-only or not file-based:
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Uploading a Data Dictionary without a backup.** The Data Dictionary upload replaces your entire instrument configuration. If you accidentally omit rows (e.g., by filtering your spreadsheet), those variables and their data are deleted on upload. Always save a dated snapshot before editing.
 
@@ -400,7 +400,7 @@ The following are download-only or not file-based:
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic alternatives to the CSV uploads described in this article. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -425,7 +425,7 @@ Most CSV upload features in REDCap have a corresponding API method that achieves
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (overview of all import mechanisms including XML and zip files)
 - [RC-IMP-04 — Record Data CSV Import — Column Reference and Format Guide](RC-IMP-04_Record-Data-CSV-Import.md)(column reference for participant data imports)

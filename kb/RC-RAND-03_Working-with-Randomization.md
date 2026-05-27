@@ -14,16 +14,16 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
-## What is this?
+### What is this?
 
 This document covers what happens after a randomization model is set up
 and the project is in production. It is organized by audience: regular
 users (coordinators, data entry staff) in Sections 4--6, and REDCap
 administrators in Section 7. Administrators should read both sections.
 
-## Why does it matter?
+### Why does it matter?
 
 Running and monitoring randomization correctly is as important as
 setting it up correctly. Errors at this stage — randomizing the wrong
@@ -33,7 +33,7 @@ protocol deviations.
 
 ---
 
-# 2. Learning Objectives
+## 2. Learning Objectives
 
 After reviewing this document, the user will be able to:
 
@@ -58,9 +58,9 @@ After reviewing this document, the user will be able to:
 
 ---
 
-# 3. Randomizing a Record
+## 3. Randomizing a Record
 
-## 3.1 Manual randomization — Randomize button
+### 3.1 Manual randomization — Randomize button
 
 This is the default trigger option. The randomization variable field is
 replaced in the UI by a Randomize button.
@@ -77,7 +77,7 @@ replaced in the UI by a Randomize button.
 > not to randomize real participants. This warning does not appear in
 > Production mode.*
 
-## 3.2 Automatic trigger randomization
+### 3.2 Automatic trigger randomization
 
 If the randomization model was configured with one of the two trigger
 logic options, randomization can fire automatically in addition to (or
@@ -93,7 +93,7 @@ instead of) the manual button.
 > time. A user without Randomize rights will see the field greyed out
 > and non-interactive regardless of trigger mode.*
 
-## 3.3 What unauthorized users see
+### 3.3 What unauthorized users see
 
 Users who do not have the Randomize right assigned to their account see
 the randomization variable as a greyed-out, non-interactive field ---
@@ -103,7 +103,7 @@ design and is not a bug.
 
 ---
 
-# 4. Randomization Summary Table
+## 4. Randomization Summary Table
 
 Navigate to Applications → Randomization to see the summary table for
 all randomization models in the project. Each row is one model.
@@ -121,13 +121,13 @@ all randomization models in the project. Each row is one model.
 
 ---
 
-# 5. Randomization Dashboard
+## 5. Randomization Dashboard
 
 The dashboard provides a real-time view of allocation usage for a
 specific randomization model. Access it via the Dashboard icon in the
 summary table. Requires the Dashboard user right.
 
-## 5.1 What all users see
+### 5.1 What all users see
 
 | **Column** | **What it shows** |
 | --- | --- |
@@ -142,14 +142,14 @@ summary table. Requires the Dashboard user right.
 > with 2 cohorts and 2 stratification levels will have 4 rows total
 > (2 cohorts × 2 strata), not 2.*
 
-## 5.2 What administrators additionally see
+### 5.2 What administrators additionally see
 
 Administrators see one additional column: View. Clicking the dashboard
 icon in the View column drills into that specific allocation group and
 reveals the full allocation table with individual slot-level actions.
 See Section 7 for administrator actions.
 
-## 5.3 Monitoring best practices
+### 5.3 Monitoring best practices
 
 - **Check 'Not Used' counts regularly:** If a group is approaching
     zero remaining slots, contact your REDCap administrator to append
@@ -164,7 +164,7 @@ See Section 7 for administrator actions.
 
 ---
 
-# 6. Randomization Smart Variables
+## 6. Randomization Smart Variables
 
 REDCap provides three smart variables that capture metadata about the
 randomization event. These can be piped into fields, alerts, or reports
@@ -182,7 +182,7 @@ to create an audit trail or trigger downstream logic.
 
 ---
 
-# 7. Administrator Options
+## 7. Administrator Options
 
 This section is for REDCap administrators only. Regular users cannot
 perform these actions. Intervention at the allocation level should be
@@ -194,7 +194,7 @@ the randomization setup should be re-evaluated.
 > 'confirm' to execute. This is intentional — these actions can
 > affect study data integrity.*
 
-## 7.1 Appending allocations to a production table
+### 7.1 Appending allocations to a production table
 
 The most common administrator action. Required when a project runs out
 of allocation slots in production.
@@ -211,7 +211,7 @@ of allocation slots in production.
 - **File format:** Same format as a regular allocation table. Download
     a fresh template from the setup page if needed.
 
-## 7.2 Allocation-level actions (via the View column in the dashboard)
+### 7.2 Allocation-level actions (via the View column in the dashboard)
 
 After clicking the dashboard icon in the View column, administrators see
 the full allocation table with an Edit column. Each unassigned slot has
@@ -226,7 +226,7 @@ up to four action icons; assigned slots have one.
 | **Make sequence unavailable** | Removes the allocation slot entirely from the pool — it will not be used for any future randomizations. Displayed with a stop symbol. Requires: reason (logged) and typing 'confirm'.                                                                *Unassigned slots only* |
 | **Restore availability** | Reverses a 'Make sequence unavailable' action. Only available on slots previously made unavailable. Requires: reason (logged) and typing 'confirm'.                                                                                                  *Unavailable slots only* |
 
-## 7.3 Redoing a randomization model in production
+### 7.3 Redoing a randomization model in production
 
 This scenario should be avoided at all costs. If a randomization model
 in a production project needs to be rebuilt from scratch, the options
@@ -241,11 +241,11 @@ are limited and all have significant consequences.
 
 ---
 
-# 8. Questions & Answers
+## 8. Questions & Answers
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Confusing the randomization dashboard with project dashboards**
 
@@ -294,7 +294,7 @@ reason properly**
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - **[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md):** Randomization Concepts & Terminology ---
     foundational concepts
@@ -316,7 +316,7 @@ reason properly**
 
 ---
 
-# 11. Version & Change Notes
+## 11. Version & Change Notes
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
@@ -328,7 +328,7 @@ Randomization
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
 - [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)

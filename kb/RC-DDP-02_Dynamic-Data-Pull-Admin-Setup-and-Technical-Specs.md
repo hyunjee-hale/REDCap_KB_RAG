@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers everything a REDCap Administrator needs to configure and enable the Dynamic Data Pull (DDP). It includes the Control Center settings, descriptions of all configurable options, and the full technical specifications for the web services that must be built and hosted by the institution to support the DDP.
 
@@ -22,7 +22,7 @@ For an explanation of the DDP from a user perspective (field mapping, adjudicati
 
 ---
 
-# 2. Architecture Overview
+## 2. Architecture Overview
 
 The DDP operates by having REDCap communicate with one or two mandatory web services — and optionally a third — that the institution builds and hosts. REDCap sends HTTP POST requests to these services; the services respond in a standardized format. This architecture gives institutions direct control over how their source system data is exposed and who can access it.
 
@@ -38,11 +38,11 @@ REDCap v5.9.0+ is required to use the DDP.
 
 ---
 
-# 3. Control Center Configuration
+## 3. Control Center Configuration
 
 The DDP is configured at **Control Center → Miscellaneous Modules → Dynamic Data Pull (DDP) — Custom**.
 
-### Enable Dynamic Data Pull (DDP)
+#### Enable Dynamic Data Pull (DDP)
 **Options:** Disabled / Enabled
 
 Enables or disables DDP at the system level. Once enabled globally, an administrator can then activate it for individual projects via each project's Project Setup page (under "Optional Modules and Customizations").
@@ -51,7 +51,7 @@ Enables or disables DDP at the system level. Once enabled globally, an administr
 
 ---
 
-### Custom Name for the External Source System
+#### Custom Name for the External Source System
 **Default:** *(blank — displays as "source system")*
 **Examples:** Epic, Cerner, EMR, EDW
 
@@ -59,7 +59,7 @@ Sets the display name for the external source system as shown to users throughou
 
 ---
 
-### URL for Metadata Web Service
+#### URL for Metadata Web Service
 **Required**
 
 The URL of the institution's Metadata Web Service endpoint. REDCap calls this service when users are mapping fields on the DDP setup page. The service must return a list of all available source system fields and their attributes.
@@ -68,7 +68,7 @@ A **Test** button is provided on the settings page to verify the URL is reachabl
 
 ---
 
-### URL for Data Web Service
+#### URL for Data Web Service
 **Required**
 
 The URL of the institution's Data Web Service endpoint. REDCap calls this service when pulling actual data for a specific record from the source system (both real-time on record identifier entry and via the background cron job).
@@ -77,7 +77,7 @@ A **Test** button is provided to verify the URL is reachable.
 
 ---
 
-### URL for User Access Web Service
+#### URL for User Access Web Service
 **Optional**
 
 The URL of the institution's User Access Web Service endpoint. When configured, REDCap calls this service once per project per session to verify that the current user is authorized to access data from the source system. If the service indicates the user does not have access, they receive an error message when attempting to adjudicate data.
@@ -86,7 +86,7 @@ This service adds an extra layer of security and is particularly important when 
 
 ---
 
-### Custom Text for Users
+#### Custom Text for Users
 **Default:** *(blank — generic contact text is displayed)*
 
 HTML-enabled text displayed at the top of the DDP information popup shown to users. This field should describe your institution's process for requesting DDP access — for example, linking to a request form or providing contact information for the REDCap support team.
@@ -95,7 +95,7 @@ If left blank, REDCap displays a generic message instructing users to contact th
 
 ---
 
-### Display Information About DDP on Project Setup Page
+#### Display Information About DDP on Project Setup Page
 **Options:** Yes (display) / No (hide)
 **Default:** Yes
 
@@ -103,7 +103,7 @@ Controls whether DDP is advertised to users on a project's Project Setup page. S
 
 ---
 
-### Allow Normal Users to Grant DDP Privileges to Other Users
+#### Allow Normal Users to Grant DDP Privileges to Other Users
 **Options:** Yes, normal users can grant DDP rights / No, only Administrators can grant DDP rights
 **Default:** No (Administrators only)
 
@@ -115,14 +115,14 @@ Choosing **Yes** is most appropriate when a User Access Web Service is in place 
 
 ---
 
-### Data Fetch Interval
+#### Data Fetch Interval
 **Default:** 24 hours | **Range:** 1–999 hours
 
 How frequently REDCap's background cron job will re-check the source system for new data for each active record in DDP-enabled projects. The exact check time per record is calculated from the time of the last fetch for that record.
 
 ---
 
-### Inactivity Timeout
+#### Inactivity Timeout
 **Default:** 7 days | **Range:** 1–100 days
 
 The amount of project or record inactivity after which REDCap stops automatically fetching data for that project or record:
@@ -134,7 +134,7 @@ Automatic fetching resumes when activity is detected.
 
 ---
 
-### Convert Source System Timestamps from GMT to Local Server Time
+#### Convert Source System Timestamps from GMT to Local Server Time
 **Options:** No (leave as-is) / Yes (convert from GMT)
 **Default:** No
 
@@ -144,11 +144,11 @@ If the source system outputs temporal data timestamps in Greenwich Mean Time (GM
 
 ---
 
-# 4. Web Service Technical Specifications
+## 4. Web Service Technical Specifications
 
 All three web services use **HTTP(S) POST** requests. The Metadata Web Service and User Access Web Service receive requests as **multipart form data** (`content-type: application/x-www-form-urlencoded`). The Data Web Service receives requests as **JSON-encoded POST** (`content-type: application/json`).
 
-### Securing Web Service Communication
+#### Securing Web Service Communication
 
 Two methods are available for securing DDP web service transactions:
 
@@ -157,7 +157,7 @@ Two methods are available for securing DDP web service transactions:
 
 ---
 
-### Common POST Parameters (Sent to All Three Services)
+#### Common POST Parameters (Sent to All Three Services)
 
 | Parameter | Type | Description |
 |---|---|---|
@@ -167,7 +167,7 @@ Two methods are available for securing DDP web service transactions:
 
 ---
 
-### 4.1 Metadata Web Service
+#### 4.1 Metadata Web Service
 
 **Purpose:** REDCap calls this service when users are on the DDP field mapping page. The service returns the full list of fields available from the source system so users can select which ones to map to REDCap fields.
 
@@ -197,7 +197,7 @@ Two methods are available for securing DDP web service transactions:
 
 ---
 
-### 4.2 Data Web Service
+#### 4.2 Data Web Service
 
 **Purpose:** REDCap calls this service when pulling actual data for a specific record — both in real-time (when the record identifier is entered) and during scheduled cron fetches.
 
@@ -260,7 +260,7 @@ Each object in the `fields` array contains:
 
 ---
 
-### 4.3 User Access Web Service (Optional)
+#### 4.3 User Access Web Service (Optional)
 
 **Purpose:** REDCap calls this service once per project per session to determine whether the current user has authorization to access data from the external source system. If the service returns `"0"` (no access), the user receives an error message when attempting to adjudicate data.
 
@@ -271,7 +271,7 @@ Each object in the `fields` array contains:
 
 ---
 
-# 5. Testing and Evaluation
+## 5. Testing and Evaluation
 
 REDCap provides a set of **DDP demo files** (available as a ZIP download from the DDP settings page in the Control Center) containing a mock web service implementation for testing and evaluation. This allows administrators to test DDP connectivity and behavior without a live source system connection.
 
@@ -279,7 +279,7 @@ Each web service URL field in the Control Center settings also includes a **Test
 
 ---
 
-# 6. Enabling DDP for a Specific Project
+## 6. Enabling DDP for a Specific Project
 
 After system-level DDP configuration is complete:
 
@@ -293,7 +293,7 @@ After system-level DDP configuration is complete:
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Do we have to build the web services ourselves?**
 
@@ -313,7 +313,7 @@ After system-level DDP configuration is complete:
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-DDP-01 — Dynamic Data Pull — Overview & User Guide](RC-DDP-01_Dynamic-Data-Pull-Overview-and-User-Guide.md)(user-facing concepts, mapping, adjudication)
 - [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (related integration pattern using HTTP POST)

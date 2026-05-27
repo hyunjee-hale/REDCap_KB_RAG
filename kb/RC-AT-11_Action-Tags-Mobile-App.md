@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap provides three action tags designed exclusively for use in the **REDCap Mobile App**. These tags extend mobile data collection with barcode/QR scanning, automatic capture of the mobile user's identity, and syncing of uploaded images from the server to the app.
 
@@ -22,7 +22,7 @@ REDCap provides three action tags designed exclusively for use in the **REDCap M
 
 ---
 
-# 2. @APPUSERNAME-APP
+## 2. @APPUSERNAME-APP
 
 Sets a field's value to the **app username** of the person currently using the mobile app. The app username is the credential used to log in to the mobile app, which may differ from the user's REDCap server username.
 
@@ -39,7 +39,7 @@ This is the mobile equivalent of `@USERNAME` (which captures the REDCap server u
 
 ---
 
-# 3. @BARCODE-APP
+## 3. @BARCODE-APP
 
 Enables the device's camera to capture a **barcode or QR code** value and store it in the tagged field. When the user taps the field in the mobile app, a scan button appears. Activating it opens the camera; once a code is detected, the decoded value is stored in the field automatically.
 
@@ -56,7 +56,7 @@ Enables the device's camera to capture a **barcode or QR code** value and store 
 
 ---
 
-# 4. @SYNC-APP
+## 4. @SYNC-APP
 
 When a project is initialized in the REDCap Mobile App and a File Upload or Signature field has `@SYNC-APP`, any image files uploaded to a record on the REDCap server will be sent down to the app so they are viewable when editing that record offline.
 
@@ -75,7 +75,7 @@ Without this tag, images uploaded via the browser are not automatically pushed t
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Do mobile app action tags do anything on browser-based forms or surveys?**
 
@@ -99,7 +99,7 @@ Without this tag, images uploaded via the browser are not automatically pushed t
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Expecting mobile app tags to work in the browser.** These tags have no effect outside the REDCap Mobile App. Confirm that data collection actually occurs via the app before adding these tags.
 
@@ -109,7 +109,7 @@ Without this tag, images uploaded via the browser are not automatically pushed t
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md) — @HIDDEN-APP and @READONLY-APP: hiding and locking fields specifically in the mobile app

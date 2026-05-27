@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 `@CALCTEXT` and `@CALCDATE` are action tags that turn a standard Text Box field into a calculated field — one whose value is computed automatically from other field values rather than entered manually. Unlike the built-in **Calculated Field** type, these tags work inside ordinary Text Boxes and offer expanded output options (text strings, conditional text, and date arithmetic).
 
@@ -24,7 +24,7 @@ Both tags behave like calculated fields in key ways: the field is not editable b
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Calculated Field**
 
@@ -40,7 +40,7 @@ When text inside `@CALCTEXT` contains a quote character that matches the surroun
 
 ---
 
-# 3. @CALCTEXT
+## 3. @CALCTEXT
 
 `@CALCTEXT` evaluates a logical expression and outputs the result as text into a Text Box field. The expression is typically built around an `if()` function, but any valid REDCap formula that returns a value can be used.
 
@@ -53,7 +53,7 @@ When text inside `@CALCTEXT` contains a quote character that matches the surroun
 
 The expression is placed inside the parentheses and follows standard REDCap formula syntax (the same syntax used in the formula field of a Calculated Field).
 
-## 3.1 Basic Example — Conditional Text Output
+### 3.1 Basic Example — Conditional Text Output
 
 Output the word "male" or "female" based on a coded sex field:
 
@@ -61,7 +61,7 @@ Output the word "male" or "female" based on a coded sex field:
 @CALCTEXT(if([sex]='1', 'male', 'female'))
 ```
 
-## 3.2 Returning Numbers
+### 3.2 Returning Numbers
 
 The return value does not have to be text. A numeric expression is valid:
 
@@ -71,7 +71,7 @@ The return value does not have to be text. A numeric expression is valid:
 
 This outputs `'adult'` for participants 18 or older, or a calculated number for others.
 
-## 3.3 Returning Piped Values and Smart Variables
+### 3.3 Returning Piped Values and Smart Variables
 
 Field variables and Smart Variables can be used as return values directly (without quotes):
 
@@ -81,7 +81,7 @@ Field variables and Smart Variables can be used as return values directly (witho
 
 > **Restriction:** Field variables and Smart Variables **cannot** be piped inside quotes in the return value. `@CALCTEXT(if([x]='1', 'Value: [other_field]', ''))` will not substitute `[other_field]` — it will output the literal string `Value: [other_field]`. Use the variable as a standalone return value, not embedded in a quoted string.
 
-## 3.4 Escaping Quotes in Text Output
+### 3.4 Escaping Quotes in Text Output
 
 If the output text contains a single apostrophe and the surrounding delimiter is also a single apostrophe, escape it with a backslash:
 
@@ -97,7 +97,7 @@ Alternatively, use double quotes as the outer delimiter when the text contains a
 
 ---
 
-# 4. @CALCDATE
+## 4. @CALCDATE
 
 `@CALCDATE` calculates a new date or datetime value by adding or subtracting a specified amount of time from a source date field. It is used for computing follow-up dates, deadlines, or scheduled time points relative to a baseline date.
 
@@ -116,7 +116,7 @@ Alternatively, use double quotes as the outer delimiter when the text contains a
 
 > **Year and month lengths:** `'y'` uses 365.2425 days per year. `'M'` uses 30.44 days per month. For precise day-count calculations, use `'d'` instead.
 
-## 4.1 Basic Example — Add Days
+### 4.1 Basic Example — Add Days
 
 Calculate a date 7 days after a visit date:
 
@@ -124,7 +124,7 @@ Calculate a date 7 days after a visit date:
 @CALCDATE([visit_date], 7, 'd')
 ```
 
-## 4.2 Subtracting Time
+### 4.2 Subtracting Time
 
 Calculate a date 30 days before a deadline:
 
@@ -132,7 +132,7 @@ Calculate a date 30 days before a deadline:
 @CALCDATE([deadline_date], -30, 'd')
 ```
 
-## 4.3 Longitudinal Projects — Cross-Event Reference
+### 4.3 Longitudinal Projects — Cross-Event Reference
 
 Reference a date field from a specific event:
 
@@ -140,7 +140,7 @@ Reference a date field from a specific event:
 @CALCDATE([baseline_event][visit_date], 7, 'd')
 ```
 
-## 4.4 Using 'now' or 'today' as the Source
+### 4.4 Using 'now' or 'today' as the Source
 
 The literals `'today'` and `'now'` (in single quotes) can be used as the source parameter. They use the **server time**, not the user's local device time:
 
@@ -150,7 +150,7 @@ The literals `'today'` and `'now'` (in single quotes) can be used as the source 
 
 This calculates a date 14 days from the current server date. Be aware that if users are in a different timezone from the server, the date may differ from their local today.
 
-## 4.5 Using an if() Expression as the Source
+### 4.5 Using an if() Expression as the Source
 
 The source can be a logical expression that resolves to a date value:
 
@@ -160,7 +160,7 @@ The source can be a logical expression that resolves to a date value:
 
 ---
 
-# 5. Comparison: @CALCTEXT / @CALCDATE vs. Built-in Calculated Field
+## 5. Comparison: @CALCTEXT / @CALCDATE vs. Built-in Calculated Field
 
 | Feature | Built-in Calculated Field | @CALCTEXT / @CALCDATE |
 |---|---|---|
@@ -176,7 +176,7 @@ Use the built-in Calculated Field when you need a numeric result. Use `@CALCTEXT
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can @CALCTEXT output a blank value?**
 
@@ -206,7 +206,7 @@ This pattern is useful in operational or administrative projects where a value m
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Piping a variable inside quotes in @CALCTEXT.** Writing `@CALCTEXT(if([x]='1', 'Hello [name]', ''))` will output the literal text `Hello [name]`, not the value of `[name]`. Use the variable as a standalone return value outside quotes: `@CALCTEXT(if([x]='1', [name], ''))`.
 
@@ -224,7 +224,7 @@ This pattern is useful in operational or administrative projects where a value m
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md): `@DEFAULT` and `@SETVALUE` for pre-filling values at page load

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Instruments API method retrieves a list of all instruments (forms) defined in a REDCap project. Each instrument has metadata including its name, display name, and other properties. This method provides a lightweight way to discover the structure of a project's instruments without downloading the full data dictionary.
 
@@ -23,7 +23,7 @@ When to use this method: When you need to list all instruments in a project, dis
 
 ---
 
-# 2. Endpoint
+## 2. Endpoint
 
 ```
 POST https://your-redcap-instance.edu/api/
@@ -33,13 +33,13 @@ Only `POST` is supported.
 
 ---
 
-# 3. Permissions Required
+## 3. Permissions Required
 
 To call this method, the API token's owner must have **API Export** privilege in the project. Calls from tokens lacking this privilege will fail with a permissions error.
 
 ---
 
-# 4. Parameters
+## 4. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -50,9 +50,9 @@ To call this method, the API token's owner must have **API Export** privilege in
 
 ---
 
-# 5. Request Examples
+## 5. Request Examples
 
-## 5.1 Python
+### 5.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -71,7 +71,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 5.2 R
+### 5.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -88,7 +88,7 @@ result <- postForm(
 print(result)
 ```
 
-## 5.3 cURL
+### 5.3 cURL
 
 ```sh
 #!/bin/sh
@@ -104,7 +104,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 5.4 PHP
+### 5.4 PHP
 
 ```php
 <?php
@@ -139,7 +139,7 @@ print $output;
 
 ---
 
-# 6. Response
+## 6. Response
 
 The method returns the project's instruments in the requested format, **ordered according to their order in the project** (matching the instrument ordering shown on the project's left-hand menu and in the Data Dictionary). Each instrument has an internal name (`instrument_name`) and a display label (`instrument_label`).
 
@@ -165,7 +165,7 @@ The method returns the project's instruments in the requested format, **ordered 
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What's the difference between instrument_name and instrument_label?**
 
@@ -189,7 +189,7 @@ The method returns the project's instruments in the requested format, **ordered 
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Assuming all returned names are instruments.** This method returns only form (instrument) names. Do not confuse these with field names or event names.
 
@@ -201,7 +201,7 @@ The method returns the project's instruments in the requested format, **ordered 
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(use instrument names to export specific forms)

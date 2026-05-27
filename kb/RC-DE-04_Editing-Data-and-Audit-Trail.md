@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to edit previously saved data in REDCap, how
 to access the audit trail for individual fields, and how to edit data
@@ -24,7 +24,7 @@ authorized users.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Edit**
 
@@ -58,9 +58,9 @@ default. Without this right, survey-completed instruments are read-only.
 
 ---
 
-# 3. Editing Previously Saved Data
+## 3. Editing Previously Saved Data
 
-## 3.1 Standard Edit Workflow
+### 3.1 Standard Edit Workflow
 
 Editing data in REDCap follows the same path as entering it for the
 first time:
@@ -79,7 +79,7 @@ first time:
 > **Note:** REDCap automatically logs the old and new values, the user who made the change, and the timestamp. You do not need to do anything special to trigger audit logging — it happens on every save.
 
 
-## 3.2 What Gets Logged
+### 3.2 What Gets Logged
 
 - Every field value change is recorded, including the previous value
     and the new value.
@@ -94,9 +94,9 @@ first time:
 
 ---
 
-# 4. Accessing the Audit Trail
+## 4. Accessing the Audit Trail
 
-## 4.1 Field-Level History: the 'H' Button
+### 4.1 Field-Level History: the 'H' Button
 
 - When viewing or editing an instrument, look for a small grey 'H'
     icon next to each field label.
@@ -110,7 +110,7 @@ first time:
 - The 'H' button is always visible during data entry, regardless of
     whether any edits have been made.
 
-## 4.2 Project-Level Logging Application
+### 4.2 Project-Level Logging Application
 
 - If you have Logging access rights, the Logging application appears
     in the left-hand menu under Applications.
@@ -127,16 +127,16 @@ first time:
 
 ---
 
-# 5. Editing Survey-Submitted Data
+## 5. Editing Survey-Submitted Data
 
-## 5.1 Why Survey Editing Is Restricted
+### 5.1 Why Survey Editing Is Restricted
 
 When a participant completes an instrument as a survey, REDCap locks the
 form to prevent the study team from inadvertently altering
 participant-reported data. Editing survey data is treated as a special,
 deliberate action that requires an explicit user right.
 
-## 5.2 Checking Whether You Have Survey Edit Rights
+### 5.2 Checking Whether You Have Survey Edit Rights
 
 - Navigate to the survey-completed instrument. It will display as
     read-only if survey edit rights are not enabled for your account.
@@ -148,7 +148,7 @@ deliberate action that requires an explicit user right.
     project administrator to request the Survey Edit Responses user
     right.
 
-## 5.3 Editing a Survey Response (If You Have Rights)
+### 5.3 Editing a Survey Response (If You Have Rights)
 
 - Navigate to the survey-completed instrument.
 
@@ -165,7 +165,7 @@ deliberate action that requires an explicit user right.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Does REDCap keep a record of what data looked like before I edited
 it?**
@@ -211,7 +211,7 @@ rights.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 - Editing a survey form and forgetting to save: survey edit mode works
     like any other data entry — you must click a save button before
@@ -235,7 +235,7 @@ rights.
     The Logging application shows all changes across all fields and
     records in the project.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -244,7 +244,7 @@ rights.
 ---
 
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-DE-01 — Record Creation & the Record Home Page](RC-DE-01_Record-Creation-and-Record-Home-Page.md)
 

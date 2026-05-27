@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 > ⚠️ **External Module required.** The action tags documented in this article are **not part of vanilla REDCap**. They are provided by the **HIDESUBMIT Action Tags** External Module (v3.1.0). These tags will only appear in your project's action tag list and will only function if this module has been installed on your REDCap instance and enabled for your project. Contact your REDCap administrator if you need this module enabled.
 
@@ -22,7 +22,7 @@ The HIDESUBMIT Action Tags module adds nine action tags that conditionally hide 
 
 ---
 
-# 2. How These Tags Work
+## 2. How These Tags Work
 
 All HIDESUBMIT tags share the same activation mechanism: the button is hidden **if the tagged field is visible due to branching logic**. This means you do not configure a condition directly in the action tag — instead, you control the behavior by attaching branching logic to the field that carries the action tag.
 
@@ -33,11 +33,11 @@ All HIDESUBMIT tags share the same activation mechanism: the button is hidden **
 
 ---
 
-# 3. Tag Reference
+## 3. Tag Reference
 
-## 3.1 Tags That Hide All Save/Submit Buttons
+### 3.1 Tags That Hide All Save/Submit Buttons
 
-### @HIDESUBMIT
+#### @HIDESUBMIT
 
 Hides **all save buttons** on data entry forms and both the **Submit/Next Page button** and the **"Take this survey again" button** on surveys — when the tagged field is visible due to branching logic.
 
@@ -45,7 +45,7 @@ Hides **all save buttons** on data entry forms and both the **Submit/Next Page b
 @HIDESUBMIT
 ```
 
-### @HIDESUBMIT-FORM
+#### @HIDESUBMIT-FORM
 
 Same as `@HIDESUBMIT` but applies to **data entry forms only**.
 
@@ -53,7 +53,7 @@ Same as `@HIDESUBMIT` but applies to **data entry forms only**.
 @HIDESUBMIT-FORM
 ```
 
-### @HIDESUBMIT-SURVEY
+#### @HIDESUBMIT-SURVEY
 
 Same as `@HIDESUBMIT` but applies to **survey pages only** — hides the Submit/Next Page button and the "Take this survey again" button.
 
@@ -63,9 +63,9 @@ Same as `@HIDESUBMIT` but applies to **survey pages only** — hides the Submit/
 
 ---
 
-## 3.2 Tags That Hide Submit-Only Buttons (Preserving "Add New Instance")
+### 3.2 Tags That Hide Submit-Only Buttons (Preserving "Add New Instance")
 
-### @HIDESUBMITONLY
+#### @HIDESUBMITONLY
 
 Hides all save buttons on data entry forms **except** "Save & Add New Instance", and hides the Submit/Next Page button on surveys — when the tagged field is visible due to branching logic.
 
@@ -73,7 +73,7 @@ Hides all save buttons on data entry forms **except** "Save & Add New Instance",
 @HIDESUBMITONLY
 ```
 
-### @HIDESUBMITONLY-FORM
+#### @HIDESUBMITONLY-FORM
 
 Same as `@HIDESUBMITONLY` but applies to **data entry forms only** — hides all save buttons except "Save & Go To Next Instance".
 
@@ -81,7 +81,7 @@ Same as `@HIDESUBMITONLY` but applies to **data entry forms only** — hides all
 @HIDESUBMITONLY-FORM
 ```
 
-### @HIDESUBMITONLY-SURVEY
+#### @HIDESUBMITONLY-SURVEY
 
 Same as `@HIDESUBMITONLY` but applies to **survey pages only** — hides the Submit/Next Page button.
 
@@ -91,9 +91,9 @@ Same as `@HIDESUBMITONLY` but applies to **survey pages only** — hides the Sub
 
 ---
 
-## 3.3 Tags That Hide the Repeat Instance Button
+### 3.3 Tags That Hide the Repeat Instance Button
 
-### @HIDEREPEAT
+#### @HIDEREPEAT
 
 Hides the **"Save & Go To Next Instance"** button on data entry forms and the **"Take this survey again"** button on surveys — when the tagged field is visible due to branching logic.
 
@@ -101,7 +101,7 @@ Hides the **"Save & Go To Next Instance"** button on data entry forms and the **
 @HIDEREPEAT
 ```
 
-### @HIDEREPEAT-FORM
+#### @HIDEREPEAT-FORM
 
 Same as `@HIDEREPEAT` but applies to **data entry forms only** — hides the "Save & Go To Next Instance" button.
 
@@ -109,7 +109,7 @@ Same as `@HIDEREPEAT` but applies to **data entry forms only** — hides the "Sa
 @HIDEREPEAT-FORM
 ```
 
-### @HIDEREPEAT-SURVEY
+#### @HIDEREPEAT-SURVEY
 
 Same as `@HIDEREPEAT` but applies to **survey pages only** — hides the "Take this survey again" button.
 
@@ -119,7 +119,7 @@ Same as `@HIDEREPEAT` but applies to **survey pages only** — hides the "Take t
 
 ---
 
-# 4. Tag Summary Table
+## 4. Tag Summary Table
 
 | Tag | Hides on Forms | Hides on Surveys |
 |---|---|---|
@@ -135,7 +135,7 @@ Same as `@HIDEREPEAT` but applies to **survey pages only** — hides the "Take t
 
 ---
 
-# 5. Example Usage
+## 5. Example Usage
 
 **Scenario:** Prevent survey submission unless a required agreement field is checked.
 
@@ -147,7 +147,7 @@ Result: The Submit button is hidden until the agreement checkbox is checked.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Will these tags appear in the action tag reference popup inside my project?**
 
@@ -171,7 +171,7 @@ Result: The Submit button is hidden until the agreement checkbox is checked.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Expecting these tags to work without the module enabled.** HIDESUBMIT action tags are silently ignored on any REDCap instance or project where the External Module is not installed and active. If the buttons are not hiding as expected, confirm the module is enabled.
 
@@ -181,7 +181,7 @@ Result: The Submit button is hidden until the agreement checkbox is checked.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-08 — Action Tags: @IF — Conditional Logic](RC-AT-08_Action-Tags-Conditional-IF.md) — @IF: native conditional action tag logic (no External Module required)

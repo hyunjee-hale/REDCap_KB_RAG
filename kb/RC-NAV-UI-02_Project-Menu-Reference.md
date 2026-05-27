@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article is a structured reference for every section and item that can appear in the REDCap left-hand project menu. The menu is divided into labeled sections, each grouping related functionality. Not all items are visible to all users — visibility depends on user rights and project configuration. Each section below lists its items in a reference table with the item name, its visibility rule, and a plain-language description of what it does.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Always** — A menu item with this designation appears for any user in any project, regardless of user rights or feature configuration.
 
@@ -34,9 +34,9 @@ This article is a structured reference for every section and item that can appea
 
 ---
 
-# 3. Menu Section Reference
+## 3. Menu Section Reference
 
-## 3.1 Top-Left Navigation
+### 3.1 Top-Left Navigation
 
 This group of links sits above the labeled menu sections and handles
 global navigation — they typically take the user out of the current
@@ -50,7 +50,7 @@ project.
 | **REDCap Messenger** | Always\*         A HIPAA-compliant in-project messaging tool for user-to-user communication. Cannot send external email, texts, or messages to other REDCap installations. (\*Availability depends on whether your institution has enabled this feature.) |
 | **Contact REDCap Administrator** | Always           Links to your institution's REDCap support channel (email, website, or survey). Configured by your local admin team. See [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) for what this link opens at this installation. |
 
-## 3.2 Project Home and Design
+### 3.2 Project Home and Design
 
 This section covers features related to the setup and design of a
 project. It is most relevant during the project build phase and for
@@ -92,7 +92,7 @@ users with appropriate rights):
     Data Dictionary only restores instruments and fields — not user
     rights, survey settings, or longitudinal configuration.
 
-## 3.3 Data Collection
+### 3.3 Data Collection
 
 The primary section for day-to-day data entry and participant
 management. Users with any data entry rights will see at least the two
@@ -106,7 +106,7 @@ core items.
 | **MyCap Participant Management** | Conditional      Manage participants using the MyCap mobile app. Requires MyCap to be enabled. As of MyCap 2.0 (September 2023, REDCap v13.10.0+), longitudinal projects are supported. Consult your support team before using. |
 | **Record shortcuts** | Conditional      When a user is actively viewing a record, shortcuts to that record's instruments and record home page appear dynamically in this section. |
 
-## 3.4 Applications
+### 3.4 Applications
 
 Features that fall outside the core design and data collection
 workflows. Availability is based on user rights and project settings.
@@ -141,7 +141,7 @@ Each application is self-contained.
 > for individual participants to enter their own data into a single
 > record on their personal device.*
 
-## 3.5 Custom Reports & Project Dashboards (Dynamic Sections)
+### 3.5 Custom Reports & Project Dashboards (Dynamic Sections)
 
 When a user creates custom reports or project dashboards, REDCap
 automatically adds new labeled sections to the left menu listing those
@@ -156,7 +156,7 @@ or dashboard has been created and the user has access to it.
 - **Project Dashboards section:** Lists all dashboards accessible to
     the user.
 
-## 3.6 External Modules
+### 3.6 External Modules
 
 External modules are community-developed add-ons that extend REDCap's
 functionality. They must be downloaded and enabled by your local REDCap
@@ -178,7 +178,7 @@ available at this installation and the local policy on enabling them, see
 > own risk and consult your REDCap admin before enabling unfamiliar
 > modules.*
 
-## 3.7 Help & Information
+### 3.7 Help & Information
 
 Support and documentation resources. Always visible to all users.
 
@@ -191,7 +191,7 @@ Support and documentation resources. Always visible to all users.
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: Why is a menu item not visible for a specific user?**
 Two conditions must both be true for a menu item to appear: the user's rights for this project must include the relevant permission, and the feature must be enabled in Project Setup. Check both before concluding something is missing or broken.
@@ -207,7 +207,7 @@ Project managers can add Project Bookmarks (custom links visible to project user
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Using 'Suggest a New Feature' for support requests**
 
@@ -260,7 +260,7 @@ Project managers can add Project Bookmarks (custom links visible to project user
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) — the two-panel layout, hamburger mode, and project status overview
 - [RC-NAV-UI-03 — Project Bookmarks](RC-NAV-UI-03_Project-Bookmarks.md) — creating custom links on the left-hand project menu

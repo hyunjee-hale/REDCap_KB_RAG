@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers action tags designed specifically for checkbox fields: `@NONEOFTHEABOVE` and `@MAXCHECKED`. These tags enforce selection rules that improve data quality.
 
 ---
 
-# 2. @NONEOFTHEABOVE
+## 2. @NONEOFTHEABOVE
 
 Designates one or more options as mutually exclusive "none of the above" choices. If a respondent tries to select a designated option alongside other options, REDCap displays a prompt asking them to either clear the other selections or cancel.
 
@@ -61,7 +61,7 @@ Using a consistent negative coding scheme across a project makes it easy to iden
 
 ---
 
-# 3. @MAXCHECKED
+## 3. @MAXCHECKED
 
 Limits the maximum number of checkboxes that can be simultaneously selected. Once the limit is reached, remaining unchecked options are disabled until the respondent unchecks one of the selected options.
 
@@ -78,7 +78,7 @@ The parameter is the maximum number of simultaneously selected checkboxes.
 
 ---
 
-# 4. Combining @NONEOFTHEABOVE and @MAXCHECKED
+## 4. Combining @NONEOFTHEABOVE and @MAXCHECKED
 
 These two tags can be used together on the same checkbox field without conflict:
 
@@ -90,7 +90,7 @@ Both operate independently and do not interfere with each other.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can @NONEOFTHEABOVE be used on radio buttons or dropdowns?**
 
@@ -114,7 +114,7 @@ Both operate independently and do not interfere with each other.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Forgetting that @NONEOFTHEABOVE only works on checkboxes.** Trying to use it on radio buttons or dropdowns will have no effect, and no error is raised. Verify the field type before applying the tag.
 
@@ -124,7 +124,7 @@ Both operate independently and do not interfere with each other.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md)

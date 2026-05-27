@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article introduces REDCap's piping feature — what it is, how its basic syntax works, where piped values can appear in a project, and what each field type produces when piped. It is the entry point for the Piping knowledge base series and focuses on single-instrument, non-longitudinal projects. Advanced scenarios involving longitudinal projects, repeated instruments, and piping modifiers are covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Piping**
 
@@ -44,7 +44,7 @@ A set of bracket expressions that reference system-level information rather than
 
 ---
 
-# 3. Piping Syntax
+## 3. Piping Syntax
 
 The core piping syntax is:
 
@@ -64,7 +64,7 @@ Field 2 — label configured as: "What is `[first_name]`'s date of birth?"
 
 When a participant types "John" into Field 1, Field 2 displays: "What is John's date of birth?"
 
-## 3.1 Variable Naming Recommendations
+### 3.1 Variable Naming Recommendations
 
 If you plan to use piping or branching logic heavily, apply these conventions when naming variables:
 
@@ -77,7 +77,7 @@ Consistent, readable variable names make piping references easier to write, revi
 
 ---
 
-# 4. Where Piping Can Be Used
+## 4. Where Piping Can Be Used
 
 Piping works anywhere REDCap displays text. The complete list of supported locations is:
 
@@ -115,7 +115,7 @@ Piping works anywhere REDCap displays text. The complete list of supported locat
 
 ---
 
-# 5. What Each Field Type Pipes
+## 5. What Each Field Type Pipes
 
 Different field types produce different output when piped. The table below shows the default piped value for each field type.
 
@@ -144,30 +144,30 @@ Different field types produce different output when piped. The table below shows
 
 ---
 
-# 6. Blanks and Timing
+## 6. Blanks and Timing
 
-## 6.1 When Values Are Blank
+### 6.1 When Values Are Blank
 
 When REDCap evaluates a pipe reference and the referenced variable has no stored value, it substitutes six underscore characters (`______`) as a visual placeholder. For example: "What is `______`'s date of birth?"
 
 This is not an error. It is expected behavior whenever the source variable is empty. If you do not want the underscore placeholder to appear, use the `:hideunderscore` modifier — covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) — which causes the blank value to be piped as truly empty/invisible instead.
 
-## 6.2 Same-Instrument Timing
+### 6.2 Same-Instrument Timing
 
 If the source variable and the piping reference live on the same instrument, the displayed value updates in real time as the participant types. There is no need to save and reload.
 
-## 6.3 Cross-Instrument Timing
+### 6.3 Cross-Instrument Timing
 
 If the source variable lives on a different instrument from the field that references it, the piped value only refreshes after: (1) data has been entered in the source instrument, (2) the record has been saved, and (3) the destination instrument has been reloaded or opened fresh.
 
-## 6.4 Avoiding Blank Displays
+### 6.4 Avoiding Blank Displays
 
 If you do not want to display a question or label when the source variable is empty, use branching logic to hide the destination field until the source variable is filled in.
 
 **Example branching logic** on the destination field: `[fname] <> ""`
 (This means: only show this field if `fname` is not empty.)
 
-## 6.5 Variable Order Matters
+### 6.5 Variable Order Matters
 
 Place the source variable above the destination variable in the instrument. REDCap renders instruments top to bottom. If a pipe reference points to a variable that appears later in the instrument, the value will typically be blank when the destination field is first displayed, because the participant has not yet reached and completed the source field.
 
@@ -175,7 +175,7 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What is piping in REDCap?**
 
@@ -207,7 +207,7 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Pointing a pipe reference to a variable that appears later in the instrument.** If the source variable is below the destination field, the destination field renders with a blank on first load. Users rarely scroll back up to see it update. Place source variables above destination fields.
 
@@ -221,7 +221,7 @@ Combining correct ordering with branching logic produces instruments that flow c
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(cross-event piping, repeated instrument scenarios, :value and other modifiers)
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (system-level bracket expressions)

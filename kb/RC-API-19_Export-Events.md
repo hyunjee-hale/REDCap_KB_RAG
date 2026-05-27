@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Events API method retrieves the list of events in a longitudinal REDCap project. Events represent timepoints or phases within an arm. Each event has properties such as its unique name, human-readable label, arm assignment, and offset information.
 
@@ -25,7 +25,7 @@ This method is useful for discovering the event structure of a project or valida
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -37,9 +37,9 @@ This method is useful for discovering the event structure of a project or valida
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -57,7 +57,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -74,7 +74,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -88,7 +88,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -123,7 +123,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 The method returns a JSON array (or CSV) containing all events in the project.
 
@@ -151,7 +151,7 @@ Example JSON response:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I called Export Events on my project and got an error. Why?**
 
@@ -175,7 +175,7 @@ Example JSON response:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Calling Export Events on a classic project.** Events are a longitudinal-only feature. This method will fail on classic projects. Always verify your project is longitudinal before calling this method.
 
@@ -187,7 +187,7 @@ Example JSON response:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-20 — Import Events API](RC-API-20_Import-Events.md)(add or modify events in a project)

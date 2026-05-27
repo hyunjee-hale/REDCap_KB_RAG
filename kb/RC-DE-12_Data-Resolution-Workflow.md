@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap's Data Resolution Workflow (DRW) — what it is, how it differs from the Field Comment Log, how to enable and configure it, and how to open, respond to, close, and review queries. The DRW is a structured issue-tracking system built directly into REDCap that allows study teams to flag data problems, assign them to specific users, track resolution status, and audit the entire process without leaving REDCap. It is best suited for projects with multiple data entry users, distributed teams, or regulatory requirements around data quality documentation. For simpler annotation needs, see [RC-DE-08 — Field Comment Log](RC-DE-08_Field-Comment-Log.md).
 
@@ -22,7 +22,7 @@ This article covers REDCap's Data Resolution Workflow (DRW) — what it is, how 
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Data Resolution Workflow (DRW)**
 
@@ -64,9 +64,9 @@ A query generated from a multi-variable custom rule in the Data Quality module. 
 
 ---
 
-# 3. Enabling and Configuring the Data Resolution Workflow
+## 3. Enabling and Configuring the Data Resolution Workflow
 
-### 3.1 Choosing a Mode
+#### 3.1 Choosing a Mode
 
 REDCap projects support one of three tracking modes at a time:
 
@@ -78,7 +78,7 @@ REDCap projects support one of three tracking modes at a time:
 
 Switching modes does not convert existing data. Comments created under the Field Comment Log will not appear in the DRW dashboard, and queries created under DRW will not appear in the Field Comment Log application. Establish your mode before data collection begins and avoid switching mid-project.
 
-### 3.2 Switching the Mode
+#### 3.2 Switching the Mode
 
 1. Navigate to the **Project Setup** page for your project.
 2. Scroll down to **Enable optional modules and customizations**.
@@ -87,7 +87,7 @@ Switching modes does not convert existing data. Comments created under the Field
 5. Select your desired mode.
 6. Click **Save**.
 
-### 3.3 DRW-Specific Settings
+#### 3.3 DRW-Specific Settings
 
 After enabling DRW, two additional settings become available in the same customization panel:
 
@@ -97,7 +97,7 @@ After enabling DRW, two additional settings become available in the same customi
 
 ---
 
-# 4. DRW User Rights
+## 4. DRW User Rights
 
 After DRW is enabled, each user in the project has a DRW-specific access level. These are managed through the standard User Rights or User Roles interface.
 
@@ -118,15 +118,15 @@ For more information on managing user rights and roles, see the User Rights trai
 
 ---
 
-# 5. Opening Queries
+## 5. Opening Queries
 
-### 5.1 Locating the Query Icon
+#### 5.1 Locating the Query Icon
 
 Every variable in an instrument displays a small icon (depicted as a text balloon) next to the data entry area. This icon is present for every variable by default, but will not be shown if a variable is hidden by branching logic or embedded within another field using field embedding.
 
 > **Note:** The DRW is not available in survey mode. Query icons appear only when a staff user accesses the instrument in data entry mode.
 
-### 5.2 Verifying a Data Value
+#### 5.2 Verifying a Data Value
 
 The first option presented when clicking the query icon is **Verified data value**. This option is selected by default.
 
@@ -134,7 +134,7 @@ To verify a value, click the query icon and then click **Verified data value**. 
 
 **De-verifying a value.** Click the green checkmark to open the verification panel. Select **De-verify the data value** and provide a required comment. After de-verification, the icon changes to indicate the data point is flagged for re-review. From this state, the variable can be re-verified or a query can be opened.
 
-### 5.3 Opening a New Query
+#### 5.3 Opening a New Query
 
 To open a query on a variable:
 
@@ -149,7 +149,7 @@ After the query is opened, the text balloon is replaced by an icon indicating th
 
 **Assignment best practices.** Establish team agreements about who opens queries, who can assign them, and who is responsible for responding. On small teams, leaving queries unassigned is common. On larger or distributed teams, explicit assignment prevents queries from going unnoticed.
 
-### 5.4 Queries from the Data Quality Module
+#### 5.4 Queries from the Data Quality Module
 
 A second way to generate queries is through the **Data Quality** module:
 
@@ -158,9 +158,9 @@ A second way to generate queries is through the **Data Quality** module:
 
 ---
 
-# 6. Responding to and Closing Queries
+## 6. Responding to and Closing Queries
 
-### 6.1 Responding to a Query
+#### 6.1 Responding to a Query
 
 To respond to an open query, click the query icon in the record (or use the Data Resolution Dashboard — see Section 7). The current query status and history are displayed.
 
@@ -173,7 +173,7 @@ After a response is added, the query status changes to **Open / Unresolved (Resp
 
 **Reassigning a query.** Select **Assign to other user** to transfer responsibility to a different project member. This works the same as the initial assignment when opening the query.
 
-### 6.2 Closing a Query
+#### 6.2 Closing a Query
 
 Closing is available once a response has been recorded. To close:
 
@@ -183,15 +183,15 @@ Closing is available once a response has been recorded. To close:
 
 After closure, the query icon changes to the **Closed / Resolved** status. Closed queries can be reopened at any time by clicking the icon — this resets the status to **Open / Unresolved (Unresponded)**.
 
-### 6.3 Sending Back for Further Attention
+#### 6.3 Sending Back for Further Attention
 
 If a response was added but the issue is not yet resolved, use **Send back for further attention** instead of closing. This returns the query to **Open / Unresolved (Unresponded)** status with a required comment explaining why it was returned. Teams can cycle between responded and sent-back status as many times as needed. REDCap logs each transition.
 
 ---
 
-# 7. Reviewing Queries
+## 7. Reviewing Queries
 
-### 7.1 Data Resolution Dashboard
+#### 7.1 Data Resolution Dashboard
 
 Navigate to **Resolve Issues** in the project application menu (located adjacent to the **Data Quality** link) to open the Data Resolution Dashboard. This view shows all queries in the project that the current user has rights to see.
 
@@ -207,7 +207,7 @@ Navigate to **Resolve Issues** in the project application menu (located adjacent
 | First update | The first comment recorded for the query (typically the comment that opened it) |
 | Last update | The most recent comment, if different from the first |
 
-### 7.2 Filtering Queries
+#### 7.2 Filtering Queries
 
 The dashboard supports the following filters. Multiple filters can be combined. Filters do not apply automatically — click **Apply filters** to update the results. Use the **Reset** link to clear all filters to their defaults.
 
@@ -219,11 +219,11 @@ The dashboard supports the following filters. Multiple filters can be combined. 
 | Data Access Group | Filter to queries from a specific DAG |
 | Users | Filter to queries assigned to a specific user |
 
-### 7.3 Exporting the Query Log
+#### 7.3 Exporting the Query Log
 
 Click **Export** from the Data Resolution Dashboard to download all currently displayed queries as a CSV file. The export includes the first and last comment, total comment count, record ID, timestamps, and variable identification. For longitudinal and repeated-instruments projects, the export also includes event and instance information.
 
-### 7.4 Resolution Metrics
+#### 7.4 Resolution Metrics
 
 A **Resolution Metrics** tab appears next to the **Resolve Issues** tab in the dashboard. It provides aggregate charts and statistics about query activity, including:
 
@@ -236,7 +236,7 @@ Use Resolution Metrics to identify recurring data entry problems (candidate fiel
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: What is the difference between the Data Resolution Workflow and the Field Comment Log?**
 
@@ -268,7 +268,7 @@ Use Resolution Metrics to identify recurring data entry problems (candidate fiel
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Starting data collection before setting DRW user rights.** When DRW is enabled, all existing and new users default to View Only rights. Data entry staff who need to open queries will be unable to do so until rights are explicitly updated. Review and set DRW rights for every user or role before opening a project for data entry.
 
@@ -282,7 +282,7 @@ Use Resolution Metrics to identify recurring data entry problems (candidate fiel
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills required before using the DRW)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (related audit features; the DRW is itself an audit trail for data quality decisions)

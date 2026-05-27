@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Form smart variables return metadata about the data entry form (instrument) currently being displayed. They reference properties of the form itself — such as its name, label, and whether it is being viewed as a standard data entry form — rather than the participant data entered within the form. Use these variables to create dynamic form labels, generate links to other forms, and conditionally display content based on which instrument is active.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Instrument / Form**
 
@@ -40,7 +40,7 @@ The same instrument can be accessed in two ways: as a data entry form (by logged
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -52,7 +52,7 @@ The same instrument can be accessed in two ways: as a data entry form (by logged
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Using `[is-form]` in Branching Logic**
 
@@ -88,7 +88,7 @@ In a survey invitation email, you can use `[form-link]` (without specifying an i
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I create a link from one form to another within the same record?**
 
@@ -116,7 +116,7 @@ In a survey invitation email, you can use `[form-link]` (without specifying an i
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using incorrect or typo'd instrument names in form links.** If you type `[form-link:demograhics]` instead of `[form-link:demographics]`, the link will not function. Always copy the exact instrument name from the Online Designer, or test the link thoroughly before deploying to production.
 
@@ -130,7 +130,7 @@ In a survey invitation email, you can use `[form-link]` (without specifying an i
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(event prefixes and cross-event linking)

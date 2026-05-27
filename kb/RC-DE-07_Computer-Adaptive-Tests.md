@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains Computer Adaptive Tests (CATs) in REDCap — what they are, how they behave during data entry, and what to expect from them. CATs are a special class of validated measurement instruments that dynamically adjust which questions are displayed based on the answers given. From the perspective of a data entry user or survey respondent, the most important practical difference from a standard instrument is that a CAT will present a different set of questions on every administration. This is by design and is not an error.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Computer Adaptive Test (CAT)**
 
@@ -40,9 +40,9 @@ The full pool of questions from which the adaptive algorithm draws during a CAT 
 
 ---
 
-# 3. What to Expect During Data Entry with a CAT Instrument
+## 3. What to Expect During Data Entry with a CAT Instrument
 
-### 3.1 Variable Question Sets
+#### 3.1 Variable Question Sets
 
 Unlike a standard instrument, which presents the same questions in the same order every time, a CAT presents a personalized subset of questions determined in real time by the respondent's answers. As a result:
 
@@ -52,19 +52,19 @@ Unlike a standard instrument, which presents the same questions in the same orde
 
 This variability is intentional and is how the instrument achieves measurement efficiency. It is not an error, a display problem, or a sign that something has gone wrong.
 
-### 3.2 Entering Data into a CAT
+#### 3.2 Entering Data into a CAT
 
 The interaction model for answering CAT questions is the same as for any REDCap radio button or dropdown field. Select the response that best applies, and the next question will appear automatically. Continue until the instrument signals completion.
 
 > **Important:** Do not attempt to navigate backwards through a CAT instrument to change earlier answers. The adaptive algorithm has already used each answer to determine subsequent questions — changing an earlier response after the fact may produce inconsistent or invalid data.
 
-### 3.3 Completion
+#### 3.3 Completion
 
 The CAT instrument determines when enough information has been gathered to produce a reliable score. It will signal completion automatically. You do not need to answer every question in the item bank — only the questions the algorithm presents.
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: The CAT instrument showed my participant different questions than it showed a previous participant. Is something broken?**
 
@@ -88,7 +88,7 @@ The CAT instrument determines when enough information has been gathered to produ
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Assuming something is wrong when the question set changes.** Staff unfamiliar with CATs sometimes report a "bug" when they notice different questions across administrations. This is expected behavior, not an error. Brief all data entry staff about CAT behavior before project launch.
 
@@ -98,7 +98,7 @@ The CAT instrument determines when enough information has been gathered to produ
 
 ---
 
-# 6. Administrator Configuration
+## 6. Administrator Configuration
 
 CAT instruments require two system-level prerequisites configured by a REDCap administrator:
 
@@ -111,7 +111,7 @@ If CAT instruments are unavailable in your instance, or if a CAT fails to load o
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)(relevant if the CAT instrument is administered as a participant-facing survey)

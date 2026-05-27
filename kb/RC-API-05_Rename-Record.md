@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Rename Record API method allows you to change the record ID of an existing record in a REDCap project. This is useful when you need to update record identifiers programmatically, such as when consolidating projects, renumbering records, or correcting mistaken IDs.
 
@@ -23,7 +23,7 @@ When to use this method: When you need to rename a record ID to a new value, and
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -37,9 +37,9 @@ When to use this method: When you need to rename a record ID to a new value, and
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -60,7 +60,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -79,7 +79,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 #!/bin/sh
@@ -95,7 +95,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -131,7 +131,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns `"1"`. On failure, it returns an error message string. Common errors include:
 - The record ID does not exist
@@ -140,7 +140,7 @@ On success, the API returns `"1"`. On failure, it returns an error message strin
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can I rename a record to a record ID that already exists?**
 
@@ -164,7 +164,7 @@ On success, the API returns `"1"`. On failure, it returns an error message strin
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using 'record' instead of 'action'.** The `action` parameter must be set to `'rename'`. A common mistake is omitting this parameter or setting it to an incorrect value.
 
@@ -178,7 +178,7 @@ On success, the API returns `"1"`. On failure, it returns an error message strin
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-02 — Export Records API](RC-API-02_Export-Records.md)(reading record data)

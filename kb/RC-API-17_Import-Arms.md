@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import Arms API method creates or modifies arms in a longitudinal REDCap project. Each arm consists of an arm number and a name. You can use this method to add new arms or update the names of existing arms.
 
@@ -29,7 +29,7 @@ The `override` parameter controls behavior: when set to `0`, the method adds or 
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -43,9 +43,9 @@ The `override` parameter controls behavior: when set to `0`, the method adds or 
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -72,7 +72,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -98,7 +98,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -112,7 +112,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -162,7 +162,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the method returns the **number of arms imported** as a plain integer. The HTTP status code will be 200.
 
@@ -175,7 +175,7 @@ This number reflects how many arms were created or renamed, not the total number
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the difference between `override=0` and `override=1`?**
 
@@ -203,7 +203,7 @@ This number reflects how many arms were created or renamed, not the total number
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Calling Import Arms on a classic project.** Arms are a longitudinal-only feature. If your project is classic, this method will fail. Always confirm your project is longitudinal before calling this method.
 
@@ -219,7 +219,7 @@ This number reflects how many arms were created or renamed, not the total number
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md)(retrieve arm metadata from a project)

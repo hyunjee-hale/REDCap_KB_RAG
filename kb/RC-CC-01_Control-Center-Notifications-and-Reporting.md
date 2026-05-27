@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Control Center Notifications & Reporting page is the main dashboard administrators land on when accessing the Control Center. Located at `ControlCenter/index.php` and labeled "Notifications & Reporting" in the sidebar, this page displays critical system health information, update alerts, and consortium reporting tools. It serves as the central hub for monitoring REDCap server status and administrative tasks.
 
 ---
 
-# 2. System Notifications & Warnings
+## 2. System Notifications & Warnings
 
 The Notifications & Warnings section displays alerts about server configuration issues that may impact REDCap functionality and security. Common alerts include:
 
@@ -31,7 +31,7 @@ The system provides configuration instructions tailored to common web servers, i
 
 ---
 
-# 3. External Module Update Alerts
+## 3. External Module Update Alerts
 
 When installed external modules have updates available in the REDCap Repository, an update banner is displayed on this page. This allows administrators to:
 
@@ -46,7 +46,7 @@ Each alert displays:
 
 ---
 
-# 4. Easy Upgrade
+## 4. Easy Upgrade
 
 The Easy Upgrade feature allows administrators to upgrade REDCap to a newer version directly through the browser interface, without requiring direct server access. 
 
@@ -58,7 +58,7 @@ The Easy Upgrade feature allows administrators to upgrade REDCap to a newer vers
 
 ---
 
-# 5. Reporting Stats to the Consortium
+## 5. Reporting Stats to the Consortium
 
 REDCap administrators are expected to report usage statistics to the REDCap Consortium to support the continued development and maintenance of the REDCap platform. Two reporting methods are available:
 
@@ -82,7 +82,7 @@ REDCap administrators are expected to report usage statistics to the REDCap Cons
 
 ---
 
-# 6. Other System Information
+## 6. Other System Information
 
 The Notifications & Reporting page displays additional system configuration information at the bottom of the notifications section:
 
@@ -95,7 +95,7 @@ This information is useful for troubleshooting, audit purposes, and verifying se
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What should I do if I see an alert about temp directory access restrictions?**
 REDCap recommends that web servers restrict public access to temporary directories to prevent unauthorized access to sensitive files. The alert provides configuration instructions for your specific web server (NGINX or Apache). If you see this alert, follow the provided instructions to configure your web server's access controls, then verify the change by checking the Notifications & Reporting page again.
@@ -114,7 +114,7 @@ The Notifications & Reporting page displays the date statistics were last succes
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Not monitoring temp directory warnings.** Temp directory access restrictions are a common security misconfiguration that can expose sensitive files. Check the Notifications & Reporting page regularly for these alerts and follow the provided remediation steps promptly. Delaying action on this warning leaves your instance vulnerable.
 
@@ -124,7 +124,7 @@ The Notifications & Reporting page displays the date statistics were last succes
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) (Consortium reporting settings, Easy Upgrade configuration)
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (server security recommendations)

@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Project Dashboard smart variables provide access to public project dashboards within REDCap and externally. These variables generate URLs, HTML links, and access codes for dashboards that have been made public by a project administrator. Use these variables to embed dashboard links in field notes, form instructions, emails, and invitations, allowing project stakeholders to easily navigate to summary dashboards without needing to manually construct URLs or remember access codes.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Project Dashboard**
 
@@ -44,7 +44,7 @@ A dashboard that has been configured to be accessible to users outside of REDCap
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -55,7 +55,7 @@ A dashboard that has been configured to be accessible to users outside of REDCap
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Finding the Unique Dashboard Name**
 
@@ -94,7 +94,7 @@ Dashboard smart variables are particularly useful in:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I find the unique dashboard name to use in a smart variable?**
 
@@ -130,7 +130,7 @@ Your access code: [dashboard-access-code:D-557DRCW87L]
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using incorrect or incomplete dashboard names.** Dashboard unique names must be in the exact format found on the configuration page (D-XXXXXXXXXX). Typos or incorrect names result in broken links. Always copy the dashboard name directly from the settings rather than typing it manually.
 
@@ -146,7 +146,7 @@ Your access code: [dashboard-access-code:D-557DRCW87L]
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) (creating charts and functions for dashboards)

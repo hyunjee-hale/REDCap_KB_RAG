@@ -14,19 +14,19 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The User Activity Log provides a real-time, system-wide view of all user actions occurring across every project on the REDCap instance. It is accessible under "Dashboards & Activity" in the Control Center sidebar. This is distinct from the per-project audit log (Logging module within a project) — the Activity Log shows actions across ALL projects simultaneously.
 
 ---
 
-# 2. Default View
+## 2. Default View
 
 By default, the page loads all user activity for the current day, with a count of total events shown in the header (e.g., "All User Activity for Today (X events)"). Events are displayed in reverse-chronological order, with the most recent actions appearing first.
 
 ---
 
-# 3. Filtering
+## 3. Filtering
 
 Administrators can filter the log by:
 
@@ -35,7 +35,7 @@ Administrators can filter the log by:
 
 ---
 
-# 4. Log Entry Fields
+## 4. Log Entry Fields
 
 Each log entry displays the following information:
 
@@ -45,7 +45,7 @@ Each log entry displays the following information:
 
 ---
 
-# 5. Action Types
+## 5. Action Types
 
 The log captures a broad range of actions across the REDCap system. Common examples include:
 
@@ -61,13 +61,13 @@ The log captures a broad range of actions across the REDCap system. Common examp
 
 ---
 
-# 6. Survey Respondents
+## 6. Survey Respondents
 
 Actions performed by unauthenticated survey participants are attributed to `[survey respondent]` rather than a named user. This includes creating and updating survey responses. This allows administrators to track survey activity while maintaining respondent privacy.
 
 ---
 
-# 7. Volume Considerations
+## 7. Volume Considerations
 
 On active REDCap instances, the number of daily events can be very high (tens of thousands or more). The page renders all results which may cause slow load times for large date ranges. To improve performance:
 
@@ -77,13 +77,13 @@ On active REDCap instances, the number of daily events can be very high (tens of
 
 ---
 
-# 8. Opening Individual Records
+## 8. Opening Individual Records
 
 Some log entries may be clickable and link directly to the associated project or record for further investigation. This allows quick navigation from a system-wide activity view to a specific project context.
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: What is the difference between the User Activity Log and the per-project Logging module?**
 The User Activity Log (in the Control Center) shows all activity across all projects on the instance in one centralized view. The Logging module within a single project shows only the activity within that specific project. Use the User Activity Log for instance-wide monitoring and the project Logging module for project-specific audit trails.
@@ -105,7 +105,7 @@ The User Activity Log displays all events matching your filters in the current v
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Confusing survey respondent activity with authenticated user activity.** When viewing the User Activity Log, remember that "[survey respondent]" entries represent actions by unauthenticated survey participants, not staff members or project administrators. Do not assume that survey respondents have user accounts or login credentials.
 
@@ -119,7 +119,7 @@ The User Activity Log displays all events matching your filters in the current v
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-CC-11 — Control Center: System Statistics](RC-CC-11_System-Statistics.md)
 - [RC-CC-13 — Control Center: User Activity Graphs](RC-CC-13_User-Activity-Graphs.md)

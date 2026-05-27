@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how REDCap handles instruments and events that can
 be filled out multiple times for the same record. It covers the visual
@@ -22,7 +22,7 @@ indicators for repeated entries and how to navigate between them.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Repeated Instrument**
 
@@ -57,9 +57,9 @@ space.
 
 ---
 
-# 3. Visual Indicators for Repeated Instruments
+## 3. Visual Indicators for Repeated Instruments
 
-## 3.1 Symbols at a Glance
+### 3.1 Symbols at a Glance
 
 | **Symbol** | **Meaning** |
 | --- | --- |
@@ -68,7 +68,7 @@ space.
 | Double back arrow | Repeated event with 3+ repetitions. Click to collapse the columns. |
 | Down arrow (on table) | Collapse the repeated instrument table on the Record Home Page. |
 
-## 3.2 Stacked Dot Color Codes
+### 3.2 Stacked Dot Color Codes
 
 The color of a stacked dot summarizes the statuses of all entries for
 that repeated instrument:
@@ -86,9 +86,9 @@ that repeated instrument:
 
 ---
 
-# 4. Step-by-Step: Navigating Repeated Instruments
+## 4. Step-by-Step: Navigating Repeated Instruments
 
-## 4.1 Opening a Specific Repeated Entry
+### 4.1 Opening a Specific Repeated Entry
 
 - Navigate to the Record Home Page for the record.
 
@@ -100,7 +100,7 @@ that repeated instrument:
 - In the popup, each entry is shown with its status dot. Click the dot
     for the entry you want to open.
 
-## 4.2 Adding a New Repeated Entry
+### 4.2 Adding a New Repeated Entry
 
 - On the Record Home Page, find the repeated instrument.
 
@@ -108,7 +108,7 @@ that repeated instrument:
 
 - Fill in the instrument and save.
 
-## 4.3 Using the Repeated Instrument Table
+### 4.3 Using the Repeated Instrument Table
 
 - On the Record Home Page, repeated instruments with at least one
     entry also display as a table below the main instrument grid.
@@ -118,7 +118,7 @@ that repeated instrument:
 - Tables can be collapsed using the down arrow to reduce visual
     clutter when there are many entries.
 
-## 4.4 Navigating Repeated Events
+### 4.4 Navigating Repeated Events
 
 - In a longitudinal project with repeated events, each repetition of
     the event appears as an additional column on the Record Home Page.
@@ -131,7 +131,7 @@ that repeated instrument:
 
 ---
 
-# 5. Combining Repeated Instruments and Longitudinal Mode
+## 5. Combining Repeated Instruments and Longitudinal Mode
 
 Repeated instruments and longitudinal mode can be combined in several
 ways:
@@ -149,7 +149,7 @@ ways:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: How do I know how many entries a repeated instrument has without
 clicking the stacked dot?**
@@ -184,7 +184,7 @@ Dashboard that filters or groups the view.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 - Confusing the plus symbol and the stacked dot: the plus adds a new
     entry; the stacked dot opens the list of existing entries. They are
@@ -203,7 +203,7 @@ Dashboard that filters or groups the view.
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — foundational article
     covering navigation paths and instrument status dot colors

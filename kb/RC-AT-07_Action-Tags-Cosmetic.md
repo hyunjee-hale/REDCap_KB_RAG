@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers action tags that adjust the visual display of certain field types without changing the underlying data: `@HIDEBUTTON`, `@INLINE`, and `@INLINE-PREVIEW`.
 
 ---
 
-# 2. @HIDEBUTTON
+## 2. @HIDEBUTTON
 
 Text boxes with a date or date-time validation automatically display a **Today** or **Now** button that fills the current date/time with a single click. `@HIDEBUTTON` removes that button.
 
@@ -35,7 +35,7 @@ Text boxes with a date or date-time validation automatically display a **Today**
 
 ---
 
-# 3. @INLINE
+## 3. @INLINE
 
 Renders an uploaded file directly within the form, inline with other fields, instead of just showing the file name.
 
@@ -45,7 +45,7 @@ Renders an uploaded file directly within the form, inline with other fields, ins
 
 `@INLINE` supports three forms:
 
-## 3.1 @INLINE without parameters
+### 3.1 @INLINE without parameters
 
 Displays the file at 100% width of the containing area:
 
@@ -53,7 +53,7 @@ Displays the file at 100% width of the containing area:
 @INLINE
 ```
 
-## 3.2 @INLINE with one parameter
+### 3.2 @INLINE with one parameter
 
 Sets the display width; height scales proportionally:
 
@@ -67,7 +67,7 @@ Use a whole number for pixels or append `%` for a percentage of screen width:
 @INLINE(50%)
 ```
 
-## 3.3 @INLINE with two parameters
+### 3.3 @INLINE with two parameters
 
 Sets both width and height independently (may distort aspect ratio):
 
@@ -80,7 +80,7 @@ Sets both width and height independently (may distort aspect ratio):
 
 ---
 
-# 4. @INLINE-PREVIEW
+## 4. @INLINE-PREVIEW
 
 A compromise between default (filename only) and `@INLINE` (always displayed). Adds a toggle button to the file upload field: a magnifier icon shows the file; an × icon hides it.
 
@@ -95,7 +95,7 @@ A compromise between default (filename only) and `@INLINE` (always displayed). A
 
 ---
 
-# 5. Displaying Files via Piping
+## 5. Displaying Files via Piping
 
 A file upload field's inline display can also be referenced elsewhere in a form using a piped reference with the `:inline` qualifier:
 
@@ -107,7 +107,7 @@ This displays the file inline as if `@INLINE` (without parameters) were applied,
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can I use @INLINE with a video or audio file?**
 
@@ -131,7 +131,7 @@ This displays the file inline as if `@INLINE` (without parameters) were applied,
 
 ---
 
-# 7. Common Mistakes
+## 7. Common Mistakes
 
 **Not testing `@INLINE` across devices.** Pixel-based sizing looks very different on high-density smartphone screens versus standard monitors. Always test on representative devices.
 
@@ -141,7 +141,7 @@ This displays the file inline as if `@INLINE` (without parameters) were applied,
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-AT-05 — Free Text Action Tags](RC-AT-05_Action-Tags-Free-Text.md)

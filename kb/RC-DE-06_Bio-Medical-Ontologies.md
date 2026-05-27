@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to use bio-medical ontology fields during data entry in REDCap. Ontology fields are a special type of text input that connect to standardized medical terminology lookup tables hosted on an external server (BioPortal). Rather than typing a value directly, you search a controlled vocabulary and select a matching term. This ensures that clinical concepts like diagnoses, medications, and lab tests are recorded using standardized codes and descriptions. REDCap provides access to over 400 ontologies; the most common in clinical research are ICD-9/ICD-10, RxNorm, and LOINC.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Bio-Medical Ontology**
 
@@ -40,7 +40,7 @@ A fixed, curated set of terms. Ontology fields enforce controlled vocabulary —
 
 ---
 
-# 3. How to Use an Ontology Field
+## 3. How to Use an Ontology Field
 
 Using an ontology field is similar to using a search engine. The field looks like a text box but behaves differently from a standard validated field.
 
@@ -54,9 +54,9 @@ Using an ontology field is similar to using a search engine. The field looks lik
 
 ---
 
-# 4. Common Ontologies in Clinical Research
+## 4. Common Ontologies in Clinical Research
 
-### 4.1 ICD-9 / ICD-10 (International Classification of Diseases)
+#### 4.1 ICD-9 / ICD-10 (International Classification of Diseases)
 
 ICD-9 and ICD-10 are the standard vocabularies for recording diagnoses and health conditions. They allow you to record diagnoses at varying levels of specificity:
 
@@ -65,7 +65,7 @@ ICD-9 and ICD-10 are the standard vocabularies for recording diagnoses and healt
 
 You can search by descriptive text or by the ICD code directly. ICD-10 is the current standard in most countries; ICD-9 remains available for historical or legacy data.
 
-### 4.2 RxNorm
+#### 4.2 RxNorm
 
 RxNorm is the standard vocabulary for medications. It provides normalized names for drugs and allows you to search by:
 
@@ -75,7 +75,7 @@ RxNorm is the standard vocabulary for medications. It provides normalized names 
 
 > **Important:** RxNorm tracks what medication was prescribed or administered, not the actual dose given to a specific patient. If you need to record a specific administered dose, that information should be captured in a separate numeric field.
 
-### 4.3 LOINC (Logical Observation Identifiers Names and Codes)
+#### 4.3 LOINC (Logical Observation Identifiers Names and Codes)
 
 LOINC is the standard vocabulary for laboratory tests, clinical observations, and measurement panels. You can search for:
 
@@ -86,7 +86,7 @@ LOINC is the standard vocabulary for laboratory tests, clinical observations, an
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can I type a free-text value into an ontology field instead of selecting from the lookup?**
 
@@ -110,7 +110,7 @@ LOINC is the standard vocabulary for laboratory tests, clinical observations, an
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Treating ontology fields like free-text fields.** You cannot type a final value into an ontology field — you must select from the dropdown results. If you type a complete term and press Tab or Enter without selecting from the dropdown, the field may remain empty.
 
@@ -122,7 +122,7 @@ LOINC is the standard vocabulary for laboratory tests, clinical observations, an
 
 ---
 
-# 7. Administrator Configuration
+## 7. Administrator Configuration
 
 Bio-medical ontology field lookup depends on two system-level requirements that must be configured by a REDCap administrator:
 
@@ -136,7 +136,7 @@ If ontology fields are not appearing in your instruments or the lookup returns n
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-DE-05 — Field Validations](RC-DE-05_Field-Validations.md) (standard format-checking validations that accompany or complement ontology fields)
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills)

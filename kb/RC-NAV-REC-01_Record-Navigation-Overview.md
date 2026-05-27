@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains how to navigate to records and locate data within
 a REDCap project. It covers the primary navigation paths available to
@@ -23,7 +23,7 @@ indicators (colored dots).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record**
 
@@ -56,9 +56,9 @@ opening individual records.
 
 ---
 
-# 3. Step-by-Step: Primary Navigation Paths
+## 3. Step-by-Step: Primary Navigation Paths
 
-## 3.1 Navigating to a Project
+### 3.1 Navigating to a Project
 
 - Log in to your REDCap instance.
 
@@ -68,7 +68,7 @@ opening individual records.
 - You are now on the project home page, with the left-hand menu
     available.
 
-## 3.2 Add/Edit Records (Quickest Path to a Single Record)
+### 3.2 Add/Edit Records (Quickest Path to a Single Record)
 
 - In the left-hand menu, find the Data Collection section and click
     Add / Edit Records.
@@ -87,7 +87,7 @@ opening individual records.
 - Selecting a result takes you directly to the Record Home Page or to
     the specific instrument where the value was found.
 
-## 3.3 Record Status Dashboard
+### 3.3 Record Status Dashboard
 
 - In the left-hand menu, click Record Status Dashboard under Data
     Collection.
@@ -98,7 +98,7 @@ opening individual records.
 - Click any colored dot to open the corresponding instrument for that
     record.
 
-## 3.4 Reports
+### 3.4 Reports
 
 - In the left-hand menu, click Data Exports, Reports, and Stats, then
     select a report.
@@ -106,7 +106,7 @@ opening individual records.
 - Any Record ID displayed in a report is a clickable link that opens
     the Record Home Page for that record.
 
-## 3.5 Using the Record Home Page
+### 3.5 Using the Record Home Page
 
 - Once on the Record Home Page, you see all instruments for that
     record displayed as colored dots.
@@ -118,7 +118,7 @@ opening individual records.
 
 ---
 
-# 4. Instrument Status Dot Colors
+## 4. Instrument Status Dot Colors
 
 Every instrument in REDCap is represented by a colored dot. The color
 encodes the completion status of that instrument for a given record.
@@ -150,7 +150,7 @@ encodes the completion status of that instrument for a given record.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the fastest way to find a specific record in a large
 project?**
@@ -186,7 +186,7 @@ field — changes the dot from grey to red.
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 - Confusing grey and red: grey means no data at all; red means data is
     present but the form status has not been updated. They are both
@@ -206,7 +206,7 @@ field — changes the dot from grey to red.
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) — the two-panel layout and
     how to navigate to a project from the REDCap home page

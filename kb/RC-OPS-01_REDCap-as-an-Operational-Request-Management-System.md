@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap is primarily designed for research data collection, but its form builder, survey engine, branching logic, and repeating instruments also make it an effective platform for internal administrative workflows — particularly **request management** and **account administration**.
 
@@ -32,15 +32,15 @@ This pattern is appropriate when:
 
 ---
 
-# 2. Project Configuration
+## 2. Project Configuration
 
-## 2.1 Project type
+### 2.1 Project type
 
 Use a **classic (non-longitudinal)** project. Each request (or each study account) is a record. The different request types are modeled as separate instruments, not as events.
 
 Longitudinal mode is not necessary here and adds overhead — event setup, event-scoped branching logic, and a more complex record status dashboard — without any functional benefit for a workflow that has no time-point structure.
 
-## 2.2 Repeating instruments
+### 2.2 Repeating instruments
 
 Enable repeating instruments (not repeating events) for request types that may occur multiple times per record. For example, if a study account can accumulate multiple user addition requests over time, the user request instrument repeats and each addition is a separate instance.
 
@@ -58,7 +58,7 @@ Example custom labels:
 
 See the Style Guide (Section 5.1) for detailed guidance on configuring custom form labels.
 
-## 2.3 Surveys
+### 2.3 Surveys
 
 Enable surveys so that requesters can complete intake forms without needing a REDCap account. The typical intake workflow is:
 
@@ -69,7 +69,7 @@ Enable surveys so that requesters can complete intake forms without needing a RE
 
 Review fields should not be part of the survey — they are staff-only and should only appear in data entry mode.
 
-## 2.4 Record auto-numbering and custom record label
+### 2.4 Record auto-numbering and custom record label
 
 Enable **record auto-numbering** so records are assigned IDs without manual intervention.
 
@@ -83,9 +83,9 @@ This is configured under Project Setup → Additional Customizations → "Custom
 
 ---
 
-# 3. Instrument Design
+## 3. Instrument Design
 
-## 3.1 Instrument 1 — Request Intake (root instrument)
+### 3.1 Instrument 1 — Request Intake (root instrument)
 
 The first instrument on every record captures minimal information about the initial contact and routes the request. Keep it short — its purpose is to open the record and track overall status, not to collect all details.
 
@@ -101,7 +101,7 @@ Typical fields:
 | `request_status` | Radio | Overall status: In-process / Active / Declined |
 | `request_notes` | Notes | Free-text log of communications and actions taken |
 
-## 3.2 Instrument 2 — Study / Account Request (survey)
+### 3.2 Instrument 2 — Study / Account Request (survey)
 
 The primary intake instrument, sent to the requester as a survey. It collects structured information about the study or project. Organize it into clearly labeled sections.
 
@@ -171,7 +171,7 @@ Collect billing contact name, email, phone, and any relevant billing codes. If y
 
 See Section 4 below. This section appears at the end of the instrument but is hidden from the requester via branching logic.
 
-## 3.3 Instrument 3 — User Request (repeating)
+### 3.3 Instrument 3 — User Request (repeating)
 
 Captures requests to add individual users to an existing study account. This instrument repeats so that a single record can accumulate multiple user additions over time.
 
@@ -192,7 +192,7 @@ Typical fields:
 
 Use `@TODAY @READONLY` on the date field to auto-populate it when the form is first opened and prevent subsequent editing. This captures the submission timestamp without requiring staff to enter it manually.
 
-## 3.4 Instrument 4 — Project Request (repeating)
+### 3.4 Instrument 4 — Project Request (repeating)
 
 Captures requests to create new projects (or sub-projects) under an existing study account. Also repeats.
 
@@ -200,7 +200,7 @@ Typical fields: project name, project type (main study / operational / testing/d
 
 Optionally track: which server the project was created on, the project ID assigned, and whether default user roles were set up and the requester was added.
 
-## 3.5 Instrument 5 — Communications Log (optional, repeating)
+### 3.5 Instrument 5 — Communications Log (optional, repeating)
 
 A lightweight log for tracking batch communications sent to accounts. Useful if staff periodically send status emails to study PIs.
 
@@ -208,11 +208,11 @@ Typical fields: batch email status (not selected / selected / processed), date o
 
 ---
 
-# 4. Admin-Only Review Sections
+## 4. Admin-Only Review Sections
 
 Each main instrument should have an admin-only review block that is **hidden from requesters** but visible to staff in data entry mode.
 
-## 4.1 Implementation
+### 4.1 Implementation
 
 1. Add a **reviewer identity field** near the top of the review block. The reviewer types their own identifier (username, staff ID, or role name) when they begin the review.
 2. Gate all review fields on that identity field being non-empty:
@@ -231,7 +231,7 @@ Or, if using a role-based approach:
 
 > **Note:** Branching logic provides visual hiding — it prevents the review fields from appearing on the form. To prevent unauthorized editing, also configure user rights so that requesters (if they have REDCap accounts) do not have edit access to the review fields. The two controls work together: user rights protect the data; branching logic provides the clean visual separation.
 
-## 4.2 Typical admin review fields
+### 4.2 Typical admin review fields
 
 | Field | Type | Notes |
 |---|---|---|
@@ -242,7 +242,7 @@ Or, if using a role-based approach:
 | `account_status` | Radio | Active / Pending / Closed |
 | `account_status_date` | Text (date\_mdy) | Date the status was set |
 
-## 4.3 Descriptive cross-reference fields
+### 4.3 Descriptive cross-reference fields
 
 In repeating instruments (user request, project request), add a **descriptive field** that pipes in the study's PI and primary contact from the study account instrument. This saves the reviewer from navigating away to look up who the PI is.
 
@@ -259,7 +259,7 @@ Gate this descriptive field on the same reviewer identity condition so it only a
 
 ---
 
-# 5. Funding Detail Instrument
+## 5. Funding Detail Instrument
 
 If detailed funding tracking is a core need, consider a dedicated funding instrument rather than embedding funding fields in the study account instrument.
 
@@ -271,7 +271,7 @@ For new projects, Option B (repeating) is recommended. Option A may be acceptabl
 
 ---
 
-# 6. Design Decisions and Trade-offs
+## 6. Design Decisions and Trade-offs
 
 **Classic vs. longitudinal:** Use classic mode. Each record is a study account. The different request types (user, project) are repeating instruments within that record — not events. Adding longitudinal mode here provides no functional benefit and increases configuration overhead.
 
@@ -283,7 +283,7 @@ For new projects, Option B (repeating) is recommended. Option A may be acceptabl
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Can the requester fill in the intake form without a REDCap account?**
 
@@ -307,7 +307,7 @@ For new projects, Option B (repeating) is recommended. Option A may be acceptabl
 
 ---
 
-# 8. Common Mistakes and Gotchas
+## 8. Common Mistakes and Gotchas
 
 **Hardcoding staff identifiers in branching logic.** This is the most common design mistake in admin-only review sections. Hardcoded usernames or staff IDs break when personnel change and embed personal identifiers in the data dictionary. Use a role value or a non-empty check instead. See Style Guide Section 4.1.
 
@@ -321,7 +321,7 @@ For new projects, Option B (repeating) is recommended. Option A may be acceptabl
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md)
 - [RC-SURV-04 — Survey Link Types & Access Methods](RC-SURV-04_Survey-Link-Types-and-Access-Methods.md)

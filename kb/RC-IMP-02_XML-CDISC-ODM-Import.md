@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap's Data Import Tool supports two import formats: CSV and CDISC ODM XML. While CSV is the standard format for most bulk imports, the ODM XML pathway serves a distinct set of use cases — chiefly transferring data from another REDCap installation or from a third-party system that produces CDISC-compliant output. This article covers the ODM import pathway in full: what the format is, when to use it, what files are accepted, how the import process works step by step, and how REDCap handles records that already exist in the project. The brief procedural summary in [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (§8.4) is the entry point; this article is the complete reference.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **CDISC ODM (Operational Data Model)**
 
@@ -52,11 +52,11 @@ REDCap's ODM import is additive by default: incoming records are merged with exi
 
 ---
 
-# 3. ODM Import vs. CSV Import: Choosing the Right Format
+## 3. ODM Import vs. CSV Import: Choosing the Right Format
 
 Use this section to decide which import format fits your situation.
 
-## 3.1 When ODM Import is the Right Choice
+### 3.1 When ODM Import is the Right Choice
 
 | Scenario | Why ODM |
 |---|---|
@@ -65,7 +65,7 @@ Use this section to decide which import format fits your situation.
 | You need to carry both data values and their associated metadata labels in a single file for archival purposes | ODM includes field definitions alongside data; CSV carries data only |
 | Your data includes special characters, rich text, or multilingual content that may not survive CSV encoding | XML encoding handles character sets more robustly than CSV |
 
-## 3.2 When CSV Import is the Better Choice
+### 3.2 When CSV Import is the Better Choice
 
 | Scenario | Why CSV |
 |---|---|
@@ -78,9 +78,9 @@ Use this section to decide which import format fits your situation.
 
 ---
 
-# 4. File Requirements
+## 4. File Requirements
 
-## 4.1 ODM Version
+### 4.1 ODM Version
 
 REDCap accepts only **ODM version 1.3.X**. Files produced by ODM 1.2 or earlier, or by ODM 2.0, are not guaranteed to import correctly and may be rejected outright. The ODM version is declared in the root element of the XML file:
 
@@ -90,7 +90,7 @@ REDCap accepts only **ODM version 1.3.X**. Files produced by ODM 1.2 or earlier,
 
 Check this attribute before attempting an import if you are working with a file from an external system.
 
-## 4.2 REDCap-Generated ODM Files
+### 4.2 REDCap-Generated ODM Files
 
 The most reliable ODM source for re-import into REDCap is a file produced by REDCap itself. You can obtain one in two ways:
 
@@ -108,7 +108,7 @@ See [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export
 
 The Export Project XML endpoint ([RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md)) returns a full project ODM export programmatically. The Export Records endpoint ([RC-API-02 — Export Records API](RC-API-02_Export-Records.md)) also supports an `xml` format type that returns record data in ODM structure. API usage requires a token and developer familiarity — see [RC-API-36 — Export Project XML API](RC-API-36_Export-Project-XML.md).
 
-## 4.3 Third-Party ODM Files
+### 4.3 Third-Party ODM Files
 
 REDCap can import ODM files from external systems provided two conditions are met:
 
@@ -117,7 +117,7 @@ REDCap can import ODM files from external systems provided two conditions are me
 
 > **Important:** Different EDC vendors implement ODM with slightly different conventions (namespace declarations, OID formats, attribute ordering). Even a technically valid ODM 1.3 file from another vendor may require manual adjustment before REDCap accepts it. If you encounter import errors with a third-party file, compare its structure against a REDCap-generated ODM export from the same project to identify discrepancies.
 
-## 4.4 What ODM Import Updates — and What It Does Not
+### 4.4 What ODM Import Updates — and What It Does Not
 
 The ODM import in the Data Import Tool updates **participant record data only**. It does not modify:
 
@@ -131,11 +131,11 @@ If you need to restore or migrate a full project including its metadata, use the
 
 ---
 
-# 5. REDCap ODM XML Format Reference
+## 5. REDCap ODM XML Format Reference
 
 This section documents the structure and encoding of REDCap-generated ODM XML files. Use it to understand what a valid file looks like, diagnose import errors, or prepare a third-party ODM file for import into REDCap.
 
-## 5.1 Document Structure Overview
+### 5.1 Document Structure Overview
 
 A REDCap ODM XML file has two top-level blocks inside the root `<ODM>` element:
 
@@ -157,7 +157,7 @@ A REDCap ODM XML file has two top-level blocks inside the root `<ODM>` element:
             <ItemData>         ← One data value
 ```
 
-## 5.2 Root ODM Element Attributes
+### 5.2 Root ODM Element Attributes
 
 The `<ODM>` element carries file-level metadata. Key attributes in a REDCap export:
 
@@ -173,7 +173,7 @@ The `<ODM>` element carries file-level metadata. Key attributes in a REDCap expo
 
 The `xmlns:redcap="https://projectredcap.org"` namespace declaration enables the `redcap:` prefixed extensions that carry REDCap-specific metadata throughout the file.
 
-## 5.3 MetaDataVersion — Field Definitions
+### 5.3 MetaDataVersion — Field Definitions
 
 Each field in the project appears as an `<ItemDef>` element. The attributes on `<ItemDef>` encode the field's full definition:
 
@@ -197,7 +197,7 @@ Each field in the project appears as an `<ItemDef>` element. The attributes on `
 
 **Validation range checks** appear as child `<RangeCheck>` elements with `Comparator` (GE, LE, GT, LT) and `SoftHard` (Soft = warning, Hard = error) attributes.
 
-## 5.4 ClinicalData Structure — How Records Are Encoded
+### 5.4 ClinicalData Structure — How Records Are Encoded
 
 Participant data is nested four levels deep:
 
@@ -229,7 +229,7 @@ Participant data is nested four levels deep:
 | `ItemData ItemOID` | The field's variable name (or `fieldname___code` for checkboxes). |
 | `ItemData Value` | The stored value. Dates are in `YYYY-MM-DD` format. Choice fields use the raw coded value (not the label). |
 
-## 5.5 Checkbox Field Encoding
+### 5.5 Checkbox Field Encoding
 
 Checkbox fields receive one `<ItemDef>` per choice, and one `<ItemData>` per choice in the data. The OID follows the pattern `fieldname___code` (three underscores):
 
@@ -254,7 +254,7 @@ Checkbox fields receive one `<ItemDef>` per choice, and one `<ItemData>` per cho
 
 > **Note:** This OID naming convention matches the CSV export convention for checkboxes (`fieldname___code`), so if you are familiar with CSV imports, the pattern is the same.
 
-## 5.6 Repeating Instrument Encoding
+### 5.6 Repeating Instrument Encoding
 
 For repeating instruments, each instance appears as a separate `<FormData>` element with an incrementing `FormRepeatKey`:
 
@@ -280,7 +280,7 @@ For repeating instruments, each instance appears as a separate `<FormData>` elem
 
 `FormRepeatKey` is the ODM equivalent of `redcap_repeat_instance` in CSV imports. The numbering starts at `1` and increments per instance. When importing, REDCap matches instances by their `FormRepeatKey` value — so importing a file with `FormRepeatKey="2"` will update instance 2, not append a new one.
 
-## 5.7 GlobalVariables — Project Settings
+### 5.7 GlobalVariables — Project Settings
 
 The `<GlobalVariables>` block stores project-level settings using `redcap:` namespaced elements. These settings are included in backup exports but are **not applied during a data-only ODM import via the Data Import Tool** — they only take effect during a full project restore (Create New Project → Upload XML). Key settings encoded here include:
 
@@ -296,9 +296,9 @@ The `<GlobalVariables>` block stores project-level settings using `redcap:` name
 
 ---
 
-# 6. ODM Import Process
+## 6. ODM Import Process
 
-## 6.1 Navigating to the ODM Import Tab
+### 6.1 Navigating to the ODM Import Tab
 
 | 1 | From the project left-hand menu, navigate to **Applications → Data Import Tool**. |
 |---|---|
@@ -306,7 +306,7 @@ The `<GlobalVariables>` block stores project-level settings using `redcap:` name
 
 > **Note:** If you do not see the Data Import Tool in the Applications menu, your user account may not have Data Entry rights for this project. Contact your project administrator.
 
-## 6.2 Import Settings
+### 6.2 Import Settings
 
 The ODM import tab offers a single configurable setting before file selection:
 
@@ -316,7 +316,7 @@ The ODM import tab offers a single configurable setting before file selection:
 
 The delimiter and date format settings present on the CSV tab do not appear on the ODM tab — these parameters are encoded in the XML file itself and do not require separate configuration.
 
-## 6.3 Step-by-Step Import Procedure
+### 6.3 Step-by-Step Import Procedure
 
 | 1 | On the CDISC ODM (XML) tab, confirm the **Overwrite data with blank values** setting. |
 |---|---|
@@ -330,7 +330,7 @@ The delimiter and date format settings present on the CSV tab do not appear on t
 
 > **Note:** The ODM import runs in real time in the browser. There is no background processing option. For very large ODM files this means the browser must remain open and active until the import completes.
 
-## 6.4 Reviewing the Import Preview
+### 6.4 Reviewing the Import Preview
 
 The preview screen shows the records and values REDCap detected in the file. Pay attention to:
 
@@ -340,9 +340,9 @@ The preview screen shows the records and values REDCap detected in the file. Pay
 
 ---
 
-# 7. How REDCap Handles Existing Records During ODM Import
+## 7. How REDCap Handles Existing Records During ODM Import
 
-## 7.1 Additive Merge Behavior
+### 7.1 Additive Merge Behavior
 
 ODM import merges incoming data with existing records — it does not replace them. If a record with the same Record ID already exists in the project:
 
@@ -352,7 +352,7 @@ ODM import merges incoming data with existing records — it does not replace th
 
 If a record ID in the import file does not exist in the project, REDCap creates a new record.
 
-## 7.2 Effect of "Overwrite Data with Blank Values"
+### 7.2 Effect of "Overwrite Data with Blank Values"
 
 The Overwrite setting modifies what happens when the import file contains a blank or missing value for a field that already has data in REDCap:
 
@@ -364,17 +364,17 @@ The Overwrite setting modifies what happens when the import file contains a blan
 
 > **Important:** "Overwrite data with blank values = Yes" can silently erase participant data if the import file is incomplete. Only enable this setting when blanking existing values is your explicit intent.
 
-## 7.3 Record ID Matching
+### 7.3 Record ID Matching
 
 REDCap matches incoming records to existing records using the Record ID field. The Record ID in the ODM file's subject key must correspond to the Record ID values in the target project. If the Record ID format in the file differs from the target project (e.g., leading zeros, different prefix), records will be created as new rather than updating existing ones.
 
-## 7.4 Longitudinal Projects
+### 7.4 Longitudinal Projects
 
 For longitudinal projects, the ODM file encodes event context through the study event reference structure in the XML. REDCap maps data to the correct event using this structure — you do not need to add a separate event name column as you would in a CSV import. However, the event names in the file must correspond to events defined in the target project; mismatches cause those data points to be skipped.
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: When should I use ODM import instead of CSV import?**
 
@@ -406,7 +406,7 @@ For longitudinal projects, the ODM file encodes event context through the study 
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Clicking "Upload File" but not "Import Data."** The upload step stages a preview only — no data is saved until you scroll down and click "Import Data." If you close the browser tab or navigate away after uploading, nothing is imported. This two-step pattern is the same as CSV import and is the most common cause of "the data didn't appear" support requests.
 
@@ -422,7 +422,7 @@ For longitudinal projects, the ODM file encodes event context through the study 
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to import and export functionality related to ODM XML. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -431,7 +431,7 @@ For longitudinal projects, the ODM file encodes event context through the study 
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-IMP-01 — Data Import Overview](RC-IMP-01_Data-Import-Overview.md) (prerequisite; §8.4 contains the introductory ODM import summary this article expands)
 - [RC-EXPRT-02 — Data Export: Export Formats](RC-EXPRT-02_Data-Export-Export-Formats.md) (covers how to produce a REDCap ODM export file for re-import)

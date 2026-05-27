@@ -1,4 +1,4 @@
-# KB-REFERENCE-MAP.md — Moved
+## KB-REFERENCE-MAP.md — Moved
 
 This file has been split into three files in `meta/` to reduce token overhead:
 

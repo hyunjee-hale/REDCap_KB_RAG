@@ -14,9 +14,9 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
-## What is this?
+### What is this?
 
 This document is the operational setup guide for REDCap randomization.
 It covers everything from pre-flight preparation through moving a
@@ -24,7 +24,7 @@ randomized project to production. It assumes the reader has already
 reviewed [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) and understands core randomization concepts and
 terminology.
 
-## Why does it matter?
+### Why does it matter?
 
 REDCap randomization setup has more interdependencies than almost any
 other feature. Several decisions made early in the process ---
@@ -44,7 +44,7 @@ stratification variables can be shared.
 
 ---
 
-# 2. Learning Objectives
+## 2. Learning Objectives
 
 After completing this guide, the user will be able to:
 
@@ -67,7 +67,7 @@ After completing this guide, the user will be able to:
 
 ---
 
-# 3. Pre-flight Checklist
+## 3. Pre-flight Checklist
 
 Complete every applicable item below before opening the REDCap
 randomization setup interface. Items skipped prematurely are the leading
@@ -89,12 +89,12 @@ cause of model rebuilds.
 
 ---
 
-# 4. Setup Procedure
+## 4. Setup Procedure
 
 Follow these 14 steps in order. Steps marked as optional can be skipped
 if they do not apply to your project design.
 
-## 4.1 Variable and framework setup (Steps 1--4)
+### 4.1 Variable and framework setup (Steps 1--4)
 
 ```
 **1** | **Create your randomization variable**                     
@@ -223,7 +223,7 @@ uncertainty about the concepts below.
        | records when testing a new table.*                        
 ```
 
-## 4.5 Trigger options (Step 11)
+### 4.5 Trigger options (Step 11)
 
 Select how randomization is initiated. This is a Randomization 2.0
 feature — verify your REDCap version supports it.
@@ -234,7 +234,7 @@ feature — verify your REDCap version supports it.
 | **Trigger logic — for users with Randomize permission only** | Define trigger logic (similar to branching logic) on a specific instrument/event. Randomization fires automatically when the logic is true AND a user with Randomize rights saves the defined form. Use when randomization should be conditional on data values, but staff-controlled. |
 | **Trigger logic — for all users (including survey respondents)** | Same as above, but fires for any user — including survey respondents completing a form. Randomization rights not required to trigger. Use for automatic randomization based on survey completion or eligibility criteria. |
 
-## 4.6 Test, finalize, and go to production (Steps 12--14)
+### 4.6 Test, finalize, and go to production (Steps 12--14)
 
 ```
 **12** | **Test thoroughly in Development mode**                   
@@ -270,11 +270,11 @@ feature — verify your REDCap version supports it.
 
 ---
 
-# 5. Questions & Answers
+## 5. Questions & Answers
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Skipping pre-flight and going straight to setup**
 
@@ -341,7 +341,7 @@ feature — verify your REDCap version supports it.
 
 ---
 
-# 7. Administrator Configuration
+## 7. Administrator Configuration
 
 The Randomization module must be enabled at the system level before it can be enabled in any project. Administrators do this in the Control Center under System Configuration → Modules/Services Configuration. See **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)** for details.
 
@@ -349,7 +349,7 @@ The Randomization module must be enabled at the system level before it can be en
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - **[RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md):** Randomization Concepts & Terminology — required
     prerequisite for this guide
@@ -367,7 +367,7 @@ The Randomization module must be enabled at the system level before it can be en
 
 ---
 
-# 9. Version & Change Notes
+## 9. Version & Change Notes
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
@@ -378,7 +378,7 @@ REDCap LLM Knowledge Base \| [RC-RAND-02 — Randomization Setup Guide](RC-RAND-
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md)
 - [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)

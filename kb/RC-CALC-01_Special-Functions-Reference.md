@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 REDCap provides a library of built-in functions — called Special Functions — that can be used wherever logic or calculations are written in the platform. This includes branching logic, calculated fields, report filters, survey invitations, alerts, and the Data Quality module. Functions perform operations that go beyond simple comparisons: calculating the difference between two dates, extracting parts of a date, rounding numbers, manipulating text strings, and applying conditional logic. This article is a complete reference for all available Special Functions as of REDCap 16.1.3.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Special Function**
 
@@ -48,7 +48,7 @@ A project-defined code indicating that a value is intentionally absent (e.g., "U
 
 ---
 
-# 3. Where Special Functions Can Be Used
+## 3. Where Special Functions Can Be Used
 
 Special Functions work in any location in REDCap where logic or calculations are written:
 
@@ -66,9 +66,9 @@ Special Functions work in any location in REDCap where logic or calculations are
 
 ---
 
-# 4. Conditional Function
+## 4. Conditional Function
 
-## 4.1 if()
+### 4.1 if()
 
 **Syntax:** `if(CONDITION, value_if_true, value_if_false)`
 
@@ -83,9 +83,9 @@ Evaluates a condition and returns one of two values depending on whether the con
 
 ---
 
-# 5. Date and DateTime Functions
+## 5. Date and DateTime Functions
 
-## 5.1 datediff()
+### 5.1 datediff()
 
 **Syntax:** `datediff([date1], [date2], "units", returnSignedValue)`
 
@@ -105,13 +105,13 @@ You may use the literal `'today'` or `'now'` as either date parameter.
 
 **Common use:** `datediff([date1], 'today', 'd')` — number of days between a field's date and today.
 
-## 5.2 age_at_date()
+### 5.2 age_at_date()
 
 **Syntax:** `age_at_date([date_of_birth], [other_date], returnDecimal)`
 
 Calculates a person's age in years using their date of birth and another specified date. Returns an integer by default. To get a decimal value (e.g., 0.24 years for a newborn), add `true` as the third parameter. If datetime fields are provided, the time component is ignored — only the date portion is used.
 
-## 5.3 dayoftheweek()
+### 5.3 dayoftheweek()
 
 **Syntax:** `dayoftheweek([date])`
 
@@ -120,7 +120,7 @@ Returns an integer corresponding to the day of the week for a given date or date
 
 You may use `'today'` or `'now'` as the date parameter.
 
-## 5.4 year(), month(), day()
+### 5.4 year(), month(), day()
 
 Extract individual components from a date or datetime field:
 
@@ -134,9 +134,9 @@ You may use `'now'` or `'today'` (in quotes) instead of a field variable in any 
 
 ---
 
-# 6. Numeric Functions
+## 6. Numeric Functions
 
-## 6.1 Rounding
+### 6.1 Rounding
 
 | **Function** | **Behavior** | **Example** |
 |---|---|---|
@@ -146,7 +146,7 @@ You may use `'now'` or `'today'` (in quotes) instead of a field variable in any 
 
 If the `decimals` parameter is omitted, it defaults to 0 (rounding to a whole number).
 
-## 6.2 Mathematical Operations
+### 6.2 Mathematical Operations
 
 | **Function** | **Description** | **Example** |
 |---|---|---|
@@ -159,7 +159,7 @@ If the `decimals` parameter is omitted, it defaults to 0 (rounding to a whole nu
 
 > **Important:** For exponents, the surrounding parentheses on both the base and the exponent are required. `4^3` will not work — it must be `(4)^(3)`.
 
-## 6.3 Aggregate Functions
+### 6.3 Aggregate Functions
 
 These functions operate on a set of two or more values. Blank values are always ignored and excluded from the calculation.
 
@@ -176,7 +176,7 @@ There is no limit to the number of values that can be passed into these function
 
 > **sum() vs. the + operator:** `sum()` will produce a result even if some (or all) of the variables are blank — blank values are simply skipped. If you need a calculation that only fires when *all* variables are filled in, use the `+` operator instead: `[var1]+[var2]+[var3]`. With the `+` operator, if any variable is blank the entire expression returns blank, making incomplete data visible rather than silently partial.
 
-## 6.4 Type-Checking Functions
+### 6.4 Type-Checking Functions
 
 | **Function** | **Returns true if...** |
 |---|---|
@@ -185,7 +185,7 @@ There is no limit to the number of values that can be passed into these function
 
 ---
 
-# 7. Missing Data Code Functions
+## 7. Missing Data Code Functions
 
 These functions are only meaningful in projects where Missing Data Codes have been defined (Project Setup → Additional Customizations).
 
@@ -200,11 +200,11 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 ---
 
-# 8. Text Functions
+## 8. Text Functions
 
 > **Important constraint:** Text functions should not be used on date or datetime fields that use MDY or DMY date formatting. They work correctly on date fields using YMD formatting.
 
-## 8.1 Searching Within Text
+### 8.1 Searching Within Text
 
 | **Function** | **Returns** | **Example** |
 |---|---|---|
@@ -214,7 +214,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 | `ends_with(haystack, needle)` | true if haystack ends with needle (case-insensitive) | `ends_with([name], "taylor")` |
 | `find(needle, haystack)` | Position of needle in haystack (1-based); returns 0 if not found | `find('y', [last_name])` → 3 for "Taylor" |
 
-## 8.2 Extracting and Manipulating Text
+### 8.2 Extracting and Manipulating Text
 
 | **Function** | **Returns** | **Example** |
 |---|---|---|
@@ -227,7 +227,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 | `lower(text)` | Converts to lowercase | `lower('John Doe')` → "john doe" |
 | `replace_text(haystack, search, replace)` | Replaces all occurrences of search with replace | `replace_text([field1], "Taylor", "Harris")` |
 
-## 8.3 Combining Text
+### 8.3 Combining Text
 
 | **Function** | **Returns** | **Example** |
 |---|---|---|
@@ -236,7 +236,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 ---
 
-# 9. Practical Examples
+## 9. Practical Examples
 
 | **Goal** | **Expression** |
 |---|---|
@@ -250,7 +250,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: Where can I access the Special Functions list in REDCap?**
 
@@ -290,7 +290,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Forgetting parentheses around both the base and exponent.** For exponentiation, `(base)^(exponent)` is required. Writing `4^3` without the surrounding parentheses will not calculate correctly. Both the base and the exponent must each be wrapped in their own parentheses: `(4)^(3)`.
 
@@ -306,7 +306,7 @@ These functions are only meaningful in projects where Missing Data Codes have be
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)

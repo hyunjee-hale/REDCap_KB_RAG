@@ -14,9 +14,9 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
-## What is this?
+### What is this?
 
 This document covers the concepts and terminology required to understand
 and plan REDCap randomization. It is intentionally separated from the
@@ -25,7 +25,7 @@ before any configuration decisions are made. Attempting to set up
 randomization without this foundation is one of the most common causes
 of failed or misconfigured randomization models.
 
-## Why does it matter?
+### Why does it matter?
 
 REDCap's randomization module uses standard statistical terminology
 that is unfamiliar to many research coordinators and project builders.
@@ -44,7 +44,7 @@ features described here may not be available.
 
 ---
 
-# 2. Learning Objectives
+## 2. Learning Objectives
 
 After reviewing this document, the user will be able to:
 
@@ -67,7 +67,7 @@ After reviewing this document, the user will be able to:
 
 ---
 
-# 3. Core Concepts
+## 3. Core Concepts
 
 **What is randomization?**
 
@@ -193,7 +193,7 @@ before building your longitudinal framework:
 
 ---
 
-# 4. Questions & Answers
+## 4. Questions & Answers
 
 **Q: What is the difference between stratified and unstratified randomization?**
 
@@ -221,7 +221,7 @@ Only a REDCap administrator can append additional allocations to a production al
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Setting up randomization without consulting a statistician**
 
@@ -268,7 +268,7 @@ Only a REDCap administrator can append additional allocations to a production al
 
 ---
 
-# 6. Administrator Configuration
+## 6. Administrator Configuration
 
 The Randomization module must be enabled at the system level by a REDCap administrator before it is available in any project. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). When disabled, the Randomization option does not appear in Project Setup and the Randomize user right is not available.
 
@@ -278,7 +278,7 @@ Once the module is enabled system-wide, randomization is enabled per project by 
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - **[RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md):** Randomization Setup Guide — step-by-step
     configuration procedure
@@ -299,7 +299,7 @@ Once the module is enabled system-wide, randomization is enabled per project by 
 
 ---
 
-# 8. Version & Change Notes
+## 8. Version & Change Notes
 
 | **REDCap Version** | **Notes** |
 | --- | --- |
@@ -311,7 +311,7 @@ Terminology
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)
 - [RC-RAND-03 — Working with & Managing Randomization](RC-RAND-03_Working-with-Randomization.md)

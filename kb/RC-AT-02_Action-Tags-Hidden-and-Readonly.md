@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the most commonly used action tags: `@HIDDEN` and `@READONLY`, along with their situational variants. These tags control field visibility and editability across different REDCap contexts.
 
 ---
 
-# 2. @HIDDEN — Hiding Fields
+## 2. @HIDDEN — Hiding Fields
 
 `@HIDDEN` hides a field from view. The field and its data still exist in the project; users simply cannot see or interact with it.
 
@@ -32,7 +32,7 @@ This article covers the most commonly used action tags: `@HIDDEN` and `@READONLY
 - Hiding calculated fields so users cannot see intermediate values
 - Creating honeypot fields in surveys to detect automated bot submissions
 
-## 2.1 Situational Variants
+### 2.1 Situational Variants
 
 | Tag | Where it hides |
 |---|---|
@@ -42,7 +42,7 @@ This article covers the most commonly used action tags: `@HIDDEN` and `@READONLY
 | `@HIDDEN-APP` | Only in the REDCap Mobile App |
 | `@HIDDEN-PDF` | Only in PDF exports (the only way to exclude from PDFs) |
 
-## 2.2 Combining Variants
+### 2.2 Combining Variants
 
 Multiple variants can be combined. For example, to hide a field in surveys and in the Mobile App:
 
@@ -52,7 +52,7 @@ Multiple variants can be combined. For example, to hide a field in surveys and i
 
 ---
 
-# 3. @READONLY — Making Fields Non-Editable
+## 3. @READONLY — Making Fields Non-Editable
 
 `@READONLY` displays a field normally but prevents any changes to its value. Read-only fields appear slightly greyed out.
 
@@ -61,7 +61,7 @@ Multiple variants can be combined. For example, to hide a field in surveys and i
 - Displaying pre-loaded contact information that staff can review but not edit
 - Showing calculated or piped values for reference without allowing modification
 
-## 3.1 Situational Variants
+### 3.1 Situational Variants
 
 | Tag | Where it's read-only |
 |---|---|
@@ -70,7 +70,7 @@ Multiple variants can be combined. For example, to hide a field in surveys and i
 | `@READONLY-FORM` | Only in data entry forms |
 | `@READONLY-APP` | Only in the REDCap Mobile App |
 
-## 3.2 Combining Variants
+### 3.2 Combining Variants
 
 Multiple read-only variants can be combined:
 
@@ -80,7 +80,7 @@ Multiple read-only variants can be combined:
 
 ---
 
-# 4. Combining @HIDDEN and @READONLY
+## 4. Combining @HIDDEN and @READONLY
 
 These two tag families can be mixed to achieve fine-grained control. For example, to show a field as read-only to staff but hide it from surveys and exclude it from PDFs:
 
@@ -92,7 +92,7 @@ These two tag families can be mixed to achieve fine-grained control. For example
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Does @HIDDEN prevent the field's data from appearing in reports or exports?**
 
@@ -108,7 +108,7 @@ These two tag families can be mixed to achieve fine-grained control. For example
 
 ---
 
-# 6. Common Mistakes
+## 6. Common Mistakes
 
 **Using `@HIDDEN` when you meant `@HIDDEN-PDF`.** The bare `@HIDDEN` tag does not exclude a field from PDFs. You must use `@HIDDEN-PDF` specifically.
 
@@ -120,7 +120,7 @@ These two tag families can be mixed to achieve fine-grained control. For example
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md)
 - [RC-FD-02 — Online Designer](RC-FD-02_Online-Designer.md) (where these tags are applied)

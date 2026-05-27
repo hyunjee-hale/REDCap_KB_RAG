@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Alerts & Notifications module supports CSV export and import of alert definitions. This allows bulk editing of alerts outside of REDCap and copying alert configurations from one project to another without rebuilding them by hand.
 
@@ -31,7 +31,7 @@ For general coverage of the Alerts & Notifications module, see [RC-ALERT-01 — 
 
 ---
 
-# 2. Column Reference
+## 2. Column Reference
 
 Each row in the file represents one alert. The table below documents every column.
 
@@ -81,7 +81,7 @@ Each row in the file represents one alert. The table below documents every colum
 
 ---
 
-# 3. Annotated Example
+## 3. Annotated Example
 
 The file below contains two alerts from a longitudinal project with two arms (`baseline_arm_1` and `3_month_arm_1`):
 
@@ -99,7 +99,7 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 ---
 
-# 4. Common Mistakes
+## 4. Common Mistakes
 
 **Leaving `sendgrid-template-data` and `sendgrid-mail-send-configuration` blank.** These columns must contain a JSON object. Use `{}` when not using SendGrid features. A blank cell here can cause import errors.
 
@@ -113,7 +113,7 @@ A-2483,"Invite 3 months",SUBMIT,screening,,COMPLETE,,N,N,RECORD,TIME_LAG,,,90,0,
 
 ---
 
-# 5. Related Articles
+## 5. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) (full module reference)

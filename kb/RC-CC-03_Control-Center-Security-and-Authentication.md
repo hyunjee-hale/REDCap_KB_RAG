@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Security & Authentication Configuration page in the Control Center (`ControlCenter/security_settings.php`) is where REDCap administrators control how users authenticate to the system and what security policies govern login behavior. Settings here are system-wide and apply to all users unless otherwise noted.
 
@@ -28,9 +28,9 @@ This page is organized into the following sections:
 
 ---
 
-# 2. Authentication Settings (System-level)
+## 2. Authentication Settings (System-level)
 
-## 2.1 Authentication Method
+### 2.1 Authentication Method
 
 Controls how all users authenticate to REDCap system-wide. This also determines the default authentication method for newly created projects.
 
@@ -58,11 +58,11 @@ An LDAP troubleshooting tool is available at `ControlCenter/ldap_troubleshoot.ph
 
 ---
 
-# 3. Two-Factor Authentication
+## 3. Two-Factor Authentication
 
 Two-factor authentication (2FA), also called 2-step login, adds a verification step after the initial username/password login. Users receive or generate a 6-digit code (or use a push notification with Duo) to complete sign-in.
 
-## 3.1 Enable/Disable 2FA
+### 3.1 Enable/Disable 2FA
 
 | Setting | Values |
 | --- | --- |
@@ -70,7 +70,7 @@ Two-factor authentication (2FA), also called 2-step login, adds a verification s
 
 When enabled, all applicable users must complete the second step every time they log in (subject to the settings below).
 
-## 3.2 Enforce Only for Table-based Users
+### 3.2 Enforce Only for Table-based Users
 
 Only relevant when using an "X & Table-based" hybrid authentication method.
 
@@ -80,7 +80,7 @@ Only relevant when using an "X & Table-based" hybrid authentication method.
 
 If set to "Yes", users authenticating via the external provider (e.g., Shibboleth, Entra ID) are exempt from all 2FA requirements.
 
-## 3.3 IP Address-based Enforcement
+### 3.3 IP Address-based Enforcement
 
 Allows scoping 2FA enforcement by IP range — useful for exempting users on a trusted institutional network or VPN.
 
@@ -92,7 +92,7 @@ When the exception option is selected, you enter IPv4 ranges (wildcard or hyphen
 
 Example format: `1.2.3.*, 1.2.3.0-1.2.3.255, 21DA:00D3:0000:2F3B::/64`
 
-## 3.4 Device Trust Period (Authentication Interval)
+### 3.4 Device Trust Period (Authentication Interval)
 
 If enabled, users who complete 2FA can opt to have their device remembered for a specified number of days, after which they must complete 2FA again.
 
@@ -100,14 +100,14 @@ If enabled, users who complete 2FA can opt to have their device remembered for a
 | --- | --- |
 | Trust period | Number of days (0 = Disabled; decimals allowed for partial days) |
 
-## 3.5 Secondary Authentication Interval for Specific IP Ranges
+### 3.5 Secondary Authentication Interval for Specific IP Ranges
 
 An optional alternative trust period that applies to users within specified IP ranges. This allows different trust durations for different network contexts (e.g., 30 days on a semi-secure network, 1 day for other networks).
 
 - Enter the number of days and the IP ranges to which that interval applies.
 - If set to 0, the feature is disabled.
 
-## 3.6 E-Signature with 2FA PIN
+### 3.6 E-Signature with 2FA PIN
 
 Allows users to substitute their 2FA PIN (or Duo push) for their password when performing an e-signature on data entry forms or when using the File Upload field enhancement.
 
@@ -117,7 +117,7 @@ Allows users to substitute their 2FA PIN (or Duo push) for their password when p
 
 This is commonly used for 21 CFR Part 11 compliance in FDA-regulated trials. Note: not compatible with the Duo two-factor option.
 
-### 3.6.1 E-Sign Once Per Session
+#### 3.6.1 E-Sign Once Per Session
 
 When the setting above is enabled, this allows users to provide their 2FA PIN only once per REDCap session rather than for every e-signature action.
 
@@ -125,11 +125,11 @@ When the setting above is enabled, this allows users to provide their 2FA PIN on
 | --- | --- |
 | E-sign once per session | Disabled (default) / Enabled |
 
-## 3.7 Two-Factor Login Options
+### 3.7 Two-Factor Login Options
 
 These settings control which verification methods are available to users when 2FA is enabled. Multiple options can be enabled simultaneously; users choose their preferred method.
 
-### 3.7.1 Google/Microsoft Authenticator App
+#### 3.7.1 Google/Microsoft Authenticator App
 
 Users generate a 6-digit TOTP code from the Google Authenticator or Microsoft Authenticator app on their mobile device. Users must set up the app using a QR code on their REDCap Profile page before using this option.
 
@@ -137,7 +137,7 @@ Users generate a 6-digit TOTP code from the Google Authenticator or Microsoft Au
 | --- | --- |
 | Authenticator App | Enabled (default in REDCap 16.x) |
 
-### 3.7.2 Email
+#### 3.7.2 Email
 
 A 6-digit code is sent to the user's primary email address registered in their REDCap account. Recommended to leave enabled as a fallback option.
 
@@ -145,7 +145,7 @@ A 6-digit code is sent to the user's primary email address registered in their R
 | --- | --- |
 | Email option | The code originates from the configured administrator email address |
 
-### 3.7.3 Twilio SMS
+#### 3.7.3 Twilio SMS
 
 Uses the Twilio third-party service to send a 6-digit code via SMS to the user's registered mobile number. Requires a funded Twilio account with a purchased phone number.
 
@@ -157,7 +157,7 @@ Uses the Twilio third-party service to send a 6-digit code via SMS to the user's
 
 The REDCap server must have outbound HTTP/HTTPS access to `https://api.twilio.com`. A "Test Twilio credentials" button verifies credentials before saving.
 
-### 3.7.4 Duo
+#### 3.7.4 Duo
 
 Uses the Duo Security service for push notification or app-based verification. Requires a Duo account and a configured Web SDK application.
 
@@ -170,11 +170,11 @@ Uses the Duo Security service for push notification or app-based verification. R
 
 ---
 
-# 4. Login Settings
+## 4. Login Settings
 
 These settings apply to all authentication methods except Shibboleth (which manages its own session behavior).
 
-## 4.1 Auto Logout Time
+### 4.1 Auto Logout Time
 
 Controls how long a user can be inactive before REDCap automatically logs them out.
 
@@ -184,15 +184,15 @@ Controls how long a user can be inactive before REDCap automatically logs them o
 
 Users receive a two-minute warning dialog before being logged out.
 
-## 4.2 Login Logo
+### 4.2 Login Logo
 
 An optional custom logo displayed on the REDCap login page. Enter the full URL of the image (maximum display width: 750 pixels).
 
-## 4.3 Custom Login Text
+### 4.3 Custom Login Text
 
 A rich text field for custom content displayed on the login page, appearing above the login form (and below the login logo, if used). Supports the REDCap rich text editor.
 
-## 4.4 Failed Login Lockout
+### 4.4 Failed Login Lockout
 
 Two settings work together to lock out users after repeated failed login attempts:
 
@@ -201,7 +201,7 @@ Two settings work together to lock out users after repeated failed login attempt
 | Failed login attempt limit | Number of failures before lockout (0 = disabled) |
 | Lockout duration | Minutes the user is locked out after exceeding the limit (0 = disabled) |
 
-## 4.5 Login Page Autocomplete
+### 4.5 Login Page Autocomplete
 
 Controls whether users' browsers are allowed to autofill the username and password fields on the REDCap login page.
 
@@ -212,17 +212,17 @@ Controls whether users' browsers are allowed to autofill the username and passwo
 
 ---
 
-# 5. Table-based Authentication Settings
+## 5. Table-based Authentication Settings
 
 These settings apply only when Table-based authentication is in use (either exclusively or as part of a hybrid method).
 
-## 5.1 Password Recovery Custom Text
+### 5.1 Password Recovery Custom Text
 
 Custom text included in the email response when a user enters an **invalid username** during password recovery. Useful in hybrid environments to redirect external users to their institution's own password reset process.
 
 If left blank, REDCap displays the default message: *"The password for the user XXXXXX cannot be reset in REDCap because it can only be reset using an outside authentication resource at your institution."*
 
-## 5.2 Password Reuse Limit
+### 5.2 Password Reuse Limit
 
 | Setting | Values |
 | --- | --- |
@@ -230,7 +230,7 @@ If left blank, REDCap displays the default message: *"The password for the user 
 
 When enabled, users may not reuse any of their 5 most recent passwords.
 
-## 5.3 Password Expiration
+### 5.3 Password Expiration
 
 | Setting | Values |
 | --- | --- |
@@ -238,13 +238,13 @@ When enabled, users may not reuse any of their 5 most recent passwords.
 
 Users receive advance notice prompting them to change their password before expiration.
 
-## 5.4 Password Minimum Length
+### 5.4 Password Minimum Length
 
 | Setting | Values |
 | --- | --- |
 | Minimum length | Integer between 6 and 99 (default: 9) |
 
-## 5.5 Password Complexity
+### 5.5 Password Complexity
 
 | Level | Requirement |
 | --- | --- |
@@ -257,7 +257,7 @@ Allowed special characters: `!@#$%^&*()/_+|~=',-*+:";?.` (excluding `><\`)
 
 ---
 
-# 6. Google OAuth2 Authentication Settings
+## 6. Google OAuth2 Authentication Settings
 
 Required when authentication method is set to **Google OAuth2**.
 
@@ -273,7 +273,7 @@ Required when authentication method is set to **Google OAuth2**.
 
 ---
 
-# 7. Microsoft Entra ID Authentication Settings
+## 7. Microsoft Entra ID Authentication Settings
 
 Required when authentication method is set to **Microsoft Entra ID** (formerly Azure AD) or **Microsoft Entra ID & Table-based**.
 
@@ -297,7 +297,7 @@ For V2 endpoints, ensure "Accounts in any organizational directory" is enabled i
 
 ---
 
-# 8. OpenID Connect Authentication Settings
+## 8. OpenID Connect Authentication Settings
 
 Required when authentication method is set to **OpenID Connect** or **OpenID Connect & Table-based**.
 
@@ -327,18 +327,18 @@ If the selected username attribute has no value for a user, REDCap falls back to
 
 ---
 
-# 9. Shibboleth Authentication Settings
+## 9. Shibboleth Authentication Settings
 
 Required when authentication method is set to **Shibboleth** or **Shibboleth & Table-based**. Full configuration documentation is available in REDCap's built-in Shibboleth help (`Help/shib_table_help.php`).
 
-## 9.1 Core Shibboleth Settings
+### 9.1 Core Shibboleth Settings
 
 | Field | Notes |
 | --- | --- |
 | Shibboleth Username Login Field | The `$_SERVER` variable containing the username (e.g., `REMOTE_USER`, `HTTP_REMOTE_USER`, `HTTP_AUTH_USER`, `HTTP_SHIB_EDUPERSON_PRINCIPAL_NAME`, `Shib-EduPerson-Principal-Name`, or a custom value) |
 | URL for Shibboleth Logout Page | Full URL with qualifiers for the IdP logout endpoint |
 
-## 9.2 Shibboleth User Information Settings
+### 9.2 Shibboleth User Information Settings
 
 Controls whether REDCap auto-populates user profile fields (name, email) from Shibboleth attributes on login.
 
@@ -350,7 +350,7 @@ Controls whether REDCap auto-populates user profile fields (name, email) from Sh
 | Shibboleth User Last Name Field | `$_SERVER` variable name (default: `sn`) |
 | Shibboleth User Email Field | `$_SERVER` variable name (default: `mail`) |
 
-## 9.3 Shibboleth & Table Splash Page Customization
+### 9.3 Shibboleth & Table Splash Page Customization
 
 When using Shibboleth & Table-based authentication, a splash/landing page lets users choose their login method.
 
@@ -359,7 +359,7 @@ When using Shibboleth & Table-based authentication, a splash/landing page lets u
 | Default login method | Table-based (default) or a configured Shibboleth IdP |
 | Table login selection title | Clickable text for Table-based login (default: "Use local REDCap login") |
 
-### 9.3.1 Shibboleth Login Options (per IdP)
+#### 9.3.1 Shibboleth Login Options (per IdP)
 
 Multiple Identity Providers can be configured. Each IdP entry includes:
 
@@ -374,7 +374,7 @@ Additional IdPs can be added or removed dynamically on the configuration page.
 
 ---
 
-# 10. Australian Access Federation (AAF) Authentication Settings
+## 10. Australian Access Federation (AAF) Authentication Settings
 
 Required when authentication method is set to **AAF** or **AAF & Table-based**. AAF uses RapidConnect for federated authentication. See the REDCap Community for the AAF RapidConnect setup guide.
 
@@ -392,7 +392,7 @@ Required when authentication method is set to **AAF** or **AAF & Table-based**. 
 
 ---
 
-# 11. SAMS Authentication Settings (CDC)
+## 11. SAMS Authentication Settings (CDC)
 
 Required when authentication method is set to **SAMS (for CDC)**.
 
@@ -402,9 +402,9 @@ Required when authentication method is set to **SAMS (for CDC)**.
 
 ---
 
-# 12. Other Security Settings
+## 12. Other Security Settings
 
-## 12.1 Domain Allowlist for Cross-Domain HTTP Access Control (CORS)
+### 12.1 Domain Allowlist for Cross-Domain HTTP Access Control (CORS)
 
 By default, AJAX requests (via JavaScript) can be made to REDCap from any domain. To restrict cross-domain access to specific trusted domains, enter domain names (not full URLs) one per line.
 
@@ -417,7 +417,7 @@ http://example.com
 http://www.yoursite.edu
 ```
 
-## 12.2 Clickjacking Prevention
+### 12.2 Clickjacking Prevention
 
 Controls whether REDCap pages can be embedded inside `<iframe>` elements on external websites.
 
@@ -432,13 +432,13 @@ The "Prevent clickjacking" option is selected by default and is the recommended 
 
 ---
 
-# 13. Saving Settings
+## 13. Saving Settings
 
 All changes on this page take effect after clicking **Save Changes** at the bottom of the form. There is a single save action for the entire page — partial saves are not supported.
 
 ---
 
-# 14. Frequently Asked Questions
+## 14. Frequently Asked Questions
 
 **Q: Can I use two-factor authentication with Shibboleth?**
 A: Yes. When using Shibboleth & Table-based authentication, you can optionally enforce 2FA only on Table-based users using the setting in section 3.2, which leaves Shibboleth-authenticated users exempt.
@@ -460,7 +460,7 @@ A: Both map to OIDC standard claims, but `preferred_username` is the human-reada
 
 ---
 
-# 15. Common Questions
+## 15. Common Questions
 
 **Q: Should I enable two-factor authentication for all users or just certain groups?**
 Enabling 2FA for all users provides the strongest security but may reduce usability, especially for less technical users. A common approach is to enable 2FA for all users but use IP-based exceptions (section 3.3) to exempt users on trusted institutional networks or VPNs. For external users or those accessing from public networks, 2FA should always be enforced.
@@ -479,7 +479,7 @@ Yes. The "Shibboleth & Table-based" option (section 2.1) presents a splash page 
 
 ---
 
-# 16. Common Mistakes & Gotchas
+## 16. Common Mistakes & Gotchas
 
 **Enabling complex password policies without testing ease of use.** Very strict password complexity requirements (level 3 + long minimum length) can create user frustration and lead to passwords being written down or stored insecurely. Pilot any new password policy with a subset of users first to gauge impact and identify training needs.
 
@@ -489,7 +489,7 @@ Yes. The "Shibboleth & Table-based" option (section 2.1) presents a splash page 
 
 ---
 
-# 17. Related Articles
+## 17. Related Articles
 
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (user creation and account defaults)
 - [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md) (user account management and suspension)

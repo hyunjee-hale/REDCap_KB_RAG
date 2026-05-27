@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 **Multi-Language Management (MLM)** (**Control Center → Miscellaneous Modules → Multi-Language Management**) is where administrators define system-level languages that projects can adopt for UI translation. This article covers the administrator view — system language management, page tabs, and instance-wide settings.
 
@@ -26,9 +26,9 @@ MLM can be turned on or off system-wide. When off, surveys and data entry forms 
 
 ---
 
-# 2. Page Tabs
+## 2. Page Tabs
 
-## 2.1 Languages Tab
+### 2.1 Languages Tab
 
 The main tab where system languages are listed and managed. Each language entry shows:
 
@@ -59,7 +59,7 @@ The main tab where system languages are listed and managed. Each language entry 
 
 ---
 
-## 2.2 User Interface Tab
+### 2.2 User Interface Tab
 
 This tab is where the actual translation strings are entered and managed for each language.
 
@@ -87,7 +87,7 @@ This tab is where the actual translation strings are entered and managed for eac
 
 ---
 
-## 2.3 Usage Tab
+### 2.3 Usage Tab
 
 Provides an overview of MLM usage across all projects on the instance.
 
@@ -109,7 +109,7 @@ The table supports **search by project language or status icon label**. An **Exp
 
 ---
 
-## 2.4 Settings Tab
+### 2.4 Settings Tab
 
 System-level controls that apply to how projects can use MLM.
 
@@ -127,7 +127,7 @@ These settings can be overridden on a per-project basis within that project's ow
 
 ---
 
-# 3. MyCap Integration
+## 3. MyCap Integration
 
 Languages can be marked as **active for MyCap** (the mobile companion app). This is configured separately from the forms/surveys activation — MyCap language support is **all-or-nothing** per language: a language is either fully active for MyCap or not available at all.
 
@@ -135,7 +135,7 @@ Languages can be marked as **active for MyCap** (the mobile companion app). This
 
 ---
 
-# 4. Exporting and Importing Languages
+## 4. Exporting and Importing Languages
 
 **Export options:**
 - Optionally include translation prompts, default values, and language notes
@@ -151,7 +151,7 @@ Languages can be marked as **active for MyCap** (the mobile companion app). This
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: If I disable Multi-Language Management system-wide, what happens to projects that already use it?**
 If you disable MLM in the Settings tab, surveys and data entry forms will stop being translated across all projects immediately. Projects that had MLM enabled will revert to the base/default language. The translations are not deleted, but they are not active. If you re-enable MLM later, translations will be available again, but the change is disruptive to active projects.
@@ -170,7 +170,7 @@ Yes. The base language is the fallback language shown to users who have not sele
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Disabling MLM system-wide without notifying projects that depend on it.** If you disable Multi-Language Management globally, all projects immediately lose their active translations and revert to the base language. This can disrupt surveys and forms for end users without warning. Always plan ahead and communicate changes to project managers before disabling MLM.
 
@@ -180,7 +180,7 @@ Yes. The base language is the fallback language shown to users who have not sele
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-MLM-01 — Multi-Language Management](RC-MLM-01_Multi-Language-Management.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)

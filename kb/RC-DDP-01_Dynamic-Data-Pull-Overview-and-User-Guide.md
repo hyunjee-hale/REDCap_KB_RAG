@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Dynamic Data Pull (DDP) is a special feature for importing data into REDCap from an **external source system** (such as an EMR, EDW, or other institutional data repository). Unlike a one-time import, the DDP maintains an ongoing connection to the external system and can fetch new data automatically at regular intervals.
 
@@ -24,7 +24,7 @@ A key characteristic of DDP is its **adjudication process**: data from the exter
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **External Source System**
 The external database or clinical system from which REDCap will pull data. Examples include Epic, Cerner, a data warehouse, or any system exposing a compatible web service interface. The name displayed to users may be customized by the administrator.
@@ -49,7 +49,7 @@ The process of reviewing incoming data from the external source system and selec
 
 ---
 
-# 3. How the DDP Works
+## 3. How the DDP Works
 
 The DDP operates in two modes — real-time and scheduled:
 
@@ -64,7 +64,7 @@ The DDP operates in two modes — real-time and scheduled:
 
 ---
 
-# 4. Enabling DDP for a Project
+## 4. Enabling DDP for a Project
 
 DDP is enabled in two steps — both requiring administrator action:
 
@@ -83,7 +83,7 @@ After being granted access, users will see a new DDP step on the Project Setup p
 
 ---
 
-# 5. Field Mapping
+## 5. Field Mapping
 
 Field mapping is performed on the **DDP mapping/setup page**, accessible via Project Setup once DDP is enabled. The mapping page allows a user to connect fields in the external source system to fields in the REDCap project. Fields must already be created in the REDCap project before they can be mapped.
 
@@ -102,11 +102,11 @@ On the same mapping page, up to 5 source fields may be designated as preview fie
 
 ---
 
-# 6. Adjudication Process
+## 6. Adjudication Process
 
 After field mapping is complete, data from the external source system is **not imported automatically**. Instead, it queues for adjudication. An authorized user must review and approve each incoming value before it is saved to the project.
 
-### Accessing the Adjudication Screen
+#### Accessing the Adjudication Screen
 
 The adjudication screen can be accessed from two locations:
 
@@ -114,7 +114,7 @@ The adjudication screen can be accessed from two locations:
 
 2. **Data Entry Form:** When viewing a record, a red notification box at the top of the page displays the count of pending items. Clicking the "View" button opens the adjudication screen.
 
-### Using the Adjudication Screen
+#### Using the Adjudication Screen
 
 The adjudication screen displays all unadjudicated data from the external system for the current record. For each item:
 
@@ -127,7 +127,7 @@ The user must select a radio button next to each value they wish to import, then
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Why isn't data being pulled for a record?**
 
@@ -151,7 +151,7 @@ The user must select a radio button next to each value they wish to import, then
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Entering a record identifier before DDP is mapped.** The DDP will attempt to fetch data as soon as an identifier is entered. If mapping has not been completed yet, the fetch may occur but return no usable data.
 
@@ -163,7 +163,7 @@ The user must select a radio button next to each value they wish to import, then
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-DDP-02 — Dynamic Data Pull — Admin Setup & Technical Specs](RC-DDP-02_Dynamic-Data-Pull-Admin-Setup-and-Technical-Specs.md)(administrator configuration, web service setup)
 - [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)(where the adjudication count column appears)

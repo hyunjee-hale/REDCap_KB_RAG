@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Online Designer is REDCap's guided, point-and-click instrument
 building tool. It allows users to create instruments and variables one
@@ -25,7 +25,7 @@ between Development and Production modes.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Online Designer**
 
@@ -61,7 +61,7 @@ to the research team.
 
 ---
 
-# 3. Accessing the Online Designer
+## 3. Accessing the Online Designer
 
 - From the Project Setup page (Development mode): click the Online
     Designer button in the Design Your Data Collection Instruments
@@ -76,9 +76,9 @@ to the research team.
 
 ---
 
-# 4. What the Online Designer Can Do
+## 4. What the Online Designer Can Do
 
-## 4.1 Instrument-Level Actions
+### 4.1 Instrument-Level Actions
 
 - Create a new instrument.
 
@@ -93,7 +93,7 @@ to the research team.
 
 - Import an instrument from a zip file (see [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)).
 
-## 4.2 Variable-Level Actions
+### 4.2 Variable-Level Actions
 
 - Add a new variable (field) to an instrument.
 
@@ -109,7 +109,7 @@ to the research team.
 
 - Open the branching logic editor for a specific variable.
 
-## 4.3 Survey-Level Options
+### 4.3 Survey-Level Options
 
 When surveys are enabled for the project, a **Survey options** section appears at the top of the Online Designer instrument list. These are project-wide controls — they apply across all surveys, not to a single instrument. The section contains the following buttons:
 
@@ -122,7 +122,7 @@ When surveys are enabled for the project, a **Survey options** section appears a
 
 These project-level buttons are distinct from the per-instrument buttons that appear in the instrument row when an instrument has been enabled as a survey. Each instrument row has its own **Survey settings** button (which opens the Survey Settings page for that instrument) and an **Automated Invitations** button (which configures the ASI for that specific instrument).
 
-## 4.4 What the Online Designer Cannot Do
+### 4.4 What the Online Designer Cannot Do
 
 - Split one instrument into two or more instruments — use the Data
     Dictionary for this ([RC-FD-03 — Data Dictionary](RC-FD-03_Data-Dictionary.md)).
@@ -135,7 +135,7 @@ These project-level buttons are distinct from the per-instrument buttons that ap
 
 ---
 
-# 5. Behavior in Development vs. Production Mode
+## 5. Behavior in Development vs. Production Mode
 
 | **Action** | **Development Mode** | **Production Mode** |
 | --- | --- | --- |
@@ -151,7 +151,7 @@ These project-level buttons are distinct from the per-instrument buttons that ap
 
 ---
 
-# 6. When to Use the Online Designer
+## 6. When to Use the Online Designer
 
 The Online Designer is the right tool in these situations:
 
@@ -179,7 +179,7 @@ Consider switching to the Data Dictionary ([RC-FD-03 — Data Dictionary](RC-FD-
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: I saved a change in the Online Designer but it isn't showing up in
 my data entry forms. Why?**
@@ -231,7 +231,7 @@ significant change is critical.
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 - Expecting changes in Production to appear immediately: changes in
     Production mode go through a review queue. If a change isn't
@@ -258,7 +258,7 @@ significant change is critical.
     instruments or renaming dozens of variables at once. Switch to the
     Data Dictionary for those tasks.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -269,7 +269,7 @@ significant change is critical.
 ---
 
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite — covers
     navigation and tool selection)

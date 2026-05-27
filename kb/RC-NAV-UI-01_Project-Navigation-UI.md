@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Every REDCap project uses a consistent two-panel layout: a persistent left-hand menu and a variable right-hand workspace. Understanding this layout is foundational — it is the first thing a new user encounters and the framework through which all other REDCap features are accessed. New users often struggle to locate features because REDCap's menu is dynamic — it changes based on user rights, enabled features, and screen size. Understanding why items appear or disappear prevents confusion and unnecessary support requests.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Menu** — The persistent left-hand panel in any REDCap project. Contains navigation links to all features the current user can access. Organized into labeled sections (see [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) for a full breakdown).
 
@@ -34,9 +34,9 @@ Every REDCap project uses a consistent two-panel layout: a persistent left-hand 
 
 ---
 
-# 3. Step-by-Step Procedure
+## 3. Step-by-Step Procedure
 
-## 3.1 Navigating to a project
+### 3.1 Navigating to a project
 
 | **Step** | **Action & Detail** |
 | --- | --- |
@@ -44,7 +44,7 @@ Every REDCap project uses a consistent two-panel layout: a persistent left-hand 
 | **2 — Find your project** | Locate your project in the list. Projects can be searched or filtered. Click the project name to open it. |
 | **3 — Confirm you are in the project** | The left menu will appear with project-specific sections. The workspace will show the Project Home page by default. |
 
-## 3.2 Using the two-panel layout
+### 3.2 Using the two-panel layout
 
 Once inside a project, the interface is split into two panels that are always present:
 
@@ -53,7 +53,7 @@ Once inside a project, the interface is split into two panels that are always pr
 | **Left — Menu** | Persistent navigation. Always visible (unless in hamburger mode). Organized into labeled sections. Changes based on user rights and enabled features. |
 | **Right — Workspace** | Variable content area. Displays whatever section you have navigated to: a form designer, a data entry screen, user rights settings, reports, etc. |
 
-## 3.3 Recovering from hamburger mode
+### 3.3 Recovering from hamburger mode
 
 | **Step** | **Action & Detail** |
 | --- | --- |
@@ -65,7 +65,7 @@ Once inside a project, the interface is split into two panels that are always pr
 
 ---
 
-# 4. Common Questions
+## 4. Common Questions
 
 **Q: Why can't I see a feature I expect to find in the menu?**
 Menu items are only visible when two conditions are both true: (1) your user rights for this specific project include access to that feature, and (2) the feature is enabled in Project Setup. Check both before concluding something is missing.
@@ -81,7 +81,7 @@ Yes. Click the REDCap logo or the My Projects link at the top of the left menu f
 
 ---
 
-# 5. Common Mistakes & Gotchas
+## 5. Common Mistakes & Gotchas
 
 **Assuming a missing menu item is a bug.** Before escalating, check (1) your user rights for the specific project, and (2) whether the feature is enabled in Project Setup. Both must be true for an item to appear. Contact the project's user rights manager to review permissions, or enable the feature in Project Setup if you have access.
 
@@ -93,7 +93,7 @@ Yes. Click the REDCap logo or the My Projects link at the top of the left menu f
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) — detailed guide to every item in the REDCap left menu
 - [RC-NAV-REC-01 — Record Navigation Overview](RC-NAV-REC-01_Record-Navigation-Overview.md) — how to navigate to records and instruments once inside a project

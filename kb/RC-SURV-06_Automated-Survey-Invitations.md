@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers Automated Survey Invitations (ASIs) — REDCap's mechanism for automatically scheduling and sending survey invitation emails based on defined trigger conditions and time delay settings. ASIs are the standard tool for distributing follow-up surveys without manual intervention. This article explains the ASI setup screen, the three trigger types, time delay options, reminders, and how to manage ASIs across a project's lifetime. This article is part of the Surveys knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Automated Survey Invitation (ASI)**
 
@@ -52,7 +52,7 @@ A save option in the ASI setup screen that saves the current ASI configuration a
 
 ---
 
-# 3. ASI Setup Location
+## 3. ASI Setup Location
 
 The ASI configuration for any survey is accessed through the Online Designer. On the instrument list, each instrument that is enabled as a survey has a **+ Automated Invitations** button next to its **Survey Settings** button. Clicking it opens the ASI setup screen for that instrument.
 
@@ -60,11 +60,11 @@ The ASI configuration for any survey is accessed through the Online Designer. On
 
 ---
 
-# 4. ASI Setup: The Four Required Elements
+## 4. ASI Setup: The Four Required Elements
 
 Every ASI must define four elements before it will function: the message, trigger conditions, time delay settings, and active status.
 
-## 4.1 Crafting the Message
+### 4.1 Crafting the Message
 
 The message composer in the ASI setup works similarly to the manual invitation composer (see [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md)). The key fields are:
 
@@ -84,17 +84,17 @@ The message composer in the ASI setup works similarly to the manual invitation c
 
 > **Tip — Test Emails:** A small **send test email** link appears between the subject and message body. Clicking it sends the current draft to your REDCap account's primary email. Use this to verify formatting, piped values, and smart variables before the ASI goes live.
 
-## 4.2 Trigger Conditions
+### 4.2 Trigger Conditions
 
 Step 2 defines when REDCap schedules the invitation. There are three options.
 
-### Completion Trigger
+#### Completion Trigger
 
 Check **"When the following survey is completed:"** and select the survey (or survey-event combination in longitudinal projects) that should precede this one.
 
 This is the most common trigger for sequential workflows — for example, send a follow-up survey immediately after the baseline survey is completed.
 
-### Logic Trigger
+#### Logic Trigger
 
 Check **"When the following logic becomes true:"** and enter a branching logic statement. The ASI fires the moment that statement first evaluates to true for any record.
 
@@ -104,7 +104,7 @@ For help writing logic statements, see [RC-BL-01 — Branching Logic: Overview &
 
 **Testing your logic:** Below the logic input box, a **Select a Record** dropdown lets you test the logic against an existing record in the project. REDCap evaluates the logic and returns "True" or "False." This is a practical way to verify trigger logic without waiting for a new submission.
 
-### Combination Trigger
+#### Combination Trigger
 
 Configure both a completion trigger and a logic trigger. Then set the relationship between them using the **AND / OR** dropdown:
 
@@ -117,7 +117,7 @@ This checkbox becomes valuable when combined with a time delay (Section 4.3). If
 
 Use case: A participant enrolled in the study triggers an ASI, but later withdraws. If withdrawal sets the logic condition to false and this checkbox is enabled, the queued invitation is automatically cancelled at send time.
 
-## 4.3 Time Delay Settings
+### 4.3 Time Delay Settings
 
 Step 3 defines when the invitation is sent relative to the trigger event. Options include:
 
@@ -128,7 +128,7 @@ Step 3 defines when the invitation is sent relative to the trigger event. Option
 
 This last option enables participant-specific scheduling. For example, if participants have a clinic visit date stored in a field, you can configure the ASI to send a survey one day before that date — customized automatically for each record.
 
-## 4.4 Active Status
+### 4.4 Active Status
 
 In the top-left of the ASI setup screen, a radio button toggles between **Active** and **Not Active**.
 
@@ -137,13 +137,13 @@ In the top-left of the ASI setup screen, a radio button toggles between **Active
 
 > **Important:** A newly configured ASI defaults to Not Active. The ASI will not send any invitations until it is explicitly set to Active.
 
-## 4.5 Reminders
+### 4.5 Reminders
 
 Below the time delay settings, an optional **Enable Reminders** section is available. Checking the box opens the reminder configuration. REDCap supports up to five reminders per ASI. Reminders use the same time delay mechanism as the initial invitation. REDCap automatically cancels any remaining reminders once the participant completes the survey — you do not need to manage this manually.
 
 ---
 
-# 5. Saving an ASI
+## 5. Saving an ASI
 
 Two save options are available:
 
@@ -155,31 +155,31 @@ Once an ASI is saved and set to Active, REDCap begins monitoring records immedia
 
 ---
 
-# 6. Managing ASIs
+## 6. Managing ASIs
 
-## 6.1 Editing an Existing ASI
+### 6.1 Editing an Existing ASI
 
 ASI configurations can be modified at any time. However, **edits are not retroactive.** If 100 invitations are already queued when you update the message body, those 100 invitations will still use the old message. Only invitations scheduled after the edit will reflect the new configuration. If you need to update queued invitations, you must delete and reschedule them manually through the Survey Invitation Log.
 
-## 6.2 Bulk ASI Management via CSV
+### 6.2 Bulk ASI Management via CSV
 
 The Online Designer's **Auto Invitation Options** menu provides options to download and upload ASI configurations as a CSV file. This is useful when setting up or modifying a large number of ASIs simultaneously, since editing the CSV in a spreadsheet application is faster than navigating individual setup screens. This is considered an advanced feature.
 
 Always download the existing configuration first before uploading. The full 32-column format reference — including all accepted values, timing mode details, and CSV gotchas — is documented in [RC-IMP-06 — Automated Survey Invitations CSV — Column Reference and Format Guide](RC-IMP-06_Automated-Survey-Invitations-CSV.md) — Automated Survey Invitations CSV.
 
-## 6.3 Re-evaluate Automated Survey Invitations
+### 6.3 Re-evaluate Automated Survey Invitations
 
 The **Re-evaluate Automated Survey Invitations** option (also in Auto Invitation Options) forces REDCap to re-check the trigger conditions for all active ASIs against every record in the project. For large projects, this process may take several minutes.
 
 > **Important:** Re-evaluate only triggers new invitation scheduling for records that now meet the conditions but have not yet received an invitation. It does not modify, cancel, or reschedule invitations that are already queued.
 
-## 6.4 ASIs and Texting
+### 6.4 ASIs and Texting
 
 If texting is enabled for a project, the ASI setup screen gains an additional step that lets you specify the delivery method: email, voice call, text message, or based on the participant's preference. Texting configuration is outside the scope of this article.
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: How is an ASI different from a manual survey invitation?**
 
@@ -235,7 +235,7 @@ If texting is enabled for a project, the ASI setup screen gains an additional st
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Leaving the ASI set to Not Active.** The ASI setup saves successfully but sends nothing until the Active radio button is selected. Always verify the Active status before finishing setup, especially when going live in Production.
 
@@ -253,7 +253,7 @@ If texting is enabled for a project, the ASI setup screen gains an additional st
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-SURV-05 — Participant List & Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md) (manual invitation workflow and Survey Invitation Log)
 - [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (directing participants through multiple surveys after invitation delivery)

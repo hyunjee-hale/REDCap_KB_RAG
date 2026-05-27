@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how branching logic works in longitudinal REDCap projects — specifically, how to reference fields in other events using the cross-event syntax, how local vs. cross-event references differ, and how arms and repeated instruments interact with branching logic. It is part of the Branching Logic series and assumes familiarity with REDCap logic syntax ([RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)) and longitudinal project setup ([RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md)).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Unique Event Name**
 
@@ -40,7 +40,7 @@ When a cross-event field has not yet been saved for a record, REDCap returns an 
 
 ---
 
-# 3. Cross-Event Reference Syntax
+## 3. Cross-Event Reference Syntax
 
 In a non-longitudinal project, a variable reference in branching logic uses only the variable name:
 
@@ -68,7 +68,7 @@ In a longitudinal project, when referencing a field **in a different event**, pr
 
 The two bracket pairs are written immediately adjacent — no space, no operator between them.
 
-## 3.1 Local vs. Cross-Event References
+### 3.1 Local vs. Cross-Event References
 
 | | **Local Reference** | **Cross-Event Reference** |
 |---|---|---|
@@ -81,7 +81,7 @@ The two bracket pairs are written immediately adjacent — no space, no operator
 
 > **Tip:** You can also include the current event's unique event name in a cross-event-style reference, and it will work correctly. This is occasionally useful when writing logic in bulk via the Data Dictionary, where you want all references to be explicit. However, omitting the prefix for same-event fields is the standard practice.
 
-## 3.2 Finding the Unique Event Name
+### 3.2 Finding the Unique Event Name
 
 The unique event name is visible in the **Define My Events** table in Project Setup. It appears in the **Unique Event Name** column next to each event. It is auto-generated from the event label and arm number and cannot be manually overridden.
 
@@ -89,11 +89,11 @@ The unique event name is visible in the **Define My Events** table in Project Se
 
 ---
 
-# 4. Arm-Specific Considerations
+## 4. Arm-Specific Considerations
 
 In a multi-arm project, each arm has its own set of events with distinct unique event names (e.g., `baseline_arm_1` vs. `baseline_arm_2`). Logic referencing a specific arm's event will only evaluate correctly for records assigned to that arm.
 
-## 4.1 Instruments Shared Across Arms
+### 4.1 Instruments Shared Across Arms
 
 When the same instrument is designated to events in multiple arms, a cross-event reference within that instrument must match the arm of the current record. A reference to `[baseline_arm_1][diagnosis]` in an instrument that appears in both Arm 1 and Arm 2 will:
 
@@ -102,7 +102,7 @@ When the same instrument is designated to events in multiple arms, a cross-event
 
 This means that arm-specific logic can emerge unintentionally from cross-event references. If an instrument is shared across arms and contains cross-event logic, verify that the referenced event exists in every arm where the instrument appears.
 
-## 4.2 Writing Arm-Aware Logic
+### 4.2 Writing Arm-Aware Logic
 
 If a field should appear conditionally depending on which arm a record is in, use smart variables to reference the current arm. See [RC-PIPE-09 — Smart Variables: Event & Arm](RC-PIPE-09_Smart-Variables-Event-and-Arm.md) for syntax details.
 
@@ -110,15 +110,15 @@ For most common patterns — gating later events behind earlier answers — the 
 
 ---
 
-# 5. Repeated Instruments and Repeated Events
+## 5. Repeated Instruments and Repeated Events
 
 Branching logic in a longitudinal project with repeated instruments or repeated events follows additional constraints beyond standard cross-event syntax.
 
-## 5.1 Within a Repeated Instrument (Same Instance)
+### 5.1 Within a Repeated Instrument (Same Instance)
 
 Logic within a repeated instrument that references other fields **in the same instance** works reliably using local references (no event prefix, no instance reference). Example: a logic statement on field B in instance 3 can reference field A in instance 3 using `[field_a]`.
 
-## 5.2 Cross-Event References to Non-Repeated Fields
+### 5.2 Cross-Event References to Non-Repeated Fields
 
 A repeated instrument can reference non-repeated fields from other events using standard cross-event syntax:
 
@@ -128,11 +128,11 @@ A repeated instrument can reference non-repeated fields from other events using 
 
 This works reliably because the referenced field in the baseline event has exactly one value per record.
 
-## 5.3 Referencing Specific Instances of a Repeated Instrument
+### 5.3 Referencing Specific Instances of a Repeated Instrument
 
 When branching logic needs to evaluate a value from a specific instance of a repeated instrument, REDCap supports two methods — the same syntax used for piping (see [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md), Section 4.2).
 
-### Method 1: Direct Instance Number
+#### Method 1: Direct Instance Number
 
 Append the instance number in its own brackets immediately after the variable name:
 
@@ -158,7 +158,7 @@ In a longitudinal project, prepend the event name:
 [event_1_arm_1][med_name][1]='Aspirin'
 ```
 
-### Method 2: Smart Variable Targeting
+#### Method 2: Smart Variable Targeting
 
 Use `[first-instance]` or `[last-instance]` to reference the first or last instance without knowing the exact number:
 
@@ -175,7 +175,7 @@ In a longitudinal project, prepend the event name:
 
 > **Important:** `[last-instance]` always points to the most recently created instance. Its value changes if new instances are added later. Use it only when dynamic "latest entry" behavior is what you need.
 
-### Within a Repeated Series
+#### Within a Repeated Series
 
 When branching logic runs inside a repeated instrument (i.e., the field being shown or hidden is itself in the repeated instrument), additional smart variables are available to reference other instances in the same series:
 
@@ -198,9 +198,9 @@ If the current instance is the first, `[previous-instance]` returns blank.
 
 ---
 
-# 6. Common Cross-Event Logic Patterns
+## 6. Common Cross-Event Logic Patterns
 
-## 6.1 Gate a Later-Event Field Behind a Baseline Answer
+### 6.1 Gate a Later-Event Field Behind a Baseline Answer
 
 Show a follow-up question only if a baseline field was answered with a specific value:
 
@@ -208,7 +208,7 @@ Show a follow-up question only if a baseline field was answered with a specific 
 [baseline_arm_1][enrolled]='1'
 ```
 
-## 6.2 Show a Field Only if a Prior-Event Field Was Filled In
+### 6.2 Show a Field Only if a Prior-Event Field Was Filled In
 
 Use the empty-string check to require that any value was saved at a prior event:
 
@@ -218,7 +218,7 @@ Use the empty-string check to require that any value was saved at a prior event:
 
 This will evaluate to true as soon as anything is saved in `[primary_diagnosis]` at baseline, and to false if the field is blank (never saved).
 
-## 6.3 Combine a Cross-Event Condition with a Local Condition
+### 6.3 Combine a Cross-Event Condition with a Local Condition
 
 Show a follow-up question only if baseline consent was given AND the current event has a specific status:
 
@@ -228,7 +228,7 @@ Show a follow-up question only if baseline consent was given AND the current eve
 
 Here, `[consent_status]` references the baseline event; `[visit_status]` references the same event as the field being shown (local reference).
 
-## 6.4 Use a Numeric Cross-Event Value
+### 6.4 Use a Numeric Cross-Event Value
 
 Show a field at a follow-up event only if a baseline score exceeded a threshold:
 
@@ -240,7 +240,7 @@ REDCap evaluates the number at baseline and applies the result to the current ev
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Do I need to include the event prefix when referencing a field in the same event?**
 
@@ -276,7 +276,7 @@ REDCap evaluates the number at baseline and applies the result to the current ev
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Omitting the event prefix for cross-event references.** A reference to `[dob]` in a follow-up event will look for `dob` in the *current* event. If `dob` is only collected at baseline, the reference returns blank and the logic evaluates incorrectly. Always include the unique event name prefix when referencing a field from a different event.
 
@@ -290,7 +290,7 @@ REDCap evaluates the number at baseline and applies the result to the current ev
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) (introduction to the series; lists cross-event logic as a topic)
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (prerequisite — logic syntax fundamentals)

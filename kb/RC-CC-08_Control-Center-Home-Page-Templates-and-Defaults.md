@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers four related System Configuration pages that control the appearance and default behavior of REDCap projects: **Home Page Settings**, **Project Templates**, **Default Project Settings**, and **Footer Settings**. It also covers **Field Validation Types**, which determines what validation options are available to form designers across all projects. These settings apply instance-wide and affect all users and projects on the REDCap instance.
 
 ---
 
-# 2. Home Page Settings
+## 2. Home Page Settings
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Home Page Settings section -->
 
@@ -43,7 +43,7 @@ The Home Page Settings control what users see on the REDCap landing page (before
 
 ---
 
-# 3. Project Templates
+## 3. Project Templates
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Project Templates section -->
 
@@ -76,7 +76,7 @@ Administrators can manage which templates are available, add new templates from 
 
 ---
 
-# 4. Default Project Settings
+## 4. Default Project Settings
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Default Project Settings section -->
 
@@ -105,7 +105,7 @@ A text block (with optional link) that appears at the bottom of all survey pages
 
 ---
 
-# 5. Footer Settings (All Projects)
+## 5. Footer Settings (All Projects)
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Footer Settings section -->
 
@@ -119,7 +119,7 @@ A text block displayed in the footer alongside the links. Commonly contains the 
 
 ---
 
-# 6. Field Validation Types
+## 6. Field Validation Types
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Field Validation Types section -->
 
@@ -179,7 +179,7 @@ REDCap administrators can develop and register custom validation types for insti
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Can I customize the text shown on the login page and home page?**
 Yes. The Top-of-page announcement displays on both the Home page and optionally on the login page. Use the Bottom-of-page text field to add persistent guidance below the main content on the Home page. For login page-specific customization when SSO is in use, consult your authentication configuration.
@@ -201,7 +201,7 @@ Institution-specific templates allow you to standardize data collection across p
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Forgetting to enable newly created templates.** When you add a new template to the system, it is created in a disabled state by default. It will not appear in the template list for users creating new projects until you explicitly enable it on the Project Templates page. Administrators sometimes add a template and wonder why users cannot see it.
 
@@ -215,7 +215,7 @@ Institution-specific templates allow you to standardize data collection across p
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)

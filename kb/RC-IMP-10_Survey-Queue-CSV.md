@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Survey Queue module supports CSV export and import of queue configurations. The survey queue defines the order and conditional logic that governs which surveys are presented to a participant after completing a prior survey.
 
@@ -31,7 +31,7 @@ For full coverage of configuring the Survey Queue through the REDCap UI, see [RC
 
 ---
 
-# 2. Column Reference
+## 2. Column Reference
 
 The Survey Queue CSV always has exactly eight columns in this order:
 
@@ -48,7 +48,7 @@ The Survey Queue CSV always has exactly eight columns in this order:
 
 ---
 
-# 3. Annotated Example
+## 3. Annotated Example
 
 The file below shows a three-survey queue from a classic (non-longitudinal) project. After completing `screening`, participants are automatically advanced to `demographics`. After completing `demographics`, they are advanced to `phq9` — but only if a screening eligibility field is set to `1`.
 
@@ -68,7 +68,7 @@ Key points illustrated:
 
 ---
 
-# 4. Common Mistakes
+## 4. Common Mistakes
 
 **Leaving `condition_andor` blank.** REDCap expects this column to be populated even when only a completion trigger or only a logic condition is configured. A blank value may cause the row to be rejected or the trigger to behave unexpectedly.
 
@@ -82,7 +82,7 @@ Key points illustrated:
 
 ---
 
-# 5. Related Articles
+## 5. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-SURV-07 — Survey Queue](RC-SURV-07_Survey-Queue.md) (full module reference including UI configuration)

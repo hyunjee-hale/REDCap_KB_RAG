@@ -14,63 +14,63 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article is the second of a two-part series on the REDCap Survey Settings page. It covers three sections of the settings page: **Survey Customizations** (behavioral options that affect how participants interact with the survey), **Survey Access** (rules that govern who can access the survey and for how long), and **Survey Termination Options** (what happens after a participant submits or is stopped). The companion article, [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md), covers the Basic Options and Design sections.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## Survey Customizations
+### Survey Customizations
 
 A collection of settings that govern specific behaviors during survey completion — question numbering, pagination, PDF handling, accessibility, and button labels.
 
-## Pagination
+### Pagination
 
 The division of a survey into multiple pages. In REDCap, page breaks are defined by the placement of **Section Header** field types within the instrument. Each section header marks the start of a new page when pagination is enabled.
 
-## Section Header
+### Section Header
 
 A field type in REDCap that displays a visual divider and optional heading text in an instrument. When pagination is set to **Multiple Pages**, each section header begins a new survey page.
 
-## Survey Access
+### Survey Access
 
 Settings that define when, how often, and under what conditions a participant can access a survey: response limits, time limits, expiration dates, and save-and-return behavior.
 
-## Save and Return
+### Save and Return
 
 A feature that allows a participant to pause a survey mid-completion, receive a return code, and resume later without starting over.
 
-## Return Code
+### Return Code
 
 A system-generated alphanumeric code given to a participant when they save their progress. Required to resume a saved survey unless the return-code requirement is disabled.
 
-## Survey Termination Options
+### Survey Termination Options
 
 Settings that control what happens after a participant submits a survey or triggers a stop action: redirection, completion messages, stop-action behavior, e-consent archiving, and confirmation emails.
 
-## Stop Action
+### Stop Action
 
 A condition attached to a specific answer option in the Online Designer. When a participant selects that option, the survey ends immediately. The Survey Settings page controls what happens to the data and what message the participant sees when a stop action fires.
 
-## e-Consent Framework
+### e-Consent Framework
 
 A REDCap feature that requires a participant to confirm the accuracy of their responses before the survey is marked complete. Commonly used for electronic consent forms. Generates an auto-archived PDF of the completed consent.
 
-## Auto-Archiver
+### Auto-Archiver
 
 A feature that automatically generates a PDF of a completed survey response and saves it to the project's File Repository. Does not require a dedicated file upload variable.
 
-## Confirmation Email
+### Confirmation Email
 
 An email sent to a participant automatically after they complete a survey. Distinct from Alerts & Notifications — confirmation emails are configured per survey and fire only on completion.
 
 ---
 
-# 3. Survey Customizations
+## 3. Survey Customizations
 
-## 3.1 Question Numbering
+### 3.1 Question Numbering
 
 REDCap can display a number before each question on the survey. This setting has two modes:
 
@@ -85,7 +85,7 @@ Custom numbers are set in two ways:
 
 > **Note:** If you enable custom numbering but do not define numbers for any variables, your survey will display no question numbers at all. This is a valid choice if you prefer an unnumbered survey.
 
-## 3.2 Pagination
+### 3.2 Pagination
 
 This setting controls whether the entire survey is displayed as a single scrolling page or broken into multiple pages.
 
@@ -97,13 +97,13 @@ When **Multiple Pages** is selected, two additional options become available:
 - **Display page numbers** — shows participants how far through the survey they are (e.g., "Page 2 of 5").
 - **Hide the "Previous Page" button** — removes the back-navigation button, preventing participants from returning to earlier pages. Useful when you display calculated scores on a final page and do not want participants to go back and alter the inputs that feed those calculations.
 
-## 3.3 PDF Download
+### 3.3 PDF Download
 
 This toggle controls whether participants are offered a **Download PDF** button after completing the survey. When enabled, participants can download a PDF of their own responses.
 
 This is a popular option for registration forms and consent-adjacent surveys where participants want a copy of what they submitted.
 
-## 3.4 Survey Response PDF Save
+### 3.4 Survey Response PDF Save
 
 Similar to PDF Download, but instead of offering the PDF to the participant, REDCap saves it automatically into a designated **file upload variable** in the project dataset. The saved PDF becomes part of the record.
 
@@ -114,7 +114,7 @@ This is useful when you need an immutable copy of the response — for example, 
 
 > **Important:** If the designated file upload variable does not exist in the specified event, REDCap will return an error when a participant completes the survey. Verify the variable's event assignment before going live.
 
-## 3.5 Survey-Specific Email Invitation Field
+### 3.5 Survey-Specific Email Invitation Field
 
 By default, REDCap sends survey invitations to the email address stored in the project's designated global email variable, or to the address entered in the Participant List for that record.
 
@@ -126,7 +126,7 @@ Example scenarios:
 
 > **Note:** You must select a variable — you cannot type an email address directly. The variable must be of type **Text Box** with **Email** validation enabled.
 
-## 3.6 Required Field Hints
+### 3.6 Required Field Hints
 
 Controls whether participants see a hint indicating which variables are required. Options:
 
@@ -136,11 +136,11 @@ Controls whether participants see a hint indicating which variables are required
 
 > **Note:** Regardless of this setting, REDCap will still prevent survey submission and highlight unfilled required variables when a participant tries to submit without completing them.
 
-## 3.7 Font Resize Options
+### 3.7 Font Resize Options
 
 Controls whether participants can resize the survey text using the resize control built into the survey interface. Disable this if you want to lock in a specific text size for all participants.
 
-## 3.8 Aggregate Survey Results
+### 3.8 Aggregate Survey Results
 
 Enables a summary display at the end of the survey showing aggregated responses across all records — useful for polling-style surveys. Options include graphical plots, numeric summaries, or both.
 
@@ -148,7 +148,7 @@ Two privacy safeguards are built in:
 - **Minimum responses threshold** — the aggregate is not displayed until at least N responses have been collected (default: 10). Set this higher for surveys with sensitive questions.
 - **Diversity toggle** — suppresses the aggregate display if all respondents selected the same option, which could effectively identify individual responses.
 
-## 3.9 Text-to-Speech Functionality
+### 3.9 Text-to-Speech Functionality
 
 An accessibility feature that reads survey text aloud to participants. Designed for participants with visual impairments or literacy challenges.
 
@@ -163,17 +163,17 @@ A **Language Selector** lets you choose the voice and language. This setting con
 
 > **Note:** Your institution's REDCap administrator can disable this feature system-wide. If you do not see this option, or if you are unsure whether it is permitted at this installation, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 7.3: Text-to-Speech in Surveys**.
 
-## 3.10 Hiding Submit Buttons
+### 3.10 Hiding Submit Buttons
 
 If you are using a survey purely for informational display — and do not want to collect any data — you can hide the submit buttons entirely. Participants will see the content but cannot submit a response.
 
-## 3.11 Submit Button Customizations
+### 3.11 Submit Button Customizations
 
 The three submit-related buttons (the mid-survey next/submit button, the final submit button, and the save-and-return button) can each be given custom label text. Keep labels short — button display space is limited.
 
 > **Note:** If you use the **Multi-Language Module**, custom button text set here only applies to the base language. Labels for other languages must be configured within the Multi-Language Module.
 
-## 3.12 Repeat Survey
+### 3.12 Repeat Survey
 
 When enabled, a **Repeat Survey** button is displayed at the end of the survey, allowing a participant to immediately begin a new, independent completion of the same survey without needing a new link.
 
@@ -189,9 +189,9 @@ Use cases: anonymous polling, suggestion boxes, or any survey designed to collec
 
 ---
 
-# 4. Survey Access
+## 4. Survey Access
 
-## 4.1 Response Limit
+### 4.1 Response Limit
 
 Sets a maximum number of completed responses. Once the limit is reached, REDCap automatically takes the survey offline.
 
@@ -203,7 +203,7 @@ Configuration options:
 
 > **Note:** Partial completions are common on multi-page surveys where participants navigate away mid-survey. If you exclude partial completions from the count, some seats may appear available longer than expected.
 
-## 4.2 Time Limit
+### 4.2 Time Limit
 
 When using REDCap's survey invitation system, this setting adds an expiration window to each individual invitation link. After the time limit elapses from the moment the invitation is sent, the link becomes invalid.
 
@@ -213,7 +213,7 @@ Example: You send a weekly symptom survey every Monday. Setting a 7-day time lim
 
 > **Note:** The Time Limit setting only applies when surveys are sent via the Participant List invitation system. It does not affect the public survey link.
 
-## 4.3 Survey Expiration
+### 4.3 Survey Expiration
 
 Takes the survey offline at a specific date and time — regardless of how many responses have been collected and regardless of individual invitation timing.
 
@@ -221,26 +221,26 @@ Example: You want registration for an event to close at midnight on the day befo
 
 > **Note:** REDCap uses the **server's time zone** for the expiration, not the participant's local time zone. If your server is in a different time zone than your participants, adjust the expiration time accordingly. For this installation's server time zone, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 3**.
 
-## 4.4 Save and Return
+### 4.4 Save and Return
 
 When enabled, participants who click the **Save & Return Later** button receive a return code and a link they can use to resume their saved progress. If disabled, participants must complete the survey in a single session.
 
-### Return Codes
+#### Return Codes
 
 By default, returning to a saved survey requires the return code provided at the time of saving. If you disable the return code requirement, anyone with the original survey link can return to and view all previously entered responses without needing the code.
 
 - **Keep return codes enabled** for surveys collecting sensitive data.
 - **Disable return codes** only when losing the code is a common support burden and the survey data is not sensitive.
 
-## 4.5 Modifying Completed Responses
+### 4.5 Modifying Completed Responses
 
 When enabled, participants can return to a survey they have already submitted and change their answers. This is useful for surveys used to collect information that participants may need to update over time — for example, contact information or availability preferences.
 
 ---
 
-# 5. Survey Termination Options
+## 5. Survey Termination Options
 
-## 5.1 Auto-Continue
+### 5.1 Auto-Continue
 
 If your survey is part of a sequence, **Auto-Continue** automatically advances the participant to the next survey in the sequence after they submit. You can optionally attach branching logic to make this conditional.
 
@@ -248,7 +248,7 @@ Example: Auto-continue only if the participant indicated consent in a prior ques
 
 > **Note:** For projects with many surveys or complex routing, use the **Survey Queue** feature in the Online Designer instead of Auto-Continue. Survey Queue offers more flexibility and is easier to manage at scale.
 
-## 5.2 Redirect to a URL
+### 5.2 Redirect to a URL
 
 After survey completion, you can redirect participants to an external website. Paste the full URL (including `https://`) into the field.
 
@@ -256,7 +256,7 @@ Advanced users can pipe record or survey data into the URL if needed, but this i
 
 > **Note:** Redirect to URL and Survey Completion Text are mutually exclusive — you can configure one or the other, not both.
 
-## 5.3 Survey Completion Text
+### 5.3 Survey Completion Text
 
 An alternative to URL redirection. Displays a custom message to participants after they submit. Supports rich text editing and piping of values from the survey.
 
@@ -275,20 +275,20 @@ For more on piping syntax, see [RC-PIPE-01 — Piping: Basics, Syntax & Field Ty
 
 > **Note:** Redirect to URL and Survey Completion Text are mutually exclusive — you can configure one or the other, not both.
 
-## 5.4 Survey Stop Actions
+### 5.4 Survey Stop Actions
 
 When an instrument variable is configured with a **Stop Action** in the Online Designer (attached to a specific answer option), selecting that option ends the survey immediately. The Survey Settings dropdown controls what happens next:
 
 - **Do NOT save the survey response** — REDCap discards the response. Use this for cleaner data when stopped responses are not meaningful.
 - **Save the responses regardless** (default) — REDCap saves whatever was entered up to the point of the stop action.
 
-### Alternate Survey Completion Text
+#### Alternate Survey Completion Text
 
 An optional message displayed to participants when a stop action fires, separate from the standard completion text. Use this to provide a contextually appropriate message.
 
 Example: "Thank you for your interest, but based on your responses you do not meet the eligibility criteria for this study."
 
-## 5.5 e-Consent Framework and PDF Auto-Archiver
+### 5.5 e-Consent Framework and PDF Auto-Archiver
 
 This setting has three levels:
 
@@ -296,13 +296,13 @@ This setting has three levels:
 - **Auto-Archiver enabled** — REDCap generates a PDF of the completed response and saves it to the **File Repository**. This is different from the Survey Response PDF Save setting in Section 3.4: no file upload variable is needed, and the PDF is stored in the File Repository rather than the dataset.
 - **Auto-Archiver + e-Consent Framework** — in addition to archiving, REDCap adds a final confirmation step requiring the participant to verify that their responses are accurate before the survey is marked complete. Used primarily for electronic consent collection.
 
-### e-Consent Variable Requirements
+#### e-Consent Variable Requirements
 
 To use the e-Consent Framework, you must collect the participant's name (first and last name as two separate text variables is best practice). A Signature field is optional but strongly recommended — it enables automatic clearing if the participant navigates back during the consent flow. See [RC-SURV-08 — e-Consent Framework Setup and Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md) for the full field requirements.
 
 > **Important:** Before using the e-Consent Framework for a study, confirm with your local Institutional Review Board that electronic consent collected via REDCap is acceptable at your institution. For this installation's IRB guidance on e-consent, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 7.5: e-Consent Framework**.
 
-## 5.6 Confirmation Emails
+### 5.6 Confirmation Emails
 
 Sends an email to the participant automatically upon survey completion. When set to **Yes**, the following configuration fields appear:
 
@@ -318,7 +318,7 @@ Use the **Send Test Email** link in the body field header to send a preview to y
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: How do I prevent participants from going back and changing their answers on a previous page?**
 Enable **Multiple Pages** pagination and check the **Hide the "Previous Page" button** option. Participants will not be able to navigate backwards through the survey.
@@ -349,7 +349,7 @@ No — confirmation emails always fire on completion. For conditional emails, us
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Setting Survey Expiration in the wrong time zone.** REDCap uses the server's time zone for survey expiration, not the participant's local time. Always check the server time zone (see [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md), Section 3) and calculate the correct offset before entering an expiration time. For example, if the server is set to UTC and your participants are in Central European Time (UTC+1/+2), a midnight local expiration becomes 23:00 or 22:00 UTC.
 
@@ -367,7 +367,7 @@ No — confirmation emails always fire on completion. For conditional emails, us
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -376,7 +376,7 @@ No — confirmation emails always fire on completion. For conditional emails, us
 ---
 
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
 - [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md)

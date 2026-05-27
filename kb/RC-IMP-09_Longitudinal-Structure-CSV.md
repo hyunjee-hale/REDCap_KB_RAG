@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Three CSV uploads govern the fundamental structure of a longitudinal REDCap project: arms, events, and the mapping of instruments to events. These three uploads are always used together and must be applied in a specific order. This article covers the format and gotchas for all three.
 
@@ -27,7 +27,7 @@ For a general overview of longitudinal project setup in the REDCap UI, see [RC-L
 
 ---
 
-# 2. Arms CSV
+## 2. Arms CSV
 
 **Location:** Project Setup → Define My Events → "Upload or download arms/events" dropdown → download/upload arms.
 
@@ -37,14 +37,14 @@ For a general overview of longitudinal project setup in the REDCap UI, see [RC-L
 
 **Rights required:** Project Design and Setup.
 
-## Column Reference
+### Column Reference
 
 | Column | Required | Notes |
 |---|---|---|
 | `arm_num` | Yes | Integer. The arm number used internally and referenced by the events upload. Arm 1 is the default arm. |
 | `name` | Yes | Display name for the arm shown in the REDCap UI (e.g., `Arm 1`, `Control`, `Intervention`). Free text; no character restrictions. |
 
-## Example
+### Example
 
 ```csv
 arm_num,name
@@ -54,7 +54,7 @@ arm_num,name
 
 ---
 
-# 3. Events CSV
+## 3. Events CSV
 
 **Location:** Project Setup → Define My Events → "Upload or download arms/events" dropdown → download/upload events.
 
@@ -64,9 +64,9 @@ arm_num,name
 
 **Rights required:** Project Design and Setup.
 
-## Column Reference
+### Column Reference
 
-### Core columns (always present)
+#### Core columns (always present)
 
 | Column | Required | Notes |
 |---|---|---|
@@ -75,7 +75,7 @@ arm_num,name
 | `unique_event_name` | Recommended blank | The system identifier used in branching logic, piping, and API calls (e.g., `baseline_arm_1`). **Leave this column blank** — REDCap auto-generates the value from the event name and arm number. Hand-typed values frequently diverge from what REDCap generates (see Common Mistakes below). |
 | `custom_event_label` | No | Optional piped label displayed in place of the event name on the Record Home Page. Supports piping syntax (e.g., `[visit_date]`). Leave blank if not in use. |
 
-### Additional columns (Scheduling module only)
+#### Additional columns (Scheduling module only)
 
 | Column | Required | Notes |
 |---|---|---|
@@ -83,7 +83,7 @@ arm_num,name
 | `offset_min` | No | Minimum acceptable day offset (window start). |
 | `offset_max` | No | Maximum acceptable day offset (window end). |
 
-## Example
+### Example
 
 ```csv
 event_name,arm_num,unique_event_name,custom_event_label
@@ -100,7 +100,7 @@ Note that `unique_event_name` is left blank in every row — REDCap will generat
 
 ---
 
-# 4. Instrument-Event Mappings CSV
+## 4. Instrument-Event Mappings CSV
 
 **Location:** Project Setup → Define My Events → Designate Instruments for My Events → "Upload or download instrument mappings" dropdown.
 
@@ -110,7 +110,7 @@ Note that `unique_event_name` is left blank in every row — REDCap will generat
 
 **Rights required:** Project Design and Setup.
 
-## Column Reference
+### Column Reference
 
 | Column | Required | Notes |
 |---|---|---|
@@ -118,7 +118,7 @@ Note that `unique_event_name` is left blank in every row — REDCap will generat
 | `unique_event_name` | Yes | The system-generated unique event name (e.g., `baseline_arm_1`). Must match exactly — copy from a downloaded events CSV or from the Define My Events page, never type by hand. |
 | `form` | Yes | The instrument's variable name (lowercase, underscored). Must match the `form_name` column in the project's Data Dictionary exactly. |
 
-## Example
+### Example
 
 ```csv
 arm_num,unique_event_name,form
@@ -133,7 +133,7 @@ arm_num,unique_event_name,form
 
 ---
 
-# 5. Common Mistakes
+## 5. Common Mistakes
 
 **Typing unique event names by hand.** REDCap's unique event name algorithm removes hyphens rather than converting them to underscores. An event labeled "3 Month Follow-up" becomes `3_month_followup_arm_1`, not `3_month_follow_up_arm_1`. A mismatch here causes the mapping row to be silently ignored — the instrument simply won't be assigned. Always copy unique event names from a downloaded events export or from the Define My Events page.
 
@@ -147,7 +147,7 @@ arm_num,unique_event_name,form
 
 ---
 
-# 6. API Equivalents
+## 6. API Equivalents
 
 All three CSV uploads have corresponding API methods.
 
@@ -161,7 +161,7 @@ See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, toke
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-LONG-01 — Longitudinal Project Setup](RC-LONG-01_Longitudinal-Project-Setup.md) (full UI walkthrough for longitudinal configuration)

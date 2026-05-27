@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Instance smart variables track and reference specific instances (repetitions) of instruments or events in REDCap. They enable you to reference data from the previous instance, the current instance, the next instance, the first instance, or the last instance within a repeating set. Additionally, the `[new-instance]` smart variable enables creation of links to new instances that do not yet exist. Use these variables in field labels, logic, form links, survey invitations, and calculated fields to navigate repeating data dynamically.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Instance / Instance Number**
 
@@ -44,7 +44,7 @@ A future instance that has not yet been created. The `[new-instance]` smart vari
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -57,7 +57,7 @@ A future instance that has not yet been created. The `[new-instance]` smart vari
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Instance Qualifiers as Suffix Modifiers**
 
@@ -110,7 +110,7 @@ In longitudinal projects with repeating instruments, instance qualifiers and eve
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I reference data from the previous instance of a repeating survey?**
 
@@ -142,7 +142,7 @@ In longitudinal projects with repeating instruments, instance qualifiers and eve
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using `[new-instance]` with field variables.** `[new-instance]` can only be appended to form/survey links, not to field variables. `[field][new-instance]` is invalid. Use `[last-instance]` or `[next-instance]` to reference existing instances instead.
 
@@ -160,7 +160,7 @@ In longitudinal projects with repeating instruments, instance qualifiers and eve
 
 ---
 
-# 7. Pattern: Accumulator Chain for Cross-Instance Aggregation
+## 7. Pattern: Accumulator Chain for Cross-Instance Aggregation
 
 A common challenge with repeating instruments is aggregating a value across all instances for use in alerts or piping — for example, building a list of all staff names who completed a training, or collecting all email addresses across a repeating staff roster.
 
@@ -194,7 +194,7 @@ This field always reflects the full accumulated list and can be piped into alert
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(detailed instance qualifier syntax)

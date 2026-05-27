@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers MyCap Active Tasks and the Mobile Toolbox (MTB). Active Tasks are sensor-based assessments built into the MyCap app that use the device's hardware (accelerometer, microphone, camera, gyroscope) to capture objective performance data. The Mobile Toolbox is a set of cognitive assessments from the NIH Toolbox available as a special Active Task type. This article describes the available task categories, individual tasks, device compatibility, configurable settings, and scheduling considerations. Active Tasks are distinct from instrument-based surveys — they are preconfigured assessments, not custom REDCap instruments.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Active Task**
 
@@ -44,7 +44,7 @@ Active Tasks have configurable parameters (e.g., duration, number of trials, ton
 
 ---
 
-# 3. Device Compatibility
+## 3. Device Compatibility
 
 Active Task availability depends on the participant's device operating system and which version of MyCap they are using (Classic vs. current).
 
@@ -74,9 +74,9 @@ Active Task availability depends on the participant's device operating system an
 
 ---
 
-# 4. Active Task Categories
+## 4. Active Task Categories
 
-## 4.1 Motor Tasks
+### 4.1 Motor Tasks
 
 Motor tasks assess physical function using the device's accelerometer, gyroscope, and touch screen.
 
@@ -101,7 +101,7 @@ Assesses aerobic fitness using a step-test protocol. The participant steps up an
 Assesses walking speed over a defined distance. The participant walks a straight path while the app times the walk.
 - Configurable: distance (meters or feet).
 
-## 4.2 Cognition Tasks
+### 4.2 Cognition Tasks
 
 Cognition tasks assess cognitive function using on-screen interactive tests.
 
@@ -125,7 +125,7 @@ Assesses working memory and information-processing speed. The participant hears 
 Assesses problem-solving and planning. The participant moves disks between pegs to recreate a target configuration using the fewest moves.
 - Configurable: number of disks.
 
-## 4.3 Speech Tasks
+### 4.3 Speech Tasks
 
 Speech tasks use the device microphone to capture audio for acoustic analysis.
 
@@ -138,14 +138,14 @@ A general-purpose audio capture task. The participant speaks or reads aloud; the
 - Configurable: duration, prompt text.
 - Compatible: iOS and Android (current MyCap only for iOS).
 
-## 4.4 Hearing Task
+### 4.4 Hearing Task
 
 **Tone Audiometry**
 Assesses hearing thresholds across frequency ranges. The participant listens through headphones and responds when they hear a tone. The app maps the hearing threshold curve.
 - Configurable: frequency range, ear (left / right / both).
 - Requires: headphones connected to the device.
 
-## 4.5 Hand Dexterity and Vision Tasks
+### 4.5 Hand Dexterity and Vision Tasks
 
 **9-Hole Peg Test**
 Assesses fine motor dexterity. The participant places virtual pegs into holes on screen as quickly as possible.
@@ -161,7 +161,7 @@ Captures a photo of the participant's face using the front-facing camera. Can be
 
 ---
 
-# 5. Mobile Toolbox (MTB)
+## 5. Mobile Toolbox (MTB)
 
 The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 
@@ -173,9 +173,9 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 
 ---
 
-# 6. Setting Up Active Tasks
+## 6. Setting Up Active Tasks
 
-## 6.1 For Traditional (Non-Longitudinal) Projects
+### 6.1 For Traditional (Non-Longitudinal) Projects
 
 1. In the MyCap section of the left menu, go to **Active Tasks**.
 2. Click **Add Active Task**.
@@ -185,7 +185,7 @@ The Mobile Toolbox provides NIH Toolbox cognitive assessments within MyCap.
 6. Save the task.
 7. Publish the project.
 
-## 6.2 For Longitudinal Projects
+### 6.2 For Longitudinal Projects
 
 In longitudinal projects, Active Tasks must be designated to at least one event before setup:
 
@@ -198,7 +198,7 @@ In longitudinal projects, Active Tasks must be designated to at least one event 
 
 ---
 
-# 7. Capturing Active Task Data
+## 7. Capturing Active Task Data
 
 Active Task results are stored in REDCap fields using the task metadata annotations:
 
@@ -209,7 +209,7 @@ Add fields with these annotations to the instrument associated with the Active T
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Can I use Active Tasks on both iOS and Android?**
 
@@ -237,7 +237,7 @@ Add fields with these annotations to the instrument associated with the Active T
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Adding Active Tasks in longitudinal projects before designating them to events.** Active Tasks must be added to event designations first. If you attempt to configure an Active Task without event designation in a longitudinal project, the task will not appear properly in the scheduling interface.
 
@@ -251,7 +251,7 @@ Add fields with these annotations to the instrument associated with the Active T
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(task metadata annotations)
 - [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)(scheduling Active Tasks)

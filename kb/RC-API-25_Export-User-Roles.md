@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export User Roles API method retrieves all custom user roles defined in your project. A user role is a template that bundles a set of permissions together and assigns a human-readable label. When users are assigned to a role, they inherit all permissions in that role. This method returns the role definitions, including the role's unique system ID, label, and all permission flags.
 
@@ -23,7 +23,7 @@ Use this method to audit role configurations, generate reports of role-based acc
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -34,9 +34,9 @@ Use this method to audit role configurations, generate reports of role-based acc
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests
@@ -52,7 +52,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -68,7 +68,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -83,7 +83,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -116,7 +116,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the method returns an array (or CSV table) of role objects in the requested format. Each object contains the following attributes:
 
@@ -135,7 +135,7 @@ The `forms` attribute is the only one with sub-elements — it contains one entr
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What's the difference between a role and a user?**
 
@@ -159,7 +159,7 @@ The `forms` attribute is the only one with sub-elements — it contains one entr
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Confusing role_label with unique_role_name.** The `unique_role_name` is a system ID (e.g., `U-527D39JXAC`); the `role_label` is the human-readable name (e.g., `'Project Manager'`). Use the correct field depending on whether you need the system ID or display name.
 
@@ -171,7 +171,7 @@ The `forms` attribute is the only one with sub-elements — it contains one entr
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (explains role-based access and the three tiers)

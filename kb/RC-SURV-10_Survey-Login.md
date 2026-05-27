@@ -14,17 +14,17 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
-## What is this?
+### What is this?
 
 Survey Login is a project-level security feature that forces respondents to authenticate before they can view or complete a survey. Instead of a traditional username and password, respondents prove their identity by entering one or more field values already stored in their record — such as a last name, date of birth, or participant ID. REDCap checks those entered values against the record and only grants access if they match.
 
-## Why does it matter?
+### Why does it matter?
 
 By default, anyone who possesses a survey link can open and complete a survey. Survey Login adds a verification layer that ties survey access to data that only the legitimate respondent should know. This is useful in studies where surveys are distributed broadly (e.g., via bulk email) and the research team wants assurance that the correct person is completing each record's survey.
 
-## Scope and Assumptions
+### Scope and Assumptions
 
 This article covers Survey Login configuration only. It assumes:
 - Surveys are already enabled for the project (see [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)).
@@ -33,33 +33,33 @@ This article covers Survey Login configuration only. It assumes:
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## Survey Login
+### Survey Login
 
 A project-level feature that displays an authentication prompt before a respondent can access a survey. The respondent must enter values matching field data already saved in their record.
 
-## Login Fields
+### Login Fields
 
 The project fields — up to three — that REDCap uses as the authentication challenge. REDCap compares what the respondent types against what is stored in the record. If the values match (subject to the minimum required fields setting), the respondent is granted access.
 
-## Minimum Required Fields
+### Minimum Required Fields
 
 When more than one login field is configured, this setting controls how many of those fields must be correctly entered before access is granted. For example, if three login fields are configured but the minimum is set to 2, the respondent only needs to match any two of the three fields.
 
-## 30-Minute Authentication Window
+### 30-Minute Authentication Window
 
 Once a respondent has successfully logged in, REDCap does not prompt them again for any survey in the same project for the next 30 minutes. This prevents repeated authentication challenges when a respondent is completing multiple surveys in sequence, such as when working through a Survey Queue.
 
-## Lockout
+### Lockout
 
 An optional security measure that temporarily blocks a respondent's ability to attempt login after a defined number of consecutive failed attempts. The lockout duration is configurable in minutes.
 
 ---
 
-# 3. How Survey Login Works
+## 3. How Survey Login Works
 
-## 3.1 When the Login Prompt Appears
+### 3.1 When the Login Prompt Appears
 
 Survey Login behavior depends on whether a record exists for the respondent at the time they access the survey.
 
@@ -70,7 +70,7 @@ This means Survey Login has no effect on the very first interaction for a new re
 
 > **Important:** Survey Login **cannot** be applied to a Public Survey (the first survey in a project accessible via the public survey link). A Public Survey by definition has no record to validate against when a new respondent arrives. Survey Login applies to all other survey access methods.
 
-## 3.2 Where to Configure Survey Login
+### 3.2 Where to Configure Survey Login
 
 Survey Login is configured at the **project level**, not per survey. Access it from the **Online Designer** via the **Survey Login** button in the toolbar.
 
@@ -78,13 +78,13 @@ The settings defined here apply globally across the project's surveys, with one 
 
 ---
 
-# 4. Configuration Settings
+## 4. Configuration Settings
 
-## 4.1 Enable Survey Login
+### 4.1 Enable Survey Login
 
 Toggle Survey Login on or off for the project. When disabled, all surveys open normally with no authentication prompt. When enabled, the remaining settings become active.
 
-## 4.2 Login Fields
+### 4.2 Login Fields
 
 Select the fields that respondents must enter to authenticate. Up to three fields can be configured. Fields are selected from a dropdown of all project variables.
 
@@ -97,13 +97,13 @@ Select the fields that respondents must enter to authenticate. Up to three field
 
 > **Note:** Field values in REDCap are case-insensitive for Survey Login matching purposes. A respondent entering "smith" will match a stored value of "Smith".
 
-## 4.3 Minimum Number of Fields Required for Login
+### 4.3 Minimum Number of Fields Required for Login
 
 When more than one login field is configured, this setting determines how many must be correctly entered to authenticate. Options are 1, 2, or 3 (the maximum equals the number of configured login fields).
 
 Setting the minimum below the total number of configured fields provides a fallback: a respondent who cannot remember one value may still authenticate using the other fields. This can reduce support burden in studies with longer follow-up periods where participants may forget one of their registered values.
 
-## 4.4 Apply Survey Login To
+### 4.4 Apply Survey Login To
 
 Controls which surveys in the project require login:
 
@@ -112,7 +112,7 @@ Controls which surveys in the project require login:
 
 Use the "only selected surveys" option when your project contains a mix of staff-distributed and publicly accessible surveys, or when Survey Login should only apply to sensitive instruments.
 
-## 4.5 Custom Error Message
+### 4.5 Custom Error Message
 
 An optional message displayed on the login form when a respondent fails authentication. Supports HTML, including hyperlinks.
 
@@ -127,21 +127,21 @@ If no custom message is provided, REDCap displays a generic error.
 
 ---
 
-# 5. Security Settings (Optional)
+## 5. Security Settings (Optional)
 
-## 5.1 Failed Login Attempt Limit
+### 5.1 Failed Login Attempt Limit
 
 Sets the number of consecutive failed login attempts allowed before the respondent is temporarily locked out. Set to **0** to disable lockouts entirely.
 
 Enabling a lockout limit is recommended for studies where the login field values could be guessed systematically (e.g., when only a single date-of-birth field is required).
 
-## 5.2 Lockout Duration
+### 5.2 Lockout Duration
 
 The number of minutes a respondent remains locked out after exceeding the failed attempt limit. Set to **0** to disable. This setting has no effect unless the Failed Login Attempt Limit is also set above 0.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: A respondent says they cannot log in even though their information is correct. What should I check?**
 Verify that the login field values stored in their record exactly match what they are entering. Pay attention to field validation — for example, if the date field uses a specific date format, the respondent must enter the date in that format. Also check whether the respondent has been locked out due to too many failed attempts; lockout status can be checked and cleared through the Survey Distribution Tools.
@@ -166,7 +166,7 @@ Set **Apply survey login to** to *Only selected surveys*, then enable Survey Log
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Enabling Survey Login before login field values are populated.** Survey Login is only effective if the respondent's record already contains values for the login fields. If you distribute surveys before populating those fields (e.g., before importing participant data), respondents may fail authentication even though they are legitimate participants. Always confirm data is loaded before enabling Survey Login.
 
@@ -180,7 +180,7 @@ Set **Apply survey login to** to *Only selected surveys*, then enable Survey Log
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)
 - [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md)

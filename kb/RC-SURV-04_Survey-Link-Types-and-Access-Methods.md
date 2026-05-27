@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains the two types of survey links in REDCap — public and individual — including how each works, how they behave in longitudinal projects, and how to locate any specific survey link using REDCap's built-in tools. It covers the Survey Options menu inside an instrument, the survey-related smart variables (`[survey-url]` and `[survey-link]`), and the participant list as a link lookup. This article is part of the Surveys knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Public Survey Link**
 
@@ -52,9 +52,9 @@ An auto-generated image that encodes a survey URL. Participants scan it with a s
 
 ---
 
-# 3. Public vs. Individual Survey Links
+## 3. Public vs. Individual Survey Links
 
-## 3.1 Public Survey Links
+### 3.1 Public Survey Links
 
 REDCap generates a public survey link automatically the moment the first instrument in a project is enabled as a survey. No additional configuration is required.
 
@@ -68,13 +68,13 @@ The public survey link is found in the **Survey Distribution Tools** section of 
 
 REDCap stores all data in a record based on the Record ID, which lives on the first variable of the first instrument. REDCap enforces this rule to maintain database integrity — a new record cannot be created without a Record ID, and that ID must come from the first instrument.
 
-## 3.2 Public Survey Links in Longitudinal Projects
+### 3.2 Public Survey Links in Longitudinal Projects
 
 In a standard longitudinal project, the public survey link works the same as in a classic project. The only additional requirement is that the first instrument must be assigned to the first event.
 
 When a project has multiple arms, REDCap generates a separate public survey link for each arm where the first instrument in the first event of that arm is enabled as a survey. In the Survey Distribution Tools section, a dropdown appears prompting you to select an arm before the corresponding public link is displayed. This arm-specific routing ensures newly created records are placed in the correct arm.
 
-## 3.3 Individual Survey Links
+### 3.3 Individual Survey Links
 
 Every instrument enabled as a survey in a specific record gets its own individual survey link. In longitudinal projects, links are also specific to each event — the link for an instrument in Event 1 is different from the link for the same instrument in Event 2, even within the same record.
 
@@ -88,11 +88,11 @@ If a survey has the **Save and Return Later** feature enabled, participants can 
 
 ---
 
-# 4. Finding a Specific Survey Link
+## 4. Finding a Specific Survey Link
 
 REDCap provides three methods for locating an individual survey link for a specific record.
 
-## 4.1 Survey Options Menu (Inside the Instrument)
+### 4.1 Survey Options Menu (Inside the Instrument)
 
 When you open an instrument for a specific record, a **Survey Options** dropdown is visible at the top of the data entry page (provided the instrument is enabled as a survey and you have sufficient user rights). It contains four options:
 
@@ -103,11 +103,11 @@ When you open an instrument for a specific record, a **Survey Options** dropdown
 | Compose Survey Invitation | Opens the invitation composer for that specific survey in that record. Useful for sending a one-off email invitation. |
 | Survey Access Code + QR Code | Displays the short access code and the QR code for that specific survey link. |
 
-## 4.2 Survey Smart Variables
+### 4.2 Survey Smart Variables
 
 Smart variables can be used anywhere REDCap processes piped content — survey invitation emails, Alerts & Notifications, instrument fields (with some restrictions). There are two survey smart variables: `[survey-url]` and `[survey-link]`.
 
-### `[survey-url]` — Returns the full URL as plain text
+#### `[survey-url]` — Returns the full URL as plain text
 
 | Syntax | When to Use |
 |---|---|
@@ -115,7 +115,7 @@ Smart variables can be used anywhere REDCap processes piped content — survey i
 | `[survey-url:instrument]` | Works anywhere piping is supported. Requires the instrument's unique name. Example: `[survey-url:baseline_vitals]` |
 | `[event][survey-url:instrument]` | Use in longitudinal projects to also specify the event. Example: `[event_1_arm_1][survey-url:baseline_vitals]` |
 
-### `[survey-link]` — Returns a clickable hyperlink
+#### `[survey-link]` — Returns a clickable hyperlink
 
 | Syntax | When to Use |
 |---|---|
@@ -127,7 +127,7 @@ Smart variables can be used anywhere REDCap processes piped content — survey i
 
 > **Tip — Longitudinal projects:** Always include the event qualifier when using an instrument-specific smart variable in a longitudinal project. Without it, REDCap may not resolve the link correctly if the instrument appears in multiple events.
 
-## 4.3 Participant List
+### 4.3 Participant List
 
 The participant list in Survey Distribution Tools displays individual survey links for records that meet either of these conditions:
 
@@ -147,7 +147,7 @@ By default, the participant list runs in anonymous mode, which makes it difficul
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the difference between a public survey link and an individual survey link?**
 
@@ -179,7 +179,7 @@ By default, the participant list runs in anonymous mode, which makes it difficul
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Distributing an individual survey link as if it were a public link.** An individual survey link can only be completed once. If the wrong link is shared broadly, participants will see the "already completed" error after the first submission. Always verify you are sharing the public link (found in Survey Distribution Tools) when open-enrollment behavior is intended.
 
@@ -193,7 +193,7 @@ By default, the participant list runs in anonymous mode, which makes it difficul
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -202,7 +202,7 @@ By default, the participant list runs in anonymous mode, which makes it difficul
 ---
 
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md) (enabling surveys, Survey Distribution Tools, public link walkthrough)
 - [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md)

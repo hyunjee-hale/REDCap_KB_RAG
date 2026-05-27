@@ -16,7 +16,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import Instrument-Event Mappings API method allows you to create or modify the mapping of instruments (forms) to events in a longitudinal REDCap project. This controls which instruments are presented to users at each event and repeating instance. This method enables automated configuration of longitudinal project workflows, cloning of project structures, and bulk modification of instrument-event assignments.
 
@@ -24,7 +24,7 @@ When to use this method: When you need to programmatically assign instruments to
 
 ---
 
-# 2. Important Notes
+## 2. Important Notes
 
 - **Longitudinal Only:** This method only works with longitudinal projects. Using it on a classic project returns an error.
 - **Development Status Only:** This method is only available for projects in Development status. It cannot be used on projects in Production or Analysis status.
@@ -35,7 +35,7 @@ When to use this method: When you need to programmatically assign instruments to
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -47,7 +47,7 @@ When to use this method: When you need to programmatically assign instruments to
 
 ---
 
-# 4. Data Structure
+## 4. Data Structure
 
 The `data` parameter is a flat list of instrument-event mappings — one row per instrument per event. Each mapping has three fields: `arm_num`, `unique_event_name`, and `form`. The officially documented format is flat (not nested).
 
@@ -99,9 +99,9 @@ arm_num,unique_event_name,form
 
 ---
 
-# 5. Request Examples
+## 5. Request Examples
 
-## 5.1 Python
+### 5.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -139,7 +139,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 5.2 R
+### 5.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -176,7 +176,7 @@ result <- postForm(
 print(result)
 ```
 
-## 5.3 cURL
+### 5.3 cURL
 
 ```sh
 #!/bin/sh
@@ -192,7 +192,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 5.4 PHP
+### 5.4 PHP
 
 ```php
 <?php
@@ -242,13 +242,13 @@ print $output;
 
 ---
 
-# 6. Response
+## 6. Response
 
 On success, the method returns the number of instrument-event mappings imported as a plain integer (e.g., `4`). On failure, an error message is returned in the format specified by `returnFormat` (or `format`, or `xml` by default).
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: What happens to existing mappings when I import new ones?**
 
@@ -276,7 +276,7 @@ On success, the method returns the number of instrument-event mappings imported 
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Calling this method on a project in Production or Analysis status.** This method only works on projects in Development status. If your project is in Production, you cannot use this endpoint — you need to move to Development first (or use the REDCap interface to make mapping changes via a revision/move-to-dev workflow).
 
@@ -296,7 +296,7 @@ On success, the method returns the number of instrument-event mappings imported 
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-10 — Export Instrument-Event Mappings API](RC-API-10_Export-Instrument-Event-Mappings.md)(read current mappings)

@@ -16,7 +16,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Instrument-Event Mappings API method retrieves the mapping of instruments (forms) to events in a longitudinal REDCap project. This mapping defines which instruments are presented to users at each event and repeating instance. This method shows the complete structure of when and where instruments appear in a longitudinal workflow.
 
@@ -24,7 +24,7 @@ When to use this method: When you need to understand the instrument-event struct
 
 ---
 
-# 2. Important Notes
+## 2. Important Notes
 
 - **Longitudinal Only:** This method only works with longitudinal projects. If you use it on a classic (non-longitudinal) project, it returns an error or empty result.
 - **Requires API Export Right:** You must have API Export permission on the project.
@@ -32,7 +32,7 @@ When to use this method: When you need to understand the instrument-event struct
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -44,9 +44,9 @@ When to use this method: When you need to understand the instrument-event struct
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -65,7 +65,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -82,7 +82,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 
 ```sh
 #!/bin/sh
@@ -98,7 +98,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 
 ```php
 <?php
@@ -133,7 +133,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The method returns the mapping of instruments to events, organized by arm and event. The response shows which instruments are assigned to each event in the project.
 
@@ -167,7 +167,7 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What do the columns mean in the response?**
 
@@ -195,7 +195,7 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Not specifying `format` and getting XML back unexpectedly.** The default format for this method is `xml`, not `json`. If you omit the `format` parameter, you will receive an XML response. Always pass `format=json` (or `format=csv`) explicitly if you want non-XML output.
 
@@ -211,7 +211,7 @@ The method returns the mapping of instruments to events, organized by arm and ev
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-09 — Export Instruments API](RC-API-09_Export-Instruments.md)(list available instruments)

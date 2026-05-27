@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The **Additional Customizations** section of the Project Setup page contains a collection of project-level settings that control how records are displayed, how data quality annotation works, how PDFs are formatted, how missing data is handled, and how various data entry behaviors are enforced. These settings are independent of one another and can be configured in any order. Most take effect immediately upon saving; none require Draft Mode.
 
@@ -22,7 +22,7 @@ This article covers all settings available in that section. For settings related
 
 ---
 
-# 2. Custom Record Label
+## 2. Custom Record Label
 
 By default, records are identified in REDCap drop-down lists and instrument headers only by their record ID (e.g., "1", "2", "102"). The **Custom Record Label** setting lets you append additional text — including live field values — to that identifier everywhere a record name is displayed.
 
@@ -45,7 +45,7 @@ By default, records are identified in REDCap drop-down lists and instrument head
 
 ---
 
-# 3. Secondary Unique Field
+## 3. Secondary Unique Field
 
 REDCap's record ID is always unique, but a project may need a second field — such as a participant ID, MRN, or email address — to also be unique across all records. The **Secondary Unique Field** setting designates any existing text field in the project as a unique constraint.
 
@@ -67,7 +67,7 @@ REDCap's record ID is always unique, but a project may need a second field — s
 
 ---
 
-# 4. Order Records by Another Field
+## 4. Order Records by Another Field
 
 By default, REDCap sorts records in drop-down lists by their record ID in ascending order. The **Order records by another field** setting allows the project to sort drop-down lists by the values of a different field instead — for example, sorting by last name or by visit date.
 
@@ -80,7 +80,7 @@ Select the desired field from the drop-down menu. REDCap will use that field's v
 
 ---
 
-# 5. Field Comment Log and Data Resolution Workflow
+## 5. Field Comment Log and Data Resolution Workflow
 
 REDCap provides two mutually exclusive annotation modes for tracking data questions and issues at the field level. This setting controls which mode is active for the project.
 
@@ -101,7 +101,7 @@ REDCap provides two mutually exclusive annotation modes for tracking data questi
 
 ---
 
-# 6. PDF Customizations
+## 6. PDF Customizations
 
 PDFs generated from REDCap data entry forms and surveys can be customized using four project-level options. All options apply to every instrument in the project; per-instrument overrides are not supported.
 
@@ -134,11 +134,11 @@ By default, the record ID appears in the header of every PDF page. This option r
 
 ---
 
-# 7. Missing Data Codes
+## 7. Missing Data Codes
 
 REDCap's **Missing Data Codes** feature allows users to mark a blank field with a coded reason explaining why no value was entered — for example, "Not asked," "Unknown," or "Not applicable." This provides richer information than a simple blank and supports analysis workflows that need to distinguish between different types of missingness.
 
-## 7.1 Setup
+### 7.1 Setup
 
 To enable the feature, enter one or more codes and their labels in the configuration box. Each code follows the same format as a multiple-choice field choice: `code, label`. Codes may contain only letters, numbers, dots, dashes, and underscores.
 
@@ -148,23 +148,23 @@ REDCap provides an optional list of standardized codes (drawn from international
 
 If no codes are entered, the feature remains disabled and no M icon will appear on forms.
 
-## 7.2 Data Entry Usage
+### 7.2 Data Entry Usage
 
 Once codes are configured, an **M** icon appears next to every field on data entry forms. Clicking the icon opens a picker showing all defined codes. Selecting a code saves it as the literal data value for the field — the same way a text value would be saved.
 
 Missing data codes can be applied to any field type, including dates, sliders, and file upload fields.
 
-## 7.3 Choosing Safe Codes
+### 7.3 Choosing Safe Codes
 
 Because a missing code is stored as a literal field value, it must never overlap with a real, expected value in any field in the project.
 
 **Example:** If a project has an integer field where `-999` could legitimately represent a measurement, using `-999` as a missing data code would make it impossible to distinguish the real value from the missingness indicator. Choose codes that cannot plausibly appear as real data.
 
-## 7.4 Behavior with Branching Logic
+### 7.4 Behavior with Branching Logic
 
 If a field hidden by branching logic has a missing data code saved for it, REDCap will hide the field but will not delete the missing data code. The field can remain "blank" with a missing code while being invisible on the form.
 
-## 7.5 Using Missing Codes in Logic
+### 7.5 Using Missing Codes in Logic
 
 Because codes are stored as literal field values, they can be referenced directly in branching logic, report filters, Data Quality rules, Survey Queue conditions, and Automated Survey Invitation logic.
 
@@ -182,17 +182,17 @@ isblankormissingcode([age])
 
 This returns TRUE if `age` is empty or if it contains any configured missing data code (such as `UNK`). It returns FALSE if the field contains any non-blank value that is not a missing data code.
 
-## 7.6 Disabling per Field: @NOMISSING
+### 7.6 Disabling per Field: @NOMISSING
 
 The missing data code feature is enabled for all fields by default. To disable it on a specific field — hiding the M icon for that field and preventing missing code entry — add the `@NOMISSING` action tag to that field's action tags column. See [RC-AT-01 — Action Tags: Overview](RC-AT-01_Action-Tags-Overview.md).
 
-## 7.7 Export Considerations
+### 7.7 Export Considerations
 
 Missing data codes are exported as literal string values in the data export. When importing data into statistical packages (SAS, SPSS, Stata, R), the syntax file may need to be manually adjusted before loading, because the package may not recognize a string like "UNK" or "NA" as a valid value for a numeric or date field. Consider this when designing your analysis workflow. If needed, you can export data without missing codes by unchecking the corresponding option on the data export page.
 
 ---
 
-# 8. Data History Popup
+## 8. Data History Popup
 
 When enabled, a clock icon appears next to every field on every data collection instrument. Clicking the icon displays a chronological history of all values that field has held for that record — including the previous value, who made each change, and the timestamp of each change.
 
@@ -202,7 +202,7 @@ The Data History popup must be enabled for the File Version History feature (Sec
 
 ---
 
-# 9. File Version History
+## 9. File Version History
 
 The **File Version History** feature applies to File Upload fields. When enabled, uploading a new file to a File Upload field does not replace the existing file — instead, the new file is saved as the latest version while all prior versions are preserved. Previous versions remain accessible via the Data History popup for that field.
 
@@ -214,7 +214,7 @@ This eliminates the need to delete an old file before uploading a replacement an
 
 ---
 
-# 10. Today/Now Button for Date and Time Fields
+## 10. Today/Now Button for Date and Time Fields
 
 When enabled, a **Today** button appears to the right of all date fields, and a **Now** button appears to the right of all time, datetime, and datetime_seconds fields on both forms and surveys. Clicking the button automatically populates the field with the current date or time.
 
@@ -222,7 +222,7 @@ This setting applies project-wide. There is no per-field toggle for this button 
 
 ---
 
-# 11. Prevent Branching Logic from Hiding Fields That Have Values
+## 11. Prevent Branching Logic from Hiding Fields That Have Values
 
 By default, when a field is hidden by branching logic on a data entry form, REDCap prompts the user with "Erase the value of the field?" before hiding it. On survey pages, the field is hidden and its value erased automatically without a prompt.
 
@@ -238,7 +238,7 @@ When this setting is **enabled**, the behavior changes: any field that currently
 
 ---
 
-# 12. Require a Reason When Making Changes to Existing Records
+## 12. Require a Reason When Making Changes to Existing Records
 
 When enabled, REDCap prompts the user to enter a reason (up to 200 characters) in a text box whenever they click Save on an instrument that already has data saved for one or more fields.
 
@@ -253,7 +253,7 @@ The reason text is stored in the project's Logging and can be reviewed on the Lo
 
 ---
 
-# 13. Protected Email Mode
+## 13. Protected Email Mode
 
 **Protected Email Mode** prevents sensitive identifying data (PHI/PII) from being sent in plain text within outgoing emails generated by REDCap — specifically, alerts, survey invitations, and survey confirmation emails.
 
@@ -261,13 +261,13 @@ When triggered, REDCap does not send the full email content to the recipient. In
 
 **Important limitation:** Protected Email Mode does not apply to alerts that use SendGrid template emails, because those emails cannot be fully rendered within the REDCap web application.
 
-## 13.1 Scope Setting
+### 13.1 Scope Setting
 
 **All alerts, survey invitations, and survey confirmation emails** — Every outgoing email generated by the project is routed through Protected Email Mode, regardless of whether it contains piped data.
 
 **Only those with data piped from Identifier fields** — Only emails whose body pipes data from fields that are marked as Identifier fields in the project are affected. Emails that do not pipe identifier data are sent normally.
 
-## 13.2 Custom Branding
+### 13.2 Custom Branding
 
 Two optional customizations control the appearance of the secure viewing page and surrogate email header presented to recipients:
 
@@ -279,7 +279,7 @@ These branding options are useful for maintaining a consistent organizational id
 
 ---
 
-# 14. Data Entry Trigger
+## 14. Data Entry Trigger
 
 The **Data Entry Trigger (DET)** field allows a project to notify an external system every time a record is saved in REDCap. Enter a URL in this field and REDCap will send an HTTP POST request to that URL each time data is submitted via a data entry form or survey page — in real time.
 
@@ -292,7 +292,7 @@ The DET is an advanced integration feature intended for technical users or devel
 
 ---
 
-# 15. Common Questions
+## 15. Common Questions
 
 **Q: Can I use a calculated field as the Custom Record Label?**
 
@@ -336,7 +336,7 @@ The DET is an advanced integration feature intended for technical users or devel
 
 ---
 
-# 16. Related Articles
+## 16. Related Articles
 
 - [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) (project statuses, moving to Production, Draft Mode)
 - [RC-PROJ-02 — Project Setup Checklist](RC-PROJ-02_Project-Setup-Checklist.md) (dependency-ordered walkthrough of full project configuration)

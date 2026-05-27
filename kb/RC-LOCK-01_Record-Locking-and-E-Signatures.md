@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap's record locking feature — what it does, how to configure it per instrument, how to lock and unlock records, how the optional e-signature layer works, and how to use the Locking Management page to monitor lock and e-signature status across all records.
 
@@ -24,7 +24,7 @@ Locking is configured and managed through a dedicated application in the left-ha
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Record Locking**
 
@@ -56,9 +56,9 @@ A user right that controls who can see and use the Lock option on instruments, a
 
 ---
 
-# 3. User Rights for Locking
+## 3. User Rights for Locking
 
-### 3.1 The Lock/Unlock Privilege
+#### 3.1 The Lock/Unlock Privilege
 
 The Lock/Unlock Records privilege is controlled through standard user rights or user roles. Users without this privilege cannot see the Lock option at the bottom of any instrument, cannot access the Customize & Manage Locking/E-signatures application, and cannot lock or unlock any form.
 
@@ -71,24 +71,24 @@ There are two tiers of Lock/Unlock access:
 
 Assign lock/unlock rights through **User Rights** or via a **User Role**. See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) for how to set these.
 
-### 3.2 Who Can See Locked Forms
+#### 3.2 Who Can See Locked Forms
 
 Once a form is locked, the lock indicator (timestamp and locking user's name) is visible to **all users**, regardless of their Lock/Unlock privileges. The fields themselves are read-only for all users. However, only users with Lock/Unlock privileges can see the unlock control and actually remove the lock.
 
 ---
 
-# 4. Record Locking Customization
+## 4. Record Locking Customization
 
 The **Record Locking Customization** tab controls which instruments show the Lock option and whether the E-signature option appears. These settings are optional — if you make no changes, locking is available on all instruments by default.
 
-### 4.1 Accessing the Customization Page
+#### 4.1 Accessing the Customization Page
 
 1. From the left-hand project menu, navigate to **Customize & Manage Locking/E-signatures** (under Applications).
 2. Click the **Record Locking Customization** tab.
 
 Only users with Lock/Unlock privileges can access this page.
 
-### 4.2 Per-Instrument Settings
+#### 4.2 Per-Instrument Settings
 
 The customization table has one row per instrument with the following columns:
 
@@ -104,15 +104,15 @@ Changes are saved per row. If no custom text is entered, the following default p
 
 > *Lock this record for this form? If locked, no user will be able to edit this record on this form until someone with Lock/Unlock privileges unlocks it.*
 
-### 4.3 Custom Lock Text
+#### 4.3 Custom Lock Text
 
 Custom text replaces the default lock prompt for a specific instrument. Use this to provide study-specific instructions, regulatory language, or a more descriptive prompt for your team. Custom text can be edited or removed at any time without affecting the lock state of any existing records.
 
 ---
 
-# 5. Locking and Unlocking Records
+## 5. Locking and Unlocking Records
 
-### 5.1 Locking an Instrument
+#### 5.1 Locking an Instrument
 
 Users with Lock/Unlock privileges lock a form directly from the data entry view:
 
@@ -122,7 +122,7 @@ Users with Lock/Unlock privileges lock a form directly from the data entry view:
 
 Once locked, the form immediately becomes read-only. All users, including those without Lock/Unlock rights, will see a banner or indicator showing the lock timestamp and the name of the user who locked it.
 
-### 5.2 Unlocking an Instrument
+#### 5.2 Unlocking an Instrument
 
 Only users with Lock/Unlock privileges can unlock a form.
 
@@ -132,23 +132,23 @@ Only users with Lock/Unlock privileges can unlock a form.
 
 After unlocking, all fields return to their normal editable state. The lock/unlock event is recorded in the project audit trail.
 
-### 5.3 Record-Level Locking (All Instruments at Once)
+#### 5.3 Record-Level Locking (All Instruments at Once)
 
 Users with the additional record-level locking privilege can lock or unlock all instruments in a record simultaneously. This action is available from the Record Home Page or from within an instrument. Record-level locks appear in the Locking Management table and are noted distinctly from instrument-level locks.
 
 ---
 
-# 6. E-Signature Workflow
+## 6. E-Signature Workflow
 
 When the E-signature option is enabled for an instrument (via the Customization page), an e-signature control appears at the bottom of the instrument alongside the lock option.
 
-### 6.1 Signing a Form
+#### 6.1 Signing a Form
 
 1. Open the instrument for the target record.
 2. Scroll to the bottom. The e-signature control appears below the lock option (visible to users with Lock/Unlock privileges).
 3. Activate the e-signature. REDCap records the signing user's name and the timestamp.
 
-### 6.2 E-Signature and Lock Interaction
+#### 6.2 E-Signature and Lock Interaction
 
 E-signature and locking are independent controls, but they are typically used together. A common workflow is:
 
@@ -158,11 +158,11 @@ E-signature and locking are independent controls, but they are typically used to
 
 An instrument can be locked without being e-signed, or e-signed without being locked — the combination depends on your study's workflow requirements.
 
-### 6.3 E-Signature Display
+#### 6.3 E-Signature Display
 
 Once a form has been e-signed, the signing user's name and timestamp are displayed on the form for all users.
 
-### 6.4 E-Signature and Authentication Compatibility
+#### 6.4 E-Signature and Authentication Compatibility
 
 REDCap's e-signature feature requires users to re-enter their REDCap credentials (username and password, or a 2FA PIN depending on your instance configuration) to confirm their identity at the moment of signing. This mechanism relies on locally managed REDCap credentials.
 
@@ -172,16 +172,16 @@ If your study requires electronic attestation and your institution uses federate
 
 ---
 
-# 7. E-Signature and Locking Management Page
+## 7. E-Signature and Locking Management Page
 
 The **E-signature and Locking Management** tab provides a project-wide view of lock and e-signature status across all records and instruments.
 
-### 7.1 Accessing the Page
+#### 7.1 Accessing the Page
 
 1. Navigate to **Customize & Manage Locking/E-signatures** from the left-hand project menu.
 2. Click the **E-signature and Locking Management** tab.
 
-### 7.2 The Status Table
+#### 7.2 The Status Table
 
 The table displays one row per record-instrument combination (or per record-event-instrument combination in longitudinal projects). For repeating instruments, a Repeat Instance column is shown. Columns:
 
@@ -196,7 +196,7 @@ The table displays one row per record-instrument combination (or per record-even
 
 Instruments on which the Lock option has been disabled (via the Customization page) do not appear in this table.
 
-### 7.3 Filtering the Table
+#### 7.3 Filtering the Table
 
 Use the **Actions** links above the table to filter rows:
 
@@ -213,14 +213,14 @@ Use the **Actions** links above the table to filter rows:
 | Show neither locked nor e-signed (excludes N/A) | Shows rows that are neither locked nor e-signed, excluding instruments with no e-signature option |
 | Show locked but not e-signed (excludes N/A) | Shows rows that are locked but have not been e-signed |
 
-### 7.4 Exporting and Viewing Records
+#### 7.4 Exporting and Viewing Records
 
 - **Export all (CSV):** Downloads the full status table as a CSV file.
 - **View record:** Opens the specific record-instrument (or record-event-instrument) combination in a new window, allowing direct review without navigating away from the management table.
 
 ---
 
-# 8. Locking in Longitudinal Projects
+## 8. Locking in Longitudinal Projects
 
 In longitudinal projects, locking operates at the instrument-within-event level. Each instance of an instrument in each event can be locked or unlocked independently. The Locking Management table includes an Event Name column to distinguish between the same instrument appearing across multiple events.
 
@@ -228,7 +228,7 @@ For repeating instruments and repeating events, each instance has its own lock s
 
 ---
 
-# 9. Audit Trail Behavior
+## 9. Audit Trail Behavior
 
 Every lock, unlock, and e-signature action is recorded automatically in the project audit trail (Logging). The log entry includes:
 
@@ -241,7 +241,7 @@ See [RC-LOG-01 — Logging — Project Audit Trail](RC-LOG-01_Logging-Project-Au
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: Can a user without Lock/Unlock rights see that a form is locked?**
 Yes. Once a form is locked, the lock indicator (timestamp and locking user) is visible to all users. The fields are also read-only for everyone. Only the lock/unlock controls are hidden from users without the Lock/Unlock privilege.
@@ -263,7 +263,7 @@ Yes. Locking is available in classic (single-event) and longitudinal projects al
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Locking before data entry is complete.** A locked form is entirely read-only until unlocked. If you lock a form prematurely and then discover missing data, you must unlock it, make the correction, and re-lock it. Each lock/unlock cycle is logged.
 
@@ -279,7 +279,7 @@ Yes. Locking is available in classic (single-event) and longitudinal projects al
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md)

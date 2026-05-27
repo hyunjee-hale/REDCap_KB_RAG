@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Public Report smart variables provide access codes for reports that have been made public by a project administrator. These variables are useful for sharing report access codes with project stakeholders or embedding them in communications. A public report allows external users (without a REDCap account) to view a filtered data export via a secure URL. If an access code has been defined for the report, the smart variable returns that code for sharing.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Public Report**
 
@@ -40,7 +40,7 @@ The direct web address (URL) to access a public report. The URL is unique to eac
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -48,7 +48,7 @@ The direct web address (URL) to access a public report. The URL is unique to eac
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Finding the Unique Report Name**
 
@@ -85,7 +85,7 @@ The `[aggregate-*]` smart variables ([RC-PIPE-11 — Smart Variables: Aggregate 
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I find the unique report name to use in a smart variable?**
 
@@ -113,7 +113,7 @@ The `[aggregate-*]` smart variables ([RC-PIPE-11 — Smart Variables: Aggregate 
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using the report display name instead of the unique report name.** The report display name (e.g., "Weekly Data Export") is human-readable but cannot be used in smart variables. You must use the unique identifier (R-XXXXXXXXXX) found on the My Reports & Exports page.
 
@@ -129,7 +129,7 @@ The `[aggregate-*]` smart variables ([RC-PIPE-11 — Smart Variables: Aggregate 
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) (using reports as filter parameters)

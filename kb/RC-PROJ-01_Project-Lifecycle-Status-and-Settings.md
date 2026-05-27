@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Every REDCap project passes through a defined lifecycle, from initial build through active data collection to final completion. Understanding which status your project is in — and what that status allows or restricts — is essential for managing your study correctly.
 
@@ -22,11 +22,11 @@ This article covers the four project statuses, how to move between them, how to 
 
 ---
 
-# 2. Project Statuses
+## 2. Project Statuses
 
 Every REDCap project exists in one of four lifecycle statuses.
 
-## 2.1 Development
+### 2.1 Development
 
 The starting state for all new projects. In Development:
 
@@ -42,7 +42,7 @@ Development is intended for building and testing your project before live data c
 - An administrator can also set or override the limit on a per-project basis.
 - **Projects that existed before this feature was introduced are grandfathered in** with no limit initially, even if a default is configured. An administrator can manually assign a limit to a legacy project if needed.
 
-## 2.2 Production
+### 2.2 Production
 
 The active data collection state. In Production:
 
@@ -54,7 +54,7 @@ The active data collection state. In Production:
 
 > **Why move to Production?** Moving to Production preserves data accuracy and integrity. The post-production change control process provides a safety check to prevent accidental deletion, recoding, or overwriting of data that has already been collected.
 
-## 2.3 Analysis/Cleanup
+### 2.3 Analysis/Cleanup
 
 Indicates that formal data collection is complete. In Analysis/Cleanup:
 
@@ -65,7 +65,7 @@ Indicates that formal data collection is complete. In Analysis/Cleanup:
 
 From Analysis/Cleanup, a project can return to Production or be moved to Completed.
 
-## 2.4 Completed
+### 2.4 Completed
 
 Indicates the project is fully done.
 
@@ -77,7 +77,7 @@ Indicates the project is fully done.
 
 ---
 
-# 3. Status Transitions
+## 3. Status Transitions
 
 | From | To | Who Can Do It |
 |---|---|---|
@@ -92,9 +92,9 @@ Moving a Production project back to Development requires a REDCap administrator.
 
 ---
 
-# 4. Copying and Backing Up a Project
+## 4. Copying and Backing Up a Project
 
-## 4.1 Copying a Project
+### 4.1 Copying a Project
 
 Users with the right to create projects can navigate to **Project Setup → Other Functionality** to request a copy.
 
@@ -110,7 +110,7 @@ REDCap only shows options that are active in the source project.
 
 > **Important:** Project logging is **never** copied. This includes record creation timestamps, survey timestamps, and project management history. The copy starts with a clean log.
 
-## 4.2 Downloading a Backup (XML / CDISC ODM)
+### 4.2 Downloading a Backup (XML / CDISC ODM)
 
 REDCap can export the entire project — or just its structure — as an XML file in **CDISC ODM format**. Two options are available from **Other Functionality**:
 
@@ -125,9 +125,9 @@ The resulting XML file can be used to:
 
 ---
 
-# 5. Data Management
+## 5. Data Management
 
-## 5.1 Deleting a Project
+### 5.1 Deleting a Project
 
 **Development projects** can be deleted by project users via **Other Functionality → Delete the project**.
 
@@ -138,7 +138,7 @@ After an administrator deletes a project:
 - The project persists in the database for a configurable grace period (default: **30 days**) before permanent removal. During this window, a REDCap administrator can recover the project. The grace period duration is set by the administrator in the Control Center and may differ at your institution — check with your local support team if you need to know the exact window.
 - Associated files take an additional 30 days beyond the grace period to be fully removed.
 
-## 5.2 Erasing All Data
+### 5.2 Erasing All Data
 
 **Other Functionality → Erase all data** removes all currently collected data while keeping the project structure (instruments, fields, settings) intact. This is distinct from deleting the project entirely.
 
@@ -157,7 +157,7 @@ After an administrator deletes a project:
 
 > **Caution:** This action is irreversible. REDCap will ask you to confirm before proceeding. Use this only when you are certain all data in the project should be discarded — for example, when cleaning up after a test phase before real data collection begins.
 
-## 5.3 Bulk Record Delete
+### 5.3 Bulk Record Delete
 
 **Other Functionality → Bulk Record Delete** allows you to delete multiple records in a single operation, or to delete data for multiple instruments across multiple records without removing the records themselves.
 
@@ -165,7 +165,7 @@ This is useful when you need to selectively clear data — for example, deleting
 
 The Bulk Record Delete page presents filter options to select which records (and optionally which instruments) to target before deletion.
 
-## 5.4 Clearing Record and Page Caches
+### 5.4 Clearing Record and Page Caches
 
 **(Administrators only)** If records appear to be missing from the project, or if some pages (reports, Record Status Dashboard, etc.) are not reflecting recent data changes, the internal caches may be out of sync. Use **Other Functionality → Clear all record & page caches** to resolve this.
 
@@ -178,11 +178,11 @@ Clearing both caches causes the Record List Cache to regenerate and removes all 
 
 ---
 
-# 6. Making Production Changes
+## 6. Making Production Changes
 
 Once your project is in Production, all instrument design changes must go through **Draft Mode**.
 
-## 6.1 Process Overview
+### 6.1 Process Overview
 
 1. Click **"Enter Draft Mode"** on the Online Designer or Data Dictionary page.
 2. Make your changes within Draft Mode.
@@ -193,7 +193,7 @@ Depending on your institution's configuration, some changes are processed automa
 
 > **The project does not go offline during review.** All functionality — including survey collection and data entry — continues normally while changes await approval.
 
-## 6.2 Change Risk Flags
+### 6.2 Change Risk Flags
 
 During draft review, REDCap flags potentially harmful changes:
 
@@ -205,7 +205,7 @@ During draft review, REDCap flags potentially harmful changes:
 
 Review these flags carefully before submitting. Changes flagged as **Data WILL be lost** cannot be undone.
 
-## 6.3 Rules for Safe Production Changes
+### 6.3 Rules for Safe Production Changes
 
 Follow these rules to protect your data when modifying a production project:
 
@@ -223,14 +223,14 @@ Follow these rules to protect your data when modifying a production project:
 
 **Deleting a checkbox choice** permanently deletes the stored 0/1 values for that option. REDCap flags this as **Data WILL be lost**.
 
-## 6.4 Events in Longitudinal Projects
+### 6.4 Events in Longitudinal Projects
 
 Deleting events in a longitudinal project requires administrator action. If events are deleted:
 
 - Data tied to those events is **not erased** — it becomes "orphaned" in the system.
 - Data for remaining events is not affected unless branching logic or calculations referenced the deleted events.
 
-## 6.5 Draft Preview Mode
+### 6.5 Draft Preview Mode
 
 Draft Preview Mode lets you test your drafted changes — including branching logic, calculations, action tags, and embedded fields — exactly as they would behave if approved and live, before you submit them for review.
 
@@ -255,7 +255,7 @@ Draft Preview Mode lets you test your drafted changes — including branching lo
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: How do I move my project from Development to Production?**
 
@@ -343,7 +343,7 @@ The safest workflow is: copy the project → erase all data in the copy → expo
 
 ---
 
-# 8. Administrator Configuration
+## 8. Administrator Configuration
 
 Several aspects of the project lifecycle are controlled by system-wide settings in the Control Center under System Configuration → User Settings & Defaults (see **[RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)**):
 
@@ -357,7 +357,7 @@ Several aspects of the project lifecycle are controlled by system-wide settings 
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (project creation rights, production approval, draft auto-approval)
 - [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md) (where draft approvals and project requests appear)

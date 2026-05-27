@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Aggregate functions, charts, and tables (collectively called "Smart Functions" and "Smart Charts" in REDCap) allow project administrators and power users to display summary statistics and visualizations on Project Dashboards. These smart variables calculate descriptive statistics (min, max, mean, median, sum, count, standard deviation, unique count) across all records and optionally create data visualizations (scatter plots, line charts, bar charts, pie charts, donut charts). They are primarily used by administrators building dashboard analytics rather than by regular data entry coordinators. Optional parameters allow filtering by report, DAG, event, or visualization options.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Project Dashboard**
 
@@ -48,9 +48,9 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
-### 3.1 Aggregate Functions
+#### 3.1 Aggregate Functions
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -68,7 +68,7 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 - `parameters` is optional and allows filtering by report, DAG, event, or other criteria (see [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md)).
 - Examples: `[aggregate-min:age]`, `[aggregate-min:age,participant_age,other_age]`, `[aggregate-max:weight:R-5898NNMYL4]`
 
-### 3.2 Charts
+#### 3.2 Charts
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -78,7 +78,7 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 | Pie Chart | `[pie-chart:field]` | A pie chart for a single multiple-choice field. Shows proportions of each response option. | [Chart displayed on page] |
 | Donut Chart | `[donut-chart:field]` | A donut chart (pie chart with center removed) for a single multiple-choice field. Visually similar to pie chart but with hollow center. | [Chart displayed on page] |
 
-### 3.3 Tables
+#### 3.3 Tables
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -91,7 +91,7 @@ An optional categorical field (multiple choice, dropdown, radio, or checkbox) us
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Scope of Aggregation**
 
@@ -126,7 +126,7 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What is the difference between an aggregate function and a chart?**
 
@@ -158,7 +158,7 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using incompatible field types in charts.** Bar charts require multiple-choice fields, not numeric or text fields. Scatter plots require numeric X-axis and Y-axis fields, not text. If you attempt to chart an incompatible field type, REDCap will display an error or render the chart incorrectly. Always verify field types before creating charts.
 
@@ -176,7 +176,7 @@ REDCap provides a 14-minute video demonstration of Smart Charts, Functions, and 
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-12 — Smart Variables: Optional Parameters for Aggregate Functions](RC-PIPE-12_Smart-Variables-Optional-Parameters-for-Aggregate-Functions.md) (filtering and visualization options)

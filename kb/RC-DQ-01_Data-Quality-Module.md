@@ -14,41 +14,41 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Data Quality module is a project-level tool that lets authorized users check their data for discrepancies. It provides a set of built-in default rules covering common data problems (blank required fields, out-of-range values, hidden fields retaining data, calculated field mismatches) and allows users to write their own custom rules using the same logic syntax as branching logic. Rules can be run on demand across all project records, or triggered automatically in real time whenever a data entry form is saved. Custom rules can be exported to CSV and imported from CSV, making it straightforward to migrate rule sets between projects or manage them in bulk. This article covers how to access and use the module, how the default rules work, how to write and configure custom rules, how to import and export rules, and how to interpret and manage results.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## Default Rules
+### Default Rules
 
 Pre-built rules provided by REDCap that check for the most common categories of data discrepancy. Default rules (displayed in red text in the module) cannot be modified, reordered, or deleted. They are optional — you choose whether to execute them.
 
-## Custom Rules
+### Custom Rules
 
 User-defined rules written using branching logic syntax that evaluate to true or false against each record. Any record for which the rule evaluates to true is returned as a discrepancy. Custom rules can be created, edited, reordered, deleted, exported, and imported.
 
-## Discrepancy
+### Discrepancy
 
 A record (or record-event-instance combination) that a rule has identified as meeting the rule's condition. A discrepancy is not an error in the technical sense — it means the rule's logic evaluated to true for that record. Whether that represents a real data problem depends on the rule.
 
-## Real-Time Execution
+### Real-Time Execution
 
 An optional setting on each custom rule that causes it to run automatically whenever a user saves a data entry form. If a violation is detected, REDCap displays a warning pop-up identifying the violated rules and the fields involved.
 
-## Exclusion
+### Exclusion
 
 A record-level flag that suppresses a specific discrepancy from appearing in future rule results. Excluded discrepancies are not deleted — they can be viewed and un-excluded at any time. Exclusion is appropriate when a discrepancy is known and expected (e.g., a legitimately missing required value due to eligibility).
 
-## Rule H
+### Rule H
 
 The built-in default rule that detects calculated fields whose stored database value differs from their currently computed value. This mismatch can occur after a calculated field's formula is changed or after a data import that affects fields the calculation depends on. Rule H includes an auto-correct function that rewrites all affected stored values project-wide.
 
 ---
 
-# 3. Accessing the Module & Executing Rules
+## 3. Accessing the Module & Executing Rules
 
 The Data Quality module is found under **Applications** in the left-hand project menu.
 
@@ -59,7 +59,7 @@ The module displays all available rules in a table — default rules at the top 
 
 After execution, REDCap shows a count of discrepancies found for each rule. Click **View** next to any rule to see the specific records (and event/instance details for longitudinal or repeating projects) that triggered it.
 
-### Bulk Execution Options (REDCap 16+)
+#### Bulk Execution Options (REDCap 16+)
 
 Starting in REDCap 16, three bulk execution options are available instead of a single "Execute All" button:
 
@@ -71,21 +71,21 @@ Starting in REDCap 16, three bulk execution options are available instead of a s
 
 "Run all rules except A & B" is useful for routine data checks where identifier and required-field coverage is handled separately (e.g., by a dedicated data manager review), saving time on large datasets.
 
-### Field Selector for Standard Rules (REDCap 16+)
+#### Field Selector for Standard Rules (REDCap 16+)
 
 Also introduced in REDCap 16, a field selector allows you to limit which fields the standard default rules are evaluated against. Instead of running a rule across every field in the project, you can select a specific field or a small set of fields. This is particularly useful for large projects where running a rule across all fields is slow — narrowing the scope to only the fields of interest significantly reduces completion time.
 
-### User Rights
+#### User Rights
 
 Users must have the **Data Quality** user right to access the module. Users without view or edit access to specific instruments will not see data from those instruments in discrepancy results, even if those fields are involved.
 
-### Data Access Groups
+#### Data Access Groups
 
 If the project uses Data Access Groups (DAGs), discrepancy results are automatically filtered by group. Users assigned to a DAG see only discrepancies belonging to their own group. Users not assigned to a DAG (typically administrators) see discrepancies stratified by group.
 
 ---
 
-# 4. Default Rules (A–H)
+## 4. Default Rules (A–H)
 
 REDCap includes eight pre-defined default rules. They appear in red text and cannot be modified, reordered, or removed. Each covers a distinct category of data problem:
 
@@ -104,11 +104,11 @@ REDCap includes eight pre-defined default rules. They appear in red text and can
 
 ---
 
-# 5. Custom Rules
+## 5. Custom Rules
 
 Custom rules extend the module beyond the defaults. They are written using the same syntax as branching logic and must evaluate to a boolean result (true or false). Any record for which the rule evaluates to true is flagged as a discrepancy.
 
-### Syntax
+#### Syntax
 
 Custom rule logic uses the same variable reference and operator conventions as branching logic:
 
@@ -124,23 +124,23 @@ Custom rule logic uses the same variable reference and operator conventions as b
 [age] > 65 and [geriatric_screen] = ""
 ```
 
-### Constraint
+#### Constraint
 
 A custom rule must always evaluate to true or false — not to a numeric value. This is the key distinction from a calculated field, which must produce a number. The logic syntax is the same; the expected output type is different.
 
-### Managing Custom Rules
+#### Managing Custom Rules
 
 Custom rules can be created, edited, deleted, and reordered from the bottom of the Data Quality module table. Order affects how rules appear in results and in the pop-up displayed during real-time execution.
 
 ---
 
-# 6. Importing and Exporting Custom Rules
+## 6. Importing and Exporting Custom Rules
 
 REDCap can export all custom rules from a project to a CSV file, and can import custom rules from a CSV file in the same format. This is useful for migrating rules between projects, maintaining a versioned rule set outside REDCap, or creating rules in bulk.
 
 Default rules (A–H) are not included in the export — only custom rules are exported and importable.
 
-### CSV Format
+#### CSV Format
 
 The export and import file uses a three-column CSV with a header row:
 
@@ -159,7 +159,7 @@ rule_name,rule_logic,real_time_execution
 "Field not empty","[abs_rater_disc] <> """""",y
 ```
 
-### CSV Escaping for Empty-String Comparisons
+#### CSV Escaping for Empty-String Comparisons
 
 REDCap rule logic frequently uses `""` to represent an empty string (e.g., `[field] <> ""` to check whether a field has a value). Because the entire `rule_logic` cell is enclosed in double quotes in the CSV, every literal `"` inside the cell must be escaped by doubling it.
 
@@ -172,7 +172,7 @@ The pattern is: one pair of double quotes in REDCap logic (`""`) becomes two pai
 
 Most spreadsheet applications handle this automatically when you save as CSV. If constructing the file programmatically or in a plain text editor, apply this escaping manually.
 
-### Longitudinal Projects
+#### Longitudinal Projects
 
 In longitudinal projects, `rule_logic` uses the same event-prefixed field reference syntax as branching logic: `[event_name][field_name]`. For example, to flag records where the Screening form is not complete:
 
@@ -182,7 +182,7 @@ In longitudinal projects, `rule_logic` uses the same event-prefixed field refere
 
 Rules using event-prefixed references are portable only to projects that have matching event names. When migrating rules between projects, verify that all referenced event names exist in the destination project before importing.
 
-### Importing Rules
+#### Importing Rules
 
 To import, navigate to the Data Quality module and use the import option. REDCap will add the imported rules to the bottom of the existing custom rule list — it does not replace existing rules. Review imported rules after loading to confirm logic and real-time settings are correct before executing.
 
@@ -190,7 +190,7 @@ To import, navigate to the Data Quality module and use the import option. REDCap
 
 ---
 
-# 7. Real-Time Execution
+## 7. Real-Time Execution
 
 Each custom rule has a **Real-Time Execution** checkbox. When enabled:
 
@@ -204,7 +204,7 @@ The user can acknowledge the warning and proceed — real-time execution is advi
 
 ---
 
-# 8. Excluding Discrepancies
+## 8. Excluding Discrepancies
 
 Any individual discrepancy in the results list can be excluded. Excluding a discrepancy:
 
@@ -218,7 +218,7 @@ Exclusion is appropriate when a discrepancy reflects a known and accepted condit
 
 ---
 
-# 9. Rule H: Correcting Calculated Fields
+## 9. Rule H: Correcting Calculated Fields
 
 Rule H deserves separate attention because it serves a specific remediation function — not just detection.
 
@@ -240,7 +240,7 @@ Rule H deserves separate attention because it serves a specific remediation func
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: Do I need special user rights to access Data Quality?**
 **A:** Yes. A user must have the Data Quality user right assigned in their project role. Users without this right will not see the module in the Applications menu.
@@ -280,7 +280,7 @@ Rule H deserves separate attention because it serves a specific remediation func
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Writing a rule that returns a value instead of true/false.** A custom rule must evaluate to a boolean. Writing `[bmi]` as a rule (which returns a number) will not work as expected. The rule must be a comparison: `[bmi] > 30`. If the rule produces no discrepancies or behaves unexpectedly, check that the logic resolves to true or false, not a numeric or text value.
 
@@ -298,7 +298,7 @@ Rule H deserves separate attention because it serves a specific remediation func
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) (custom rules use identical syntax)
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (syntax reference for writing rules)

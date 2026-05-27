@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Logging API retrieves audit trail entries from your project's activity log. Every action in REDCap—data exports, imports, record edits, user logins, and system changes—is logged. This API allows you to programmatically query these logs for compliance audits, user activity tracking, data lineage analysis, and security investigations.
 
@@ -25,26 +25,26 @@ Logging is essential for HIPAA compliance, data governance, and understanding wh
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Audit Trail
+#### Audit Trail
 A chronological record of all actions taken in a REDCap project, including data exports, imports, record edits, deletions, and system changes. Used for compliance tracking and security investigations.
 
-### Log Type
+#### Log Type
 A category of logged events such as 'export', 'manage', 'record_edit', 'record_delete', 'user', 'page_view', etc. Filtering by log type reduces result sets and improves query performance.
 
-### Timestamp
+#### Timestamp
 The date and time when an action was logged, stored in the REDCap server's local timezone. Format: `YYYY-MM-DD HH:MM:SS` in responses; filter format: `YYYY-MM-DD HH:MM`.
 
-### Logging Privilege
+#### Logging Privilege
 A user-level permission that grants access to view audit trail entries via API or the web interface. Must be combined with API Export privilege to use this method.
 
-### Filter Logic
+#### Filter Logic
 Optional parameters (username, record, DAG, date range) that restrict which log entries are returned. Filtering improves performance on large projects with extensive logging history.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -61,9 +61,9 @@ Optional parameters (username, record, DAG, date range) that restrict which log 
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 #!/usr/bin/env python
 
@@ -86,7 +86,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -107,7 +107,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -122,7 +122,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -160,7 +160,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API returns an array of log entries with action details:
 
@@ -191,7 +191,7 @@ The API returns an array of log entries with action details:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What is the time format for beginTime and endTime?**
 **A:** Use `YYYY-MM-DD HH:MM` format (e.g., `2020-10-06 17:37`). All timestamps are in the REDCap server's local time. Omit `endTime` to include all entries up to the current server time.
@@ -210,7 +210,7 @@ The API returns an array of log entries with action details:
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Timestamp format errors:** The correct format for `beginTime` and `endTime` is `YYYY-MM-DD HH:MM` (e.g., `2020-10-06 17:37`). Using other formats such as `M/D/YYYY HH:MM` will cause the filter to fail silently and return unfiltered results.
 
@@ -220,7 +220,7 @@ The API returns an array of log entries with action details:
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (the audit trail that this method exports programmatically)

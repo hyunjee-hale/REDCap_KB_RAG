@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The To-Do List is the REDCap administrator's task queue for pending action items that require review or approval. Accessible from the top of the Control Center sidebar at `ToDoList/index.php`, the To-Do List displays requests generated automatically by REDCap when users perform actions requiring administrator review. This centralized queue helps administrators manage their workflow and ensure timely processing of critical tasks.
 
 ---
 
-# 2. Active Requests
+## 2. Active Requests
 
 The main section of the To-Do List displays all pending tasks awaiting administrator action. 
 
@@ -36,7 +36,7 @@ Administrators can click on any request to view details and take action.
 
 ---
 
-# 3. Common Task Types
+## 3. Common Task Types
 
 The most common task type is **"Approve draft changes"**, which is automatically generated when a project in Production mode has pending design changes submitted for review. This ensures administrators review and approve all structural changes to production projects before they take effect.
 
@@ -47,7 +47,7 @@ Other task types may appear depending on system configuration and feature usage,
 
 ---
 
-# 4. Completing Tasks
+## 4. Completing Tasks
 
 To complete a task, administrators click on the request to open it. 
 
@@ -61,7 +61,7 @@ After the administrator takes action (approve or reject), the request moves from
 
 ---
 
-# 5. Completed & Archived Requests
+## 5. Completed & Archived Requests
 
 A paginated history of all previously handled requests is maintained for audit and reference purposes. Each archived entry shows:
 
@@ -76,7 +76,7 @@ The archived list is paginated and searchable, making it easy to locate past req
 
 ---
 
-# 6. Relationship to Draft Mode
+## 6. Relationship to Draft Mode
 
 The To-Do List is tightly integrated with REDCap's Production mode workflow. 
 
@@ -92,7 +92,7 @@ This workflow ensures that production projects remain stable and that all design
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Where is the To-Do List located in the Control Center?**
 The To-Do List is accessible from the top of the Control Center sidebar at `ToDoList/index.php`. It is listed under the main navigation and is typically one of the first items visible to administrators.
@@ -114,7 +114,7 @@ Tasks are generated automatically by REDCap when specific actions occur (such as
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Missing draft change notifications.** Administrators may not realize that draft changes have been submitted if they don't check the To-Do List regularly and have not configured email notifications. Establish a routine to check the To-Do List daily, or configure your system to send email alerts when production projects have pending changes awaiting review.
 
@@ -126,7 +126,7 @@ Tasks are generated automatically by REDCap when specific actions occur (such as
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)
 - [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md)

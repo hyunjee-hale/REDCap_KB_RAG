@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Delete Arms API method removes one or more arms from a longitudinal REDCap project. You specify the arm numbers to delete, and REDCap will remove them along with all their associated events and all data collected under those events.
 
@@ -25,7 +25,7 @@ The Delete Arms API method removes one or more arms from a longitudinal REDCap p
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -37,9 +37,9 @@ The Delete Arms API method removes one or more arms from a longitudinal REDCap p
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -58,7 +58,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -74,7 +74,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -88,7 +88,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -124,7 +124,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the method returns the number of arms deleted as a plain integer. All data stored in those arms' events will be permanently removed.
 
@@ -135,7 +135,7 @@ Example response:
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: Can I delete an arm on a classic project?**
 
@@ -159,7 +159,7 @@ Example response:
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Calling Delete Arms on a project that is not in Development status.** This method only works on projects in Development status. Calling it on a Production or Analysis/Cleanup project will fail. Check your project's status before calling this method.
 
@@ -175,7 +175,7 @@ Example response:
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-16 — Export Arms API](RC-API-16_Export-Arms.md)(retrieve arm metadata from a project)

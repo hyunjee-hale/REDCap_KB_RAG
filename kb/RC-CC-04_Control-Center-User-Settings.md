@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The **User Settings** page is where REDCap administrators control system-wide user behaviors and defaults that affect all users across the instance. This includes controlling who can create projects, what features users can access, what default preferences are applied to new accounts, and what oversight or approval mechanisms are required for certain user actions. Settings here apply uniformly to all users unless otherwise noted.
 
@@ -24,7 +24,7 @@ The **User Settings** page (under **System Configuration**) controls what regula
 
 ---
 
-# Project Creation & Status Changes
+## Project Creation & Status Changes
 
 **Allow Normal Users to Create New Projects**
 Controls whether any authenticated user can create a new project in REDCap. Options:
@@ -57,7 +57,7 @@ Surveys must be one-page public surveys and cannot use Survey Queue, Auto-Contin
 
 ---
 
-# Email Notification Settings
+## Email Notification Settings
 
 **Notify Admin When a New Account Is Created**
 When enabled, the system sends an email to the REDCap administrator whenever a new user account is created via external authentication. Table-based users are excluded because an administrator creates those accounts manually.
@@ -72,7 +72,7 @@ The body of this email contains stock text that can reference your instance URL 
 
 ---
 
-# General User Settings
+## General User Settings
 
 **Allow Normal Users to Auto-Generate API Tokens**
 Controls whether users can generate API tokens for their projects without administrator involvement. Options:
@@ -148,7 +148,7 @@ Controls visibility of the "suggest variable name" feature in the Add Field popu
 
 ---
 
-# Default Settings for New Users
+## Default Settings for New Users
 
 These settings define the starting state of new user accounts. They primarily affect users created via external authentication methods (LDAP, Shibboleth, etc.). Table-based user accounts have these values set manually by an administrator at account creation.
 
@@ -177,7 +177,7 @@ Applies to all CSV exports. Options include comma, semicolon, tab, space, pipe (
 
 ---
 
-# Public Reports, Project Dashboards & Smart Charts
+## Public Reports, Project Dashboards & Smart Charts
 
 **Allow Reports to Be Made Public**
 When enabled, project users with User Rights privileges can generate publicly accessible URLs for reports. Public report URLs do not require REDCap authentication. Options:
@@ -199,13 +199,13 @@ This setting does not apply when viewing charts/reports from inside a REDCap pro
 
 ---
 
-# Account Expiration Email Templates (Optional)
+## Account Expiration Email Templates (Optional)
 
 Custom email text can be configured for the two automated account expiration reminder emails REDCap sends: 14 days before expiration and 2 days before expiration. Separate templates can be defined for users without a sponsor and users with a sponsor. Dynamic variables can be included to personalize the email with the user's information. If no custom text is provided, REDCap uses stock email text.
 
 ---
 
-# 2. Common Questions
+## 2. Common Questions
 
 **Q: Should we allow normal users to create projects or require administrator approval?**
 Allowing users to create projects increases self-sufficiency and agility, but requires oversight to ensure projects comply with institutional standards. Requiring administrator approval provides more control but creates bottlenecks. A middle ground is to allow creation but set a record limit for development projects and use custom project creation surveys to collect required metadata (IRB numbers, data governance approvals, etc.).
@@ -224,7 +224,7 @@ Restricting to institutional domains (e.g., `university.edu`) limits account cre
 
 ---
 
-# 3. Common Mistakes & Gotchas
+## 3. Common Mistakes & Gotchas
 
 **Not configuring custom project creation surveys despite having institutional requirements.** If your institution requires IRB approvals, data governance agreements, or specific PI information before a project goes live, custom creation surveys capture this metadata at the right time. Without them, administrators manually track these requirements, leading to missed compliance steps and inconsistent documentation.
 
@@ -234,7 +234,7 @@ Restricting to institutional domains (e.g., `university.edu`) limits account cre
 
 ---
 
-# 4. Related Articles
+## 4. Related Articles
 
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)(system-wide settings and email configuration)
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (authentication and login settings affecting user accounts)

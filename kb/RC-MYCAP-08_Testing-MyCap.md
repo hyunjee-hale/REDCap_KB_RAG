@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article provides a structured testing workflow for MyCap projects before launching to real participants. Testing MyCap requires a mobile device and a test record in the REDCap project. The six-step process covers task appearance and functionality, App Settings, schedule behavior, notifications, joining methods, and a final publish before go-live. Complete all six steps before enrolling the first real participant.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Test Record**
 
@@ -44,7 +44,7 @@ A push notification delivered to the device at the configured notification time 
 
 ---
 
-# 3. Pre-Testing Setup
+## 3. Pre-Testing Setup
 
 Before beginning the six-step test:
 
@@ -55,11 +55,11 @@ Before beginning the six-step test:
 
 ---
 
-# 4. Step 1: Task Appearance and Functionality
+## 4. Step 1: Task Appearance and Functionality
 
 Verify that each enabled task appears correctly in the app and can be completed.
 
-### 4.1 Set Tasks to Infinite for Testing
+#### 4.1 Set Tasks to Infinite for Testing
 
 To test task functionality without waiting for scheduled windows, temporarily set all tasks to the **Infinite** schedule type. This makes all tasks immediately available in the app.
 
@@ -67,7 +67,7 @@ To test task functionality without waiting for scheduled windows, temporarily se
 2. For each task, change the schedule to **Infinite**.
 3. Publish the project.
 
-### 4.2 Complete Each Task
+#### 4.2 Complete Each Task
 
 On the test device:
 - Open MyCap and verify the task list shows all enabled tasks.
@@ -78,7 +78,7 @@ On the test device:
   - No piping syntax (`[field_name]`) appears as raw text in field labels or notes.
   - Task completes and is marked done after submission.
 
-### 4.3 Review Task Details CSV
+#### 4.3 Review Task Details CSV
 
 To audit the full scheduled task list:
 1. Go to **MyCap > Schedule Tasks**.
@@ -87,7 +87,7 @@ To audit the full scheduled task list:
 
 ---
 
-# 5. Step 2: App Settings Appearance
+## 5. Step 2: App Settings Appearance
 
 Verify that the App Settings display correctly in the app.
 
@@ -101,18 +101,18 @@ If any App Settings are incorrect, update them in REDCap and publish again befor
 
 ---
 
-# 6. Step 3: Schedule Testing
+## 6. Step 3: Schedule Testing
 
 Verify that task scheduling works correctly, with particular attention to whether you are using install date or baseline date.
 
-### 6.1 Testing Install-Date Schedules
+#### 6.1 Testing Install-Date Schedules
 
 - The install date is set when the test record joins the app.
 - Set the schedule back to the real schedule (not Infinite) and publish.
 - Check the View Task Details CSV to confirm task windows align with the expected days-after-install.
 - If you need to test the schedule from a different install date, remove the test record from the app (delete or reset the participant code), create a new record, and rejoin.
 
-### 6.2 Testing Baseline-Date Schedules
+#### 6.2 Testing Baseline-Date Schedules
 
 1. In the test record in REDCap, set the baseline date field to a known date (e.g., today's date minus 7 days, to simulate a past baseline event).
 2. Open the app. Verify that the baseline date screen appears and prompts correctly, or is bypassed because the date was pre-filled.
@@ -124,16 +124,16 @@ Verify that task scheduling works correctly, with particular attention to whethe
 
 ---
 
-# 7. Step 4: Notification Testing
+## 7. Step 4: Notification Testing
 
 Verify that push notifications are delivered at the expected time.
 
-### 7.1 Enabling Push Notifications
+#### 7.1 Enabling Push Notifications
 
 - Ensure push notifications are enabled for the MyCap app on the test device (device settings > notifications > MyCap).
 - Confirm the notification time in **MyCap > App Settings > Notification Settings**.
 
-### 7.2 Testing Task Notifications
+#### 7.2 Testing Task Notifications
 
 Task notifications are sent when a new task window opens (i.e., at the configured notification time on the day the task becomes available). To test:
 1. Set a task to a One-Time schedule with a delay of 0 days (or set it to appear today).
@@ -142,23 +142,23 @@ Task notifications are sent when a new task window opens (i.e., at the configure
 
 Alternatively, change the notification time to a few minutes from now to test without waiting until 8:00 AM.
 
-### 7.3 Testing Message Notifications
+#### 7.3 Testing Message Notifications
 
 1. In **MyCap > Participant Management**, send a direct message to the test participant record.
 2. Verify the device receives a push notification and the message appears in the MyCap app's message inbox.
 
-### 7.4 Testing Announcement Notifications
+#### 7.4 Testing Announcement Notifications
 
 1. In **MyCap > Participant Management**, send a broadcast announcement.
 2. Verify the device receives the push notification and the announcement appears in the app.
 
 ---
 
-# 8. Step 5: Joining Method Testing
+## 8. Step 5: Joining Method Testing
 
 Verify that both joining methods work before distributing them to real participants.
 
-### 8.1 Testing App Link Joining
+#### 8.1 Testing App Link Joining
 
 1. Use a second test record (separate from the one used in steps 1–4) or reset the first test record's participant code.
 2. From Participant Management, copy the App Link for the test record.
@@ -168,7 +168,7 @@ Verify that both joining methods work before distributing them to real participa
    - If MyCap is not installed: the device is redirected to the appropriate app store.
 5. After installing and joining, verify the correct record appears in the app.
 
-### 8.2 Testing QR Code Joining
+#### 8.2 Testing QR Code Joining
 
 1. From Participant Management, display or download the QR code for a test record.
 2. On the test device, open MyCap and tap **Scan QR Code**.
@@ -176,7 +176,7 @@ Verify that both joining methods work before distributing them to real participa
 
 ---
 
-# 9. Step 6: Final Publish Before Go-Live
+## 9. Step 6: Final Publish Before Go-Live
 
 After all testing is complete:
 
@@ -188,7 +188,7 @@ The project is now ready for real participant enrollment.
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: Can I test MyCap in a web browser or simulator?**
 
@@ -216,7 +216,7 @@ The project is now ready for real participant enrollment.
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Testing on a simulator instead of a real device.** Simulators do not support push notifications and may not accurately replicate how MyCap handles device sensors. Always test on a physical iOS or Android device.
 
@@ -232,7 +232,7 @@ The project is now ready for real participant enrollment.
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)(publishing workflow)
 - [RC-MYCAP-03 — MyCap: Task Scheduling](RC-MYCAP-03_Task-Scheduling.md)(schedule types, View Task Details CSV)

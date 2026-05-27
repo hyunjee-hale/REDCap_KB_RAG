@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The URL Shortener creates short redirect links for distribution. This service is provided externally and is hosted outside the local REDCap server. It is accessible from the Administrator Resources section of the Control Center sidebar.
 
 ---
 
-# 2. Option 1: Random Short URL
+## 2. Option 1: Random Short URL
 
 The Random Short URL option generates a randomly assigned short URL that redirects to any destination URL you provide. This option is useful when you need a quick shortened link without requiring a specific custom alias.
 
@@ -33,7 +33,7 @@ To use this feature:
 
 ---
 
-# 3. Option 2: Custom Alias
+## 3. Option 2: Custom Alias
 
 The Custom Alias option allows administrators to define a custom alphanumeric string for the short URL, so the shortened link takes a memorable form. The custom portion must be unique and not already in use by another shortened URL.
 
@@ -47,7 +47,7 @@ To use this feature:
 
 ---
 
-# 4. Use Cases
+## 4. Use Cases
 
 Common uses for the URL Shortener include:
 
@@ -58,7 +58,7 @@ Common uses for the URL Shortener include:
 
 ---
 
-# 5. Limitations
+## 5. Limitations
 
 Since the shortening service is managed externally and not by the local institution, the availability and reliability of the service depend on the external provider's infrastructure. There is no guarantee of permanent link persistence beyond what the service provider maintains. It is recommended to:
 
@@ -68,7 +68,7 @@ Since the shortening service is managed externally and not by the local institut
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What is the difference between a random short URL and a custom alias?**
 A random short URL is generated automatically with a random alphanumeric string and requires no additional input from you. A custom alias lets you specify a memorable alphanumeric string to make the URL more recognizable and easier to share verbally. Both redirect to the same destination URL.
@@ -90,7 +90,7 @@ Shortened URLs remain active as long as the external service maintains them. Sin
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Distributing untested shortened URLs.** Always test a newly created shortened URL to ensure it redirects to the correct destination before sharing it widely. A small typo in the destination URL can create a broken shortened link that is difficult to identify later. Test on multiple devices and browsers to confirm correct behavior.
 
@@ -102,6 +102,6 @@ Shortened URLs remain active as long as the external service maintains them. Sin
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md)

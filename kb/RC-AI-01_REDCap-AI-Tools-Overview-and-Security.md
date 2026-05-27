@@ -14,41 +14,41 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article introduces the AI features available in REDCap as of version 15.5.3. REDCap can communicate with an AI server to perform a set of pre-defined actions — text generation and editing, language translation, and data summarization. Unlike general-purpose AI chat tools, REDCap's AI features are purpose-built and integrated directly into specific parts of the application. This article explains what the three features are, how the underlying AI server architecture works, and what data privacy and security considerations apply before using these features with sensitive data.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-## AI Server
+### AI Server
 
 The external server that processes AI requests from REDCap. REDCap does not connect to any public AI service (such as ChatGPT) directly. Instead, your institution's REDCap administrative team sets up a dedicated, standalone AI server. That server communicates only with REDCap and, by design, should not retain submitted data after processing.
 
-## Pre-defined Actions
+### Pre-defined Actions
 
 REDCap's AI features do not support open-ended chat. Instead, each feature offers a fixed set of operations — for example, "fix grammar," "translate," or "summarize." This approach gives users access to AI capabilities without requiring expertise in writing AI prompts.
 
-## AI Writing Tools
+### AI Writing Tools
 
 The first of REDCap's three main AI features. Accessible anywhere the rich text editor is available, this feature generates or rewrites text based on a selected action (grammar correction, tone adjustment, length changes, etc.). See [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md) for procedural details.
 
-## AI Translations
+### AI Translations
 
 The second main AI feature. Integrated directly into the Multi-Language Management (MLM) module, this feature automatically translates instrument content and the REDCap interface into a target language. See [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md) for procedural details.
 
-## AI Summarization
+### AI Summarization
 
 The third main AI feature. Located in the Reports section of a project, this feature summarizes free-text variable data across records. See [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md) for procedural details.
 
-## Rich Text Editor
+### Rich Text Editor
 
 A text formatting interface found in several areas of REDCap (instrument field labels, survey settings text, email bodies, etc.). When enabled, the rich text editor toolbar includes the AI writing tools icon.
 
 ---
 
-# 3. The Three AI Features at a Glance
+## 3. The Three AI Features at a Glance
 
 | Feature | Where to find it | What it does |
 |---|---|---|
@@ -60,9 +60,9 @@ REDCap limits its AI functionality to these three features. Additional capabilit
 
 ---
 
-# 4. AI Server Architecture & Security
+## 4. AI Server Architecture & Security
 
-## How the AI server works
+### How the AI server works
 
 REDCap's AI features rely on a standalone AI server provisioned and maintained by your institution's REDCap administrative team. This server is:
 
@@ -74,7 +74,7 @@ This architecture means REDCap does not send your data to a third-party service 
 
 > **Important:** The security posture described above reflects the intended design. You should verify with your local REDCap administrative team that the AI server setup at your institution actually meets the relevant compliance and data privacy standards before using AI features with sensitive data such as Protected Health Information (PHI).
 
-## Administrator controls
+### Administrator controls
 
 REDCap administrators can enable or disable each of the three AI features independently. Availability can be set globally (for all projects) or restricted to specific projects. If an AI feature is not visible in your project, it may not be enabled for your installation or your specific project. Contact your REDCap administrative team to confirm the local AI configuration.
 
@@ -82,7 +82,7 @@ REDCap administrators can enable or disable each of the three AI features indepe
 
 ---
 
-# Administrator Configuration
+## Administrator Configuration
 
 REDCap's AI tools require both a configured AI server and explicit enablement by a system administrator. None of the three AI features (Writing Tools, Translations, Summarization) are available to users until they have been turned on at the system level.
 
@@ -98,7 +98,7 @@ If you do not see the AI writing tools icon (purple wizard's wand) in the rich t
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **What AI features does REDCap have?**
 REDCap has three main AI features: AI Writing Tools (text generation and editing via the rich text editor), AI Translations (language translation integrated into Multi-Language Management), and AI Summarization (summarizing free-text variable data in reports).
@@ -120,7 +120,7 @@ As of version 15.5.3, REDCap provides three main AI features. Additional capabil
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Assuming the AI server is equivalent to a public service.** The REDCap AI server is a dedicated, institution-managed server — not ChatGPT or a similar public API. Behavior, capabilities, and response quality may differ from what you experience with public AI tools.
 
@@ -130,7 +130,7 @@ As of version 15.5.3, REDCap provides three main AI features. Additional capabil
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-AI-02 — AI Writing Tools](RC-AI-02_AI-Writing-Tools.md)
 - [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md)

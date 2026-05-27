@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the REDCap logic syntax in detail — the operators,
 brackets, quotes, and boolean keywords that make up valid logic
@@ -24,7 +24,7 @@ of all branching logic.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Atomic Logic Statement**
 
@@ -58,9 +58,9 @@ the dataset. Logic statements must reference raw values, not labels.
 
 ---
 
-# 3. Syntax Language Reference
+## 3. Syntax Language Reference
 
-## 3.1 Math Operators
+### 3.1 Math Operators
 
 REDCap supports standard arithmetic operators for use in calculated
 fields and numeric comparisons. These operate on numbers only.
@@ -74,7 +74,7 @@ fields and numeric comparisons. These operate on numbers only.
 | ^ | Exponent | [base]^2 |
 | = | Equals | [status]=1 |
 
-## 3.2 Comparison Operators
+### 3.2 Comparison Operators
 
 Comparison operators are the most common operators in branching logic.
 They compare a variable to a value and return true or false.
@@ -88,7 +88,7 @@ They compare a variable to a value and return true or false.
 | < | Less than | [bmi]<25 |
 | <= | Less than or equal to | [bmi]<=25 |
 
-## 3.3 Quotation Marks
+### 3.3 Quotation Marks
 
 Any comparison value that is not a number must be enclosed in quotation
 marks. Both single and double quotes are accepted.
@@ -107,7 +107,7 @@ marks. Both single and double quotes are accepted.
 > **Best Practice:** If you plan to edit your logic via the Data Dictionary in Excel or another spreadsheet program, use single quotes throughout. Excel interprets double quotes as part of its own formula syntax, which can corrupt logic statements during CSV import/export.
 
 
-## 3.4 Square Brackets \[ \] and Their Uses
+### 3.4 Square Brackets \[ \] and Their Uses
 
 Square brackets are used to reference three types of identifiers in
 REDCap logic:
@@ -123,7 +123,7 @@ REDCap logic:
 > **Note:** Curly brackets { } are used exclusively by the Field Embedding feature and have no role in branching logic syntax. If you see curly brackets in a logic field, something has gone wrong.
 
 
-## 3.5 Boolean Operators
+### 3.5 Boolean Operators
 
 Boolean operators join two or more logic statements together. REDCap
 supports AND, OR, and NOT (expressed as \<\>). Both uppercase and
@@ -140,7 +140,7 @@ control evaluation order. See [RC-BL-03 — Branching Logic: Combining Statement
 
 ---
 
-# 4. The Atomic Logic Statement
+## 4. The Atomic Logic Statement
 
 Every logic statement — no matter how complex — is built from atomic
 statements. An atomic statement always has exactly three parts:
@@ -162,7 +162,7 @@ The comparison value can be one of the following types:
 
 ---
 
-# 5. Worked Examples
+## 5. Worked Examples
 
 **Example 1 — Equality: Show field only if age is exactly 18**
 
@@ -221,7 +221,7 @@ have the same entry (e.g., email confirmation).
 
 ---
 
-# 6. Empty vs. Zero --- A Critical Distinction
+## 6. Empty vs. Zero --- A Critical Distinction
 
 One of the most common logic errors in REDCap is treating an empty field
 as equivalent to a field containing zero. They are not the same.
@@ -237,7 +237,7 @@ as equivalent to a field containing zero. They are not the same.
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Do I need to use quotes around numbers in logic statements?**
 
@@ -276,7 +276,7 @@ names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) befor
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 - Comparing text without quotes: \[status\]=enrolled is invalid ---
     enrolled must be quoted as 'enrolled'. Unquoted non-numeric values
@@ -302,7 +302,7 @@ names against the Codebook ([RC-FD-05 — Codebook](RC-FD-05_Codebook.md)) befor
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)(prerequisite)
 

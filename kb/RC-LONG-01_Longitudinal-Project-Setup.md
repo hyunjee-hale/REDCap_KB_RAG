@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers how to configure a REDCap project for longitudinal data collection. Longitudinal mode allows you to collect data across multiple time points (events) and, optionally, across distinct participant cohorts (arms). The setup involves enabling longitudinal mode, defining your arms and events, and designating which instruments are collected at which events. This article also describes how a longitudinal setup affects other REDCap features such as branching logic and data exports.
 
@@ -22,7 +22,7 @@ Repeated instruments and repeated events are a separate feature that can be laye
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Longitudinal Mode**
 
@@ -60,7 +60,7 @@ The assignment of one or more instruments to a specific event within an arm. Onl
 
 ---
 
-# 3. Enabling Longitudinal Mode
+## 3. Enabling Longitudinal Mode
 
 Before any longitudinal features are accessible, you must enable longitudinal mode from the Project Setup page.
 
@@ -76,11 +76,11 @@ Once enabled, the longitudinal configuration tools — Define My Events and Desi
 
 ---
 
-# 4. Defining Arms & Events
+## 4. Defining Arms & Events
 
 After enabling longitudinal mode, click the **Define My Events** button in Project Setup to reach the arm and event configuration page. By default, REDCap creates one arm ("Arm 1") with one event pre-populated.
 
-## 4.1 Managing Arms
+### 4.1 Managing Arms
 
 Arms appear as tabs across the top of the Define My Events page.
 
@@ -92,7 +92,7 @@ Arms appear as tabs across the top of the Define My Events page.
 
 > **Critical:** Deleting an arm permanently deletes all records and data associated with that arm. This action cannot be undone.
 
-## 4.2 Event Table Columns
+### 4.2 Event Table Columns
 
 Within each arm, events are displayed in a table with the following columns:
 
@@ -108,7 +108,7 @@ Within each arm, events are displayed in a table with the following columns:
 
 > **Important:** If you rename an event label, the unique event name changes with it. Any branching logic, piping, or calculated fields that reference the old unique event name will break. Review all logic after renaming events.
 
-## 4.3 Adding & Deleting Events
+### 4.3 Adding & Deleting Events
 
 **Adding an event:** Enter an event name in the **Event label** text box at the bottom of the arm's table, optionally fill in a custom event label, and click **Add new event**.
 
@@ -116,7 +116,7 @@ Within each arm, events are displayed in a table with the following columns:
 
 ---
 
-# 5. Designating Instruments to Events
+## 5. Designating Instruments to Events
 
 After defining arms and events, navigate to the **Designate Instruments for My Events** tab (accessible from the Define My Events page or via the button in Project Setup).
 
@@ -134,11 +134,11 @@ This page displays a matrix with instruments as rows and events as columns. A se
 
 ---
 
-# 6. Bulk Setup via CSV Upload & Download
+## 6. Bulk Setup via CSV Upload & Download
 
 Both the Define My Events page and the Designate Instruments page support CSV-based bulk operations, useful for projects with large numbers of events or complex instrument-event mappings.
 
-## 6.1 Arms & Events (Define My Events page)
+### 6.1 Arms & Events (Define My Events page)
 
 Access bulk options from the **Upload or download arms/events** dropdown.
 
@@ -155,7 +155,7 @@ Access bulk options from the **Upload or download arms/events** dropdown.
 
 > **Note:** Arms and event uploads are additive — you can safely upload a file containing only new rows without affecting existing configuration. This is the opposite of instrument-event mapping uploads, which replace the entire mapping (see §6.2). Keep this distinction in mind when planning bulk updates.
 
-### Arms CSV format
+#### Arms CSV format
 
 **Columns:** `arm_num`, `name`
 
@@ -172,7 +172,7 @@ arm_num,name
 2,Intervention
 ```
 
-### Events CSV format
+#### Events CSV format
 
 **Core columns (always present):** `event_name`, `arm_num`, `unique_event_name`, `custom_event_label`
 
@@ -213,7 +213,7 @@ Baseline,2,7,7,7,baseline_arm_2,
 "End of Study",2,365,14,14,end_of_study_arm_2,
 ```
 
-## 6.2 Instrument-Event Mappings (Designate Instruments page)
+### 6.2 Instrument-Event Mappings (Designate Instruments page)
 
 Access bulk options from the **Upload or download instrument mappings** dropdown:
 
@@ -222,7 +222,7 @@ Access bulk options from the **Upload or download instrument mappings** dropdown
 | Upload instrument-event mappings (CSV) | Replaces the full mapping configuration. Any instrument-event combination omitted from the file will be unchecked. |
 | Download instrument-event mappings (CSV) | Exports current mappings. Useful for backup or bulk editing. |
 
-### Instrument-Event Mappings CSV format
+#### Instrument-Event Mappings CSV format
 
 **Columns:** `arm_num`, `unique_event_name`, `form`
 
@@ -262,7 +262,7 @@ For the full column-by-column reference, upload order rules, and common mistakes
 
 ---
 
-# 7. Modifying an Existing Longitudinal Setup
+## 7. Modifying an Existing Longitudinal Setup
 
 Changing arms, events, or instrument designations in a project that has already collected data carries significant risk. The following actions can cause data loss or break project logic:
 
@@ -277,11 +277,11 @@ Changing arms, events, or instrument designations in a project that has already 
 
 ---
 
-# 8. Effects on Other REDCap Features
+## 8. Effects on Other REDCap Features
 
 A longitudinal setup changes behavior in several other areas of REDCap. Understanding these effects before finalizing your setup will prevent surprises during data collection.
 
-## 8.1 Branching Logic
+### 8.1 Branching Logic
 
 In a standard (non-longitudinal) project, branching logic references fields by variable name alone (e.g., `[dob]`). In a longitudinal project, any reference to a variable in a *different* event must include the event's unique event name:
 
@@ -293,11 +293,11 @@ References to variables *within the same instrument or event* ("local" reference
 
 See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope for full syntax details.
 
-## 8.2 Piping
+### 8.2 Piping
 
 Piping follows the same rules as branching logic. Piping a variable from a different event requires the unique event name prefix. Local piping (within the same event) does not.
 
-## 8.3 Reports & Data Exports
+### 8.3 Reports & Data Exports
 
 In a non-longitudinal project, each record produces one row in a report or export. In a longitudinal project, the output produces **one row per event per record**. A project with 10 events and 100 records will produce up to 1,000 rows.
 
@@ -305,13 +305,13 @@ To identify which row belongs to which event and record, REDCap adds coordinate 
 
 **Best practice:** Use the report builder's event filters to export only the data you need for any given analysis. Exporting all data from a large longitudinal project produces unwieldy output with sparse rows.
 
-## 8.4 Workflow Features
+### 8.4 Workflow Features
 
 Automated Survey Invitations, the Survey Queue, the scheduling module, and Form Display Logic all incorporate the longitudinal event structure into their configuration. Each can be scoped to specific events. For large projects with many events, using the bulk upload options for these features is recommended.
 
 ---
 
-# 9. Common Questions
+## 9. Common Questions
 
 **Q: Do I need more than one arm?**
 
@@ -355,7 +355,7 @@ Automated Survey Invitations, the Survey Queue, the scheduling module, and Form 
 
 ---
 
-# 10. Common Mistakes & Gotchas
+## 10. Common Mistakes & Gotchas
 
 **Disabling longitudinal mode with existing data.** Turning off longitudinal mode deletes all data outside the first event, without a confirmation prompt specific to each record. There is no undo. Never disable longitudinal mode in a project with collected data unless you have verified that all data resides in the first event.
 
@@ -375,7 +375,7 @@ Automated Survey Invitations, the Survey Queue, the scheduling module, and Form 
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -391,7 +391,7 @@ Automated Survey Invitations, the Survey Queue, the scheduling module, and Form 
 ---
 
 
-# 11. Administrator Configuration
+## 11. Administrator Configuration
 
 Whether project-level users can add or modify events and arms on a Production project is controlled by an administrator setting in the Control Center under System Configuration → User Settings & Defaults (see **[RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)**, "Allow Normal Users to Add or Modify Events and Arms in Production").
 
@@ -405,7 +405,7 @@ When the setting is enabled, project-level users with Project Design and Setup r
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (controls whether users can modify events/arms in Production)
 - [RC-LONG-02 — Repeated Instruments & Events Setup](RC-LONG-02_Repeated-Instruments-and-Events-Setup.md) (layering repeated instruments or events onto a longitudinal project)

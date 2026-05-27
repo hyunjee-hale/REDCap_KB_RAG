@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Optional parameters are appended to aggregate functions, charts, and tables to filter which records are included in the calculation or to modify the visualization options. They allow you to narrow results to a specific report, Data Access Group (DAG), event, or adjust how charts display (e.g., vertical bars, stacked bars, hidden export links). Parameters are separated by colons and appended as a third argument. This article covers all available parameters, their syntax, use cases, and important restrictions.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Parameter**
 
@@ -40,15 +40,15 @@ Parameters that cannot be used together in the same smart variable expression. F
 
 ---
 
-# 3. Smart Variable Parameter Reference
+## 3. Smart Variable Parameter Reference
 
-### 3.1 Report Filtering Parameter
+#### 3.1 Report Filtering Parameter
 
 | Parameter | Syntax | Description | Example |
 |---|---|---|---|
 | Report Name | `R-XXXXXXXXXX` | Filters results to include only records contained in the specified report. Use the unique report name (found on the My Reports & Exports page) in the format R- followed by alphanumeric characters. IMPORTANT: Report name filters cannot be combined with other filtering parameters (DAG, event, etc.). To combine filters, add filtering to the report definition itself. | `[aggregate-min:age:R-5898NNMYL4]` |
 
-### 3.2 Record / Event Filtering Parameters
+#### 3.2 Record / Event Filtering Parameters
 
 | Parameter | Syntax | Description | Example |
 |---|---|---|---|
@@ -56,14 +56,14 @@ Parameters that cannot be used together in the same smart variable expression. F
 | Current Event | `event-name` | Filters results to include data from the current event only (longitudinal projects only). Only works where a single record/event is being viewed. | `[aggregate-max:weight:event-name]` |
 | Specific Event(s) | Unique event name(s) | Filters to data from specific events by providing the event's unique event name from the Define My Events page. Multiple events separated by commas. Longitudinal projects only. | `[aggregate-min:weight:visit_1_arm_1]` or `[aggregate-min:weight:visit_1_arm_1,visit_1_arm_2]` |
 
-### 3.3 Data Access Group (DAG) Filtering Parameters
+#### 3.3 Data Access Group (DAG) Filtering Parameters
 
 | Parameter | Syntax | Description | Example |
 |---|---|---|---|
 | Current User's DAG | `user-dag-name` | Filters results to include only records in the current user's Data Access Group. Only works where an authenticated user is assigned to a DAG in the project (does not work on public dashboards or survey pages). | `[aggregate-mean:weight:user-dag-name]` |
 | Specific DAG(s) | Unique DAG name(s) | Filters to records in specific DAGs by providing the DAG's unique group name from the Data Access Groups page. Multiple DAGs separated by commas. | `[aggregate-median:weight:site_a]` or `[aggregate-median:weight:site_a,site_b,site_c]` |
 
-### 3.4 Visualization Parameters
+#### 3.4 Visualization Parameters
 
 | Parameter | Syntax | Description | Example |
 |---|---|---|---|
@@ -73,7 +73,7 @@ Parameters that cannot be used together in the same smart variable expression. F
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Parameter Syntax**
 
@@ -134,7 +134,7 @@ To include multiple DAGs or events, use comma separation (no spaces): `[aggregat
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I filter an aggregate function to show only a specific Data Access Group?**
 
@@ -170,7 +170,7 @@ To include multiple DAGs or events, use comma separation (no spaces): `[aggregat
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Attempting to combine report filters with other parameters.** Report name filters (`R-XXXXXXXXXX`) cannot be used with DAG, event, or record-name filters. If you need multiple filters, add them to the report definition itself, not the smart variable. A common error is: `[aggregate-mean:age:R-5898NNMYL4,site_a]` (invalid — do not mix report and DAG filters).
 
@@ -188,7 +188,7 @@ To include multiple DAGs or events, use comma separation (no spaces): `[aggregat
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-11 — Smart Variables: Aggregate Functions, Charts, and Tables](RC-PIPE-11_Smart-Variables-Aggregate-Functions-Charts-and-Tables.md) (detailed reference for functions and charts)

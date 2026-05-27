@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The REDCap API (Application Programming Interface) allows external applications to connect to REDCap remotely and interact with it programmatically — importing or exporting records, retrieving project configuration, managing files, and more. Instead of a person clicking through the REDCap interface, a program sends structured requests to REDCap over HTTP (the same protocol browsers use to load web pages) and REDCap responds with the requested data or confirmation of the action taken.
 
@@ -25,7 +25,7 @@ Access to the API requires both a user right assignment and a project-specific A
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **API (Application Programming Interface)**
 
@@ -61,16 +61,16 @@ A special token required to use the **Create Project** API method. Super tokens 
 
 ---
 
-# 3. Requesting and Managing API Access
+## 3. Requesting and Managing API Access
 
-## 3.1 Prerequisites
+### 3.1 Prerequisites
 
 Before requesting a token:
 
 1. Confirm that API access is enabled at the system level — the REDCap API must be enabled by an administrator in the Control Center (System Configuration → Modules/Services Configuration — see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). If the API link is missing from the project menu entirely, the API may be disabled instance-wide.
 2. Verify that you have been granted the **API Export** and/or **API Import** user right in the project (User Rights → your user → API section).
 
-## 3.2 Requesting a Token
+### 3.2 Requesting a Token
 
 1. Open the project and click **API** in the Applications section of the left-hand menu.
 2. On the API page, click **Request API Token** to submit a request to your REDCap administrator.
@@ -78,18 +78,18 @@ Before requesting a token:
 
 > **Note:** If you do not see an **API** link in the left-hand menu, you have not been granted API privileges for that project. Ask a project administrator to assign the API Export and/or API Import user right to your account via the User Rights page.
 
-## 3.3 Token Security
+### 3.3 Token Security
 
 - **Never share your token.** Anyone with your token has the same access to that project's data as you do.
 - **Never include your token in code that is stored in a public repository** (e.g., GitHub). Use environment variables or a secrets manager instead.
 - **Use HTTPS.** Always send API requests to the HTTPS version of your REDCap URL. Sending tokens over plain HTTP exposes them in transit.
 - If you believe a token has been compromised, contact your REDCap administrator to have it revoked and regenerated.
 
-## 3.4 Multiple Tokens
+### 3.4 Multiple Tokens
 
 Each user gets one token per project. If you need API access to three projects, you need three tokens — one from each project's API page. Token requests are submitted and managed independently per project.
 
-## 3.5 SSL Certificate Validation
+### 3.5 SSL Certificate Validation
 
 Although REDCap API requests use HTTPS (SSL), which encrypts traffic between your script and the REDCap server, there is an additional step that is **highly recommended** for any API script handling sensitive data: validating the REDCap server's SSL certificate.
 
@@ -108,11 +108,11 @@ Force your API script to validate REDCap's SSL certificate before sending any re
 
 ---
 
-# 4. Available API Methods
+## 4. Available API Methods
 
 The REDCap API organizes its functionality into method groups. The methods available to a given token depend on the user's rights and the project's configuration.
 
-## 4.1 Records
+### 4.1 Records
 
 | Method | Description |
 |---|---|
@@ -122,7 +122,7 @@ The REDCap API organizes its functionality into method groups. The methods avail
 | Rename Record | Change a record's ID value |
 | Generate Next Record Name | Retrieve the next auto-number value REDCap would assign |
 
-## 4.2 Project Metadata and Configuration
+### 4.2 Project Metadata and Configuration
 
 | Method | Description |
 |---|---|
@@ -139,7 +139,7 @@ The REDCap API organizes its functionality into method groups. The methods avail
 | Import Arms | Add or modify arms |
 | Delete Arms | Remove arms |
 
-## 4.3 Users and Access
+### 4.3 Users and Access
 
 | Method | Description |
 |---|---|
@@ -157,7 +157,7 @@ The REDCap API organizes its functionality into method groups. The methods avail
 | Export DAG Assignments | See which users are assigned to which DAGs |
 | Import DAG Assignments | Update DAG user assignments |
 
-## 4.4 Files
+### 4.4 Files
 
 | Method | Description |
 |---|---|
@@ -166,14 +166,14 @@ The REDCap API organizes its functionality into method groups. The methods avail
 | Delete File | Remove a file from a file-upload field |
 | Export PDF | Generate and download a PDF of an instrument or all instruments for a record |
 
-## 4.5 Reports and Logging
+### 4.5 Reports and Logging
 
 | Method | Description |
 |---|---|
 | Export Reports | Pull data from a saved REDCap report by report ID, respecting the report's field and filter settings |
 | Export Logging | Retrieve the project audit log entries |
 
-## 4.6 Surveys
+### 4.6 Surveys
 
 | Method | Description |
 |---|---|
@@ -184,7 +184,7 @@ The REDCap API organizes its functionality into method groups. The methods avail
 
 ---
 
-# 5. Using the API Playground
+## 5. Using the API Playground
 
 The API Playground is the best place to start with the REDCap API. It requires no programming setup and provides an interactive, guided way to test any API method.
 
@@ -203,7 +203,7 @@ The Playground uses your existing token automatically, so you can run real reque
 
 ---
 
-# 6. Export Data Formats
+## 6. Export Data Formats
 
 When exporting records or reports, you can specify the format and type of returned data:
 
@@ -221,9 +221,9 @@ By default, REDCap exports coded values (e.g., `1`, `2`, `3` for a dropdown). Se
 
 ---
 
-# 7. HTTP Status Codes & Error Handling
+## 7. HTTP Status Codes & Error Handling
 
-## 7.1 HTTP Status Codes
+### 7.1 HTTP Status Codes
 
 Every API response includes an HTTP status code indicating whether the request succeeded or failed. Checking this code is the first step in debugging a failed request.
 
@@ -238,7 +238,7 @@ Every API response includes an HTTP status code indicating whether the request s
 | 500 | Internal Server Error | REDCap encountered an error processing your request. |
 | 501 | Not Implemented | The requested method is not supported. |
 
-## 7.2 Error Message Format
+### 7.2 Error Message Format
 
 When an API request fails, REDCap returns the error message in the same format you specified using the `returnFormat` parameter. If no format was specified, REDCap uses its default format. For example, an error from an XML request looks like:
 
@@ -253,7 +253,7 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Do I need a separate token for each project?**
 
@@ -289,7 +289,7 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Storing the token in version-controlled code.** A token hardcoded in a script that gets committed to GitHub is effectively public. Always store tokens as environment variables or in a credentials file excluded from version control. Treat token leaks as a security incident and request revocation immediately.
 
@@ -307,7 +307,7 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 ---
 
-# 10. Administrator Configuration
+## 10. Administrator Configuration
 
 The REDCap API must be enabled at the system level before any project can use it. This is done in the Control Center under System Configuration → Modules/Services Configuration. When disabled system-wide, the API link does not appear in any project's left-hand menu, and no tokens can be requested or used.
 
@@ -317,7 +317,7 @@ Administrators can also manage and revoke API tokens for any user from the Contr
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) (separate mechanism for real-time notification of data changes to external systems; does not fire on API imports)
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md)(manual export workflow; for comparison with API-based export)

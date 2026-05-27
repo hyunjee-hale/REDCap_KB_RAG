@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers Step 3 (filters) and Step 4 (result ordering) of the REDCap custom report builder. Filters control which records appear in a report; ordering controls the sequence in which results are displayed. Both steps are entirely optional — a report with no filters returns all records in the project, ordered by record ID by default. This is the second article in the Custom Reports series; it assumes familiarity with report creation and field selection covered in [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md).
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Filter**
 A condition that a record must satisfy to appear in a report. Filters are evaluated per record (and optionally per event in longitudinal projects). Records that do not meet the filter condition are excluded from the report.
@@ -45,11 +45,11 @@ A checkbox in Step 3 (longitudinal projects only) that controls whether filters 
 
 ---
 
-# 3. Step 3: Filters
+## 3. Step 3: Filters
 
 Filters are configured in Step 3 of the report builder. If you do not configure any filters, the report returns all records in the project.
 
-## 3.1 Show Data for All Events (Longitudinal Projects Only)
+### 3.1 Show Data for All Events (Longitudinal Projects Only)
 
 In longitudinal projects, the first option in Step 3 is **Show data for all events for each record returned**, which is checked by default.
 
@@ -62,7 +62,7 @@ The unchecked setting is an advanced option and requires careful testing. For mo
 
 > **Note:** This option does not appear in projects that are not longitudinal and do not use repeated instruments.
 
-## 3.2 Logic Builder
+### 3.2 Logic Builder
 
 The Logic Builder is the default filter interface. It constructs filter conditions through dropdown selections rather than manual syntax entry.
 
@@ -81,7 +81,7 @@ The Logic Builder is the default filter interface. It constructs filter conditio
 
 **Converting to Advanced Logic:** Click **Use Advanced Logic** (next to "Switch Format") at any point to see the branching logic equivalent of your current Logic Builder selections. This is a useful learning tool for understanding how the Logic Builder translates to syntax.
 
-## 3.3 Advanced Logic
+### 3.3 Advanced Logic
 
 Click **Use Advanced Logic** to switch the filter to a free-text syntax box. This mode accepts any valid REDCap branching logic syntax, including special functions and smart variables.
 
@@ -106,7 +106,7 @@ ends_with([email],"@institution.edu")
 
 > **Note:** Switching back from Advanced Logic to the Logic Builder will prompt you to erase your advanced logic, because the Logic Builder cannot represent all advanced syntax. Do not switch back unless you intend to discard the advanced filter.
 
-## 3.4 Additional Filters: Event and DAG
+### 3.4 Additional Filters: Event and DAG
 
 Below the main logic filter, the Additional Filters section provides dropdown selections for event-based and DAG-based filtering. These are independent of the logic filter.
 
@@ -118,7 +118,7 @@ When both an event filter and a DAG filter are active, a record must satisfy bot
 
 ---
 
-# 4. Live Filters
+## 4. Live Filters
 
 Live filters allow users to narrow a report's results on the fly from the report view page, without editing the report. You can designate up to three variables as live filters per report.
 
@@ -130,7 +130,7 @@ Only certain variable types are eligible for live filters: multiple-choice field
 
 ---
 
-# 5. Step 4: Ordering Results
+## 5. Step 4: Ordering Results
 
 Step 4 controls the sort order of report results. By default, results are ordered by record ID in ascending order.
 
@@ -144,7 +144,7 @@ To specify a custom order:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Do I have to set up filters to create a report?**
 **A:** No. Filters are entirely optional. A report with no filters displays all records in the project for the selected fields.
@@ -169,7 +169,7 @@ To specify a custom order:
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Writing logic that is always true or always false.** Advanced Logic does not validate whether a condition is logically reachable. A filter like `[age] > 200` will never return any records; `[age] >= 0` will always return all records. Test new advanced filters against a few known records with varied data before publishing the report.
 
@@ -183,7 +183,7 @@ To specify a custom order:
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -192,7 +192,7 @@ To specify a custom order:
 ---
 
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-EXPRT-06 — Custom Reports: Setup & Field Selection](RC-EXPRT-06_Custom-Reports-Setup-and-Field-Selection.md) (prerequisite — report creation and field selection)
 - [RC-EXPRT-08 — Custom Reports: Management & Organization](RC-EXPRT-08_Custom-Reports-Management-and-Organization.md) (saving reports, organizing into folders)

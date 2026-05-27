@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article builds on the field embedding mechanics described in [RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md) and demonstrates how embedding is applied creatively in real project designs. It covers three interconnected patterns that appear frequently in operational REDCap projects: using table-based layouts with embedded calculated fields to create document-style forms; using piped descriptive fields as live email template previews during project design; and assembling a multi-instrument approval workflow that routes a requester's submission to an approver and delivers branched outcome notifications. All three patterns are illustrated using a concrete example — a Full-Time Equivalent (FTE) position request project.
 
@@ -29,7 +29,7 @@ The running example has four instruments:
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Document-Style Table Layout**
 
@@ -53,13 +53,13 @@ An external module action tag that hides the Submit button when an instrument is
 
 ---
 
-# 3. Pattern 1 — Document-Style Table Layouts with Embedded Calculated Fields
+## 3. Pattern 1 — Document-Style Table Layouts with Embedded Calculated Fields
 
-## 3.1 The Design Goal
+### 3.1 The Design Goal
 
 Standard REDCap survey layouts present one question per row. For administrative request forms — position requests, supply orders, travel approvals — this produces a form that looks like a questionnaire rather than a structured document. A table-based embedding layout presents the same fields in a grid that resembles an internal form or memo, which matches the mental model of the people filling it out and makes the form feel purpose-built.
 
-## 3.2 How It Works
+### 3.2 How It Works
 
 Two descriptive fields, each holding an HTML table, divide the fields into logical groups. The first table collects requester identity; the second collects the substance of the request. All data-entry fields are embedded inside table cells; they do not appear in their normal sequential position.
 
@@ -86,13 +86,13 @@ Requested FTE information
 
 The underlying fields (`fname`, `lname`, `email`, `title`, `fte`, `sal`) are text fields that accept input normally — they are simply rendered inside the table cells instead of in their default sequential positions. Because they are embedded, their Field Labels are suppressed on screen, but the table's column and row headers provide equivalent context.
 
-## 3.3 Embedding a Calculated Field in the Table
+### 3.3 Embedding a Calculated Field in the Table
 
 The `calc` field is a calculated field with the formula `[sal]*([fte]/100)`. It is embedded in the same second table as its source inputs (`sal` and `fte`). Because calculated fields update in real time as the user enters data, the prorated salary cell updates the moment `sal` or `fte` changes — without a page reload. The user sees the calculation directly adjacent to the inputs it depends on, in the same document context, which eliminates the need to explain the formula or place the result on a separate form section.
 
 This is the key advantage of embedding calculated fields in context: the result appears where it is meaningful, not as a separate labeled field below the form.
 
-## 3.4 @PLACEHOLDER as the Primary In-Cell Label
+### 3.4 @PLACEHOLDER as the Primary In-Cell Label
 
 When a field is embedded in a table cell, its Field Label is suppressed. The table column or row header already provides semantic context for the column as a whole. `@PLACEHOLDER` then provides the cell-level prompt — the grayed-out hint text inside the empty input box — completing a two-tier labeling system:
 
@@ -113,7 +113,7 @@ Even though this repeats the column header, the redundancy is intentional: the p
 
 > **Important:** Even though the Field Label is suppressed on the instrument, always give embedded fields meaningful Field Labels. Field Labels appear in reports, exports, and the Codebook — they are the authoritative name for the field everywhere outside the instrument.
 
-## 3.4b Reading Embedded Tables in the Codebook vs the Data Dictionary
+### 3.4b Reading Embedded Tables in the Codebook vs the Data Dictionary
 
 When auditing or inheriting a project that uses table-based field embedding, be aware that the **Codebook** and the **Data Dictionary** tell very different stories about the same descriptive field.
 
@@ -129,21 +129,21 @@ The **Data Dictionary CSV** (downloaded from the project) preserves the complete
 
 **Practical rule:** Use the Codebook to quickly identify *which* fields are embedded in a descriptive field. Use the Data Dictionary CSV or the Online Designer to understand *how* those fields are laid out.
 
-## 3.5 The Field Order in the Data Dictionary
+### 3.5 The Field Order in the Data Dictionary
 
 The physical order of fields in the Data Dictionary does not need to match the visual order in the tables. In the FTE example, `desc0` and `desc1` appear first (rows 2–3 in the DD), followed by all the data-entry fields (`fname`, `lname`, `email`, `title`, `fte`, `sal`, `calc`) in any convenient order. REDCap resolves the embedding references and renders each field in the cell where it is referenced, regardless of where it sits in the field list.
 
 ---
 
-# 4. Pattern 2 — Piped Descriptive Fields as Live Email Template Previews
+## 4. Pattern 2 — Piped Descriptive Fields as Live Email Template Previews
 
-## 4.1 The Design Problem
+### 4.1 The Design Problem
 
 When setting up Alerts & Notifications or confirmation emails, designers write email bodies using piping tokens (`[field_name]`) and smart variables. The challenge is that the email body is edited in a small text box with no live preview — you cannot easily verify that the email will read correctly until you configure an actual test send.
 
 The email preview instrument pattern solves this by building the email templates directly inside the REDCap project as survey-enabled instruments, using piped descriptive fields to render live previews against actual record data.
 
-## 4.2 How the Preview Instrument Works
+### 4.2 How the Preview Instrument Works
 
 The `email_preview` instrument contains two descriptive fields, each representing one outgoing email:
 
@@ -170,7 +170,7 @@ Notice the critical syntax difference: these fields use **square brackets** (`[f
 
 To use the preview: populate a test record with realistic data, then open the `email_preview` instrument for that record. The descriptive fields render with real data substituted in. You can validate the phrasing, check that currency formatting reads correctly, confirm the table structure looks right, and iterate on the email content directly in the project — without triggering any actual sends.
 
-## 4.3 The [survey-link:] Preview in the Approver Email
+### 4.3 The [survey-link:] Preview in the Approver Email
 
 The approver notification (`desc2`) includes one line that is not just piped field data:
 
@@ -182,7 +182,7 @@ This smart variable renders as a clickable link labeled "Approval Request Form" 
 
 In the actual Alert or ASI email body, the same token is copied in verbatim. When the email fires for a real record, the link goes to that record's approval survey — each approver receives a unique, record-specific link.
 
-## 4.4 @HIDESUBMIT-SURVEY on Preview Instruments
+### 4.4 @HIDESUBMIT-SURVEY on Preview Instruments
 
 Preview instruments are meant to be read, not submitted. The `@HIDESUBMIT-SURVEY` action tag (provided by a REDCap external module; availability varies by institution) is placed on each preview descriptive field. When the instrument is accessed as a survey, the Submit button is hidden, making it clear that this is a review-only view.
 
@@ -190,9 +190,9 @@ Preview instruments are meant to be read, not submitted. The `@HIDESUBMIT-SURVEY
 
 ---
 
-# 5. Pattern 3 — Approval Workflow Using Cross-Instrument Piping
+## 5. Pattern 3 — Approval Workflow Using Cross-Instrument Piping
 
-## 5.1 Workflow Overview
+### 5.1 Workflow Overview
 
 The complete approval workflow proceeds in four steps:
 
@@ -204,7 +204,7 @@ The complete approval workflow proceeds in four steps:
 
 No external routing, ticketing, or email system is required. All of this runs inside a single REDCap project.
 
-## 5.2 Piping Request Context into the Approval Form
+### 5.2 Piping Request Context into the Approval Form
 
 The first field of the `approval` instrument is a descriptive field (`desc4`) that summarizes the request the approver is deciding on:
 
@@ -225,7 +225,7 @@ Every value here is piped from fields that the requester entered on `fte_req`. T
 
 Note that the `calc` field — a calculated value (`[sal]*([fte]/100)`) — is piped here just like any other field. Calculated fields are fully pipeable; `[calc]` renders their computed value.
 
-## 5.3 The Decision and Conditional Branching
+### 5.3 The Decision and Conditional Branching
 
 The approval instrument collects three fields after the context summary:
 
@@ -235,7 +235,7 @@ The approval instrument collects three fields after the context summary:
 
 This is standard branching logic — nothing unique to the approval workflow pattern. The point worth noting is that the combination of piped context + decision fields + branching produces a complete, self-contained approval record with full audit trail, all stored in the same REDCap record as the original request.
 
-## 5.4 Outcome Emails and the Three-Template Pattern
+### 5.4 Outcome Emails and the Three-Template Pattern
 
 After the approver submits, an Alert fires based on the value of `dec`. The `decision_email_preview` instrument pre-builds three email template variants, each as a separate descriptive field under its own section header:
 
@@ -249,7 +249,7 @@ The three-template approach means the Alert system sends a different email body 
 
 ---
 
-# 6. The Dual Syntax in Context: {Curly} vs [Square]
+## 6. The Dual Syntax in Context: {Curly} vs [Square]
 
 The FTE example project is an unusually clean illustration of when to use each syntax, because both appear in the same project for the same underlying data.
 
@@ -265,7 +265,7 @@ A common confusion is reaching for `[square]` in a descriptive field and expecti
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Can I use a piping reference (`[calc]`) to display a calculated value in an email-preview descriptive field?**
 
@@ -293,13 +293,13 @@ A common confusion is reaching for `[square]` in a descriptive field and expecti
 
 ---
 
-# 8. Pattern 4 — Cascading Sub-Field Drill-Down in Radio Choice Labels
+## 8. Pattern 4 — Cascading Sub-Field Drill-Down in Radio Choice Labels
 
-## 8.1 The Design Goal
+### 8.1 The Design Goal
 
 Some questions have a natural hierarchy: selecting one answer should immediately reveal a more specific follow-up, and selecting a sub-answer may reveal yet another level. The standard approach is to build each level as a separate field with its own branching logic — which works but places the sub-questions below the parent question in a separate row, visually disconnected from the choice that triggered them. Embedding sub-fields directly inside the parent radio choice label places them inline, adjacent to the option they relate to, creating an intuitive drill-down experience without extra screen real estate.
 
-## 8.2 How It Works
+### 8.2 How It Works
 
 Place `{sub_field_name}` references inside the choice label of the parent radio button. When a respondent selects that option, the embedded sub-field appears inline beside it — and branching logic on the sub-field simultaneously controls whether it is active at all.
 
@@ -329,7 +329,7 @@ affil_dept_other (text) — branching logic: [affil_dept]=3
 
 Selecting "University" immediately shows the `affil_dept` radio embedded next to that choice. Selecting "School of Medicine" within `affil_dept` immediately shows the `affil_dept_med` radio embedded next to it — three levels of specificity visible in a compact, connected layout.
 
-## 8.3 Role of Branching Logic Alongside Embedding
+### 8.3 Role of Branching Logic Alongside Embedding
 
 Field embedding controls **where** a sub-field appears on screen. Branching logic controls **whether** the sub-field is active at all. You need both:
 
@@ -340,7 +340,7 @@ Together they produce a sub-field that only appears when needed AND appears at t
 
 **Important:** Because branching logic clears hidden field values, changing a top-level radio selection after sub-fields have been filled will clear the sub-field data automatically. This is correct behavior for hierarchical data — ensure respondents understand the form is dynamic.
 
-## 8.4 When to Use This Pattern
+### 8.4 When to Use This Pattern
 
 This pattern is well suited to:
 
@@ -355,7 +355,7 @@ This pattern is well suited to:
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Using curly braces in the email-preview descriptive fields.** A `{field_name}` reference in a descriptive field embeds the input element there — which is not what you want in a preview instrument. The input box will appear instead of the stored value. Use `[field_name]` (square brackets) for display in preview instruments.
 
@@ -371,7 +371,7 @@ This pattern is well suited to:
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-FD-07 — Field Embedding](RC-FD-07_Field-Embedding.md) (mechanics of curly-brace embedding, rules, valid embedding locations including radio choice labels)
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md)(companion to Pattern 4: branching logic controls sub-field visibility alongside embedding positioning)

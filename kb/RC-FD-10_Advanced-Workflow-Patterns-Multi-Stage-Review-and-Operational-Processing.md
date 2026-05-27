@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article documents design patterns from three operational project archetypes — a **Grant Approval** system, an **Equipment Request** system, and a **Support Ticketing** system — that extend the patterns introduced in [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md). All three projects build on field embedding and piping but add new mechanisms: editable carry-forward of data between instruments, dropdown-driven auto-population of related fields, inline display of uploaded documents, multi-reviewer parallel workflows, a checkbox-gated email preview selector, staff-facing operational instruments, checkbox-triggered Alerts with self-documenting labels, `@USERNAME`-driven assignee defaulting, hidden anchor fields for reliable timestamp calculations, and status-gated close field patterns.
 
@@ -22,7 +22,7 @@ Each pattern is documented with the design goal, how it works, and the specific 
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **`@DEFAULT`**
 
@@ -54,13 +54,13 @@ An instrument that opens with piped read-only context tables showing the request
 
 ---
 
-# 3. Pattern 1 — @DEFAULT for Editable Cross-Instrument Data Carry-Forward
+## 3. Pattern 1 — @DEFAULT for Editable Cross-Instrument Data Carry-Forward
 
-## 3.1 The Problem @DEFAULT Solves
+### 3.1 The Problem @DEFAULT Solves
 
 In the grant approval workflow, applicants submit basic application data (project name, PI info, IRB number) through the `application` instrument. Before routing to reviewers, an administrator reviews and potentially corrects this data in the `request_info` instrument. The administrator's copy must be editable — piping (`[pname]` in a label) is read-only and won't work. @DEFAULT is the right tool.
 
-## 3.2 How It Works
+### 3.2 How It Works
 
 On the `request_info` instrument, parallel fields exist for each key application value:
 
@@ -74,7 +74,7 @@ On the `request_info` instrument, parallel fields exist for each key application
 
 When the administrator opens `request_info` for the first time for a given record, each field auto-fills from the corresponding application field. The fields are fully editable — the admin can correct typos, normalize formatting, or update details before routing to reviewers.
 
-## 3.3 Why @DEFAULT and Not Piping
+### 3.3 Why @DEFAULT and Not Piping
 
 | Mechanism | Syntax | Editable? | Use when |
 |---|---|---|---|
@@ -83,7 +83,7 @@ When the administrator opens `request_info` for the first time for a given recor
 
 The practical impact: the `pname1` value (from request_info) becomes the authoritative project name for all downstream instruments — reviewer forms, summary tables, and outcome emails all pipe `[pname1]`, not the original `[pname]`. If the admin corrects a typo in `pname1`, the correction propagates everywhere.
 
-## 3.4 @DEFAULT Behavior Notes
+### 3.4 @DEFAULT Behavior Notes
 
 - @DEFAULT writes the value only when the field is **blank**. If the field already has a saved value, @DEFAULT does not overwrite it.
 - If the source field (`[pname]`) is blank when `request_info` is first opened, @DEFAULT pre-fills with a blank — effectively doing nothing. Ensure the source instrument is complete before the admin opens the downstream form.
@@ -91,15 +91,15 @@ The practical impact: the `pname1` value (from request_info) becomes the authori
 
 ---
 
-# 4. Pattern 2 — Dropdown-Driven @CALCTEXT Lookup
+## 4. Pattern 2 — Dropdown-Driven @CALCTEXT Lookup
 
-## 4.1 The Design Goal
+### 4.1 The Design Goal
 
 The grant review workflow assigns up to three reviewers per application. Each reviewer is selected from a shared roster of five people. When an admin selects "Thor Odinson" from a dropdown, the corresponding name and email should populate automatically in adjacent fields — so the reviewer notification email can address Thor by name and route to his correct email address.
 
 This is a lookup pattern: given a key (the reviewer code), return the associated attributes (name, email).
 
-## 4.2 Implementation
+### 4.2 Implementation
 
 Three fields work together per reviewer slot, and all three are embedded in the same table row:
 
@@ -121,7 +121,7 @@ The @CALCTEXT annotation on `reve1`:
 
 This pattern repeats identically for `rev2`/`revn2`/`reve2` and `rev3`/`revn3`/`reve3`.
 
-## 4.3 The Embedded Table Ties It Together
+### 4.3 The Embedded Table Ties It Together
 
 All nine reviewer fields are embedded in a single descriptive field (`desc0`) as a 4-column table:
 
@@ -135,7 +135,7 @@ All nine reviewer fields are embedded in a single descriptive field (`desc0`) as
 
 The admin selects from the dropdown; the name and email columns fill automatically and are visible in the same row. The layout makes it immediately clear which name and email correspond to which reviewer slot.
 
-## 4.4 Downstream Use
+### 4.4 Downstream Use
 
 The computed `revn1`, `reve1` values are then piped into the reviewer notification email templates:
 
@@ -151,20 +151,20 @@ The review is due on [ddue].
 
 Each reviewer receives a personalized email addressed to them by first name, with a link to their specific review instrument. The @CALCTEXT-computed values make this possible without any external database or lookup service.
 
-## 4.5 Limitations
+### 4.5 Limitations
 
 - The roster is hard-coded in the @CALCTEXT expression. Adding a new reviewer requires editing the annotation on six fields (name + email for three reviewer slots). For frequently changing rosters, a dedicated roster instrument with repeated instances or a Randomization module may be more maintainable.
 - @CALCTEXT fields are not editable by users. If a reviewer's email changes, the project designer must update the annotation.
 
 ---
 
-# 5. Pattern 3 — [file:inline] and [file:link] for In-Form Document Access
+## 5. Pattern 3 — [file:inline] and [file:link] for In-Form Document Access
 
-## 5.1 The Problem
+### 5.1 The Problem
 
 Grant reviewers need to read the IRB application and study protocol to make their assessment. Attaching files to emails is impractical for large PDFs and creates version-control problems if the files are updated. The solution is to display the uploaded files directly inside the reviewer's REDCap survey.
 
-## 5.2 [file:inline] — Embedding a File in Place
+### 5.2 [file:inline] — Embedding a File in Place
 
 In each review instrument (`review_1`, `review_2`, `review_3`), two descriptive fields use the `:inline` modifier:
 
@@ -184,7 +184,7 @@ The `:inline` modifier tells REDCap to render the file's content directly in the
 
 **Behavior:** The inline rendering depends on the file type and the browser. PDFs typically display in an embedded PDF viewer. Images display inline. Other file types may display a download prompt instead.
 
-## 5.3 [file:link] — Providing a Download Link
+### 5.3 [file:link] — Providing a Download Link
 
 A separate descriptive field provides fallback download links for all three uploaded documents:
 
@@ -205,23 +205,23 @@ The `:link` modifier renders as a hyperlink labeled with the uploaded filename. 
 
 **Use case:** Provide download links when inline display is not ideal (large files, non-PDF formats, or users who prefer to open files in a separate application). Using both `:inline` and `:link` in the same instrument gives reviewers options.
 
-## 5.4 Both Modifiers in the Same Instrument
+### 5.4 Both Modifiers in the Same Instrument
 
 The review instruments use both together: `:inline` for the primary reading experience and `:link` for backup access. This is the recommended pattern for document review workflows.
 
-## 5.5 Important Constraint
+### 5.5 Important Constraint
 
 Both `[file:inline]` and `[file:link]` reference the original file field from the application instrument. If no file has been uploaded to that field, the reference renders blank — no link, no viewer. Build Alert trigger conditions or instrument completion requirements to ensure files are uploaded before review forms are activated.
 
 ---
 
-# 6. Pattern 4 — Multi-Reviewer Parallel Instruments with Summary Aggregation
+## 6. Pattern 4 — Multi-Reviewer Parallel Instruments with Summary Aggregation
 
-## 6.1 The Design Goal
+### 6.1 The Design Goal
 
 A grant review committee of three independent reviewers each needs to record a preliminary decision, an impact score, and comments — without seeing each other's responses before submitting. Then a program officer needs a side-by-side view of all three reviews.
 
-## 6.2 Parallel Instruments
+### 6.2 Parallel Instruments
 
 Three instruments (`review_1`, `review_2`, `review_3`) are structurally identical:
 
@@ -244,7 +244,7 @@ Variable names use numeric suffixes to distinguish reviewers across instruments:
 
 Each reviewer receives a unique `[survey-link:]` to their own instrument. Because each instrument is separate, reviewers cannot see each other's input — they are filling in different forms on the same record.
 
-## 6.3 Reviewer Notification Emails with Named Greeting
+### 6.3 Reviewer Notification Emails with Named Greeting
 
 The reviewer notification emails address each reviewer by the auto-computed `revn` value:
 
@@ -258,7 +258,7 @@ The review is due on [ddue].
 
 This pattern (from Pattern 2) means the notification is personalized and routes to the right instrument without any manual address lookup.
 
-## 6.4 The Review Summary Table
+### 6.4 The Review Summary Table
 
 After all three reviews are collected, the `review_summary` instrument aggregates everything into a single comparative view using a piped descriptive field (`sum1`):
 
@@ -274,7 +274,7 @@ The column headers use `[rev1]`, `[rev2]`, `[rev3]` to pipe the reviewer identit
 
 This is pure piping across instruments — all values come from fields that exist on the three review instruments, and REDCap pipes them freely since they are all in the same record.
 
-## 6.5 Conditional Additional Comments Display
+### 6.5 Conditional Additional Comments Display
 
 Below the summary table, three additional descriptive fields show each reviewer's free-text comments — but only if the reviewer actually entered something. This uses a non-empty text check in branching logic:
 
@@ -291,15 +291,15 @@ The `<> ""` condition (not equal to empty string) hides the descriptive field en
 
 > **Note:** This is the only documented use of branching logic on a descriptive field where the condition tests a *different* field's content rather than a structured choice. The `<> ""` syntax works for any text or notes field.
 
-## 6.6 Naming Convention Note
+### 6.6 Naming Convention Note
 
 The suffix pattern (`revd1`, `revd12`, `revd123`) is unconventional but intentional — it avoids leading zeros and keeps names short. A cleaner convention would be `revd_1`, `revd_2`, `revd_3`, which is easier to maintain and extend. Either works; consistency within the project is what matters.
 
 ---
 
-# 7. Pattern 5 — Checkbox-Gated Email Preview Selector
+## 7. Pattern 5 — Checkbox-Gated Email Preview Selector
 
-## 7.1 The Problem with Multi-Stage Email Previews
+### 7.1 The Problem with Multi-Stage Email Previews
 
 The equipment request workflow involves six distinct emails across the processing lifecycle:
 1. Request confirmation (to requester)
@@ -311,7 +311,7 @@ The equipment request workflow involves six distinct emails across the processin
 
 Displaying all six previews at once in the `email_preview` instrument would be cluttered and difficult to review. The checkbox-gated selector provides a cleaner alternative.
 
-## 7.2 How the Selector Works
+### 7.2 How the Selector Works
 
 A checkbox field (`egemail`) at the top of the `email_preview` instrument acts as the selector:
 
@@ -335,22 +335,22 @@ Each preview descriptive field has branching logic that shows it only when the c
 
 The selector checkbox has `@HIDESUBMIT-SURVEY` applied to it. This means opening the instrument as a survey hides the Submit button — the instrument is for review only, and the checkbox state is never "submitted" in a meaningful sense.
 
-## 7.3 Benefits Over Static Preview Display
+### 7.3 Benefits Over Static Preview Display
 
 - **Focused review:** Designers can view one email at a time to check specific content without being distracted by others.
 - **Multiple simultaneous:** Checking multiple boxes shows multiple previews at once for comparison.
 - **Scalable:** Adding a seventh email type requires only adding a new checkbox choice and a new descriptive field with the corresponding branching condition.
 - **Self-documenting:** The checkbox labels describe what each email is, acting as an index to the email library.
 
-## 7.4 The State Problem
+### 7.4 The State Problem
 
 Because the checkbox field is in the record, checking boxes saves state to the record. When reviewing test records, the selector state persists between sessions. This is a minor operational quirk — the preview instrument is not intended to collect meaningful data. Keep this in mind when reviewing test records; the checkbox state from a prior review session may still be active.
 
 ---
 
-# 8. Pattern 6 — [form-link:] for Internal Staff Routing
+## 8. Pattern 6 — [form-link:] for Internal Staff Routing
 
-## 8.1 [form-link:] vs [survey-link:]
+### 8.1 [form-link:] vs [survey-link:]
 
 Both smart variables generate clickable links that route someone to a specific REDCap form for the current record. The critical difference is access requirements:
 
@@ -359,7 +359,7 @@ Both smart variables generate clickable links that route someone to a specific R
 | Survey link | `[survey-link:instrument:Text]` | None — public URL | Routing external participants or anyone without a REDCap account |
 | Form link | `[form-link:instrument:Text]` | REDCap login required | Routing internal staff who have REDCap access |
 
-## 8.2 Usage in the Equipment Workflow
+### 8.2 Usage in the Equipment Workflow
 
 The equipment request workflow has one externally-facing step (the requester submits via survey) and one internally-facing step (the processor opens the `process` form). The processor notification email uses `[form-link:]`:
 
@@ -374,7 +374,7 @@ Click here to view the details:
 
 If `[survey-link:process:Process form]` were used instead, the link would work only if the `process` instrument is enabled as a survey. Using `[form-link:]` means the processor clicks through to the standard REDCap data entry form, which requires login and shows the form with all standard data entry features (field notes, audit trail, missing data codes, etc.).
 
-## 8.3 When to Choose Which
+### 8.3 When to Choose Which
 
 Use `[survey-link:]` when:
 - The recipient may not have a REDCap account
@@ -388,13 +388,13 @@ Use `[form-link:]` when:
 
 ---
 
-# 9. Pattern 7 — The Display-Then-Act Process Instrument
+## 9. Pattern 7 — The Display-Then-Act Process Instrument
 
-## 9.1 The Design Goal
+### 9.1 The Design Goal
 
 The equipment `process` instrument is filled in by staff who receive the notification email. They need to see the full request before acting on it. But the request data lives on `equipment_request_survey` — the process instrument is a different form. The solution: open the process form with three purely piped read-only context tables, followed by action fields.
 
-## 9.2 Structure
+### 9.2 Structure
 
 The `process` instrument has two distinct zones:
 
@@ -417,7 +417,7 @@ After the context tables, the form collects:
 - `deliver` (checkbox): "Equipment Delivered? *(Selecting 'Yes' will kick off an email to the requester)*"
 - `process_notes`: Internal-only notes (not sent to requester)
 
-## 9.3 Self-Documenting Field Labels
+### 9.3 Self-Documenting Field Labels
 
 The `order` and `deliver` checkboxes use HTML in their field labels to add sub-text explaining what the action triggers:
 
@@ -428,21 +428,21 @@ The `order` and `deliver` checkboxes use HTML in their field labels to add sub-t
 
 This makes the form self-explanatory to anyone who opens it, even without training documentation. The light-weight sub-text (not bold) is visually subordinate to the main question but clearly explains the consequence of checking the box. Staff do not need to know about the Alert configuration — the form tells them what will happen.
 
-## 9.4 Checkbox as Alert Trigger
+### 9.4 Checkbox as Alert Trigger
 
 Each checkbox (`order`, `deliver`) is the trigger condition for an Alert in the Alerts & Notifications module. When the processor checks `order` and saves, the Alert fires and sends the order confirmation email to the requester. When `deliver` is checked and saved, the delivery confirmation fires.
 
 This is a clean separation of concerns: the processor interacts with checkboxes; the Alert engine handles the email. The processor does not need to manually compose or send anything.
 
-## 9.5 Internal vs. External Notes Fields
+### 9.5 Internal vs. External Notes Fields
 
 `notes` (visible label explicitly says it "will be piped into the confirmation email") is intended for requester communication — it appears in the outgoing email via `[notes]`. `process_notes` (section header: "Internal Notes") is for staff-only documentation — it is never piped into any outgoing email. Naming conventions and field labels make this distinction clear within the form itself.
 
 ---
 
-# 10. Pattern 8 — HTML Styling in Descriptive Field Content
+## 10. Pattern 8 — HTML Styling in Descriptive Field Content
 
-## 10.1 Using CSS Classes for Emphasis
+### 10.1 Using CSS Classes for Emphasis
 
 The grant review instruments use HTML with a CSS class to add visual emphasis to the due date:
 
@@ -454,7 +454,7 @@ The `class="red"` applies a built-in REDCap CSS class that renders the text in r
 
 **What this demonstrates:** Descriptive field HTML can combine standard HTML elements, inline CSS, CSS class references, and piped field values freely. The piping resolution happens after the HTML is evaluated, so `[ddue]` inside a `<div>` renders as the date value inside that div.
 
-## 10.2 Using HTML in Choice Labels
+### 10.2 Using HTML in Choice Labels
 
 The equipment request `laptoptype` radio field uses HTML in its choice labels to display multi-line technical specifications:
 
@@ -468,13 +468,13 @@ The `<br>` tags create line breaks within the choice label, allowing each option
 
 ---
 
-# 11. Pattern 9 — Support Queue / Ticketing with @USERNAME, Hidden Anchor Fields, and Status-Gated Close Fields
+## 11. Pattern 9 — Support Queue / Ticketing with @USERNAME, Hidden Anchor Fields, and Status-Gated Close Fields
 
-## 11.1 The Design Goal
+### 11.1 The Design Goal
 
 Operational support teams sometimes use REDCap as an internal ticketing or request-tracking system. A typical structure: staff enter a ticket by selecting a client, categorizing the request, and assigning it to a team member. The ticket records when it was opened, who is handling it, and when and how it was resolved. Three specific patterns make this workflow reliable: using `@USERNAME` to pre-fill an assignee field while keeping it editable, pairing a hidden validated date field with a visible display field for timestamp capture, and gating close fields behind branching logic driven by a status field.
 
-## 11.2 @USERNAME as an Editable Default for Assignee Fields
+### 11.2 @USERNAME as an Editable Default for Assignee Fields
 
 A dropdown listing all staff members can use `@USERNAME` as its action tag annotation. This causes the field to pre-fill with the username of whoever opens the form, while remaining fully editable — the user can change it to any other team member.
 
@@ -488,7 +488,7 @@ This creates a sensible default (whoever opened the ticket is probably handling 
 
 **Important:** The dropdown's choices must use the REDCap username as the raw coded value for `@USERNAME` to pre-fill correctly. If the logged-in username does not match any coded option, the field loads blank and the user must select manually.
 
-## 11.3 The Hidden Anchor Field Pattern for Reliable Timestamps
+### 11.3 The Hidden Anchor Field Pattern for Reliable Timestamps
 
 A recurring challenge with `@TODAY` and `@NOW` fields is that the visible field often lacks proper date validation — or both tags are applied to the same field, producing inconsistent or ambiguous format. A clean workaround splits the timestamp into two fields:
 
@@ -501,7 +501,7 @@ The visible `date_display` field gives staff a readable timestamp at the top of 
 
 > **Why two fields?** `@NOW` fills a date-time string, but calculated fields and `datediff()` often need a date-only value. The pair trades one display field (for humans) against one locked anchor field (for calculations). See [RC-AT-06 — Autofill Action Tags](RC-AT-06_Action-Tags-Autofill.md) for the validation pitfall this pattern avoids.
 
-## 11.4 Status-Gated Close Fields
+### 11.4 Status-Gated Close Fields
 
 Tickets move through a lifecycle: open → in progress → resolved or referred. Close-related fields (close date, closing notes) should only appear when the status field reaches a terminal state — both to keep the form clean during active work and to enforce required closure fields only at the right moment.
 
@@ -521,7 +521,7 @@ When `task_status` is "Complete" or "Referred," the close section appears and `c
 
 **Behavior note:** In REDCap, required fields hidden by branching logic are not validated — hiding a field exempts it from the required check. This means the pattern works as intended: close fields are only enforced when the branching condition makes them visible.
 
-## 11.5 Sub-Service Categorization and the @HIDECHOICE Export Gotcha
+### 11.5 Sub-Service Categorization and the @HIDECHOICE Export Gotcha
 
 When a ticketing form supports multiple high-level categories, sub-service options typically apply only to certain categories. Use branching to show the sub-service field only for the relevant parent:
 
@@ -534,7 +534,7 @@ A common enhancement is to hide retired or internal-only service codes using `@H
 
 ---
 
-# 12. Common Questions
+## 12. Common Questions
 
 **Q: What is the difference between @DEFAULT and piping a value into a label?**
 
@@ -566,7 +566,7 @@ A common enhancement is to hide retired or internal-only service codes using `@H
 
 ---
 
-# 13. Common Mistakes & Gotchas
+## 13. Common Mistakes & Gotchas
 
 **Using @DEFAULT when piping was intended.** If a field uses @DEFAULT to carry data from a prior instrument, anyone who opens the form can modify the pre-filled value. If the data should be read-only context (for display only), use a piped descriptive field instead. Reserve @DEFAULT for situations where the downstream user legitimately needs to be able to correct or update the value.
 
@@ -586,7 +586,7 @@ A common enhancement is to hide retired or internal-only service codes using `@H
 
 ---
 
-# 14. Related Articles
+## 14. Related Articles
 
 - [RC-FD-09 — Field Embedding: Advanced Layout Patterns & Workflow Design](RC-FD-09_Field-Embedding-Advanced-Patterns-and-Workflow-Design.md) (prerequisite; approval workflow patterns, email preview instruments, dual syntax)
 - [RC-AT-03 — Radio & Dropdown Action Tags](RC-AT-03_Action-Tags-Radio-Dropdown.md) (@HIDECHOICE and @SHOWCHOICE behavior; export gotcha)

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Randomize Record API method triggers the randomization of an existing record in a REDCap project. It performs the same action as manually randomizing a record through the REDCap UI, but programmatically via the API.
 
@@ -27,23 +27,23 @@ You must specify a `randomization_id`, which corresponds to a specific randomiza
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### Randomization
+#### Randomization
 The process of assigning a record to a treatment group or allocation value based on a randomization definition configured in REDCap, often with stratification and optional concealment to maintain blinding.
 
-### Randomization ID
+#### Randomization ID
 A numeric identifier for a specific randomization definition in the project. Identifies which target field and event pair to randomize for.
 
-### Stratification
+#### Stratification
 One or more fields that must be populated before a record can be randomized. Used to balance treatment assignments across strata (e.g., age groups, gender).
 
-### Concealed Allocation
+#### Concealed Allocation
 A randomization setup where the actual treatment group assigned is hidden behind a code or masked value (represented as '*') to prevent bias.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -58,9 +58,9 @@ A randomization setup where the actual treatment group assigned is hidden behind
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 
 ```python
 #!/usr/bin/env python
@@ -82,7 +82,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 
 ```r
 #!/usr/bin/env Rscript
@@ -102,7 +102,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 
 ```sh
 #!/bin/sh
@@ -117,7 +117,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 
 ```php
 <?php
@@ -154,7 +154,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 On success, returns the randomization result. The response includes the randomization ID, the record name, the value assigned to the target field, and (if `returnAlt=true`) the alternative target field value.
 
@@ -189,7 +189,7 @@ On failure, an error message is returned in the requested `returnFormat`. Common
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Where do I find the `randomization_id`?**
 
@@ -213,7 +213,7 @@ On failure, an error message is returned in the requested `returnFormat`. Common
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Missing stratification data.** The most common failure reason. If any stratification field for the selected randomization is empty, the call fails. Ensure all required fields are filled before calling this method.
 
@@ -227,7 +227,7 @@ On failure, an error message is returned in the requested `returnFormat`. Common
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) (allocation tables, concealment, stratification)

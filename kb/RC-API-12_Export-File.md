@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export File API method retrieves a file that has been uploaded to a file-upload field in REDCap. This method returns the raw file content as a binary file, not JSON or CSV data. The method is useful when you need to download files attached to specific records programmatically from an external system.
 
@@ -25,7 +25,7 @@ To use this method, you must specify the record, the file-upload field variable 
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -40,7 +40,7 @@ To use this method, you must specify the record, the file-upload field variable 
 
 ---
 
-# 3. Data Export Rights
+## 3. Data Export Rights
 
 Data Export user rights apply to this API request. The following table summarises what happens for each rights level:
 
@@ -57,9 +57,9 @@ To guarantee that the export will not return an error regardless of field taggin
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 
 ```python
 from config import config
@@ -82,7 +82,7 @@ f.write(r.content)
 f.close()
 ```
 
-## 4.2 R
+### 4.2 R
 
 ```r
 source('config.R')
@@ -100,7 +100,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 
 ```sh
 . ./config
@@ -115,7 +115,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 
 ```php
 <?php
@@ -152,7 +152,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The method returns the raw binary file content (e.g., a PDF, image, Word document) directly. The file should be written to disk using a binary write operation. The HTTP status code will be 200 on success.
 
@@ -166,7 +166,7 @@ The `returnFormat` parameter controls the format of error messages only and does
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: My export returns a file, but when I try to open it, it says the file is corrupted. What went wrong?**
 
@@ -190,7 +190,7 @@ The `returnFormat` parameter controls the format of error messages only and does
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Writing to a file in text mode instead of binary mode.** The most common mistake is opening the file for writing in text mode (`'w'` or `'wt'`). This corrupts binary files. Always use binary mode: `'wb'` in Python, `writeBin()` in R, or `fopen($filename, 'wb')` in PHP.
 
@@ -200,7 +200,7 @@ The `returnFormat` parameter controls the format of error messages only and does
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-13 — Import File API](RC-API-13_Import-File.md)(upload files to file-upload fields)

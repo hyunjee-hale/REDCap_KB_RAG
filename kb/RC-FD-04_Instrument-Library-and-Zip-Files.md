@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers two mechanisms for importing and exporting REDCap
 instruments: the REDCap Instrument Library and the Zip File feature.
@@ -24,7 +24,7 @@ different sources.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **REDCap Instrument Library**
 
@@ -59,9 +59,9 @@ the conflict and suggests an alternative name.
 
 ---
 
-# 3. REDCap Instrument Library
+## 3. REDCap Instrument Library
 
-## 3.1 What It Contains
+### 3.1 What It Contains
 
 - Validated clinical and research instruments (e.g., PHQ-9, GAD-7,
     PROMIS scales).
@@ -72,7 +72,7 @@ the conflict and suggests an alternative name.
 - A mix of free and fee-based instruments. The library clearly
     indicates which instruments require a license or fee before import.
 
-## 3.2 Accessing the Library
+### 3.2 Accessing the Library
 
 - From the Project Setup page or Designer page, click REDCap Shared
     Library in the Design Your Data Collection Instruments section.
@@ -83,7 +83,7 @@ the conflict and suggests an alternative name.
 - The library interface allows browsing and searching by instrument
     name, category, and keyword.
 
-## 3.3 Importing from the Library
+### 3.3 Importing from the Library
 
 - Find the instrument you want. Review its description, field count,
     and licensing status.
@@ -99,7 +99,7 @@ the conflict and suggests an alternative name.
     existing ones, REDCap will flag them. Resolve all conflicts before
     using the instrument.
 
-## 3.4 Contributing to the Library
+### 3.4 Contributing to the Library
 
 If you want to contribute one of your instruments to the shared global
 library, contact your local REDCap support team. The submission process
@@ -112,9 +112,9 @@ is made publicly available.
 
 ---
 
-# 4. Zip File Feature
+## 4. Zip File Feature
 
-## 4.1 What Zip Files Contain
+### 4.1 What Zip Files Contain
 
 - The complete metadata of a single instrument: variable names, field
     types, field labels, choices, validation rules, branching logic, and
@@ -123,7 +123,7 @@ is made publicly available.
 - What zip files do NOT contain: any data collected using the
     instrument. Zip files are metadata-only.
 
-## 4.2 Accessing Zip File Export and Import
+### 4.2 Accessing Zip File Export and Import
 
 - Zip file export and import are accessed from within the Online
     Designer — not from the Project Setup page directly.
@@ -134,7 +134,7 @@ is made publicly available.
 - The import option (Upload a zip file) is also in the Online Designer
     instrument list.
 
-## 4.3 Exporting an Instrument as a Zip File
+### 4.3 Exporting an Instrument as a Zip File
 
 - In the Online Designer, locate the instrument you want to export.
 
@@ -147,7 +147,7 @@ is made publicly available.
 - The exported zip file can be stored as a backup, shared with
     collaborators, or imported into another REDCap project.
 
-## 4.4 Importing a Zip File
+### 4.4 Importing a Zip File
 
 - In the Online Designer, click the Upload a zip file option.
 
@@ -170,7 +170,7 @@ is made publicly available.
 
 ---
 
-# 5. Library vs. Zip File: When to Use Each
+## 5. Library vs. Zip File: When to Use Each
 
 | **Factor** | **Instrument Library** | **Zip File** |
 | --- | --- | --- |
@@ -184,7 +184,7 @@ is made publicly available.
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Does importing from the Instrument Library add the instrument to my
 project permanently?**
@@ -233,7 +233,7 @@ institution's REDCap administrator to start the process.
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 - Not reviewing imported instruments after import: variable name
     conflicts may have been silently renamed, or branching logic may
@@ -262,7 +262,7 @@ institution's REDCap administrator to start the process.
 
 ---
 
-# 8. Administrator Configuration
+## 8. Administrator Configuration
 
 Access to the REDCap Shared Library (the consortium's instrument repository) requires a system-level setting to be enabled by a REDCap administrator. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**, "REDCap Shared Library" toggle).
 
@@ -274,7 +274,7 @@ Outbound HTTP access to the Consortium's server (`redcap.vumc.org`) is also requ
 
 ---
 
-# 9. Related Articles
+## 9. Related Articles
 
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (prerequisite)
 

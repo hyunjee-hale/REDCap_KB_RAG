@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article introduces REDCap's branching logic feature — what it does, where it is used across the platform, how to access the branching logic editor, and what is out of scope for the basic series. It is the entry point for the Branching Logic knowledge base series.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Branching Logic**
 
@@ -40,7 +40,7 @@ Every logic statement in REDCap resolves to either true or false. In branching l
 
 ---
 
-# 3. What Branching Logic Does
+## 3. What Branching Logic Does
 
 The branching logic feature has one job: show or hide a specific field based on whether a logic statement is true or false.
 
@@ -53,7 +53,7 @@ The branching logic feature has one job: show or hide a specific field based on 
 
 ---
 
-# 4. Where the Logic Syntax Is Used Across REDCap
+## 4. Where the Logic Syntax Is Used Across REDCap
 
 The same logic syntax that powers branching logic is also used in several other REDCap features. Understanding this shared foundation makes it easier to learn each feature.
 
@@ -72,17 +72,17 @@ The same logic syntax that powers branching logic is also used in several other 
 
 ---
 
-# 5. Accessing the Branching Logic Editor
+## 5. Accessing the Branching Logic Editor
 
 Branching logic for a specific field is configured in the Online Designer. There are two paths:
 
-## 5.1 From the Instrument Field List
+### 5.1 From the Instrument Field List
 
 - In the Online Designer, open the instrument that contains the field you want to add logic to.
 - Locate the field in the instrument's field list.
 - Click the branching logic icon (a fork/branch symbol) next to the field. This opens the branching logic editor for that field.
 
-## 5.2 From the Field Edit Dialog
+### 5.2 From the Field Edit Dialog
 
 - In the Online Designer, open the field edit dialog for any field (click the pencil/edit icon).
 - Scroll to the Branching Logic section within the dialog.
@@ -92,7 +92,7 @@ Branching logic for a specific field is configured in the Online Designer. There
 
 ---
 
-# 6. Scope of This Series
+## 6. Scope of This Series
 
 This knowledge base series covers the foundations of REDCap's logic syntax. The following topics are covered:
 
@@ -112,7 +112,7 @@ The following topics are outside the scope of this series. Each has its own dedi
 
 ---
 
-# 7. Common Questions
+## 7. Common Questions
 
 **Q: Does branching logic affect every feature in REDCap that uses a logic statement?**
 
@@ -136,7 +136,7 @@ The following topics are outside the scope of this series. Each has its own dedi
 
 ---
 
-# 8. Common Mistakes & Gotchas
+## 8. Common Mistakes & Gotchas
 
 **Assuming hidden fields retain their data.** When branching logic hides a field, its stored value is deleted. If a user triggers the hide condition after entering data, that data is gone. Test all logic thoroughly in Development mode before collecting real data.
 
@@ -148,9 +148,9 @@ The following topics are outside the scope of this series. Each has its own dedi
 
 ---
 
-# 9. Design Patterns
+## 9. Design Patterns
 
-## 9.1 Checkbox Gate (Participation / Intent Gate)
+### 9.1 Checkbox Gate (Participation / Intent Gate)
 
 A common survey design pattern is to place a single required checkbox at the top of a form — labelled something like "Yes, I would like to participate" or "I confirm I want to proceed" — and then apply `[gate_field(1)]=1` as the branching logic condition on every subsequent field. This has the effect of hiding all questions until the respondent explicitly opts in.
 
@@ -172,7 +172,7 @@ Apply this expression as the branching logic for every field that should only ap
 
 ---
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md)(the logic language and writing your first statement)
 - [RC-BL-03 — Branching Logic: Combining Statements](RC-BL-03_Branching-Logic-Combining-Statements.md)(AND, OR, parentheses)

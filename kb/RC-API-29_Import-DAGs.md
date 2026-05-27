@@ -15,13 +15,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import DAGs API method creates new Data Access Groups or updates existing ones in your project. You provide a JSON or CSV payload containing DAG definitions: a human-readable display name and an optional unique group name. If the `unique_group_name` is omitted or empty, REDCap auto-generates it. Use this method to automate DAG creation, migrate DAGs between projects, or bulk-import DAG structures from external systems.
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -34,9 +34,9 @@ The Import DAGs API method creates new Data Access Groups or updates existing on
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests, json
@@ -61,7 +61,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -87,7 +87,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -102,7 +102,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -150,7 +150,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns the count of DAGs created or updated. For example: `2` means two DAGs were imported. If a `unique_group_name` is provided and already exists, that DAG is updated; otherwise, a new DAG is created.
 
@@ -158,7 +158,7 @@ Example response: `2`
 
 ---
 
-# 5. CSV Format
+## 5. CSV Format
 
 When submitting the `data` payload as CSV (`format='csv'`), the file uses the following structure.
 
@@ -187,7 +187,7 @@ Seattle,seattle
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Do I have to provide a `unique_group_name` when importing?**
 
@@ -211,7 +211,7 @@ Seattle,seattle
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using spaces or special characters in `unique_group_name`.** While REDCap may accept them, stick to alphanumeric characters and underscores for consistency and to avoid downstream issues. If you provide a complex name, it may not work properly in data entry or other operations.
 
@@ -227,7 +227,7 @@ Seattle,seattle
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains DAG concepts, structure, and configuration)

@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers REDCap's **PDF Snapshots of Records** feature — a mechanism for automatically generating a PDF of one or more instruments at a defined trigger point. Snapshots can be triggered by survey completion or by custom logic, and can capture a single instrument, multiple selected instruments, or all instruments in a record. They are stored in the project's File Repository and optionally in per-record file upload fields.
 
@@ -22,7 +22,7 @@ PDF Snapshots are independent of the e-Consent Framework — they do not require
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **PDF Snapshot**
 
@@ -54,7 +54,7 @@ A trigger that fires every time a specific survey is completed. Does not support
 
 ---
 
-# 3. Accessing PDF Snapshots
+## 3. Accessing PDF Snapshots
 
 Navigate to **Project Setup → Online Designer → e-Consent** button, then select the **"PDF Snapshots of Records"** tab.
 
@@ -64,7 +64,7 @@ The main feature of this page is the **"Triggers for PDF Snapshots"** table, whi
 
 ---
 
-# 4. The Snapshot Triggers Table
+## 4. The Snapshot Triggers Table
 
 The table lists all snapshot triggers with the following columns:
 
@@ -86,15 +86,15 @@ Above the table:
 
 ---
 
-# 5. Creating a Snapshot Trigger
+## 5. Creating a Snapshot Trigger
 
 Click **"Add new trigger"** to open the snapshot configuration popup. The popup has four sections:
 
-## 5.1 Name of Trigger
+### 5.1 Name of Trigger
 
 Enter a descriptive name for the trigger. This appears in the table and in the File Repository alongside generated PDFs. A clear, specific name (e.g., "Attestation — Site A Verification") makes managing triggers and finding PDFs significantly easier.
 
-## 5.2 Trigger Conditions
+### 5.2 Trigger Conditions
 
 Select one of two trigger types — they cannot be combined:
 
@@ -118,7 +118,7 @@ PDF Snapshot triggers cannot use both survey completion and custom logic simulta
 
 Each instrument in REDCap has a `[instrument_name_complete]` variable that is set to "2" when the instrument is marked complete. Note that users can manually set this status — factor this in when using the workaround.
 
-## 5.3 Scope of the Snapshot
+### 5.3 Scope of the Snapshot
 
 Configure three items:
 
@@ -134,7 +134,7 @@ When enabled, REDCap strips fields hidden by branching logic for that record fro
 
 Available when Multi-Language Management (MLM) is configured. When enabled, the PDF is generated in the language the participant used to fill out the instrument(s). For example, if a participant completed a form in Spanish, the snapshot PDF will be in Spanish.
 
-## 5.4 Location
+### 5.4 Location
 
 **File Repository** — All snapshot PDFs are automatically saved to the File Repository under the "PDF Snapshot Archive" folder. This is always active and cannot be disabled.
 
@@ -142,7 +142,7 @@ Available when Multi-Language Management (MLM) is configured. When enabled, the 
 
 If managing many records, per-record file upload fields are recommended for easier access. They also enable attaching PDFs to Alerts (e.g., confirmation emails) or displaying them inline. See Section 4.5 of [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md) for guidance on setting up a "Documentation" instrument to house these fields.
 
-## 5.5 Snapshot File Name
+### 5.5 Snapshot File Name
 
 Customize the PDF filename using static text and piped values. REDCap always appends a timestamp to prevent filename conflicts.
 
@@ -156,13 +156,13 @@ pid[project-id]_form[instrument-label]_id[record-name]
 → Doe-John-record_56789_2025-12-12_121534.pdf
 ```
 
-## 5.6 Saving the Trigger
+### 5.6 Saving the Trigger
 
 Click **"Save"** to finalize the trigger. REDCap immediately begins monitoring the project for the defined conditions. The trigger will appear in the snapshot table and is active from that moment forward.
 
 ---
 
-# 6. Using PDF Snapshots for Verification Attestations
+## 6. Using PDF Snapshots for Verification Attestations
 
 A common use of PDF Snapshots in e-Consent workflows is capturing staff attestations of identity verification. The setup follows the same steps as any other snapshot trigger, applied to a verification instrument:
 
@@ -176,9 +176,9 @@ This produces a timestamped, immutable PDF of the staff member's attestation, st
 
 ---
 
-# 7. Finding Snapshot PDFs
+## 7. Finding Snapshot PDFs
 
-## 7.1 File Repository
+### 7.1 File Repository
 
 All snapshot PDFs are stored in the File Repository under **"PDF Snapshot Archive."** Access via the left-hand Applications menu (requires appropriate user rights).
 
@@ -199,13 +199,13 @@ The archive table includes:
 
 Bulk download is available — all files download as a single ZIP archive. Large projects can produce very large archives.
 
-## 7.2 Per-Record File Upload Fields
+### 7.2 Per-Record File Upload Fields
 
 If you configured file upload fields for your snapshots, the PDFs are accessible directly from each record. Per-record storage is recommended for high-volume projects where the archive becomes difficult to navigate.
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Do I need the e-Consent Framework to use PDF Snapshots?**
 **A:** No. PDF Snapshots are a standalone feature. You can use them without any e-Consent configuration — for example, to capture a staff member's attestation form, a summary of a completed assessment, or a scheduled monthly data extract.
@@ -239,7 +239,7 @@ If you configured file upload fields for your snapshots, the PDFs are accessible
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Logic-based trigger fires only once — missed if conditions were met before trigger was created.** Logic triggers evaluate from the moment they are saved and fire the first time the condition becomes true for each record. Records where the condition was already true before the trigger was created will not produce a PDF. If you need retroactive snapshots, consider duplicating the relevant records' data manually or using a report.
 
@@ -253,7 +253,7 @@ If you configured file upload fields for your snapshots, the PDFs are accessible
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -262,7 +262,7 @@ If you configured file upload fields for your snapshots, the PDFs are accessible
 ---
 
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)

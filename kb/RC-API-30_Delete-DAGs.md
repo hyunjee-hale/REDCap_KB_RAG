@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Delete DAGs API method removes Data Access Groups from your project. You provide a list of DAG unique group names (the `unique_group_name` values) to delete. This method deletes the DAG definition itself. Users and records assigned to that DAG are not deleted, but they lose the DAG association. Use this method to clean up unused DAGs, automate DAG lifecycle management, or remove groups after consolidation.
 
@@ -23,7 +23,7 @@ Caution: Deleting a DAG is a significant operation. Users in deleted DAGs may lo
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -34,9 +34,9 @@ Caution: Deleting a DAG is a significant operation. Users in deleted DAGs may lo
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 ```python
 from config import config
 import requests, json
@@ -54,7 +54,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -71,7 +71,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 ```sh
 #!/bin/sh
 
@@ -86,7 +86,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 ```php
 <?php
 
@@ -121,7 +121,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the API returns a count of DAGs deleted. For example: `1` means one DAG was removed from the project. If a DAG name does not exist in the project, it is ignored and does not affect the response.
 
@@ -129,7 +129,7 @@ Example response: `1`
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: What happens to data records assigned to a deleted DAG?**
 
@@ -157,7 +157,7 @@ Example response: `1`
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Deleting a DAG without reassigning its users or records.** Users and records assigned to a deleted DAG will lose the DAG association. Before deleting a DAG in production, export users and records to identify what is affected. If users need to retain data isolation, reassign them to alternative DAGs or adjust record assignments.
 
@@ -173,7 +173,7 @@ Example response: `1`
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (foundational; required reading before using any API method)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md) (explains DAG concepts, structure, and configuration)

@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Export Project XML API exports the entire project — all records, events, arms, instruments, fields, and project attributes — as a single XML file in **CDISC ODM format (ODM version 1.3.1)**. This XML can be used to clone the project on the same REDCap server or another REDCap server (by uploading it on the Create New Project page), or to import it into any other ODM-compatible system.
 
@@ -27,29 +27,29 @@ This method requires only the API Export right.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
-### CDISC ODM Format
+#### CDISC ODM Format
 A standardized XML format (Operational Data Model version 1.3.1) used for representing clinical trial data and metadata. REDCap exports projects in this format to ensure portability across systems.
 
-### Metadata
+#### Metadata
 Project structure including field definitions, forms/instruments, events, arms, and validation rules. This is always exported regardless of the `returnMetadataOnly` setting.
 
-### Data Export Rights
+#### Data Export Rights
 User-level permissions that control which fields a user can export. Options include Full Data Set, De-Identified, or Remove All Identifier Fields. These rights are enforced even when exporting via API.
 
-### returnMetadataOnly Parameter
+#### returnMetadataOnly Parameter
 A boolean flag that determines whether the export includes only the project structure (true) or both structure and record data (false, the default).
 
-### Filter Logic
+#### Filter Logic
 A REDCap expression that restricts which records are included in the export (e.g., `[age] > 30`). Only applies to data; all metadata is always included.
 
-### Repeating Instruments and Events
+#### Repeating Instruments and Events
 Project features that allow data collection forms or time points to be repeated multiple times per record. These are included in the XML export.
 
 ---
 
-# 3. Parameters
+## 3. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -69,9 +69,9 @@ Project features that allow data collection forms or time points to be repeated 
 
 ---
 
-# 4. Request Examples
+## 4. Request Examples
 
-## 4.1 Python
+### 4.1 Python
 ```python
 #!/usr/bin/env python
 
@@ -92,7 +92,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 4.2 R
+### 4.2 R
 ```r
 #!/usr/bin/env Rscript
 
@@ -111,7 +111,7 @@ result <- postForm(
 print(result)
 ```
 
-## 4.3 cURL
+### 4.3 cURL
 ```sh
 #!/bin/sh
 
@@ -126,7 +126,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       $API_URL
 ```
 
-## 4.4 PHP
+### 4.4 PHP
 ```php
 <?php
 
@@ -162,7 +162,7 @@ print $output;
 
 ---
 
-# 5. Response
+## 5. Response
 
 The API always returns a single XML string in **CDISC ODM format (ODM version 1.3.1)**, regardless of any format parameters. The `returnFormat` parameter controls only error message formatting, not the response itself.
 
@@ -170,7 +170,7 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Can I use the exported XML to create a new project?**
 **A:** Yes. Use the Export Project XML API to download your project design, then use [RC-API-37 — Import Project (Create Project) API](RC-API-37_Import-Project-Create-Project.md) (Import Project / Create Project) with that XML to clone the project.
@@ -192,7 +192,7 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Data included by default:** `returnMetadataOnly` defaults to `'false'`, meaning data is exported unless you explicitly opt out. If you only want the project structure, always pass `returnMetadataOnly='true'`.
 
@@ -208,7 +208,7 @@ The ODM XML includes all metadata (fields, forms, events, arms) and, unless `ret
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)
 - [RC-API-34 — Export Project Info API](RC-API-34_Export-Project-Info.md)

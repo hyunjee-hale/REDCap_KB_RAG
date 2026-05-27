@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Import File API method uploads a file to a file-upload field in REDCap. This method accepts a file from your local system and attaches it to a specific record in a file-upload field. This is useful for automating file uploads from external systems or workflows.
 
@@ -25,7 +25,7 @@ To use this method, you must specify the record, the file-upload field variable 
 
 ---
 
-# 2. Parameters
+## 2. Parameters
 
 | Parameter | Required | Description |
 |---|---|---|
@@ -41,9 +41,9 @@ To use this method, you must specify the record, the file-upload field variable 
 
 ---
 
-# 3. Request Examples
+## 3. Request Examples
 
-## 3.1 Python
+### 3.1 Python
 
 ```python
 from config import config
@@ -69,7 +69,7 @@ print('HTTP Status: ' + str(r.status_code))
 print(r.text)
 ```
 
-## 3.2 R
+### 3.2 R
 
 ```r
 source('config.R')
@@ -91,7 +91,7 @@ result <- postForm(
 print(result)
 ```
 
-## 3.3 cURL
+### 3.3 cURL
 
 ```sh
 . ./config
@@ -108,7 +108,7 @@ $CURL -H "Accept: application/json" \
       $API_URL
 ```
 
-## 3.4 PHP
+### 3.4 PHP
 
 ```php
 <?php
@@ -151,7 +151,7 @@ print $output;
 
 ---
 
-# 4. Response
+## 4. Response
 
 On success, the method returns a success message or JSON response (if `returnFormat='json'` is set). The HTTP status code will be 200.
 
@@ -165,7 +165,7 @@ Example success response (JSON):
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I'm getting an error about multipart form data. What does that mean?**
 
@@ -189,7 +189,7 @@ Example success response (JSON):
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Sending the file as a string instead of a file upload.** A common error is trying to send the file content as a JSON field or as a base64-encoded string. Import File expects an actual file upload using the multipart form data encoding. Use your HTTP library's file upload mechanism, not a text field.
 
@@ -199,7 +199,7 @@ Example success response (JSON):
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (overview; authentication, tokens, playground)
 - [RC-API-12 — Export File API](RC-API-12_Export-File.md)(download files from file-upload fields)

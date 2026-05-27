@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The **File Upload Settings** page controls the infrastructure for how and where all uploaded files are stored across the REDCap instance, as well as what types of files can be uploaded and what size limits apply in different contexts. This includes configuring storage backends (local, S3, Azure, etc.), file blocklists for security, and upload limits for the File Repository, file upload fields, Send-It, and other file upload locations. Settings here apply uniformly to all projects on the instance.
 
@@ -24,7 +24,7 @@ The **File Upload Settings** page (under **System Configuration**) controls wher
 
 ---
 
-# File Storage Methods
+## File Storage Methods
 
 REDCap supports several file storage backends. Only one method should be active at a time. All uploaded files are stored on your web server or an external server — REDCap itself does not retain them in the database.
 
@@ -58,9 +58,9 @@ The Azure environment can be set to either *Azure Commercial/Global* (default, e
 
 ---
 
-# Storage Configuration Settings
+## Storage Configuration Settings
 
-## Local Server File Storage
+### Local Server File Storage
 
 **Set Local File Storage Location**
 An alternative directory path can be specified for local file storage. If left blank, REDCap uses the default `edocs` folder. For security, this path should not be accessible over the web (i.e., not under the web root).
@@ -74,7 +74,7 @@ Options: *Disabled* / *Enabled*
 
 ---
 
-# Restricted File Types for Uploaded Files
+## Restricted File Types for Uploaded Files
 
 A system-level blocklist of file extensions prevents users from uploading potentially dangerous file types into REDCap. This applies to all upload locations across the system (File Repository, file upload fields, Send-It, etc.).
 
@@ -93,13 +93,13 @@ This list covers executables, scripts, system files, and installer formats that 
 
 ---
 
-# Configuration Options for Various Types of Stored Files
+## Configuration Options for Various Types of Stored Files
 
 Upload limits and enable/disable controls are set independently for each file upload context in REDCap.
 
 > **Server default:** The web server's maximum file upload size is determined by two values in `PHP.INI`: `upload_max_filesize` and `post_max_size`. The lower of the two applies. To change the server default, modify these values and restart the web server. The server default is typically 1024 MB unless changed. Per-context limits in REDCap can only be set *lower* than the server default.
 
-## File Repository
+### File Repository
 
 **Enable File Uploading for the File Repository Module**
 Globally enables or disables user-initiated file uploads to the File Repository. Even when disabled, REDCap still stores automatically generated files in the File Repository (e.g., data export files, eConsent PDFs).
@@ -119,7 +119,7 @@ Options: *Disabled* / *Enabled*
 
 > Disable this setting if your institution's data security policy requires authenticated access to all files stored in REDCap.
 
-## 'File Upload' Fields
+### 'File Upload' Fields
 
 **Enable 'File Upload' Field Types**
 Globally enables or disables the File Upload field type on data entry forms and surveys. When disabled, the field type is hidden in the Online Designer and any existing File Upload fields become non-functional (though their configuration is retained).
@@ -129,7 +129,7 @@ Options: *Disabled* / *Enabled*
 **Upload Max File Size for 'File' Field Types on Forms/Surveys**
 Maximum size (in MB) for a file uploaded via a File Upload field on a data entry form or survey. If left blank, the server default applies.
 
-## Send-It
+### Send-It
 
 **Enable Send-It**
 Send-It allows users to securely transfer files to other recipients via a temporary expiring link. It can be enabled for all REDCap locations, or restricted to specific areas. Files are deleted from the server when their link expires.
@@ -143,12 +143,12 @@ Options:
 **Send-It Upload Max File Size**
 Maximum size (in MB) for a file sent via Send-It. If left blank, the server default applies.
 
-## File Attachments (General)
+### File Attachments (General)
 
 **Upload Max File Size for General File Attachments**
 Applies to miscellaneous file attachment contexts not covered above, including attachments to Descriptive fields and files uploaded in the Data Resolution Workflow.
 
-## Data Resolution Workflow
+### Data Resolution Workflow
 
 **Allow File Attachments for Data Queries**
 When enabled, users can attach files to open data queries in the Data Resolution Workflow (e.g., uploading source documentation to support a query response). When disabled, this option does not appear within the DRW.
@@ -159,7 +159,7 @@ Options: *Disabled* / *Enabled*
 
 ---
 
-# 2. Common Questions
+## 2. Common Questions
 
 **Q: Which file storage backend should I use?**
 Local storage is simplest for single-server deployments but requires adequate disk space and security hardening. Cloud storage (S3, Azure, GCP) is recommended for cloud-hosted or load-balanced instances because it centralizes file access and eliminates per-server disk requirements. Choose a backend that matches your hosting provider (S3 for AWS-hosted REDCap, Azure Blob Storage for Azure-hosted, etc.) to simplify access control and reduce data transfer costs.
@@ -178,7 +178,7 @@ Vary them based on context. The File Repository typically allows larger files (e
 
 ---
 
-# 3. Common Mistakes & Gotchas
+## 3. Common Mistakes & Gotchas
 
 **Accidentally using the web-accessible directory for local file storage.** If local file storage is configured to a directory under the web root (e.g., `/public/uploads`), uploaded files become web-accessible, creating a major security risk. Always store uploaded files outside the web root (e.g., `/var/edocs` or `/data/redcap-storage`). Test that files are not accessible via HTTP after configuration.
 
@@ -188,7 +188,7 @@ Vary them based on context. The File Repository typically allows larger files (e
 
 ---
 
-# 4. Related Articles
+## 4. Related Articles
 
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)(system configuration and performance settings)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)(Send-It and other file-related module configuration)

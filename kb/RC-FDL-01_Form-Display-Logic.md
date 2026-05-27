@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Form Display Logic is an advanced feature that allows project designers to control which data entry instruments are accessible to users based on conditional logic. It is the data entry equivalent of the Survey Queue: just as the Survey Queue controls which surveys a participant can access and in what order, Form Display Logic controls which instruments a data entry user can open and when.
 
@@ -24,7 +24,7 @@ When a condition is met, the form is **enabled** and accessible. When it is not 
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Form Display Logic**
 
@@ -44,7 +44,7 @@ Form Display Logic conditions are evaluated at the record level — not within t
 
 ---
 
-# 3. Where Form Display Logic Takes Effect
+## 3. Where Form Display Logic Takes Effect
 
 Form Display Logic affects the data entry user interface in three locations:
 
@@ -56,7 +56,7 @@ Form Display Logic affects the data entry user interface in three locations:
 
 ---
 
-# 4. Configuring Form Display Logic
+## 4. Configuring Form Display Logic
 
 Form Display Logic is managed from the Project Setup area. Each condition row defines:
 
@@ -73,7 +73,7 @@ Conditions use the same logic syntax as branching logic and calculated fields. S
 
 ---
 
-# 5. Optional Settings
+## 5. Optional Settings
 
 Two optional global settings modify how disabled forms are displayed:
 
@@ -89,7 +89,7 @@ These two settings can be combined: you can hide disabled forms while keeping da
 
 ---
 
-# 6. Using Smart Variables in Conditions
+## 6. Using Smart Variables in Conditions
 
 Form Display Logic supports smart variables in its condition expressions, making it possible to control form access based on who is currently logged in — not just what data is in the record.
 
@@ -108,7 +108,7 @@ See [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) f
 
 ---
 
-# 7. Limitations
+## 7. Limitations
 
 **Record-level evaluation only.** Form Display Logic conditions are evaluated in the context of the record as a whole, not in the context of a specific event or repeating instance. This means:
 
@@ -123,13 +123,13 @@ See [RC-PIPE-05 — Smart Variables: User](RC-PIPE-05_Smart-Variables-User.md) f
 
 ---
 
-# 8. Real-World Examples
+## 8. Real-World Examples
 
 The following patterns are drawn from actual project implementations, with usernames and role IDs replaced by generic placeholders.
 
 ---
 
-## Example 1: Consent Gate
+### Example 1: Consent Gate
 
 **Goal:** Most data collection forms should be inaccessible until the participant has consented.
 
@@ -144,7 +144,7 @@ When `event_name` is blank, the condition applies to all events where the form a
 
 ---
 
-## Example 2: Post-Randomization Gate with Role-Based Blinding
+### Example 2: Post-Randomization Gate with Role-Based Blinding
 
 **Goal:** Follow-up assessment forms should only be enabled after the participant has been randomized. Additionally, certain user roles (e.g., blinded coordinators) must be excluded from the condition so they remain blocked even after randomization.
 
@@ -158,7 +158,7 @@ This pattern combines a data-driven condition (`rand_group<>''`) with user role 
 
 ---
 
-## Example 3: Treatment-Arm–Specific Forms
+### Example 3: Treatment-Arm–Specific Forms
 
 **Goal:** Certain forms (e.g., an inpatient exercise log) only apply to participants in a specific treatment arm and should be disabled for controls.
 
@@ -173,7 +173,7 @@ These forms are disabled for everyone until randomization happens and enabled on
 
 ---
 
-## Example 4: Complex Eligibility Gate
+### Example 4: Complex Eligibility Gate
 
 **Goal:** The randomization form should only become accessible after all eligibility criteria are confirmed and consent is recorded.
 
@@ -191,7 +191,7 @@ Complex multi-field eligibility conditions using `sum()` and inequality operator
 
 ---
 
-## Example 5: Named-User Allow-List
+### Example 5: Named-User Allow-List
 
 **Goal:** A finalization checklist form should only be accessible to the PI and designated coordinators, regardless of role.
 
@@ -204,7 +204,7 @@ This approach allows specific users by username and also includes a role-based f
 
 ---
 
-## Example 6: Sequential Form Unlock
+### Example 6: Sequential Form Unlock
 
 **Goal:** A study completion form should only become available after an intervention completion form is fully saved.
 
@@ -217,7 +217,7 @@ The `_complete` field for any instrument is a standard REDCap completion status 
 
 ---
 
-## Example 7: Always-On Baseline (Enroll in FDL Without Restricting)
+### Example 7: Always-On Baseline (Enroll in FDL Without Restricting)
 
 **Goal:** Include forms in Form Display Logic — for example, to set MyCap task visibility — without actually restricting data entry access. The forms should always be accessible for all saved records.
 
@@ -236,7 +236,7 @@ contact_info,,"[record_id]<>""",y,y,n
 
 ---
 
-# 9. The Form Display Logic CSV
+## 9. The Form Display Logic CSV
 
 Form Display Logic can be exported as a CSV and re-imported to another project or used for bulk editing. The exported file includes the six columns described in Section 4.
 
@@ -252,7 +252,7 @@ For the full column-by-column reference, accepted values, an annotated example, 
 
 ---
 
-# 10. Common Questions
+## 10. Common Questions
 
 **Q: What is the difference between Form Display Logic and field-level branching logic?**
 
@@ -284,7 +284,7 @@ For the full column-by-column reference, accepted values, an annotated example, 
 
 ---
 
-# 11. Common Mistakes & Gotchas
+## 11. Common Mistakes & Gotchas
 
 **Using role IDs when the project may be copied.** Role IDs change on copy. If your Form Display Logic uses `[user-role-id]` and the project is duplicated, all role-based logic will break silently — forms will appear disabled for everyone (since the old IDs no longer match). Always prefer `[user-role-name]` for role-based conditions.
 
@@ -302,7 +302,7 @@ For the full column-by-column reference, accepted values, an annotated example, 
 
 ---
 
-# 12. Related Articles
+## 12. Related Articles
 
 - [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) (field-level logic vs. form-level logic)
 - [RC-BL-02 — Branching Logic: Syntax & Atomic Statements](RC-BL-02_Branching-Logic-Syntax-and-Atomic-Statements.md) (the logic language used in conditions)

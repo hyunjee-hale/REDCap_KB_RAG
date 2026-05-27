@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article covers the ongoing management of users in a REDCap project: editing rights, suspending access, removing users, and managing roles. It also explains the four methods REDCap provides for revoking access, and how to identify the difference between project-level and system-level suspension.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Expiration Date**
 
@@ -44,7 +44,7 @@ Deleting a user's account from the REDCap installation entirely. Performed by ad
 
 ---
 
-# 3. The Four Methods of Revoking Access
+## 3. The Four Methods of Revoking Access
 
 REDCap provides four distinct ways to restrict or remove a user's access. They operate at different scopes and are managed by different people.
 
@@ -61,7 +61,7 @@ Project-level actions (suspension and removal) are the tools available to projec
 
 ---
 
-# 4. Editing User Rights
+## 4. Editing User Rights
 
 To edit an individual user's rights, click on their username in the User Rights page. This opens the user privileges popup. From here you can:
 
@@ -73,7 +73,7 @@ To edit an individual user's rights, click on their username in the User Rights 
 
 ---
 
-# 5. Suspending a User (Project Level)
+## 5. Suspending a User (Project Level)
 
 Project-level suspension is controlled entirely by the expiration date.
 
@@ -93,7 +93,7 @@ You can update the expiration date in two ways:
 
 ---
 
-# 6. Removing a User (Project Level)
+## 6. Removing a User (Project Level)
 
 To remove a user from your project:
 
@@ -106,17 +106,17 @@ The project will disappear from the user's My Projects list. Any direct links or
 
 ---
 
-# 7. Managing Roles
+## 7. Managing Roles
 
-## 7.1 Editing a Role
+### 7.1 Editing a Role
 
 Click on a role name in the User Rights page to open the role's edit popup. All setting changes save immediately and propagate to all users currently in that role — you do not need to update users individually.
 
-## 7.2 Copying a Role
+### 7.2 Copying a Role
 
 Within the role edit popup, use the **Copy role** option to create a new role with identical rights. This is useful when you need a variant of an existing role with minor differences.
 
-## 7.3 Deleting a Role
+### 7.3 Deleting a Role
 
 Use the **Delete role** option within the role edit popup. REDCap will block deletion if any users are currently assigned to the role. Remove all users from the role first.
 
@@ -124,7 +124,7 @@ Use the **Delete role** option within the role edit popup. REDCap will block del
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: I need to temporarily remove someone's access — should I suspend them or remove them?**
 
@@ -152,7 +152,7 @@ Use the **Delete role** option within the role edit popup. REDCap will block del
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Trying to remove a user who is still in a role.** REDCap blocks removal of role-assigned users. Remove them from the role first, then remove them from the project. The option to remove the role is in the user's privileges popup.
 
@@ -166,7 +166,7 @@ Use the **Delete role** option within the role edit popup. REDCap will block del
 
 ---
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -177,7 +177,7 @@ Use the **Delete role** option within the role edit popup. REDCap will block del
 ---
 
 
-# 10. Related Articles
+## 10. Related Articles
 
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (troubleshooting access issues)
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) (how to add users and create roles)

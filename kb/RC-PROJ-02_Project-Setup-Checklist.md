@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article provides a dependency-ordered checklist for setting up a REDCap project from creation to Production. Steps are organized so that each item can only be completed once its prerequisites are in place — for example, you cannot assign instruments to events until both instruments and events exist; you cannot set up a Survey Queue until at least two surveys are enabled.
 
@@ -24,7 +24,7 @@ Steps marked **[Required]** must be completed for every project. All other steps
 
 ---
 
-# 2. Phase 1 — Create the Project
+## 2. Phase 1 — Create the Project
 
 These steps happen once and unlock all subsequent configuration.
 
@@ -37,7 +37,7 @@ These steps happen once and unlock all subsequent configuration.
 
 ---
 
-# 3. Phase 2 — Design Your Instruments
+## 3. Phase 2 — Design Your Instruments
 
 Instruments (forms) are the foundation for every other configuration step. Fields must exist before you can write branching logic, create calculated fields, configure surveys, set up alerts, or build reports.
 
@@ -56,7 +56,7 @@ Instruments (forms) are the foundation for every other configuration step. Field
 
 ---
 
-# 4. Phase 3 — Longitudinal Setup [Longitudinal]
+## 4. Phase 3 — Longitudinal Setup [Longitudinal]
 
 Complete this phase only if longitudinal mode was enabled in Phase 1. Arms must be defined before the events that belong to them; events must be defined before instruments can be assigned to them.
 
@@ -71,7 +71,7 @@ Complete this phase only if longitudinal mode was enabled in Phase 1. Arms must 
 
 ---
 
-# 5. Phase 4 — Repeating Instruments & Events [Repeating]
+## 5. Phase 4 — Repeating Instruments & Events [Repeating]
 
 Repeating instruments allow multiple instances of a single form to be collected within one record (or one event in a longitudinal project). Repeating events allow an entire event — with all its designated instruments — to repeat. Configure this phase after instruments are built and, if applicable, after events are defined.
 
@@ -84,7 +84,7 @@ Repeating instruments allow multiple instances of a single form to be collected 
 
 ---
 
-# 6. Phase 5 — Survey Configuration [Surveys]
+## 6. Phase 5 — Survey Configuration [Surveys]
 
 Survey features become available after enabling surveys in Phase 1. Each instrument must be individually enabled as a survey before survey-specific settings or automation can be configured for it.
 
@@ -97,7 +97,7 @@ Survey features become available after enabling surveys in Phase 1. Each instrum
 
 ---
 
-# 7. Phase 6 — Access Control
+## 7. Phase 6 — Access Control
 
 User roles should be defined before individual users are added, so each new user can be placed directly into the correct role. Data Access Groups (if used) should be configured before assigning users, since DAG membership affects what data each user can see and enter.
 
@@ -111,7 +111,7 @@ User roles should be defined before individual users are added, so each new user
 
 ---
 
-# 8. Phase 7 — Automation & Quality
+## 8. Phase 7 — Automation & Quality
 
 Alerts, data quality rules, and randomization all depend on instruments and fields existing. Randomization additionally requires a randomization field and an allocation table.
 
@@ -122,7 +122,7 @@ Alerts, data quality rules, and randomization all depend on instruments and fiel
 
 ---
 
-# 9. Phase 8 — Reports
+## 9. Phase 8 — Reports
 
 Reports reference fields that must already exist. They can be built at any point after instruments are designed, but are most useful to finalize before going live so that the data monitoring and export workflow is ready from the first record.
 
@@ -131,7 +131,7 @@ Reports reference fields that must already exist. They can be built at any point
 
 ---
 
-# 10. Phase 9 — Test in Development
+## 10. Phase 9 — Test in Development
 
 Before moving to Production, enter test data and verify that every aspect of the project behaves as designed. This is the last opportunity to make unrestricted changes.
 
@@ -149,7 +149,7 @@ Before moving to Production, enter test data and verify that every aspect of the
 
 ---
 
-# 11. Phase 10 — Move to Production
+## 11. Phase 10 — Move to Production
 
 When the project is fully tested and ready for live data collection, move it to Production. This step enables change-control safeguards and signals that real data collection has begun.
 
@@ -162,7 +162,7 @@ When the project is fully tested and ready for live data collection, move it to 
 
 ---
 
-# 12. Quick Dependency Reference
+## 12. Quick Dependency Reference
 
 The table below summarizes the key dependencies between setup steps. If a step is blocked, check that its prerequisite has been completed.
 
@@ -189,7 +189,7 @@ The table below summarizes the key dependencies between setup steps. If a step i
 
 ---
 
-# 13. UI & API Reference
+## 13. UI & API Reference
 
 All setup steps can be completed through the REDCap user interface. The table below indicates which steps also have a supported API path. Steps with an API option can be automated or scripted using the REDCap API — see [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication and setup.
 
@@ -249,7 +249,7 @@ All setup steps can be completed through the REDCap user interface. The table be
 
 ---
 
-# 14. Related Articles
+## 14. Related Articles
 
 - [RC-PROJ-01 — Project Lifecycle: Status and Settings](RC-PROJ-01_Project-Lifecycle-Status-and-Settings.md) (project statuses, moving to Production, Draft Mode)
 - [RC-FD-01 — Form Design Overview](RC-FD-01_Form-Design-Overview.md) (instrument design entry point)

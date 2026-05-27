@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Smart variables are bracket expressions that reference system-level information in REDCap rather than participant-entered field values. They use the same `[bracket]` syntax as regular piping but resolve to context-dependent data — the current user's name, the current event, a survey link, a record's data access group, and more. This article provides a category-level overview of all smart variable groups available in REDCap.
 
@@ -22,7 +22,7 @@ New smart variables are added with each REDCap release. For a complete, version-
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Smart Variable**
 
@@ -42,33 +42,33 @@ By default, if a piped value is blank or null, REDCap displays six underscore ch
 
 ---
 
-# 3. Smart Variable Categories
+## 3. Smart Variable Categories
 
-## 3.1 User
+### 3.1 User
 
 Smart variables in this category return information about the REDCap user currently interacting with the system. Useful for personalizing data entry forms or emails based on who is logged in.
 
 Examples of what these variables can return: the user's REDCap username, their first or last name, their email address, and which Data Access Group (DAG) the current user belongs to.
 
-## 3.2 Record
+### 3.2 Record
 
 These smart variables reference metadata about the record currently being viewed or edited — not the participant-entered data fields, but record-level properties managed by REDCap.
 
 Examples: the record's unique identifier, the record's assigned Data Access Group, and a URL to the record's calendar page (if applicable).
 
-## 3.3 Form
+### 3.3 Form
 
 Form smart variables reference properties of the instrument (form) that is currently open. They do not return participant data — they return information about the instrument itself.
 
 Examples: the instrument's name, a direct link to the current form for the current record, and the form's completion status.
 
-## 3.4 Survey
+### 3.4 Survey
 
 Survey smart variables are similar to form smart variables but focus specifically on the survey aspect of an instrument. They are most useful in confirmation emails and automated survey invitations.
 
 Examples: a direct link to the survey itself, the corresponding survey queue link for the current record, the survey's start timestamp, stop timestamp, and total completion duration.
 
-## 3.5 Event & Arm
+### 3.5 Event & Arm
 
 These smart variables enable dynamic event and arm references. While it is possible to hard-code a specific event name in a pipe reference (e.g., `[event_1_arm_1][variable_name]`), event smart variables allow you to reference events relative to the current context — for example, the previous event.
 
@@ -76,41 +76,41 @@ Examples: the name of the current event, the current arm number, the arm label, 
 
 > **Note:** Hard-coded event references (e.g., `[event_1_arm_1][variable_name]`) are covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md). Event smart variables extend that capability by allowing references that do not require knowing the specific event name in advance.
 
-## 3.6 Repeating Instruments and Events
+### 3.6 Repeating Instruments and Events
 
 These smart variables serve two functions: (1) the instance qualifier smart variables covered in [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) (`[first-instance]`, `[last-instance]`, `[previous-instance]`, `[next-instance]`), and (2) an additional smart variable that references a new, not-yet-created instance. The latter is useful for generating links or pre-populating default values that will apply to a new instance when it is created.
 
-## 3.7 Aggregate Functions, Charts, and Tables
+### 3.7 Aggregate Functions, Charts, and Tables
 
 These smart variables are associated with REDCap's Project Dashboard feature. They allow project designers to build custom charts and summary tables on the dashboard using aggregated data from the project.
 
 This category is more advanced and is primarily used by administrators and power users building project-level dashboards. Full documentation is available in REDCap's embedded help text.
 
-## 3.8 Optional Parameters for Aggregate Functions, Charts, and Tables
+### 3.8 Optional Parameters for Aggregate Functions, Charts, and Tables
 
 These smart variables act as modifiers or extensions to the aggregate function category above. They refine how aggregate smart variables behave — for example, filtering which records are included in a count or which event's data is aggregated.
 
-## 3.9 Randomization
+### 3.9 Randomization
 
 These smart variables expose information about a record's randomization assignment. They are only relevant to projects with REDCap's Randomization module enabled.
 
 Examples: the randomization number assigned to the record (`[rand-number]`), the server date/time at which the record was randomized (`[rand-time]`), and the equivalent UTC timestamp (`[rand-utc-time]`). Each variable also supports a `:value` suffix to return a raw `YYYY-MM-DD HH:MM:SS` formatted value suitable for use in logic or calculated fields rather than display contexts. Projects with more than one randomization can use `:n` (e.g., `[rand-number:2]`) to reference a specific one.
 
-## 3.10 Project Dashboards
+### 3.10 Project Dashboards
 
 If a project uses public Project Dashboards, these smart variables provide access codes and URLs for those dashboards. They require the unique dashboard name (e.g., `D-XXXXXXXXXX`) found on the dashboard configuration page.
 
 Examples: `[dashboard-url:D-9264XJ8HE7]` returns the dashboard's web address; `[dashboard-link:D-9264XJ8HE7:View Dashboard]` generates a clickable HTML link with custom text.
 
-## 3.11 Public Reports
+### 3.11 Public Reports
 
 If a project has published public reports with access codes, this category provides the access code for a specified report. It requires the unique report name (e.g., `R-XXXXXXXXXX`) found on the My Reports & Exports page.
 
-## 3.12 MyCap
+### 3.12 MyCap
 
 If a project uses REDCap's MyCap mobile application for participant data collection, this category provides smart variables specific to the MyCap context — such as participant-facing links and MyCap-specific metadata.
 
-## 3.13 Miscellaneous
+### 3.13 Miscellaneous
 
 The Miscellaneous category is primarily relevant for REDCap administrators rather than project designers. These smart variables expose information about the REDCap installation and the project itself.
 
@@ -118,7 +118,7 @@ Examples: the current REDCap version number, the project's unique Project ID, th
 
 ---
 
-# 4. Where Smart Variables Can Be Used
+## 4. Where Smart Variables Can Be Used
 
 Smart variables are recognized in the same locations as regular piping:
 
@@ -132,7 +132,7 @@ Not all smart variables are meaningful in all contexts. For example, survey-spec
 
 ---
 
-# 5. Finding the Complete Smart Variable Reference
+## 5. Finding the Complete Smart Variable Reference
 
 REDCap's built-in help text is the authoritative and most up-to-date source for smart variable documentation, as new variables are added with each release. Access it via any green "Smart Variables" button, found in:
 
@@ -144,7 +144,7 @@ The embedded help text lists every available smart variable, its syntax, its cat
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: What is a smart variable in REDCap?**
 
@@ -172,7 +172,7 @@ The embedded help text lists every available smart variable, its syntax, its cat
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Using smart variables outside of supported locations.** Not every smart variable works in every context. Survey-specific smart variables placed in branching logic do not resolve correctly. Test smart variable placement in a development project before using it in production.
 
@@ -186,7 +186,7 @@ The embedded help text lists every available smart variable, its syntax, its cat
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md)(core piping syntax and field type behavior)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(instance qualifier smart variables; cross-event piping)

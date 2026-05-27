@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 Event and Arm smart variables enable dynamic references to events within an arm in longitudinal REDCap projects. Rather than hard-coding a specific event name (which requires knowing the event structure at design time), these variables allow you to reference events relative to the current context — the previous event, the next event, the first event, the last event, and so forth. Use these variables in conditional logic, field labels, form links, and survey invitations to create designs that adapt automatically to your project's event structure.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Longitudinal Project**
 
@@ -60,7 +60,7 @@ The specification of which instruments (forms) are assigned to each event. Not a
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -81,7 +81,7 @@ The specification of which instruments (forms) are assigned to each event. Not a
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **Standalone vs. Prepended Event Smart Variables**
 
@@ -117,7 +117,7 @@ Both approaches work; use smart variables for flexibility and hard-coded event n
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: How do I create a field that references the previous event's data?**
 
@@ -149,7 +149,7 @@ Both approaches work; use smart variables for flexibility and hard-coded event n
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Using event smart variables in non-longitudinal projects.** Event smart variables only work in longitudinal projects. If you use them in a single-event project, they return blank or may produce unexpected results. Always verify that your project is set up as longitudinal before relying on event smart variables.
 
@@ -165,7 +165,7 @@ Both approaches work; use smart variables for flexibility and hard-coded event n
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(hard-coded event references and event prefixes)

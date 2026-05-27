@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Data Entry Trigger (DET) is an advanced project feature that sends an automatic HTTP POST request to a remote URL every time a record or survey response is created or modified in a REDCap project. Its primary purpose is to notify an external system — in real time — that data has changed, so that the external system can take some action in response. A common use case is triggering a call to the REDCap API from the remote server to retrieve or process the updated data.
 
@@ -26,7 +26,7 @@ The DET is configured per project by entering a URL in the Data Entry Trigger fi
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **HTTP POST Request**
 
@@ -50,13 +50,13 @@ When the DET is triggered by a survey submission (rather than by a staff user en
 
 ---
 
-# 3. Configuration
+## 3. Configuration
 
-## 3.0 System-Level Requirement
+### 3.0 System-Level Requirement
 
 The Data Entry Trigger feature must be enabled at the system level by a REDCap administrator before any project can configure it. This is done in the Control Center under System Configuration → Modules/Services Configuration (see **[RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)**). If the Data Entry Trigger field is not visible in Project Setup → Additional Customizations, the feature may be disabled for your installation.
 
-## 3.1 Project-Level Setup
+### 3.1 Project-Level Setup
 
 The Data Entry Trigger is configured at the project level:
 
@@ -71,7 +71,7 @@ Once configured, REDCap will send a POST request to that URL automatically after
 
 ---
 
-# 4. POST Parameter Reference
+## 4. POST Parameter Reference
 
 REDCap sends the following parameters in each HTTP POST request. Parameters marked as conditional are only included under specific circumstances.
 
@@ -91,7 +91,7 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 
 ---
 
-# 5. Security Considerations
+## 5. Security Considerations
 
 **Use HTTPS for sensitive record identifiers.** If the values stored in your project's first field (the Record ID field) are considered identifiers — such as a medical record number, social security number, or participant name — it is strongly recommended to use an SSL/HTTPS-secured URL for the DET endpoint. The record identifier is transmitted in plaintext in each POST request. An unencrypted HTTP connection exposes this value in transit.
 
@@ -101,7 +101,7 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: Will the DET fire when I import data using the REDCap API or a CSV import?**
 
@@ -129,7 +129,7 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Expecting the DET to fire on imports.** A common misunderstanding is that the DET will fire on all data changes, including API and CSV imports. It only fires on interactive saves via the REDCap interface. If your integration depends on knowing about imported data, the DET alone is insufficient — consider polling the REDCap API on a schedule instead.
 
@@ -143,7 +143,7 @@ REDCap sends the following parameters in each HTTP POST request. Parameters mark
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational — covers the data entry workflow that triggers the DET)
 - [RC-SURV-01 — Surveys – Basics](RC-SURV-01_Surveys-Basics.md)(surveys are a common DET trigger source; explains survey completion status)

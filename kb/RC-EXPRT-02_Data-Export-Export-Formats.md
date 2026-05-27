@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article describes the seven export formats available in REDCap's
 Data Exports, Reports, and Stats application. It explains what each
@@ -24,7 +24,7 @@ files — is one of the most common export mistakes.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Raw Data**
 
@@ -58,7 +58,7 @@ re-imported back into REDCap.
 
 ---
 
-# 3. Export Format Reference
+## 3. Export Format Reference
 
 REDCap offers seven export formats. Select the format that matches your
 analysis tool or downstream use case. If exporting for someone else, ask
@@ -80,35 +80,35 @@ them which format they prefer before exporting.
 
 ---
 
-# 4. Choosing a Format
+## 4. Choosing a Format
 
-## 4.1 For general data review or sharing
+### 4.1 For general data review or sharing
 
 Use CSV / Excel (labels) for human-readable output. Use CSV / Excel (raw
 data) if the recipient needs to do quantitative analysis or re-import
 the data into REDCap.
 
-## 4.2 For statistical analysis
+### 4.2 For statistical analysis
 
 Ask your statistician or analyst which software they use and export in
 that format. SPSS, SAS, R, and Stata exports include embedded metadata
 that eliminates the need to manually map variable labels — a
 significant time saving for large projects.
 
-## 4.3 For data transfer between REDCap instances or EDC systems
+### 4.3 For data transfer between REDCap instances or EDC systems
 
 Use CDISC ODM (XML) to move data between REDCap installations or into
 compatible EDC tools. Use CSV / Excel (raw data) if re-importing into
 REDCap using the Data Import Tool.
 
-## 4.4 For programmatic access
+### 4.4 For programmatic access
 
 R users can also pull data directly from REDCap using the API, bypassing
 the manual export process entirely. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for details.
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 | *What is the difference between CSV raw data and CSV labels?* | Raw data exports the coded values stored internally by REDCap (e.g., 1, 0, 2). Labels exports the display text shown to users (e.g., 'Yes', 'No', 'Checked'). Raw data is used for analysis and re-import; labels are easier to read but not suitable for re-import. |
 | --- | --- |
@@ -120,7 +120,7 @@ the manual export process entirely. See [RC-API-01 — REDCap API](RC-API-01_RED
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Downloading only the data file for multi-file formats.** SPSS, SAS, R,
 and Stata exports each require two or three files. Downloading only the
@@ -140,7 +140,7 @@ the export.
 exports represent the same underlying data differently. Mixing files
 from both formats in an analysis will produce mismatched values.
 
-## API Access
+### API Access
 
 > **Note:** The following REDCap API methods provide programmatic access to this functionality. API usage is an advanced feature that requires knowledge of computer programming or access to a developer resource. See [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) for authentication, token management, and setup.
 
@@ -149,7 +149,7 @@ from both formats in an analysis will produce mismatched values.
 ---
 
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) (prerequisite ---
     the standard export process)

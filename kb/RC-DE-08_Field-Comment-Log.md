@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article explains REDCap's field comment log — what it is, when to use it, and how to add and review comments. The field comment log lets data entry users attach notes to individual variables within an instrument without modifying the stored data value. It is primarily a data quality tool: it allows teams to track questions, flag uncertain entries, and document data issues directly within REDCap rather than in external spreadsheets or emails. Use of the field comment log is optional unless required by your study protocol.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Field Comment Log**
 
@@ -36,7 +36,7 @@ A dedicated module accessible from the project menu that displays all comments a
 
 ---
 
-# 3. When to Use the Field Comment Log
+## 3. When to Use the Field Comment Log
 
 The field comment log is the appropriate place to document a data quality concern without leaving the variable blank or entering a potentially incorrect value. Common use cases include:
 
@@ -52,20 +52,20 @@ The field comment log is the appropriate place to document a data quality concer
 
 ---
 
-# 4. Adding a Comment
+## 4. Adding a Comment
 
-### 4.1 Locating the Comment Balloon
+#### 4.1 Locating the Comment Balloon
 
 Every variable in an instrument displays a small comment balloon icon next to it. The color of the balloon tells you its status:
 
 - **Grey balloon** — no comments have been recorded for this variable in this record
 - **Yellow balloon** — one or more comments already exist; clicking will open the existing comments and allow you to add another
 
-### 4.2 Opening the Comment Interface
+#### 4.2 Opening the Comment Interface
 
 Click the balloon icon next to the variable you want to comment on. A popup or panel opens showing the comment history for that variable in the current record.
 
-### 4.3 Entering and Saving a Comment
+#### 4.3 Entering and Saving a Comment
 
 Type your comment in the comment box. When finished, click the **Comment** button to save. Your comment is recorded with your REDCap username and a timestamp. It is immediately visible to any other user with access to that instrument.
 
@@ -73,7 +73,7 @@ You can add multiple comments to the same variable. Each is stored as a separate
 
 ---
 
-# 5. When the Comment Balloon Is Not Available
+## 5. When the Comment Balloon Is Not Available
 
 The field comment balloon is not displayed in the following situations:
 
@@ -85,19 +85,19 @@ The field comment balloon is not displayed in the following situations:
 
 ---
 
-# 6. Reviewing Comments
+## 6. Reviewing Comments
 
-### 6.1 Navigating Back to an Instrument
+#### 6.1 Navigating Back to an Instrument
 
 You can return to any instrument in any record at any time to review comments on individual variables. The balloon color indicates whether comments are present.
 
-### 6.2 Using the Field Comment Log Application
+#### 6.2 Using the Field Comment Log Application
 
 For a cross-record, cross-instrument overview of all comments, use the **Field Comment Log** application in the project menu. This is the most efficient way to conduct a data quality review across the entire dataset.
 
 Each row in the results list displays the record, the instrument, the variable, the comment text, the author, and the timestamp.
 
-### 6.3 Filtering Comments
+#### 6.3 Filtering Comments
 
 The Field Comment Log application supports multiple filters that can be combined to narrow results. Filters do not apply automatically — click **Apply filters** after making your selections. Use the **Reset** link to return all filters to their defaults.
 
@@ -110,23 +110,23 @@ The Field Comment Log application supports multiple filters that can be combined
 | Data Access Group | Filter to comments from a specific DAG. Useful for site-by-site data quality review in multi-site projects. |
 | Keyword | Search the text of comments for one or more words. Multiple keywords can be entered, separated by a space — REDCap will return comments containing any of the entered terms. Supports partial-word matches. |
 
-### 6.4 Replying Directly from the Log
+#### 6.4 Replying Directly from the Log
 
 Each row in the comment log includes a **Comment** button. Clicking it opens the comment popup for that variable directly within the log, without navigating to the record. This allows you to respond to comments across multiple records efficiently without opening each record individually.
 
-### 6.5 Navigating from the Log to a Record
+#### 6.5 Navigating from the Log to a Record
 
 Each result row includes a clickable link in the record column. Clicking it opens a new browser tab, navigates directly to the relevant instrument within that record, and jumps to the variable with the comment. This is useful when you need to review or correct the data entry in context.
 
-### 6.6 Exporting the Comment Log
+#### 6.6 Exporting the Comment Log
 
 Click **Export the entire log** from the Field Comment Log application to download a CSV file of all comments accessible to your user account. The export includes the comment author, timestamp, and variable identification. For longitudinal and repeated-instruments projects, the export also includes event and instance information.
 
 ---
 
-# 7. Enabling and Configuring the Field Comment Log
+## 7. Enabling and Configuring the Field Comment Log
 
-### 7.1 Enabling the Feature
+#### 7.1 Enabling the Feature
 
 The Field Comment Log is enabled by default for most REDCap projects. To confirm or change the active mode:
 
@@ -139,7 +139,7 @@ The Field Comment Log is enabled by default for most REDCap projects. To confirm
 
 REDCap projects support three modes: Field Comment Log, Data Resolution Workflow, and None. Only one mode can be active at a time. For more on the differences between modes and guidance on when to use DRW instead of the Field Comment Log, see [RC-DE-12 — Data Resolution Workflow](RC-DE-12_Data-Resolution-Workflow.md).
 
-### 7.2 Enabling Comment Editing and Deletion
+#### 7.2 Enabling Comment Editing and Deletion
 
 By default, comments cannot be edited or deleted after they are saved. To allow users to modify comments:
 
@@ -152,7 +152,7 @@ When enabled, a pencil (edit) icon and a red X (delete) icon appear next to each
 
 ---
 
-# 8. Common Questions
+## 8. Common Questions
 
 **Q: Does adding a comment change the value stored in the dataset?**
 
@@ -180,7 +180,7 @@ When enabled, a pencil (edit) icon and a red X (delete) icon appear next to each
 
 ---
 
-# 9. Common Mistakes & Gotchas
+## 9. Common Mistakes & Gotchas
 
 **Assuming comments affect the dataset.** Comments are entirely separate from data values. A comment documenting a missing value does not count as an entry — the field is still blank in the dataset and exports. Take care that downstream data cleaning processes account for the distinction between "blank with a comment" and "blank without a comment."
 
@@ -192,7 +192,7 @@ When enabled, a pencil (edit) icon and a red X (delete) icon appear next to each
 
 ---
 
-# 10. Administrator Configuration
+## 10. Administrator Configuration
 
 The Field Comment Log is available in all REDCap projects but has a system-level default setting that affects new projects. Administrators can configure whether the Field Comment Log is **enabled by default** for all newly created projects in the Control Center under System Configuration → General Configuration (see **[RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)**, "Field Comment Log Default" setting).
 
@@ -204,7 +204,7 @@ The Field Comment Log and the Data Resolution Workflow ([RC-DE-12 — Data Resol
 
 ---
 
-# 11. Related Articles
+## 11. Related Articles
 
 - [RC-DE-02 — Basic Data Entry](RC-DE-02_Basic-Data-Entry.md) (foundational data entry skills)
 - [RC-DE-04 — Editing Data & Audit Trail](RC-DE-04_Editing-Data-and-Audit-Trail.md) (related audit and annotation features)

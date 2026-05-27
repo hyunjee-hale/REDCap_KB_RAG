@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article documents recommended best practices for REDCap project design. The conventions here reflect patterns that tend to produce cleaner forms, more maintainable data dictionaries, and fewer data quality problems in practice.
 
@@ -27,7 +27,7 @@ These are defaults, not mandates. Individual projects may deviate when there is 
 
 ---
 
-# 2. Field Alignment (Column N — Custom Alignment)
+## 2. Field Alignment (Column N — Custom Alignment)
 
 REDCap supports four alignment codes: `LH`, `LV`, `RH`, and `RV`. See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) Section 5.12 for a full explanation of what each code does visually.
 
@@ -39,7 +39,7 @@ The short version:
 
 The default when the column is left blank is `RV`.
 
-## 2.1 Notes fields (`notes` field type)
+### 2.1 Notes fields (`notes` field type)
 
 **Best practice: use `LH` or `LV`**
 
@@ -47,7 +47,7 @@ A `notes` field with `RH` or `RV` alignment renders at roughly half the page wid
 
 There is rarely a good reason to use a half-width notes field. If you are using one, consider whether a single-line `text` field would be more appropriate.
 
-## 2.2 Radio and checkbox fields
+### 2.2 Radio and checkbox fields
 
 **Best practice: `LV` for longer lists, `LH` for short lists**
 
@@ -58,13 +58,13 @@ The Vertical/Horizontal component controls whether answer choices are stacked (V
 
 The Left/Right component controls which side of the page choices appear on. Left (`L`) is generally preferred as it aligns with natural reading direction and gives more visual space.
 
-## 2.3 Text, dropdown, yesno, truefalse
+### 2.3 Text, dropdown, yesno, truefalse
 
 **Best practice: leave blank (accept `RV` default) unless there is a layout reason to change**
 
 These field types are compact and the width difference between Left and Right alignment is less impactful than with `notes` fields. Accept the default unless you are deliberately composing a specific layout.
 
-## 2.4 Consistency within an instrument
+### 2.4 Consistency within an instrument
 
 **Best practice: avoid mixing Left and Right fields in the same section without a clear layout purpose**
 
@@ -72,9 +72,9 @@ Alternating between full-width and half-width fields creates a visually fragment
 
 ---
 
-# 3. Project Structure
+## 3. Project Structure
 
-## 3.1 Do not use longitudinal mode if each form is only used once
+### 3.1 Do not use longitudinal mode if each form is only used once
 
 **Best practice: use longitudinal mode only when instruments are repeated across multiple events**
 
@@ -93,9 +93,9 @@ Using longitudinal mode for a single-arm, single-instance-per-form project adds 
 
 ---
 
-# 4. Field Notes vs. Field Annotations
+## 4. Field Notes vs. Field Annotations
 
-## 4.1 Field Note (Column G) — for data entry users only
+### 4.1 Field Note (Column G) — for data entry users only
 
 **Best practice: use the Field Note for short, user-facing clarifications about how to fill in the field**
 
@@ -109,7 +109,7 @@ Common uses:
 
 Keep it brief. A Field Note that runs to multiple sentences will be ignored. If the field needs more explanation than a line or two, consider whether the instrument design or the field label should be doing more of that work.
 
-## 4.2 Field Annotation (Column R) — for designers only
+### 4.2 Field Annotation (Column R) — for designers only
 
 **Best practice: use the Field Annotation box for notes intended for other project designers, not for data entry users**
 
@@ -129,9 +129,9 @@ Confirm unit with PI. @HIDDEN-SURVEY @READONLY
 
 ---
 
-# 5. Branching Logic Design
+## 5. Branching Logic Design
 
-## 5.1 Do not hardcode user identifiers in branching logic
+### 5.1 Do not hardcode user identifiers in branching logic
 
 **Best practice: never use hardcoded usernames, NetIDs, or system IDs as branching logic conditions**
 
@@ -155,7 +155,7 @@ Instead of hardcoding identifiers, collect the reviewer's identity in a dedicate
 
 **Exception:** In a tightly controlled internal tool where the reviewer list is stable and the project owner accepts the maintenance burden, hardcoded identifiers may be acceptable as a short-term convenience. Document the intent in the Field Annotation so future designers understand why it is there.
 
-## 5.2 Use a descriptive field to display a conditional warning or alert
+### 5.2 Use a descriptive field to display a conditional warning or alert
 
 **Best practice: use a `descriptive` field type with branching logic to surface warnings inline on the form**
 
@@ -171,7 +171,7 @@ The descriptive field is shown only when that condition is true, and it can incl
 
 **Tip:** Keep the warning label short and action-oriented (e.g., "You selected 'No' to ongoing access but no end date was entered. Please enter an end date above or change your selection."). Style with `<span style="color:red;font-weight:bold;">` for visibility.
 
-## 5.3 Admin-only review sections: gate with a reviewer identity field, not user rights alone
+### 5.3 Admin-only review sections: gate with a reviewer identity field, not user rights alone
 
 **Best practice: when a form contains fields that only an administrator should see, use a dedicated reviewer identity field as the branching logic gate — in addition to any user rights restrictions**
 
@@ -187,7 +187,7 @@ This is distinct from relying on REDCap's user rights alone. User rights prevent
 
 **Note:** See Section 5.1 for guidance on what value to check in the reviewer identity field — prefer role-based values over hardcoded personal identifiers.
 
-## 5.4 Always add branching logic to "Other (specify)" free-text fields
+### 5.4 Always add branching logic to "Other (specify)" free-text fields
 
 **Best practice: any free-text field paired with an "Other" choice must have branching logic that hides it when that choice is not selected**
 
@@ -205,7 +205,7 @@ Adjust to match whatever code your project assigns to the "Other" choice.
 
 **Rationale:** When the free-text field is hidden unless "Other" is selected, a blank value unambiguously means "not applicable." When it is always visible, a blank value is ambiguous — it could mean not applicable, not answered, or overlooked. Branching logic eliminates that ambiguity and keeps forms clean.
 
-## 5.5 Do not mark a field as required when the requirement is conditional
+### 5.5 Do not mark a field as required when the requirement is conditional
 
 **Best practice: if a field is only meaningful based on another field's value, use branching logic to hide it when not applicable — not the "Required" flag**
 
@@ -230,9 +230,9 @@ If you want to enforce entry without blocking form save, use the inline warning 
 
 ---
 
-# 6. Repeating Instruments
+## 6. Repeating Instruments
 
-## 6.1 Use custom form labels to identify repeating instrument instances
+### 6.1 Use custom form labels to identify repeating instrument instances
 
 **Best practice: set the custom form label on repeating instruments to display the key identifying field(s) for that instance**
 
@@ -257,9 +257,9 @@ Example for a project request instrument:
 
 ---
 
-# 7. Field and Form Hygiene
+## 7. Field and Form Hygiene
 
-## 7.1 Every field must have a label
+### 7.1 Every field must have a label
 
 **Best practice: no field should have a blank field label**
 
@@ -274,7 +274,7 @@ Check for unlabeled fields before the project goes live. A quick way to audit: e
 
 **Rationale:** Unlabeled fields are confusing to data entry users and future designers alike. They signal an incomplete design and make it hard to distinguish intentional placeholders from accidental omissions.
 
-## 7.2 Audit instrument-event and repeating-instrument settings across all arms
+### 7.2 Audit instrument-event and repeating-instrument settings across all arms
 
 **Best practice: when a project has multiple arms, verify that repeating instrument configuration is consistent across all arms that use the same workflow structure**
 
@@ -286,7 +286,7 @@ The result is that one arm has a different data collection capacity than the oth
 
 ---
 
-## 3.2 Multi-entity registration using separate instruments per entity
+### 3.2 Multi-entity registration using separate instruments per entity
 
 **Best practice: when collecting the same set of fields for a small, bounded number of entities (e.g., up to 4 children in a family registration), separate instruments per entity can be a cleaner alternative to repeating instruments**
 
@@ -317,7 +317,7 @@ The flat-column approach produces a wider dataset with many NULL columns for fam
 
 ---
 
-## 5.6 Use descriptive fields as piped context summaries at the top of each form
+### 5.6 Use descriptive fields as piped context summaries at the top of each form
 
 **Best practice: at the top of each follow-on instrument in a multi-form survey, place a descriptive field that pipes in key values from earlier forms as a reminder for the respondent**
 
@@ -340,7 +340,7 @@ This field has no variable and stores no data — it exists purely to display pi
 
 ---
 
-## 5.7 Prefer `[user-role-name]` over `[user-role-label]` in role-based branching logic
+### 5.7 Prefer `[user-role-name]` over `[user-role-label]` in role-based branching logic
 
 **Best practice: when gating field visibility on a user's role, use `[user-role-name]` as the branching logic condition — not `[user-role-label]`**
 
@@ -370,7 +370,7 @@ The role's internal name is opaque but stable — it does not change when the la
 
 ---
 
-## 7.3 Use a dedicated metrics instrument for built-in enrollment dashboards
+### 7.3 Use a dedicated metrics instrument for built-in enrollment dashboards
 
 **Best practice: if a project needs to track aggregate counts (e.g., enrollment per class, applications per category), consider adding a separate instrument containing only calculated fields that tally those counts**
 
@@ -391,7 +391,7 @@ These fields use the REDCap `sum()` function (or equivalent logic) across the pe
 
 ---
 
-## 7.4 Deferred file upload: give respondents the option to upload documents later
+### 7.4 Deferred file upload: give respondents the option to upload documents later
 
 **Best practice: when a survey requires document uploads (e.g., vaccination records, supporting documents) that respondents may not have immediately available, offer an explicit "upload now or later" choice and provide a dedicated follow-up instrument for deferred uploads**
 
@@ -410,9 +410,9 @@ Requiring a file upload at the time of initial registration blocks form completi
 
 ---
 
-# 9. Variable and Instrument Naming
+## 9. Variable and Instrument Naming
 
-## 9.1 Variable names are permanent identifiers — choose them carefully before you build
+### 9.1 Variable names are permanent identifiers — choose them carefully before you build
 
 **Best practice: treat variable names as permanent, meaningful, project-wide identifiers, not throwaway labels**
 
@@ -436,7 +436,7 @@ The last rule is the one designers most often learn the hard way. Once a variabl
 
 → See [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md) §3.1 for the full character-level rules. See [RC-FD-06 — Online Designer: Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md) §5.4 for the consequences of deleting or restructuring fields with data.
 
-## 9.2 Keep instrument display names unique within the project
+### 9.2 Keep instrument display names unique within the project
 
 **Best practice: give every instrument a distinct display name, even if two instruments serve similar purposes**
 
@@ -450,9 +450,9 @@ REDCap allows two instruments to share the same display name. When that happens,
 
 ---
 
-# 10. Automated Survey Invitation (ASI) Safety Patterns
+## 10. Automated Survey Invitation (ASI) Safety Patterns
 
-## 10.1 Add a kill switch field to every ASI's logic condition
+### 10.1 Add a kill switch field to every ASI's logic condition
 
 **Best practice: include a dedicated radio or checkbox field (e.g., `stop_emails`) in every ASI's trigger logic so that invitations for any record can be cancelled immediately without editing the ASI setup**
 
@@ -470,7 +470,7 @@ When a participant needs to be removed from the invitation queue, set `stop_emai
 
 → See [RC-SURV-06 — Automated Survey Invitations](RC-SURV-06_Automated-Survey-Invitations.md) for full ASI setup documentation and the complete list of gotchas.
 
-## 10.2 Always enable "Ensure logic is still true before sending invitation"
+### 10.2 Always enable "Ensure logic is still true before sending invitation"
 
 **Best practice: enable the "Ensure logic is still true before sending invitation" checkbox on every ASI that has a logic condition**
 
@@ -486,7 +486,7 @@ Enabling this option causes REDCap to re-evaluate the trigger logic immediately 
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-FD-08 — Data Dictionary: Column Reference & Advanced Techniques](RC-FD-08_Data-Dictionary-Column-Reference-and-Advanced-Techniques.md)
 - [RC-FD-06 — Online Designer – Instrument and Field Management](RC-FD-06_Online-Designer-Instrument-and-Field-Management.md)

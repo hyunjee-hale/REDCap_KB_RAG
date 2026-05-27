@@ -14,7 +14,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The **Modules/Services Configuration** page is the control panel for enabling/disabling major REDCap features and configuring third-party service integrations. This is the largest and most feature-rich configuration page in the Control Center, where administrators control whether features like Surveys, the API, External Modules, Randomization, and various AI services are available to users across the instance. It also includes configuration for SMS services (Twilio, Mosio), email providers (SendGrid), and specialized features like e-Consent, CATs, and Data Transfer Services.
 
@@ -24,7 +24,7 @@ The **Modules/Services Configuration** page (under **System Configuration**) is 
 
 ---
 
-# External Module Framework
+## External Module Framework
 
 <!-- PLACEHOLDER: Insert annotated screenshot of External Module Framework section -->
 
@@ -37,7 +37,7 @@ For the full External Modules policy and activation process, see your institutio
 
 ---
 
-# Feature Enable/Disable Table
+## Feature Enable/Disable Table
 
 <!-- PLACEHOLDER: Insert annotated screenshot of feature enable/disable table -->
 
@@ -74,7 +74,7 @@ The following features can be enabled or disabled system-wide. When a feature is
 
 ---
 
-# Google reCAPTCHA for Public Surveys
+## Google reCAPTCHA for Public Surveys
 
 Google reCAPTCHA can be enabled as an optional protection on public surveys (i.e., surveys with a public link that require no login). This is a sub-setting of the Surveys feature.
 
@@ -86,9 +86,9 @@ A project-level default can be configured: new projects can default to reCAPTCHA
 
 ---
 
-# SMS Services
+## SMS Services
 
-## Twilio (SMS & Voice Calls)
+### Twilio (SMS & Voice Calls)
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Twilio section -->
 
@@ -103,17 +103,17 @@ Twilio is a third-party service that enables SMS and voice call delivery for sur
 
 See [RC-TXT-01 — Texting in REDCap: Setup and Usage](RC-TXT-01_Texting-in-REDCap-Setup-and-Usage.md) and [RC-TXT-02 — Texting: Administrator Setup](RC-TXT-02_Texting-Administrator-Setup.md) for more on texting workflows and administrator setup.
 
-## Mosio (SMS)
+### Mosio (SMS)
 
 Mosio is an alternative SMS service provider. Configuration mirrors Twilio, including the same three-option access control (All users / Admin approval / Administrators only) and the "Display information to all users" visibility toggle. Requires outbound HTTPS access to `https://api.mosio.com` and a publicly reachable server. See your institution's SMS strategy documentation before enabling.
 
-## SendGrid (Email Templates)
+### SendGrid (Email Templates)
 
 SendGrid is an external email delivery service that enables template-based emails for Alerts & Notifications. Requires a SendGrid account and API key, and outbound HTTPS access to `https://api.sendgrid.com/v3`. Access control has two options: *All users* or *Administrators only* (no Admin approval option). Includes the same "Display information to all users" visibility toggle. See your institution's email delivery architecture before enabling.
 
 ---
 
-# Statistics & Charts
+## Statistics & Charts
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Stats & Charts section -->
 
@@ -125,7 +125,7 @@ When enabled, project administrators can opt to show a respondent their response
 
 ---
 
-# e-Consent Framework for PDF Auto-Archiver
+## e-Consent Framework for PDF Auto-Archiver
 
 <!-- PLACEHOLDER: Insert annotated screenshot of e-Consent section -->
 
@@ -142,7 +142,7 @@ See [RC-SURV-08 — e-Consent Framework: Setup & Management](RC-SURV-08_e-Consen
 
 ---
 
-# Alerts & Notifications Settings
+## Alerts & Notifications Settings
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Alerts & Notifications Settings section -->
 
@@ -158,7 +158,7 @@ See [RC-ALERT-01 — Alerts & Notifications: Setup](RC-ALERT-01_Alerts-and-Notif
 
 ---
 
-# File Upload Field Enhancement
+## File Upload Field Enhancement
 
 <!-- PLACEHOLDER: Insert annotated screenshot of File Upload Enhancement section -->
 
@@ -177,7 +177,7 @@ An optional enhancement that adds password verification and automatic external a
 
 ---
 
-# Rapid Retrieval (Page-Level Caching)
+## Rapid Retrieval (Page-Level Caching)
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Rapid Retrieval section -->
 
@@ -196,7 +196,7 @@ By default, file-based caching stores files in REDCap's `temp` folder. An altern
 
 ---
 
-# Record-Level Locking Enhancement
+## Record-Level Locking Enhancement
 
 <!-- PLACEHOLDER: Insert annotated screenshot of Record-Level Locking section -->
 
@@ -208,7 +208,7 @@ Supported external storage methods are identical to those for the File Upload Fi
 
 ---
 
-# e-Consent Framework: PDF External Storage Settings
+## e-Consent Framework: PDF External Storage Settings
 
 <!-- PLACEHOLDER: Insert annotated screenshot of e-Consent PDF Storage section -->
 
@@ -216,7 +216,7 @@ When the e-Consent Framework is used in Part 11-compliant workflows, this sectio
 
 ---
 
-# AI Services
+## AI Services
 
 <!-- PLACEHOLDER: Insert annotated screenshot of AI Services section -->
 
@@ -230,7 +230,7 @@ Master toggle for all AI features. Options are:
 
 Once the master toggle is on, individual AI features below become active. System-wide configuration values can be overridden at the project level on the Edit Project Settings page for individual projects.
 
-## Individual AI Features
+### Individual AI Features
 
 | Feature | Behavior when enabled |
 | --- | --- |
@@ -238,7 +238,7 @@ Once the master toggle is on, individual AI features below become active. System
 | **Feature 2 — Summarize free-form text on reports** | A magic wand icon appears next to free-form text fields on reports, allowing users to have the AI service summarize field values across the report. See [RC-AI-04 — AI Summarization](RC-AI-04_AI-Summarization.md) |
 | **Feature 3 — Auto-translate on MLM setup page** | On the Multi-Language Management page, a button appears that auto-translates all untranslated text in one click. See [RC-AI-03 — AI Translations](RC-AI-03_AI-Translations.md) |
 
-## OpenAI Configuration
+### OpenAI Configuration
 
 Three deployment options are supported:
 
@@ -253,7 +253,7 @@ Three deployment options are supported:
 - **API Key** — Secret key for authentication (may be blank for local deployments)
 - **API Model Version/Name** — For Azure: the `api-version` string (e.g., `2025-01-01-preview`). For other services: the model name or identifier (e.g., `mistral-tiny`, `hermes-3-llama-3.2-3b`)
 
-## Gemini AI Configuration
+### Gemini AI Configuration
 
 Google Gemini (cloud-hosted) can be used as an alternative to OpenAI. Obtain an API key from Google AI Studio.
 
@@ -266,7 +266,7 @@ See [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools
 
 ---
 
-# 2. Common Questions
+## 2. Common Questions
 
 **Q: What is the difference between enabling a feature here and enabling it at the project level?**
 System-level settings on this page are the master on/off switches — if a feature is disabled here, no project can use it, regardless of project settings. If a feature is enabled here, project-level settings then control whether individual projects use it. For example, if "Surveys" is disabled here, no project can create surveys even if they want to. If it is enabled here, each project can independently choose whether to use surveys.
@@ -285,7 +285,7 @@ OpenAI (Azure) and Google Gemini are cloud-hosted, managed services that require
 
 ---
 
-# 3. Common Mistakes & Gotchas
+## 3. Common Mistakes & Gotchas
 
 **Enabling third-party service features (SMS, AI) without configuring the required credentials.** Enabling Twilio, SendGrid, or AI services without entering valid API credentials leaves users unable to use the feature and can generate confusing error messages. Always test third-party integrations in a staging environment and verify that API keys are correct and active before rolling out to production.
 
@@ -295,7 +295,7 @@ OpenAI (Azure) and Google Gemini are cloud-hosted, managed services that require
 
 ---
 
-# 4. Related Articles
+## 4. Related Articles
 
 - [RC-AI-01 — REDCap AI Tools: Overview & Security](RC-AI-01_REDCap-AI-Tools-Overview-and-Security.md) (overview of AI features enabled by this page)
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md) (related system-wide settings)

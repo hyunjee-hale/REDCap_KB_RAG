@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 User smart variables return information about the REDCap user currently interacting with the system. These variables are context-dependent, meaning they always reflect the logged-in user's data and permissions — not the participant's information. Use these variables to personalize forms, surveys, and emails based on who is accessing the project, or to route data entry tasks to specific team members based on their Data Access Group (DAG) or assigned role.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **User Profile**
 
@@ -44,7 +44,7 @@ The human-readable name of a role, as defined by whoever created it. This is the
 
 ---
 
-# 3. Smart Variable Reference
+## 3. Smart Variable Reference
 
 | Smart Variable | Syntax | Description | Example Output |
 |---|---|---|---|
@@ -60,7 +60,7 @@ The human-readable name of a role, as defined by whoever created it. This is the
 
 ---
 
-# 4. Usage Notes
+## 4. Usage Notes
 
 **User vs. Participant Identity**
 
@@ -91,7 +91,7 @@ User smart variables in survey invitations and confirmation emails resolve based
 
 ---
 
-# 5. Common Questions
+## 5. Common Questions
 
 **Q: I want to personalize a form so that it displays the current user's name. How do I do that?**
 
@@ -119,7 +119,7 @@ User smart variables in survey invitations and confirmation emails resolve based
 
 ---
 
-# 6. Common Mistakes & Gotchas
+## 6. Common Mistakes & Gotchas
 
 **Confusing user smart variables with participant data.** `[user-fullname]` returns the name of the logged-in REDCap user, not the participant being studied. If you need the participant's name (stored in a data field), use a regular field pipe reference like `[participant_name]` instead.
 
@@ -133,7 +133,7 @@ User smart variables in survey invitations and confirmation emails resolve based
 
 ---
 
-# 7. Related Articles
+## 7. Related Articles
 
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (overview of all smart variable categories)
 - [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md)(smart variable syntax and modifiers)

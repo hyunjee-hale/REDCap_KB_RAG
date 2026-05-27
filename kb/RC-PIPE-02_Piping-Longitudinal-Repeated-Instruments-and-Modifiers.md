@@ -14,13 +14,13 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 This article extends the piping basics covered in [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md) into two areas: (1) piping across events and repeated instruments in longitudinal and repeating projects, and (2) using piping modifiers to control exactly what value is returned when a variable is piped. Readers should be comfortable with basic piping syntax before reading this article.
 
 ---
 
-# 2. Key Concepts & Definitions
+## 2. Key Concepts & Definitions
 
 **Event**
 
@@ -48,13 +48,13 @@ A suffix appended to a variable name inside a bracket expression to change what 
 
 ---
 
-# 3. Piping Across Events in Longitudinal Projects
+## 3. Piping Across Events in Longitudinal Projects
 
-## 3.1 Same-Event Piping
+### 3.1 Same-Event Piping
 
 If the source variable and the destination field are in the same event, standard piping syntax works without modification — just use `[variable_name]` as described in [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md).
 
-## 3.2 Cross-Event Piping
+### 3.2 Cross-Event Piping
 
 To pipe a value from a different event, prefix the variable reference with the event name in its own set of brackets:
 
@@ -70,7 +70,7 @@ To pipe a value from a different event, prefix the variable reference with the e
 
 This tells REDCap to retrieve the value of `first_name` specifically from the event named `event_1_arm_1`.
 
-## 3.3 Rules for Cross-Event Piping
+### 3.3 Rules for Cross-Event Piping
 
 **No space between event and variable brackets.** If there is a space between `[event_1_arm_1]` and `[first_name]`, REDCap ignores the event qualifier entirely and attempts to resolve `first_name` from the current event.
 
@@ -82,19 +82,19 @@ This tells REDCap to retrieve the value of `first_name` specifically from the ev
 
 ---
 
-# 4. Piping with Repeated Instruments and Events
+## 4. Piping with Repeated Instruments and Events
 
 There are three distinct scenarios when piping intersects with repeated instruments or repeated events.
 
-## 4.1 Piping Into a Repeated Instrument or Event
+### 4.1 Piping Into a Repeated Instrument or Event
 
 If the source variable comes from a regular (non-repeated) instrument or event, standard piping syntax works normally — use `[variable_name]` or `[event_name][variable_name]` as appropriate. The repeated instrument or event receiving the piped value treats it like any other reference.
 
-## 4.2 Piping Out of a Repeated Instrument or Event
+### 4.2 Piping Out of a Repeated Instrument or Event
 
 It is possible to pipe a value out of a repeated instrument or repeated event using two methods. Both methods allow you to specify which instance to reference when piping to a non-repeated destination.
 
-### Method 1: Direct Targeting by Instance Number
+#### Method 1: Direct Targeting by Instance Number
 
 If you know the specific instance number, you can reference any variable in that instance using the following syntax:
 
@@ -122,7 +122,7 @@ This retrieves the value of `med_name` specifically from instance 1 of the repea
 [event_1_arm_1][med_name][1]
 ```
 
-### Method 2: Smart Variable Targeting
+#### Method 2: Smart Variable Targeting
 
 You can use the `[first-instance]` and `[last-instance]` smart variables to dynamically reference the first or last instance in a repeated series without knowing the exact instance number:
 
@@ -150,11 +150,11 @@ You can use the `[first-instance]` and `[last-instance]` smart variables to dyna
 
 The available smart variables for this purpose are `[first-instance]` and `[last-instance]`. Note that `[last-instance]` always points to the most recently created instance and will change if new instances are added later.
 
-## 4.3 Piping Between Instances (Within the Same Repeated Series)
+### 4.3 Piping Between Instances (Within the Same Repeated Series)
 
 Piping within a repeated instance series works the same way as piping out of a repeated series (section 4.2), but with additional smart variables available that allow you to dynamically target different instances relative to the current one.
 
-### Direct Targeting by Instance Number
+#### Direct Targeting by Instance Number
 
 Within a repeated series, you can reference any instance by its number:
 
@@ -168,7 +168,7 @@ Within a repeated series, you can reference any instance by its number:
 [med_name][1]
 ```
 
-### Smart Variable Targeting
+#### Smart Variable Targeting
 
 You can use instance smart variables to dynamically target different instances without knowing exact instance numbers:
 
@@ -209,11 +209,11 @@ For a broader overview of all smart variables, see [RC-PIPE-03 — Smart Variabl
 
 ---
 
-# 5. Piping Modifiers
+## 5. Piping Modifiers
 
 Modifiers let you control exactly what a pipe reference returns, overriding the default behavior for a given field type.
 
-## 5.1 The `:value` Modifier
+### 5.1 The `:value` Modifier
 
 Appending `:value` to a variable name returns the raw coded value instead of the display label. This applies to dropdowns, radio buttons, checkboxes, yes/no, true/false, and dynamic query (SQL) fields.
 
@@ -224,7 +224,7 @@ Appending `:value` to a variable name returns the raw coded value instead of the
 | `[yesno]` | Yes | No |
 | `[yesno:value]` | 1 | 0 |
 
-## 5.2 File Upload & Signature Modifiers
+### 5.2 File Upload & Signature Modifiers
 
 Both field types share the same modifiers:
 
@@ -240,7 +240,7 @@ Without a modifier, piping a file upload or signature field returns an internal 
 
 > **Note:** Inline images cannot be displayed inside a downloaded PDF of a survey or instrument.
 
-## 5.3 Checkbox Modifiers
+### 5.3 Checkbox Modifiers
 
 Checkbox fields allow multiple selections, so their piping behavior has additional options:
 
@@ -255,7 +255,7 @@ Checkbox fields allow multiple selections, so their piping behavior has addition
 - `[my_checkbox:checked:value]` — Returns the raw codes of checked options instead of labels. Example: "1, 3, 5" instead of "Vanilla, Strawberry, Chocolate".
 - `[my_checkbox(2):value]` — Returns 1 if option 2 is checked, 0 if unchecked.
 
-## 5.4 The `:hideunderscore` Modifier
+### 5.4 The `:hideunderscore` Modifier
 
 When a piped variable has no stored value, REDCap normally displays six underscore characters (`______`) as a placeholder. Appending `:hideunderscore` causes the blank to be piped as truly empty — invisible to the user — rather than as the underscore placeholder.
 
@@ -266,13 +266,13 @@ When a piped variable has no stored value, REDCap normally displays six undersco
 
 This modifier works on both field variable references and Smart Variables.
 
-## 5.5 The `:field-label` Modifier
+### 5.5 The `:field-label` Modifier
 
 Appending `:field-label` pipes the **label text** of the field rather than its data value. This is useful when you want to reference a question's wording dynamically.
 
 **Example:** `[visit_date:field-label]` pipes the text "Date of Visit" (or whatever the field's label is), not the date value entered in that field.
 
-## 5.7 Date & Time Modifiers
+### 5.7 Date & Time Modifiers
 
 These modifiers apply to text box fields with date or time validation:
 
@@ -285,7 +285,7 @@ These modifiers apply to text box fields with date or time validation:
 
 ---
 
-# 6. Common Questions
+## 6. Common Questions
 
 **Q: How do I pipe a value from a different event in a longitudinal project?**
 
@@ -321,7 +321,7 @@ These modifiers apply to text box fields with date or time validation:
 
 ---
 
-# 7. Common Mistakes & Gotchas
+## 7. Common Mistakes & Gotchas
 
 **Including a space between the event qualifier and the variable bracket.** `[event_1_arm_1] [first_name]` silently drops the event qualifier. REDCap does not warn you — it simply resolves from the current event. Always confirm the rendered output in a test record.
 
@@ -335,7 +335,7 @@ These modifiers apply to text box fields with date or time validation:
 
 ---
 
-# 8. Related Articles
+## 8. Related Articles
 
 - [RC-PIPE-01 — Piping: Basics, Syntax & Field Types](RC-PIPE-01_Piping-Basics-Syntax-and-Field-Types.md)(core piping syntax, locations, field type defaults)
 - [RC-PIPE-03 — Smart Variables Overview](RC-PIPE-03_Smart-Variables-Overview.md) (full list of smart variable categories including instance qualifiers)

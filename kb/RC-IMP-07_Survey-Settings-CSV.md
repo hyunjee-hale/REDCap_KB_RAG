@@ -15,7 +15,7 @@
 
 ---
 
-# 1. Overview
+## 1. Overview
 
 The Survey Settings CSV allows bulk export and re-import of survey configuration across all survey-enabled instruments in a project. This is useful for replicating settings (e.g., response limits, completion text, confirmation emails) across projects without reconfiguring each instrument manually.
 
@@ -31,7 +31,7 @@ For full coverage of survey settings through the REDCap UI, see [RC-SURV-02 — 
 
 ---
 
-# 2. File Structure
+## 2. File Structure
 
 One row per survey-enabled instrument. The header row lists all 62 columns exactly as exported — do not rename or reorder them. Instruments that are not survey-enabled are excluded from the file; there is no way to enable a survey for the first time via this upload (the instrument must already be enabled in the Online Designer).
 
@@ -41,18 +41,18 @@ The file exports default values for some columns (e.g., `response_limit_include_
 
 ---
 
-# 3. Column Reference
+## 3. Column Reference
 
 Columns are grouped below by functional area, in the order they appear in the file.
 
-## Row identifier
+### Row identifier
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
 | `form_name` | Yes | Instrument variable name (e.g., `demographics`). Must match an existing instrument in the target project exactly. Case-sensitive. |
 | `survey_enabled` | Yes | `Y` = instrument is active as a survey. `N` = survey is offline (participants cannot access it; logged-in users can still fill it in as a regular form). Changing this column on import toggles the survey status. |
 
-## Survey title and instructions
+### Survey title and instructions
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -60,7 +60,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `title` | No | Survey title shown to participants in the browser header and at the top of the survey page. Defaults to the instrument name when blank. Supports a limited subset of HTML tags. |
 | `instructions` | No | Introductory text block shown between the title and the first question. Supports full rich-text HTML. When this field contains embedded newlines, the cell must be quoted. |
 
-## Survey design and appearance
+### Survey design and appearance
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -79,7 +79,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `theme_text_question` | No | Hex color for question label text. |
 | `theme_bg_question` | No | Hex color for the question row background. |
 
-## Display behavior
+### Display behavior
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -93,7 +93,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `show_required_field_text` | No | `Y` / `N`. Show the "* must provide value" legend at the top of the survey. |
 | `survey_show_font_resize` | No | `Y` / `N`. Show the font-size resize control on the survey toolbar. |
 
-## Results sharing
+### Results sharing
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -101,14 +101,14 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `min_responses_view_results` | No | Integer. Minimum number of completed responses required before the results summary is shown to any participant. Prevents disclosure when only a few responses exist. |
 | `check_diversity_view_results` | No | `Y` / `N`. Require response diversity before showing aggregate results (reduces risk of reverse-engineering individual answers). |
 
-## Accessibility
+### Accessibility
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
 | `text_to_speech` | No | `Y` / `N`. Enable text-to-speech for the survey (reads questions aloud). Requires site-level TTS configuration. |
 | `text_to_speech_language` | No | Language/locale string for TTS (e.g., `en-US`). Leave blank when TTS is disabled. |
 
-## Navigation buttons
+### Navigation buttons
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -117,7 +117,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `survey_btn_text_next_page` | No | Custom label for the "Next Page" button. Leave blank for the REDCap default label. |
 | `survey_btn_text_submit` | No | Custom label for the final "Submit" button. Leave blank for the REDCap default label. |
 
-## Response limits
+### Response limits
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -125,7 +125,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `response_limit_include_partials` | No | `Y` / `N`. When `Y`, in-progress (partial/incomplete) responses count toward the limit. |
 | `response_limit_custom_text` | No | HTML message shown to participants who try to access the survey after the response limit is reached. **Note:** REDCap exports a default message here even when no response limit is set — this is normal and harmless. |
 
-## Survey time window
+### Survey time window
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -134,7 +134,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `survey_time_limit_minutes` | No | Integer. Minutes component of the time-limited access window. |
 | `survey_expiration` | No | Specific date/time after which the survey closes to all participants. Format: `YYYY-MM-DD HH:MM` in server time. Leave blank for no expiration date. |
 
-## Access and session controls
+### Access and session controls
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -143,7 +143,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `save_and_return_code_bypass` | No | `Y` / `N`. When `Y`, participants can return to a saved survey without entering a return code (uses a browser cookie instead). |
 | `edit_completed_response` | No | `Y` / `N`. Allow participants to re-open and edit a survey they have already submitted. |
 
-## Post-completion behavior
+### Post-completion behavior
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -155,14 +155,14 @@ Columns are grouped below by functional area, in the order they appear in the fi
 | `repeat_survey_btn_location` | No | Where the repeat button appears. `BEFORE_SUBMIT` = shown above the Submit button on the last page. `AFTER_SUBMIT` = shown on the completion page. **Note:** REDCap exports `BEFORE_SUBMIT` as a default even when `repeat_survey_enabled` is `N`. |
 | `acknowledgement` | No | HTML content of the survey completion page shown to participants after submission. This is the "end of survey" message — distinct from the confirmation email. Supports full rich text. |
 
-## Stop actions (e-Consent)
+### Stop actions (e-Consent)
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
 | `stop_action_delete_response` | No | `Y` / `N`. In e-Consent surveys, when a participant triggers the stop action (e.g., declines consent), delete their response record entirely rather than saving a partial record. |
 | `stop_action_acknowledgement` | No | HTML message shown to a participant after the stop action is triggered. Leave blank for no message. |
 
-## Confirmation email
+### Confirmation email
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
@@ -174,7 +174,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 
 ---
 
-# 4. Annotated Example
+## 4. Annotated Example
 
 The table below shows values from a real export. Only key columns are shown — the full file contains all 62.
 
@@ -193,7 +193,7 @@ Key observations from this example:
 
 ---
 
-# 5. Common Mistakes
+## 5. Common Mistakes
 
 **Using the instrument display label instead of the variable name** in `form_name`. The variable name is lowercase and underscored (e.g., `social_history`, not `Social History`).
 
@@ -207,7 +207,7 @@ Key observations from this example:
 
 ---
 
-# 6. Related Articles
+## 6. Related Articles
 
 - [RC-IMP-03 — CSV Upload Reference: All Bulk Upload Options in REDCap](RC-IMP-03_CSV-Upload-Reference.md)(index of all CSV upload types in REDCap)
 - [RC-SURV-02 — Survey Settings: Basic Options & Design](RC-SURV-02_Survey-Settings-Basic-Options-and-Design.md) (full UI reference)
