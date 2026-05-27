@@ -4,4 +4,77 @@
   {{ super() }}
   <script data-goatcounter="https://bdeveer.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var article = document.querySelector(".md-content__inner");
+      if (!article) return;
+
+      // The meta table is always the first table in the article
+      var table = article.querySelector("table");
+      if (!table) return;
+
+      // Confirm it looks like a meta table (first cell contains "Article ID")
+      var firstCell = table.querySelector("td");
+      if (!firstCell || !table.textContent.includes("Article ID")) return;
+
+      // Build the <details> wrapper
+      var details = document.createElement("details");
+      details.className = "meta-table-details";
+
+      var summary = document.createElement("summary");
+      summary.textContent = "Article Metadata";
+      details.appendChild(summary);
+
+      // Move the table inside <details>
+      table.parentNode.insertBefore(details, table);
+      details.appendChild(table);
+
+      // Also pull the bold title paragraph (immediately before <details>) inside
+      var prev = details.previousElementSibling;
+      if (prev && prev.tagName === "P" && prev.querySelector("strong")) {
+        details.insertBefore(prev, summary.nextSibling);
+      }
+    });
+  </script>
+{% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+    details.meta-table-details {
+      margin-bottom: 1rem;
+      border: 1px solid var(--md-default-fg-color--lightest);
+      border-radius: 4px;
+      padding: 0;
+    }
+    details.meta-table-details summary {
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--md-default-fg-color--light);
+      list-style: none;
+      user-select: none;
+    }
+    details.meta-table-details summary::-webkit-details-marker { display: none; }
+    details.meta-table-details summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 0.4rem;
+      font-size: 0.6rem;
+      transition: transform 0.2s ease;
+      vertical-align: middle;
+    }
+    details.meta-table-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    details.meta-table-details > p,
+    details.meta-table-details > .md-typeset__table,
+    details.meta-table-details > table {
+      padding: 0 0.75rem 0.75rem;
+      margin: 0;
+    }
+  </style>
 {% endblock %}
