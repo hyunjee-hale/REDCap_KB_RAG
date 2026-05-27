@@ -3548,6 +3548,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-02 — Control Center: General System Configuration
 - RC-CC-04 — Control Center: User Settings & Defaults
 - RC-CC-21 — Control Center: Overview & Navigation
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Control Center Setup
 - RC-CDIS-03 — Clinical Data Mart (CDM): Setup and Usage
 - RC-INST-01 — Institution-Specific Settings & Policies
@@ -3819,6 +3820,22 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 
 **Inbound links (referenced by):**
 - (none yet)
+
+---
+
+### RC-CC-25 — Control Center: Access Control Groups
+
+**Prerequisites:** RC-CC-07 — Control Center: Users & Access Management; RC-USER-01 — User Rights: Overview & Three-Tier Access
+
+**Outbound links:**
+- RC-CC-07 — Control Center: Users & Access Management
+- RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-USER-02 — User Rights: Adding Users & Managing Roles
+- RC-USER-03 — User Rights: Configuring User Privileges
+- RC-DAG-01 — Data Access Groups
+
+**Inbound links (referenced by):**
+- *(none yet)*
 
 ---
 

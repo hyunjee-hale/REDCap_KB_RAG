@@ -32,6 +32,7 @@ A complete index of all KB articles by ID, title, and filename. Use this file fo
 | RC-CC-22 | Admin: Administrator Project Tools (View as User, Project Switcher) | RC-CC-22_Administrator-Project-Tools.md |
 | RC-CC-23 | Backup Options | RC-CC-23_Backup-Options.md |
 | RC-CC-24 | Control Center: Edit Project Settings | RC-CC-24_Control-Center-Edit-Project-Settings.md |
+| RC-CC-25 | Control Center: Access Control Groups | RC-CC-25_Access-Control-Groups.md |
 | RC-CDIS-01 | Clinical Data Interoperability Services: Overview & Control Center Setup | RC-CDIS-01_Clinical-Data-Interoperability-Services-Overview-and-Setup.md |
 | RC-CDIS-02 | Clinical Data Pull (CDP): Setup and Usage | RC-CDIS-02_Clinical-Data-Pull-Setup-and-Usage.md |
 | RC-CDIS-03 | Clinical Data Mart (CDM): Setup and Usage | RC-CDIS-03_Clinical-Data-Mart-Setup-and-Usage.md |
