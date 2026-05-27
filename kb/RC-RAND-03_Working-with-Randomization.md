@@ -139,8 +139,8 @@ summary table. Requires the Dashboard user right.
 
 > **Note:** *Each row in the dashboard represents a unique combination
 > of cohort, DAG, and stratification values (if applicable). A project
-> with 2 cohorts and 2 stratification levels will have 4 rows per cohort
-> combination, not 2.*
+> with 2 cohorts and 2 stratification levels will have 4 rows total
+> (2 cohorts × 2 strata), not 2.*
 
 ## 5.2 What administrators additionally see
 

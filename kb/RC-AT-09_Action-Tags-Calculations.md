@@ -142,10 +142,10 @@ Reference a date field from a specific event:
 
 ## 4.4 Using 'now' or 'today' as the Source
 
-The keywords `now` and `today` can be used as the source parameter. They use the **server time**, not the user's local device time:
+The literals `'today'` and `'now'` (in single quotes) can be used as the source parameter. They use the **server time**, not the user's local device time:
 
 ```
-@CALCDATE(today, 14, 'd')
+@CALCDATE('today', 14, 'd')
 ```
 
 This calculates a date 14 days from the current server date. Be aware that if users are in a different timezone from the server, the date may differ from their local today.
@@ -214,7 +214,7 @@ This pattern is useful in operational or administrative projects where a value m
 
 **Source or result field missing date validation for @CALCDATE.** Both fields must have date, datetime, or datetime_seconds validation. Without this, `@CALCDATE` will not function correctly.
 
-**Forgetting that 'now' and 'today' use server time.** If your REDCap server is in a different timezone from your users, `@CALCDATE(today, ...)` may produce a date that is one day off. Use `'d'` offsets cautiously when timezone alignment matters.
+**Forgetting that `'now'` and `'today'` use server time.** If your REDCap server is in a different timezone from your users, `@CALCDATE('today', ...)` may produce a date that is one day off. Use `'d'` offsets cautiously when timezone alignment matters.
 
 **Not escaping apostrophes in text output.** If `@CALCTEXT` output contains an apostrophe and you used apostrophes as delimiters, escape it: `'it's'` or switch to double quotes: `"it's"`.
 

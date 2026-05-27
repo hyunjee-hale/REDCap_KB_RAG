@@ -158,7 +158,7 @@ The following REDCap features are not supported within MyCap tasks (instrument-b
 | Most REDCap action tags | `@HIDDEN` is honored; MyCap has its own mobile-specific action tags (see [RC-MYCAP-02 — MyCap: Designing Instruments for MyCap](RC-MYCAP-02_Designing-Instruments-for-MyCap.md)) |
 | Calculated fields | Use Survey Links as a workaround to display calculated results (see [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md)) |
 | Cross-instrument branching logic | Branching logic within a single instrument is supported; logic that references fields on other instruments is not |
-| Push notification scheduling | Notifications are sent at 8:00 AM local device time; this time cannot currently be customized per participant |
+| Per-participant push notification time | Notification delivery time is configurable project-wide in App Settings (default: 8:00 AM local device time). Individual participants cannot set their own preferred notification time — the project-wide setting applies to all. |
 | Smart variables (REDCap piping) | Not rendered in MyCap instruments |
 
 REDCap Multi-Language Management (MLM) is supported in MyCap. See [RC-MYCAP-07 — MyCap: Advanced Features — FDL, MLM, and Survey Links](RC-MYCAP-07_Advanced-Features-FDL-MLM-Survey-Links.md) — Advanced Features for setup details.

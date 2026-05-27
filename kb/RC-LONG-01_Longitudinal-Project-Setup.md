@@ -128,7 +128,7 @@ This page displays a matrix with instruments as rows and events as columns. A se
 2. Check the box for each instrument-event combination you want to enable. Use **Select All** or **Deselect All** at the top of the table to apply changes in bulk.
 3. Click **Save** to confirm your selections.
 
-> **Critical:** Unchecking an instrument-event combination that already contains saved data will permanently delete that data. Always verify the combination is empty before removing a designation.
+> **Critical:** Unchecking an instrument-event combination that already contains saved data will make that data inaccessible — it will no longer appear in the UI. The data is not deleted from the database and can be recovered by re-checking the combination, but treat this as a high-risk action: always verify the combination is empty, or export the data first, before removing a designation. If new data is collected in the same instrument-event combination after it was unchecked and then re-checked, there may be record-level collisions that require backend database intervention to resolve. If you are unsure, contact your local REDCap administrator before proceeding.
 
 > **Important:** Always designate the first instrument in your project (the one containing the record ID field) to the very first event in each arm. REDCap stores the record ID in this instrument-event combination. Omitting it will cause unpredictable behavior and risk data not being saved correctly.
 
@@ -185,12 +185,12 @@ Full column order (scheduling active): `event_name`, `arm_num`, `day_offset`, `o
 | `event_name` | Free text | Display label for the event. **Values containing spaces or special characters are wrapped in double quotes** in the CSV (e.g., `"3 Month"`, `"End of Study"`). |
 | `arm_num` | Positive integer | Must match an existing arm. In multi-arm projects, every event must appear as a separate row for each arm — there is no single row that spans multiple arms. A 2-arm, 6-event project produces 12 rows in the events CSV. |
 | `day_offset` | Integer ≥ 0 | Days from the reference date (e.g., enrollment). REDCap sorts events by `day_offset` ascending. |
-| `offset_min` | Integer ≥ 0 | Early scheduling window (days before the target date). Expressed as a positive number. |
+| `offset_min` | Integer ≥ 0 | Early scheduling window (days before the target date). Expressed as a positive number in the CSV — e.g., `3` means the window opens 3 days before the target date. Note: the API Export Events endpoint returns this value as a negative integer (e.g., `-3`); if building a CSV from API output, convert to its absolute value. |
 | `offset_max` | Integer ≥ 0 | Late scheduling window (days after the target date). Expressed as a positive number. Symmetric windows (e.g., ±14 days) appear as the same value in both columns. |
 | `unique_event_name` | Snake_case string | May be left blank on upload — REDCap auto-generates from the event name and arm number. **Recommended: leave blank and let REDCap generate.** See derivation rule below. |
 | `custom_event_label` | Free text or blank | Piped event label. Leave blank if not used. The column is always present in exports — even when all values are empty. |
 
-**`unique_event_name` derivation rule:** REDCap lowercases the event name, replaces spaces with underscores, removes hyphens (not converts — removes entirely), then appends `_arm_{N}`. Examples: "Screening" → `screening_arm_1`; "3 Month" → `3_month_arm_1`; "End of Study" → `end_of_study_arm_1`; "Follow-up" → `followup_arm_1` (hyphen removed). Hand-typing unique event names that don't match this rule exactly will cause the mapping upload to silently fail.
+**`unique_event_name` derivation rule:** REDCap lowercases the event name, removes hyphens entirely (they do not become underscores), replaces all remaining non-alphanumeric characters with underscores, collapses consecutive underscores into one, and appends `_arm_{N}`. Examples: "Screening" → `screening_arm_1`; "3 Month" → `3_month_arm_1`; "End of Study" → `end_of_study_arm_1`; "Follow-up" → `followup_arm_1` (hyphen removed, not converted); "Ad Hoc (Visit)" → `ad_hoc_visit_arm_1` (parentheses become underscores, consecutive underscores collapsed). Hand-typing unique event names that don't match this rule exactly will cause the mapping upload to silently fail.
 
 - `day_offset`, `offset_min`, and `offset_max` appear in the downloaded events CSV only when the scheduling module is active for the project. Include them in an upload only when scheduling is in use.
 - When multiple events share the same `day_offset`, REDCap breaks the display-order tie by sorting alphabetically by unique event name — which is rarely the intended clinical order. To enforce a specific display order among same-day events, assign sequential `day_offset` values (e.g., 0, 1, 2, 3…) even if the events all occur on the same calendar day.
@@ -398,6 +398,8 @@ Whether project-level users can add or modify events and arms on a Production pr
 When this setting is disabled — which is the default in most instances — only REDCap administrators can add or modify events and arms on a project in Production status. Users who need this change must submit a request to the REDCap support team.
 
 When the setting is enabled, project-level users with Project Design and Setup rights can add events and modify certain event properties directly on a Production project. Even then, only administrators can delete events in production. Users can designate instruments to events that have not yet been designated, but cannot un-designate instruments that are already designated.
+
+> **Note:** This setting applies to the REDCap UI only. The Import Arms and Import Events API endpoints remain restricted to Development status even when this setting is enabled. To modify arms or events via the API on a Production project, the project must first be returned to Development status.
 
 > **See also:** [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)
 

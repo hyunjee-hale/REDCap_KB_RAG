@@ -135,7 +135,7 @@ Record locking is useful for larger projects where completed instruments should 
 
 > **Note:** A user with locking rights can lock and unlock anything in the project — including instruments locked by other users. Plan your locking roles carefully.
 >
-> **Important:** The e-signature option requires password entry for every action and has known compatibility issues with certain SSO authentication methods. Confirm compatibility with your authentication setup before enabling it.
+> **Important:** The e-signature option requires local password re-entry for every action. It is **not compatible** with Shibboleth (SAML) or OAuth2 authentication — those methods delegate credential verification externally, so REDCap cannot perform the required re-entry step. If your institution uses either of these authentication methods, the e-signature option will not be available to your users. Note that certain external modules are available that provide alternative e-signature workflows compatible with federated authentication — contact your REDCap administrator for options.
 
 ## 3.6 Administrator-Granted Rights
 
@@ -181,7 +181,7 @@ There are four export access levels for each instrument:
 |---|---|
 | **No Access** | The user cannot export any data from this instrument. |
 | **De-identified** | The user can export data with all identifier fields removed, all free-text fields removed, and all date/time fields removed. |
-| **Remove Identifier Fields Only** | Similar to De-identified, but only designated identifier fields are stripped. Free-text and date/time fields are included. |
+| **Remove All Identifier Fields** | Similar to De-identified, but only designated identifier fields are stripped. Free-text and date/time fields are included. |
 | **Full Data Set** | The user can export all data from this instrument without restriction. This is the default. The user can optionally apply de-identification settings during the export process. |
 
 See [RC-EXPRT-01 — Data Export: Overview & Workflow](RC-EXPRT-01_Data-Export-Overview-and-Workflow.md) and [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) for how export rights interact with the export workflow.
@@ -257,9 +257,9 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 **A:** No. API rights are scoped by the user's other rights. If a user doesn't have viewing rights for an instrument, they cannot export it via the API either.
 
-**Q: What is the difference between "De-identified" and "Remove Identifier Fields Only" in export rights?**
+**Q: What is the difference between "De-identified" and "Remove All Identifier Fields" in export rights?**
 
-**A:** "De-identified" removes identifier fields, all free-text fields, and all date/time fields. "Remove Identifier Fields Only" removes just the designated identifier fields but leaves free text and dates intact. The correct choice depends on your data governance requirements.
+**A:** "De-identified" removes identifier fields, all free-text fields, and all date/time fields. "Remove All Identifier Fields" removes just the designated identifier fields but leaves free text and dates intact. The correct choice depends on your data governance requirements.
 
 **Q: Can I use smart variables instead of standard user rights to control data access?**
 
@@ -275,7 +275,7 @@ This approach is flexible but should be used deliberately. It creates implicit a
 
 **Expecting the API to bypass user rights.** API rights are bounded by the user's other project rights. A user cannot use the API to access data or features their user rights would normally prevent.
 
-**Not testing the e-signature feature before deploying it.** The e-signature option requires password input for every record locking action and has known compatibility issues with SSO authentication. Test thoroughly in Development before enabling on a Production project with real users.
+**Enabling e-signature when your institution uses federated authentication.** The e-signature option requires local password re-entry and is not available to institutions using Shibboleth (SAML) or OAuth2 authentication. Confirm your institution's authentication method before enabling e-signature on a project. If federated authentication is in use, certain external modules provide alternative e-signature workflows — contact your REDCap administrator for options.
 
 **Setting export rights to Full Data Set by default without reviewing.** The default for data export rights is Full Data Set, meaning all users start with unrestricted export access. If your project handles sensitive data, actively review and restrict export rights to De-identified or No Access for users who should not have full export capability.
 

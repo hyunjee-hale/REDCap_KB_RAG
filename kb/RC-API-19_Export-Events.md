@@ -167,7 +167,7 @@ Example JSON response:
 
 **Q: What do the offset fields mean?**
 
-**A:** The `day_offset` is the expected number of days after enrollment that the event should occur. The `offset_min` and `offset_max` define the acceptable window (e.g., ±3 days). These are used to track visit windows in longitudinal studies.
+**A:** The `day_offset` is the expected number of days after enrollment that the event should occur. The `offset_min` and `offset_max` define the acceptable window around the target date (e.g., ±3 days). These are used to track visit windows in longitudinal studies. Note that the API returns `offset_min` as a **negative integer** (e.g., `-3` for a 3-day early window), while the CSV events upload format uses a **positive number** for both columns. If you are building an upload CSV from API output, convert `offset_min` to its absolute value.
 
 **Q: Can I use the `day_offset` values to calculate expected visit dates for a participant?**
 

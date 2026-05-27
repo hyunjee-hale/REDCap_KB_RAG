@@ -295,10 +295,6 @@ These modifiers apply to text box fields with date or time validation:
 
 **A:** REDCap ignores the event qualifier entirely. The pipe reference is treated as if no event was specified, and REDCap attempts to resolve the variable from the current event instead.
 
-**Q: Can I pipe a value from a repeated instrument into a regular instrument?**
-
-**A:** No — this is not currently supported. REDCap cannot determine which instance to use as the source when piping out of a repeated instrument or event. The result will be blank or unpredictable.
-
 **Q: How do I pipe the filename of an uploaded file rather than a reference number?**
 
 **A:** Use the `:label` modifier: `[my_file_upload:label]`. This returns the filename of the uploaded document.

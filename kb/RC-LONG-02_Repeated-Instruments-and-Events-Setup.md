@@ -40,7 +40,7 @@ An event (with all its designated instruments) configured to be collected multip
 
 **Instance**
 
-A single numbered occurrence of a repeated instrument or repeated event. Instance 1 is the first submission, instance 2 is the second, and so on. Instance numbers are assigned sequentially and do not reset between events.
+A single numbered occurrence of a repeated instrument or repeated event. Instance 1 is the first submission, instance 2 is the second, and so on. Instance numbers are assigned sequentially. For repeated instruments, numbering is independent per instrument per event — each event's instance counter starts at 1.
 
 **Custom Label (Repeated)**
 

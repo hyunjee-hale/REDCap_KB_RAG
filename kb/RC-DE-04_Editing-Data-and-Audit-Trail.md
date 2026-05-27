@@ -73,7 +73,7 @@ first time:
 
 - Change the field values you need to update.
 
-- Save the form using any of the four save options.
+- Save the form using any of the available save options.
 
 
 > **Note:** REDCap automatically logs the old and new values, the user who made the change, and the timestamp. You do not need to do anything special to trigger audit logging — it happens on every save.
@@ -156,7 +156,7 @@ deliberate action that requires an explicit user right.
 
 - Make your changes to the field values.
 
-- Save the form using any of the four save options. Do not navigate
+- Save the form using any of the available save options. Do not navigate
     away without saving — unsaved changes are lost.
 
 

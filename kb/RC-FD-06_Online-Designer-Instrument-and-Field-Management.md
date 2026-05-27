@@ -165,7 +165,7 @@ Each field in the instrument editor has the following controls:
 | **Copy** | Duplicates the field. REDCap automatically assigns a new unique variable name to the copy. All other field settings are preserved. |
 | **Move** | Opens a dialog to move the field to a specific position within the instrument, or to a different instrument in the project entirely. |
 | **Drag handle** | Drag and drop the field to reorder it within the instrument. Note: drag-and-drop cannot move a field to a different instrument — use the Move button for that. |
-| **Delete** (trash icon) | Permanently deletes the field and all data collected in records for that field. Use with caution when real data exists. |
+| **Delete** (trash icon) | Permanently deletes the field and all data collected in records for that field. In Production mode, REDCap will block deletion of fields that contain data. In Development mode, deletion is immediate and permanent with no warning. |
 | **Branching Logic** (fork icon) | Opens the branching logic editor for this field. See Section 9. |
 
 ## 6.4 Using the CDE Library

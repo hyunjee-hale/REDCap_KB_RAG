@@ -21,7 +21,7 @@ The Import Arms API method creates or modifies arms in a longitudinal REDCap pro
 
 The `override` parameter controls behavior: when set to `0`, the method adds or modifies arms without deleting others; when set to `1`, all existing arms are deleted and replaced with the arms you provide.
 
-> **Important:** This method is only available for projects in **Development status**. It will not work on projects in Production or Analysis/Cleanup status.
+> **Important:** This method is only available for projects in **Development status**. It will not work on projects in Production or Analysis/Cleanup status. Note: even if your REDCap administrator has enabled the "Allow Normal Users to Add or Modify Events and Arms in Production" setting, that applies to UI-based editing only — the Import Arms API endpoint remains restricted to Development status regardless.
 
 > **Important:** Arms exist only in longitudinal projects. This method will return an error if called on a classic (non-longitudinal) project.
 
@@ -199,7 +199,7 @@ This number reflects how many arms were created or renamed, not the total number
 
 **Q: Does this method work on a project that is in Production status?**
 
-**A:** No. Import Arms is only available for projects in **Development status**. If your project has been moved to Production, you will need to request a temporary return to Development (if your institution allows it) before you can modify arms via the API.
+**A:** No. Import Arms is only available for projects in **Development status**. If your project has been moved to Production, you will need to request a temporary return to Development (if your institution allows it) before you can modify arms via the API. The administrator setting "Allow Normal Users to Add or Modify Events and Arms in Production" does not change this — it unlocks UI-based editing only, not the API endpoint.
 
 ---
 

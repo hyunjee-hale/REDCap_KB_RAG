@@ -177,7 +177,7 @@ If the project has no users, an empty array `[]` is returned. Users with an empt
 
 **Q: Can a user be assigned to multiple DAGs?**
 
-**A:** No. Each user can be assigned to at most one DAG. If a user needs multi-DAG access, they must be assigned no DAG (empty value) to gain all-DAG view permissions.
+**A:** Not through this API endpoint. Each user has one primary DAG assignment, which is what this endpoint exposes. The REDCap UI does provide a **DAG Switcher** feature that allows a user to be associated with additional DAGs for read access beyond their primary assignment — but Switcher assignments are not reflected in the API export. To grant or manage multi-DAG access, use the DAG Switcher on the DAG management page in the UI. If you need a user to access all records across all DAGs without a Switcher configuration, assign them an empty `redcap_data_access_group` value.
 
 **Q: How do I use this export to audit user access?**
 

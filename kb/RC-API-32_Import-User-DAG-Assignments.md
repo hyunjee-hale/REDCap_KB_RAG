@@ -209,7 +209,7 @@ In this example, `jsmith` and `test person` are assigned to the `new_haven` DAG,
 
 **Q: Can I assign a user to multiple DAGs?**
 
-**A:** No. Each user can be assigned to at most one DAG. If you need a user to see data from multiple groups, assign them an empty `redcap_data_access_group` value (or omit it from the import) to grant them all-DAG view permissions.
+**A:** Not through this API endpoint. Each user has one primary DAG assignment, which is what this endpoint manages. The REDCap UI does provide a **DAG Switcher** feature that allows a user to be associated with additional DAGs for read access beyond their primary assignment — but Switcher assignments cannot be managed through this import endpoint. To grant multi-DAG access, use the DAG Switcher on the DAG management page in the UI. If you need a user to access all records across all DAGs without a Switcher configuration, assign them an empty `redcap_data_access_group` value (or omit it from the import).
 
 **Q: How do I remove a user from a DAG assignment?**
 

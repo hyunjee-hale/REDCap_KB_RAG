@@ -298,9 +298,7 @@ This setting has three levels:
 
 ### e-Consent Variable Requirements
 
-To use the e-Consent Framework, you must collect the participant's name and signature:
-- First and last name collected as two separate text variables (best practice).
-- Signature collected in a variable using the **Signature** field type.
+To use the e-Consent Framework, you must collect the participant's name (first and last name as two separate text variables is best practice). A Signature field is optional but strongly recommended — it enables automatic clearing if the participant navigates back during the consent flow. See [RC-SURV-08 — e-Consent Framework Setup and Management](RC-SURV-08_e-Consent-Framework-Setup-and-Management.md) for the full field requirements.
 
 > **Important:** Before using the e-Consent Framework for a study, confirm with your local Institutional Review Board that electronic consent collected via REDCap is acceptable at your institution. For this installation's IRB guidance on e-consent, see **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) — Institution-Specific Settings & Policies, Section 7.5: e-Consent Framework**.
 

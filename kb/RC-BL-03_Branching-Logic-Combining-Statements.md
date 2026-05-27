@@ -116,15 +116,30 @@ syntax, not logic.
 ## 3.5 Always-True AND Statements
 
 The reverse is also possible — a statement that is always true,
-causing the field to always show regardless of data values:
+causing the field to always show regardless of data values.
+Always-true conditions most often arise from an OR tautology:
 
 ```
-// ALWAYS TRUE: age is always either >= 35 or <= 35
+// ALWAYS TRUE: every value is either 'active' or it isn't
 
-[age]>=35 and [age]<=35  // Only true when age = exactly 35
-
-// If you intended a range, this might not be what you wanted
+[status]='active' or [status]<>'active'
 ```
+
+Every possible value satisfies at least one arm, so the field appears
+for every record regardless of what is stored in `[status]`.
+
+---
+
+### ⚠️ Common confusion — this is NOT always-true:
+
+```
+// NOT always-true — only true when age = exactly 35
+
+[age]>=35 and [age]<=35
+```
+
+This looks like a range but collapses to a single exact-value match.
+For a real range, the bounds must differ: `[age]>=18 and [age]<=35`.
 
 ---
 

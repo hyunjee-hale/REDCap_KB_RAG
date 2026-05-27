@@ -62,7 +62,7 @@ user — fields simply appear or disappear as data is entered.
 **Save Options**
 
 REDCap does not auto-save. Data is only committed to the database when
-the user explicitly saves the form using one of four save buttons at the
+the user explicitly saves the form using one of the save buttons at the
 bottom of every instrument.
 
 ---
@@ -187,7 +187,7 @@ dot in the Record Home Page and Record Status Dashboard.
 > **Critical:** REDCap does not auto-save. If you close the browser tab, navigate away, or click Cancel without saving, all unsaved data on the current form is lost.
 
 
-Every instrument has four save options at the bottom of the page:
+Every instrument has the following core save options at the bottom of the page:
 
 | **Save Option** | **What Happens After Saving** |
 | --- | --- |
@@ -196,6 +196,7 @@ Every instrument has four save options at the bottom of the page:
 | Save and Exit Record | Saves the form and returns you to the Add/Edit Records page. Use when you are done with this record entirely. |
 | Save and Go to Next Record | Saves the form and opens the same instrument in the next record (by Record ID order). Use for batch data entry across multiple records. |
 
+> **Note:** These core options are available in all instruments. Additional save options appear in specific contexts — for surveys (Save & Mark Survey as Complete) and for repeating instruments (Save & Go To Next Instance, Save & Add New Instance). See [RC-DE-11 — Instrument Save Options](RC-DE-11_Instrument-Save-Options.md) for the complete reference.
 
 > **Warning:** Clicking Cancel on an instrument discards all unsaved changes on that form and returns you to the Record Home Page. There is no undo.
 
@@ -257,7 +258,7 @@ back), it starts empty.
 # 9. Common Mistakes & Gotchas
 
 - Losing data by closing the browser: REDCap does not auto-save.
-    Always use one of the four save buttons before navigating away.
+    Always use one of the save buttons before navigating away.
 
 - Ignoring required field warnings: dismissing the warning is allowed,
     but doing so repeatedly without filling the field will cause data
