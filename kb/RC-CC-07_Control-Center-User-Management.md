@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
-| **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md); [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
+| **Related Topics** | [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md); [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md); [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md); [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -272,6 +272,8 @@ When ACGs are first enabled on an instance that already has projects and users, 
 
 > **Note:** The ACG section is locked until the feature has been enabled. The feature can be turned on at any point without affecting existing user records.
 
+For full documentation of ACGs — including all configurable rights categories, CSV bulk workflows, compliance reports, and the project-level ACG Compliance page — see **[RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md)**.
+
 ---
 
 ### Administrator Privileges
@@ -354,6 +356,7 @@ The Browse Users interface allows one-at-a-time editing. For bulk operations (e.
 
 - [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md) (authentication methods affecting user login)
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md) (system-wide user behavior controls)
+- [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md) (full ACG documentation — rights categories, CSV workflows, compliance reports)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md) (user privilege concepts at project level)
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) (API token usage and configuration)
-- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)(user management governance)
+- [RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md) (user management governance)

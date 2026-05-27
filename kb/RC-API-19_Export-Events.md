@@ -31,7 +31,7 @@ This method is useful for discovering the event structure of a project or valida
 |---|---|---|
 | `token` | Required | Your project API token. Requires API Export right. |
 | `content` | Required | Always `'event'` for this method. |
-| `format` | Required | Response format: `'csv'`, `'json'`, or `'xml'`. Default is `'xml'`. |
+| `format` | Optional | Response format: `'csv'`, `'json'`, or `'xml'`. Default is `'xml'`. |
 | `arms` | Optional | An array of arm numbers to filter events. If omitted, returns events for all arms. |
 | `returnFormat` | Optional | Format for error messages: `'csv'`, `'json'`, or `'xml'`. Defaults to whatever `format` is set to. If neither is provided, defaults to `'xml'`. Not applicable when using background processing. |
 

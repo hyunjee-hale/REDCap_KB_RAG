@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
-| **Related Topics** | [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)|
+| **Related Topics** | [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md); [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)|
 
 ---
 
@@ -96,6 +96,8 @@ This is the most complex tier. User rights are highly configurable and differ fr
 - [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
 
+> **System-level ceiling on user rights:** Some installations also use **Access Control Groups (ACGs)**, a system-level feature configured in the Control Center that defines the *maximum* privileges any user can be granted. If an administrator has enabled ACGs, User Rights managers cannot grant rights that exceed what the user's ACG permits — even if they attempt to. See [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md).
+
 ---
 
 ## 4. Troubleshooting Access
@@ -170,6 +172,7 @@ When a user reports they cannot access a project or perform an expected action, 
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md)
 - [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
 - [RC-DAG-01 — Data Access Groups](RC-DAG-01_Data-Access-Groups.md)
+- [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md) (system-level ceiling on user privileges; relevant when rights cannot be assigned even though the User Rights page allows it)
 - [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md) (user rights control which menu items a user can see; explains why menu items may appear or disappear)
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the User Rights and DAGs menu items are described here, along with every other feature they gate)
 - [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md) (instrument-level access rights and DAG membership filter what appears on the dashboard)

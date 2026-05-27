@@ -151,9 +151,9 @@ Configuring repeated instruments or events changes behavior in several other are
 
 In standard projects, variables in repeated instruments can generally be referenced within the same instrument using local branching logic (no event prefix needed). However, you cannot reliably reference a variable from a repeated instrument or repeated event in logic that runs outside that repeated context.
 
-REDCap provides a set of smart variables (e.g., `@current-instance`) to reference values within the same set of instances, but cross-instance and cross-event references from within a repeated instrument are not reliably supported. Do not design logic that depends on comparing values across multiple instances of a repeated instrument.
+REDCap supports cross-instance references in branching logic using two methods: a direct instance number (e.g., `[variable_name][1]`, or `[event_name][variable_name][1]` in longitudinal projects) or smart variables such as `[previous-instance]`, `[next-instance]`, `[first-instance]`, and `[last-instance]`. Smart variables are the preferred approach inside a repeated instrument when the target instance is relative to the current one. For the full syntax and examples, see [RC-BL-05 — Branching Logic in Longitudinal Projects](RC-BL-05_Branching-Logic-in-Longitudinal-Projects.md), Section 5.3.
 
-See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) — Branching Logic Overview & Scope for general branching logic guidance.
+See [RC-BL-01 — Branching Logic: Overview & Scope](RC-BL-01_Branching-Logic-Overview-and-Scope.md) for general branching logic guidance.
 
 ### 8.2 Piping
 

@@ -290,9 +290,10 @@ are affected.
     writing logic.
 
 - Forgetting parentheses in checkbox syntax: \[conditions\]=1 is radio
-    button syntax. For checkboxes, it must be \[conditions(1)\]='1'.
-    Without the parentheses and raw value, the logic will not reference
-    any checkbox sub-variable.
+    button syntax. For checkboxes, the correct form uses parentheses —
+    \[conditions(1)\]='1' or equivalently \[conditions(1)\]=1 (both
+    quoted and unquoted values are accepted). Without the parentheses,
+    the logic will not reference any checkbox sub-variable.
 
 - Switching field type after logic is written: changing a field from
     radio to checkbox (or vice versa) breaks all existing logic

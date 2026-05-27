@@ -138,7 +138,7 @@ Columns are grouped below by functional area, in the order they appear in the fi
 
 | Column | Required | Accepted Values / Notes |
 |---|---|---|
-| `survey_auth_enabled_single` | No | `Y` / `N`. Require participants to enter a survey access code before viewing the survey. Access codes are generated per-participant via the Participant List. |
+| `survey_auth_enabled_single` | No | `Y` / `N`. Enable Survey Login for this survey. When active, participants must enter a per-participant login code (configured in the Online Designer under Survey Settings) before they can view the survey. This is a password-like gate tied to the individual record — distinct from the Survey Access Code, which is a shorthand alternative to the public survey URL and is unrelated to this setting. |
 | `save_and_return` | No | `Y` / `N`. Allow participants to save a partially completed survey and return later to finish it. |
 | `save_and_return_code_bypass` | No | `Y` / `N`. When `Y`, participants can return to a saved survey without entering a return code (uses a browser cookie instead). |
 | `edit_completed_response` | No | `Y` / `N`. Allow participants to re-open and edit a survey they have already submitted. |

@@ -11,7 +11,7 @@
 | Version | 2.0 |
 | Last Updated | 2026 |
 | Author | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
-| Related Topics | [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md); [RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md); [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md); [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
+| Related Topics | [RC-INST-02 — Institution-Specific Settings & Policies — Test / Staging](RC-INST-02_Institution-Specific-Settings-and-Policies-Test.md); [RC-INST-03 — Institution-Specific Settings & Policies — Development](RC-INST-03_Institution-Specific-Settings-and-Policies-Development.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-CC-03 — Control Center: Security & Authentication](RC-CC-03_Control-Center-Security-and-Authentication.md); [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md); [RC-CC-05 — Control Center: File Storage & Upload Settings](RC-CC-05_Control-Center-File-Storage-Settings.md); [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md); [RC-NAV-UI-01 — Project Navigation UI](RC-NAV-UI-01_Project-Navigation-UI.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-SURV-03 — Survey Settings: Behavior, Access & Termination](RC-SURV-03_Survey-Settings-Behavior-Access-and-Termination.md); [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md) |
 
 ---
 
@@ -187,7 +187,7 @@ REDCap distinguishes between project-level suspension (managed by project users)
 
 **Access Control Groups (ACGs) in use:** `[FILL IN — Yes / No]`
 
-`[If yes:]` This instance uses Access Control Groups, which define a system-wide ceiling on what user privileges can be granted within projects. If you are a project owner trying to assign a specific right to a colleague and find the checkbox is unavailable or the change is rejected, it may be because the applicable ACG does not permit that right. Contact the support team for assistance.
+`[If yes:]` This instance uses Access Control Groups, which define a system-wide ceiling on what user privileges can be granted within projects. If you are a project owner trying to assign a specific right to a colleague and find the checkbox is unavailable or the change is rejected, it may be because the applicable ACG does not permit that right. Contact the support team for assistance. See [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md) for full documentation.
 
 ### 6.5 User Profile Editing
 
@@ -469,5 +469,6 @@ Different instances at this institution may have different data classification a
 - [RC-CC-04 — Control Center: User Settings & Defaults](RC-CC-04_Control-Center-User-Settings.md)
 - [RC-CC-06 — Control Center: Modules & Services Configuration](RC-CC-06_Control-Center-Modules-and-Services.md)
 - [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)
+- [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md)
 - [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md)
 - [RC-API-01 — REDCap API](RC-API-01_REDCap-API.md)

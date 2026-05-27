@@ -126,6 +126,8 @@ A dropdown where option 1 = "Vanilla" behaves differently in each context:
 
 Smart variables can also be used in branching logic conditions. A common example is `[is-survey]`, which evaluates to 1 when the instrument is accessed as a survey and 0 when accessed as a data entry form — allowing you to show different fields depending on the access context.
 
+> **Checkbox exception:** Checkboxes behave differently from other field types in both contexts. In piping, `[checkbox(code)]` returns the text "Checked" or "Unchecked" — not a raw coded value. In branching logic, each checkbox option is referenced individually using `[field_name(code)]` and compared to `1` (checked) or `0` (unchecked) — the option's coded value acts as a *selector* identifying which option to test, not as the comparison value itself. See [RC-PIPE-02 — Piping: Longitudinal, Repeated Instruments & Modifiers](RC-PIPE-02_Piping-Longitudinal-Repeated-Instruments-and-Modifiers.md) for the full set of checkbox modifiers.
+
 ---
 
 ## 7. Piping in Action Tags

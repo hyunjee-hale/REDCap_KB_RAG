@@ -67,6 +67,8 @@ Identified mode makes the Record ID column clickable and links it to the corresp
 
 > **Note:** Identified mode is per-record, not per-project. A record is identified only if it has an email or participant identifier associated with it. Records without either remain anonymous.
 
+> **Before adding participant identifiers:** activate the feature by clicking the **Enable** button in the Participant Identifier column header of the participant list table (see Section 3.3). This makes the column active and adds instructional help text to the Add Participants dialog. Be aware that clicking **Disable** later will wipe all stored identifiers, except those belonging to records with a completed survey response.
+
 ### 3.2 Feature Buttons
 
 | Button | Function |

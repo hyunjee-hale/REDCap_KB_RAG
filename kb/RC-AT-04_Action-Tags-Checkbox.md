@@ -33,10 +33,7 @@ This prevents ambiguous data where a "none of the above" response is combined wi
 @NONEOFTHEABOVE='99'
 ```
 
-**Syntax — without quotes (numeric raw value):**
-```
-@NONEOFTHEABOVE=99
-```
+Both quoted and unquoted raw values are accepted (`@NONEOFTHEABOVE=99` is equivalent). Quoting is recommended for consistency with the rest of REDCap logic syntax.
 
 **Syntax — multiple options:**
 ```

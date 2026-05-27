@@ -56,7 +56,7 @@ These are cases where two pieces of the KB make factually opposed claims about t
 
 ### Form design / Data entry
 
-- ⚠️ **`[RC-FD-02] §4.1`** says you can "*Delete an instrument (only if it contains no data).*" **`[RC-FD-06] §5.4`** says "*Deleting an instrument permanently deletes the instrument itself and all data collected for any records in that instrument. This action cannot be undone.*" One says blocked when data exists, the other says allowed and destructive. *(Deferred 2026-05-27: instrument deletion blocking behavior could not be confirmed from KB sources alone — RC-FD-02's "only if no data" phrasing is ambiguous (guideline vs. hard block). Needs manual verification against REDCap before editing RC-FD-06 §5.4.)*
+- ✅ **`[RC-FD-02] §4.1`** says you can "*Delete an instrument (only if it contains no data).*" **`[RC-FD-06] §5.4`** says "*Deleting an instrument permanently deletes the instrument itself and all data collected for any records in that instrument. This action cannot be undone.*" One says blocked when data exists, the other says allowed and destructive. *(Fixed 2026-05-27: verified against REDCap — deletion is allowed in both Development and Production mode regardless of data; REDCap warns but does not block. RC-FD-02 §4.1 updated to remove the "only if it contains no data" restriction and replace it with the correct warn-not-block description.)*
 
 - ✅ **`[RC-FD-06] §6.3`** says of field delete: "*Permanently deletes the field and all data collected in records for that field. Use with caution when real data exists.*" **`[RC-FD-11] §2.3`** and **`[RC-FD-02] §4.2`** say "*Irreversible; fields with data in Production cannot be deleted*" and "*(only if the project is in Development mode, or if the field contains no data)*". One says you can delete fields-with-data in Production; the other two say REDCap blocks it. *(Fixed 2026-05-27: RC-FD-06 §6.3 Delete table row updated to explicitly state Production blocks deletion of fields with data; Development allows immediate permanent deletion.)*
 
@@ -72,9 +72,9 @@ These are cases where two pieces of the KB make factually opposed claims about t
 
 - **`[RC-MLM-01] §1`** says "*MLM covers field labels, choice labels … but it does **not** translate content automatically. All translations must be provided by the project team.*" The same article's **§5.9** then documents a "**Translate using AI**" button that fills in translations automatically, and **`[RC-AI-03] §1`** describes the same feature. The overview denies a capability the article itself documents.
 
-- **`[RC-CC-20] §2.1 / §5`** treats **Base Language** and **Fallback Language** as one and the same ("*the fallback language*"). **`[RC-MLM-01] §2`** defines them as distinct layers: the **Base Language** is the UI source; the **Fallback Language** is what shows when an active language is missing a translation; if the fallback is also missing, REDCap falls back to the base. CC-20 collapses two layers the per-project article keeps separate.
+- ✅ **`[RC-CC-20] §2.1 / §5`** treats **Base Language** and **Fallback Language** as one and the same ("*the fallback language*"). **`[RC-MLM-01] §2`** defines them as distinct layers: the **Base Language** is the UI source; the **Fallback Language** is what shows when an active language is missing a translation; if the fallback is also missing, REDCap falls back to the base. CC-20 collapses two layers the per-project article keeps separate. *(Fixed 2026-05-27: RC-CC-20 table column description, Q&A, and gotcha updated to correctly describe Base Language as the system source language and the final step in the active → project fallback → base chain.)*
 
-- **`[RC-MLM-01] §2 Active Language`** says "*only active languages appear in language selectors*". **`[RC-CC-20] §5`** says "*A language can be active but not visible (users cannot see it to select), or visible but not active (users can select it but it will not work)*" — i.e., Active and Visible are orthogonal. The two articles describe different models.
+- ✅ **`[RC-MLM-01] §2 Active Language`** says "*only active languages appear in language selectors*". **`[RC-CC-20] §5`** says "*A language can be active but not visible (users cannot see it to select), or visible but not active (users can select it but it will not work)*" — i.e., Active and Visible are orthogonal. The two articles describe different models. *(Fixed 2026-05-27: RC-MLM-01 §2 Active Language definition updated to note that Visible is a separate system-level toggle and both must be enabled for a language to appear in the selector; pointer to RC-CC-20 added.)*
 
 ---
 
@@ -84,15 +84,15 @@ Clear mismatches that aren't full contradictions but will cause confusion.
 
 ### Logic syntax
 
-- **Checkbox comparison style.** `[RC-BL-04] §5.2 / §7` insists "*it must be `[conditions(1)]='1'`. Without the parentheses and raw value, the logic will not reference any checkbox sub-variable.*" `[RC-BL-01] §9.1` uses the unquoted form `[gate_field(1)]=1`, `[join_checkbox(1)] = 1`. Both work per `[RC-BL-02] §3.3`, but the design-pattern article diverges from the form taught as canonical.
+- ✅ **Checkbox comparison style.** `[RC-BL-04] §5.2 / §7` insists "*it must be `[conditions(1)]='1'`. Without the parentheses and raw value, the logic will not reference any checkbox sub-variable.*" `[RC-BL-01] §9.1` uses the unquoted form `[gate_field(1)]=1`, `[join_checkbox(1)] = 1`. Both work per `[RC-BL-02] §3.3`, but the design-pattern article diverges from the form taught as canonical. *(Fixed 2026-05-27: RC-BL-04 §7 gotcha updated to remove "it must be" phrasing; now states both quoted and unquoted values are accepted, with quoted recommended for consistency.)*
 
-- **`@NONEOFTHEABOVE` quoting.** `[RC-AT-04] §2` documents `@NONEOFTHEABOVE='99'` and `@NONEOFTHEABOVE=99` side by side. The rest of the AT series treats quoting raw values as required. Only AT-04 documents the unquoted alternative.
+- ✅ **`@NONEOFTHEABOVE` quoting.** `[RC-AT-04] §2` documents `@NONEOFTHEABOVE='99'` and `@NONEOFTHEABOVE=99` side by side. The rest of the AT series treats quoting raw values as required. Only AT-04 documents the unquoted alternative. *(Fixed 2026-05-27: RC-AT-04 §2 consolidated the two separate syntax blocks into one, with a note that both forms are accepted and that quoting is recommended for consistency with the AT series.)*
 
 ### Piping / Smart Variables
 
-- **Modifier vs. qualifier.** `[RC-PIPE-03] §6` says "*piping modifiers (`:value`, `:label`, `:checked`, …) are suffixes appended to a regular variable name … Some smart variables are used as qualifiers (prefixed before a variable name…) but are still distinct from modifiers*". `[RC-PIPE-10] §2` defines "**Instance Qualifier** — A smart variable used as a **suffix or modifier** …". Terms used inconsistently across articles.
+- ✅ **Modifier vs. qualifier.** `[RC-PIPE-03] §6` says "*piping modifiers (`:value`, `:label`, `:checked`, …) are suffixes appended to a regular variable name … Some smart variables are used as qualifiers (prefixed before a variable name…) but are still distinct from modifiers*". `[RC-PIPE-10] §2` defines "**Instance Qualifier** — A smart variable used as a **suffix or modifier** …". Terms used inconsistently across articles. *(Fixed 2026-05-27: RC-PIPE-10 §2 definition updated to "paired with a field variable" with a note distinguishing instance qualifiers from piping modifiers; §6 heading changed from "Instance Qualifiers as Suffix Modifiers" to "Instance Qualifier Syntax".)*
 
-- **"Smart Functions / Smart Charts" vs. "Aggregate Functions".** `[RC-PIPE-11]` uses "Smart Functions / Charts" framing; `[RC-PIPE-03] §3.7` and `[RC-PIPE-15] §4` use "Aggregate Functions, Charts, and Tables". Same family, two umbrella terms.
+- ✅ **"Smart Functions / Smart Charts" vs. "Aggregate Functions".** `[RC-PIPE-11]` uses "Smart Functions / Charts" framing; `[RC-PIPE-03] §3.7` and `[RC-PIPE-15] §4` use "Aggregate Functions, Charts, and Tables". Same family, two umbrella terms. *(Fixed 2026-05-27: RC-PIPE-03 §3.7 intro updated to note that REDCap's own UI calls these "Smart Functions" and "Smart Charts", bridging the terminology gap. RC-PIPE-11 already documented both names.)*
 
 - **Branching logic value of checkboxes.** `[RC-PIPE-04] §6` says "*REDCap uses the **raw coded value** — not the display label*" with no qualification. `[RC-PIPE-02] §5.3` and `[RC-PIPE-01] §8` show checkbox piping returns "Checked"/"Unchecked" text — the no-modifier branching value for checkboxes is not a raw coded value. PIPE-04 should flag the checkbox exception.
 
@@ -194,11 +194,11 @@ Medium-effort:
 
 Cross-article reconciliation needed:
 
-12. **DAG multi-assignment** — Decide whether DAG Switcher counts as multi-DAG; update `[RC-API-31]` and `[RC-API-32]` to match `[RC-DAG-01]` and `[RC-DE-09]`.
-13. **e-Signature + SSO** — Pick "hard-blocked" or "known issues" and use that wording in both `[RC-LOCK-01]` and `[RC-USER-03]`.
-14. **e-Consent signature requirement** — `[RC-SURV-03] §5.5` and `[RC-SURV-08] §4.1` need to agree on whether the Signature field is mandatory.
-15. **Field/instrument deletion in Production** — `[RC-FD-02]`, `[RC-FD-06]`, `[RC-FD-11]` need a single, consistent description.
-16. **Save button count** — `[RC-DE-02]` and `[RC-DE-04]` should defer to `[RC-DE-11]`'s nine-option reference rather than repeating "four save options".
+12. ✅ **DAG multi-assignment** — Decide whether DAG Switcher counts as multi-DAG; update `[RC-API-31]` and `[RC-API-32]` to match `[RC-DAG-01]` and `[RC-DE-09]`. *(Fixed 2026-05-27: RC-API-31 §6 and RC-API-32 §7 updated to acknowledge DAG Switcher as UI-only multi-DAG mechanism; endpoint manages primary assignments only.)*
+13. ✅ **e-Signature + SSO** — Pick "hard-blocked" or "known issues" and use that wording in both `[RC-LOCK-01]` and `[RC-USER-03]`. *(Fixed 2026-05-27: RC-USER-03 §3.5 and gotchas updated to name Shibboleth/OAuth2 as hard-incompatible with e-signature; external module note added.)*
+14. ✅ **e-Consent signature requirement** — `[RC-SURV-03] §5.5` and `[RC-SURV-08] §4.1` need to agree on whether the Signature field is mandatory. *(Fixed 2026-05-27: RC-SURV-03 §5.5 updated — signature is optional but strongly recommended; pointer added to RC-SURV-08 for full requirements.)*
+15. ✅ **Field/instrument deletion in Production** — `[RC-FD-02]`, `[RC-FD-06]`, `[RC-FD-11]` need a single, consistent description. *(Fixed 2026-05-27: RC-FD-06 §6.3 field-delete table row updated with Production blocking language; instrument deletion behavior verified and resolved in a follow-up edit.)*
+16. ✅ **Save button count** — `[RC-DE-02]` and `[RC-DE-04]` should defer to `[RC-DE-11]`'s nine-option reference rather than repeating "four save options". *(Fixed 2026-05-27: RC-DE-02 table heading changed to "core save options"; note added pointing to RC-DE-11 for full reference; inline "four" references removed. RC-DE-04 both instances changed to "available save options".)*
 
 ---
 

@@ -36,7 +36,7 @@ An entire event (containing multiple instruments) that repeats. Each occurrence 
 
 **Instance Qualifier**
 
-A smart variable used as a suffix or modifier to reference data from a specific instance. Examples: `[current-instance]`, `[last-instance]`, `[field-name][previous-instance]`.
+A smart variable paired with a field variable to reference data from a specific instance. Examples: `[current-instance]`, `[last-instance]`, `[field-name][previous-instance]`. (Note: these are distinct from piping *modifiers* such as `:value` or `:label`, which are colon-prefixed suffixes that change what a field variable returns — see [RC-PIPE-03](RC-PIPE-03_Smart-Variables-Overview.md).)
 
 **New Instance**
 
@@ -59,7 +59,7 @@ A future instance that has not yet been created. The `[new-instance]` smart vari
 
 ## 4. Usage Notes
 
-**Instance Qualifiers as Suffix Modifiers**
+**Instance Qualifier Syntax**
 
 Instance smart variables are appended to field variables to retrieve data from a specific instance. The syntax is: `[field-name][instance-qualifier]`. Examples:
 - `[symptom_severity][previous-instance]` — severity from the previous instance

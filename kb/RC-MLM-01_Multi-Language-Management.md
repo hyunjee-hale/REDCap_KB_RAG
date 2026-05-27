@@ -45,7 +45,7 @@ A designated language used when a translation is missing in the language current
 A unique case-insensitive identifier assigned to each language in a project. The Language ID should correspond to an ISO 639-1 code (e.g., `en` for English, `de` for German, `es` for Spanish), optionally followed by an ISO 3166-1 country code (e.g., `en-US`, `de-DE`). Language IDs must use only letters and hyphens. Using standard ISO codes enables automatic browser language detection for survey respondents and is required for MyCap language matching.
 
 **Active Language**
-A language that has been turned on and is available for selection by users or survey respondents. Languages can be added to a project but remain inactive — only active languages appear in language selectors.
+A language that has been turned on and is available for selection by users or survey respondents. Languages can be added to a project but remain inactive — only active languages can appear in language selectors. Note: at the system level, administrators also control a separate **Visible** toggle; a language must be both active and visible system-wide to appear in the selector for end users. See [RC-CC-20](RC-CC-20_Multi-Language-Management.md) for the system-level Active and Visible settings.
 
 **Language Preference Field**
 An optional project field (radio or dropdown type) whose value stores a participant's preferred language. REDCap uses the value of this field to determine which language to display in server-side processes (ASIs, scheduled alerts, PDF rendering) where no browser session is available. The field behaves like the designated email field — its value is synchronized across all events and repeat instances.

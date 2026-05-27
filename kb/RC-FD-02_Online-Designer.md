@@ -86,7 +86,7 @@ to the research team.
 
 - Reorder instruments within the project.
 
-- Delete an instrument (only if it contains no data).
+- Delete an instrument. REDCap will warn you before proceeding, but deletion is allowed regardless of whether the instrument contains saved data — the instrument and all its records' data are permanently removed and cannot be recovered.
 
 - Export an instrument as a zip file for backup or reuse (see
     [RC-FD-04 — Instrument Library & Zip Files](RC-FD-04_Instrument-Library-and-Zip-Files.md)).

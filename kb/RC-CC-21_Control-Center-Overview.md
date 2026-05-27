@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
-| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)|
+| **Related Topics** | [RC-CC-01 — Control Center: Notifications & Reporting (Dashboard)](RC-CC-01_Control-Center-Notifications-and-Reporting.md); [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md); [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md); [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md); [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md)|
 
 ---
 
@@ -64,7 +64,7 @@ Administrative tools for user account management. See **[RC-CC-07 — Control Ce
 - API Tokens
 - Banned IP Addresses
 - Administrator Privileges
-- Access Control Groups
+- [Access Control Groups](RC-CC-25_Access-Control-Groups.md)
 
 ### Miscellaneous Modules
 Configuration for optional or institution-specific modules:
@@ -137,3 +137,4 @@ Many Control Center changes are low-risk (e.g., updating contact information, ad
 - [RC-CC-02 — Control Center: General System Configuration](RC-CC-02_Control-Center-General-Configuration.md)
 - [RC-CC-07 — Control Center: Users & Access Management](RC-CC-07_Control-Center-User-Management.md)
 - [RC-CC-09 — Control Center: To-Do List](RC-CC-09_To-Do-List.md)
+- [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md)

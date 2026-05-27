@@ -82,7 +82,7 @@ These smart variables serve two functions: (1) the instance qualifier smart vari
 
 ### 3.7 Aggregate Functions, Charts, and Tables
 
-These smart variables are associated with REDCap's Project Dashboard feature. They allow project designers to build custom charts and summary tables on the dashboard using aggregated data from the project.
+These smart variables are associated with REDCap's Project Dashboard feature (REDCap's own UI refers to them as "Smart Functions" and "Smart Charts"). They allow project designers to build custom charts and summary tables on the dashboard using aggregated data from the project.
 
 This category is more advanced and is primarily used by administrators and power users building project-level dashboards. Full documentation is available in REDCap's embedded help text.
 

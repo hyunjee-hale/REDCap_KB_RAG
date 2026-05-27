@@ -142,7 +142,7 @@ Full documentation of the participant list is in [RC-SURV-05 — Participant Lis
 
 By default, the participant list runs in anonymous mode, which makes it difficult to associate a specific link with a specific person. To switch to identified mode (enabling a clickable Record ID column), either:
 
-- Add a **participant identifier** (name) alongside the email when using **Add Participant**, or
+- Add a **participant identifier** (name) alongside the email when using **Add Participant**. Note: the Participant Identifier feature must first be activated by clicking the **Enable** button in the Participant Identifier column header of the participant list — see [RC-SURV-05 — Participant List and Manual Survey Invitations](RC-SURV-05_Participant-List-and-Manual-Survey-Invitations.md), Section 3.3 for details and an important warning about disabling the feature.
 - Designate an email field for the project in Project Setup → Enable Optional Modules and Customizations.
 
 ---

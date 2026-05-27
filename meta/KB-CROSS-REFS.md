@@ -165,6 +165,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-05 — Control Center: File Storage & Upload Settings
 - RC-CC-06 — Control Center: Modules & Services Configuration
 - RC-CC-07 — Control Center: Users & Access Management
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-CDIS-01 — Clinical Data Interoperability Services: Overview & Setup
 - RC-DE-12 — Data Resolution Workflow
 - RC-EM-01 — External Modules Overview
@@ -2094,6 +2095,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-31 — Export User-DAG Assignments API
 - RC-API-32 — Import User-DAG Assignments API
 - RC-API-33 — Switch DAG API
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-EXPRT-03 — Data Export: User Rights & Export Access
 - RC-RAND-01 — Randomization Concepts & Terminology
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
@@ -3542,6 +3544,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-02 — Control Center: General System Configuration
 - RC-CC-03 — Control Center: Security & Authentication
 - RC-CC-04 — Control Center: User Settings & Defaults
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
 
 **Inbound links (referenced by):**
@@ -3773,6 +3776,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-CC-14 — Control Center: Map of Users
 - RC-CC-15 — Control Center: Top Usage Report
 - RC-CC-16 — Control Center: Database Activity Monitor
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-CC-17 — Control Center: Database Query Tool
 - RC-CC-18 — Control Center: Custom Application Links
 - RC-CC-19 — Control Center: Publication Matching
@@ -3835,7 +3839,13 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-DAG-01 — Data Access Groups
 
 **Inbound links (referenced by):**
-- *(none yet)*
+- RC-CC-07 — Control Center: Users & Access Management
+- RC-CC-21 — Control Center: Overview & Navigation
+- RC-DAG-01 — Data Access Groups
+- RC-INST-01 — Institution-Specific Settings & Policies
+- RC-USER-01 — User Rights: Overview & Three-Tier Access
+- RC-USER-02 — User Rights: Adding Users & Managing Roles
+- RC-USER-03 — User Rights: Configuring User Privileges
 
 ---
 
@@ -4932,6 +4942,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-25 — Export User Roles API
 - RC-API-26 — Import User Roles API
 - RC-API-27 — Delete User Roles API
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-DAG-01 — Data Access Groups
 - RC-USER-02 — User Rights: Adding Users & Managing Roles
 - RC-USER-03 — User Rights: Configuring User Privileges
@@ -4968,6 +4979,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-25 — Export User Roles API
 - RC-API-26 — Import User Roles API
 - RC-API-27 — Delete User Roles API
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-DAG-01 — Data Access Groups
 - RC-INST-01 — Institution-Specific Settings & Policies
 - RC-USER-01 — User Rights: Overview & Three-Tier Access
@@ -4991,6 +5003,7 @@ Each entry lists: **Prerequisites** (must be read first), **Outbound links** (ar
 - RC-API-01 — REDCap API
 - RC-API-22 — Export Users API
 - RC-API-23 — Import Users API
+- RC-CC-25 — Control Center: Access Control Groups
 - RC-DAG-01 — Data Access Groups
 - RC-EXPRT-01 — Data Export: Overview & Workflow
 - RC-EXPRT-03 — Data Export: User Rights & Export Access

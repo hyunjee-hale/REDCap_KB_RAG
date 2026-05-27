@@ -10,7 +10,7 @@
 | **Version** | 1.0 |
 | **Last Updated** | 2026 |
 | **Author** | [See KB-SOURCE-ATTESTATION.md](KB-SOURCE-ATTESTATION.md) |
-| **Related Topics** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md); [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)|
+| **Related Topics** | [RC-USER-01 — User Rights: Overview & Three-Tier Access](RC-USER-01_User-Rights-Overview-and-Three-Tier-Access.md); [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md); [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md); [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md); [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md); [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md); [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md); [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md); [RC-NAV-REC-04 — Record Status Dashboard & Other Record Links](RC-NAV-REC-04_Record-Status-Dashboard-and-Links.md)|
 
 ---
 
@@ -167,6 +167,8 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 
 **Trying to delete a DAG that still has records.** REDCap blocks this. If the goal is to remove a site from the project, reassign or delete those records first. Plan ahead when retiring a site.
 
+**Confusing DAGs with Access Control Groups (ACGs).** These are separate, unrelated features. DAGs restrict which *records* a user can see within a project. ACGs (a system-level Control Center feature) restrict which *user privileges* can be granted to a user across all projects. A user can be subject to both simultaneously — their ACG caps what rights they can be given, and their DAG assignment caps which records they can access. See [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md).
+
 **Assuming DAG assignment controls instrument or feature access.** DAGs only restrict records — not instruments, features, or applications. A user in a DAG still has whatever instrument-level and feature-level rights are configured for them in User Rights.
 
 **Overlooking the DAG Switcher for monitoring roles.** Monitors, auditors, or cross-site coordinators often need access to records across multiple sites. The DAG Switcher is the correct tool for this — not removing them from their primary DAG or making them DAG-unassigned.
@@ -199,6 +201,7 @@ This is useful for initial project setup with many sites or for migrating a DAG 
 - [RC-USER-02 — User Rights: Adding Users & Managing Roles](RC-USER-02_User-Rights-Adding-Users-and-Managing-Roles.md) (DAG assignment when adding users)
 - [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Rights-Configuring-User-Privileges.md) (DAG management privilege and other rights)
 - [RC-USER-04 — User Rights: User Management](RC-USER-04_User-Rights-User-Management.md)
+- [RC-CC-25 — Control Center: Access Control Groups](RC-CC-25_Access-Control-Groups.md) (system-level privilege ceiling, distinct from DAGs — ACGs restrict what rights a user can be granted; DAGs restrict which records they can see)
 - [RC-EXPRT-03 — Data Export: User Rights & Export Access](RC-EXPRT-03_Data-Export-User-Rights-and-Export-Access.md) (how DAGs affect exports)
 - [RC-RAND-01 — Randomization Concepts & Terminology](RC-RAND-01_Randomization-Concepts.md) (DAGs and randomization)
 - [RC-NAV-UI-02 — Project Menu Reference](RC-NAV-UI-02_Project-Menu-Reference.md) (the DAGs item appears in the Applications section; requires appropriate user rights to see)
