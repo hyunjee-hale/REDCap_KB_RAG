@@ -54,7 +54,7 @@ An HTML link (usually embedded in an email or field note) that directs participa
 | MyCap Participant Link (Default) | `[mycap-participant-link]` | An HTML web link for the current record that allows the participant to join the project on the MyCap mobile app. Uses the URL as the default link text. | [Clickable link with URL text] |
 | MyCap Participant Link (Custom Text) | `[mycap-participant-link:Custom Text]` | An HTML web link for the current record with custom link text instead of the URL. | [Clickable link labeled "Click this MyCap link"] |
 
-> **Note:** The URL domain for MyCap App Links is `app.projectmycap.org` (current, as of REDCap v15.3.3+). The legacy Firebase domain (`mycapplusbeta.page.link`) was deprecated August 25, 2025. See [RC-MYCAP-04](RC-MYCAP-04_MyCap-App-Links-and-Participant-Enrollment.md) for domain migration details.
+> **Note:** The URL domain for MyCap App Links is `app.projectmycap.org` (current, as of REDCap v15.3.3+). The legacy Firebase domain (`mycapplusbeta.page.link`) was deprecated August 25, 2025. See [RC-MYCAP-04](RC-MYCAP-04_Participant-Onboarding.md) for domain migration details.
 
 ---
 
