@@ -267,6 +267,10 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 **A:** No. The DET fires only on interactive data entry — saves made by a user on a REDCap form or survey. Data imported via the API does not trigger the DET. See [RC-INTG-01 — Data Entry Trigger](RC-INTG-01_Data-Entry-Trigger.md) for details.
 
+**Q: Does the API trigger Alerts & Notifications or Automated Survey Invitations (ASIs)?**
+
+**A:** It depends on the trigger type. Completion triggers and combination triggers require a direct form or survey save — they do not fire on API or data import writes. Logic triggers evaluate against the record on every write, including API imports, so they do fire. If your workflow depends on an alert or ASI firing after an API write, make sure it uses a logic trigger. See [RC-ALERT-01 — Alerts and Notifications Setup](RC-ALERT-01_Alerts-and-Notifications-Setup.md) for details on trigger types.
+
 **Q: I requested a token but don't see it on the API page. What's wrong?**
 
 **A:** Token requests require administrator approval and do not appear until approved. If the request has been pending for longer than expected, contact your REDCap administrator. Also verify that you have the API Export or API Import user right assigned — without a user right, the API page will not display a token field.
@@ -299,7 +303,7 @@ JSON and CSV requests return errors in their respective formats. Always log or s
 
 **Using an HTTP URL instead of HTTPS.** API tokens are transmitted in the request body. Sending a request to an HTTP URL exposes the token to anyone who can observe the network traffic. Always verify your REDCap instance URL begins with `https://`.
 
-**Expecting the API to fire alerts or ASIs.** Alerts & Notifications and Automated Survey Invitations are triggered by data entry and certain field value conditions — but API imports do not reliably trigger ASIs the same way manual data entry does. Test thoroughly before building a workflow that depends on ASIs firing after an API import. Alerts are also not triggered by API imports in the same way.
+**Expecting the API to fire alerts or ASIs.** Whether an Alert or ASI fires on an API import depends on its trigger type. Completion triggers and combination triggers — which require a specific form or survey save — do not fire when data is written via the API or Data Import tool. Logic triggers, which evaluate a condition against the record regardless of save source, do fire after API writes. If your alert or ASI uses a completion trigger, it will not respond to API-imported data; if it uses a logic trigger, it will. Test with a real API call before building a workflow that depends on this behavior.
 
 **Confusing `instrument` (variable name) with the instrument's label.** API parameters that reference instruments — such as the `forms` parameter in Export Records — require the instrument's unique variable name (e.g., `demographics`), not its display label (e.g., `Demographics`). The variable name is found in the Online Designer or data dictionary. These often match, but not always, especially if an instrument was renamed after creation.
 

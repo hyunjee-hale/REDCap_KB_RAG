@@ -101,13 +101,16 @@ a predefined list.
 
 A text box can be configured with a validation rule that restricts
 accepted input to a specific format. REDCap enforces the format on save
-and shows an error if the value does not match.
+and shows an error if the value does not match. Note: format enforcement
+is a hard stop, but min/max range constraints are **soft** by default —
+REDCap warns the user but allows out-of-range values to be saved. Add
+the `@FORCE-MINMAX` action tag to make a range constraint a hard stop.
 
 | **Validation Type** | **What It Enforces** |
 | --- | --- |
 | Date (various formats) | Requires a valid date. Available in multiple regional formats (MM/DD/YYYY, DD/MM/YYYY, YYYY-MM-DD, etc.). |
 | Time | Requires a valid time value (HH:MM). |
-| Number | Requires a numeric value. Can optionally enforce a min/max range. |
+| Number | Requires a numeric value. Optionally accepts a min/max range — soft warning by default; use `@FORCE-MINMAX` to enforce. |
 | Integer | Requires a whole number (no decimals). |
 | Email | Requires a valid email address format. |
 | Phone number | Requires a phone number format (format varies by configuration). |

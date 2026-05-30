@@ -333,7 +333,7 @@ Create the proxy version as a **separate instrument** alongside the self-report 
 
 ## 11. Multi-Arm Parallel-Group Study Design
 
-### 10.1 The Pattern
+### 11.1 The Pattern
 
 Parallel-group studies (e.g., randomized controlled trials with a control arm and one or more intervention arms) are supported in REDCap by creating multiple arms with **identical event sequences**. Each arm represents one group in the study; each participant is assigned to exactly one arm at enrollment.
 
@@ -350,7 +350,7 @@ A two-arm RCT with arms "Control" and "Intervention" might define the following 
 
 This sequence is created twice — once under Arm 1 (Control) and once under Arm 2 (Intervention). REDCap generates unique event names for each: `screening_arm_1`, `screening_arm_2`, `3_month_arm_1`, `3_month_arm_2`, and so on.
 
-### 10.2 Instrument Assignment
+### 11.2 Instrument Assignment
 
 Assign the same instruments to the corresponding events in both arms. Since REDCap stores data separately per event (including per-arm event), no duplication of instruments is needed:
 
@@ -360,7 +360,7 @@ Assign the same instruments to the corresponding events in both arms. Since REDC
 
 This mirrors the study protocol: both groups complete the same assessments at the same time points.
 
-### 10.3 Branching Logic and Event References
+### 11.3 Branching Logic and Event References
 
 Branching logic that references a specific event must use the arm-qualified event name. If a field on the End of Study instrument should only display for participants in the intervention arm, the logic references the intervention arm's event:
 
@@ -376,11 +376,11 @@ Conversely, logic that applies equally to both arms should use `or`:
 
 In practice, most instruments in a parallel-group study do not require arm-specific branching logic — both groups complete identical assessments. Reserve event-qualified branching for fields that genuinely differ by group.
 
-### 10.4 Arm Assignment
+### 11.4 Arm Assignment
 
 Participants are assigned to an arm at record creation or via a designated arm-assignment field or randomization module. Once a participant has data entered under an arm, changing their arm is possible but requires care — data entered under the old arm remains attached to those events. For randomized studies, use the REDCap Randomization module (see [RC-RAND-02 — Randomization Setup Guide](RC-RAND-02_Randomization-Setup.md)) rather than manual arm assignment.
 
-### 10.5 Record Status Dashboard
+### 11.5 Record Status Dashboard
 
 In a two-arm project, the record status dashboard displays all events for both arms. For projects with many events and two arms, this produces a wide grid. Consider using custom event labels and grouping related events to keep the dashboard readable. REDCap shows only the arm the record is enrolled in — rows for other arms are greyed out.
 
@@ -442,7 +442,7 @@ When a coordinator opens the medication list at a follow-up visit, the instrumen
 
 ## 13. HTML Summary Panels in Descriptive Fields
 
-### 12.1 The Pattern
+### 13.1 The Pattern
 
 A `descriptive` field type in REDCap renders its `Field Label` content as HTML. This means you can use a descriptive field as a **styled data review panel** — placing a table of key study data pulled from earlier events directly at the top of a late-stage form. Staff see the participant's full history before they start entering data, without navigating away from the form.
 
@@ -453,7 +453,7 @@ A typical summary panel includes:
 - Colour-coded rows for threshold flags or milestones
 - A brief note reminding staff to review before proceeding
 
-### 12.2 HTML in Descriptive Fields
+### 13.2 HTML in Descriptive Fields
 
 REDCap renders HTML markup in the `Field Label` of descriptive field types. The following are supported:
 
@@ -471,7 +471,7 @@ Piping syntax within HTML works normally. `[event_name][field_name:modifier]` re
 
 Test descriptive field HTML in both data entry mode and survey mode. Survey mode may strip certain styling for accessibility reasons.
 
-### 12.3 Arm-Agnostic Piping
+### 13.3 Arm-Agnostic Piping
 
 In a two-arm longitudinal project, a field from the baseline event exists in two namespaces: `[baseline_arm_1][field]` and `[baseline_arm_2][field]`. A given participant has data in exactly one of these — the arm they were enrolled in. The other resolves to blank.
 
@@ -487,7 +487,7 @@ The `:hideunderscore` modifier is essential here. Without it, the blank arm's re
 
 This technique works for any element of the panel that must be arm-agnostic: demographic fields, baseline scores, any event-level variable that exists under both arms.
 
-### 12.4 Cross-Event Score Trajectories
+### 13.4 Cross-Event Score Trajectories
 
 A summary table showing all follow-up events in rows and outcome scores in columns is built by piping each event-specific value into the corresponding table cell:
 
@@ -506,7 +506,7 @@ A summary table showing all follow-up events in rows and outcome scores in colum
 
 If a visit has not yet been completed, the cell displays as empty. This is expected and informative — staff can see at a glance which visits have data.
 
-### 12.5 Practical Considerations
+### 13.5 Practical Considerations
 
 - **Display only** — descriptive fields are never exported. The HTML panel is purely a review aid for data entry staff; it does not appear in data exports or reports.
 - **Data dictionary editing** — a descriptive field with hundreds of characters of HTML makes manual DD editing impractical. Use the Online Designer or a template-based approach when building these fields.
@@ -517,11 +517,11 @@ If a visit has not yet been completed, the cell displays as empty. This is expec
 
 ## 14. Quality Control Checklist Instruments
 
-### 13.1 The Pattern
+### 14.1 The Pattern
 
 In coordinated or monitored studies, a dedicated **Quality Control Checklist** instrument — completed by coordinating centre staff for each record at each event — is an effective way to enforce data quality standards systematically rather than relying on ad-hoc review.
 
-### 13.2 Structure: Paired Pass/Fail Fields
+### 14.2 Structure: Paired Pass/Fail Fields
 
 The most useful QC checklist design uses a consistent paired-field pattern throughout:
 
@@ -536,15 +536,15 @@ This pattern can be applied across all QC domains: consent documentation complet
 - Any QC field can be used in a report filter to identify records with open issues
 - The instrument's overall completion status provides a clean monitoring signal on the record status dashboard
 
-### 13.3 Event-Specific Items in a Shared Form
+### 14.3 Event-Specific Items in a Shared Form
 
 A single QC checklist instrument can serve multiple events by using `[event-name]` branching to show or hide items that apply only to specific time points — for example, a baseline consent verification section that appears only at the baseline event, or a final status field that appears only at the last follow-up. This reduces the number of instruments to maintain while keeping each event's checklist focused.
 
-### 13.4 When to Split Into Multiple Instruments
+### 14.4 When to Split Into Multiple Instruments
 
 For large studies a single QC checklist can exceed 100 fields. Consider splitting by domain (e.g., Consent QC, Interview QC, Medical Records QC) as separate instruments all assigned to the same event. This also allows different team members to own and complete their respective sections independently.
 
-### 13.5 Design Timing
+### 14.5 Design Timing
 
 Design the QC checklist before data collection begins. The instrument effectively codifies the study operations manual in REDCap. Retrofitting QC structure onto an ongoing project is considerably harder and leaves early records without systematic checks.
 

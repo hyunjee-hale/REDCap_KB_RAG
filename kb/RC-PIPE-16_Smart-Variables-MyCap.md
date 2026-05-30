@@ -50,9 +50,11 @@ An HTML link (usually embedded in an email or field note) that directs participa
 |---|---|---|---|
 | MyCap Project Code | `[mycap-project-code]` | The unique system-generated code for the current REDCap project within the MyCap ecosystem. This code identifies the project when users enroll via MyCap. | P-5CLDRMQ28TSJJXD7KA1K |
 | MyCap Participant Code | `[mycap-participant-code]` | The unique system-generated code for the current record (participant). This code associates the participant's mobile app activity with the correct REDCap record. | U-NEXAXSMQZ3YFTZDMMSEX |
-| MyCap Participant URL | `[mycap-participant-url]` | The web address (URL) for the current record that can be used by the participant to join the project on the MyCap mobile app. The URL includes all necessary enrollment parameters. | https://mycap.link/join/... |
+| MyCap Participant URL | `[mycap-participant-url]` | The web address (URL) for the current record that can be used by the participant to join the project on the MyCap mobile app. The URL includes all necessary enrollment parameters. | https://app.projectmycap.org/... |
 | MyCap Participant Link (Default) | `[mycap-participant-link]` | An HTML web link for the current record that allows the participant to join the project on the MyCap mobile app. Uses the URL as the default link text. | [Clickable link with URL text] |
 | MyCap Participant Link (Custom Text) | `[mycap-participant-link:Custom Text]` | An HTML web link for the current record with custom link text instead of the URL. | [Clickable link labeled "Click this MyCap link"] |
+
+> **Note:** The URL domain for MyCap App Links is `app.projectmycap.org` (current, as of REDCap v15.3.3+). The legacy Firebase domain (`mycapplusbeta.page.link`) was deprecated August 25, 2025. See [RC-MYCAP-04](RC-MYCAP-04_MyCap-App-Links-and-Participant-Enrollment.md) for domain migration details.
 
 ---
 
@@ -142,7 +144,7 @@ This generates a clickable link that will direct the participant to the MyCap en
 
 **Q: What if my project doesn't have MyCap enabled?**
 
-**A:** MyCap smart variables return blank if the MyCap module is not enabled. See **[RC-INST-01 — Institution-Specific Settings & Policies — Production](RC-INST-01_Institution-Specific-Settings-and-Policies.md)
+**A:** MyCap smart variables return blank if the MyCap module is not enabled. Contact your REDCap administrator to request MyCap enablement for your project. See [RC-INST-01 — Institution-Specific Settings & Policies](RC-INST-01_Institution-Specific-Settings-and-Policies.md) for installation-specific availability and request procedures.
 
 **Q: How do participants use the MyCap link?**
 

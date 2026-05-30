@@ -218,9 +218,11 @@ The fields in this section override system-wide values for this specific project
 | Upload max file size — general attachments | Maximum file size (MB) for Descriptive field attachments and Data Resolution Workflow attachments | 128 MB |
 | File Repository upload max file size | Maximum file size (MB) for files uploaded to the File Repository | 128 MB |
 | File Repository total storage limit | Total MB cap for all files in the project's File Repository; set to 0 or blank to disable the cap | Blank (no limit) |
-| Record Limit (development projects) | Maximum number of records allowed while project is in Development status; users see a warning once the limit is reached; 0 = use global default | 0 |
+| Record Limit (development projects) | Maximum number of records allowed while project is in Development status; users see a warning once the limit is reached; 0 = use global default (if the global default is itself 0, no limit applies) | 0 |
 
 > **Note:** Changes to any of these fields take effect immediately for this project only. They do not affect other projects or the system-wide default.
+
+> **Note:** The 128 MB defaults above are REDCap application-level defaults, not the PHP server ceiling. The server ceiling (set via `upload_max_filesize` / `post_max_size` in PHP.INI) is typically 1024 MB. Per-context REDCap limits cannot exceed the server ceiling. See [RC-CC-05](RC-CC-05_Control-Center-File-Storage-Settings.md) for server-level configuration.
 
 ---
 

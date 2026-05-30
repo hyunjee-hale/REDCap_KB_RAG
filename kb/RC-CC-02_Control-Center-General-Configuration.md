@@ -245,7 +245,7 @@ Controls whether the Field Comment Log is enabled by default for all newly creat
 
 ### Record Limit for Development Projects
 
-Sets a maximum number of records that can be created in a project while it is in Development status. A value of `0` means no limit. When the limit is exceeded, users see a warning and cannot create additional records until the project moves to Production. A project-level override is available on the Edit Project Settings page.
+Sets a maximum number of records that can be created in a project while it is in Development status. A value of `0` means no limit. When the limit is exceeded, users see a warning and cannot create additional records until the project moves to Production. A project-level override is available on the Edit Project Settings page. At the project level, `0` means "use this global default" rather than "no limit directly" — see [RC-CC-24](RC-CC-24_Control-Center-Edit-Project-Settings.md) for project-level override behavior.
 
 > This setting is useful for preventing development projects from accumulating large amounts of test data, but use with care — teams occasionally need many test records for complex projects.
 

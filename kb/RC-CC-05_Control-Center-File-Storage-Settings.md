@@ -97,7 +97,7 @@ This list covers executables, scripts, system files, and installer formats that 
 
 Upload limits and enable/disable controls are set independently for each file upload context in REDCap.
 
-> **Server default:** The web server's maximum file upload size is determined by two values in `PHP.INI`: `upload_max_filesize` and `post_max_size`. The lower of the two applies. To change the server default, modify these values and restart the web server. The server default is typically 1024 MB unless changed. Per-context limits in REDCap can only be set *lower* than the server default.
+> **Server default:** The web server's maximum file upload size is determined by two values in `PHP.INI`: `upload_max_filesize` and `post_max_size`. The lower of the two applies. To change the server default, modify these values and restart the web server. The server default is typically 1024 MB unless changed — this is the PHP-level ceiling. REDCap's own application-level upload limits (configured in project settings) default to 128 MB and can be raised up to but not exceeding this ceiling. Per-context limits in REDCap can only be set *lower* than the server default.
 
 ### File Repository
 

@@ -125,6 +125,7 @@ Step 3 defines when the invitation is sent relative to the trigger event. Option
 - **At a specific date and time** — The invitation is sent at an absolute date and time you define.
 - **After a time delay** — The invitation is sent a set number of minutes, hours, days, weeks, or months after the trigger.
 - **Based on a date/time field in the project** — REDCap looks at a specific variable with a date or datetime validation and calculates the send time relative to that value.
+- **On the next matching day at a specific time** — The invitation is sent on the next occurrence of a matching day type (any day, weekday, or weekend day) at a time you specify. For example: "next weekday at 10:30 AM." In the CSV column reference this mode is `NEXT_OCCURRENCE`; see [RC-IMP-06](RC-IMP-06_Automated-Survey-Invitations-CSV.md) for the full column mapping.
 
 This last option enables participant-specific scheduling. For example, if participants have a clinic visit date stored in a field, you can configure the ASI to send a survey one day before that date — customized automatically for each record.
 

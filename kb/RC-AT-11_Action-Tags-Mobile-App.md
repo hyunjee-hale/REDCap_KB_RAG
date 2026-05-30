@@ -16,7 +16,7 @@
 
 ## 1. Overview
 
-REDCap provides three action tags designed exclusively for use in the **REDCap Mobile App**. These tags extend mobile data collection with barcode/QR scanning, automatic capture of the mobile user's identity, and syncing of uploaded images from the server to the app.
+REDCap provides five action tags designed exclusively for use in the **REDCap Mobile App**. This article covers three of them (`@BARCODE-APP`, `@APPUSERNAME-APP`, `@SYNC-APP`), which extend mobile data collection with barcode/QR scanning, automatic capture of the mobile user's identity, and syncing of uploaded images from the server to the app. The remaining two (`@HIDDEN-APP` and `@READONLY-APP`) are documented in [RC-AT-02 — @HIDDEN & @READONLY — Visibility Control](RC-AT-02_Action-Tags-Hidden-and-Readonly.md).
 
 > **Mobile App only.** All three tags in this article function only within the REDCap Mobile App. They have no effect on browser-based data entry forms or survey pages.
 

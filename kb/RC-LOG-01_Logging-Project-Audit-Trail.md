@@ -162,6 +162,8 @@ The "Filter by event" dropdown contains these options (internal API values in pa
 | Record locking & e-signatures | `lock_record` |
 | Page Views | `page_view` |
 
+> **Note:** The API `logtype` parameter also accepts `'record'` (not available as a UI dropdown option), which returns all record-related events — equivalent to combining `record_add`, `record_edit`, and `record_delete`.
+
 > **Important:** Page Views are deliberately excluded from the default "all event types" view. On active projects, page view logging can generate thousands of entries. Select "Page Views" explicitly when you need to trace which pages a specific user accessed and when.
 
 ### 5.3 Time Range Quick Buttons

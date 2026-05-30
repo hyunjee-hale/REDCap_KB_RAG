@@ -45,7 +45,7 @@ When to use this method: When you need to read record data from REDCap in an aut
 | `filterLogic` | Optional | A logic string (e.g., `[age] > 30`) to filter returned records. Only records where the logic evaluates as TRUE are returned. Invalid syntax returns an error. |
 | `dateRangeBegin` | Optional | Return only records created or modified **after** this timestamp. Format: `YYYY-MM-DD HH:MM:SS` (server time). If omitted, no lower bound is applied. |
 | `dateRangeEnd` | Optional | Return only records created or modified **before** this timestamp. Format: `YYYY-MM-DD HH:MM:SS` (server time). If omitted, uses the current server time. |
-| `csvDelimiter` | Optional | Delimiter for CSV format only. Options: `','` (default), `'tab'`, `';'`, `'|'`, `'^'`. |
+| `csvDelimiter` | Optional | Delimiter for CSV format only. Options: `','` (default), `'tab'`, `';'`, `'|'`, `'^'`. The UI Data Import Tool exposes only Comma, Tab, and Semicolon. |
 | `decimalCharacter` | Optional | Forces all numeric values (calc fields and number-validated text fields) to use a consistent decimal separator: `','` or `'.'`. If omitted, numbers use their native format. |
 | `exportBlankForGrayFormStatus` | Optional | `true` or `false` (default). If `true`, instrument complete status fields with a gray (unstarted) icon export as blank instead of `0`. Recommended when data will be re-imported into REDCap. |
 | `combineCheckboxOptions` | Optional | `true` or `false` (default). If `true`, all checked options for a checkbox field are combined into a single column instead of exporting as separate `variable___code` columns. |

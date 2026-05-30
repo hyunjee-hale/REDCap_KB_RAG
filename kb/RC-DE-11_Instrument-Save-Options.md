@@ -44,7 +44,7 @@ A single occurrence of a repeated instrument. Instruments configured to repeat c
 
 Save buttons appear in two locations in most instruments:
 
-1. **Floating menu** — fixed in the top-right corner of the screen; always visible while scrolling through a long instrument.
+1. **Floating menu** — a condensed set of save controls fixed in the top-right corner of the screen; always visible while scrolling through a long instrument, but may show fewer options than the full bottom save bar depending on screen size and context.
 2. **Bottom of the instrument** — the full set of available save options, labeled with their complete names.
 
 The exception is instruments that have been filled out as a survey. In that case, save buttons are hidden and the instrument is displayed in a read-only view. To modify a survey response, a staff user must first activate Edit Survey Mode (see Section 5).

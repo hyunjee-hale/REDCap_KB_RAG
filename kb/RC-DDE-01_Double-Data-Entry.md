@@ -71,8 +71,11 @@ Enabling DDE adds a new setting to every user's configuration in **User Rights**
 | **Data Entry Person #1** | Their own copy only (`--1` records) | Yes — first data entry copy |
 | **Data Entry Person #2** | Their own copy only (`--2` records) | Yes — second data entry copy |
 | **Reviewer** | Both copies and the merged record | Yes — resolves discrepancies during merge |
+| **No DDE role assigned** | Version-dependent: may see both copies, one copy, or no copies | Depends on standard user rights and REDCap version |
 
 > **Note:** DDE user rights are separate from standard user rights. A user can have full data entry access in standard user rights but still be restricted to one DDE role. Assign DDE roles deliberately based on who is responsible for first entry, second entry, and reconciliation.
+
+> **Note:** Users with no DDE role assigned have unpredictable record visibility that varies by REDCap version and server configuration. Always assign a DDE role to every project user before data collection begins. See §8 for the corresponding gotcha.
 
 Multiple users can share the same DDE role. For example, a team of five data entry coordinators can all be assigned Data Entry Person #1 — they will collectively enter first-pass copies across all records.
 

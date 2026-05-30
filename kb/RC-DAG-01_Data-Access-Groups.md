@@ -112,7 +112,7 @@ If a user needs access to records across multiple DAGs — for example, a monito
 1. On the DAG page, scroll to the **DAG Switcher** section.
 2. Check the box for each user/DAG combination you want to enable.
 
-The DAG Switcher grants access to additional DAGs beyond the user's primary DAG assignment. It does not override the primary DAG assignment — the user's records are still attributed to their primary DAG when they create new records.
+The DAG Switcher grants access to additional DAGs beyond the user's primary DAG assignment. When a user switches to a different active DAG, new records they create are attributed to the currently active DAG — not their primary assignment. Switching back to the primary DAG restores the original attribution behavior. See [RC-DE-09 — Data Entry with DAGs](RC-DE-09_Data-Entry-with-DAGs.md) §4 for the full switching workflow.
 
 > **Note:** Multi-DAG access can also be managed in bulk using the **Upload or download DAGs/User-DAG assignments** function.
 

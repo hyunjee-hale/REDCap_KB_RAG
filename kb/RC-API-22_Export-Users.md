@@ -130,7 +130,9 @@ On success, the method returns an array (JSON, CSV, or XML) of user objects. Eac
 
 ### 5.1 Returned attributes
 
-`username`, `email`, `firstname`, `lastname`, `expiration`, `data_access_group`, `design`, `alerts`, `user_rights`, `data_access_groups`, `data_export`, `reports`, `stats_and_charts`, `manage_survey_participants`, `calendar`, `data_import_tool`, `data_comparison_tool`, `logging`, `email_logging`, `file_repository`, `data_quality_create`, `data_quality_execute`, `api_export`, `api_import`, `api_modules`, `mobile_app`, `mobile_app_download_data`, `record_create`, `record_rename`, `record_delete`, `lock_records_customization`, `lock_records`, `lock_records_all_forms`, `forms`, `forms_export`
+`username`, `email`, `firstname`, `lastname`, `expiration`, `data_access_group`, `data_access_group_id`, `data_access_group_label`, `design`, `alerts`, `user_rights`, `data_access_groups`, `data_export`, `reports`, `stats_and_charts`, `manage_survey_participants`, `calendar`, `data_import_tool`, `data_comparison_tool`, `logging`, `email_logging`, `file_repository`, `data_quality_create`, `data_quality_execute`, `api_export`, `api_import`, `api_modules`, `mobile_app`, `mobile_app_download_data`, `record_create`, `record_rename`, `record_delete`, `lock_records_customization`, `lock_records`, `lock_records_all_forms`, `forms`, `forms_export`
+
+> **Note:** `data_access_group_id` (numeric DAG ID) and `data_access_group_label` (human-readable DAG name) are informational fields. REDCap uses `data_access_group` (the unique DAG name) as the functional key for DAG assignment.
 
 ### 5.2 Attribute value key
 
@@ -176,6 +178,8 @@ See [RC-USER-03 — User Rights: Configuring User Privileges](RC-USER-03_User-Ri
 **Using the wrong format parameter.** If your code expects CSV but you request JSON (or vice versa), parsing will fail. Specify the correct `format` parameter and parse the response accordingly.
 
 **Attempting to export users from a project where you lack API Export right.** If your API token does not include the API Export right, the method will fail with an authentication error. Verify your token permissions in the API Credentials settings.
+
+**`data_export` vs. `data_export_tool`.** This endpoint uses `data_export` for the export rights field. The sibling Roles endpoints (RC-API-26 / RC-API-27) use `data_export_tool` for the same permission. Using the wrong field name in role import calls will silently fail to set the intended permission.
 
 ---
 

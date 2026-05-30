@@ -125,7 +125,7 @@ encodes the completion status of that instrument for a given record.
 
 | **Dot Appearance** | **Meaning** |
 | --- | --- |
-| Grey | Incomplete — no data has been entered. This is the default state. |
+| Grey | Not started — no data has been entered. This is the default state. |
 | Red | Data has been saved, but the Form Status field is still set to Incomplete. |
 | Yellow | Form Status field is set to Unverified by a user. |
 | Green | Form Status field is set to Complete by a user. |
@@ -145,7 +145,7 @@ encodes the completion status of that instrument for a given record.
     automatically when a survey is submitted or partially completed.
 
 
-> **Technical Note:** Instrument status values are stored as part of the project dataset and can be manipulated in bulk via data import. Grey and red are both coded as 0; yellow = 1; green = 2. Survey statuses (orange checkmark = 1, green checkmark = 2) only appear when the instrument is used as a survey.
+> **Technical Note:** Form completion status is stored in `[instrument_complete]` with three coded values: 0 = Incomplete (covers both grey/not-started and red/data-saved-but-incomplete), 1 = Unverified, 2 = Complete. Survey completion status is stored in a separate field and also uses coded values: 1 = partial completion (orange checkmark), 2 = full completion (green checkmark). These are distinct fields — codes 1 and 2 mean different things in each system. Both can be set or exported via the API and data import/export.
 
 
 ---

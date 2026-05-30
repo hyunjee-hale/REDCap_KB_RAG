@@ -79,7 +79,7 @@ The two bracket pairs are written immediately adjacent — no space, no operator
 
 > **Note:** "Same event" means any field in any instrument designated to the current event. If two instruments are both designated to Event A, a field in the first can reference a field in the second using a local reference — no event prefix needed.
 
-> **Tip:** You can also include the current event's unique event name in a cross-event-style reference, and it will work correctly. This is occasionally useful when writing logic in bulk via the Data Dictionary, where you want all references to be explicit. However, omitting the prefix for same-event fields is the standard practice.
+> **Note:** The event-prefix syntax is not restricted to different events — REDCap accepts any valid unique event name in the prefix position, including the current event's own name. The prefix is *required* only when referencing a field from a different event; for same-event fields, the current event is assumed and the prefix may be omitted. Explicitly prefixing same-event references is occasionally useful when editing logic in bulk via the Data Dictionary, where uniform syntax is easier to audit. Omitting the prefix for same-event fields remains the standard practice.
 
 ### 3.2 Finding the Unique Event Name
 

@@ -52,7 +52,7 @@ Optional parameters (username, record, DAG, date range) that restrict which log 
 | `content` | Required | Always `'log'` |
 | `format` | Optional | Response format: `'csv'`, `'json'`, `'xml'` (default: `'xml'`) |
 | `returnFormat` | Optional | Format for error messages: `'csv'`, `'json'`, `'xml'`. Defaults to match `format` if omitted. Not applicable when using a background process. |
-| `logtype` | Optional | Filter by event type: `'export'`, `'manage'`, `'user'`, `'record'`, `'record_add'`, `'record_edit'`, `'record_delete'`, `'lock_record'`, `'page_view'` (empty string = all types) |
+| `logtype` | Optional | Filter by event type: `'export'`, `'manage'`, `'user'`, `'record'`, `'record_add'`, `'record_edit'`, `'record_delete'`, `'lock_record'`, `'page_view'` (empty string = all types). Note: `'record'` is an API-only aggregate that returns all record-related events (add, edit, delete) and has no corresponding UI dropdown option. |
 | `user` | Optional | Filter by username (exact match). If not specified, returns events for all users. |
 | `record` | Optional | Filter by record name (exact match). Only applicable for record-related events. If not specified, returns events for all records. |
 | `dag` | Optional | Filter by DAG `group_id`. If not specified, returns events for all DAGs. |
